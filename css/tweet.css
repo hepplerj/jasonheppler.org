@@ -1,0 +1,50 @@
+.bbpBox {
+  width: 80%;
+  background: #F3FEF3;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.25em;
+}
+
+.bbpBox blockquote {
+  font-size: 110%;
+  background-color: white;
+  margin: 0em !important;
+  padding: .5em 1em .5em 1em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px
+}
+
+.bbpBox blockquote a {
+  color: blue;
+  text-decoration: none;
+}
+
+.bbpBox blockquote a:hover {
+  text-decoration: underline;
+}
+
+.bbpBox blockquote .twMeta {
+  font-size: 80%;
+}
+
+.bbpBox blockquote .twAuthor {
+  font-family: Sans-serif;
+  font-size: 80%;
+  color: #aaa;
+  margin-top: 0em;
+  padding-top: .75em;
+  border-top: solid 1px #aaa;
+}
+
+.bbpBox blockquote .twDate {
+  font-family: Sans-serif;
+  font-size: 60%;
+  text-align: right;
+}
+
+.bbpBox blockquote .twAuthor img {
+  float: left;
+  margin-right: .5em;
+  height: 2.5em;
+}
