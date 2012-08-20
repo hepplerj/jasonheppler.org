@@ -2,6 +2,8 @@
 
 My blog: [jasonheppler.org](www.jasonheppler.org), hosted on Github. Using [Jekyll](http://github.com/mojombo/jekyll/tree/master) for static site generation.
 
+The design is drawn from [Alex Payne](http://al3x.net/). 
+
 # License
 
 All original text content is licensed under CC-BY.
