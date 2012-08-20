@@ -1,0 +1,19 @@
+multivews: true
+
+source:         .
+destination:    ./_site
+includes:       ./_includes
+
+pygments:       true
+markdown:       kramdown
+#permalink:      /:title.html
+
+name: 			JasonHeppler.org
+base_url:       http://jasonheppler.org
+description:    "A blog covering digital history, humanities computing, and the cultural history of computers"
+root_desc:      "JasonHeppler.org - History in the Digital"
+
+rdiscount:
+    extensions: []
+
+exclude: ['Rakefile', 'README.markdown', 'config.rb']
