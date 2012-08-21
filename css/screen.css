@@ -60,6 +60,11 @@ pre {
 	overflow-x: scroll;
 }
 
+pre code {
+	border: none;
+	padding: .3em;
+}
+
 h1, h2, h3, #footer {
 	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 	font-weight: bolder;
