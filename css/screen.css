@@ -49,9 +49,15 @@ blockquote {
 	padding-left: 10px;
 }
 
-code {
+pre, code {
 	font-family: 'Monaco', 'Courier New', monospace;
-	font-size: 11pt;
+	font-size: 11px;
+	background-color: #eee;
+	border: 1px solid #ddd;
+}
+
+pre {
+	overflow-x: scroll;
 }
 
 h1, h2, h3, #footer {
