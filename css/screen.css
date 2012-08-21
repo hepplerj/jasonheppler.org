@@ -54,6 +54,8 @@ pre, code {
 	font-size: 11px;
 	background-color: #eee;
 	border: 1px solid #ddd;
+	padding: .2em;
+	margin: .2em;
 }
 
 pre {
@@ -63,6 +65,7 @@ pre {
 pre code {
 	border: none;
 	padding: .3em;
+	margin: .3em;
 }
 
 h1, h2, h3, #footer {
