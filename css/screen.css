@@ -140,7 +140,7 @@ header {
 
 .footnotes {
 	display: block;
-	font-size: 1.1em;
+	font-size: 0.9em;
 	color: #4A4A4A;
 	line-height: 1.4em;
 	padding-top: 5px;
@@ -149,7 +149,7 @@ header {
 }
 
 .footnotes p {
-	font-size: 1.1em;
+	font-size: 1em;
 }
 
 .footnotes a {
