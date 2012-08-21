@@ -100,6 +100,16 @@ ul, ol {
 
 ul { list-style-type: square; }
 
+sup {
+	font-size: 0.65em;
+	line-height: 1;
+	position: relative;
+	bottom: 0.5em;
+	vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+}
+
 /* html5 */
 header, footer, nav, article { display: block; }
 
@@ -135,6 +145,10 @@ header {
 	margin-left: 0px;
 	padding-left: 20px;
 	border-bottom: none;
+}
+
+.footnotes p {
+	font-size: 0.7em;
 }
 
 .footnotes a {
