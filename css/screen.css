@@ -5,6 +5,8 @@
 `---'`---^`---'`---'`   '`   '`---'|---'|---'`---'`---'`    .`---'`    `---|
                                    |    |                              `---'
 
+Design credit to Alex Payne (al3x.net)
+
 */
 
 /*
@@ -18,7 +20,7 @@
 body {
 	background-color: #FAFAFA;
 	color: #222;
-	font-family: Georgia, 'Times New Roman', serif;
+	font-family: 'Ubuntu', sans-serif;
 	line-height: 1.4em;
 	margin: 20px auto 18px 25%;
 }
@@ -69,7 +71,7 @@ pre code {
 }
 
 h1, h2, h3, #footer {
-	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	font-family: 'Arvo', serif;
 	font-weight: bolder;
 	letter-spacing: -1px;
 }
