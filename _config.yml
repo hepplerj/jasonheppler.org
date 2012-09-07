@@ -6,7 +6,7 @@ includes:       ./_includes
 
 pygments:       true
 markdown:       kramdown
-permalink:      /blog/:year/:month:/:day/:title/
+permalink:      /blog/:year/:month/:day/:title/
 
 name: 			JasonHeppler.org
 base_url:       http://jasonheppler.org
