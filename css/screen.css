@@ -182,6 +182,10 @@ header {
 #title {
 	font-size: 26pt;
 }
+ #title a {
+  text-decoration: none;
+  color: #222;
+}
 
 #wrapper {
 	max-width: 48em;
