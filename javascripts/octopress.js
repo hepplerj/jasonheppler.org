@@ -1,5 +1,5 @@
 function getNav() {
-  var mobileNav = $('nav[role=navigation] fieldset[role=search]').after('<fieldset class="mobile-nav"></fieldset>').next().append('<select></select>');
+  var mobileNav = $('nav[role=navigation] div[role=search]').after('<fieldset class="mobile-nav"></fieldset>').next().append('<select></select>');
   mobileNav.children('select').append('<option value="">Navigate&hellip;</option>');
   $('ul[role=main-navigation]').addClass('main-navigation');
   $('ul.main-navigation a').each(function(link) {
@@ -15,15 +15,15 @@ function getNav() {
 
 function addSidebarToggler() {
   if(!$('body').hasClass('sidebar-footer')) {
-    $('#content').append('<span class="toggle-sidebar"></span>');
-    $('.toggle-sidebar').bind('click', function(e) {
-      e.preventDefault();
-      if ($('body').hasClass('collapse-sidebar')) {
-        $('body').removeClass('collapse-sidebar');
-      } else {
-        $('body').addClass('collapse-sidebar');
-      }
-    });
+    // $('#content').append('<span class="toggle-sidebar"></span>');
+    // $('.toggle-sidebar').bind('click', function(e) {
+    //   e.preventDefault();
+    //   if ($('body').hasClass('collapse-sidebar')) {
+    //     $('body').removeClass('collapse-sidebar');
+    //   } else {
+    //     $('body').addClass('collapse-sidebar');
+    //   }
+    // });
   }
   var sections = $('aside.sidebar > section');
   if (sections.length > 1) {

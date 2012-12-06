@@ -10,7 +10,7 @@
 
   
   <meta name="description" content=" Blog Archive 2012 Testing new post
-Dec 06 2012 Recent Posts Testing new post ">
+Dec 06 2012 News Testing new post ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@ Dec 06 2012 Recent Posts Testing new post ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://hepplerj.github.com/blog/archives/">
+  <link rel="canonical" href="http://hepplerj.github.com/blog/archives">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -30,37 +30,38 @@ Dec 06 2012 Recent Posts Testing new post ">
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
-  
-
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body   >
+  <nav role="navigation"><div role="search">
+</div>
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog">News</a></li>
+  <!-- <li><a href="/contact">Contact</a></li> -->
+  <li><a href="/atom.xml"><img src='/images/rss.png' /> RSS</a></li>
+</ul>
+
+</nav>
   <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
+  <h1><a href="/"><img src='/images/logo.png'></a></h1>
   
     <h2>A blogging framework for hackers.</h2>
   
 </hgroup>
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:hepplerj.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
+  <ul class='ctas'>
+  <li><a href='/sponsors'>Sponsors</a></li>
+  <!--
+   <li><a href='/about'>About</a></li>
+   <li><a href='/travel'>Travel</a></li>
+   <li><a href='/schedule'>Schedule</a></li>
+   <li><a href='/venue'>Venue</a></li>
+    -->
 </ul>
 
-</nav>
   <div id="main">
     <div id="content">
       <div>
@@ -96,14 +97,14 @@ Dec 06 2012 Recent Posts Testing new post ">
 <aside class="sidebar">
   
     <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2012/12/06/testing-new-post/">Testing new post</a>
-      </li>
-    
-  </ul>
+  <h1>News</h1>
+<ul id="recent_posts">
+  
+    <li class="post">
+      <a href="/blog/2012/12/06/testing-new-post/">Testing new post</a>
+    </li>
+  
+</ul>
 </section>
 
 
@@ -118,8 +119,8 @@ Dec 06 2012 Recent Posts Testing new post ">
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Your Name -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <a href='http://creativecommons.org/licenses/by/3.0/'>Some rights reserved</a> &middot; 2012 &middot;
+  <span class="credit">Brought to you by <a href="http://geeksoflondon.com">GeeksOfLondon</a></span>
 </p>
 
 </footer>
@@ -140,6 +141,8 @@ Dec 06 2012 Recent Posts Testing new post ">
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>
+
+
 
 
 
