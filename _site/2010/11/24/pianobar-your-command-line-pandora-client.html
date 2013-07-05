@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta content="The online writing of Jason Heppler" name="description"/>
+<title>Pianobar, Your Command Line Pandora Client</title> <meta name="author" content="Jason Heppler" />
+<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/css/tweet.css" type="text/css" />
+<link href="/webfonts/ss-social.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://jasonheppler.org/js/styleTweets.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+svg {
+  font: 13px sans-serif;
+}
+
+</style>
+
+   <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-12786552-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
+
+</head>
+<body>
+
+<div class="header">
+	<div class="header_container">
+
+		<section class="name"><a href="/">Jason Heppler</a></section>
+		<ul class="menu">
+			<li><a href="/about.html">Colophon</a></li>
+			<li><a href="/research.html">Research</a></li>
+			<li><a href="/teaching.html">Teaching</a></li>
+			<li><a href="/hacks.html">Digital &amp; Public History</a></li>
+			<li><a href="http://jasonheppler.org/jah-vita.pdf">Vita</a></li>
+		</ul>
+	</div>
+</div>
+
+<section class="container content">
+
+<aside><p class="when">November 24, 2010</p></aside>
+<h1>Pianobar, Your Command Line Pandora Client</h1>
+
+<p>I&#8217;m an avid music listener.  Since I spend a lot of time either programming, designing, writing, or reading, I like to have background noise that usually takes the form of music.  But I&#8217;m also not a major consumer of music.  I don&#8217;t buy much music to add to my iTunes library; instead, I spend most of my time using online music services that allow me to listen to great music and discover new things.  Most of my time is spent with <a href="http://www.pandora.com">Pandora</a>, though I often turn to <a href="http://www.hypem.com">The Hype Machine</a> for a different flavor of music. <!--more--></p>
+
+<p>However, I despise Pandora&#8217;s web interface and their reliance on Flash (in fact, I&#8217;ve recently <a href="http://daringfireball.net/2010/11/flash_free_and_cheating_with_google_chrome">gone Flash-free</a> on my Mac).  So imagine my excitement when I discovered <a href="http://github.com/PromyLOPh/pianobar">Pianobar</a>, a command-line Pandora client that is rich with features without the bloat of Flash or Adobe Air.  All you need is <a href="http://www.macports.org/">MacPorts</a> or <a href="http://github.com/mxcl/homebrew">Homebrew</a> to install Pianobar.  With MacPorts, use these commands:</p>
+
+<div class="highlight"><pre><code class="console"><span class="gp">$</span> sudo port install libao faad2 libmad cmake git-core
+<span class="gp">$</span> git clone git://github.com/PromyLOPh/pianobar.git
+<span class="gp">$</span> <span class="nb">cd </span>pianobar
+<span class="gp">$</span> cmake . &amp;amp;&amp;amp; make &amp;amp;&amp;amp; sudo make install
+</code></pre></div>
+
+<p>Homebrew is even easier.  Just run:</p>
+
+<div class="highlight"><pre><code class="console"><span class="gp">$</span> sudo brew install libao faad2 libmad cmake git
+</code></pre></div>
+
+<p>And you&#8217;re ready to go.  Just hit &#8220;?&#8221; if you need Pianobar&#8217;s list of commands.</p>
+
+<div class="highlight"><pre><code class="console"><span class="go">+ love current song</span>
+<span class="go">– ban current song</span>
+<span class="go">a add music to current station</span>
+<span class="go">c create new station</span>
+<span class="go">d delete current station</span>
+<span class="go">e explain why this song is played</span>
+<span class="go">g add genre station</span>
+<span class="go">h song history</span>
+<span class="go">i print information about current song/station</span>
+<span class="go">j add shared station</span>
+<span class="go">m move song to different station</span>
+<span class="go">n next song</span>
+<span class="go">p pause/continue</span>
+<span class="go">q quit</span>
+<span class="go">r rename current station</span>
+<span class="go">s change station</span>
+<span class="go">t tired (ban song for 1 month)</span>
+<span class="go">u upcoming songs</span>
+<span class="go">x select quickmix stations</span>
+<span class="go">b bookmark song/artist</span>
+</code></pre></div>
+
+<p>Just another step towards going <a href="http://twitter.com/#!/jaheppler/status/24679139192">GUI-free</a>.</p>
+
+<p>UPDATE: Reader David writes in to let me know that Pianobar is now part of MacPorts and is as easy to install by just using</p>
+
+<div class="highlight"><pre><code class="console"><span class="gp">$</span> sudo port install pianobar
+</code></pre></div>
+
+<p>Homebrew is just as easy.  Simply run</p>
+
+<div class="highlight"><pre><code class="console"><span class="gp">$</span> sudo brew install pianobar
+</code></pre></div>
+
+<p>Thanks, David!</p>
+
+
+<section class="post_meta">
+  <div class="block">
+    <a href="http://twitter.com/jaheppler">
+      <span class="ss-twitter ss-social-circle">
+        <div>Follow me on Twitter.</div>
+      </span>
+    </a>
+  </div>
+  
+  <div class="block">
+  	<a href="http://acomp.stanford.edu/faculty/atsp">
+  		<span class="ss-like ss-social-circle">
+  			<div>I am the Academic Technology Specialist in the History Department at Stanford University.</div>
+  		</span>
+  	</a>
+  </div>
+
+  <div class="block">
+  	<a href="http://github.com/hepplerj">
+  		<span class="ss-github ss-social-circle">
+  			<div>Follow me on Github.</div>
+  		</span>
+  	</a>
+  </div>
+</section>
+
+
+</section>
+
+<footer>
+	Tech, history, code, coffee • Written by <a href="http://jasonheppler.org/about.html">Jason Heppler</a> • Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> <br/> Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a>
+
+<br>
+
+Remember <a href="http://lessig.tumblr.com/post/40347463044/prosecutor-as-bully">Aaron Swartz</a>
+
+</footer>
+
+</body>
+</html>

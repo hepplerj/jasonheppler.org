@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta content="The online writing of Jason Heppler" name="description"/>
+<title>Parsing CSV Data with Ruby</title> <meta name="author" content="Jason Heppler" />
+<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/css/tweet.css" type="text/css" />
+<link href="/webfonts/ss-social.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://jasonheppler.org/js/styleTweets.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+svg {
+  font: 13px sans-serif;
+}
+
+</style>
+
+   <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-12786552-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
+
+</head>
+<body>
+
+<div class="header">
+	<div class="header_container">
+
+		<section class="name"><a href="/">Jason Heppler</a></section>
+		<ul class="menu">
+			<li><a href="/about.html">Colophon</a></li>
+			<li><a href="/research.html">Research</a></li>
+			<li><a href="/teaching.html">Teaching</a></li>
+			<li><a href="/hacks.html">Digital &amp; Public History</a></li>
+			<li><a href="http://jasonheppler.org/jah-vita.pdf">Vita</a></li>
+		</ul>
+	</div>
+</div>
+
+<section class="container content">
+
+<aside><p class="when">January 28, 2013</p></aside>
+<h1>Parsing CSV Data with Ruby</h1>
+
+<p>Computers offer us a wonderful opportunity to automate and ease some of
+the tasks associated with data cleanup and preparation in the humanities. After a
+conversation with a researcher at <a href="http://cesta.stanford.edu">CESTA</a> on Friday, I thought about a
+problem he was confronting with a spreadsheet of data he is collecting
+that contains many thousands of rows. In particular, he is considering
+some methods for data mining and text analysis. The research deals in
+part regarding notes taken by a British consulate about freed slaves in the nineteenth
+century and, in this case, he wanted a method for extracting the
+consulate&#8217;s notes based on criteria regarding the slaves he wrote about.
+It would be simple enough to do some basic work like this within a
+spreadsheet by sorting columns based on criteria like gender or
+occupation, but adding those two together (e.g., where gender is
+&#8220;male&#8221; and occupation is &#8220;farmhand&#8221;) becomes a trickier task in a
+spreadsheet. </p>
+
+<p>To work around this problem, I whipped up a couple of quick Ruby scripts
+this afternoon. The first script does most of the heavy lifting by
+iterating through a <code>csv</code> file and finding the matching options. Then,
+out of those matches, I locate the column that contains the data I want
+and tell the script to write to <code>STDOUT</code> (or pipe the output to a text
+file). </p>
+
+<div class="highlight"><pre><code class="ruby"><span class="c1">#!/usr/bin/env ruby</span>
+
+<span class="nb">require</span> <span class="s1">&#39;csv&#39;</span>
+
+<span class="c1"># Load file</span>
+<span class="n">csv_fname</span> <span class="o">=</span> <span class="s1">&#39;file.csv&#39;</span>
+
+<span class="c1"># Key is the column to check, value is what to match</span>
+<span class="n">search_critera</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;sex&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;female&#39;</span><span class="p">,</span> 
+                   <span class="s1">&#39;race&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;white&#39;</span> <span class="p">}</span>
+
+<span class="n">options</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:headers</span>      <span class="o">=&gt;</span>  <span class="ss">:first_row</span><span class="p">,</span>
+            <span class="ss">:converters</span>   <span class="o">=&gt;</span>  <span class="o">[</span> <span class="ss">:numeric</span> <span class="o">]</span> <span class="p">}</span>
+
+<span class="c1"># Save `matches` and a copy of the `headers`</span>
+<span class="n">matches</span> <span class="o">=</span> <span class="kp">nil</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="kp">nil</span>
+
+<span class="c1"># Iterate through the `csv` file and locate where</span>
+<span class="c1"># data matches the options.</span>
+
+<span class="no">CSV</span><span class="o">.</span><span class="n">open</span><span class="p">(</span> <span class="n">csv_fname</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">options</span> <span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">csv</span><span class="o">|</span>
+  <span class="n">matches</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">find_all</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="kp">true</span>
+    <span class="n">search_critera</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">key</span><span class="o">|</span>
+      <span class="n">match</span> <span class="o">=</span> <span class="n">match</span> <span class="o">&amp;&amp;</span> <span class="p">(</span> <span class="n">row</span><span class="o">[</span><span class="n">key</span><span class="o">]</span> <span class="o">==</span> <span class="n">search_critera</span><span class="o">[</span><span class="n">key</span><span class="o">]</span> <span class="p">)</span>
+    <span class="k">end</span>
+    <span class="n">match</span>
+  <span class="k">end</span>
+  <span class="n">headers</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">headers</span>
+<span class="k">end</span>
+
+<span class="c1"># Once matches are found, we print the results</span>
+<span class="c1"># for a specific row. The row `row[8]` is</span>
+<span class="c1"># tied specifically to a notes field.</span>
+
+<span class="n">matches</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+  <span class="n">row</span> <span class="o">=</span> <span class="n">row</span><span class="o">[</span><span class="mi">8</span><span class="o">]</span>
+  <span class="nb">puts</span> <span class="n">row</span>
+<span class="k">end</span>
+</code></pre></div>
+
+<p>You&#8217;ll have to play around with the script if you&#8217;re looking to use it
+for your own purposes. The script is very purpose built and not at all
+robust or inter-operable.</p>
+
+<p>The script begins by offering criteria to look for. The criteria are a key
+- value pairing. The key corresponds to the <code>csv</code> header (in
+  this case, <code>sex</code>) and looks for the string within that column (here,
+  <code>female</code>). The options should be able to handle as many criteria as
+  needed, but I have not tested this thoroughly. </p>
+
+<p>Then, the script opens the <code>csv</code> file and iterates through
+the data to locate criteria and stores the results (either
+<code>true</code> or <code>false</code>) inside <code>matches</code>.
+Finally, the results stored within <code>matches</code> are run against
+a row of data I want to collect (in this case, <code>row[8]</code>
+contains the data that I want). Any place where <code>matches</code> is
+equal to <code>true</code>, the script grabs the data from
+<code>row[8]</code> and stores the results in <code>row</code>, which is
+then output to the screen.</p>
+
+<p>I suspect the script will become more complicated in the near future.
+One problem I&#8217;m thinking about already has to do with the way the
+researcher I mentioned at the beginning collected his spreadsheet data
+regarding the occupation of a freed slave. For example, some occupations
+are simply listed as &#8220;cook&#8221; while others contained a conjunction &#8220;cook
+and farmhand.&#8221; The problem with my script is it doesn&#8217;t have built-in
+<a href="http://en.wikipedia.org/wiki/Approximate_string_matching">fuzzy finding</a> and looks for explicit strings (&#8220;cook&#8221; means &#8220;cook&#8221;, not
+&#8220;Cook&#8221; or &#8220;COOK&#8221;). As a quick fix for this, and as a way to check the
+data for accuracy, I have a second script I put together that simply
+counts the number of occurrences for a given row. </p>
+
+<div class="highlight"><pre><code class="ruby"><span class="c1">#!/usr/bin/env ruby</span>
+
+<span class="nb">require</span> <span class="s1">&#39;csv&#39;</span>
+
+<span class="c1"># create an array to store the count data</span>
+<span class="n">unique_count</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># let&#39;s count!</span>
+<span class="no">CSV</span><span class="o">.</span><span class="n">foreach</span><span class="p">(</span><span class="s1">&#39;file.csv&#39;</span><span class="p">,</span> <span class="ss">:headers</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+  <span class="n">unique_count</span><span class="o">[</span><span class="n">row</span><span class="o">[</span><span class="mi">3</span><span class="o">]]</span> <span class="o">||=</span> <span class="mi">0</span>
+  <span class="n">unique_count</span><span class="o">[</span><span class="n">row</span><span class="o">[</span><span class="mi">3</span><span class="o">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">end</span>
+
+<span class="c1"># print!</span>
+<span class="n">unique_count</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">val</span><span class="p">,</span> <span class="n">count</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">val</span><span class="si">}</span><span class="s2">: </span><span class="si">#{</span><span class="n">count</span><span class="si">}</span><span class="s2"> time(s)&quot;</span>
+<span class="k">end</span>
+</code></pre></div>
+
+<p>Nothing complicated here. The script starts by creating an empty array
+then loads the data in. In this case, I want to check the data in
+<code>row[3]</code>. The script iterates through each row in the
+<code>csv</code> and stores a count for each unique item in the row. The
+results are displayed as a value - count pairing. Running the script
+gives something like this:</p>
+
+<div class="highlight"><pre><code class="console"><span class="go">female: 36 time(s)</span>
+<span class="go">male: 24 time(s)</span>
+</code></pre></div>
+
+<p>The script exists more as an aid for me as I think through the previous script: I can find unique occurrences of things like gender, occupation, street addresses, and so on, which also locates misspellings or inconsistent data. Furthermore, until I add fuzzy finding to the previous script, the counting script allows me to see unique strings that I can add as search criteria to ensure I&#8217;m collecting all the data I want.</p>
+
+
+<section class="post_meta">
+  <div class="block">
+    <a href="http://twitter.com/jaheppler">
+      <span class="ss-twitter ss-social-circle">
+        <div>Follow me on Twitter.</div>
+      </span>
+    </a>
+  </div>
+  
+  <div class="block">
+  	<a href="http://acomp.stanford.edu/faculty/atsp">
+  		<span class="ss-like ss-social-circle">
+  			<div>I am the Academic Technology Specialist in the History Department at Stanford University.</div>
+  		</span>
+  	</a>
+  </div>
+
+  <div class="block">
+  	<a href="http://github.com/hepplerj">
+  		<span class="ss-github ss-social-circle">
+  			<div>Follow me on Github.</div>
+  		</span>
+  	</a>
+  </div>
+</section>
+
+
+</section>
+
+<footer>
+	Tech, history, code, coffee • Written by <a href="http://jasonheppler.org/about.html">Jason Heppler</a> • Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> <br/> Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a>
+
+<br>
+
+Remember <a href="http://lessig.tumblr.com/post/40347463044/prosecutor-as-bully">Aaron Swartz</a>
+
+</footer>
+
+</body>
+</html>

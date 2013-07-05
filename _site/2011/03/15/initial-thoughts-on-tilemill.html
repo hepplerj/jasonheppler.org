@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta content="The online writing of Jason Heppler" name="description"/>
+<title>Initial Thoughts on TileMill</title> <meta name="author" content="Jason Heppler" />
+<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/css/tweet.css" type="text/css" />
+<link href="/webfonts/ss-social.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://jasonheppler.org/js/styleTweets.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+svg {
+  font: 13px sans-serif;
+}
+
+</style>
+
+   <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-12786552-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
+
+</head>
+<body>
+
+<div class="header">
+	<div class="header_container">
+
+		<section class="name"><a href="/">Jason Heppler</a></section>
+		<ul class="menu">
+			<li><a href="/about.html">Colophon</a></li>
+			<li><a href="/research.html">Research</a></li>
+			<li><a href="/teaching.html">Teaching</a></li>
+			<li><a href="/hacks.html">Digital &amp; Public History</a></li>
+			<li><a href="http://jasonheppler.org/jah-vita.pdf">Vita</a></li>
+		</ul>
+	</div>
+</div>
+
+<section class="container content">
+
+<aside><p class="when">March 15, 2011</p></aside>
+<h1>Initial Thoughts on TileMill</h1>
+
+<p><a href="http://mapbox.com/">MapBox</a> has recently announced the release of their open source mapping studio called <a href="http://tilemill.com/">TileMill</a>. TileMill allows users to easily create maps through the open-source rendering library Mapnik, the same software used by <a href="http://www.openstreetmap.org/">OpenStreetMap</a> and <a href="http://www.mapquest.com">MapQuest</a>. Maps can be created with TileMill and displayed using the Google Maps API, OpenLayers, and many other projects. TileMill can also be exported through SQLite MBTiles.</p>
+
+<h4>Setup</h4>
+<p>At the moment, installing and running TileMill involves a bit of geekery. Currently, TileMill is available only on Mac and Linux and requires some Unix knowledge. I won&#8217;t walk through the installation here &#8211; <a href="http://tilemill.com/index.html">TileMill has the steps</a> necessary for your system. TileMill runs as a web application, but is installed locally and accessed through Firefox or Chrome. TileMill will access data files stored locally in order to place layers on top of the map projection. </p>
+
+<h4>Using TileMill</h4>
+<p>Using TileMill is fairly simple. The interface is arranged with the map and layers on the left side, and the stylesheet editor on the right. The map interface is much like using Google Maps, complete with drag-and-move, zoom levels, and full-screen viewing. The map starts out in a global view, but you can zoom in and limit the final scope of your project.</p>
+
+<p><a href="http://www.jasonheppler.org/wp-content/uploads/2011/03/tilemill_new.png"><img src="http://www.jasonheppler.org/wp-content/uploads/2011/03/tilemill_new-300x168.png" alt="" title="tilemill_new" width="300" height="168" class="aligncenter size-medium wp-image-1373" /></a></p>
+
+<p>The styling of the map is based on a syntax called MSS. Those familiar with CSS will instantly be comfortable working with MSS code. MSS styles opens with one default style called <code>Map</code> that allows you to set the background color (e.g., color of the oceans). TileMill also defaults a <code>world</code> layer that sets up some useful starting points and sensible color scheme. Everything else is built around layers. These data layers are added on top of the map template, and data includes point data, lines, polygonal shapes, and raster images that you can reorder or stack any way you choose. Each layer is automatically given a unique identification so you can set MSS styling specific to each. </p>
+
+<p>One great feature of TileMill is its simplicity: you are offered a single type of projection (Web Mercator) and requires you convert data into a handful of GIS formats that makes assumptions about certain factors. You cannot do transformations like cartograms, but TileMill offers a way to render data on simple maps, control its design and presentation, and export to a couple of choice formats.</p>
+
+<p>So, let&#8217;s say we wanted to focus on the United States. We can reposition our map and zoom in a bit to get a better view of where we&#8217;re working. We&#8217;ll start off by defining some global colors that we can access throughout the stylesheet. Starting off with the <code>Map</code> background, we&#8217;ll use a blue color to shade the oceans. We define global variables using the @ symbol, so we could write <code>@blue</code> and use, say, the hexidecimal code <code>#93b5cc</code> (so our final styling looks like <code>@blue: #93b5cc;</code>). We can set up the background color as:</p>
+
+<div class="highlight"><pre><code class="css"><span class="k">@blue</span><span class="o">:</span> <span class="nf">#93b5cc</span><span class="p">;</span>
+
+<span class="nt">Map</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="o">:</span> <span class="o">@</span><span class="nb">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Let&#8217;s also do some styling so the United States and country borders stand out a bit more, and fade out the focus on international countries. We&#8217;ll take our world identification, add another global color we&#8217;ll call @brown, and make the necessary changes under world to restyle country polygons:</p>
+
+<div class="highlight"><pre><code class="css"><span class="k">@blue</span><span class="o">:</span> <span class="nf">#93b5cc</span><span class="p">;</span>
+<span class="k">@brown</span><span class="o">:</span> <span class="nf">#a38e72</span><span class="p">;</span>
+
+<span class="nt">Map</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="o">:</span> <span class="o">@</span><span class="nb">blue</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nf">#world</span> <span class="p">{</span>
+  <span class="n">line</span><span class="o">-</span><span class="k">color</span><span class="o">:</span> <span class="m">#ccc</span><span class="p">;</span>
+  <span class="n">line</span><span class="o">-</span><span class="k">width</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
+  <span class="n">polygon</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="o">@</span><span class="nb">brown</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Now let&#8217;s have the United States stand out. TileMill uses unique country identification codes that allow you to apply specific MSS styling to countries:</p>
+
+<div class="highlight"><pre><code class="css"><span class="k">@blue</span><span class="o">:</span> <span class="nf">#93b5cc</span><span class="p">;</span>
+<span class="k">@brown</span><span class="o">:</span> <span class="nf">#a38e72</span><span class="p">;</span>
+<span class="k">@lightbrown</span><span class="o">:</span> <span class="nf">#ebdbc8</span><span class="p">;</span>
+
+<span class="nt">Map</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="o">:</span> <span class="o">@</span><span class="nb">blue</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nf">#world</span> <span class="p">{</span>
+  <span class="n">line</span><span class="o">-</span><span class="k">color</span><span class="o">:</span> <span class="m">#ccc</span><span class="p">;</span>
+  <span class="n">line</span><span class="o">-</span><span class="k">width</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
+  <span class="n">polygon</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="o">@</span><span class="nb">brown</span><span class="p">;</span>
+  <span class="p">[</span><span class="n">ISO2</span><span class="o">=</span><span class="s2">&quot;US&quot;</span><span class="p">]</span><span class="err">{</span>
+  <span class="n">polygon</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="o">@</span><span class="n">lightbrown</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="err">}</span>
+</code></pre></div>
+
+<p><a href="http://www.jasonheppler.org/wp-content/uploads/2011/03/tilemill_us.png"><img src="http://www.jasonheppler.org/wp-content/uploads/2011/03/tilemill_us-300x169.png" alt="" title="tilemill_us" width="300" height="168" class="aligncenter size-medium wp-image-1374" /></a></p>
+
+<p>Now we&#8217;ve got a good base projection set to start adding layers upon. Adding layers is as simple as clicking the &#8220;+&#8221; button, giving your layer a unique ID, and selecting its source data. Currently, TileMill imports ESRI shapefiles, KML, geoJSON, and geoTIFF data. There are, however, some limitations on this data. For example, ESRI shapefiles are constructed from three files (.shp, .dbf, and .shx) and TileMill expects to find all three under a single .zip archive. TileMill also only recognized line vector data from KML files, not points or polygons. Getting your data into a compatible format is currently a bit of a headache. I hope that TileMill will make it easier to add data formats in the future.</p>
+
+<p><a href="http://www.jasonheppler.org/wp-content/uploads/2011/03/tilemill_layer.png"><img src="http://www.jasonheppler.org/wp-content/uploads/2011/03/tilemill_layer-300x169.png" alt="" title="tilemill_layer" width="300" height="168" class="aligncenter size-medium wp-image-1375" /></a></p>
+
+<p>We can do cool things like add the location of lakes (by adding a <code>lake</code> layer and styling it) and the location of national parks (through a <code>national_park</code> layer).</p>
+
+<p><a href="http://www.jasonheppler.org/wp-content/uploads/2011/03/tilemill_lakes.png"><img src="http://www.jasonheppler.org/wp-content/uploads/2011/03/tilemill_lakes-300x168.png" alt="" title="tilemill_lakes" width="300" height="168" class="aligncenter size-medium wp-image-1376" /></a></p>
+
+<p><a href="http://www.jasonheppler.org/wp-content/uploads/2011/03/tilemill_natlparks.png"><img src="http://www.jasonheppler.org/wp-content/uploads/2011/03/tilemill_natlparks-300x170.png" alt="" title="tilemill_natlparks" width="300" height="170" class="aligncenter size-medium wp-image-1389" /></a></p>
+
+<h4>Verdict</h4>
+
+<p>This was a basic run-down of what TileMill currently offers. So, how can digital historians use this? Data import is probably the biggest draw-back. TileMill&#8217;s goal at the moment is geospatial data rather than table-based data. If you have a spreadsheet of zipcodes, country identifications, or latitude/longitudes, you must make the data spatial by merging it with shapefiles or making styles based on the data. This means that scholars aren&#8217;t going to be importing historical data quite yet, not to mention a lack of adding historical maps (unlike Google Earth / Maps, which allows for historical map overlays). Wrangling with CSV data into KML, ESRI, or geoJSON is a tough process at the moment, and there is no built-in or online help. Currently, the default data sets that come with TileMill are the easiest way to start playing with the app.</p>
+
+<p>Data output is also a weak feature. Currently, I can only save outputs as PDF, PNG, or MBTile. As a digital historian, I prefer visualizations and data that can be used by readers and users themselves, not just presented as a static image by me. In this case, Google Maps / Earth wins. TileMill is still in early development (and can occasionally be buggy or crash, so beware. You can <a href="https://github.com/mapbox/tilemill/issues">submit issues to the issue tracker</a>), but development is continuous so I suspect input and output features to improve. Designing a map doesn&#8217;t require much of a time investment or learning curve. </p>
+
+<p>MapBox currently has no plans to support Windows, so users are limited to Mac and Linux platforms (which you&#8217;re using anyways, right?). </p>
+
+<p>Overall, a good start to what could be a very promising and user-friendly cartography program that scholars may find useful in spatial humanities.</p>
+
+
+<section class="post_meta">
+  <div class="block">
+    <a href="http://twitter.com/jaheppler">
+      <span class="ss-twitter ss-social-circle">
+        <div>Follow me on Twitter.</div>
+      </span>
+    </a>
+  </div>
+  
+  <div class="block">
+  	<a href="http://acomp.stanford.edu/faculty/atsp">
+  		<span class="ss-like ss-social-circle">
+  			<div>I am the Academic Technology Specialist in the History Department at Stanford University.</div>
+  		</span>
+  	</a>
+  </div>
+
+  <div class="block">
+  	<a href="http://github.com/hepplerj">
+  		<span class="ss-github ss-social-circle">
+  			<div>Follow me on Github.</div>
+  		</span>
+  	</a>
+  </div>
+</section>
+
+
+</section>
+
+<footer>
+	Tech, history, code, coffee • Written by <a href="http://jasonheppler.org/about.html">Jason Heppler</a> • Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> <br/> Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a>
+
+<br>
+
+Remember <a href="http://lessig.tumblr.com/post/40347463044/prosecutor-as-bully">Aaron Swartz</a>
+
+</footer>
+
+</body>
+</html>

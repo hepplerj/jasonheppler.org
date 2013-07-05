@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta content="The online writing of Jason Heppler" name="description"/>
+<title>The Rubyist Historian: Arrays and Hashes</title> <meta name="author" content="Jason Heppler" />
+<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/css/tweet.css" type="text/css" />
+<link href="/webfonts/ss-social.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://jasonheppler.org/js/styleTweets.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+svg {
+  font: 13px sans-serif;
+}
+
+</style>
+
+   <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-12786552-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
+
+</head>
+<body>
+
+<div class="header">
+	<div class="header_container">
+
+		<section class="name"><a href="/">Jason Heppler</a></section>
+		<ul class="menu">
+			<li><a href="/about.html">Colophon</a></li>
+			<li><a href="/research.html">Research</a></li>
+			<li><a href="/teaching.html">Teaching</a></li>
+			<li><a href="/hacks.html">Digital &amp; Public History</a></li>
+			<li><a href="http://jasonheppler.org/jah-vita.pdf">Vita</a></li>
+		</ul>
+	</div>
+</div>
+
+<section class="container content">
+
+<aside><p class="when">January  4, 2011</p></aside>
+<h1>The Rubyist Historian: Arrays and Hashes</h1>
+
+<p>To review, we&#8217;ve learned how to create functions, call upon methods, create classes, and generate basic programs in Ruby.  We&#8217;ll now be moving into creating arrays and hashes. <!--more--></p>
+
+<h4>Arrays</h4>
+
+<p>Ruby arrays and hashes are indexed collections that store objects.  Arrays and hashes can contain different object types: strings, integers, and floating-point numbers.  Arrays tend to be more efficient in accessing elements, but hashes provide greater flexibility.</p>
+
+<p>Arrays are initiated between square brackets.  Inside of an array you can access individual elements by calling upon its index.  Note that Ruby begins its index with zero.</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">my_array</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;Ambrose&quot;</span><span class="p">,</span> <span class="s2">&quot;White&quot;</span><span class="p">,</span> <span class="s2">&quot;Worster&quot;</span><span class="o">]</span>
+
+<span class="c1"># print the items in the array by calling</span>
+<span class="c1"># their index</span>
+<span class="nb">puts</span> <span class="n">my_array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="c1"># =&gt; Ambrose</span>
+<span class="nb">puts</span> <span class="n">my_array</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="c1"># =&gt; White</span>
+<span class="nb">puts</span> <span class="n">my_array</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="c1"># =&gt; Worster</span>
+</code></pre></div>
+
+<p>There is no practical limit as to how many things an array can hold.  And, as mentioned above, there is no problem with mixing types of array elements.  You could just as easily write:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">my_array</span> <span class="o">=</span> <span class="o">[</span> <span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;books&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="o">.</span><span class="mi">14</span> <span class="o">]</span>
+<span class="nb">puts</span> <span class="n">my_array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="c1"># =&gt; 42</span>
+<span class="nb">puts</span> <span class="n">my_array</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="c1"># =&gt; books</span>
+<span class="nb">puts</span> <span class="n">my_array</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="c1"># =&gt; 3.14</span>
+</code></pre></div>
+
+<p>Note that strings must be enclosed in single or double quotes.</p>
+
+<p>Arrays also include two operators.  The first is <code>pop</code>, which removes the item on the right side (or, the end of the array).  The other is <code>shift</code>, which removes items on the left side (beginning) of the array.</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">my_array</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;Ambrose&quot;</span><span class="p">,</span> <span class="s2">&quot;White&quot;</span><span class="p">,</span> <span class="s2">&quot;Worster&quot;</span><span class="o">]</span>
+
+<span class="n">array_change</span> <span class="o">=</span> <span class="nb">puts</span> <span class="n">my_array</span><span class="o">.</span><span class="n">pop</span>
+<span class="n">array_change2</span> <span class="o">=</span> <span class="nb">puts</span> <span class="n">my_array</span><span class="o">.</span><span class="n">shift</span>
+
+<span class="nb">puts</span> <span class="n">array_change</span> <span class="c1"># =&gt; Worster</span>
+<span class="nb">puts</span> <span class="n">array_change2</span> <span class="c1"># =&gt; Ambrose</span>
+</code></pre></div>
+
+<p>We can also add things to the array by using the <code>push</code> and <code>unshift</code> methods.  The <code>push</code> method adds items to the end (or right side of) the array while the <code>unshift</code> method adds things to the beginning of (or left side of) the array.</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">my_array</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;Ambrose&quot;</span><span class="p">,</span> <span class="s2">&quot;White&quot;</span><span class="p">,</span> <span class="s2">&quot;Worster&quot;</span><span class="o">]</span>
+
+<span class="n">array_new</span> <span class="o">=</span> <span class="n">my_array</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="s2">&quot;Ulrich&quot;</span><span class="p">)</span>
+<span class="n">array_new</span> <span class="o">=</span> <span class="n">my_array</span><span class="o">.</span><span class="n">unshift</span><span class="p">(</span><span class="s2">&quot;West&quot;</span><span class="p">)</span>
+
+<span class="nb">puts</span> <span class="s2">&quot;The array contains </span><span class="si">#{</span><span class="n">array_new</span><span class="o">.</span><span class="n">inspect</span><span class="si">}</span><span class="s2">&quot;</span>
+</code></pre></div>
+
+<p>Arrays can also be created much more simply by using the shortcut <code>%w</code>, which removes the need for all those quotes and commas:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="c1"># array-shortcut.rb</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="o">[</span> <span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Microsoft&#39;</span><span class="p">,</span> <span class="s1">&#39;Linux&#39;</span><span class="p">,</span> <span class="s1">&#39;Solaris&#39;</span> <span class="o">]</span>
+<span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="c1"># =&gt; &quot;Apple&quot;</span>
+<span class="n">a</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="c1"># =&gt; &quot;Microsoft&quot;</span>
+
+<span class="c1"># we can achieve the same thing by using:</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="sx">%w{ Apple Microsoft Linux Solaris }</span>
+<span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="c1"># =&gt; &quot;Apple&quot;</span>
+<span class="n">a</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="c1"># =&gt; &quot;Microsoft&quot;</span>
+</code></pre></div>
+
+<p>We can create an empty array by calling <code>Array.new</code>.  The array is defining what objects must look like.  Remember that every class has a special method called <code>new</code>, and <code>new</code> is a special method called a <strong>constructor</strong>.  By calling <code>Array.new</code>, we&#8217;re asking Ruby to create an empty object.  So, lets create an empty array and populate it with data:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">authors</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">.</span><span class="n">new</span>
+
+<span class="n">authors</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="s2">&quot;Hemingway&quot;</span><span class="p">)</span>
+<span class="n">authors</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="s2">&quot;Faulkner&quot;</span><span class="p">)</span>
+<span class="n">authors</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="s2">&quot;Whitman&quot;</span><span class="p">)</span>
+
+<span class="nb">puts</span> <span class="n">authors</span>
+</code></pre></div>
+
+<p>The program should print the contents of the array to the screen.</p>
+
+<h4>Hashes</h4>
+
+<p>Ruby hashes share similarities with arrays but operate differently and have different syntaxes.  Hashes use braces rather than brackets.  Most importantly hashes must provide two objects for every entry, one for the <strong>key</strong> and one for the <strong>value</strong>.  The key and the value are separated by a <code>=&gt;</code>.</p>
+
+<p>So, lets say we wanted to map author ratings. The hash setup would look like this:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">authors</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Hemingway&#39;</span>     <span class="o">=&gt;</span>   <span class="s1">&#39;five_stars&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Stephenson&#39;</span>    <span class="o">=&gt;</span>   <span class="s1">&#39;four_stars&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Heppler&#39;</span>       <span class="o">=&gt;</span>   <span class="s1">&#39;one_star&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Whitman&#39;</span>       <span class="o">=&gt;</span>   <span class="s1">&#39;five_stars&#39;</span><span class="p">,</span>
+    <span class="c1"># key           =&gt;    value</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The item to the left of <code>=&gt;</code> is the <strong>key</strong> while item on the right is its corresponding <strong>value</strong>.  Keys in a hash must be unique (we cannot have two &#8220;Stephenson,&#8221; for example) but values can repeat.  Hashes are indexed with the same square brackets as arrays.  To print results from the above hash, we could write:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="nb">puts</span> <span class="n">authors</span><span class="o">[</span><span class="s1">&#39;Whitman&#39;</span><span class="o">]</span> <span class="c1"># =&gt; five_stars</span>
+<span class="nb">puts</span> <span class="n">authors</span><span class="o">[</span><span class="s1">&#39;Stephenson&#39;</span><span class="o">]</span> <span class="c1"># =&gt; four_stars</span>
+</code></pre></div>
+
+<p>Also, like arrays, you can create an empty hash with <code>Hash.new</code> and inject data into it.  For example:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">my_hash</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+
+<span class="nb">hash</span><span class="o">[</span><span class="s1">&#39;Dickenson&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;three_stars&#39;</span>
+</code></pre></div>
+
+<p>Hashes have one significant advantage over arrays: they use any object as an index.  And, if you&#8217;re using Ruby 1.9, Ruby also remembers the order in which you add items to the hash.  When you iterate over entries, Ruby will return them in the correct order.  Hashes are a frequently used data structure in Ruby.</p>
+
+<h4>Additional Resources</h4>
+<ul>
+<li><a href="http://thinkvitamin.com/code/ruby-arrays/">The Basics of Ruby Arrays</a>, Geoff Grosenbach</li>
+<li><a href="http://carlosgabaldon.com/ruby/ruby-arrays/">Ruby Arrays</a>, Carlos Gabaldon</li>
+<li><a href="http://blog.devinterface.com/2011/01/ruby-enumerables-hashes/">Ruby Enumerables: Hashes</a>, DevInterface</li>
+<li><a href="http://kpumuk.info/ruby-on-rails/memo-3-advanced-usage-of-ruby-hashes-and-arrays/">Memo #3: Advanced usage of Ruby hashes and arrays</a>, Dmytro Shteflyuk</li>
+<li><a href="http://programmingbulls.com/ruby-hash">Ruby Hash</a>, Programming Bulls</li>
+</ul>
+
+<p><em>Visit the Rubyist Historian <a href="http://www.jasonheppler.org/the-rubyist-historian-the-series.html">Table of Contents</a> for more sections, and check out the <a href="https://github.com/hepplerj/rubyist-historian">Github repository</a> for an archive of all the code examples.</em></p>
+
+<p><em>See something that&#8217;s wrong?  Examples that don&#8217;t work?  Explanations that are unclear or confusing?  Embarrassing typographic errors?  Drop me an email at jason.heppler+feedback at gmail and I&#8217;ll fix things right up!</em></p>
+
+<p><em>Topic structure, examples, and explanations for the Rubyist Historian are inspired by, credited to, and drawn from Stephen Ramsay and his course Electronic Text.</em></p>
+
+
+<section class="post_meta">
+  <div class="block">
+    <a href="http://twitter.com/jaheppler">
+      <span class="ss-twitter ss-social-circle">
+        <div>Follow me on Twitter.</div>
+      </span>
+    </a>
+  </div>
+  
+  <div class="block">
+  	<a href="http://acomp.stanford.edu/faculty/atsp">
+  		<span class="ss-like ss-social-circle">
+  			<div>I am the Academic Technology Specialist in the History Department at Stanford University.</div>
+  		</span>
+  	</a>
+  </div>
+
+  <div class="block">
+  	<a href="http://github.com/hepplerj">
+  		<span class="ss-github ss-social-circle">
+  			<div>Follow me on Github.</div>
+  		</span>
+  	</a>
+  </div>
+</section>
+
+
+</section>
+
+<footer>
+	Tech, history, code, coffee • Written by <a href="http://jasonheppler.org/about.html">Jason Heppler</a> • Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> <br/> Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a>
+
+<br>
+
+Remember <a href="http://lessig.tumblr.com/post/40347463044/prosecutor-as-bully">Aaron Swartz</a>
+
+</footer>
+
+</body>
+</html>

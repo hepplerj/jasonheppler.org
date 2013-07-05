@@ -1,0 +1,41 @@
+---
+layout: default
+title: Teaching
+---
+
+<h2>{{ page.title }}</h2>
+
+<h3>Courses</h3>
+
+<p>For more teaching information, see my <a href="http://jasonheppler.org/jah-vita.pdf">vita</a>.</p>
+
+<ul>
+	<li>Guest lecture, "Mass Media and the American Indian Movement," COMM189H: Communications and Social Movements, (Prof. Carly Woods), Fall 2011)</li>
+	<li>Guest lecture, "Show Indians and Buffalo Bill's Wild West," HIST359: Mythic West (Prof. Douglas Seefeldt), Spring 2010</li>
+	<li>Teaching Assistant, U.S. before 1877 (Prof. Brenden Rensink), Fall 2010</li>
+		<ul>
+    		<li>Guest lecture: "Thomas Jefferson and the American West"</li>
+    		<li>Guest lecture: "Empire of Liberty: Culture, Society, and Politics in the Early Republic"</li>
+		</ul>
+	<li>Teaching Assistant, U.S. since 1877 (Prof. William Thomas), Spring 2009</li>
+    	<ul>
+    		<li>Guest lecture: "The Origins of Red Power and the American Indian Movement"</li>
+    	</ul>
+	<li>Teaching Assistant, African Culture and Civilization, (Prof. Dawne Curry), Fall 2008</li>
+</ul>
+
+<h2>Projects</h2>
+<ul>
+    <li><strong><a href="http://digitalhistory.unl.edu/pond/index.php">POND: Participating Online In-Depth</a></strong>: Depreciated project. Built under the direction of William G. Thomas that served as a research portal for undergraduate students using digital archives for primary source research.</li>
+</ul>
+
+<h2>Posts</h2>
+
+<ul class="listing">
+{% for post in site.categories.teaching %}
+    <li>
+    	<span>{{ post.date | date: "%B %e, %Y" | ordinalize  }}</span>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>    
+{% endfor %}
+</ul>

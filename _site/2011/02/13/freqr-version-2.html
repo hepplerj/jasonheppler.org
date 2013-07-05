@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta content="The online writing of Jason Heppler" name="description"/>
+<title>FREQr Version 2</title> <meta name="author" content="Jason Heppler" />
+<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/css/tweet.css" type="text/css" />
+<link href="/webfonts/ss-social.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://jasonheppler.org/js/styleTweets.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+svg {
+  font: 13px sans-serif;
+}
+
+</style>
+
+   <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-12786552-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
+
+</head>
+<body>
+
+<div class="header">
+	<div class="header_container">
+
+		<section class="name"><a href="/">Jason Heppler</a></section>
+		<ul class="menu">
+			<li><a href="/about.html">Colophon</a></li>
+			<li><a href="/research.html">Research</a></li>
+			<li><a href="/teaching.html">Teaching</a></li>
+			<li><a href="/hacks.html">Digital &amp; Public History</a></li>
+			<li><a href="http://jasonheppler.org/jah-vita.pdf">Vita</a></li>
+		</ul>
+	</div>
+</div>
+
+<section class="container content">
+
+<aside><p class="when">February 13, 2011</p></aside>
+<h1>FREQr Version 2</h1>
+
+<p>Late last year I released a word frequency generator into the wild on Github. I&#8217;ve since updated the program to a more advanced version.</p>
+
+<p>The <a href="http://www.jasonheppler.org/2010/11/28/freqr-a-command-line-word-frequency-generator/">original version</a> of FREQr generated word frequencies based on a text file. The new version can now read files off the web, which makes the program much more useful. The program also generates an HTML output of the frequencies for display within digital history projects. I&#8217;ve also added a new feature: word clouds. FREQr now also outputs a word cloud based on frequencies, also formatted for display on the web.</p>
+
+<p>Here&#8217;s the full code, or you can <a href="https://github.com/hepplerj/FREQr">download a copy</a> from Github:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="c1">#!/usr/bin/ruby -w</span>
+
+<span class="c1"># FREQr.rb</span>
+<span class="c1">#</span>
+<span class="c1"># Written by Jason A. Heppler</span>
+<span class="c1">#</span>
+<span class="c1"># This program is free software.</span>
+<span class="c1"># You can distribute/modify this program under the terms of</span>
+<span class="c1"># the GNU Lesser General Public License version 2.1.</span>
+<span class="c1"># </span>
+<span class="c1"># Last Modified: Sun Feb 12 16:08:06 CST 2011</span>
+ 
+<span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+ 
+<span class="no">STOPWORDS</span> <span class="o">=</span> <span class="sx">%w{a about above across after again against all am an and any are arent as at be because been before being below between both but by cant cannot could couldnt did didnt do does doesnt doing dont down during each few for form further had hadnt has hasnt have havent having he her here heres hers herself him himself his how i id ill im ive if in into is isnt it its itself lets me more most mustnt my myself my myself no nor not of off on once only or other ought our ours ourselves out over own same shant she should shouldnt so some such than that the their theirs them themselves then there these they this those through to too under until up very was we were what when where which while who why with would you your yours yourself yourselves}</span>
+
+<span class="c1"># Tag Cloud class for generating a word cloud from a word frequency</span>
+<span class="c1"># =================================================================</span>
+<span class="k">class</span> <span class="nc">TagCloud</span>
+    <span class="kp">attr_accessor</span> <span class="ss">:word_class</span>
+ 
+    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+        <span class="vi">@wordcount</span> <span class="o">=</span> <span class="n">count_words</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+    <span class="k">end</span>
+ 
+    <span class="k">def</span> <span class="nf">count_words</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+        <span class="n">wordcount</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">words</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span>
+            <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span>
+                <span class="k">unless</span> <span class="n">wordcount</span><span class="o">.</span><span class="n">key?</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">)</span>
+                    <span class="n">wordcount</span><span class="o">[</span><span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">else</span>
+                    <span class="n">wordcount</span><span class="o">[</span><span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="o">]</span> <span class="o">=</span> <span class="n">wordcount</span><span class="o">[</span><span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="o">]</span> <span class="o">+</span> <span class="mi">1</span>
+                <span class="k">end</span>
+            <span class="k">end</span>
+        <span class="k">end</span>
+        <span class="n">wordcount</span>
+    <span class="k">end</span>
+ 
+    <span class="k">def</span> <span class="nf">font_ratio</span><span class="p">(</span><span class="n">wordcount</span><span class="o">=</span><span class="p">{})</span>
+        <span class="n">min</span><span class="p">,</span> <span class="n">max</span> <span class="o">=</span> <span class="mi">100000</span><span class="p">,</span> <span class="o">-</span> <span class="mi">1000000</span>
+        <span class="n">wordcount</span><span class="o">.</span><span class="n">each_key</span> <span class="k">do</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span>
+            <span class="n">max</span> <span class="o">=</span> <span class="n">wordcount</span><span class="o">[</span><span class="n">word</span><span class="o">]</span> <span class="k">if</span> <span class="n">wordcount</span><span class="o">[</span><span class="n">word</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">max</span>
+            <span class="n">min</span> <span class="o">=</span> <span class="n">wordcount</span><span class="o">[</span><span class="n">word</span><span class="o">]</span> <span class="k">if</span> <span class="n">wordcount</span><span class="o">[</span><span class="n">word</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">min</span>
+        <span class="k">end</span>
+        <span class="mi">18</span><span class="o">.</span><span class="mi">0</span> <span class="o">/</span> <span class="p">(</span><span class="n">max</span> <span class="o">-</span> <span class="n">min</span><span class="p">)</span>
+    <span class="k">end</span>
+ 
+    <span class="k">def</span> <span class="nf">build</span>
+        <span class="n">cloud</span> <span class="o">=</span> <span class="nb">String</span><span class="o">.</span><span class="n">new</span>
+        <span class="n">ratio</span> <span class="o">=</span> <span class="n">font_ratio</span><span class="p">(</span><span class="vi">@wordcount</span><span class="p">)</span>
+        <span class="vi">@wordcount</span><span class="o">.</span><span class="n">each_key</span> <span class="k">do</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span>
+            <span class="n">font_size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span> <span class="o">+</span> <span class="p">(</span><span class="vi">@wordcount</span><span class="o">[</span><span class="n">word</span><span class="o">]</span> <span class="o">*</span> <span class="n">ratio</span><span class="p">))</span>
+            <span class="n">cloud</span> <span class="o">&lt;&lt;</span> <span class="sx">%Q{&lt;span</span><span class="si">#{</span><span class="s2">&quot; class=</span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">word_class</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="k">unless</span> <span class="n">word_class</span><span class="o">.</span><span class="n">nil?</span> <span class="si">}</span><span class="sx"> style=&quot;font-size:</span><span class="si">#{</span><span class="n">font_size</span><span class="si">}</span><span class="sx">pt;&quot;&gt;</span><span class="si">#{</span><span class="n">word</span><span class="si">}</span><span class="sx">&lt;/span&gt; }</span>
+ 
+        <span class="k">end</span>
+        <span class="n">cloud</span>
+    <span class="k">end</span>
+ 
+<span class="k">end</span>
+
+<span class="c1"># Strip out HTML tags, alphanumeric characters, and punctuation, then </span>
+<span class="c1"># lower-case all words, split the words apart, and remove stopwords </span>
+<span class="c1"># ===================================================================</span>
+<span class="k">def</span> <span class="nf">readFile</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+ 
+    <span class="n">uri_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&lt;\/?[^&gt;]*&gt;/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&amp;quot;*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[0-9]*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[(,?!\&#39;&quot;&quot;&#39;:.)]/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">-</span> <span class="no">STOPWORDS</span>
+ 
+    <span class="k">return</span> <span class="n">uri_file</span>
+ 
+<span class="k">end</span>
+
+<span class="c1"># Create a dictionary of n-grams</span>
+<span class="c1"># ==============================</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">ARGV</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+<span class="n">uri_file</span> <span class="o">=</span> <span class="n">readFile</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># Save output to HTML</span>
+<span class="c1"># ===================</span>
+<span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;output.html&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">output</span><span class="o">|</span>
+        <span class="n">frequency</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">uri_file</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="n">frequency</span><span class="o">[</span><span class="n">word</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span>
+        <span class="n">frequency</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">|</span> <span class="n">y</span> <span class="p">}</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">w</span><span class="p">,</span><span class="n">f</span><span class="o">|</span> 
+            <span class="n">output</span><span class="o">.</span><span class="n">write</span> <span class="s2">&quot;&lt;p&gt;</span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">, </span><span class="si">#{</span><span class="n">w</span><span class="si">}</span><span class="s2">&lt;/p&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># Generate a word cloud and save as HTML</span>
+<span class="c1"># ======================================</span>
+<span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;wordcloud.html&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">output</span><span class="o">|</span>
+    <span class="n">cloud</span> <span class="o">=</span> <span class="no">TagCloud</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">uri_file</span><span class="p">)</span>
+    <span class="n">cloud</span><span class="o">.</span><span class="n">word_class</span> <span class="o">=</span> <span class="s2">&quot;freq-cloud-css&quot;</span>
+    <span class="n">output</span><span class="o">.</span><span class="n">write</span> <span class="n">cloud</span><span class="o">.</span><span class="n">build</span>
+<span class="k">end</span>
+
+<span class="c1"># Give the user an exported-to message</span>
+<span class="c1"># ====================================</span>
+<span class="nb">puts</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">File exported to </span><span class="si">#{</span><span class="no">Dir</span><span class="o">.</span><span class="n">pwd</span><span class="si">}</span><span class="s2">.</span><span class="se">\n</span><span class="s2">&quot;</span>
+</code></pre></div>
+
+
+
+<section class="post_meta">
+  <div class="block">
+    <a href="http://twitter.com/jaheppler">
+      <span class="ss-twitter ss-social-circle">
+        <div>Follow me on Twitter.</div>
+      </span>
+    </a>
+  </div>
+  
+  <div class="block">
+  	<a href="http://acomp.stanford.edu/faculty/atsp">
+  		<span class="ss-like ss-social-circle">
+  			<div>I am the Academic Technology Specialist in the History Department at Stanford University.</div>
+  		</span>
+  	</a>
+  </div>
+
+  <div class="block">
+  	<a href="http://github.com/hepplerj">
+  		<span class="ss-github ss-social-circle">
+  			<div>Follow me on Github.</div>
+  		</span>
+  	</a>
+  </div>
+</section>
+
+
+</section>
+
+<footer>
+	Tech, history, code, coffee • Written by <a href="http://jasonheppler.org/about.html">Jason Heppler</a> • Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> <br/> Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a>
+
+<br>
+
+Remember <a href="http://lessig.tumblr.com/post/40347463044/prosecutor-as-bully">Aaron Swartz</a>
+
+</footer>
+
+</body>
+</html>

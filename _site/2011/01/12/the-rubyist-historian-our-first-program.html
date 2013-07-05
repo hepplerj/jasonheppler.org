@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta content="The online writing of Jason Heppler" name="description"/>
+<title>The Rubyist Historian: Our First Program</title> <meta name="author" content="Jason Heppler" />
+<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/css/tweet.css" type="text/css" />
+<link href="/webfonts/ss-social.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://jasonheppler.org/js/styleTweets.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+svg {
+  font: 13px sans-serif;
+}
+
+</style>
+
+   <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-12786552-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
+
+</head>
+<body>
+
+<div class="header">
+	<div class="header_container">
+
+		<section class="name"><a href="/">Jason Heppler</a></section>
+		<ul class="menu">
+			<li><a href="/about.html">Colophon</a></li>
+			<li><a href="/research.html">Research</a></li>
+			<li><a href="/teaching.html">Teaching</a></li>
+			<li><a href="/hacks.html">Digital &amp; Public History</a></li>
+			<li><a href="http://jasonheppler.org/jah-vita.pdf">Vita</a></li>
+		</ul>
+	</div>
+</div>
+
+<section class="container content">
+
+<aside><p class="when">January 12, 2011</p></aside>
+<h1>The Rubyist Historian: Our First Program</h1>
+
+<p>&#8220;Okay, Jason,&#8221; you&#8217;re asking yourself, &#8220;I&#8217;m tired of saying hello and counting numbers and doing mathematics. How can Ruby be applied to my work as a humanities scholar?&#8221;  I&#8217;m thrilled you asked! Because today, we&#8217;re writing our first full program together.  I&#8217;ll warn you, this might be a long read and a lot of writing.  But I&#8217;m hoping by doing this we experience the process of designing, planning, writing code, optimizing code, debugging, and finally using the program. </p>
+
+<p>We&#8217;re going to write a program based off a homework example we completed in Prof. Steve Ramsay&#8217;s class (To Steve&#8217;s future students: don&#8217;t copy this program. Your professor will know). We&#8217;re going to take a word frequency generator and read a file off the Internet, strips the HTML or XML tagging out of the file, generate a word frequency, and print the frequency as a new HTML file. A lot will be happening, so I hope I can carefully and concisely explain the details of our program as we go along. </p>
+
+<p>One potential way to write our word frequency program is as such: </p>
+
+<div class="highlight"><pre><code class="ruby"><span class="c1"># frequency.rb</span>
+
+<span class="k">def</span> <span class="nf">separation</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+    <span class="n">string</span><span class="p">()</span><span class="o">.</span><span class="n">downcase</span><span class="p">()</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="sr">/[\w&#39;]+/</span><span class="p">)</span> <span class="c1"># downcase and strip out white space</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">word_count</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="k">in</span> <span class="n">elements</span>
+        <span class="n">number</span><span class="o">[</span><span class="n">word</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">end</span>
+
+    <span class="n">number</span>
+
+<span class="k">end</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;text.txt&quot;</span><span class="p">)</span>
+<span class="n">elements</span> <span class="o">=</span> <span class="n">separation</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="n">number</span> <span class="o">=</span> <span class="n">word_count</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span>
+<span class="n">sorted_list</span> <span class="o">=</span> <span class="n">number</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">word</span><span class="p">,</span> <span class="n">count</span><span class="o">|</span> <span class="n">count</span> <span class="p">}</span>
+
+<span class="n">most_to_fewest</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">word</span><span class="p">,</span> <span class="n">count</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">count</span><span class="si">}</span><span class="s2">  </span><span class="si">#{</span><span class="n">word</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+</code></pre></div>
+
+<p>Our program takes in a file (<code>text</code>) and sends the file into our <code>separation</code> method to convert everything into a string, downcase the words for normalization, and scan for whitespace (hence the regex code <code>/[\w']+/</code>).  Once the program read the file and converted the text into individual words, it sends the file into our <code>word_count</code> method and enters the file into a hash.  Inside of <code>word_count</code>, the file counts the words and for each instance of a word adds an increment until the file has finished processing.  We return number and call the <code>sort</code> method and assign sort values (<code>word</code> and <code>count</code>) and print our results.</p>
+
+<p>There are certainly several ways to achieve the results we&#8217;re after.  If you have your own word frequency generator that you&#8217;re comfortable working with, go ahead and use it.  I&#8217;ll be using my own code:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="c1"># frequency.rb</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;text.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">downcase</span><span class="p">()</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="sr">/[\w&#39;]+/</span><span class="p">)</span>
+<span class="n">frequency</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">filename</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="n">frequency</span><span class="o">[</span><span class="n">word</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span>
+<span class="n">frequency</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">|</span> <span class="n">y</span> <span class="p">}</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">w</span><span class="p">,</span><span class="n">f</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">, </span><span class="si">#{</span><span class="n">w</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+</code></pre></div>
+
+<p>You should now have a working word frequency generator.  However, we want to be able to read HTML files from the web; this will make the program much more useful. To do this we&#8217;re going to import a Ruby library called <code>open-uri</code> and use its methods to fetch web data. Let&#8217;s first look at how we achieve the ability to have Ruby read web files before we integrate it into our frequency program.  I&#8217;ll be using an XML newspaper file from one of my digital history projects &#8211; feel free to use the same or select your own file:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+
+<span class="n">uri_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;http://www.framingredpower.org/archive/newspapers/frp.wapo.19721102.xml&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="nb">puts</span> <span class="n">uri_file</span>
+</code></pre></div>
+
+<p>The above file will read the URL and print to the screen. But you&#8217;ll notice something that will inconvenience us if we try and generate a frequency: the output includes the HTML tags.  We need to get rid of all that junk.  There are a couple of ways to do that, but we&#8217;re going to return to our good friend regex to look for HTML tags and strip out everything we don&#8217;t want.  We&#8217;ll use the <code>gsub</code> method and <a href="http://etext.lib.virginia.edu/services/helpsheets/unix/regex.html">regular expressions</a> to substitute HTML tags with empty lines.  We&#8217;ll also use it to strip out punctuation marks and other HTML formatting (such as <code>&quot;</code>).  Make a small edit to your file:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+
+<span class="c1"># read a URL, strip out HTML tags, and assign the file to a variable</span>
+<span class="n">uri_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;http://www.framingredpower.org/archive/newspapers/frp.wapo.19721102.xml&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&lt;\/?[^&gt;]*&gt;/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&amp;quot;*/</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="o">/</span><span class="p">)</span>
+
+<span class="nb">puts</span> <span class="n">uri_file</span>
+</code></pre></div>
+
+<p>You should now be seeing just the text of the webpage we are having Ruby read.  Pretty cool, huh?  But we&#8217;re not quite where we want to be yet.  Let&#8217;s also get rid of punctuation and numbers as well as downcase all the text so we have a consistent word base:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">uri_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;http://www.framingredpower.org/archive/newspapers/frp.wapo.19721102.xml&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&lt;\/?[^&gt;]*&gt;/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&amp;quot;*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[0-9]*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[(,?!\&#39;&quot;:.)]/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">downcase</span>
+
+<span class="nb">puts</span> <span class="n">uri_file</span>
+</code></pre></div>
+
+<p>Now let&#8217;s add this to our frequency generator.  </p>
+
+<div class="highlight"><pre><code class="ruby"><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+
+<span class="n">uri_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;http://www.framingredpower.org/archive/newspapers/frp.wapo.19721102.xml&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&lt;\/?[^&gt;]*&gt;/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&lt;\/?[^&gt;]*&gt;/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&amp;quot;*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[0-9]*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[(,?!\&#39;&quot;:.)]/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">downcase</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">uri_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="sr">/[\w&#39;]+/</span><span class="p">)</span>
+<span class="n">frequency</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">filename</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="n">frequency</span><span class="o">[</span><span class="n">word</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span>
+<span class="n">frequency</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">|</span> <span class="n">y</span> <span class="p">}</span><span class="o">.</span><span class="n">reverse</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">w</span><span class="p">,</span><span class="n">f</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">, </span><span class="si">#{</span><span class="n">w</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+</code></pre></div>
+
+<p>Ok, run <code>ruby frequency.rb</code> and we should . . . wait, what happened?  If you run this, you should get an error.  Time to debug!</p>
+
+<p>The issue is we&#8217;re not reading a file, we&#8217;re reading the contents of a variable.  So, there&#8217;s no need for the <code>File.new</code> class.  We can get rid of that.  We also need to update the <code>each</code> method to read our URL variable:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+
+<span class="n">uri_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;http://www.framingredpower.org/archive/newspapers/frp.wapo.19721102.xml&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&lt;\/?[^&gt;]*&gt;/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&amp;quot;*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[0-9]*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[(,?!\&#39;&quot;:.)]/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">downcase</span>
+
+<span class="n">frequency</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">uri_file</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="n">frequency</span><span class="o">[</span><span class="n">word</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span>
+<span class="n">frequency</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">|</span> <span class="n">y</span> <span class="p">}</span><span class="o">.</span><span class="n">reverse</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">w</span><span class="p">,</span><span class="n">f</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">, </span><span class="si">#{</span><span class="n">w</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+</code></pre></div>
+
+<p>All right, now we can run this. Type in <code>ruby frequency.rb</code> and . . . whoh.  Something still isn&#8217;t right.  You should be outputting some sort of frequency counter, but the program is counting lines rather than individual words.  We forgot to split the words apart.  So, we&#8217;ll add the <code>split</code> method:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+
+<span class="n">uri_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;http://www.framingredpower.org/archive/newspapers/frp.wapo.19721102.xml&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&lt;\/?[^&gt;]*&gt;/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&amp;quot;*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[0-9]*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[(,?!\&#39;&quot;:.)]/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="n">frequency</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">uri_file</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="n">frequency</span><span class="o">[</span><span class="n">word</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span>
+<span class="n">frequency</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">|</span> <span class="n">y</span> <span class="p">}</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">w</span><span class="p">,</span><span class="n">f</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">, </span><span class="si">#{</span><span class="n">w</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+</code></pre></div>
+
+<p>Before we move on, let&#8217;s clean things up a bit.  Let&#8217;s move our URL reader into a method and rewrite some code.  The method should look like this:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="k">def</span> <span class="nf">readFile</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    
+    <span class="c1"># Strip out HTML tags, alphanumeric characters, and punctuation, lower-case </span>
+    <span class="c1"># all words, and split the words apart </span>
+    <span class="n">uri_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&lt;\/?[^&gt;]*&gt;/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&amp;quot;*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[0-9]*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[(,?!\&#39;&quot;:.)]/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">uri_file</span>
+
+<span class="k">end</span>
+</code></pre></div>
+
+<p>Now we can rewrite the URL input as:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://www.framingredpower.org/archive/newspapers/frp.wapo.19721102.xml&quot;</span>
+<span class="n">uri_file</span> <span class="o">=</span> <span class="n">readFile</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Your file should now look similar to this:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+
+<span class="k">def</span> <span class="nf">readFile</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    
+    <span class="c1"># Strip out HTML tags, alphanumeric characters, and punctuation, lower-case </span>
+    <span class="c1"># all words, and split the words apart </span>
+    <span class="n">uri_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&lt;\/?[^&gt;]*&gt;/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&amp;quot;*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[0-9]*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[(,?!\&#39;&quot;&quot;&#39;:.)]/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">uri_file</span>
+
+<span class="k">end</span>
+
+<span class="c1"># create a dictionary of n-grams</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://www.framingredpower.org/archive/newspapers/frp.wapo.19721102.xml&quot;</span>
+<span class="n">uri_file</span> <span class="o">=</span> <span class="n">readFile</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1">#print uri_file</span>
+
+<span class="n">frequency</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">uri_file</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="n">frequency</span><span class="o">[</span><span class="n">word</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span>
+<span class="n">frequency</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">|</span> <span class="n">y</span> <span class="p">}</span><span class="o">.</span><span class="n">reverse</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">w</span><span class="p">,</span><span class="n">f</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">, </span><span class="si">#{</span><span class="n">w</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+</code></pre></div>
+
+<p>We&#8217;re also going to add a new method of inputting files by using Ruby&#8217;s ARGV method.  ARGV is a global array that allows us to pass command-line arguments after the filename.  So, we&#8217;ll rewrite the code above a bit:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+
+<span class="k">def</span> <span class="nf">readFile</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    
+    <span class="c1"># Strip out HTML tags, alphanumeric characters, and punctuation, lower-case </span>
+    <span class="c1"># all words, and split the words apart </span>
+    <span class="n">uri_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&lt;\/?[^&gt;]*&gt;/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&amp;quot;*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[0-9]*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[(,?!\&#39;&quot;&quot;&#39;:.)]/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">uri_file</span>
+
+<span class="k">end</span>
+
+<span class="c1"># create a dictionary of n-grams</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="no">ARGV</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+<span class="n">uri_file</span> <span class="o">=</span> <span class="n">readFile</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1">#print uri_file</span>
+
+<span class="n">frequency</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">uri_file</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="n">frequency</span><span class="o">[</span><span class="n">word</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span>
+<span class="n">frequency</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">|</span> <span class="n">y</span> <span class="p">}</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">w</span><span class="p">,</span><span class="n">f</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">, </span><span class="si">#{</span><span class="n">w</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+</code></pre></div>
+
+<p>You should now be able to run <code>ruby frequency.rb http://www.framingredpower.org/archive/newspapers/frp.wapo.19721102.xml</code> in the command line.  And there we have it! A working word frequency generator that can read HTML files or local files.  This may be as far as you want to go, but if you&#8217;re like me, you&#8217;d love to have a program that not only generates frequencies but will also output a file that you can use.  In my case, when doing digital scholarship, I want files that can be read by a browser.  So, we&#8217;re going to have the frequency list export as HTML.  For this, we&#8217;ll be bringing back in our <code>File</code> I/O method:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;output.html&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">output</span><span class="o">|</span>
+        <span class="n">frequency</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">uri_file</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="n">frequency</span><span class="o">[</span><span class="n">word</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span>
+        <span class="n">frequency</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">|</span> <span class="n">y</span> <span class="p">}</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">w</span><span class="p">,</span><span class="n">f</span><span class="o">|</span> 
+            <span class="n">output</span><span class="o">.</span><span class="n">write</span> <span class="s2">&quot;&lt;p&gt;</span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">, </span><span class="si">#{</span><span class="n">w</span><span class="si">}</span><span class="s2">&lt;/p&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
+
+<p>Let&#8217;s also let the user know where the file was exported.  Add to the end of the file:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="nb">puts</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">File exported to </span><span class="si">#{</span><span class="no">Dir</span><span class="o">.</span><span class="n">pwd</span><span class="si">}</span><span class="s2">.</span><span class="se">\n</span><span class="s2">&quot;</span>
+</code></pre></div>
+
+<p>So, you&#8217;re program should now look like:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+
+<span class="k">def</span> <span class="nf">readFile</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    
+    <span class="c1"># Strip out HTML tags, alphanumeric characters, and punctuation, lower-case </span>
+    <span class="c1"># all words, and split the words apart </span>
+    <span class="n">uri_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&lt;\/?[^&gt;]*&gt;/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&amp;quot;*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[0-9]*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[(,?!\&#39;&quot;&quot;&#39;:.)]/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">uri_file</span>
+
+<span class="k">end</span>
+
+<span class="c1"># create a dictionary of n-grams</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="no">ARGV</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+<span class="n">uri_file</span> <span class="o">=</span> <span class="n">readFile</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># print output to HTML file</span>
+
+<span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;output.html&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">output</span><span class="o">|</span>
+        <span class="n">frequency</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">uri_file</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="n">frequency</span><span class="o">[</span><span class="n">word</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span>
+        <span class="n">frequency</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">|</span> <span class="n">y</span> <span class="p">}</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">w</span><span class="p">,</span><span class="n">f</span><span class="o">|</span> 
+            <span class="n">output</span><span class="o">.</span><span class="n">write</span> <span class="s2">&quot;&lt;p&gt;</span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">, </span><span class="si">#{</span><span class="n">w</span><span class="si">}</span><span class="s2">&lt;/p&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">File exported to </span><span class="si">#{</span><span class="no">Dir</span><span class="o">.</span><span class="n">pwd</span><span class="si">}</span><span class="s2">.</span><span class="se">\n</span><span class="s2">&quot;</span>
+</code></pre></div>
+
+<p>You should now be set to write to the command line <code>ruby frequency.rb http://www.framingredpower.org/archive/newspapers/frp.wapo.19721102.xml</code>, which will compute the frequencies and output the results to an HTML file.</p>
+
+<p>Neat, huh? Except . . . well, perhaps it isn&#8217;t that useful yet.  I mean, is it really useful for us to know that the word &#8220;the&#8221; shows up 35 times?  Not really.  In fact, you&#8217;ve probably noticed that the majority of the highest frequencies in the list are common words (this is known as <a href="http://en.wikipedia.org/wiki/Zipf%27s_law">Zipf&#8217;s Law</a>).  Let&#8217;s get rid of those.</p>
+
+<p>We&#8217;ll start by creating an array of common words. Let&#8217;s also make it a constant variable so we don&#8217;t have to worry about override problems. Remember that we stripped out punctuation, so we need to maintain the words without apostrophes:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="no">STOPWORDS</span> <span class="o">=</span> <span class="sx">%w{a about above across after again against all am an and any are arent as at be because been before being below between both but by cant cannot could couldnt did didnt do does doesnt doing dont down during each few for form further had hadnt has hasnt have havent having he her here heres hers herself him himself his how i id ill im ive if in into is isnt it its itself lets me more most mustnt my myself my myself no nor not of off on once only or other ought our ours ourselves out over own same shant she should shouldnt so some such than that the their theirs them themselves then there these they this those through to too under until up very was we were what when where which while who why with would you your yours yourself yourselves}</span>
+</code></pre></div>
+
+<p>Now we&#8217;ll add this to our <code>readFile</code> method and tell Ruby to remove words that appear in the array:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+
+<span class="no">STOPWORDS</span> <span class="o">=</span> <span class="sx">%w{a about above across after again against all am an and any are arent as at be because been before being below between both but by cant cannot could couldnt did didnt do does doesnt doing dont down during each few for form further had hadnt has hasnt have havent having he her here heres hers herself him himself his how i id ill im ive if in into is isnt it its itself lets me more most mustnt my myself my myself no nor not of off on once only or other ought our ours ourselves out over own same shant she should shouldnt so some such than that the their theirs them themselves then there these they this those through to too under until up very was we were what when where which while who why with would you your yours yourself yourselves}</span>
+
+<span class="k">def</span> <span class="nf">readFile</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    
+    <span class="c1"># Strip out HTML tags, alphanumeric characters, and punctuation, lower-case </span>
+    <span class="c1"># all words, and split the words apart </span>
+    <span class="n">uri_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&lt;\/?[^&gt;]*&gt;/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&amp;quot;*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[0-9]*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[(,?!\&#39;&quot;&quot;&#39;:.)]/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">-</span> <span class="no">STOPWORDS</span>
+    
+    <span class="k">return</span> <span class="n">uri_file</span>
+
+<span class="k">end</span>
+</code></pre></div>
+
+<p>The program should now remove words that appear inside of the <code>stopwords</code> array.  Now we have something a little more useful to us.  </p>
+
+<p>So, the program in its entirety should now look like:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="c1">#!/usr/bin/ruby -w</span>
+
+<span class="c1"># FREQr.rb</span>
+<span class="c1">#</span>
+<span class="c1"># Written by Jason A. Heppler</span>
+<span class="c1">#</span>
+<span class="c1"># This program is free software.</span>
+<span class="c1"># You can distribute/modify this program under the terms of</span>
+<span class="c1"># the GNU Lesser General Public License version 2.1.</span>
+<span class="c1"># </span>
+<span class="c1"># Last Modified: Mon Jan 10 23:15:08 CST 2011</span>
+
+<span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+
+<span class="no">STOPWORDS</span> <span class="o">=</span> <span class="sx">%w{a about above across after again against all am an and any are arent as at be because been before being below between both but by cant cannot could couldnt did didnt do does doesnt doing dont down during each few for form further had hadnt has hasnt have havent having he her here heres hers herself him himself his how i id ill im ive if in into is isnt it its itself lets me more most mustnt my myself my myself no nor not of off on once only or other ought our ours ourselves out over own same shant she should shouldnt so some such than that the their theirs them themselves then there these they this those through to too under until up very was we were what when where which while who why with would you your yours yourself yourselves}</span>
+            
+<span class="c1"># Strip out HTML tags, alphanumeric characters, and punctuation, then </span>
+<span class="c1"># lower-case all words, split the words apart, and remove stopwords </span>
+<span class="k">def</span> <span class="nf">readFile</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    
+    <span class="n">uri_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&lt;\/?[^&gt;]*&gt;/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&amp;quot;*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[0-9]*/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[(,?!\&#39;&quot;&quot;&#39;:.)]/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">-</span> <span class="no">STOPWORDS</span>
+    
+    <span class="k">return</span> <span class="n">uri_file</span>
+
+<span class="k">end</span>
+
+<span class="c1"># Create a dictionary of n-grams</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">ARGV</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+<span class="n">uri_file</span> <span class="o">=</span> <span class="n">readFile</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># Save output to HTML</span>
+<span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;output.html&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">output</span><span class="o">|</span>
+        <span class="n">frequency</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">uri_file</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="n">frequency</span><span class="o">[</span><span class="n">word</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span>
+        <span class="n">frequency</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">|</span> <span class="n">y</span> <span class="p">}</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">w</span><span class="p">,</span><span class="n">f</span><span class="o">|</span> 
+            <span class="n">output</span><span class="o">.</span><span class="n">write</span> <span class="s2">&quot;&lt;p&gt;</span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">, </span><span class="si">#{</span><span class="n">w</span><span class="si">}</span><span class="s2">&lt;/p&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># Give the user an exported-to message</span>
+<span class="nb">puts</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">File exported to </span><span class="si">#{</span><span class="no">Dir</span><span class="o">.</span><span class="n">pwd</span><span class="si">}</span><span class="s2">.</span><span class="se">\n</span><span class="s2">&quot;</span>
+</code></pre></div>
+
+<p>Simply type in <code>ruby frequency.rb http://www.framingredpower.org/archive/newspapers/frp.wapo.19721102.xml</code> and the program will output an HTML file and confirm the successful completion of the program.  Congrats!  You now have your first full Ruby program. Do some hacking on this program.  Add a function or feature to it or optimize the code and see what you can accomplish.  Perhaps, for example, you want another method so you can output an HTML file that generates keywords in context or a word cloud.  Or, if you&#8217;re really ambitious, maybe you can learn about <a href="http://rubyonrails.org/">Ruby on Rails</a> and make this program run as a webpage rather than the command line.</p>
+
+<p>If you&#8217;ve stuck through reading <em>The Rubyist Historian</em> to the end, you should now have a working knowledge of the Ruby programming language.  I hope that I&#8217;ve been able to competently explain key concepts and ideas of Ruby.  But we&#8217;ve only touched the surface of Ruby.  There are several resources out there to continue learning about Ruby.  I would start with these:</p>
+
+<ul>
+<li><a href="http://mislav.uniqpath.com/poignant-guide/">Why's (Poignant) Guide to Ruby</a></li>
+<li><a href="http://www.rubyist.net/~slagell/ruby/">Ruby User's Guide</a></li>
+<li><a href="http://www.sapphiresteel.com/The-Little-Book-Of-Ruby">The Little Book of Ruby</a></li>
+</ul>
+
+<p>In <a href="http://norvig.com/21-days.html">about ten years</a> you can call yourself a programmer.</p>
+
+<p><em>Visit the Rubyist Historian <a href="http://www.jasonheppler.org/the-rubyist-historian-the-series.html">Table of Contents</a> for more sections, and check out the <a href="https://github.com/hepplerj/rubyist-historian">Github repository</a> for an archive of all the code examples.</em></p>
+
+<p><em>See something that&#8217;s wrong?  Examples that don&#8217;t work?  Explanations that are unclear or confusing?  Embarrassing typographic errors?  Drop me an email at jason.heppler+feedback at gmail and I&#8217;ll fix things right up!</em></p>
+
+<p><em>Topic structure, examples, and explanations for the Rubyist Historian are inspired by, credited to, and drawn from Stephen Ramsay and his course Electronic Text.</em></p>
+
+
+<section class="post_meta">
+  <div class="block">
+    <a href="http://twitter.com/jaheppler">
+      <span class="ss-twitter ss-social-circle">
+        <div>Follow me on Twitter.</div>
+      </span>
+    </a>
+  </div>
+  
+  <div class="block">
+  	<a href="http://acomp.stanford.edu/faculty/atsp">
+  		<span class="ss-like ss-social-circle">
+  			<div>I am the Academic Technology Specialist in the History Department at Stanford University.</div>
+  		</span>
+  	</a>
+  </div>
+
+  <div class="block">
+  	<a href="http://github.com/hepplerj">
+  		<span class="ss-github ss-social-circle">
+  			<div>Follow me on Github.</div>
+  		</span>
+  	</a>
+  </div>
+</section>
+
+
+</section>
+
+<footer>
+	Tech, history, code, coffee • Written by <a href="http://jasonheppler.org/about.html">Jason Heppler</a> • Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> <br/> Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a>
+
+<br>
+
+Remember <a href="http://lessig.tumblr.com/post/40347463044/prosecutor-as-bully">Aaron Swartz</a>
+
+</footer>
+
+</body>
+</html>

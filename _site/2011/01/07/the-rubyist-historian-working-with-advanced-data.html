@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta content="The online writing of Jason Heppler" name="description"/>
+<title>The Rubyist Historian: Working With Advanced Data</title> <meta name="author" content="Jason Heppler" />
+<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/css/tweet.css" type="text/css" />
+<link href="/webfonts/ss-social.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://jasonheppler.org/js/styleTweets.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+svg {
+  font: 13px sans-serif;
+}
+
+</style>
+
+   <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-12786552-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
+
+</head>
+<body>
+
+<div class="header">
+	<div class="header_container">
+
+		<section class="name"><a href="/">Jason Heppler</a></section>
+		<ul class="menu">
+			<li><a href="/about.html">Colophon</a></li>
+			<li><a href="/research.html">Research</a></li>
+			<li><a href="/teaching.html">Teaching</a></li>
+			<li><a href="/hacks.html">Digital &amp; Public History</a></li>
+			<li><a href="http://jasonheppler.org/jah-vita.pdf">Vita</a></li>
+		</ul>
+	</div>
+</div>
+
+<section class="container content">
+
+<aside><p class="when">January  7, 2011</p></aside>
+<h1>The Rubyist Historian: Working With Advanced Data</h1>
+
+<p>In this section, a whole new world of programing is about to open before your eyes. So far, we&#8217;ve been working with simple data inputs through the use of .gets(), but the method only allows us to call upon a single data entry.  What would be infinitely more useful would be the ability to read files outside the program. We can do this with Ruby&#8217;s <code>File</code> class.<!--more--></p>
+
+<h4>Input/Output</h4>
+
+<p>When working with files, you have some options about how you want to access them.  These are called <strong>mode specifiers</strong> and describes read/write characteristics of the file: <code> r+</code> (read/write text, or append data), <code>r</code> (read only), <code>w</code> (write only), and <code>w+</code> (read/write, but destructive because it destroys whatever existed in the file previously).</p>
+
+<p>Imagine we have a primary source document we would like to read.  You can <a href="https://github.com/hepplerj/rubyist-historian/blob/master/04-ArraysHashes/letter.txt">download this file</a> from Github to your local disk for something to work with (this is a letter from a Civil War soldier).  We&#8217;re going to ask Ruby to read the file and print the results to the screen:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;letter.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span>
+    <span class="nb">puts</span> <span class="n">lines</span>
+<span class="k">end</span>
+</code></pre></div>
+
+<p>We could also print out specific lines of the array:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;letter.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span>  <span class="c1"># open the file and assign to variable &#39;file&#39;</span>
+    
+    <span class="n">line_array</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span>
+
+    <span class="nb">puts</span> <span class="n">line_array</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span>
+    <span class="nb">puts</span> <span class="n">line_array</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span>
+    <span class="nb">puts</span> <span class="n">line_array</span><span class="o">[</span><span class="mi">9</span><span class="o">]</span>
+<span class="k">end</span>
+
+<span class="c1"># Since we used the &quot;r&quot; specifier, Ruby will automatically close the</span>
+<span class="c1"># file.  Otherwise, you will need to exit the file using file.close().</span>
+</code></pre></div>
+
+<p>The program will print the specified lines to the screen.</p>
+
+<p>We can also write to files using <code>File.new</code>:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">file</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;my_file.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+
+<span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;I&#39;m learning Ruby!&quot;</span><span class="p">)</span>
+
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+
+<p>After running the program. it will will create the file <code>my_file</code> in the directory you are working in.  The file should contain the contents we wrote.</p>
+
+<p>You now know how to read and write files.  A whole new world of programming should be opening before you.</p>
+
+<h4>Additional Resources</h4>
+<ul>
+<li><a href="http://www.codingfriends.com/index.php/2009/07/28/readwrite-files-3/">Read/Write Files</a>, Coding Friends</li>
+<li><a href="http://www.techotopia.com/index.php/Working_with_Files_in_Ruby">Working with Files in Ruby</a>, Techtopia</li>
+<li><a href="Ruby File Manipulation Basics">Ruby File Manipulation Basics</a>, Ben Woodall</li>
+</ul>
+
+<p><em>Visit the Rubyist Historian <a href="http://www.jasonheppler.org/the-rubyist-historian-the-series.html">Table of Contents</a> for more sections, and check out the <a href="https://github.com/hepplerj/rubyist-historian">Github repository</a> for an archive of all the code examples.</em></p>
+
+<p><em>See something that&#8217;s wrong?  Examples that don&#8217;t work?  Explanations that are unclear or confusing?  Embarrassing typographic errors?  Drop me an email at jason.heppler+feedback at gmail and I&#8217;ll fix things right up!</em></p>
+
+<p><em>Topic structure, examples, and explanations for the Rubyist Historian are inspired by, credited to, and drawn from Stephen Ramsay and his course Electronic Text.</em></p>
+
+
+<section class="post_meta">
+  <div class="block">
+    <a href="http://twitter.com/jaheppler">
+      <span class="ss-twitter ss-social-circle">
+        <div>Follow me on Twitter.</div>
+      </span>
+    </a>
+  </div>
+  
+  <div class="block">
+  	<a href="http://acomp.stanford.edu/faculty/atsp">
+  		<span class="ss-like ss-social-circle">
+  			<div>I am the Academic Technology Specialist in the History Department at Stanford University.</div>
+  		</span>
+  	</a>
+  </div>
+
+  <div class="block">
+  	<a href="http://github.com/hepplerj">
+  		<span class="ss-github ss-social-circle">
+  			<div>Follow me on Github.</div>
+  		</span>
+  	</a>
+  </div>
+</section>
+
+
+</section>
+
+<footer>
+	Tech, history, code, coffee • Written by <a href="http://jasonheppler.org/about.html">Jason Heppler</a> • Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> <br/> Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a>
+
+<br>
+
+Remember <a href="http://lessig.tumblr.com/post/40347463044/prosecutor-as-bully">Aaron Swartz</a>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+---
+layout: default
+title: Jason Heppler
+description: Jason Heppler is a writer, historian, and technologist at Stanford University.
+keywords: jason heppler,blog,html,css,ruby,rails,programming,web development,digital history,stanford,american west,north american west,nebraska,california,silicon valley,university of nebraska-lincoln,stanford university,unl
+change_frequency: daily
+priority: 1.0
+---
+
+<div class="intro">
+<p>Hi, I'm Jason. I am the <a href="http://acomp.stanford.edu/faculty/atsp">Academic Technology Specialist</a> in the <a href="http://history.stanford.edu">Department of History</a> at <a href="http://stanford.edu">Stanford University</a> and a historian of the American West. I write here about history, technology, and coffee. You can <a href ="about.html">learn more</a> about me, browse the <a href="archives.html">archives</a>, subscribe to <a href="http://www.jasonheppler.org/feed.xml">my feed</a>, or follow me on <a href="http://twitter.com/jaheppler">Twitter</a>.</p>
+</div>
+
+<h2>Writings</h2>
+<ul class="listing">
+{% for post in site.posts limit:6 %}
+  <li>
+    <span>{{ post.date | date: "%B %e, %Y" | ordinalize  }}</span>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>   
+{% endfor %}
+<li><a href="archives.html">All Posts →</a></li>
+</ul>
+
+<h2>Publications</h2>
+
+  <p>"<a href="http://journalofdigitalhumanities.org/1-4/a-call-to-redefine-historical-scholarship-in-the-digital-turn">A Call to Redeﬁne Historical Scholarship in the Digital Turn</a>" &#8212; With Alex Galarza and Douglas Seefeldt, <em>Journal of Digital Humanities</em>, December 2012.</p>
+
+  <p>"<a href="http://www.sdshspress.com/index.php?&id=236&action=912">The American Indian Movement and South Dakota Politics</a>" &#8212; <em>The Plains Political Tradition</em>, edited by Jon Lauck, John E. Miller, and Donald Simmons. Pierre, SD: South Dakota State Historical Society Press, 2011, pp. 267–287.</p>
+
+  <p><a href="http://hepplerj.github.io/rubyist-historian/">The Rubyist Historian</a> &#8212; An introduction to Ruby programming for scholars in the humanities.</p>
+
+  <p><a href="http://digitalcommons.unl.edu/historydiss/21/">Framing Red Power: The American Indian Movement, the Trail of Broken Treaties, and the Politics of Media</a> &#8212; My Masters thesis available for digital download.</p>
+
+<a href="jah-vita.pdf">Find more in my curriculum vitae →</a>
+
+<h2>Research</h2>
+
+  <p>
+    <a href="http://codyarchive.org">William F. Cody Archive
+      <img class="preview" src="images/cody_p.png">
+    </a><br>
+  </p>
+
+  <p>
+    <a href="http://segonku.unl.edu/~jheppler/showindian/">Buffalo Bill's Wild West and the Progressive Image of American Indians
+      <img class="preview" src="images/bbww_p.png">
+    </a><br>
+  </p>
+
+  <p>
+    <a href="http://framingredpower.org">Framing Red Power
+      <img class="preview" src="images/frp_p.png">
+    </a><br>
+  </p>
+
+  <p><a href="research.html">See more on my research →</a></p>
+
+
+<h2>Projects</h2>
+
+  <p>
+      Geography of the Nineteenth Century Post (Coming Soon)
+      <img class="preview" src="images/geography_p.png">
+    </a><br>
+  </p>
+  
+   <p>
+      Prussian Foodstuffs of the 17th Century (Coming Soon)
+      <img class="preview" src="images/foodstuffs_p.png">
+    </a><br>
+  </p>
+
+<h2>Resources</h2>
+
+  <p><a href="http://whatisdigitalhumanities.com">What is Digital Humanities?</a> &#8212; Perpetual answers to the perpetual question.</p>
+
+  <p><a href="https://github.com/hepplerj/dotfiles">Dotfiles</a> &#8212; my configuration files for ZSH, vim, Sublime Text, iTerm, Git, Ruby, and Tmux.</p>
+
+  <p><a href="https://github.com/hepplerj/bib">BibTeX Bibliography</a> &#8212; A BibTeX database of citations in environmental, urban, and American history.</p>
+
+  <p><a href="https://github.com/hepplerj/FREQr">FREQr</a> &#8212; A word frequency generator for the command line written in Ruby.</p>
+
+  <p><a href="http://github.com/hepplerj">See more on GitHub →</a></p>

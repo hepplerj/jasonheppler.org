@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta content="The online writing of Jason Heppler" name="description"/>
+<title>A Simple Ruby NGram Generator</title> <meta name="author" content="Jason Heppler" />
+<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/css/tweet.css" type="text/css" />
+<link href="/webfonts/ss-social.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://jasonheppler.org/js/styleTweets.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+svg {
+  font: 13px sans-serif;
+}
+
+</style>
+
+   <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-12786552-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
+
+</head>
+<body>
+
+<div class="header">
+	<div class="header_container">
+
+		<section class="name"><a href="/">Jason Heppler</a></section>
+		<ul class="menu">
+			<li><a href="/about.html">Colophon</a></li>
+			<li><a href="/research.html">Research</a></li>
+			<li><a href="/teaching.html">Teaching</a></li>
+			<li><a href="/hacks.html">Digital &amp; Public History</a></li>
+			<li><a href="http://jasonheppler.org/jah-vita.pdf">Vita</a></li>
+		</ul>
+	</div>
+</div>
+
+<section class="container content">
+
+<aside><p class="when">April 24, 2012</p></aside>
+<h1>A Simple Ruby NGram Generator</h1>
+
+<p>I was playing around with Ruby the other night and wrote a simple n-gram generator. In case anyone is interested, here is the script:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="c1">#!/usr/bin/env ruby -w</span>
+<span class="c1"># r_ngram.rb</span>
+<span class="c1"># Generate a simple bi- and tri-gram, prints to STDOUT</span>
+<span class="c1"># Usage: ruby ngram.rb file.txt</span>
+<span class="c1"># To save the output to a file: ruby ngram.rb file.txt &gt; output.txt</span>
+
+<span class="vg">$words</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="no">ARGV</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">)</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="sr">/[a-z]+/</span><span class="p">)</span>
+
+<span class="n">bi_grams</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">tri_grams</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="vg">$words</span><span class="o">.</span><span class="n">length</span> <span class="o">-</span> <span class="mi">2</span>
+<span class="n">num</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span>
+  <span class="n">bi</span> <span class="o">=</span> <span class="vg">$words</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="vg">$words</span><span class="o">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">]</span>
+  <span class="n">tri</span> <span class="o">=</span> <span class="n">bi</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="vg">$words</span><span class="o">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="o">]</span>
+  <span class="n">bi_grams</span><span class="o">[</span><span class="n">bi</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span>
+  <span class="n">tri_grams</span><span class="o">[</span><span class="n">tri</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="p">}</span>
+
+<span class="nb">puts</span> <span class="s2">&quot;## -- bi-grams -- ##&quot;</span>
+<span class="n">bg</span> <span class="o">=</span> <span class="n">bi_grams</span><span class="o">.</span><span class="n">sort</span><span class="p">{</span><span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="n">b</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">&lt;=&gt;</span> <span class="n">a</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">}</span>
+<span class="p">(</span><span class="n">num</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">bg</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="si">}</span><span class="s2"> : </span><span class="si">#{</span><span class="n">bg</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">}</span>
+<span class="nb">puts</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="nb">puts</span> <span class="s2">&quot;## -- tri-grams -- ##&quot;</span>
+<span class="n">tg</span> <span class="o">=</span> <span class="n">tri_grams</span><span class="o">.</span><span class="n">sort</span><span class="p">{</span><span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="n">b</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">&lt;=&gt;</span> <span class="n">a</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">}</span>
+<span class="p">(</span><span class="n">num</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">tg</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="si">}</span><span class="s2"> : </span><span class="si">#{</span><span class="n">tg</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">}</span>
+</code></pre></div>
+
+
+
+<section class="post_meta">
+  <div class="block">
+    <a href="http://twitter.com/jaheppler">
+      <span class="ss-twitter ss-social-circle">
+        <div>Follow me on Twitter.</div>
+      </span>
+    </a>
+  </div>
+  
+  <div class="block">
+  	<a href="http://acomp.stanford.edu/faculty/atsp">
+  		<span class="ss-like ss-social-circle">
+  			<div>I am the Academic Technology Specialist in the History Department at Stanford University.</div>
+  		</span>
+  	</a>
+  </div>
+
+  <div class="block">
+  	<a href="http://github.com/hepplerj">
+  		<span class="ss-github ss-social-circle">
+  			<div>Follow me on Github.</div>
+  		</span>
+  	</a>
+  </div>
+</section>
+
+
+</section>
+
+<footer>
+	Tech, history, code, coffee • Written by <a href="http://jasonheppler.org/about.html">Jason Heppler</a> • Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> <br/> Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a>
+
+<br>
+
+Remember <a href="http://lessig.tumblr.com/post/40347463044/prosecutor-as-bully">Aaron Swartz</a>
+
+</footer>
+
+</body>
+</html>

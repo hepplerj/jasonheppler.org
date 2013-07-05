@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta content="The online writing of Jason Heppler" name="description"/>
+<title>Forking the Rubyist Historian</title> <meta name="author" content="Jason Heppler" />
+<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/css/tweet.css" type="text/css" />
+<link href="/webfonts/ss-social.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://jasonheppler.org/js/styleTweets.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+svg {
+  font: 13px sans-serif;
+}
+
+</style>
+
+   <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-12786552-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
+
+</head>
+<body>
+
+<div class="header">
+	<div class="header_container">
+
+		<section class="name"><a href="/">Jason Heppler</a></section>
+		<ul class="menu">
+			<li><a href="/about.html">Colophon</a></li>
+			<li><a href="/research.html">Research</a></li>
+			<li><a href="/teaching.html">Teaching</a></li>
+			<li><a href="/hacks.html">Digital &amp; Public History</a></li>
+			<li><a href="http://jasonheppler.org/jah-vita.pdf">Vita</a></li>
+		</ul>
+	</div>
+</div>
+
+<section class="container content">
+
+<aside><p class="when">May 22, 2012</p></aside>
+<h1>Forking the Rubyist Historian</h1>
+
+<p>In early 2011 I wrote a <a href="http://www.jasonheppler.org/2010/12/29/the-rubyist-historian-getting-started.html">series of blog posts</a> based off of <a href="http://lenz.unl.edu/">Steve Ramsay&#8217;s</a> course on electronic text and Ruby programming, where part of our goal was to think about ways we could apply programming to humanistic data. The course became something of a pivot point for me. Although I&#8217;ve long been a computer geek, programming was something I never deeply used and hadn&#8217;t touched any computer language since high school (and even then, it was BASIC and Visual Basic). But Ramsay&#8217;s course made me realize the power that programming can offer researchers. The digitization of our cultural heritage means we have a growing abudance of material being released electronically by libraries, museums, archives, and digital centers, leaving us with a vast array of material that can be manipulated, queried, browsed, and visualized through computational methods. When the course was finished, I decided to write a series of blog posts for others who might be interested in applying Ruby to humanistic inquery. The result was The Rubyist Historian.<sup id="fnref:rubyfork"><a href="#fn:rubyfork" class="footnote">1</a></sup></p>
+
+<p>When I originally wrote the first post kicking off the series, I promised the release of an electronic book. At the time I was running WordPress and the plugin <a href="http://anthologize.org/">Anthologize</a> had recently been released. I wanted to test it out, and thought some of the things I was doing would also generate some good feedback for the Anthologize team. Shortly after, however, I switched my blog platform to Jekyll and, as other projects demanded my attention, I never got around to publishing the material into a format beyond my blog posts.</p>
+
+<p>That changes today. </p>
+
+<p>I had a new idea. Instead of pushing a static project as a PDF or epub format I decided to build something dynamic. After all, the electronic medium offers me a much easier way of updating material over time. So, this afternoon I pushed the seven posts to Github <a href="https://github.com/hepplerj/rubyist-historian/blob/master/fulltext.md">under a single file</a>, and <a href="http://hepplerj.github.com/rubyist-historian/">pushed that file to Github pages</a>. This offers two advantages: 1) Anyone interested can now download a copy of the Rubyist Historian and all example code to use, 2) Any updates I make can also be pushed to the page, as well as tracked in version history.</p>
+
+<p>But I want more. As a bit of an experiment in open publishing, I&#8217;ve decided to open source The Rubyist Historian for public contributions. I take my inspiration from William Turkel and Alan MacEachern&#8217;s <a href="http://www.niche-canada.org/programming-historian">The Programming Historian</a>, which used a wiki to allow public suggestions and contributions to the book. I hope to offer the same through a different venue in using Github pages and version control.</p>
+
+<p>People are free to fork The Rubyist Historian and offer corrections, clear (or better, or more) examples, and overall contribute to what I hope can become a collaborative project and reference for humanities scholars looking to get started in Ruby programming. The text could also be extended in other ways, such as rewriting parts that would make more sense for Windows users (the text, as it exists, is meant primarily for *nix environments), or porting the examples to other languages (someone should do Lisp, just for fun), or add &#8220;homework&#8221; exercises, or new lessons. Or new examples could push beyond the text analysis I offer and explore different computational methods over different sets of data. Or perhaps you&#8217;d like to see a PDF or epub format for Rubyist. There are no limitations to the ideas that could be offered and incorporated.</p>
+
+<h3 id="how-to-contribute">How to Contribute</h3>
+
+<p>My current idea and workflow for contributions will operate as follows:</p>
+
+<ol>
+  <li>If you want to make contributions, make a fork of the project in your Github repository.</li>
+  <li>Changes you make should be made to the <code>fulltext.md</code> file. Then changes can be pushed back to my repository.</li>
+  <li>If new lessons are offered, a corresponding directory for code examples should accompany the lesson. Discussions of new lessons can be had on the <a href="https://github.com/hepplerj/rubyist-historian/wiki">Github wiki page</a>. </li>
+  <li>As changes are merged into the full text, the Github page will be manually updated by me (this appears to be the only way to do this right now.)</li>
+</ol>
+
+<p>This may undergo some evolution &#8211; as I mentioned, this is an experiment and I haven&#8217;t fully thought through how everything will work. I&#8217;ll work out issues as time goes on.</p>
+
+<p>So, go check out the <a href="http://hepplerj.github.com/rubyist-historian/">new Rubyist Historian page</a> and <a href="https://github.com/hepplerj/rubyist-historian/">start forking</a>.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:rubyfork">
+      <p>The other pivot point, which the course also contributed to, was a switch in my research agenda towards the history of computers. More on this in an upcoming post.<a href="#fnref:rubyfork" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+<section class="post_meta">
+  <div class="block">
+    <a href="http://twitter.com/jaheppler">
+      <span class="ss-twitter ss-social-circle">
+        <div>Follow me on Twitter.</div>
+      </span>
+    </a>
+  </div>
+  
+  <div class="block">
+  	<a href="http://acomp.stanford.edu/faculty/atsp">
+  		<span class="ss-like ss-social-circle">
+  			<div>I am the Academic Technology Specialist in the History Department at Stanford University.</div>
+  		</span>
+  	</a>
+  </div>
+
+  <div class="block">
+  	<a href="http://github.com/hepplerj">
+  		<span class="ss-github ss-social-circle">
+  			<div>Follow me on Github.</div>
+  		</span>
+  	</a>
+  </div>
+</section>
+
+
+</section>
+
+<footer>
+	Tech, history, code, coffee • Written by <a href="http://jasonheppler.org/about.html">Jason Heppler</a> • Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> <br/> Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a>
+
+<br>
+
+Remember <a href="http://lessig.tumblr.com/post/40347463044/prosecutor-as-bully">Aaron Swartz</a>
+
+</footer>
+
+</body>
+</html>

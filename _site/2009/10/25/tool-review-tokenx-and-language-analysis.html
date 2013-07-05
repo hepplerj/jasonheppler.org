@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta content="The online writing of Jason Heppler" name="description"/>
+<title>Tool Review: TokenX and Language Analysis</title> <meta name="author" content="Jason Heppler" />
+<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/css/tweet.css" type="text/css" />
+<link href="/webfonts/ss-social.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://jasonheppler.org/js/styleTweets.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+svg {
+  font: 13px sans-serif;
+}
+
+</style>
+
+   <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-12786552-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
+
+</head>
+<body>
+
+<div class="header">
+	<div class="header_container">
+
+		<section class="name"><a href="/">Jason Heppler</a></section>
+		<ul class="menu">
+			<li><a href="/about.html">Colophon</a></li>
+			<li><a href="/research.html">Research</a></li>
+			<li><a href="/teaching.html">Teaching</a></li>
+			<li><a href="/hacks.html">Digital &amp; Public History</a></li>
+			<li><a href="http://jasonheppler.org/jah-vita.pdf">Vita</a></li>
+		</ul>
+	</div>
+</div>
+
+<section class="container content">
+
+<aside><p class="when">October 25, 2009</p></aside>
+<h1>Tool Review: TokenX and Language Analysis</h1>
+
+<p><em>[This review is cross-posted at <a href="http://digitalhistory.unl.edu/t-reviews/tokenxhepplerrogers.php">Digital History</a>.]</em></p>
+
+<p>The proliferation of linguistic tools for analysis has opened new avenues for historians working in the digital realm. Textual analysis is the study of newspaper articles, books, laws, oral histories, and other forms of human communication. Textual analysis digital tools better enable historians to decipher language usage, frequency, and significance in the context of discourse, rhetoric, and ideas. These robust digital tools thereby provide numerous possibilities that can inform historical research and communication strategies that can introduce new thinking into the current historiography. <a href="http://cdrh.unl.edu/about/faculty/pytlik_zillig.php" target="_blank">Brian Pytlik Zillig</a> at the <a href="http://cdrh.unl.edu/" target="_blank">Center for Digital Research in the Humanities</a> (CDRH) at the <a href="http://www.unl.edu" target="_blank">University of Nebraska-Lincoln </a>developed <a href="http://cdrh.unl.edu/articles/tokenx.php" target="_blank">TokenX </a>as a powerful tool for analyzing text. While TokenX continues to undergo revision and further development, tools like this one can help historians integrate textual analysis in their research to analyze connections in language and across several texts.</p>
+
+<p>Accompanying language analysis tools are encoding standards manifest in eXtensible Markup Language (XML), a Text Encoding Initiative (TEI) standard that defines textual elements without compromising the integrity of the original document. Text encoding becomes necessary for making digital representations of original analog materials, a particularly crucial step in digital research for scholars studying eras prior to the proliferation of computers and electronic-born texts. Encoding not only serves to structure sustainable projects but allows for sophisticated analysis of text by a flexible ability to define elements within a document. Furthermore, making texts digital with proper encoding allows more rigorous examination and manipulation of said texts. The more digital texts available for analysis, the better for digital textual analysis tools to articulate and produce visualizations that can create a framework to define, query, and highlight the associations in the record of the past.</p>
+
+<p>TokenX analyzes XML files that can be manually input to the software (assuming the XML document is stored on a server) or built into a digital project, a task accomplished by Pytlik Zillig and CDRH (see, for example, <a href="http://segonku.unl.edu/cocoon/tokenx_jheppler/index.html?file=../xml/base.xml" target="_blank"><em>Framing Red Power</em></a>, <a href="http://libxml1a.unl.edu/cocoon/tokenxbryan/index.html?file=../xml/base.xml" target="_blank&quot;"><em>William Jennings Bryan and the Railroad</em></a>, and <a href="http://segonku.unl.edu/cocoon/tokenx_brogers/index.html?file=../xml/base.xml" target="_blank"><em>What Shall be the Character of this Vast Western Territory?</em></a>). Once a file is &#8220;Tokenized,&#8221; users can generate word clouds, highlight keywords, view keywords in context, create word counts, and a host of other forms of analysis. Newer features currently being integrated into TokenX allow for n-gram analysis and concordance views of text, both of which help deconstruct texts even further by counting phrases containing an n number of words. Word clouds provide a visual depiction of the frequency of words in a document&#8217;s content. Shown by a variation in font size or color depending on their frequency, the word clouds identify the most crucial words used in a document. Another impressive feature in TokenX&#8217;s textual analysis rests in being able to view particular words in context. Emphasizing words in their immediate context allows one to visualize that word&#8217;s usage in several instances within a document. Through such features, researchers and historians can mine the text for information not visible without machine-aid to demonstrate some connective tissue between the text and a historical argument. Textual visualizations allow scholars to glean what a text or corpus of text is narrating about particular themes, people, or events. Certain elements are highlighted and scholars can investigate these texts in numerous ways to determine why particular words or contexts come into focus while others fade in importance. In terms of scholarly communications, the digital presentation provides an accessible way for historians to narrate their argument. TokenX&#8217;s visualizations provide in-depth insights into word contexts within individual and corpus texts and serve as a method for analyzing the connective tissue within language and across texts in time and place.</p>
+
+<p>Recently, TokenX was integrated into student projects with assistance from Pytlik Zillig. This digital tool has aided the students in crafting original historical arguments by highlighting language and word trends. The students first transcribed each of the historical documents used as their source base. Transcribing textual documents into a digital form also provides the historian a deeper familiarity with the document&#8217;s content, context, and type of discourse. With a significant corpus of documents made digital users can investigate different keywords and perform the other functions of analysis offered by the tool. Having TokenX integrated into digital projects enable the authors of those projects to make their argument interactive rather than static screen captures of visualizations. The integration of TokenX into digital projects requires you to work through Pytlik Zillig to &#8220;Tokenize&#8221; the documents and host the material on a server, thus limiting the design capabilities of TokenX. However, the design limitation does not detract from the usefulness of the analysis tool and the value it adds to digital scholarship.</p>
+
+<p>Historians and history instructors will find textual analysis tools, like TokenX, critical for piecing together and visually demonstrating historical analysis to students and colleagues alike.</p>
+
+<p><em>Brent Rogers and Jason Heppler
+University of Nebraska-Lincoln
+Reviewed: August 2009</em></p>
+
+
+<section class="post_meta">
+  <div class="block">
+    <a href="http://twitter.com/jaheppler">
+      <span class="ss-twitter ss-social-circle">
+        <div>Follow me on Twitter.</div>
+      </span>
+    </a>
+  </div>
+  
+  <div class="block">
+  	<a href="http://acomp.stanford.edu/faculty/atsp">
+  		<span class="ss-like ss-social-circle">
+  			<div>I am the Academic Technology Specialist in the History Department at Stanford University.</div>
+  		</span>
+  	</a>
+  </div>
+
+  <div class="block">
+  	<a href="http://github.com/hepplerj">
+  		<span class="ss-github ss-social-circle">
+  			<div>Follow me on Github.</div>
+  		</span>
+  	</a>
+  </div>
+</section>
+
+
+</section>
+
+<footer>
+	Tech, history, code, coffee • Written by <a href="http://jasonheppler.org/about.html">Jason Heppler</a> • Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> <br/> Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a>
+
+<br>
+
+Remember <a href="http://lessig.tumblr.com/post/40347463044/prosecutor-as-bully">Aaron Swartz</a>
+
+</footer>
+
+</body>
+</html>

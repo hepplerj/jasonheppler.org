@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta content="The online writing of Jason Heppler" name="description"/>
+<title>Using AppleScript to Automate Notetaking</title> <meta name="author" content="Jason Heppler" />
+<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/css/tweet.css" type="text/css" />
+<link href="/webfonts/ss-social.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://jasonheppler.org/js/styleTweets.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+svg {
+  font: 13px sans-serif;
+}
+
+</style>
+
+   <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-12786552-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
+
+</head>
+<body>
+
+<div class="header">
+	<div class="header_container">
+
+		<section class="name"><a href="/">Jason Heppler</a></section>
+		<ul class="menu">
+			<li><a href="/about.html">Colophon</a></li>
+			<li><a href="/research.html">Research</a></li>
+			<li><a href="/teaching.html">Teaching</a></li>
+			<li><a href="/hacks.html">Digital &amp; Public History</a></li>
+			<li><a href="http://jasonheppler.org/jah-vita.pdf">Vita</a></li>
+		</ul>
+	</div>
+</div>
+
+<section class="container content">
+
+<aside><p class="when">November 24, 2012</p></aside>
+<h1>Using AppleScript to Automate Notetaking</h1>
+
+<p>On <a href="http://www.70decibels.com/generational/2012/11/10/009-research-materials-and-tools-with-walton-jones.html">a recent episode</a> of <a href="http://www.macdrifter.com">Gabe Weatherhead&#8217;s</a> Generational podcast he spoke with <a href="http://drosophiliac.com">Walton Jones</a>, professor of Behavioral Neurobiology at Korea Advanced Institute of Science and Technology. They talk about Professor Jones&#8217; system for annotating and summarizing academic papers about twenty minutes into the podcast. He&#8217;s further detailed his <a href="http://drosophiliac.com/2012/09/an-academic-notetaking-workflow.html">academic workflow on his blog</a>, so be sure to give his explanation a read.</p>
+
+<p>I&#8217;ve noted before how I <a href="http://www.jasonheppler.org/2012/08/13/towards-better-pdf-management-with-the-filesystem.html">manage my PDFs using the filesystem</a> and Open Meta tagging. I&#8217;ve tended to maintain my notes in plain text written directly into DEVONthink, but after listening to Weatherhead&#8217;s talk with Jones and reading his post I&#8217;ve decided to adopt part of his system. </p>
+
+<p>As a scientist Jones spends much of his time synthesizing the latest research that normally comes to him as a PDF from journals. Where I became interested in his system was 1) his color coded annotations and 2) his method of extracting those annotations to plain text. His system uses colors for different notes, green for references, red for summaries, and so on. Where the system really inspired me was his AppleScript that can process the PDF he has marked up (either in <a href="http://skim-app.sourceforge.net/">Skim</a> or <a href="http://www.branchfire.com/">iAnnotate</a>) that scans the PDF and extracts notes based on his categorization using Markdown syntax. He then dumps the notes into Voodoo Pad. Be sure to <a href="http://drosophiliac.com/2012/09/an-academic-notetaking-workflow.html">read his explanation</a> of his system as my summary doesn&#8217;t do it complete justice.</p>
+
+<p>The system relies on an AppleScript that looks for annotations in the PDF and extracts the text into Markdown-formatted plain text. I modified the script slightly for my own needs:</p>
+
+<div class="highlight"><pre><code class="applescript"><span class="cm">(*</span>
+
+<span class="cm">Script courtesy of Walton Jones, modified slightly </span>
+<span class="cm">http://drosophiliac.com/2012/09/an-academic-notetaking-workflow.html</span>
+
+<span class="cm">Original script by John Sidiropoulos</span>
+<span class="cm">http://www.organognosi.com/export-skim-notes-according-to-their-highlight-colors/</span>
+
+<span class="cm">*)</span>
+
+<span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Skim&quot;</span>
+    <span class="nb">set the clipboard to</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">set</span> <span class="nv">numberOfPages</span> <span class="k">to</span> <span class="nb">count</span> <span class="nv">pages</span> <span class="k">of</span> <span class="na">document</span> <span class="mi">1</span>
+    
+    <span class="nb">activate</span>
+    <span class="k">set</span> <span class="nv">myColorCodes</span> <span class="k">to</span> <span class="k">my</span> <span class="nv">chooseColor</span><span class="p">()</span>
+    
+    <span class="k">set</span> <span class="nv">firstPage</span> <span class="k">to</span> <span class="s2">&quot;1&quot;</span> <span class="k">as</span> <span class="nv">number</span>
+    <span class="k">set</span> <span class="nv">lastPage</span> <span class="k">to</span> <span class="nv">numberOfPages</span>
+    <span class="nb">set the clipboard to</span> <span class="s2">&quot;# Notes #&quot;</span> <span class="o">&amp;</span> <span class="no">return</span> <span class="o">&amp;</span> <span class="no">return</span>
+    
+    <span class="k">repeat</span> <span class="nv">with</span> <span class="nv">currentPage</span> <span class="k">from</span> <span class="nv">firstPage</span> <span class="k">to</span> <span class="nv">lastPage</span>
+        <span class="k">set</span> <span class="nv">pageNotes</span> <span class="k">to</span> <span class="nv">notes</span> <span class="k">of</span> <span class="nv">page</span> <span class="nv">currentPage</span> <span class="k">of</span> <span class="na">document</span> <span class="mi">1</span>
+        <span class="nv">exportPageNotes</span><span class="p">(</span><span class="nv">pageNotes</span><span class="p">,</span> <span class="nv">currentPage</span><span class="p">,</span> <span class="nv">myColorCodes</span><span class="p">)</span> <span class="k">of</span> <span class="k">me</span>
+    <span class="k">end</span> <span class="k">repeat</span>
+    
+<span class="k">end</span> <span class="k">tell</span>
+
+<span class="k">on</span> <span class="nv">exportPageNotes</span><span class="p">(</span><span class="nv">listOfNotes</span><span class="p">,</span> <span class="nv">pageForProcessing</span><span class="p">,</span> <span class="nv">myColorCodes</span><span class="p">)</span>
+    <span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Skim&quot;</span>
+        
+        <span class="k">set</span> <span class="nv">currentPDFpage</span> <span class="k">to</span> <span class="nv">pageForProcessing</span>
+        <span class="k">repeat</span> <span class="nv">with</span> <span class="nv">coloredNote</span> <span class="k">in</span> <span class="nv">listOfNotes</span>
+            
+            <span class="k">repeat</span> <span class="nv">with</span> <span class="nv">i</span> <span class="k">from</span> <span class="mi">1</span> <span class="k">to</span> <span class="nb">the</span> <span class="nb">count</span> <span class="k">of</span> <span class="nv">myColorCodes</span>
+                <span class="k">if</span> <span class="nv">color</span> <span class="k">of</span> <span class="nv">coloredNote</span> <span class="ow">is</span> <span class="nb">item</span> <span class="nv">i</span> <span class="k">of</span> <span class="nv">myColorCodes</span> <span class="k">then</span>
+                    <span class="k">set</span> <span class="nv">categoryColors</span> <span class="k">to</span> <span class="p">({</span><span class="s2">&quot;Summary&quot;</span><span class="p">,</span> <span class="s2">&quot;Methods&quot;</span><span class="p">,</span> <span class="s2">&quot;Arguments&quot;</span><span class="p">,</span> <span class="s2">&quot;Reference&quot;</span><span class="p">,</span> <span class="s2">&quot;Thesis&quot;</span><span class="p">,</span> <span class="s2">&quot;Question or connection&quot;</span><span class="p">})</span>
+                    <span class="k">set</span> <span class="nv">noteColor</span> <span class="k">to</span> <span class="nv">color</span> <span class="k">of</span> <span class="nv">coloredNote</span> <span class="k">as </span><span class="nc">string</span>
+                    <span class="k">if</span> <span class="nv">noteColor</span> <span class="ow">is</span> <span class="nb">item</span> <span class="nv">i</span> <span class="k">of</span> <span class="nv">myColorCodes</span> <span class="k">as </span><span class="nc">string</span> <span class="k">then</span>
+                        <span class="k">set</span> <span class="nv">noteColor</span> <span class="k">to</span> <span class="nb">item</span> <span class="nv">i</span> <span class="k">of</span> <span class="nv">categoryColors</span>
+                    <span class="k">end</span> <span class="k">if</span>
+                    <span class="k">set</span> <span class="nv">noteText</span> <span class="k">to</span> <span class="k">get</span> <span class="nb">text</span> <span class="nb">for</span> <span class="nv">coloredNote</span>
+                    <span class="nb">set the clipboard to</span> <span class="p">(</span><span class="nb">the clipboard</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s2">&quot;**[&quot;</span> <span class="o">&amp;</span> <span class="nv">noteColor</span> <span class="o">&amp;</span> <span class="s2">&quot;]&quot;</span> <span class="o">&amp;</span> <span class="s2">&quot;(&quot;</span> <span class="o">&amp;</span> <span class="na">name</span> <span class="k">of</span> <span class="na">document</span> <span class="mi">1</span> <span class="o">&amp;</span> <span class="s2">&quot;#page=&quot;</span> <span class="o">&amp;</span> <span class="nv">pageForProcessing</span> <span class="o">&amp;</span> <span class="s2">&quot;)**&quot;</span> <span class="o">&amp;</span> <span class="s2">&quot;:   &quot;</span> <span class="o">&amp;</span> <span class="no">return</span> <span class="o">&amp;</span> <span class="nv">noteText</span> <span class="o">&amp;</span> <span class="no">return</span> <span class="o">&amp;</span> <span class="no">return</span>
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">end</span> <span class="k">repeat</span>
+        <span class="k">end</span> <span class="k">repeat</span>
+        
+    <span class="k">end</span> <span class="k">tell</span>
+<span class="k">end</span> <span class="nv">exportPageNotes</span>
+
+<span class="k">on</span> <span class="nv">chooseColor</span><span class="p">()</span>
+    <span class="k">set</span> <span class="nv">selectedColors</span> <span class="k">to</span> <span class="p">({</span><span class="s2">&quot;Summary&quot;</span><span class="p">,</span> <span class="s2">&quot;Methods&quot;</span><span class="p">,</span> <span class="s2">&quot;Arguments&quot;</span><span class="p">,</span> <span class="s2">&quot;Reference&quot;</span><span class="p">,</span> <span class="s2">&quot;Thesis&quot;</span><span class="p">,</span> <span class="s2">&quot;Question or connection&quot;</span><span class="p">})</span>
+    <span class="k">set</span> <span class="nv">colorCodes</span> <span class="k">to</span> <span class="p">{}</span>
+    <span class="k">set</span> <span class="nv">noteColor</span> <span class="k">to</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">repeat</span> <span class="nv">with</span> <span class="nv">noteCol</span> <span class="k">in</span> <span class="nv">selectedColors</span>
+        <span class="k">set</span> <span class="nv">noteColor</span> <span class="k">to</span> <span class="nv">noteCol</span> <span class="k">as </span><span class="nc">text</span>
+        <span class="k">if</span> <span class="nv">noteColor</span> <span class="ow">is</span> <span class="s2">&quot;Summary&quot;</span> <span class="k">then</span>
+            <span class="k">set</span> <span class="k">end</span> <span class="k">of</span> <span class="nv">colorCodes</span> <span class="k">to</span> <span class="p">{</span><span class="mi">64634</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span> <span class="mi">1905</span><span class="p">,</span> <span class="mi">65535</span><span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="nv">noteColor</span> <span class="ow">is</span> <span class="s2">&quot;Methods&quot;</span> <span class="k">then</span>
+            <span class="k">set</span> <span class="k">end</span> <span class="k">of</span> <span class="nv">colorCodes</span> <span class="k">to</span> <span class="p">{</span><span class="mi">64907</span><span class="p">,</span> <span class="mi">32785</span><span class="p">,</span> <span class="mi">2154</span><span class="p">,</span> <span class="mi">65535</span><span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="nv">noteColor</span> <span class="ow">is</span> <span class="s2">&quot;Arguments&quot;</span> <span class="k">then</span>
+            <span class="k">set</span> <span class="k">end</span> <span class="k">of</span> <span class="nv">colorCodes</span> <span class="k">to</span> <span class="p">{</span><span class="mi">65535</span><span class="p">,</span> <span class="mi">65531</span><span class="p">,</span> <span class="mi">2689</span><span class="p">,</span> <span class="mi">65535</span><span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="nv">noteColor</span> <span class="ow">is</span> <span class="s2">&quot;Reference&quot;</span> <span class="k">then</span>
+            <span class="k">set</span> <span class="k">end</span> <span class="k">of</span> <span class="nv">colorCodes</span> <span class="k">to</span> <span class="p">{</span><span class="mi">8608</span><span class="p">,</span> <span class="mi">65514</span><span class="p">,</span> <span class="mi">1753</span><span class="p">,</span> <span class="mi">65535</span><span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="nv">noteColor</span> <span class="ow">is</span> <span class="s2">&quot;Thesis&quot;</span> <span class="k">then</span>
+            <span class="k">set</span> <span class="k">end</span> <span class="k">of</span> <span class="nv">colorCodes</span> <span class="k">to</span> <span class="p">{</span><span class="mi">8372</span><span class="p">,</span> <span class="mi">65519</span><span class="p">,</span> <span class="mi">65472</span><span class="p">,</span> <span class="mi">65535</span><span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="nv">noteColor</span> <span class="ow">is</span> <span class="s2">&quot;Question or connection&quot;</span> <span class="k">then</span>
+            <span class="k">set</span> <span class="k">end</span> <span class="k">of</span> <span class="nv">colorCodes</span> <span class="k">to</span> <span class="p">{</span><span class="mi">64587</span><span class="p">,</span> <span class="mi">1044</span><span class="p">,</span> <span class="mi">65481</span><span class="p">,</span> <span class="mi">65535</span><span class="p">}</span>
+            
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">repeat</span>
+    
+    <span class="no">return</span> <span class="nv">colorCodes</span>
+<span class="k">end</span> <span class="nv">chooseColor</span>
+</code></pre></div>
+
+<div class="update">
+<p><strong>UPDATE 11/29/12</strong><br />
+I was remiss in pointing out that the original AppleScript adapted by Walton Jones <a href="http://www.organognosi.com/export-skim-notes-according-to-their-highlight-colors/#codesyntax_1">came from John Sidiropoulos</a> at his blog <a href="http://www.organognosi.com/">OrganoGnosi</a>. His blog has lots of advice on using digital tools for academic research.</p>
+</div>
+
+<p>I take my notes in Skim, which would result in something like:</p>
+
+<p><img src="http://farm9.staticflickr.com/8339/8205161519_f4b08fcbe4.jpg" alt="Skim notes" title="Skim notes" /></p>
+
+<p>When the script is run on a PDF, it results in a note formatted in Markdown that looks similar to this:</p>
+
+<div class="highlight"><pre><code class="console"><span class="gp">#</span> Notes <span class="c">#</span>
+
+<span class="go">**[Reference](file://example.pdf#page=3**:</span>
+<span class="go">Reference text would appear here extracted automatically from the PDF.</span>
+</code></pre></div>
+
+<p>That&#8217;s where the other half of the magic comes in Jones&#8217;s system. The note not only includes the text I wanted but also a hyperlink to the page of a particular reference. Transformed into Markdown, the note allows me to click on the reference and be taken back to the source. My notes use to appear similarly, often taking a form such as:</p>
+
+<div class="highlight"><pre><code class="console"><span class="go">[3] Noting the page number in brackets followed by my notes, thoughts, direct quotes, and so on from a PDF or book.</span>
+</code></pre></div>
+
+<p>As I mentioned, my notes were previously entered directly into DEVONthink. But with this new system I&#8217;ll be keeping my notes in the same directory as the document I&#8217;m taking notes on. From there, DEVONthink will index the directory for easy searching and organizing.</p>
+
+<div class="update">
+<p><strong>UPDATE 11/27/12</strong><br />
+ProfHacker has <a href="http://chronicle.com/blogs/profhacker/using-applescript-to-automate-notetaking/44422">graciously republished this entry</a> on their blog on 2012-11-27.</p>
+</div>
+
+<div class="update">
+<p><strong>UPDATE 11/28/12</strong><br />
+Readers have pointed out that the hyperlinking to specific pages isn't working the way it should. The solution, near as I've been able to replicate the problem, points to just how unrobust this system is, unfortunately.</p>
+
+<p>Walton Jones had to work around the problem by <a href="http://drosophiliac.com/2012/09/an-academic-notetaking-workflow.html">writing his own custom URL scheme</a>. You may need to adopt his system to get everything working. But Skim seems to handle page numbers without any problems, at least for me. There are a few things to bear in mind when using the script: 1) The notes <em>must</em> appear in the same directory as the PDF, and 2) the file must match exactly the text in the note (which the script should handle for you). So, for example, <code>example-article.pdf#page=3</code> must correspond exactly to <code>example-article.pdf</code> and reside in the same directory as the notes, otherwise it doesn't know where the file is located. Also, be sure that no spaces are included in the filename, otherwise the Markdown linking will not work.</p>
+
+<p>The other area that makes the system tricky to use is the way I'm using it. When I transform the text notes into Markdown, I save the resulting markup as a PDF (either transformed in <a href="http://markedapp.com/">Marked.app</a> or fed through <a href="http://plessl.github.com/wkpdf/">wkpdf</a>). The PDF file of my notes is opened in Skim, which can handle linking back to the article because all of these actions are happening within the same application. In other words, if you are planning on using the hyperlinking system as I use it, you will need to contain all activity in Skim. Otherwise, you may need to look into Walton Jones's custom URL scheme.</p>
+</div>
+
+<div class="update">
+<p><strong>UPDATE 11/29/12</strong><br />
+John Sidiropoulos, who wrote the original AppleScript to exract the colors from Skim documents adopted by Walton Jones and myself, has <a href="http://www.organognosi.com/its-all-about-hyperlinks/">a brilliant post on DEVONthink and hyperlinks</a> that nicely complements the update from yesterday. </p>
+</div>
+
+
+<section class="post_meta">
+  <div class="block">
+    <a href="http://twitter.com/jaheppler">
+      <span class="ss-twitter ss-social-circle">
+        <div>Follow me on Twitter.</div>
+      </span>
+    </a>
+  </div>
+  
+  <div class="block">
+  	<a href="http://acomp.stanford.edu/faculty/atsp">
+  		<span class="ss-like ss-social-circle">
+  			<div>I am the Academic Technology Specialist in the History Department at Stanford University.</div>
+  		</span>
+  	</a>
+  </div>
+
+  <div class="block">
+  	<a href="http://github.com/hepplerj">
+  		<span class="ss-github ss-social-circle">
+  			<div>Follow me on Github.</div>
+  		</span>
+  	</a>
+  </div>
+</section>
+
+
+</section>
+
+<footer>
+	Tech, history, code, coffee • Written by <a href="http://jasonheppler.org/about.html">Jason Heppler</a> • Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> <br/> Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a>
+
+<br>
+
+Remember <a href="http://lessig.tumblr.com/post/40347463044/prosecutor-as-bully">Aaron Swartz</a>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta content="The online writing of Jason Heppler" name="description"/>
+<title>Digital History and Continuous Deployment</title> <meta name="author" content="Jason Heppler" />
+<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/css/tweet.css" type="text/css" />
+<link href="/webfonts/ss-social.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://jasonheppler.org/js/styleTweets.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+svg {
+  font: 13px sans-serif;
+}
+
+</style>
+
+   <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-12786552-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
+
+</head>
+<body>
+
+<div class="header">
+	<div class="header_container">
+
+		<section class="name"><a href="/">Jason Heppler</a></section>
+		<ul class="menu">
+			<li><a href="/about.html">Colophon</a></li>
+			<li><a href="/research.html">Research</a></li>
+			<li><a href="/teaching.html">Teaching</a></li>
+			<li><a href="/hacks.html">Digital &amp; Public History</a></li>
+			<li><a href="http://jasonheppler.org/jah-vita.pdf">Vita</a></li>
+		</ul>
+	</div>
+</div>
+
+<section class="container content">
+
+<aside><p class="when">March  2, 2011</p></aside>
+<h1>Digital History and Continuous Deployment</h1>
+
+<p>The other night on <a href="http://www.reddit.com/r/programming/">Proggit</a> I came across a <a href="http://fragile.org.uk/2011/02/in-praise-of-continuous-deployment/">blog post</a> praising continuous deployment. Continuous deployment is the process of code written for applications are immediately deployed which <a href="http://radar.oreilly.com/2009/03/continuous-deployment-5-eas.html">lowers cycle time and opens up individual initiative</a>.  As I was reading the post and doing a bit of my own Googling I began to wonder if continuous deployment worked as a metaphor for digital scholarship. These are my quick thoughts.</p>
+
+<p>I don&#8217;t mean continuous deployment in the sense that developers mean continuous deployment. After all, digital history projects are not necessarily in the business of testing and debugging for consumers.[1. Though there is certainly a place for that in terms of user interfaces and visualizations.] Rather, I mean continuous deployment in digital history to be the continual refinement of narrative and analysis, the ongoing growth of digital archives, and the implementation of current and future visualizations.</p>
+
+<p>At conferences and in discussions with people unfamiliar with digital history, I often talk about the iterative process of digital history &#8211; that the finality of a journal article, dissertation, or book could seemingly never exist for digital projects given the nearly unlimited space for data, information, and space that our modern servers and hard drives provide (unlike the analog limitations of ink, paper, and costs). More than one conversation has wandered into whether this sort of scholarship was good for history. After all, if the content of a digital project is continually changing, can a project be reliable for its posterity? The skeptics raise an important point. Indeed, if continual research leads a scholar to draw new or different conclusions than originally posited on a project, should there be some way to archive &quot;old&quot; narratives and analysis for posterity&#8217;s sake? I&#8217;m sympathetic to this view, especially since one of our goals with digital scholarship should be citable material. We need some sort of stability, though I don&#8217;t know exactly what version-controlled digital scholarship looks like yet.</p>
+
+<p>However, I think there is a larger point to be made about continuous deployment in DH. The iterative process allows us to react to new data or interpretations, easily update material, and also unlocks data and knowledge for broad audiences.</p>
+
+<h4>Scholarship More Agile</h4>
+<p>Programmers talk of their <a href="http://en.wikipedia.org/wiki/Agile_software_development#Agile_Manifesto">projects being agile</a>, meaning that software can adapt quickly to changes or add functionality with little risk. The same could be said for digital history. There is a tremendous amount of risk in publishing a book or journal article &#8211; the sale and marketing of the product, the costs of physical media, the time of editing and revision. In digital history, these items can simultaneously occur or could be eliminated entirely. The nearly limitless space that modern hard drives allow us means we can create digital projects that encompass a very wide array of subjects and material without the physical limitations of ink and paper. Digital publication doesn&#8217;t require a reprinting or new edition: we can adapt to changes very quickly (new scholarly interpretations, new visualizations, etc.) or expand digital archives with relative ease.</p>
+
+<h4>Easy Revision and Updating</h4>
+<p>Agile development allows for ease in revising and updating material in digital projects. Revising narrative or archive items is a simple matter compared to the amount of work and investment it takes to update print publications. Changes to my own projects involve no more than connecting to my server or editing local files for upload. In a matter of moments, my changes are &quot;live&quot; for users to begin using or interpreting.</p>
+
+<h4>No Gatekeepers</h4>
+<p>Digital history <a href="http://www.jasonheppler.org/2010/10/08/open-access-scholarship-and-computers-in-the-humanities/">should be open</a>. While I respect and am thankful for the material that services like JSTOR and ProQuest offer, unfortunately this material is locked behind costly gates. The sum of the world&#8217;s knowledge should be open for broad consumption. Perhaps the Google Books model is one way journal publishers can begin thinking about ways of sharing the contents of their journals. </p>
+
+
+<section class="post_meta">
+  <div class="block">
+    <a href="http://twitter.com/jaheppler">
+      <span class="ss-twitter ss-social-circle">
+        <div>Follow me on Twitter.</div>
+      </span>
+    </a>
+  </div>
+  
+  <div class="block">
+  	<a href="http://acomp.stanford.edu/faculty/atsp">
+  		<span class="ss-like ss-social-circle">
+  			<div>I am the Academic Technology Specialist in the History Department at Stanford University.</div>
+  		</span>
+  	</a>
+  </div>
+
+  <div class="block">
+  	<a href="http://github.com/hepplerj">
+  		<span class="ss-github ss-social-circle">
+  			<div>Follow me on Github.</div>
+  		</span>
+  	</a>
+  </div>
+</section>
+
+
+</section>
+
+<footer>
+	Tech, history, code, coffee • Written by <a href="http://jasonheppler.org/about.html">Jason Heppler</a> • Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> <br/> Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a>
+
+<br>
+
+Remember <a href="http://lessig.tumblr.com/post/40347463044/prosecutor-as-bully">Aaron Swartz</a>
+
+</footer>
+
+</body>
+</html>

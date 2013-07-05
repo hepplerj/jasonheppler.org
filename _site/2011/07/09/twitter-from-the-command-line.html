@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta content="The online writing of Jason Heppler" name="description"/>
+<title>Twitter from the Command Line</title> <meta name="author" content="Jason Heppler" />
+<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/css/tweet.css" type="text/css" />
+<link href="/webfonts/ss-social.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://jasonheppler.org/js/styleTweets.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+svg {
+  font: 13px sans-serif;
+}
+
+</style>
+
+   <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-12786552-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
+
+</head>
+<body>
+
+<div class="header">
+	<div class="header_container">
+
+		<section class="name"><a href="/">Jason Heppler</a></section>
+		<ul class="menu">
+			<li><a href="/about.html">Colophon</a></li>
+			<li><a href="/research.html">Research</a></li>
+			<li><a href="/teaching.html">Teaching</a></li>
+			<li><a href="/hacks.html">Digital &amp; Public History</a></li>
+			<li><a href="http://jasonheppler.org/jah-vita.pdf">Vita</a></li>
+		</ul>
+	</div>
+</div>
+
+<section class="container content">
+
+<aside><p class="when">July  9, 2011</p></aside>
+<h1>Twitter from the Command Line</h1>
+
+<p>I&#8217;m trying to incorporate Twitter into my workflow for <a href="http://www.jasonheppler.org/migrating-to-jekyll.html">Jekyll</a> by allowing any new posts to the site to subsequently update Twitter. The script I&#8217;ve hacked together so far is very basic, and doesn&#8217;t yet do the job, but I thought I&#8217;d share what I have thus far. </p>
+
+<p>Pretty easy to get this working. The script requires a couple of simple includes:</p>
+
+<ul>
+  <li>twitter</li>
+  <li>oauth</li>
+</ul>
+
+<p>Then <a href="https://dev.twitter.com">register your app</a> to authenticate your new Ruby command line Twitter script to use OAuth. Write down the consumer and access public and private keys; you&#8217;ll need them to get things working. Once you&#8217;re ready, simply plug in your keys into this script:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="c1"># !/usr/bin/env ruby</span>
+
+<span class="c1"># broadcastr.rb</span>
+<span class="c1"># Simple Twitter updater built in Ruby</span>
+<span class="c1">#</span>
+<span class="c1"># Use: $ ruby broadcastr.rb &quot;Tweeting with Ruby&quot;</span>
+<span class="c1"># </span>
+<span class="c1"># Created by Jason A. Heppler</span>
+<span class="c1">#</span>
+<span class="c1"># Last Modified: 2011-07-09</span>
+
+<span class="nb">require</span> <span class="s2">&quot;rubygems&quot;</span>
+<span class="nb">require</span> <span class="s2">&quot;twitter&quot;</span>
+<span class="nb">require</span> <span class="s2">&quot;oauth&quot;</span>
+
+<span class="no">Twitter</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+    <span class="n">config</span><span class="o">.</span><span class="n">consumer_key</span> <span class="o">=</span> <span class="s1">&#39;INSERT_CONSUMER_KEY&#39;</span>
+    <span class="n">config</span><span class="o">.</span><span class="n">consumer_secret</span> <span class="o">=</span> <span class="s1">&#39;INSERT_CONSUMER_SECRET&#39;</span>
+    <span class="n">config</span><span class="o">.</span><span class="n">oauth_token</span> <span class="o">=</span> <span class="s1">&#39;INSERT_OAUTH_TOKEN&#39;</span>
+    <span class="n">config</span><span class="o">.</span><span class="n">oauth_token_secret</span> <span class="o">=</span> <span class="s1">&#39;INSERT_OAUTH_SECRET&#39;</span>
+<span class="k">end</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="ss">Twitter</span><span class="p">:</span><span class="ss">:Client</span><span class="o">.</span><span class="n">new</span>
+
+<span class="n">twttr_update</span> <span class="o">=</span> <span class="no">ARGV</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+
+<span class="n">client</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">twttr_update</span><span class="p">)</span>
+</code></pre></div>
+
+<p>You can run this by calling up Ruby or make the script executable and edit your bash PATH in your .bashrc file (don&#8217;t forget to refresh .bashrc after you modify it).</p>
+
+<p>You can update Twitter by writing:</p>
+
+<div class="highlight"><pre><code class="text">$ ./broadcastr.rb &quot;I&#39;m tweeting from the command line, yo!&quot;
+</code></pre></div>
+
+
+
+<section class="post_meta">
+  <div class="block">
+    <a href="http://twitter.com/jaheppler">
+      <span class="ss-twitter ss-social-circle">
+        <div>Follow me on Twitter.</div>
+      </span>
+    </a>
+  </div>
+  
+  <div class="block">
+  	<a href="http://acomp.stanford.edu/faculty/atsp">
+  		<span class="ss-like ss-social-circle">
+  			<div>I am the Academic Technology Specialist in the History Department at Stanford University.</div>
+  		</span>
+  	</a>
+  </div>
+
+  <div class="block">
+  	<a href="http://github.com/hepplerj">
+  		<span class="ss-github ss-social-circle">
+  			<div>Follow me on Github.</div>
+  		</span>
+  	</a>
+  </div>
+</section>
+
+
+</section>
+
+<footer>
+	Tech, history, code, coffee • Written by <a href="http://jasonheppler.org/about.html">Jason Heppler</a> • Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> <br/> Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a>
+
+<br>
+
+Remember <a href="http://lessig.tumblr.com/post/40347463044/prosecutor-as-bully">Aaron Swartz</a>
+
+</footer>
+
+</body>
+</html>

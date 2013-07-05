@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta content="The online writing of Jason Heppler" name="description"/>
+<title>Migrating to Jekyll</title> <meta name="author" content="Jason Heppler" />
+<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/css/tweet.css" type="text/css" />
+<link href="/webfonts/ss-social.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://jasonheppler.org/js/styleTweets.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+svg {
+  font: 13px sans-serif;
+}
+
+</style>
+
+   <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-12786552-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
+
+</head>
+<body>
+
+<div class="header">
+	<div class="header_container">
+
+		<section class="name"><a href="/">Jason Heppler</a></section>
+		<ul class="menu">
+			<li><a href="/about.html">Colophon</a></li>
+			<li><a href="/research.html">Research</a></li>
+			<li><a href="/teaching.html">Teaching</a></li>
+			<li><a href="/hacks.html">Digital &amp; Public History</a></li>
+			<li><a href="http://jasonheppler.org/jah-vita.pdf">Vita</a></li>
+		</ul>
+	</div>
+</div>
+
+<section class="container content">
+
+<aside><p class="when">April 19, 2011</p></aside>
+<h1>Migrating to Jekyll</h1>
+
+<p>During some free time over the course of the semester, I began learning about Jekyll, a simple static site generator. I&#8217;ve done away with the CMS format of blogging &#8211; no more admin panel to edit and manage posts, no need to run frequent updates, no need at all for a database. I write in the editor of my choice (vim, TextMate, gEdit, and so on) in a syntax called <a href="http://daringfireball.net/projects/markdown/">markdown</a>. Once things are ready to go, I can run <code>jekyll</code> in the command line and it will create static, flat HTML files. Good bye, MySQL.</p>
+
+<h3 id="why-the-move">Why the Move?</h3>
+
+<p>I actually have no problem with Wordpress. I think the platform is still one of the best out there for hosting blogs. Plus, the community around Wordpress means any problems you come across or features you want to implement are easily within reach. But I made a decision recently that I really <a href="http://www.jasonheppler.org/refocusing-on-content.html">wanted to focus more on content</a> on my site. I&#8217;m still debating about adding a section called &#8220;Shorts&#8221; for smaller pieces or sharing things I find interesting, and keeping blog posts separate for full-form writing. But either way, I decided to try something new. And, as a hacker/geek, I love learning new tools for the sake of learning.</p>
+
+<p>Plus, I&#8217;ve been making a switch recently to move many of my notes, research papers, essays, and any other manner of textual stuff produced by me into plain text. I love plain text. It&#8217;s sort of a nerd/geek thing, but nothing else out there that we&#8217;ve created so far is more portable, sustainable, and readable than plain text files. My content no longer resides on some database out on a server, but rather things exist locally, backed up to Github, and pushed to my server. Distributed web FTW.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Plus, we can do cool and functional things with flat files. I can run word counts to learn which of my posts have the highest number of words, for example (<code>wc -w * | sort | tail -n6</code>) or grep for words or phrases. In short, I love plain text for the same reasons I love unix. To adopt <a href="http://lenz.unl.edu/wordpress/?p=415">Steve Ramsay&#8217;s words</a>, plain text and unix is &#8220;faster, easier to understand, easier to integrate, more scalable, more portable, more sustainable, more consistent, and many, many times more flexible.&#8221; I also find plain text to just <em>work</em> so well for most of the things I do. It&#8217;s what we geeks like: if a system can be proven to aid my productivity more than my current setup, I have no problem making the switch. I didn&#8217;t come to this decision lightly &#8211; as a historian I spend the majority of my time working with text (reading it or writing it), so deciding to drop Microsoft Word for <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a> and Wordpress for markdown/Jekyll was a big leap. Taking notes or jotting thoughts/ideas/reminders in <a href="http://notational.net/">Notational Velocity</a> rather than on legal pads, random sticky notes, or Google Docs has proven to be a much better system for me based on my system of organizing plain text notes (which is starting to number around 183, many of which may just be a single line. Perhaps a post on using Notational Velocity is in my future&#8230;).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="jekyll">Jekyll</h3>
+
+<p>So, I joined a <a href="https://github.com/mojombo/jekyll/wiki/sites">growing number of hackers</a> making the switch to Jekyll. Jekyll is the brainchild of Tom Preston-Werner, the cofounder of <a href="http://github.com">Github</a>. In 2008 Preston-Werner wrote about <a href="http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html">Blogging Like a Hacker</a> and explained his reasoning behind building the tool. Tired of complicated blogging engines, templates, moderating comments, and keeping up with software releases, he looked to build something new. I started by forking <a href="https://github.com/mojombo/tpw">Tom Preston-Werner&#8217;s blog repo</a>, removed content owned by him, and started poking around at other Jekyll sites to get an idea of how people used the system. I downloaded the Jekyll gem and began hacking.</p>
+
+<p>In theory, static sites have almost no security holes because there is no server-side scripting handling the transfer of data. Another reason I loved Jekyll was because it was written in Ruby, a language <a href="http://www.jasonheppler.org/the-rubyist-historian-the-series.html">I&#8217;m becoming very familiar with</a>. I don&#8217;t need a full-fledged CMS to handle my content. Jekyll is perfect for my needs.</p>
+
+<h3 id="migrating-from-wordpress">Migrating from Wordpress</h3>
+
+<p>The process of migrating, for me, was the hardest part, only because MySQL on the Mac can sometimes be wonky. I eventually decided to use Ubuntu and had my Wordpress .sql file playing nicely with the Jekyll migration script to convert all my posts into markdown. I followed <a href="wiki.github.com/mojombo/jekyll/install">these steps</a> from the Jekyll documentation (there are several <a href="wiki.github.com/mjombo/jekyll/blog-migrations">blog migration scripts</a> that come with Jekyll). For syntax highlighting, I&#8217;m using <a href="http://pygments.org">Pygments</a>. </p>
+
+<p>I don&#8217;t currently have commenting on my blog, but many users migrating to Jekyll have <a href="http://paulstamatiou.com/how-to-wordpress-to-jekyll">found Disqus</a> to be an excellent solution.</p>
+
+<h3 id="deploying-jekyll">Deploying Jekyll</h3>
+
+<p>I didn&#8217;t want to mess with having the Jekyll gem on my server and preferred to do all my work locally. After looking around at <a href="https://github.com/mojombo/jekyll/wiki/Deployment">some deployment solutions</a>, I decided to use a Rakefile that would push updates to my server via rsync. After I&#8217;ve written a post, I simply need to run <code>rake deploy</code> and my site is updated. Simple.</p>
+
+<p>I also push (most) of my site to Github as a way to backup everything. </p>
+
+<h3 id="thoughts">Thoughts</h3>
+
+<p>So far, I&#8217;m totally pleased with Jekyll and love that I&#8217;m serving up flat files now. This setup is certainly not for everyone. If you&#8217;re comfortable working with git, rsync, Ruby, Liquid, and the command line, give it a shot. It feels a bit strange to move from dynamic blogging to static blogging, but the system <em>works</em> for me. Although I&#8217;m fixing up a few issues here and there and may add or adopt things as I learn about them, Jekyll is set up to my liking. I have no updates to worry about and no security issues to fuss with. I couldn&#8217;t be happier.</p>
+
+<h3 id="resources">Resources</h3>
+
+<p>I consulted <em>many</em> sites and visited several Github repos in learning about Jekyll. Here a few of the best sites:</p>
+
+<ul>
+  <li>
+    <p><a href="http://paulstamatiou.com/how-to-wordpress-to-jekyll">Paul Stamatiou</a></p>
+  </li>
+  <li>
+    <p><a href="embrangler.com/2010/03/embrangler-moving-to-jekyll/">Paul Craciunoiu</a></p>
+  </li>
+  <li>
+    <p><a href="tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html">Tom Preston-Werner</a></p>
+  </li>
+  <li>
+    <p><a href="blog.hardikr.com">Hardik Ruparel</a></p>
+  </li>
+  <li>
+    <p><a href="chris.dzombak.name/blog/2011/02/moving-from-wordpress-to-jekyll">Chris Dzombak</a></p>
+  </li>
+  <li>
+    <p><a href="recursive-design.com/blog/2010/10/12/static-blogging-the-jekyll-way">Recursive Design</a></p>
+  </li>
+</ul>
+
+
+<section class="post_meta">
+  <div class="block">
+    <a href="http://twitter.com/jaheppler">
+      <span class="ss-twitter ss-social-circle">
+        <div>Follow me on Twitter.</div>
+      </span>
+    </a>
+  </div>
+  
+  <div class="block">
+  	<a href="http://acomp.stanford.edu/faculty/atsp">
+  		<span class="ss-like ss-social-circle">
+  			<div>I am the Academic Technology Specialist in the History Department at Stanford University.</div>
+  		</span>
+  	</a>
+  </div>
+
+  <div class="block">
+  	<a href="http://github.com/hepplerj">
+  		<span class="ss-github ss-social-circle">
+  			<div>Follow me on Github.</div>
+  		</span>
+  	</a>
+  </div>
+</section>
+
+
+</section>
+
+<footer>
+	Tech, history, code, coffee • Written by <a href="http://jasonheppler.org/about.html">Jason Heppler</a> • Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> <br/> Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a>
+
+<br>
+
+Remember <a href="http://lessig.tumblr.com/post/40347463044/prosecutor-as-bully">Aaron Swartz</a>
+
+</footer>
+
+</body>
+</html>

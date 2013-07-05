@@ -1,0 +1,12 @@
+--- 
+wordpress_id: 1282
+layout: post
+title: Focus
+date: 2011-01-23 00:14:37 -06:00
+external-url: http://twit.tv/mbw214
+tags:
+- workflow
+- productivity
+category: Link
+---
+<a href="http://twit.tv/mbw214">Merlin Mann on MacBreak Weekly</a>: "You're going to be distracted by everything until you find something you really care about . . . People who really care a lot about something don't get distracted but the people who get distracted are just not sure what to pay attention to."

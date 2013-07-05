@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta content="The online writing of Jason Heppler" name="description"/>
+<title>Constructing a Digital Humanists' C.V.</title> <meta name="author" content="Jason Heppler" />
+<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/css/tweet.css" type="text/css" />
+<link href="/webfonts/ss-social.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://jasonheppler.org/js/styleTweets.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+svg {
+  font: 13px sans-serif;
+}
+
+</style>
+
+   <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-12786552-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
+
+</head>
+<body>
+
+<div class="header">
+	<div class="header_container">
+
+		<section class="name"><a href="/">Jason Heppler</a></section>
+		<ul class="menu">
+			<li><a href="/about.html">Colophon</a></li>
+			<li><a href="/research.html">Research</a></li>
+			<li><a href="/teaching.html">Teaching</a></li>
+			<li><a href="/hacks.html">Digital &amp; Public History</a></li>
+			<li><a href="http://jasonheppler.org/jah-vita.pdf">Vita</a></li>
+		</ul>
+	</div>
+</div>
+
+<section class="container content">
+
+<aside><p class="when">August  4, 2011</p></aside>
+<h1>Constructing a Digital Humanists' C.V.</h1>
+
+<p>I&#8217;ve been thinking a lot lately about the best ways to represent or illustrate technical skill in the digital humanities. In developing my <a href="http://cv.jasonheppler.org">C.V.</a>, for example, I wanted something more illustrative than just a list of programming languages that I&#8217;ve had experience with our touched in some way. Just because I have some rudimentary knowledge of Python I picked up two years ago, that doesn&#8217;t mean I&#8217;d feel comfortable getting hired as a Python expert (of course, I would hope the interview process would weed me out). Then again, there&#8217;s truth to the claim that once you know one language it&#8217;s fairly easy to pick up additional ones. So simply <em>having</em> knowledge of <em>some</em> sort of language will serve you well anyways. Plus, I get the sense that DH administrators expect a certain level of on-the-job training and are happy if you have demonstrated experience with a language because they know you&#8217;ll likely pick up the skills as you need them. (If you&#8217;re anything like me, you&#8217;ll stay up half the night reading up on how to do such and such or lurking on Stack Overflow for a solution).</p>
+
+<p>But I still want some way to visualize my knowledge of technical skills, both as a way to make clear my own confidence in my skills and hopefully set myself apart from a stack of CV&#8217;s all vying for the same job. After doing some thinking I decided to try an experiment and visualize my technical knowledge base as a bar graph. </p>
+
+<p>There are many ways to represent knowledge of technical skill. You could, like LinkedIn, list out the years that you&#8217;ve been working with a programming language as well as specify your level of experience (beginner, intermediate, and expert). While this is useful, I feel like there&#8217;s still a disconnect with knowledge and time. What exactly is &#8220;beginner&#8221; knowledge? Instead of just saying I was a beginner or writing out the amount of time I&#8217;ve been using a language (for example, I&#8217;ve been using Javascript for a while but by no means am I any good with it) I decided to find some way to visually represent both the duration of my skills and my confidence with the skill.</p>
+
+<p>To start with, I built a simple timeline out of CSS to represent time. The far left of the bar graph would be the beginning of my technical skill. As you move right, new bar graphs are added to represent the initiation and duration of use for each skill through time:</p>
+
+<p><img src="http://cv.jasonheppler.org/image/timeline_shot.png" alt="Skills timeline" /></p>
+
+<p>I&#8217;m not sure this completely illustrates any key points. Part of the issue might be the lack of X and Y axis labels or milemarkers, but I&#8217;m also just not sure how useful the visualization is. But for the time being, I&#8217;m happy with it and think it does provide some idea of my technical timeline.</p>
+
+<p>I achieved this through a brief piece of CSS code and some simple HTML markup.</p>
+
+<p>CSS:</p>
+
+<div class="highlight"><pre><code class="css"><span class="nt">ul</span><span class="nc">.events</span> <span class="p">{</span>
+    <span class="k">list-style-type</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">20px</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">ul</span><span class="nc">.events</span> <span class="nt">li</span> <span class="p">{</span>
+    <span class="k">background</span><span class="o">:</span> <span class="m">#eee</span><span class="p">;</span>
+    <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="m">#ddd</span><span class="p">;</span>
+    <span class="k">color</span><span class="o">:</span> <span class="m">#707070</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
+    <span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span>
+    <span class="k">margin-bottom</span><span class="o">:</span> <span class="m">6px</span><span class="p">;</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">3px</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
+    <span class="k">line-height</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">ul</span><span class="nc">.events</span> <span class="nt">li</span> <span class="nt">em</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="m">#aaa</span><span class="p">;</span>
+    <span class="k">font-weight</span><span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="o">:</span> <span class="m">0.9em</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>HTML:</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;h3&gt;</span>Timeline of Technical Skills<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;timeline&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;events&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">style=</span><span class="s">&quot;width: 13.5%; left: 86%;&quot;</span><span class="nt">&gt;</span>Java <span class="nt">&lt;em&gt;</span>(2011)<span class="nt">&lt;/em&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">style=</span><span class="s">&quot;width: 29.5%; left: 70%;&quot;</span><span class="nt">&gt;</span>Ruby <span class="nt">&lt;em&gt;</span>(2010 - 2011)<span class="nt">&lt;/em&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">style=</span><span class="s">&quot;width: 39.5%; left: 60%;&quot;</span><span class="nt">&gt;</span>PHP <span class="nt">&lt;em&gt;</span>(2009 - 2011)<span class="nt">&lt;/em&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">style=</span><span class="s">&quot;width: 39.5%; left: 60%;&quot;</span><span class="nt">&gt;</span>MySQL <span class="nt">&lt;em&gt;</span>(2009 - 2011)<span class="nt">&lt;/em&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">style=</span><span class="s">&quot;width: 49.5%; left: 50%;&quot;</span><span class="nt">&gt;</span>Python <span class="nt">&lt;em&gt;</span>(2008 - 2011)<span class="nt">&lt;/em&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">style=</span><span class="s">&quot;width: 49.5%; left: 50%;&quot;</span><span class="nt">&gt;</span>Javascript <span class="nt">&lt;em&gt;</span>(2008 - 2011)<span class="nt">&lt;/em&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">style=</span><span class="s">&quot;width: 99.5%; left: 0;&quot;</span><span class="nt">&gt;</span>HTML <span class="ni">&amp;amp;</span> CSS <span class="nt">&lt;em&gt;</span>(1998 - 2011)<span class="nt">&lt;/em&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span> <span class="c">&lt;!-- end .events --&gt;</span>
+</code></pre></div>
+
+<p>The next idea was to continue with the bar graph theme to represent markup, query, and programming knowledge, along with application skills. I built this with a similar idea in mind: using CSS and envisioning a horizontal bar graph starting with 0% on the left and 100% on the right, I created a graph of my confidence and experience with various technical skills:</p>
+
+<p><img src="http://cv.jasonheppler.org/image/app_shot.png" alt="Application skills" /></p>
+
+<p><img src="http://cv.jasonheppler.org/image/markup_shot.png" alt="Markup and query skills" /></p>
+
+<p>Again, this was accomplished through some CSS and HTML markup.</p>
+
+<p>CSS:</p>
+
+<div class="highlight"><pre><code class="css"><span class="nt">div</span><span class="nc">.progress-container</span> <span class="p">{</span>
+    <span class="k">width</span><span class="o">:</span> <span class="m">680px</span><span class="p">;</span>
+    <span class="k">margin</span><span class="o">:</span> <span class="m">2px</span> <span class="m">5px</span> <span class="m">2px</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">1px</span><span class="p">;</span>
+    <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+    <span class="k">background</span><span class="o">:</span> <span class="m">#cccccc</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="nc">.progress-container</span> <span class="o">&gt;</span> <span class="nt">div</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="m">#4183c4</span><span class="p">;</span>
+    <span class="k">height</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>   
+<span class="p">}</span>
+</code></pre></div>
+
+<p>HTML:</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;h2&gt;</span>Technical Skills<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;h3&gt;</span>Application Skills<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;table</span> <span class="na">cellspacing=</span><span class="s">&quot;3&quot;</span> <span class="na">cellpadding=</span><span class="s">&quot;3&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tbody&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td</span> <span class="na">width=</span><span class="s">&quot;150&quot;</span><span class="nt">&gt;</span>Photoshop CS5<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-container&quot;</span><span class="nt">&gt;&lt;div</span> <span class="na">style=</span><span class="s">&quot;width: 40%&quot;</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Terminal<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-container&quot;</span><span class="nt">&gt;&lt;div</span> <span class="na">style=</span><span class="s">&quot;width: 80%&quot;</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;/table&gt;</span>
+</code></pre></div>
+
+<p>The latest addition to the technical skills section of my CV is to demonstrate the application of these skills: rather than only communicate time and confidence, I also wanted to articulate in what capacity I&#8217;ve used these skills. At the moment I&#8217;ve simply listed these skills and related projects out, in a way that I think does a fair job of communication (although I&#8217;m still thinking about other ways to do this).</p>
+
+<p>I feel that I&#8217;ve gotten a bit closer in trying to communicate technical knowledge, though with this much going on it almost overwhelms the CV. But in a field that&#8217;s actively seeking knowledgeable, technically-minded individuals this seems like a useful experiment in visualizing knowledge.</p>
+
+
+<section class="post_meta">
+  <div class="block">
+    <a href="http://twitter.com/jaheppler">
+      <span class="ss-twitter ss-social-circle">
+        <div>Follow me on Twitter.</div>
+      </span>
+    </a>
+  </div>
+  
+  <div class="block">
+  	<a href="http://acomp.stanford.edu/faculty/atsp">
+  		<span class="ss-like ss-social-circle">
+  			<div>I am the Academic Technology Specialist in the History Department at Stanford University.</div>
+  		</span>
+  	</a>
+  </div>
+
+  <div class="block">
+  	<a href="http://github.com/hepplerj">
+  		<span class="ss-github ss-social-circle">
+  			<div>Follow me on Github.</div>
+  		</span>
+  	</a>
+  </div>
+</section>
+
+
+</section>
+
+<footer>
+	Tech, history, code, coffee • Written by <a href="http://jasonheppler.org/about.html">Jason Heppler</a> • Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> <br/> Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a>
+
+<br>
+
+Remember <a href="http://lessig.tumblr.com/post/40347463044/prosecutor-as-bully">Aaron Swartz</a>
+
+</footer>
+
+</body>
+</html>
