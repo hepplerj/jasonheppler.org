@@ -67,11 +67,11 @@ b, strong {
 
 a:link {
     text-decoration: none;
-    color: steelblue;
+    color: #4183c4;
 }
 a:visited {
 		text-decoration: none;
-    color: steelblue;
+    color: #4183c4;
 }
 a:hover {
     text-decoration: underline;
