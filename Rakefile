@@ -13,15 +13,6 @@ task :default do
 	sh 'rake --tasks --silent'
 end
 
-desc 'deploy to jasonheppler.org via rsync'
-task :deploy do
-  # uploads ALL files b/c I often do site-wide changes and prefer overwriting all
-  puts 'DEPLOYING TO JASONHEPPLER.ORG'
-  # remove --rsh piece if not using 22
-  sh "time jekyll build && rsync -rtzh --progress _site/ jasonhep@jasonheppler.org:/home1/jasonhep/public_html/"
-  puts 'Done!'
-end
-
 desc "nuke and rebuild"
 task :nuke do
     sh 'rm -rf _site'
@@ -56,52 +47,6 @@ description:
 date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
 categories:
 - 
-tags:
-- #{args.category}
----
-EOS
-    end
-    puts "Now opening #{path} in Byword..."
-    system "open -a Byword #{path}"
-end
-
-desc "give title as argument and create new post"
-# usage rake link["Post Title Goes Here", link]
-# category is optional
-task :link, [:title, :hreflink] do |t, args|
-  filename = "#{Time.now.strftime('%Y-%m-%d')}-#{args.title.gsub(/\s/, '-').downcase}.md"
-  path = File.join("_posts", filename)
-  if File.exist? path; raise RuntimeError.new("Won't clobber #{path}"); end
-  File.open(path, 'w') do |file|
-    file.write <<-EOS
----
-layout: post
-title: #{args.title}
-external-url: #{args.hreflink}
-date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
-tags:
-- link
----
-EOS
-    end
-    puts "Now opening #{path} in Byword..."
-    system "open -a Byword #{path}"
-end
-
-desc "give title as argument for draft post"
-# usage rake draft["Post Title Goes Here",category]
-# category is optional
-task :draft, [:title, :category] do |t, args|
-  filename = "#{Time.now.strftime('%Y-%m-d')}-#{args.title.gsub(/\s/, '-').downcase}.md"
-  path = File.join("_drafts", filename)
-  if File.exist? path; raise RuntimeError.new("Won't clobber #{path}"); end
-  File.open(path, 'w') do |file|
-    file.write <<-EOS
----
-layout: post
-title: #{args.title}
-description: 
-date: #{Time.now.strftime('%Y-%m-d %k:%M:%S')}
 tags:
 - #{args.category}
 ---
