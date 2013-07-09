@@ -66,15 +66,16 @@ b, strong {
 }
 
 a:link {
-    text-decoration: none;
-    color: #09d;
+    text-decoration: underline;
+    color: #6D8C89;
 }
 a:visited {
-		text-decoration: none;
-    color: #09d;
+		text-decoration: underline;
+    color: #6D8C89;
 }
 a:hover {
     text-decoration: underline;
+    color: #734854;
 }
 
 img {
@@ -227,7 +228,7 @@ svg {
 }
 
 .menu a:hover {
-	color: steelblue;
+	color: #6D8C89;
 }
 
 .header_container {
