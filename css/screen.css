@@ -67,15 +67,15 @@ b, strong {
 
 a:link {
     text-decoration: underline;
-    color: #b5190e;
+    color: #369;
 }
 a:visited {
 		text-decoration: underline;
-    color: #b5190e;
+    color: #369;
 }
 a:hover {
     text-decoration: underline;
-    color: #734854;
+    color: #390;
 }
 
 img {
@@ -228,7 +228,7 @@ svg {
 }
 
 .menu a:hover {
-	color: #6D8C89;
+	color: #390;
 }
 
 .header_container {
