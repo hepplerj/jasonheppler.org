@@ -10,14 +10,19 @@
 
 body {
 	margin: 1em auto 4em auto;
-	width: 800px;
+	width: 650px;
 	padding: 0;
-  font-family: "PT Serif", serif;
+  font-family: 'Noticia Text', serif;
 	color: #333;
+	font-weight: 300;
+	color: #494949;
+	background: #fefefe;
 }
 
 p {
-	width: 720px;
+	width: 620px;
+	font-size: 17px;
+	line-height: 27px;
 }
 
 ::selection {
@@ -27,7 +32,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6, aside {
-	font-family: 'PT Sans', sans-serif;
+/*	font-family: 'PT Sans', serif;*/
 }
 
 h1 {
@@ -67,15 +72,15 @@ b, strong {
 
 a:link {
     text-decoration: underline;
-    color: #369;
+    color: #004080;
 }
 a:visited {
 		text-decoration: underline;
-    color: #369;
+    color: #004080;
 }
 a:hover {
     text-decoration: underline;
-    color: #390;
+    color: #369;
 }
 
 img {
@@ -157,7 +162,7 @@ aside {
 	font-size: small;
 	right: 0;
 	position: absolute;
-	width: 180px;
+	width: 250px;
 	color: #000;
 }
 
@@ -173,7 +178,7 @@ footer {
 	width: 100%;
 	text-align: center;
   line-height: 1.4em;
-  font-family: 'PT Sans', sans-serif;
+/*  font-family: 'PT Sans', sans-serif;*/
 }
 
 /* data viz */
@@ -228,7 +233,7 @@ svg {
 }
 
 .menu a:hover {
-	color: #390;
+	color: #369;
 }
 
 .header_container {
@@ -238,7 +243,7 @@ svg {
 
 .header {
 	margin: 30px 0 35px 0;
-	font-family: 'PT Sans', sans-serif;
+/*	font-family: 'PT Sans', sans-serif;*/
 	text-rendering: optimizeLegibility;
 }
 
@@ -295,13 +300,14 @@ svg {
 	text-transform: uppercase;
 	font-size: 12px;
 	color: #999;
-	font-family: 'PT Sans', sans-serif;
+/*	font-family: 'PT Sans', sans-serif;*/
 }
 
 .hero {
 	background-color: #2b2b2b;
 	background-size: cover;
 	height: 200px;
+	width: 620px;
 -moz-box-shadow: inset 0 0 30px rgba(0,0,0,.79);
 -webkit-box-shadow: inset 0 0 30px rgba(0,0,0,.79);
 box-shadow: inset 0 0 30px rgba(0,0,0,.79);
@@ -310,7 +316,6 @@ box-shadow: inset 0 0 30px rgba(0,0,0,.79);
 .post_meta {
 	margin: 75px -30px 25px -30px;
 	padding: 30px;
-	border-top: 1px solid #BDC3C7;
 	text-align: center;
 }
 
@@ -400,6 +405,11 @@ li.category a {
 	color: #4A4A4A;
 	padding-top: 12px;
 	margin-left: -22px;
+	border-top: 1px solid #BDC3C7;
+}
+
+.footnotes p {
+	font-size: 12px;
 }
 
 /*.footnotes a {
