@@ -9,19 +9,19 @@
 /* elements */
 
 body {
-	margin: 1em auto 4em auto;
-	width: 650px;
-	padding: 0;
-  font-family: 'PT Serif', serif;
+	/*margin: 1em auto 4em auto;*/
+	/*width: 650px;*/
+	/*padding: 0;*/
+  font-family: 'Roboto', sans-serif;
 	font-weight: 300;
-	color: #494949;
+	color: #4a4235;
 	background: #fefefe;
 }
 
 p {
 	width: 620px;
-	font-size: 17px;
-	line-height: 27px;
+	font-size: 18px;
+	line-height: 29px;
 }
 
 ::selection {
@@ -31,7 +31,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6, aside {
-	font-family: 'PT Sans', sans-serif;
+	  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -71,15 +71,15 @@ b, strong {
 
 a:link {
     text-decoration: underline;
-    color: #004080;
+    color: #4c6296;
 }
 a:visited {
 		text-decoration: underline;
-    color: #004080;
+    color: #4c6296;
 }
 a:hover {
     text-decoration: underline;
-    color: #369;
+    color: #6a4c96;
 }
 
 img {
@@ -154,8 +154,15 @@ pre code {
 /* html5 */
 
 .container {
-	width: 780px;
-	margin: 0 auto;
+	width: 35.4em;
+	margin: 15px auto;
+}
+
+.progress-bar {
+    position:fixed;
+    background-color:red;
+    width:100%;
+    height:1px;
 }
 
 aside {
@@ -254,13 +261,13 @@ svg {
 }
 
 .header_container {
-	width: 750px;
+	width: 34.5em;
 	margin: 0 auto;
 }
 
 .header {
 	margin: 30px 0 35px 0;
-	font-family: 'PT Sans', sans-serif;
+	  font-family: 'Roboto', sans-serif;
 	text-rendering: optimizeLegibility;
 }
 
@@ -317,7 +324,6 @@ svg {
 	text-transform: uppercase;
 	font-size: 12px;
 	color: #999;
-	font-family: 'PT Sans', sans-serif;
 }
 
 .hero {
@@ -330,10 +336,18 @@ svg {
 box-shadow: inset 0 0 30px rgba(0,0,0,.79);
 }
 
-.post_meta {
+/*.post_meta {
 	margin: 75px -30px 25px -30px;
 	padding: 30px;
 	text-align: center;
+}*/
+
+.post_meta {
+	width: 100%;
+	border-top: 1px solid rgba(130,152,166,0.2);
+	border-bottom: 1px solid rgba(130,152,166,0.2);
+	margin: 5em auto 0;
+	background: rgba(100,100,100,0.04);
 }
 
 .post_meta .block {
