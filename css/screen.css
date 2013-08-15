@@ -344,10 +344,7 @@ box-shadow: inset 0 0 30px rgba(0,0,0,.79);
 
 .post_meta {
 	width: 100%;
-	border-top: 1px solid rgba(130,152,166,0.2);
-	border-bottom: 1px solid rgba(130,152,166,0.2);
 	margin: 5em auto 0;
-	background: rgba(100,100,100,0.04);
 }
 
 .post_meta .block {
