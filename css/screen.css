@@ -12,14 +12,13 @@ body {
 	/*margin: 1em auto 4em auto;*/
 	/*width: 650px;*/
 	/*padding: 0;*/
-  font-family: 'Roboto', sans-serif;
-	font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
+	/*font-weight: 300;*/
 	color: #4a4235;
 	background: #fefefe;
 }
 
 p {
-	width: 620px;
 	font-size: 18px;
 	line-height: 29px;
 }
@@ -31,12 +30,12 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6, aside {
-	  font-family: 'Roboto', sans-serif;
+	  font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1 {
 	font-size: 44px;
-	font-weight: 300;
+	font-weight: 600;
 	letter-spacing: -2px;
 	margin: .3em 0 .1em 0;
 }
@@ -69,17 +68,12 @@ b, strong {
 	color: #555;
 }
 
-a:link {
-    text-decoration: underline;
-    color: #4c6296;
-}
-a:visited {
-		text-decoration: underline;
-    color: #4c6296;
+a:link, a:visited {
+    text-decoration: none;
+    color: #137AB3;
 }
 a:hover {
     text-decoration: underline;
-    color: #6a4c96;
 }
 
 img {
@@ -154,7 +148,7 @@ pre code {
 /* html5 */
 
 .container {
-	width: 35.4em;
+	width: 40em;
 	margin: 15px auto;
 }
 
@@ -243,6 +237,7 @@ svg {
 	margin: .3em 0 .1em 0;
 }
 
+
 #entry-link p {
 	font-size: 14px;
 }
@@ -261,7 +256,7 @@ svg {
 }
 
 .header_container {
-	width: 34.5em;
+	width: 40em;
 	margin: 0 auto;
 }
 
