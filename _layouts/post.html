@@ -1,11 +1,16 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<time datetime="{{ post.date }}">{{ post.date | date: "%B %d, %Y" }}</time>
-
+<div id="inside">
+  {% if page.external-url %}
+  <h2><a href="{{ page.external-url }}">{{ page.title }}</a> →</h2>
+  {% else %}
+  <h1>{{ page.title }}</h1>
+  {% endif %}
 
 {{ content }}
+
+<time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
 
 <section class="post_meta">
   <div class="block">
@@ -32,3 +37,4 @@ layout: default
   	</a>
   </div>
 </section>
+</div>

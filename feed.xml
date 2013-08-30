@@ -14,7 +14,7 @@ layout: nil
 	</author>
 	<rights>Copyright (c) 2008-2013, Jason Heppler; all rights reserved.</rights>
 
-	{% for post in site.posts limit:10 %}
+	{% for post in site.posts limit:1 %}
 	<entry>
 		<title>{{ post.title }}</title>
 		<link href="http://jasonheppler.org{{ post.url }}"/>

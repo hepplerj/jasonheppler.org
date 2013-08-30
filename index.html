@@ -8,9 +8,10 @@ priority: 1.0
 ---
 
 <div class="intro">
-<p>Hi, I'm Jason. I am the <a href="http://acomp.stanford.edu/faculty/atsp">Academic Technology Specialist</a> in the <a href="http://history.stanford.edu">Department of History</a> at <a href="http://stanford.edu">Stanford University</a> and a historian of the American West. I write here about history, technology, and coffee. You can <a href ="about.html">learn more</a> about me, browse the <a href="archives.html">archives</a>, subscribe to <a href="http://www.jasonheppler.org/feed.xml">my feed</a>, or follow me on <a href="http://twitter.com/jaheppler">Twitter</a>.</p>
+<p>Hi, I'm Jason. I am the <a href="http://acomp.stanford.edu/faculty/atsp">Academic Technology Specialist</a> in the <a href="http://history.stanford.edu">Department of History</a> at <a href="http://stanford.edu">Stanford University</a> and a historian specializing in the 20th century North American West, environmental, and digital and public history. I write here about history, technology, and coffee. You can <a href ="about.html">learn more</a> about me, browse the <a href="archives.html">archives</a>, subscribe to <a href="http://www.jasonheppler.org/feed.xml">my feed</a>, or follow me on <a href="http://twitter.com/jaheppler">Twitter</a>.</p>
 </div>
 
+<div id="inside">
 <h2>Writings</h2>
 <ul class="listing">
 {% for post in site.posts limit:6 %}
@@ -25,6 +26,10 @@ priority: 1.0
 {% endfor %}
 <li><a href="blog.html">All Posts →</a></li>
 </ul>
+</div>
+
+<div id="projects" class="blue">
+<div id="inside">
 
 <h2>Publications</h2>
 
@@ -37,7 +42,10 @@ priority: 1.0
   <p><a href="http://digitalcommons.unl.edu/historydiss/21/">Framing Red Power: The American Indian Movement, the Trail of Broken Treaties, and the Politics of Media</a> &#8212; My Masters thesis available for digital download.</p>
 
 <a href="jah-vita.pdf">Find more in my curriculum vitae →</a>
+</div>
+</div>
 
+<div id="inside">
 <h2>Research</h2>
 
   <p>
@@ -59,9 +67,12 @@ priority: 1.0
   </p>
 
   <p><a href="research.html">See more on my research →</a></p>
+</div>
 
-
-<h2>Projects</h2>
+<div id="projects" class="gray">
+  <div id="inside">
+      <span class="topline"></span>
+    <h2>Projects</h2>
 
   <p>
       Geography of the Nineteenth Century Post (Coming Soon)
@@ -74,8 +85,11 @@ priority: 1.0
       <img class="preview" src="images/foodstuffs_p.png">
     </a><br>
   </p>
+</div>
+</div>
 
-<h2>Resources</h2>
+<div id="inside">
+    <h2>Resources</h2>
 
   <p><a href="http://whatisdigitalhumanities.com">What is Digital Humanities?</a> &#8212; Perpetual answers to the perpetual question.</p>
 
@@ -86,3 +100,5 @@ priority: 1.0
   <p><a href="https://github.com/hepplerj/FREQr">FREQr</a> &#8212; A word frequency generator for the command line written in Ruby.</p>
 
   <p><a href="http://github.com/hepplerj">See more on GitHub →</a></p>
+
+</div>

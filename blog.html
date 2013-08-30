@@ -3,7 +3,7 @@ layout: default
 title: Jason Heppler
 priority: 1.0
 ---
-
+<div id="inside">
  {% for post in site.posts offset: 0 limit: 8 %}
   {% if post.external-url %}
   
@@ -28,3 +28,4 @@ priority: 1.0
   {% endif %}
 
   {% endfor %}
+  </div>
