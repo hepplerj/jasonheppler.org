@@ -302,6 +302,13 @@ svg {
 	margin: .3em 0 .1em 0;
 }
 
+#entry-link h3 a.arrow {
+	color: black;
+}
+
+#entry-link h3 a.arrow:hover {
+	text-decoration: none;
+}
 
 #entry-link p {
 	font-size: 14px;
