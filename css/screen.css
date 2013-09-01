@@ -302,6 +302,10 @@ svg {
 	margin: .3em 0 .1em 0;
 }
 
+#entry-link {
+	padding-bottom: 25px;
+}
+
 #entry-link h3 a.arrow {
 	color: black;
 }
