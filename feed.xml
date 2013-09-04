@@ -13,14 +13,23 @@ layout: nil
 		<name>Jason Heppler</name>
 	</author>
 	<rights>Copyright (c) 2008-2013, Jason Heppler; all rights reserved.</rights>
-
-	{% for post in site.posts limit:1 %}
-	<entry>
-		<title>{{ post.title }}</title>
-		<link href="http://jasonheppler.org{{ post.url }}"/>
-		<updated>{{ post.date | date_to_xmlschema }}</updated>
-		<id>http://jasonheppler.org{{ post.id }}</id>
-		<content type="html">{{ post.content | xml_escape }}</content>
-	</entry>
-	{% endfor %}
+   {% for post in site.posts limit: 1 %}
+    {% if post.external-url %}
+ 	<entry>
+ 		<title>{{ post.title }} →</title>
+ 		<link href="http://jasonheppler.org{{ post.url }}"/>
+ 		<updated>{{ post.date | date_to_xmlschema }}</updated>
+ 		<id>http://jasonheppler.org{{ post.id }}</id>
+ 		<content type="html">{{ post.content | xml_escape }}</content>
+ 	</entry>
+   {% else %}
+ 	<entry>
+ 		<title>{{ post.title }}</title>
+ 		<link href="http://jasonheppler.org{{ post.url }}"/>
+ 		<updated>{{ post.date | date_to_xmlschema }}</updated>
+ 		<id>http://jasonheppler.org{{ post.id }}</id>
+ 		<content type="html">{{ post.content | xml_escape }}</content>
+ 	</entry>
+   {% endif %}
+   {% endfor %}
 </feed>
