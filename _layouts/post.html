@@ -2,15 +2,17 @@
 layout: default
 ---
 <div id="inside">
+  <div class="post">
+
   {% if page.external-url %}
-  <h2><a href="{{ page.external-url }}">{{ page.title }}</a> →</h2>
+    <h2><a href="{{ page.external-url }}">{{ page.title }}</a> →</h2>
+    <p><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
   {% else %}
-  <h1>{{ page.title }}</h1>
+    <h3 datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</h3>
+    <h1>{{ page.title }}</h1>
   {% endif %}
 
-{{ content }}
-
-<time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
+  {{ content }}
 
 <section class="post_meta">
   <div class="block">
@@ -37,4 +39,5 @@ layout: default
   	</a>
   </div>
 </section>
+</div>
 </div>
