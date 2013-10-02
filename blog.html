@@ -8,7 +8,7 @@ priority: 1.0
   {% if post.external-url %}
   
     <div id="entry-link">
-       <h3><a class="arrow" href="{{ post.url }}">»</a> <a href="{{ post.external-url }}">{{ post.title }}</a></h3>
+       <h3><a href="{{ post.external-url }}">{{ post.title }}</a> <a class="arrow" href="{{ post.url }}">→</a></h3>
        <p><time datetime="{{ post.date }}">{{ post.date | date: "%b %d, %Y" }}</time></p>
         {{ post.content }}
     </div>

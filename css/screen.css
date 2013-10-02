@@ -9,7 +9,7 @@
 /* elements */
 
 body {
-    font-family: 'Source Sans Pro', serif;
+    font-family: 'Source Sans Pro', sans-serif;
     color: #6a6a6a;
     background: white;
     font-weight: normal;
@@ -308,6 +308,7 @@ svg {
 
 #entry-link h3 a.arrow {
     color: black;
+    text-decoration: none;
 }
 
 #entry-link h3 a.arrow:hover {
