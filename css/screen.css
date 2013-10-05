@@ -206,7 +206,7 @@ footer {
 }
 
 footer .inside {
-    max-width: 35rem;
+    max-width: 720px;
     margin: 0 auto 0;
     padding: 0px 0 0;
 }
@@ -426,7 +426,7 @@ box-shadow: inset 0 0 30px rgba(0,0,0,.79);
 }
 
 #inside {
-    max-width: 34rem;
+    max-width: 720px;
     width: 100%;
     margin: 0 auto;
     position: relative;
