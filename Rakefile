@@ -52,6 +52,6 @@ tags:
 ---
 EOS
     end
-    puts "Now opening #{path} in Byword..."
-    system "open -a Byword #{path}"
+    puts "Now opening #{path} in vim..."
+    system "vim #{path}"
 end
