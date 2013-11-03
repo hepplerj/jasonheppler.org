@@ -185,7 +185,7 @@ aside {
     font-size: small;
     right: 0;
     position: absolute;
-    width: 250px;
+    width: 180px;
     color: #000;
 }
 
@@ -326,6 +326,10 @@ svg {
 .header_container {
     width: 50em;
     margin: 0 auto;
+}
+
+.header_container h1 {
+    font-size: 32px;
 }
 
 .header {
