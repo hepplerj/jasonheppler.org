@@ -9,23 +9,30 @@
 /* elements */
 
 body {
-    font-family: 'PT Sans', Helvetica,Arial, serif;
-    color: #777777;
+    /*font-family: 'PT Sans', Helvetica,Arial, serif;*/
+/*    color: #777777;
     background: white;
     font-weight: normal;
-    font-size: 100%
-    width: auto;
-    height: auto;
+    font-size: 100%*/
+/*    height: auto;
     margin: 0;
-    padding: 0;
+    padding: 0;*/
+    color: #1d1e23;
+    font-family: "PT Sans", sans-serif;
+    font-weight: normal
 }
 
 p {
-    line-height: 1.7em;
+/*    line-height: 1.7em;
     font-size: 18px;
     margin: 0 0 20px 0;
     font-weight: normal;
-    font-style: normal;
+    font-style: normal;*/
+
+    font-family: "PT Serif", sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 30px
 }
 
 ::selection {
@@ -44,7 +51,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6, aside {
-      font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "PT Sans", sans-serif;
 }
 
 
@@ -185,7 +192,7 @@ aside {
     font-size: small;
     right: 0;
     position: absolute;
-    width: 180px;
+    width: 120px;
     color: #000;
 }
 
@@ -205,6 +212,7 @@ footer {
 
 footer p {
     font-size: 70%;
+    font-family: "PT Sans",sans-serif;
 }
 
 footer .inside {
@@ -324,22 +332,19 @@ svg {
 /* classes */
 
 .header_container {
-    width: 50em;
+    width: 750px;
     margin: 0 auto;
-}
-
-.header_container h1 {
-    font-size: 32px;
 }
 
 .header {
     margin: 30px 0 35px 0;
-    /*font-family: 'Adamina', serif;*/
+    font-family: 'PT Sans', sans-serif;
     text-rendering: optimizeLegibility;
 }
 
 .header a {
     color: #444;
+    /*text-transform: uppercase;*/
     text-decoration: none;
     border: none;
     font-size: 30px;
@@ -350,12 +355,55 @@ svg {
     color: steelblue;
 }
 
+.menu {
+    padding: 0;
+    margin: 5px 0;
+    font-weight: normal;
+}
+
+.menu li {
+    display: inline;
+    padding-right: 15px;
+}
+
+.menu li a {
+    font-size: 14px;
+}
+
+
+/*.header_container {
+    width: 50em;
+    margin: 0 auto;
+}
+
+.header_container h1 {
+    font-size: 32px;
+}
+
+.header {
+    margin: 30px 0 35px 0;
+    font-family: 'Adamina', serif;
+    text-rendering: optimizeLegibility;
+}
+
+.header a {
+    color: #444;
+    text-decoration: none;
+    border: none;
+    font-size: 30px;
+    font-weight: normal;
+}*/
+
+.name span {
+    color: steelblue;
+}
+
 .attribution {
     font-size: small;
     margin-bottom: 2em;
 }
 
-.menu {
+/*.menu {
     font-weight: normal;
 }
 
@@ -385,7 +433,7 @@ svg {
     padding-right: 10px;
     border-right: 1px solid steelblue;
 }
-
+*/
 .listing {
     margin: 0 0 25px 0;
     padding: 0;
@@ -516,22 +564,22 @@ margin: 0 auto;
 .post h3 {
     color: #323231;
     margin: 55px auto 30px auto;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     letter-spacing: 1px;
     background: url('/images/bg_sep.gif') bottom center no-repeat;
     padding-bottom: 15px;
     font-size: 15px;
-    font-family: 'Raleway',Helvetica,Arial,sans-serif;
+    font-family: "PT Sans",sans-serif;
 }
 
-.post h1 {
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 1em;
-    font-size: 2.2em;
-    font-weight: 200;
-    letter-spacing: 1px;
+.post h2 a {
+    color: black;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: 300;
+    letter-spacing: -2px;
+    margin: .3em 0 .1em 0;
 }
 
 .post_meta {
@@ -579,7 +627,7 @@ margin: 0 auto;
 }
 
 .intro p {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .preview {
