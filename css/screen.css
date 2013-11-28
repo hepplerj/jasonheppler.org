@@ -9,28 +9,14 @@
 /* elements */
 
 body {
-    /*font-family: 'PT Sans', Helvetica,Arial, serif;*/
-/*    color: #777777;
-    background: white;
-    font-weight: normal;
-    font-size: 100%*/
-/*    height: auto;
-    margin: 0;
-    padding: 0;*/
     color: #1d1e23;
     font-family: "PT Sans", sans-serif;
     font-weight: normal
 }
 
 p {
-/*    line-height: 1.7em;
-    font-size: 18px;
-    margin: 0 0 20px 0;
-    font-weight: normal;
-    font-style: normal;*/
-
-    font-family: "PT Serif", sans-serif;
-    font-size: 20px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 100%;
     line-height: 28px;
     margin-bottom: 30px
 }
@@ -50,21 +36,38 @@ p {
     width: 30%
 }
 
-h1, h2, h3, h4, h5, h6, aside {
-      font-family: "PT Sans", sans-serif;
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Yanone Kaffeesatz", sans-serif;
 }
 
 
 h1 {
-    font-size: 1.5em;
-    font-weight: 200;
+    font-size: 56px;
+    font-weight: normal;
     letter-spacing: -2px;
     margin: .3em 0 .1em 0;
 }
 
 h2 {
-  font-size: 1.3em;
+    font-size: 34px;
     margin-top: 2em;
+    font-weight: 200;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 18px;
 }
 
 h1, h2, h3, h4, aside {
@@ -92,11 +95,20 @@ b, strong {
 }
 
 a:link, a:visited {
-    text-decoration: underline;
-    color: steelblue;
+    text-decoration: none;
+    color: #1f8dbf;
+	 transition: all 200ms ease-in-out 0s;
+	 -moz-transition: all 200ms ease-in-out 0s;
+	 -webkit-transition: all 200ms ease-in-out 0s;
 }
 a:hover {
     text-decoration: none;
+	 color: #23A3DE;
+	 border-bottom: 1px dotted;
+	 background-color: rgba(32, 152, 206, 0.2);
+	 transition: all 200ms ease-in-out 0s;
+	 -moz-transition: all 200ms ease-in-out 0s;
+	 -webkit-transition: all 200ms ease-in-out 0s;
 }
 
 img {
@@ -111,14 +123,12 @@ img {
 a img { border-width: 0; }
 
 blockquote {
-    /*font-size: .955rem;*/
-    /*margin-bottom: 1.412rem;*/
-    margin: 0 0 21px;
-    padding: 0 0 0 15px;
-    font-style: italic;
-    /*padding: 0 1.75em 0 1.25em;*/
-    /*margin-left: 0;*/
-    border-left: solid 2px #ccc;
+    margin: 26px 40px 26px 20px;
+	 padding-left: 15px;
+	 line-height: 25px;
+/*    padding: 0 0 0 15px;*/
+/*    font-style: italic;*/
+    border-left: solid 2px #f3d084;
 }
 
 hr {
@@ -305,10 +315,6 @@ svg {
 
 #entry-post h2 a {
     color: black;
-    text-decoration: none;
-    font-size: 36px;
-    font-weight: 300;
-    letter-spacing: -2px;
     margin: .3em 0 .1em 0;
 }
 
@@ -344,15 +350,16 @@ svg {
 
 .header a {
     color: #444;
-    /*text-transform: uppercase;*/
     text-decoration: none;
     border: none;
-    font-size: 30px;
     font-weight: normal;
+    background: none;
+    border: none;
 }
 
-.name span {
-    color: steelblue;
+.header a:hover {
+        background: none;
+    border: none;
 }
 
 .menu {
@@ -368,34 +375,6 @@ svg {
 
 .menu li a {
     font-size: 14px;
-}
-
-
-/*.header_container {
-    width: 50em;
-    margin: 0 auto;
-}
-
-.header_container h1 {
-    font-size: 32px;
-}
-
-.header {
-    margin: 30px 0 35px 0;
-    font-family: 'Adamina', serif;
-    text-rendering: optimizeLegibility;
-}
-
-.header a {
-    color: #444;
-    text-decoration: none;
-    border: none;
-    font-size: 30px;
-    font-weight: normal;
-}*/
-
-.name span {
-    color: steelblue;
 }
 
 .attribution {
@@ -539,7 +518,7 @@ margin: 0 auto;
 }
 
 .blue a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: white;
 }
 
@@ -561,7 +540,7 @@ margin: 0 auto;
     text-align: center;
 }*/
 
-.post h3 {
+/*.post h3 {
     color: #323231;
     margin: 55px auto 30px auto;
     text-align: left;
@@ -571,14 +550,10 @@ margin: 0 auto;
     padding-bottom: 15px;
     font-size: 15px;
     font-family: "PT Sans",sans-serif;
-}
+}*/
 
 .post h2 a {
     color: black;
-    text-decoration: none;
-    font-size: 36px;
-    font-weight: 300;
-    letter-spacing: -2px;
     margin: .3em 0 .1em 0;
 }
 
