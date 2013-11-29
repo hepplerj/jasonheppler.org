@@ -101,14 +101,15 @@ a:link, a:visited {
 	 -moz-transition: all 200ms ease-in-out 0s;
 	 -webkit-transition: all 200ms ease-in-out 0s;
 }
+
 a:hover {
-    text-decoration: none;
-	 color: #23A3DE;
-	 border-bottom: 1px dotted;
-	 background-color: rgba(32, 152, 206, 0.2);
-	 transition: all 200ms ease-in-out 0s;
-	 -moz-transition: all 200ms ease-in-out 0s;
-	 -webkit-transition: all 200ms ease-in-out 0s;
+    text-decoration: underline;
+	color: #23A3DE;
+/*	border-bottom: 1px dotted;
+	background-color: rgba(32, 152, 206, 0.2);
+	transition: all 200ms ease-in-out 0s;
+	-moz-transition: all 200ms ease-in-out 0s;
+	-webkit-transition: all 200ms ease-in-out 0s;*/
 }
 
 img {
@@ -533,6 +534,36 @@ margin: 0 auto;
 .blue h2 {
     color: white;
 }
+
+.green {
+    background: #85B394;
+}
+
+.green p {
+    color: black;
+}
+
+.green a {
+    color: white;
+}
+
+.green a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.green .topline {
+    display: block;
+    border-top: 1px solid rgba(255,255,255,.2);
+    width: 100px;
+    margin: 0 auto 15px;
+    margin-top: 15px;
+}
+
+.green h2 {
+    color: white;
+}
+
 
 /*.post_meta {
     margin: 75px -30px 25px -30px;
