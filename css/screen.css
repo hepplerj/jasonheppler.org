@@ -9,15 +9,15 @@
 /* elements */
 
 body {
-    color: #1d1e23;
+    color: #222;
     font-family: "PT Sans", sans-serif;
     font-weight: normal
 }
 
 p {
     font-family: "PT Sans", sans-serif;
-    font-size: 100%;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 30px;
     margin-bottom: 30px
 }
 
@@ -96,20 +96,16 @@ b, strong {
 
 a:link, a:visited {
     text-decoration: none;
-    color: #1f8dbf;
-	 transition: all 200ms ease-in-out 0s;
-	 -moz-transition: all 200ms ease-in-out 0s;
-	 -webkit-transition: all 200ms ease-in-out 0s;
+    color: #555;
+    border-bottom: 1px dotted #a2a2a2;
+    transition: all 200ms ease-in-out 0s;
+   -moz-transition: all 200ms ease-in-out 0s;
+   -webkit-transition: all 200ms ease-in-out 0s;
 }
 
 a:hover {
-    text-decoration: underline;
-	color: #23A3DE;
-/*	border-bottom: 1px dotted;
-	background-color: rgba(32, 152, 206, 0.2);
-	transition: all 200ms ease-in-out 0s;
-	-moz-transition: all 200ms ease-in-out 0s;
-	-webkit-transition: all 200ms ease-in-out 0s;*/
+    text-decoration: none;
+	color: #000;
 }
 
 img {
@@ -127,8 +123,7 @@ blockquote {
     margin: 26px 40px 26px 20px;
 	 padding-left: 15px;
 	 line-height: 25px;
-/*    padding: 0 0 0 15px;*/
-/*    font-style: italic;*/
+    font-style: italic;
     border-left: solid 2px #f3d084;
 }
 
@@ -317,6 +312,7 @@ svg {
 #entry-post h2 a {
     color: black;
     margin: .3em 0 .1em 0;
+    border: none
 }
 
 #entry-link {
@@ -586,6 +582,7 @@ margin: 0 auto;
 .post h2 a {
     color: black;
     margin: .3em 0 .1em 0;
+    border: none;
 }
 
 .post_meta {
