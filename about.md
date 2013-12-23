@@ -59,7 +59,7 @@ while(x=eval(x));
 
 # Publications
 
-"[A Call to Redeﬁne Historical Scholarship in the Digital Turn](http://journalofdigitalhumanities.org/1-4/a-call-to-redefine-historical-scholarship-in-the-digital-turn)" &#8212; With Alex Galarza and Douglas Seefeldt, _Journal of Digital Humanities_, December 2012.</p>
+"[A Call to Redeﬁne Historical Scholarship in the Digital Turn](http://journalofdigitalhumanities.org/1-4/a-call-to-redefine-historical-scholarship-in-the-digital-turn)" &#8212; With Alex Galarza and Douglas Seefeldt, _Journal of Digital Humanities_, December 2012.
 
 "[The American Indian Movement and South Dakota Politics](http://www.sdshspress.com/index.php?&id=236&action=912)" &#8212; _The Plains Political Tradition_, edited by Jon Lauck, John E. Miller, and Donald Simmons. Pierre, SD: South Dakota State Historical Society Press, 2011, pp. 267–287.
 
