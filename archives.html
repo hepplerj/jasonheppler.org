@@ -1,10 +1,7 @@
 ---
-layout: default
+layout: page
 title: Archives
 ---
-<div id="inside">
-<h2>{{page.title}}</h2>
-
 <ul class="listing">
 {% for post in site.posts %}
   {% if post.external-url %}
@@ -20,4 +17,3 @@ title: Archives
     {% endif %}
 {% endfor %}
 </ul>
-</div>

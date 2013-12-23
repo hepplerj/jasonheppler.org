@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Digital History Interview for BlogWest
+title: Digital History Interview with BlogWest
 description:
 date: 2013-12-17 19:45:10
 categories:
@@ -15,7 +15,7 @@ tags:
 
 **BlogWest: How did you come to western history, and what is the connection between it and your work in digital history?**
 
-Jason Heppler: I'm not sure I can pinpoint the exact moment that the West became what I wanted to study, but at the risk of sounding cliché, I do have a deep love for the region. I'm a fourth generation westerner; my family originally homesteaded in northern South Dakota and I grew up in the [Rushmore State](http://en.wikipedia.org/wiki/List_of_U.S._state_nicknames). The region has long fascinated me: its landscapes, places, environment, and people. Coupled with a longstanding interest in history generally, I can probably point to my undergraduate education as solidifying me on the path of western history. I didn't start there—my original interest as a history major was in U.S. military and diplomatic history and the Cold War. But I had wonderful mentors who were western historians or historians of South Dakota (in particular, Charles Vollan, Jon Lauck, and John Miller) who prodded me to think deeply about the region's past, suggested topics for class research papers, and encouraged me to have ideas for research topics as I started thinking about graduate school.
+Jason Heppler: I'm not sure I can pinpoint the exact moment that the West became what I wanted to study, but at the risk of sounding cliché, I do have a deep love for the region. I'm a fourth generation westerner; my family originally homesteaded in northern South Dakota and I grew up in the [Rushmore State](http://en.wikipedia.org/wiki/List_of_U.S._state_nicknames). The region has long fascinated me: its landscapes, places, environment, and people. Coupled with a longstanding interest in history generally, I can probably point to my undergraduate education as solidifying me on the path of western history. I didn't start there -- my original interest as a history major was in U.S. military and diplomatic history and the Cold War. But I had wonderful mentors who were western historians or historians of South Dakota (in particular, Charles Vollan, Jon Lauck, and John Miller) who prodded me to think deeply about the region's past, suggested topics for class research papers, and encouraged me to have ideas for research topics as I started thinking about graduate school.
 
 My first major foray into western history began with my research on the American Indian Movement (AIM) and their impact on South Dakota politics. The topic so captivated me that I intended to continue studying it in graduate school, and did so for my Master's thesis. Finding a program that was strong in western history made sense for my research interests, and at the time the University of Nebraska-Lincoln had a very strong (and historically robust) program in the U.S West that included faculty like Andrew Graybill, David Wishart, Douglas Seefeldt, and John Wunder.
 

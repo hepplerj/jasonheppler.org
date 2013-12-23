@@ -11,7 +11,7 @@ tags:
 ---
 Over the last few months I have been learning [D3.js](http://d3js.org/), a Javascript library developed by [Mike Bostock](http://bost.ocks.org/mike/) designed for creating data-driven visualizations and the manipulation of DOM elements. Since I've started picking it up, I've also had the opportunity to work with two undergraduate research assistants and, inexplicably, I convinced a graduate school friend to learn Javascript. In helping introduce others to D3, I noticed I had a consistent set of resources, sites, people, and tutorials I pointed them towards. So, I thought I would bring all of this together into an annotated blog post that will be useful not only for me to point people to, but other readers might also find helpful.
 
-## So, What Is D3?
+### So, What Is D3?
 
 D3 (Data Driven Documents) is a Javascript library that allows you to build amazing visualizations on the web, using the web standards established by HTML, CSS, and SVG. This means I have the option to port and scale visualizations around. Need a static visualization for a printed piece? We can resize the SVG without losing quality. Putting together an interactive visualization? We can scale up and down easily. 
 
@@ -24,7 +24,7 @@ var columns = ["perc_high_risk_prop",
   "state",
   "very_high_risk_properties"];
 
-d3.csv("/d/fire_prop.csv", function(error, data) {
+d3.csv("/data/fire_prop.csv", function(error, data) {
     // Print the table by placing a `div` with `id` of `container` 
     // below, e.g. <div id="container"></div>
     var table = d3.select("#container").append("table"),
@@ -93,7 +93,7 @@ var svg = d3.select("#fire_chart").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("/d/fire_prop.csv", function(error, data) {
+d3.csv("/data/fire_prop.csv", function(error, data) {
   
   data.forEach(function(d) {
     d.avg_val_low_risk = +d.avg_val_low_risk;
@@ -143,7 +143,7 @@ d3.csv("/d/fire_prop.csv", function(error, data) {
 
 No Excel. No Flash. No static images. Nothing proprietary. Just good, clean HTML.
 
-## Useful Resources
+### Useful Resources
 
 I won't be going through what all of this code does line by line. There's a lot going on here, and going into detail about each element would result in a lengthy series of posts. Instead, want to point to several resources that I have found useful in learning D3 and that others might find useful as well. 
 
@@ -180,7 +180,7 @@ var columns = ["perc_high_risk_prop",
 "state",
 "very_high_risk_properties"];
 
-d3.csv("/d/fire_prop.csv", function(error, data) {
+d3.csv("/assets/data/fire_prop.csv", function(error, data) {
     // Print the table by placing a `div` with `id` of `container` 
     // below, e.g. <div id="container"></div>
     var table = d3.select("#chart_container").append("table"),
@@ -237,7 +237,7 @@ var svg = d3.select("#fire_chart").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("/d/fire_prop.csv", function(error, data) {
+d3.csv("/assets/data/fire_prop.csv", function(error, data) {
   data.forEach(function(d) {
     d.avg_val_low_risk = +d.avg_val_low_risk;
     d.avg_val_high_risk = +d.avg_val_high_risk;

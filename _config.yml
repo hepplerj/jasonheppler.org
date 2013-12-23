@@ -1,17 +1,13 @@
-multivews: true
+name: Jason Heppler
+description: History, Technology, Coffee
+meta_description: "Jason Heppler's blog"
 
-source:         .
-destination:    ./_site
-includes:       ./_includes
-
-pygments:       true
-markdown:       kramdown
+markdown: kramdown
+pygments: true
+logo: false
+paginate: 15
 permalink:      /:year/:month/:day/:title.html
 
-name: 	        JasonHeppler.org		
-base_url:       http://jasonheppler.org
-local_url:      /
-description:    "A blog covering digital history, technology, and the cultural history of computers"
-root_desc:      "JasonHeppler.org"
-
-exclude: ['Rakefile', 'README.markdown', 'config.rb']
+# Details for the RSS feed generator
+url:            'http://jasonheppler.org'
+author:         'Jason Heppler'
