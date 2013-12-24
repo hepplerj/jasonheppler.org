@@ -16,7 +16,7 @@ layout: nil
    {% for post in site.posts limit: 1 %}
     {% if post.external-url %}
 	<entry>
-		<title>{{ post.external-url }} →</title>
+		<title>{{ post.title }} →</title>
 		<link href="http://jasonheppler.org{{ post.url }}"/>
 		<updated>{{ post.date | date_to_xmlschema }}</updated>
 		<id>http://jasonheppler.org{{ post.id }}</id>
