@@ -1,6 +1,7 @@
 # Specific Jekyll Files #
 #########################
 _drafts
+_site
 
 # Compiled source #
 ###################

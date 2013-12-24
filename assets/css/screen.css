@@ -519,6 +519,11 @@ article h3 {
     text-decoration: none;
 }
 
+h3 a.post-title, h3 a.arrow {
+  text-decoration: none;
+  font-weight: normal;
+}
+
 .post-excerpt p {
     margin: 1.6rem 0 0 0;
     font-size: 0.9em;

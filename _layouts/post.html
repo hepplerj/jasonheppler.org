@@ -17,17 +17,21 @@ archive: false
             </a>
         </header>
         
-        <span class="post-meta">
-        	<time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
-        	{% if post.categories %}
-        		on
-	        	{% for category in page.categories %}
-	        	    {{category}}
-	        	{% endfor %}
-	        {% endif %}
-       	</span>
+      <span class="post-meta">
+        <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
+	   {% if post.categories %}
+		on
+		{% for category in page.categories %}
+		    {{category}}
+		{% endfor %}
+	   {% endif %}
+	</span>
 
+ {% if page.external-url %}
+        <h3><a class="post-title" href="{{ page.external-url }}">{{ page.title }}</a> <a class="arrow" href="{{ page.url }}">→</a></h3>
+{% else %}
         <h1 class="post-title">{{ page.title }}</h1>
+{% endif %}
 
         <section class="post-content">
             {{content}}
