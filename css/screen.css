@@ -156,7 +156,6 @@ pre, code {
 
 pre {
     line-height: 16px;
-    border-left: solid 2px #ccc;
     margin: 2em 0 2em -20px;
     padding-left: 18px;
     overflow: auto;
@@ -167,15 +166,24 @@ pre::-webkit-scrollbar-track-piece {
 }
 
 code {
-    line-height: 1em;
+/*   background: #e2edf3;
+   border-radius: 3px;
+   padding: 2px 3px;
+   */
+   line-height: 1em;
+}
+
+.post code {
+   background: #fbfbfb;
+   border-radius: 3px;
+   padding: 2px 3px;
+   line-height: 1em;
 }
 
 pre code {
     border: none;
-    background: #e2edf3;
-    border-radius: 3px;
-    font-size: 16px;
-    padding: 2px 3px;
+    margin: 2px 3px;
+    padding: 2px 3px
 }
 
 /* html5 */
