@@ -1,13 +1,17 @@
-name: Jason Heppler
-description: Historian, writer, geek, and coffee enthusiast 
-meta_description: "The online home of Jason Heppler"
+multivews: true
 
-markdown: kramdown
-pygments: true
-logo: false
-paginate: 15
+source:         .
+destination:    ./_site
+includes:       ./_includes
+
+pygments:       true
+markdown:       kramdown
 permalink:      /:year/:month/:day/:title.html
 
-# Details for the RSS feed generator
-url:            'http://jasonheppler.org'
-author:         'Jason Heppler'
+name: 	        JasonHeppler.org		
+base_url:       http://jasonheppler.org
+local_url:      /
+description:    "A blog covering digital history, the U.S. West, environmental and urban history, and sometimes coffee"
+root_desc:      "JasonHeppler.org"
+
+exclude: ['Rakefile', 'README.markdown', 'config.rb']
