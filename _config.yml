@@ -8,9 +8,8 @@ pygments:       true
 markdown:       kramdown
 permalink:      /:year/:month/:day/:title.html
 
-name: 	        JasonHeppler.org		
+name:	          JasonHeppler.org
 base_url:       http://jasonheppler.org
-local_url:      /
 description:    "A blog covering digital history, the U.S. West, environmental and urban history, and sometimes coffee"
 root_desc:      "JasonHeppler.org"
 

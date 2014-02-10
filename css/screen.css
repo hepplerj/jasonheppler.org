@@ -13,6 +13,7 @@ body {
     font-family: "PT Sans", sans-serif;
     font-weight: normal;
     margin: 0;
+    border-bottom: 15px solid #3370a7;
 }
 
 p {
@@ -97,14 +98,14 @@ b, strong {
 
 a:link, a:visited {
     text-decoration: none;
-    color: #307ea9;
+    color: #3A74D0;
 	 transition: all 200ms ease-in-out 0s;
 	 -moz-transition: all 200ms ease-in-out 0s;
 	 -webkit-transition: all 200ms ease-in-out 0s;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: none;
 	color: #444;
 }
 
@@ -121,10 +122,8 @@ a img { border-width: 0; }
 
 blockquote {
     margin: 26px 40px 26px 20px;
-	 padding-left: 15px;
-	 line-height: 25px;
-/*    padding: 0 0 0 15px;*/
-/*    font-style: italic;*/
+    padding-left: 15px;
+    line-height: 25px;
     border-left: solid 2px #f3d084;
 }
 
@@ -166,10 +165,6 @@ pre::-webkit-scrollbar-track-piece {
 }
 
 code {
-/*   background: #e2edf3;
-   border-radius: 3px;
-   padding: 2px 3px;
-   */
    line-height: 1em;
 }
 
@@ -241,9 +236,9 @@ footer .inside {
 
 
 footer .main {
-    padding: 50px 0 10px 0;
+    padding: 20px 0 10px 0;
     margin: 0 30px 0 0;
-    min-height: 300px;
+    min-height: 100px;
 }
 
 footer .box {
@@ -497,7 +492,7 @@ margin: 0 auto;
 }
 
 .black a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: white;
 }
 
@@ -514,7 +509,7 @@ margin: 0 auto;
 }
 
 .blue {
-    background: #4f5e67;
+    background: rgb(51, 112, 167);
 }
 
 .blue p {
@@ -555,7 +550,7 @@ margin: 0 auto;
 }
 
 .green a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: white;
 }
 
@@ -574,11 +569,10 @@ margin: 0 auto;
 .tweed {
     min-height: 500px;
     background-image: url('/images/tweed.png');
-    width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
-    border-top: 2px solid #46e4bc;
-    border-bottom: 2px solid #46e4bc;
+    border-top: 4px solid #46e4bc;
+    border-bottom: 4px solid #46e4bc;
 }
 
 .tweed p {
@@ -590,7 +584,7 @@ margin: 0 auto;
 }
 
 .tweed a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: white;
 }
 
