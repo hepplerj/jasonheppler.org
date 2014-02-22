@@ -3,8 +3,7 @@ layout: post
 title: Digital History Interview with BlogWest
 description:
 date: 2013-12-17 19:45:10
-categories:
-- hacks
+categories: [hacks, essay]
 tags:
 - digital history
 - BlogWest

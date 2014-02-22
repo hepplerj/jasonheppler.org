@@ -3,8 +3,7 @@ layout: post
 title: What Crisis in the Humanities?
 description: 
 date: 2013-11-03 09:34:02
-categories:
-- 
+categories: [essay]
 tags:
 - 
 ---

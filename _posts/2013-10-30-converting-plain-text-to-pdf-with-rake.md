@@ -3,8 +3,7 @@ layout: post
 title: Converting Plain Text to PDF with Bash
 description: 
 date: 2013-10-30 21:43:53
-categories:
-- hacks 
+categories: [hacks, essay] 
 tags:
 - pandoc
 - PDF

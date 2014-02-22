@@ -3,8 +3,7 @@ layout: post
 title: Coffee Brewing Guides
 external-url: http://www.mistobox.com/Articles.asp?ID=349
 date: 2013-12-22 22:16:37
-categories:
-- 
+categories: [linked]
 tags:
 - coffee
 ---

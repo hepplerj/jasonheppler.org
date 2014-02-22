@@ -3,8 +3,7 @@ layout: post
 title: Dr Bunsen Coffee Experiments
 date: 2013-10-01 12:17:49
 external-url: http://www.drbunsen.org/coffee-experiments/
-categories:
-- 
+categories: [linked]
 tags:
 - coffee
 ---

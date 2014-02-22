@@ -8,27 +8,32 @@ priority: 1.0
 ---
 
 <div class="intro">
-<p>Hi, I'm Jason. I am the <a href="http://acomp.stanford.edu/faculty/atsp">Academic Technology Specialist</a> in the <a href="http://history.stanford.edu">Department of History</a> at <a href="http://stanford.edu">Stanford University</a> and a historian of the 20th century North American West, environmental, and digital and public history. I write here about history, technology, and coffee. You can <a href ="about.html">learn more</a> about me, browse the <a href="archives.html">archives</a>, subscribe to <a href="http://www.jasonheppler.org/feed.xml">my feed</a>, or follow me on <a href="http://twitter.com/jaheppler">Twitter</a>.</p>
+  <h1>Hi, I’m Jason Heppler, the Academic Technology Specialist in the Department of History at Stanford University.</h1>
 </div>
 
 <div id="inside">
-<h2>Writings</h2>
+<article class="home-written">
+<h3>Recently Written</h3>
 <ul class="listing">
-{% for post in site.posts limit:6 %}
-   {% if post.external-url %}
-      <li>
-        <span>{{ post.date | date: "%B %e, %Y" | ordinalize  }}</span>
-          » <a href="{{ post.url }}">{{ post.title }}</a>
-      </li> 
-   {% else %}
-     <li>
-       <span>{{ post.date | date: "%B %e, %Y" | ordinalize  }}</span>
-         <a href="{{ post.url }}">{{ post.title }}</a>
-     </li>   
-     {% endif %}
+{% for post in site.categories.essay limit:6 %}
+     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
-<li><a href="archives.html">All Posts →</a></li>
 </ul>
+</article>
+
+<article class="home-linked">
+<h3>Recently Linked</h3>
+<ul class="listing">
+  {% for post in site.categories.linked limit:6 %}
+      <li>» <a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+</article>
+
+<center>
+<a class="btn btn-outline btn-lg" href="{{ site.url }}/archives/" style="margin-bottom: 2%;">All Posts</a>
+</center>
+
 </div>
 
 <div id="projects" class="tweed">
@@ -44,66 +49,58 @@ priority: 1.0
 
   <p><a href="http://digitalcommons.unl.edu/historydiss/21/">Framing Red Power: The American Indian Movement, the Trail of Broken Treaties, and the Politics of Media</a> &#8212; My Masters thesis available for digital download.</p>
 
-<a href="https://www.dropbox.com/s/hyxytoks5edii81/jah-vita.pdf">Find more in my curriculum vitae →</a>
+<a href="{{ site.owner.vita }}">Find more in my curriculum vitae →</a>
 </div>
 </div>
 
-<div id="inside">
-<h2>Research</h2>
+<div id="projects">
+  <div id="inside">
+    <h2>Research</h2>
 
-  <p>
-    <a href="http://codyarchive.org">William F. Cody Archive
-      <img class="preview" src="images/cody_p.png">
-    </a><br>
-  </p>
+    <ul class="rig columns-2">
+      <li>
+        <a title="William F. Cody Archive" href="http://codyarchive.org"><img src="/assets/images/preview_codyarchive.png" alt="William F. Cody Archive" /></a>
+      </li>
+      <li>
+        <a title="Cody Studies" href="http://codystudies.org"><img src="/assets/images/preview_bbww.png" /></a>
+      </li>
+      <li>
+        <a title="Framing Red Power" href="http://framingredpower.org"><img src="/assets/images/preview_frp.png" /></a>
+      </li>
+      <li>
+        <img src="/assets/images/preview_sv.png" />
+      </li>
+    </ul>
 
-  <p>
-    <a href="http://segonku.unl.edu/~jheppler/showindian/">Buffalo Bill's Wild West and the Progressive Image of American Indians
-      <img class="preview" src="images/bbww_p.png">
-    </a><br>
-  </p>
-
-  <p>
-    <a href="http://framingredpower.org">Framing Red Power
-      <img class="preview" src="images/frp_p.png">
-    </a><br>
-  </p>
-
-  <p><a href="research.html">See more on my research →</a></p>
+      <p><a href="{{ site.url }}/research/">Read more on my research</a>.</p>
+  </div>
 </div>
 
 <div id="projects" class="blue">
   <div id="inside">
     <h2>Projects</h2>
 
-  <p>
-      <a href="projects/post.html">Geography of the Nineteenth Century Post
-      <img class="preview" src="images/geography_p.png">
-    </a><br>
-  </p>
-  
-   <p>
-      <a href="">Prussian Foodstuffs of the Seventeenth Century
-      <img class="preview" src="images/foodstuffs_p.png">
-    </a><br>
-  </p>
+      <ul class="rig columns-2">
+        <li>
+          <a title="Geography of the Post" href="http://digitalhistory.stanford.edu"><img src="/assets/images/preview_geog.png" alt="Geography of the Post" /></a>
+        </li>
+        <li>
+          <a title="Mapping Cody's World" href="http://codyarchive.org"><img src="/assets/images/preview_mapcody.png" /></a>
+        </li>
+        <li>
+          <a title="Prussian Foodstuffs" href="http://digitalhistory.stanford.edu"><img src="/assets/images/preview_prussia.png" /></a>
+        </li>
+        <li>
+          <a title="Gendered Innovations" href="http://genderedinnovations.stanford.edu"><img src="/assets/images/preview_gendered.png" /></a>
+        </li>
+      </ul>
 
-   <p>
-      <a href="">Gendered Innovations
-      <img class="preview" src="images/gendered_p.png">
-    </a><br>
-  </p>
-
-   <p>
-      <a href="">Mapping Cody's World
-      <img class="preview" src="images/cody_map_p.png">
-    </a><br>
-  </p>
 </div>
 </div>
 
+<div id="projects">
 <div id="inside">
-    <h2>Resources</h2>
+  <h2>Resources</h2>
 
   <p><a href="http://whatisdigitalhumanities.com">What is Digital Humanities?</a> &#8212; Perpetual answers to the perpetual question.</p>
 
@@ -113,6 +110,7 @@ priority: 1.0
 
   <p><a href="https://github.com/hepplerj/FREQr">FREQr</a> &#8212; A word frequency generator for the command line written in Ruby.</p>
 
-  <p><a href="http://github.com/hepplerj">See more on GitHub →</a></p>
+  <p><a href="http://github.com/hepplerj">See more on GitHub</a>.</p>
 
+</div>
 </div>

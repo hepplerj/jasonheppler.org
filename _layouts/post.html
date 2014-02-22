@@ -1,48 +1,33 @@
 ---
 layout: default
 ---
+
+{% if page.image.feature %}<div class="entry-image">
+  <img src="/assets/images/{{ page.image.feature }}" class="entry-feature-image" alt="{{ page.title }}" itemprop="image">
+  {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}" itemprop="citation">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
+</div><!-- /.entry-image -->{% endif %}
+
 <div id="inside">
   <div class="post">
-
   {% if page.external-url %}
     <h2><a href="{{ page.external-url }}">{{ page.title }}</a> →</h2>
-    <p><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
-
   {% else %}
-    <!-- <h3 datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</h3> -->
      <h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
-        <p class="meta">
-          <time datetime="{{ post.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
-        </p>
-
   {% endif %}
 
   {{ content }}
 
-<section class="post_meta">
-  <div class="block">
-    <a href="http://twitter.com/jaheppler">
-      <span class="ss-twitter ss-social-circle">
-        <div>Follow me on Twitter.</div>
-      </span>
-    </a>
-  </div>
-  
-  <div class="block">
-  	<a href="http://acomp.stanford.edu/faculty/atsp">
-  		<span class="ss-like ss-social-circle">
-  			<div>I am the Academic Technology Specialist in the History Department at Stanford University.</div>
-  		</span>
-  	</a>
-  </div>
+<aside class="essay-info">
+  <figure class="essay-info-avatar"><img src="/assets/images/me.jpg" title="Hello, nice to meet you."></figure>
 
-  <div class="block">
-  	<a href="http://github.com/hepplerj">
-  		<span class="ss-github ss-social-circle">
-  			<div>Follow me on Github.</div>
-  		</span>
-  	</a>
+  <div class="essay-info-biography">
+    <h5>About Jason</h5>
+    <p>I'm an historian from the Midwest working at Stanford University. I like to write about history, technology, environment, culture, and coffee. You can follow <a href="{{ site.twitter }}">me on Twitter</a>, or learn <a href="/about/" title="More about Jason">more about me</a>.</p>
+    <p>This was written on {{ page.date | date: "%B %d, %Y" }}.</p>
+
+    <p><a href="/archives/">&larr; Read more essays</a></p>
   </div>
-</section>
+</aside>
+
 </div>
 </div>

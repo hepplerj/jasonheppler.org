@@ -3,8 +3,7 @@ layout: post
 title: The Campaign Against Coffee
 external-url: http://www.theatlantic.com/business/archive/2013/12/the-devious-ad-campaign-that-convinced-america-coffee-was-bad-for-kids/282676/
 date: 2013-12-30  9:58:57
-categories:
-- 
+categories: [linked]
 tags:
 - coffee
 ---

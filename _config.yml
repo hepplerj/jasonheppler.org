@@ -1,3 +1,24 @@
+title:            Jason Heppler
+tagline:          "History, technology, coffee"
+description:      "The personal website of Jason Heppler covering digital history, the U.S. West, environmental and urban history, and sometimes coffee"
+# Leave url set to localhost server or blank when working locally.
+url:              http://jasonheppler.org
+
+# Owner/author information
+owner:
+  name:           Jason Heppler
+  avatar:         avatar.jpg
+  bio:            "Historian of the West, geek, coffee hobbyist"
+  email:          jason@jasonheppler.org
+  twitter:        "jaheppler"
+  instagram:      "hepplerj"
+  github:         "hepplerj"
+  facebook:       "jason.heppler"
+  vita:           https://www.dropbox.com/s/hyxytoks5edii81/jah-vita.pdf
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:    "http://plus.google.com/112447146120355094986"
+
+
 multivews: true
 
 source:         .
@@ -6,11 +27,22 @@ includes:       ./_includes
 
 pygments:       true
 markdown:       kramdown
-permalink:      /:year/:month/:day/:title.html
+# http://jekyllrb.com/docs/permalinks/
+permalink:      /:year/:month/:day/:title/
 
-name:	          JasonHeppler.org
-base_url:       http://jasonheppler.org
-description:    "A blog covering digital history, the U.S. West, environmental and urban history, and sometimes coffee"
-root_desc:      "JasonHeppler.org"
 
-exclude: ['Rakefile', 'README.markdown', 'config.rb']
+# Internal pages/posts to include in top navigation
+links:
+  - title: Research
+    url: /research/
+  - title: Teaching
+    url: /teaching/
+  - title: Digital &amp; Public History
+    url: /digital/
+  - title: Colophon
+    url: /about/
+  - title: Vita
+    url: https://www.dropbox.com/s/hyxytoks5edii81/jah-vita.pdf
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "codekit-config.json", "Gemfile", "Gemfile.lock", "README.md", "node_modules", "Gruntfile.js", "package.json"]

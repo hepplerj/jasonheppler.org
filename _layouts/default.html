@@ -1,21 +1,27 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7 no-js" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="lt-ie9 lt-ie8 no-js" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="lt-ie9 no-js" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"><!--<![endif]-->
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta content="The online writing of Jason Heppler" name="description"/>
 <title>{{ page.title }}</title> <meta name="author" content="Jason Heppler" />
+
 <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
 <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
 <link rel="stylesheet" href="/css/tweet.css" type="text/css" />
-<link href="/webfonts/ss-social.css" rel="stylesheet" />
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript" src="http://jasonheppler.org/js/styleTweets.js"></script>
-<script type="text/javascript" src="/js/progress.js"></script>
 
-<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Muli:30000' rel='stylesheet' type='text/css'>
+<link href="/webfonts/ss-social.css" rel="stylesheet" />
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="{{ site.url }}/js/styleTweets.js"></script>
+<script type="text/javascript" src="{{ site.url }}/js/main.min.js"></script>
+
+
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -25,20 +31,7 @@
 </head>
 <body>
 
-<div class="header">
-    <div class="header_container">
-
-        <h1 class="name"><a href="/">Jason Heppler</a></h1>
-        <ul class="menu">
-            <li><a href="{{ base_url }}/blog.html">Blog</a></li>
-            <li><a href="{{ base_url }}/about.html">Colophon</a></li>
-            <li><a href="{{ base_url }}/research.html">Research</a></li>
-            <li><a href="{{ base_url }}/teaching.html">Teaching</a></li>
-            <li><a href="{{ base_url }}/hacks.html">Digital &amp; Public History</a></li>
-            <li><a href="https://www.dropbox.com/s/hyxytoks5edii81/jah-vita.pdf">Vita</a></li>
-        </ul>
-    </div>
-</div>
+{% include _navigation.html %}
 
 
 <section class="container">
@@ -52,11 +45,13 @@
     <div class="inside">
         <div class="main clearfix">
                 <p>Written by <a href="http://jasonheppler.org/about.html">Jason
-                    Heppler</a> • Powered by <a
-                href="http://github.com/mojombo/jekyll">Jekyll</a> and coffee <br/> Licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA Creative Commons</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a></p>
+                    Heppler</a> &#149; Powered by <a
+                href="http://github.com/mojombo/jekyll">Jekyll</a> and coffee &#149; Made in the West <br/> Licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA Creative Commons</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a></p>
                 <p>Remember <a href="http://lessig.tumblr.com/post/40347463044/prosecutor-as-bully">Aaron Swartz</a></p>
+
         </div>
     </div>
+
 </footer>
 
 </body>
