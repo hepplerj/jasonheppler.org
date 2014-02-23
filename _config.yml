@@ -41,8 +41,6 @@ links:
     url: /digital/
   - title: Colophon
     url: /about/
-  - title: Vita
-    url: https://www.dropbox.com/s/hyxytoks5edii81/jah-vita.pdf
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "codekit-config.json", "Gemfile", "Gemfile.lock", "README.md", "node_modules", "Gruntfile.js", "package.json"]

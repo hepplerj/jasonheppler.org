@@ -7,6 +7,7 @@
           {% for link in site.links %}
             <li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="{{ site.url }}{{ link.url }}" itemprop="url"><span itemprop="name">{{ link.title }}</span></a></li>
           {% endfor %}
+            <li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="{{ site.owner.vita }}"><span itemprop="url">Vita</span></a></li>
       </ul>
   </nav>
 </div><!-- /.entry-wrapper -->
