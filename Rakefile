@@ -43,15 +43,16 @@ task :write, [:title, :category] do |t, args|
 ---
 layout: post
 title: #{args.title}
-description: 
+description:
 date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
-categories:
-- 
-tags:
-- #{args.category}
+image:
+  feature:
+  thumb:
+categories: []
+tags: [#{args.category}]
 ---
 EOS
     end
-    puts "Now opening #{path} in vim..."
-    system "vim #{path}"
+    puts "Now opening #{path} in Sublime Text..."
+    system "subl #{path}"
 end
