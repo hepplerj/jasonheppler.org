@@ -4,7 +4,7 @@ title: Western History and the California Drought
 description: A historical perspective on the California drought and what it can teach us about western history and sustainability. 
 date: 2014-02-24 21:16:26
 image:
-  feature: sj_ponds.png
+  feature: sj_ponds.jpg
   thumb:
 categories: [essay, research]
 tags: [California, drought, water, American West]
