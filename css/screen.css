@@ -429,6 +429,7 @@ svg {
     color: #999;
     display: block;
     font-size: .5em;
+    text-align: left;
 }
 
 .image-credit {
