@@ -1085,6 +1085,7 @@ margin: 0 auto;
 .post h2 a {
     color: black;
     margin: .3em 0 .1em 0;
+    text-decoration: none;
 }
 
 .post_meta {
