@@ -97,7 +97,7 @@ b, strong {
 
 a:link, a:visited {
     text-decoration: none;
-    color: #5eacee;
+    color: #EC6F66;
 	 transition: all 200ms ease-in-out 0s;
 	 -moz-transition: all 200ms ease-in-out 0s;
 	 -webkit-transition: all 200ms ease-in-out 0s;
@@ -873,6 +873,7 @@ article {
 .listing {
     margin: 0 0 25px 0;
     padding: 0;
+    font-family: 'Lato',sans-serif;
 }
 
 .listing a {
