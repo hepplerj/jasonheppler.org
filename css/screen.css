@@ -97,7 +97,7 @@ b, strong {
 
 a:link, a:visited {
     text-decoration: none;
-    color: #EC6F66;
+    color:#0067BF;
 	 transition: all 200ms ease-in-out 0s;
 	 -moz-transition: all 200ms ease-in-out 0s;
 	 -webkit-transition: all 200ms ease-in-out 0s;

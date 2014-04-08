@@ -53,6 +53,6 @@ tags: [#{args.category}]
 ---
 EOS
     end
-    puts "Now opening #{path} in Sublime Text..."
-    system "subl #{path}"
+    puts "Now opening #{path} in vim..."
+    system "vim #{path}"
 end
