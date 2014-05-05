@@ -10,10 +10,10 @@
 
 body {
     color: #1d1e23;
-    font-family: Georgia, Times, serif;
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 28px;
     margin: 0;
     border-bottom: 15px solid #3370a7;
 }
@@ -39,20 +39,20 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Lato", "Lucida Grand", Helvetica, Arial, sans-serif;
+    font-family: "Open Sans Condensed", "Lucida Grand", Helvetica, Arial, sans-serif;
 }
 
 
 h1 {
     font-size: 56px;
-    font-weight: normal;
+    font-weight: 700;
     letter-spacing: -2px;
 }
 
 h2 {
     font-size: 34px;
     margin-top: 2em;
-    font-weight: 200;
+    font-weight: 700;
 }
 
 h3 {
@@ -96,16 +96,16 @@ b, strong {
 }
 
 a:link, a:visited {
-    text-decoration: none;
-    color:#0067BF;
+    text-decoration: underline;
+    color:#333;
 	 transition: all 200ms ease-in-out 0s;
 	 -moz-transition: all 200ms ease-in-out 0s;
 	 -webkit-transition: all 200ms ease-in-out 0s;
 }
 
 a:hover {
-    text-decoration: underline;
-    color: #008aff;
+    text-decoration: none;
+    color: #129C34;
 }
 
 img {
@@ -122,7 +122,7 @@ a img { border-width: 0; }
 figcaption {
   padding-top: 10px;
   clear: both;
-  font-family: Georgia, serif;
+  /*font-family: Georgia, serif;*/
   font-size: 14px;
   font-size: 0.875rem;
   font-style: italic;
@@ -265,11 +265,12 @@ pre code {
     background: #fff;
 }
 
-.progress-bar {
-    position:fixed;
-    background-color:red;
-    width:100%;
-    height:1px;
+#divider {
+  content: '';
+  border: 1px solid #dededc;
+  margin: 50px auto 40px auto;
+  width: 20%;
+  display: block;
 }
 
 /*aside {
@@ -684,7 +685,11 @@ article {
 }
 
 #site-nav a:hover {
+  color: #129C34;
+}
 
+.masthead-wrapper a {
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 48em) {
@@ -815,11 +820,11 @@ article {
     font-size: .70em;
 }
 
-.btn-outline {
+/*.btn-outline {
     color: #5eacee;
     background-color: transparent;
     border-color: #5eacee;
-}
+}*/
 
 .btn-lg {
     padding: 10px 16px;
@@ -1135,13 +1140,13 @@ margin: 0 auto;
 }
 
 .intro p {
-    font-size: 20px;
+    font-size: 26px;
 }
 
 .intro h1 {
     font-weight: normal;
-    line-height: 1em;
-    font-size: 2rem;
+    line-height: 1.2em;
+    font-size: 3rem;
     letter-spacing: -.04em;
     z-index: 1000;
     color: #333;
@@ -1153,6 +1158,34 @@ margin: 0 auto;
     margin-bottom: .5em;
     margin-left: 0;
     width: 720px;
+}
+
+.posted ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.posted ul li {
+  list-style: none;
+}
+
+.posted h3 a {
+  text-decoration: none;
+}
+
+.dated {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: 0.5em 0;
+}
+
+.dated h4 {
+  line-height: 0;
+  color: #b4b4b2;
+  text-transform: uppercase;
+  font-size: 0.5em;
+  letter-spacing: 0.25em;
 }
 
 /*p.tweet-me {

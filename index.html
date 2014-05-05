@@ -7,11 +7,25 @@ priority: 1.0
 ---
 
 <div class="intro">
-  <h1>Hi, I’m Jason Heppler, the Academic Technology Specialist in the Department of History at Stanford University and historian of the North American West.</h1>
+  <h1>Hi, I'm Jason, the Academic Technology Specialist in the Department of History at Stanford University and historian of the North American West.</h1>
 </div>
 
-<div id="inside">
-<article class="home-written">
+<div id="inside" class="posted">
+<h2>Recent Posts</h2>
+<ul>
+{% for post in site.categories.essay limit: 4 %}
+  <li>
+
+      <p class="dated"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></p>
+        <h3><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
+        <p class="">{% if post.description %}{{ post.description  | strip_html | strip_newlines | truncate: 120 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p>
+
+  </li>
+
+{% endfor %}
+</ul>
+
+<!-- <article class="home-written">
 <h3>Recently Written</h3>
 <ul class="listing">
 {% for post in site.categories.essay limit:6 %}
@@ -27,7 +41,7 @@ priority: 1.0
       <li>» <a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
-</article>
+</article> -->
 
 <center>
 <a class="btn btn-outline btn-lg" href="{{ site.url }}/archives/" style="margin-bottom: 2%;">All Posts</a>
@@ -71,7 +85,7 @@ priority: 1.0
       </li>
     </ul>
 
-      <p><a href="{{ site.url }}/research/">Read more on my research</a>.</p>
+      <p><a href="{{ site.url }}/research/">Read more on my research &rarr;</a></p>
   </div>
 </div>
 
@@ -109,7 +123,7 @@ priority: 1.0
 
   <p><a href="https://github.com/hepplerj/FREQr">FREQr</a> &#8212; A word frequency generator for the command line written in Ruby.</p>
 
-  <p><a href="http://github.com/hepplerj">See more on GitHub</a>.</p>
+  <p><a href="http://github.com/hepplerj">See more on GitHub &rarr;</a></p>
 
 </div>
 </div>
