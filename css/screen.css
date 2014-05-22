@@ -884,6 +884,7 @@ article {
 
 .listing a {
     border: none;
+    text-decoration: none;
 }
 
 .listing li {
@@ -1140,13 +1141,13 @@ margin: 0 auto;
 }
 
 .intro p {
-    font-size: 26px;
+    font-size: 24px;
 }
 
 .intro h1 {
     font-weight: normal;
     line-height: 1.2em;
-    font-size: 3rem;
+    font-size: 2.5rem;
     letter-spacing: -.04em;
     z-index: 1000;
     color: #333;
