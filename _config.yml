@@ -14,12 +14,12 @@ owner:
   instagram:      "hepplerj"
   github:         "hepplerj"
   facebook:       "jason.heppler"
-  vita:           https://www.dropbox.com/s/hyxytoks5edii81/jah-vita.pdf
+  vita:           /assets/downloads/jah-vita.pdf
   # For Google Authorship https://plus.google.com/authorship
   google_plus:    "http://plus.google.com/112447146120355094986"
 
 multivews:      true
-source:         _source
+source:         .
 pygments:       true
 markdown:       kramdown
 # http://jekyllrb.com/docs/permalinks/
