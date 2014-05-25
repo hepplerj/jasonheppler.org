@@ -1,5 +1,7 @@
 # Jason Heppler
 
+require "rake/clean"
+
 ## -- Config -- ##
 source_dir  = "_site"
 draft_dir   = "_drafts"
@@ -13,25 +15,24 @@ task :default do
 	sh 'rake --tasks --silent'
 end
 
-desc "nuke and rebuild"
+desc "Nuke and rebuild"
 task :nuke do
     sh 'rm -rf _site'
     system "jekyll"
 end
 
-desc "watch the site and regenerate when it changes"
-task :watch do
-  puts "Starting to watch source with Jekyll."
-  system "jekyll serve --watch"
+desc "Preview the site with Jekyll"
+task :preview do
+  puts "Previewing the site locally with Jekyll."
+  jekyllPid  = Process.spawn("jekyll serve --watch")
+  trap("INT") {
+    [jekyllPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    exit 0
+  }
+  [jekyllPid].each { |pid| Process.wait(pid) }
 end
 
-desc "preview site in browser with localhost:4000"
-task :serve do
-  puts "Starting site preview in http://localhost:4000."
-  system "jekyll serve"
-end
-
-desc "give title as argument and create new post"
+desc "Give title as argument and create new post"
 # usage rake write["Post Title Goes Here",category]
 # category is optional
 task :write, [:title, :category] do |t, args|
@@ -42,7 +43,7 @@ task :write, [:title, :category] do |t, args|
     file.write <<-EOS
 ---
 layout: post
-title: #{args.title}
+title: "#{args.title}"
 description:
 date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
 image:

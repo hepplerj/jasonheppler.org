@@ -1,14 +1,15 @@
 ---
 layout: default
 ---
+<article class="entry" itemscope itemtype="http://schema.org/WebPage">
+  <header class="entry-header">
+    {% if page.image.feature %}<div class="entry-image">
+      <img src="/assets/images/{{ page.image.feature }}" class="entry-feature-image" alt="{{ page.title }}" itemprop="image">
+      {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}" itemprop="citation">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
+    </div><!-- /.entry-image -->{% endif %}
+  </header>
 
-{% if page.image.feature %}<div class="entry-image">
-  <img src="/assets/images/{{ page.image.feature }}" class="entry-feature-image" alt="{{ page.title }}" itemprop="image">
-  {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}" itemprop="citation">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
-</div><!-- /.entry-image -->{% endif %}
-
-<div id="inside">
-  <div class="post">
+  <div class="entry-content">
   {% if page.external-url %}
     <h2><a href="{{ page.external-url }}">{{ page.title }}</a> →</h2>
   {% else %}
@@ -29,5 +30,4 @@ layout: default
   </div>
 </aside>
 
-</div>
 </div>

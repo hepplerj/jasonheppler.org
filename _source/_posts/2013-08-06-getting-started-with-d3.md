@@ -180,7 +180,7 @@ var columns = ["perc_high_risk_prop",
 "state",
 "very_high_risk_properties"];
 
-d3.csv("/d/fire_prop.csv", function(error, data) {
+d3.csv("/data/fire_prop.csv", function(error, data) {
     // Print the table by placing a `div` with `id` of `container` 
     // below, e.g. <div id="container"></div>
     var table = d3.select("#chart_container").append("table"),
@@ -237,7 +237,7 @@ var svg = d3.select("#fire_chart").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("/d/fire_prop.csv", function(error, data) {
+d3.csv("/data/fire_prop.csv", function(error, data) {
   data.forEach(function(d) {
     d.avg_val_low_risk = +d.avg_val_low_risk;
     d.avg_val_high_risk = +d.avg_val_high_risk;

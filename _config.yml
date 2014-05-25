@@ -1,6 +1,6 @@
 title:            Jason Heppler
 tagline:          "History, technology, coffee"
-description:      "The personal website of Jason Heppler covering digital history, the U.S. West, environmental and urban history, and sometimes coffee"
+description:      "The website of Jason Heppler covering digital history, the U.S. West, environmental history, and sometimes coffee."
 # Leave url set to localhost server or blank when working locally.
 url:              http://jasonheppler.org
 
@@ -18,18 +18,12 @@ owner:
   # For Google Authorship https://plus.google.com/authorship
   google_plus:    "http://plus.google.com/112447146120355094986"
 
-
-multivews: true
-
-source:         .
-destination:    ./_site
-includes:       ./_includes
-
+multivews:      true
+source:         _source
 pygments:       true
 markdown:       kramdown
 # http://jekyllrb.com/docs/permalinks/
 permalink:      /:year/:month/:day/:title/
-
 
 # Internal pages/posts to include in top navigation
 links:
@@ -41,6 +35,13 @@ links:
     url: /digital/
   - title: Colophon
     url: /about/
+
+figures:
+  dir: /figures
+  enumerate: true
+  analytics: true
+
+google_analytics_tracking_id: UA-12786552-1
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "codekit-config.json", "Gemfile", "Gemfile.lock", "README.md", "node_modules", "Gruntfile.js", "package.json"]
