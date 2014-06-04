@@ -2,7 +2,7 @@
 layout: post
 title: "What does Missile Command have to do with Digital History?"
 description:
-date: 2014-06-03  6:46:47
+date: 2014-06-04  6:46:47
 image:
   feature: dhsi2014_game.jpg
   thumb:
