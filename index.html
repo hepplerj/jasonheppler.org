@@ -1,99 +1,54 @@
 ---
-layout: home
-title: Jason Heppler
-description: Jason Heppler is a writer, historian, and technologist at Stanford University.
-keywords: jason heppler,blog,html,css,ruby,rails,programming,web development,digital history,stanford,american west,north american west,nebraska,california,silicon valley,university of nebraska-lincoln,stanford university,unl
-priority: 1.0
+layout: default
+title: Home
 ---
 
-<div class="intro">
-  <h1>Hi, I'm <a href="/about/">Jason</a>, the Academic Technology Specialist in the Department of History at Stanford University and an historian of the North American West.</h1>
+<div class="posts">
+  {% for post in paginator.posts %}
+  {% if post.external-url %}
+  <div class="post">
+    <h3 class="post-title">
+      <a href="{{ post.external-url  }}">
+        {{ post.title }} →
+      </a>
+    </h3>
+    {{ post.content }}
+    <span class="post-date-link-blog">{{ post.date | date_to_string }}</span>
+  </div>
+  {% else %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {% if post.image.feature %}
+      <div class="overlay"></div>
+      <img class="featured-image" src="/assets/images/{{ post.image.feature }}"/>
+    {% endif %}
+
+    {{ post.content }}
+  </div>
+  {% endif %}
+  {% endfor %}
 </div>
 
-<!-- <div id="projects"> -->
-
-<h2>Recent Posts</h2>
-
-<ul class="listing">
-{% for post in site.posts limit:6 %}
-  <li>
-    <span>{{ post.date | date: "%B %e, %Y" | ordinalize  }}</span>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-  </li>
-{% endfor %}
-<li><a href="/archives/">All Posts →</a></li>
-</ul>
-
-<!-- </div> -->
-
-
-<!-- <div id="projects"> -->
-
-<h2>Publications</h2>
-
-  <p>"<a href="http://journalofdigitalhumanities.org/1-4/a-call-to-redefine-historical-scholarship-in-the-digital-turn">A Call to Redeﬁne Historical Scholarship in the Digital Turn</a>" &#8212; With Alex Galarza and Douglas Seefeldt, <em>Journal of Digital Humanities</em>, December 2012.</p>
-
-  <p>"<a href="http://www.sdshspress.com/index.php?&id=236&action=912">The American Indian Movement and South Dakota Politics</a>" &#8212; <em>The Plains Political Tradition</em>, edited by Jon Lauck, John E. Miller, and Donald Simmons. Pierre, SD: South Dakota State Historical Society Press, 2011, pp. 267–287.</p>
-
-  <p><a href="http://hepplerj.github.io/rubyist-historian/">The Rubyist Historian</a> &#8212; An introduction to Ruby programming for scholars in the humanities.</p>
-
-  <p><a href="http://digitalcommons.unl.edu/historydiss/21/">Framing Red Power: The American Indian Movement, the Trail of Broken Treaties, and the Politics of Media</a> &#8212; My Masters thesis available for digital download.</p>
-
-<a href="{{ site.owner.vita }}">Find more in my curriculum vitae &rarr;</a>
-<!-- </div> -->
-
-<!-- <div id="projects"> -->
-    <h2>Research</h2>
-
-    <ul class="rig columns-2">
-      <li>
-        <a title="William F. Cody Archive" href="http://codyarchive.org"><img src="/assets/images/preview_codyarchive.jpg" alt="William F. Cody Archive" /></a>
-      </li>
-      <li>
-        <a title="Cody Studies" href="http://codystudies.org"><img src="/assets/images/preview_bbww.jpg" /></a>
-      </li>
-      <li>
-        <a title="Framing Red Power" href="http://framingredpower.org"><img src="/assets/images/preview_frp.jpg" /></a>
-      </li>
-      <li>
-        <img src="/assets/images/preview_sv.jpg" />
-      </li>
-    </ul>
-
-      <p><a href="{{ site.url }}/research/">Read more on my research &rarr;</a></p>
-<!-- </div> -->
-
-<!-- <div id="projects"> -->
-    <h2>Projects</h2>
-
-      <ul class="rig columns-2">
-        <li>
-          <a title="Geography of the Post" href="http://digitalhistory.stanford.edu"><img src="/assets/images/preview_geog.jpg" alt="Geography of the Post" /></a>
-        </li>
-        <li>
-          <a title="Mapping Cody's World" href="http://codyarchive.org"><img src="/assets/images/preview_mapcody.jpg" /></a>
-        </li>
-        <li>
-          <a title="Prussian Foodstuffs" href="http://digitalhistory.stanford.edu"><img src="/assets/images/preview_prussia.jpg" /></a>
-        </li>
-        <li>
-          <a title="Gendered Innovations" href="http://genderedinnovations.stanford.edu"><img src="/assets/images/preview_gendered.jpg" /></a>
-        </li>
-      </ul>
-
-<!-- </div> -->
-
-<!-- <div id="projects"> -->
-  <h2>Resources</h2>
-
-  <p><a href="http://whatisdigitalhumanities.com">What is Digital Humanities?</a> &#8212; Perpetual answers to the perpetual question.</p>
-
-  <p><a href="https://github.com/hepplerj/dotfiles">Dotfiles</a> &#8212; my configuration files for ZSH, vim, Sublime Text, iTerm, Git, Ruby, and Tmux.</p>
-
-  <p><a href="https://github.com/hepplerj/bib">BibTeX Bibliography</a> &#8212; A BibTeX database of citations in environmental, urban, and American history.</p>
-
-  <p><a href="https://github.com/hepplerj/FREQr">FREQr</a> &#8212; A word frequency generator for the command line written in Ruby.</p>
-
-  <p><a href="http://github.com/hepplerj">See more on GitHub &rarr;</a></p>
-
-<!-- </div> -->
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="/">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>

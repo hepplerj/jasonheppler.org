@@ -1,33 +1,30 @@
 ---
 layout: default
 ---
-<article class="entry" itemscope itemtype="http://schema.org/WebPage">
-  <header class="entry-header">
-    {% if page.image.feature %}<div class="entry-image">
-      <img src="/assets/images/{{ page.image.feature }}" class="entry-feature-image" alt="{{ page.title }}" itemprop="image">
-      {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}" itemprop="citation">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
-    </div><!-- /.entry-image -->{% endif %}
-  </header>
 
-  <div class="entry-content">
-  {% if page.external-url %}
-    <h2><a href="{{ page.external-url }}">{{ page.title }}</a> →</h2>
-  {% else %}
-     <h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date">{{ page.date | date_to_string }}</span>
+  {% if page.image.feature %}
+    <div class="overlay"></div>
+    <img class="featured-image" src="{{ site.url }}/assets/images/{{ page.image.feature }}"/>
   {% endif %}
 
   {{ content }}
+
+  {% if page.external-url %}
+  <p><a href="{{ page.external-url }}">Visit Link →</a></p>
+  {% endif %}
+</div>
 
 <aside class="essay-info">
   <figure class="essay-info-avatar"><img src="/assets/images/me.jpg" title="Hello, nice to meet you."></figure>
 
   <div class="essay-info-biography">
     <h5>About Jason</h5>
-    <p>I'm an historian from the Great Plains working at Stanford University. I like to write about history, technology, environment, culture, and coffee. You can follow <a href="{{ site.twitter }}">me on Twitter</a>, or learn <a href="/about/" title="More about Jason">more about me</a>.</p>
+    <p>I'm an historian from the Great Plains working at Stanford University. I like to write about history, technology, environment, culture, and coffee. You can follow <a href="http://twitter.com/jaheppler">me on Twitter</a>, or learn <a href="/about/" title="More about Jason">more about me</a>.</p>
     <p>This was written on {{ page.date | date: "%B %d, %Y" }}.</p>
 
     <p><a href="/archives/">&larr; Read more essays</a></p>
   </div>
 </aside>
-
-</div>

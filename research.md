@@ -29,7 +29,7 @@ I have done prior work on the American Indian Movement (AIM), a Native American 
 <ul class="listing">
 {% for post in site.categories.research %}
     <li>
-    	<span>{{ post.date | date: "%B %e, %Y" | ordinalize  }}</span>
+        <span>{{ post.date | date: "%B %e, %Y" | ordinalize  }}</span>
         <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
 {% endfor %}

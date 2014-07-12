@@ -1,10 +1,7 @@
 ---
 layout: page
+title: Teaching
 permalink: /teaching/
-title: "Teaching"
-description: "Courses and workshops that I've taught, created, or helped lead."
-category: teaching
-tags: [workshops]
 ---
 
 For more teaching information, see <a href="{{ site.owner.vita }}">my vita</a>.
