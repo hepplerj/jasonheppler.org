@@ -12,7 +12,7 @@ tags: [Ruby, D3.js, JSON]
 
 I took a moment yesterday morning to start work on a Ruby script to convert CSV files to JSON. My main motivation for writing the script was to get data into a format that more easily works with [D3.js](http://d3js.org). 
 
-D3 has two main ways to load data: JSON or CSV. Although CSV has its benefits, but the data is [untyped](http://en.wikipedia.org/wiki/Programming_language#Typed_versus_untyped_languages). Because of that, D3 loads all the data as strings rather than differentiating between strings and integers. I could do the conversion on the fly with D3 pretty easily using built-in functions or coerce the data with JavaScript. But sometimes I like prepping data before I begin working with it.
+D3 has two main ways to load data: JSON or CSV. Although CSV has its benefits, the data is [untyped](http://en.wikipedia.org/wiki/Programming_language#Typed_versus_untyped_languages). Because of that, D3 loads all the data as strings rather than differentiating between strings and integers. I could do the conversion on the fly with D3 pretty easily using built-in functions or coerce the data with JavaScript. But sometimes I like prepping data before I begin working with it.
 
 The script builds JSON using the first line of the CSV file to determine the appropriate elements and the corresponding data, as well as checking that integers and strings are converted to their appropriate (typed) formats. And the script seems fairly robust; I noticed hardly a pause when throwing a 14,000-line CSV file at it. There are no built-in specifics to the data mapping; you'll need to handle that either by modifying the script or handling it in D3.
 
