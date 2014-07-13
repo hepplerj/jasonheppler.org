@@ -10,7 +10,7 @@ categories: [hacks]
 tags: [Editorial, iOS]
 ---
 
-***[This post originally appeared at [ProfHacker](http://chronicle.com/blogs/profhacker/editorial-ios-text-editing/57431) on 2014-06-30.]***
+*[This post originally appeared at [ProfHacker](http://chronicle.com/blogs/profhacker/editorial-ios-text-editing/57431) on 2014-06-30.]*
 
 ![The overall view of Editorial for iPad](/assets/images/overall.png)
 

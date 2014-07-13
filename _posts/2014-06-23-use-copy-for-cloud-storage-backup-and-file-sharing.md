@@ -9,7 +9,7 @@ image:
 categories: [hacks]
 tags: [Copy, backup]
 ---
-***[This post originally appeared at [ProfHacker](http://chronicle.com/blogs/profhacker/use-copy-for-cloud-storage-backup-and-file-sharing/57377) on 2014-06-23.]***
+*[This post originally appeared at [ProfHacker](http://chronicle.com/blogs/profhacker/use-copy-for-cloud-storage-backup-and-file-sharing/57377) on 2014-06-23.]*
 
 Recent announcements are showing a trend in cheaper storage solutions and cloud backups. Google [recently updated its pricing](http://techcrunch.com/2014/03/13/google-drive-gets-a-big-price-drop-100gb-now-costs-1-99-a-month/) for Drive storage and now offers 15 gigabytes for free and incredibly cheap prices for 100 GB, 1 TB, and 10TB+. At WWDC, Apple announced [changes to its iCloud service](http://www.theverge.com/2014/6/2/5771942/apple-announces-icloud-drive) towards a more Dropbox-like experience and revealed a new pricing model that includes a baseline 20 GB for $0.99 per month. And just this week, Amazon [revealed its plans](http://www.theverge.com/2014/6/18/5821384/amazon-offering-unlimited-photo-storage-for-fire-phone-owners) for unlimited storage for photographs for those purchasing the new Fire Phone.  Cloud storage, it seems, is everywhere and dirt cheap.
 
