@@ -12,20 +12,23 @@ tagline:          "History, technology, coffee"
 description:      'Historian of the American West.'
 url:              http://jasonheppler.org
 
-# Owner/author information
+# Site owner
 owner:
-  name:           Jason Heppler
-  avatar:         avatar.jpg
-  bio:            "Historian of the North American West, environmental and urban history, digital history, coffee hobbyist"
-  email:          jason@jasonheppler.org
-  twitter:        "jaheppler"
-  instagram:      "hepplerj"
-  github:         "hepplerj"
-  facebook:       "jason.heppler"
-  vita:           https://www.dropbox.com/s/lbre2593encazi3/jah-vita.pdf
-  # For Google Authorship https://plus.google.com/authorship
-  google_plus:    "http://plus.google.com/112447146120355094986"
+  name: Jason Heppler
+  email: jason@jasonheppler.org
+  vita: https://www.dropbox.com/s/lbre2593encazi3/jah-vita.pdf
+  twitter: jaheppler
+  instagram: "hepplerj"
+  github: "hepplerj"
+  facebook: "jason.heppler"
+  google:
+    analytics: UA-12786552-1
+    plus: http://plus.google.com/112447146120355094986
+  bing:
+    verify: D81F4C18A6CB3018F64D7C827D953DFD
 
+  bio: "Historian of the North American West, environmental and urban history, digital history, coffee hobbyist"
+  avatar: avatar.jpg
 
 paginate:         8
 
