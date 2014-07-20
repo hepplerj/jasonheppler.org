@@ -6,24 +6,8 @@
     </div>
 
     <ul class="sidebar-nav">
-      <li class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}">
-        <a href="/">Home</a>
-      </li>
-
-      {% comment %}
-        The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
-      {% endcomment %}
-
-      {% assign pages_list = site.pages %}
-      {% for node in pages_list %}
-        {% if node.title != null %}
-          {% if node.layout == "page" %}
-            <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
-              <a href="{{ node.url }}">{{ node.title }}</a>
-            </li>
-          {% endif %}
-        {% endif %}
+      {% for link in site.links %}
+      <li itemscope itemtype="http://schema.org/SiteNavigationElement" class="sidebar-nav-item{% if page.title == node.url %} active{% endif %}"><a href="{{ site.url }}{{ link.url }}" itemprop="url"><span itemprop="name">{{ link.title }}</span></a></li>
       {% endfor %}
       <li class="sidebar-nav-item"><a href="{{ site.owner.vita }}">Vita</a></li>
     </ul>

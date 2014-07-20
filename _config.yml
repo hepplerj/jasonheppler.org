@@ -10,7 +10,7 @@ permalink:      /:year/:month/:day/:title/
 title:            Jason Heppler
 tagline:          "History, technology, coffee"
 description:      'Historian of the American West.'
-url:              http://jasonheppler.org
+url:
 
 # Site owner
 owner:
@@ -37,7 +37,18 @@ figures:
   enumerate: true
   analytics: true
 
-github:
-  repo:           https://github.com/hepplerj
+links:
+  - title: Home
+    url: /
+  - title: Colophon
+    url: /about/
+  - title: Archives
+    url: /archives/
+  - title: Digital & Public History
+    url: /digital/
+  - title: Research
+    url: /research/
+  - title: Teaching
+    url: /teaching/
 
 google_analytics_tracking_id: UA-12786552-1
