@@ -1,5 +1,5 @@
 /*
- * Designed from a modified version of Poole by @mdo. Learn more at
+ * Designed from a modified version of Poole by @mdo.
  * https://github.com/poole/poole.
  */
 
@@ -237,6 +237,15 @@ tbody tr:nth-child(odd) th {
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
+}
+
+.well {
+  padding: 3em;
+  margin-bottom: 3em;
+  text-align: justify;
+  font-size: 1.2em;
+  background: #f9f9f9;
+  border: 1px #333 dotted;
 }
 
 /*
