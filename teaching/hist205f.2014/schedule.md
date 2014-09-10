@@ -209,6 +209,9 @@ Guest: Nicholas Bauch, Spatial History Project
 *   Franco Moretti, *Graphs, Maps, Trees: Abstract Models for a Literary History*, chapters 1 & 2
 *   Stephen Robertson, "[Doing History in Hypertext][64]," *Journal of the Association for History and Computing*, August 2004.
 *   [Snow Fall][65], *New York Times*, 2012.
+*   [A Game of Shark and Minnow](http://www.nytimes.com/newsgraphics/2013/10/27/south-china-sea/), *New York Times*, 2013.
+*   [A Perfect Terrorist](http://www.pbs.org/wgbh/pages/frontline/labs/i/perfect-terrorist/), PBS, 2011.
+*   [The Last Hunt](http://thelasthunt.nfb.ca/#/thelasthunt), National Film Board of Canada.
 *   John Theibault, "[Visualization and Historical Arguments][66]"
 *   Johanna Drucker, "[Humanities Approaches to the Graphic Display][67]," *Digital Humanities Quarterly* 5 (2011).
 *   Andrew Kirk, "Appropriating Technology: Alternative Technology, The Whole Earth Catalog and Counterculture Environmental Politics," *Environmental History* 6.3 (2001): 374-394.
