@@ -10,7 +10,7 @@ permalink:      /:year/:month/:day/:title/
 title:            Jason Heppler
 tagline:          "History, technology, coffee"
 description:      'Historian of the American West.'
-url:
+url:              http://jasonheppler.org
 
 # Site owner
 owner:
@@ -30,6 +30,27 @@ owner:
   bio: "Historian of the North American West, environmental and urban history, digital history, coffee hobbyist"
   avatar: avatar.jpg
 
+# Course information
+course_baseurl: "/teaching/hist205f.2014"
+course_url: "http://jasonheppler.org/teaching/hist205f.2014"
+course_pdf: http://stanford.edu/~jheppler/stanford.syllabus.hist205f.2014f.pdf
+course_title: "Digital History: Sources, Methods, Problems"
+course_credithours: 5
+course_hashtag: hist205f
+course_meetingtime: "Mon., 3:15&ndash;6:05 p.m."
+course_number: "HISTORY 205F"
+course_prerequisites: "None"
+course_room: "Wallenberg 326"
+course_semester: "Fall 2014"
+instructor_email: jheppler@stanford.edu
+instructor_name: Jason Heppler
+instructor_office: "Lane Rm. 122"
+instructor_officehours: "Mon. and Thurs., 10a--12p or by appointment"
+instructor_officehours_link: http://jasonheppler.org/officehours
+instructor_twitter: jaheppler
+instructor_website: http://jasonheppler.org
+course_description: "An introduction to digital history."
+
 paginate:         8
 
 figures:
@@ -44,7 +65,7 @@ links:
     url: /about/
   - title: Archives
     url: /archives/
-  - title: Digital & Public History
+  - title: "Digital & Public History"
     url: /digital/
   - title: Research
     url: /research/

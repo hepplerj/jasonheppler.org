@@ -7,4 +7,4 @@ categories: [hacks]
 tags: [podcast, First Draft]
 ---
 
-Friend of the show Glen Worthy joins us to talk about DH14, the popularity of digital humanities projects, the humanities savior narrative, and ‪#‎dhsheep‬.
+Friend of the show Glen Worthey joins us to talk about DH14, the popularity of digital humanities projects, the humanities savior narrative, and ‪#‎dhsheep‬.

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+  {% include syllabus_head.html %}
+
+    <body>
+
+    {% include syllabus_header.html %}
+
+    <div class="page-content">
+      <div class="wrap">
+      {% if site.draft %}
+      <p class="draft-warning">
+        <strong>DRAFT SYLLABUS: final version coming soon</strong>
+      </p>
+      {% endif %}
+      {{ content }}
+      </div>
+    </div>
+
+    {% include syllabus_footer.html %}
+
+    </body>
+</html>

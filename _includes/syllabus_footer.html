@@ -1,0 +1,55 @@
+<footer class="site-footer">
+
+  <div class="wrap">
+
+    <h2 class="footer-heading">{{ site.course_title }}</h2>
+
+    <div class="footer-col-1 column">
+      <h3>Course</h3>
+      <ul>
+        <li>
+          {% if site.course_catalog %}
+            <a href="{{ site.course_catalog }}"> {{ site.course_number }} </a>
+          {% else %}
+            {{ site.course_number }}
+          {% endif %}
+          <span class="separator">|</span> {{ site.course_semester }}</li>
+        <li>Meets in {{ site.course_room }}</li>
+        <li>Meets on {{ site.course_meetingtime }}</li>
+        <li>Credit hours: {{ site.course_credithours }}</li>
+        <li>Prerequisites: {{ site.course_prerequisites }}</li>
+        {% if site.course_hashtag %}<li>
+            Course hashtag: <a href="https://www.twitter.com/hashtag/{{site.course_hashtag}}">#{{site.course_hashtag}}</a>
+          </li>{% endif %}
+      </ul>
+    </div>
+
+    <p id="back-link">
+      {% if site.course_pdf %}
+        <a class="page-link" href="{{ site.course_pdf }}">Download PDF version</a>
+      {% endif %}
+    </p>
+
+    <div class="footer-col-2 column">
+      <h3>Instructor</h3>
+      <ul>
+        <li>Instructor: <a href="{{ site.instructor_website }}">
+            {{ site.instructor_name }}</a></li>
+        <li>E-mail: <a href="mailto:{{ site.instructor_email }}">
+            {{ site.instructor_email }}</a></li>
+        <li>Office: {{ site.instructor_office }} </li>
+        <li>Office hours: {{ site.instructor_officehours }}</li>
+        {% if site.instructor_twitter %}<li>
+            Twitter: <a href="https://www.twitter.com/{{site.instructor_twitter}}">@{{site.instructor_twitter}}</a>
+          </li>{% endif %}
+      </ul>
+    </div>
+
+    <div class="footer-col-3 column">
+      <h3>Description</h3>
+      <p class="text">{{ site.course_description }}</p>
+    </div>
+
+  </div>
+
+</footer>

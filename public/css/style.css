@@ -70,11 +70,11 @@ a:focus {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.25;
   color: #313131;
   text-rendering: optimizeLegibility;
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 h1 {
   font-size: 2em;
@@ -108,7 +108,7 @@ p {
 
 @media (min-width: 38rem) {
   p {
-    font-size: .8em;
+    font-size: 14px;
   }
 }
 

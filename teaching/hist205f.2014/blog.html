@@ -1,0 +1,21 @@
+---
+layout: syllabus_page
+order: 10
+title: Blog
+permalink: '/teaching/hist205f.2014/blog/'
+...
+
+<div class="home">
+
+  <h1>Posts</h1>
+
+  <ul class="posts">
+    {% for post in site.posts.category.hist205f_2014 %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
