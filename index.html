@@ -5,7 +5,8 @@ title: Home
 
 <div class="posts">
   {% for post in paginator.posts %}
-  {% if post.external-url %}
+  {% if post.category == "hist205f_2014" %}
+  {% elsif post.external-url %}
   <div class="post">
     <h3 class="post-title">
       <a href="{{ post.external-url  }}">

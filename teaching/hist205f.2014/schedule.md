@@ -83,6 +83,7 @@ Guest: Mark Braude, Humanities+Design
 *   Roy Rosenzweig, "[Scarcity or Abundance? Preserving the Past in a Digital Era][26]," Roy Rosenzweig Center for History and New Media.
 *   Daniel Rosenberg, "[Data Before the Fact][27]"
 *   Hadley Wickham, "[Tidy Data][28]," *Journal of Statistical Software* (pre-print).
+*   Marc Dunkelman, "[What Data Can't Convey](http://chronicle.com/blogs/conversation/2014/08/19/what-data-cant-convey/)", *Chronicle of Higher Education*, August 19, 2014.
 *   Thomas Heinrich, "Cold War Armory: Military Contracting in Silicon Valley," *Enterprise & Society* 3 (2002): 247-284.
 
 ### Exercise:
@@ -104,7 +105,7 @@ Introduction to Palladio. You have two tasks this week. In class, we will begin 
 
 ## Oct 13: Text Mining and Analysis
 
-<!-- Guest: Mark Algee-Hewitt and Ryan Heuser, Stanford Literary Lab -->
+Guest: Mark Algee-Hewitt and Ryan Heuser, Stanford Literary Lab
 
 ### Readings:
 
@@ -113,6 +114,8 @@ Introduction to Palladio. You have two tasks this week. In class, we will begin 
 *   Miriam Posner, "[Very Basic Strategies for Interpreting Results from the Topic Modeling Tool][36]," October 29, 2012.
 *   Benjamin Schmidt, "[When you have a MALLET, everything looks like a nail][37]", *Sapping Attention*, November 2, 2012.
 *   Cameron Blevins, "[Topic Modeling Martha Ballard's Diary][38]", *historying*, January 4, 2010.
+*   Stephen Ramsay, "[The Hermeneutics of Screwing Around; or
+What You Do with a Million Books](http://www.playingwithhistory.com/wp-content/uploads/2010/04/hermeneutics.pdf)", April 17, 2010.
 
 ### Exercise
 
@@ -128,7 +131,8 @@ Introduction to Voyant Tools and MALLET. Begin completing these two tutorials in
 * Matt Jockers, "[The LDA Buffet is Now Open; or, Latent Dirichlet Allocation for English Majors][41]," September 29, 2011.
 * Matt Jockers, *Macroanalysis: Digital Methods and Literary History* (University of Illinois Press, 2013)
 * Robert K. Nelson, "[Introduction][42]," *Mining the Dispatch*.
-* Franco Moretti, *Distant Reading* (Verso, 2013)
+* Franco Moretti, *Distant Reading* (Verso, 2013).
+* Dan Gillick and Dave Orr, "[Teaching machines to read between the lines](http://googleresearch.blogspot.com/2014/08/teaching-machines-to-read-between-lines.html?m=1)," Research at Google, August 25, 2014. 
 * Thomas Heinrich, "Cold War Armory: Military Contracting in Silicon Valley," *Enterprise & Society* 3 (2002): 247--284.
 
 ## Oct 20: Spatial History
@@ -163,7 +167,10 @@ Introduction to Google Maps Engine Lite. In class, begin completing the followin
 ### Recommended:
 
 *   "Mapschool: A free introduction to geo," http://mapschool.io/.
+*   [Lessons](http://geospatialhistorian.wordpress.com/lessons/) from the Geospatial Historian
 *   Ben Schmidt, "[Reading digital sources: a case study in ship's logs][54]," *Sapping Attention*, November 15, 2012.
+*   Bodenhamer, David J., John Corrigan, and Trevor M. Harris. *The Spatial Humanities: GIS and the Future of Humanities Scholarship*. Bloomington: Indiana University Press, 2010.
+*   Gregory, Ian N. and Alistair Geddes. *Toward Spatial Humanities: Historical GIS and Spatial History*. Bloomington: Indiana University Press, 2014.
 *   Matthew A. Zook, Chapters 7 and 8, in *The Geography of the Internet Industry* (Malden: Blackwell, 2005): 96-132.
 *   Roger Lotchin, *Fortress California: From Warfare to Welfare, 1910-1961*
 
@@ -199,6 +206,7 @@ Introduction to Gephi. Begin completing the [tutorial for Gephi by Martin Grandj
 
 * AnnaLee Saxenian, "Networks of Immigrant Entrepreneurs," in *The Silicon Valley Edge*, pp. 218--275.
 * Emilio J. Castilla, "[Networks of Venture Capital Firms in Silicon Valley][63]," *International Journal of Technology Management* 25 (2003): 113--135.
+* "[Linking People Through History](http://www.ultrasaurus.com/2014/09/linking-people-through-history/)," *the evolving ultrasaurus*, September 8, 2014.
 
 ## Nov 3: Narrative, Visualization, and Digital Media
 
@@ -227,6 +235,7 @@ Guest: Nicholas Bauch, Spatial History Project
 *   Edward Tufte, *[Envisioning Information][68]*
 *   William G. Thomas, "[Writing A Digital History Journal Article from Scratch: An Account][69]" (December 2007).
 *   Stuart W. Leslie & Robert H. Kargon "Selling Silicon Valley: Frederick Terman's Model for Regional Advantage," *Business History Review* 70 (1996): 435--472.
+*   Lev Manovich, "What is Visualization?" *Poetess Archive Journal* 2 (December 2010).
 
 ## Nov 10: NO CLASS
 

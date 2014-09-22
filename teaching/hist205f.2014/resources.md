@@ -73,6 +73,9 @@ Below are some additional links that might be of use (thanks to [Lincoln Mullen]
 -   Elijah Meeks, [D3.js in Action][]
 -   Edward Tufte, *[The Visual Display of Quantitative Information][]*
 -   Scott Murray, *[Interactive Data Visualization for the Web][]*
+-   Martin Jay, *[Downcast Eyes: The Denigration of Vision in Twentieth-Century French Thought](http://www.ucpress.edu/book.php?isbn=9780520088856)* (University of California Press, 1994)
+-   Jonathan Crary, *[Techniques of the Observer: On Vision and Modernity in the Nineteenth Century](http://mitpress.mit.edu/books/techniques-observer)* (The MIT Press, 1992)
+-   W. J. T. Mitchell, *[What do Pictures Want: The Lives and Loves of Images](http://www.press.uchicago.edu/ucp/books/book/chicago/W/bo3534152.html)* (University of California Press, 2004)
 
 ## Natural Language
 
