@@ -10,7 +10,7 @@ permalink:      /:year/:month/:day/:title/
 title:            Jason Heppler
 tagline:          "History, technology, coffee"
 description:      'Historian of the American West.'
-url:              http://jasonheppler.org
+url:
 
 # Site owner
 owner:
