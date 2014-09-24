@@ -72,7 +72,11 @@ Examine at least two of the following digital archives and be prepared to discus
 
 ### Assignments:
 
-* **Blog Post #1**. Write about the digital archive you looked at and share your thoughts about the project. Try to tie the archives back to the readings. The post is due by **Saturday September 27 at midnight**.
+* **Blog Post #1**. Write about the digital archive you looked at and share
+your thoughts about the project. Try to tie the archives back to the readings.
+Think about how these projects relate to some of the issues, themes, and
+challenges raised by the readings. The post is due by **Saturday September
+27 at midnight**.
 * Discussion questions posted to the course blog by **Sunday September 28 at midnight**.
 
 ### Recommended:
