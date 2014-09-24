@@ -5,16 +5,16 @@ permalink: '/teaching/hist205f.2014/schedule/'
 title: Schedule
 ...
 
-Since we're spending three hours together once a week, I've set up the 
-schedule into "halves" for each class. We'll meet for roughly an hour and a 
-half, take a fifteen minute break, and reconvene for the remainder of the 
-class. The first half of the class will either revolve around a guest or 
-around reading discussion. The second half may vary with reading discussion, 
+Since we're spending three hours together once a week, I've set up the
+schedule into "halves" for each class. We'll meet for roughly an hour and a
+half, take a fifteen minute break, and reconvene for the remainder of the
+class. The first half of the class will either revolve around a guest or
+around reading discussion. The second half may vary with reading discussion,
 tool discussion, or getting hands-on with a tool.
 
-Note that readings are due on the date under which they are listed. For 
-example, on September 29 we are discussing digital archives, so you should 
-spend the week prior completing the readings, assignments, and prior-to-class 
+Note that readings are due on the date under which they are listed. For
+example, on September 29 we are discussing digital archives, so you should
+spend the week prior completing the readings, assignments, and prior-to-class
 exercises.
 
 ## Prior to class: Getting started
@@ -77,7 +77,8 @@ your thoughts about the project. Try to tie the archives back to the readings.
 Think about how these projects relate to some of the issues, themes, and
 challenges raised by the readings. The post is due by **Saturday September
 27 at midnight**.
-* Discussion questions posted to the course blog by **Sunday September 28 at midnight**.
+* Discussion questions posted to the course blog by **Sunday September 28 at
+midnight**.
 
 ### Recommended:
 
@@ -87,8 +88,6 @@ challenges raised by the readings. The post is due by **Saturday September
 *   Stuart W. Leslie, "The Biggest 'Angel' of Them All: The Military and the Making of Silicon Valley," in *Understanding Silicon Valley: The Anatomy of an Entrepreneurial Region*, ed. Martin Kenney (Stanford: Stanford University Press): 48-67.
 
 ## Oct 6: Data and the Humanities
-
-*Collaborators for the final project will be assigned this week*
 
 Guest: Mark Braude, Humanities+Design
 
@@ -198,14 +197,14 @@ Take the time to examine a couple of these projects and be prepared to discuss t
 Introduction to Google Maps Engine Lite. **Prior to class**, complete the
 following tutorial on Google Maps Engine: Jim Clifford, Josh MacFadyen, and
 Daniel Macfarlane, "[Intro to Google Maps and Google Earth][52]." **In
-class**, we will take a look at CartoDB and visualizing historical data using
-data you find on the web. Consult the Resources tab on the course website to
+class**, we will take a look at D3.js and visualizing historical data using
+data you find on the web. Consult the Resources page on the course website to
 find potential sources of historical data, or work with the data you've
 discovered in your research.
 
 ### Assignment:
 
-* **Blog post #4**. For this week's blog post, after you've completed the 
+* **Blog post #4**. For this week's blog post, after you've completed the
 Google Maps and Google Earth tutorial, begin by creating a historical
 geolocated Google map using a map of your choice from the [David Rumsey
 Historical Maps Collection][53] or using maps you've discovered in your
@@ -277,13 +276,19 @@ Guest: Nicholas Bauch, Spatial History Project
 
 *   Franco Moretti, *Graphs, Maps, Trees: Abstract Models for a Literary History*, chapters 1 & 2
 *   Stephen Robertson, "[Doing History in Hypertext][64]," *Journal of the Association for History and Computing*, August 2004.
+*   John Theibault, "[Visualization and Historical Arguments][66]"
+*   Johanna Drucker, "[Humanities Approaches to the Graphic Display][67]," *Digital Humanities Quarterly* 5 (2011).
+*   Andrew Kirk, "Appropriating Technology: Alternative Technology, The Whole Earth Catalog and Counterculture Environmental Politics," *Environmental History* 6.3 (2001): 374-394.
+
+### Exercise:
+
+Examine at least two of the following projects and be prepared to discuss them 
+in class:
+
 *   [Snow Fall][65], *New York Times*, 2012.
 *   [A Game of Shark and Minnow](http://www.nytimes.com/newsgraphics/2013/10/27/south-china-sea/), *New York Times*, 2013.
 *   [A Perfect Terrorist](http://www.pbs.org/wgbh/pages/frontline/labs/i/perfect-terrorist/), PBS, 2011.
 *   [The Last Hunt](http://thelasthunt.nfb.ca/#/thelasthunt), National Film Board of Canada.
-*   John Theibault, "[Visualization and Historical Arguments][66]"
-*   Johanna Drucker, "[Humanities Approaches to the Graphic Display][67]," *Digital Humanities Quarterly* 5 (2011).
-*   Andrew Kirk, "Appropriating Technology: Alternative Technology, The Whole Earth Catalog and Counterculture Environmental Politics," *Environmental History* 6.3 (2001): 374-394.
 
 ### Assignment:
 
@@ -311,9 +316,7 @@ Work on projects
 
 ## Nov 17: NO CLASS
 
-Work on projects
-
-**Schedule a time this week to check-in with the instructor on the progress of your project.**
+Work on projects. **Schedule a time this week to check-in with the instructor on the progress of your project.**
 
 ## Nov 24: The Futures of Digital History
 
