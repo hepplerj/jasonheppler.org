@@ -5,7 +5,17 @@ permalink: '/teaching/hist205f.2014/schedule/'
 title: Schedule
 ...
 
-Since we're spending three hours together once a week, I've set up the schedule into "halves" for each class. We'll meet for roughly an hour and a half, take a fifteen minute break, and reconvene for the remainder of the class. The first half of the class will either revolve around a guest or around reading discussion. The second half may vary with reading discussion, tool discussion, or getting hands-on with a tool.
+Since we're spending three hours together once a week, I've set up the 
+schedule into "halves" for each class. We'll meet for roughly an hour and a 
+half, take a fifteen minute break, and reconvene for the remainder of the 
+class. The first half of the class will either revolve around a guest or 
+around reading discussion. The second half may vary with reading discussion, 
+tool discussion, or getting hands-on with a tool.
+
+Note that readings are due on the date under which they are listed. For 
+example, on September 29 we are discussing digital archives, so you should 
+spend the week prior completing the readings, assignments, and prior-to-class 
+exercises.
 
 ## Prior to class: Getting started
 
@@ -88,12 +98,25 @@ Guest: Mark Braude, Humanities+Design
 
 ### Exercise:
 
-Introduction to Palladio. You have two tasks this week. In class, we will begin to [complete this tutorial on Open Refine/Google Refine][29]. Then, familiarize yourself with Palladio using the data provided by the instructor. Use the [tutorial videos produced by the Palladio team][30] to learn about the platform and what it can do.
+Introduction to Open Refine. **Prior to class**, do your best to [complete
+this tutorial on Open Refine/Google Refine][29]. **During class**, we will
+familiarize ourselves with Palladio and work with data you discover online.
+This may mean also combining your experience with Refine. In class, use the
+[tutorial videos produced by the Palladio team][30] to learn about the
+platform and what it can do. Consult the course website's References to find
+potential sources of historical data, or work with the data you've
+discovered in your research.
 
 ### Assignments:
 
-* **Blog Post #2**. Write about your experience using Palladio and the challenges of working with data in the humanities. What unique challenges are present with historical data? Are there ways we can surmount these issues? Use examples from the data you worked with The post is due by **Saturday October 4 at midnight**.
-* Discussion questions posted to the course blog by **Sunday October 5 at midnight**.
+* **Blog Post #2**. Write about your experience using Open Refine and the
+challenges you worked through or questions that arose as you completed the
+tutorial. What unique challenges are present with historical data? Are there
+ways we can surmount these issues? In what ways can we reconcile the precision
+expected by computers with the uncertainty of historical data? The post is
+due by **Saturday October 4 at midnight**.
+* Discussion questions posted to the course blog by **Sunday October 5 at
+midnight**.
 
 ### Recommended
 
@@ -119,12 +142,23 @@ What You Do with a Million Books](http://www.playingwithhistory.com/wp-content/u
 
 ### Exercise
 
-Introduction to Voyant Tools and MALLET. Begin completing these two tutorials in class: Shawn Graham, Scott Weingart, and Ian Milligan, "[Getting Started with MALLET][39]," *The Programming Historian* and Brian Croxall, "[Comparing Corpora in Voyant Tools][40]" July 18, 2012.
+Introduction to Voyant Tools. **Prior to class**, complete the tutorial by Brian
+Croxall, "[Comparing Corpora in Voyant Tools][40]," and find historical texts of
+your own and begin to use Voyant to analyze the texts. **During class**, we will be
+introduced to MALLET and topic modeling, and you will work on completing the
+tutorial by Shawn Graham, Scott Weingart, and Ian Milligan, "[Getting Started
+with MALLET][39]," *The Programming Historian*.
 
 ### Assignment:
 
-* **Blog Post #3**. Write about the readings and your work with Voyant and MALLET. In what ways can we use these tools to analyze historical information? What sort of insights can we anticipate? In what ways can we examine Silicon Valley's history through the use of textual analysis? The post is due by **Saturday October 11 at midnight**.
-* Discussion questions posted to the course blog by **Sunday October 12 at midnight**.
+* **Blog Post #3**. Write about the readings and your work with Voyant. In
+what ways can we use such tools to analyze historical information? What sort
+of insights can we anticipate? Are there limitations in the tool that stand
+out to you? Speculate on how we might examine Silicon Valley's history through
+the use of textual analysis? The post is due by **Saturday October 11 at
+midnight**.
+* Discussion questions posted to the course blog by **Sunday October 12 at
+midnight**.
 
 ### Recommended:
 
@@ -132,7 +166,7 @@ Introduction to Voyant Tools and MALLET. Begin completing these two tutorials in
 * Matt Jockers, *Macroanalysis: Digital Methods and Literary History* (University of Illinois Press, 2013)
 * Robert K. Nelson, "[Introduction][42]," *Mining the Dispatch*.
 * Franco Moretti, *Distant Reading* (Verso, 2013).
-* Dan Gillick and Dave Orr, "[Teaching machines to read between the lines](http://googleresearch.blogspot.com/2014/08/teaching-machines-to-read-between-lines.html?m=1)," Research at Google, August 25, 2014. 
+* Dan Gillick and Dave Orr, "[Teaching machines to read between the lines](http://googleresearch.blogspot.com/2014/08/teaching-machines-to-read-between-lines.html?m=1)," Research at Google, August 25, 2014.
 * Thomas Heinrich, "Cold War Armory: Military Contracting in Silicon Valley," *Enterprise & Society* 3 (2002): 247--284.
 
 ## Oct 20: Spatial History
@@ -157,12 +191,26 @@ Take the time to examine a couple of these projects and be prepared to discuss t
 
 ### Exercise:
 
-Introduction to Google Maps Engine Lite. In class, begin completing the following tutorial on Google Maps Engine: Jim Clifford, Josh MacFadyen, and Daniel Macfarlane, "[Intro to Google Maps and Google Earth][52]."
+Introduction to Google Maps Engine Lite. **Prior to class**, complete the
+following tutorial on Google Maps Engine: Jim Clifford, Josh MacFadyen, and
+Daniel Macfarlane, "[Intro to Google Maps and Google Earth][52]." **In
+class**, we will take a look at CartoDB and visualizing historical data using
+data you find on the web. Consult the Resources tab on the course website to
+find potential sources of historical data, or work with the data you've
+discovered in your research.
 
 ### Assignment:
 
-* **Homework #2**. Create a historical map using geolocated data, images, or video using Google Maps Engine and a map of your choice from the [David Rumsey Historical Maps Collection][53]. Write **blog post #4** about your progress, challenges, or successes using this tool. Include screen captures or embedded maps. Reflect on spatial history and the usefulness (or not) of analyzing historical events spatially. How might we understand the history of Silicon Valley through spatial history? Embed your georectified map(s) in your blog post. Due by **Saturday October 18 at midnight**.
-* Discussion questions posted to the course blog by **Sunday October 19 at midnight**.
+* **Blog post #4**. For this week's blog post, after you've completed the 
+Google Maps and Google Earth tutorial, begin by creating a historical
+geolocated Google map using a map of your choice from the [David Rumsey
+Historical Maps Collection][53] or using maps you've discovered in your
+research. Include screen captures or embedded maps in your post. Reflect on
+spatial history and the usefulness of analyzing historical events spatially.
+How might we understand the history of Silicon Valley through spatial history?
+Due by **Saturday October 18 at midnight**.
+* Discussion questions posted to the course blog by **Sunday October 19 at
+midnight**.
 
 ### Recommended:
 
@@ -195,12 +243,21 @@ discuss them:
 
 ## Exercise
 
-Introduction to Gephi. Begin completing the [tutorial for Gephi by Martin Grandjean][62] in class. Create a network using historical data provided by the instructor. Play around with different layouts and algorithms and take note of how it changes the network and your interpretations of the network.  
+Introduction to Gephi. **Prior to class**, complete this [tutorial for Gephi
+by Martin Grandjean][62]. Create a network using historical data provided by
+the instructor, or use data you've uncovered in your own research. Play around
+with different layouts and algorithms and take note of how it changes the
+network and your interpretations of the network.
 
 ### Assignment:
 
-* **Blog Post #5**. Reflect on the ways historians could use network analysis in their work. What sort of relationships might networks allow us to see? What sort of networks did you create and what did you learn about the different algorithms? What sort of historical questions could we pose about Silicon Valley using networks? Post due by **Saturday October 25 at midnight**.
-* Discussion questions posted to the course website by **Sunday October 26 at midnight**.
+* **Blog Post #5**. Reflect on the ways historians could use network analysis
+in their work. What sort of relationships might networks allow us to see? What
+sort of networks did you create and what did you learn about the different
+algorithms? What sort of historical questions could we pose about Silicon
+Valley using networks? Post due by **Saturday October 25 at midnight**.
+* Discussion questions posted to the course website by **Sunday October 26 at
+midnight**.
 
 ### Recommended:
 
@@ -226,8 +283,15 @@ Guest: Nicholas Bauch, Spatial History Project
 
 ### Assignment:
 
-* **Blog Post #6**. Reflect on the ways we can take advantage of the affordances of the non-linear nature of digital narrative in communicating information and new knowledge about the past. Historical events rarely unfold in the linear fashion we often present them in books. Can hypertext or interactivity help us more effectively communicate the past? Can new narratives be crafted that better explain contingency and complexity of the past? Due by **Saturday November 1 at midnight**.
-* Discussion questions posted to CourseWork by **Sunday November 2 at midnight**.
+* **Blog Post #6**. Reflect on the ways we can take advantage of the
+affordances of the non-linear nature of digital narrative in communicating
+information and new knowledge about the past. Historical events rarely unfold
+in the linear fashion we often present them in books. Can hypertext or
+interactivity help us more effectively communicate the past? Can new
+narratives be crafted that better explain contingency and complexity of the
+past? Due by **Saturday November 1 at midnight**.
+* Discussion questions posted to the course website by **Sunday November 2 at
+midnight**.
 
 ### Recommended:
 
@@ -243,17 +307,27 @@ Work on projects
 
 ## Nov 17: NO CLASS
 
-Work on projects  
+Work on projects
 
 **Schedule a time this week to check-in with the instructor on the progress of your project.**
 
 ## Nov 24: The Futures of Digital History
 
-You and your collaborators will present on the progress of your research to the class. Come prepared to talk for at least five minutes, with an additional five to ten minutes of question and answer. Your presentation should focus on the research your conducting, the historical question(s) you're asking, examples of the digital work you're completing, and how digital methods are helping address your research questions.
+You will present on the progress of your research to the class. Come prepared
+to talk for at least five minutes, with an additional five to ten minutes of
+question and answer. Your presentation should focus on the research your
+conducting, the historical question(s) you're asking, examples of the digital
+work you're completing, and how digital methods are helping address your
+research questions.
 
 ### Assignment:
 
-* **Blog Post #7**. Synthesize everything that we've talked about and what you have seen over the course of the quarter. What do you envision will be the future of digital history? Do you think digital history will play a role in the way we analyze and interpret the past? Are there ways that digital history fall short and where can it improve it? Post due by **Saturday November 22 at midnight**.
+* **Blog Post #7**. Synthesize everything that we've talked about and what you
+have seen over the course of the quarter. What do you envision will be the
+future of digital history? Do you think digital history will play a role in
+the way we analyze and interpret the past? Are there ways that digital history
+fall short and where can it improve it? Post due by **Saturday November 22 at
+midnight**.
 * **Final book review due**
 
 ## Dec 1: Final presentations and electronic poster session
