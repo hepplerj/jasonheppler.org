@@ -46,7 +46,6 @@ Below are some additional links that might be of use (thanks to [Lincoln Mullen]
 -   Andrew Hunt and David Thomas, *The Pragmatic Programmer: From
     Journeyman to Master* (Addison-Wesley, 1999).
 -   Jason Heppler, *[The Rubyist Historian][]*
--   Lincoln Mullen, *[Digital History Methods in R][]*
 
 ## Documentation
 
