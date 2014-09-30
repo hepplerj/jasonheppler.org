@@ -43,6 +43,43 @@ much more.
 - Konrad Lawson, [Getting Started With a GitHub Repository][]
 - Konrad Lawson, [Resources for Learning Git and GitHub][]
 
+## Git
+
+Normal work:
+
+-   `git init`
+-   `git status`
+-   `git diff`
+-   `git add`
+-   `git commit`
+-   `git commit -a` and `git commit -m` and `git commit -am`
+-   `git checkout -b branch-name`
+-   `git merge`
+-   `git rebase`
+-   `git push origin master`
+-   `git tag`
+-   `git clone`
+
+How to fix things when they go wrong:
+
+-   `git reset HEAD filename` to unstage
+-   `git checkout file` to revert to HEAD
+-   `git diff master..branch-name`
+-   `git log`
+-   `git blame`
+-   `git checkout commit`
+-   `git revert commit`
+
+Good things to know:
+
+-   `.gitignore` file
+-   `~/.gitconfig` file
+
+Gists and Gistup
+
+-   [Gists][]
+-   [Gistup][]: `npm install -g gistup`
+
   [Markdown]: http://daringfireball.net/projects/markdown/
   [Mastering Markdown]: https://guides.github.com/features/mastering-markdown/
   [Pandoc]: http://johnmacfarlane.net/pandoc/
@@ -53,3 +90,5 @@ much more.
   [Getting Started With a GitHub Repository]: http://chronicle.com/blogs/profhacker/getting-started-with-a-github-repository/47393
   [Resources for Learning Git and GitHub]: http://chronicle.com/blogs/profhacker/resources-for-learning-git-and-github/48285
   [Why (and How) I Wrote My Academic Book in Plain Text]: http://wcm1.web.rice.edu/my-academic-book-in-plain-text.html
+  [Gists]: https://gist.github.com/
+  [Gistup]: https://github.com/mbostock/gistup

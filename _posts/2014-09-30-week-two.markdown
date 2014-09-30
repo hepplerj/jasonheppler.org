@@ -1,0 +1,104 @@
+---
+layout: syllabus_post
+title: 'Week 2: Digital Archives and Libraries'
+date: 2014-09-30 09:11:41
+category: hist205f_2014 
+...
+
+![Steve Jobs note][1]  
+[source][2]
+
+## Silicon Valley Archives
+
+* [Silicon Valley Archives][3]
+* [Apple Computer Collection][4]
+
+## The Mother of All Demos
+
+[Douglas Engelbart's demonstration][5] 
+of windows, hypertext, graphics, the computer mouse, revision control, and 
+video.
+
+{::nomarkdown}
+<iframe width="420" height="315" src="//www.youtube.com/embed/yJDv-zdhzMY" 
+frameborder="0" allowfullscreen></iframe>
+{:/nomarkdown}
+
+## DeadDotCom Archive
+
+* [Lessons of Survival, From the Dot-Com Attic][6], 
+*New York Times*, November 21, 2008
+* [DotcomArchive][7]
+
+## Leslie Berlin's "Joker" Article
+
+Here's the text of Leslie Berlin's *Bloomberg* article (cited [here][8] on the Steve Jobs "Joker" 
+document:
+
+> In June 1976, Steve Jobs went looking for someone to print the manual for 
+> the Apple I computer, the first product from the company he had started with 
+> Steve Wozniak and Ron Wayne a few months earlier. Jobs’s friend Regis 
+> McKenna, head of Silicon Valley’s premier advertising and public relations 
+> firm, suggested he contact Mike Rose, who ran a small advertising agency in 
+> Los Altos.  After speaking with Jobs on the phone, Rose was leery.  He wrote 
+> a short note to his business partner, warning him that young Mr. Jobs would 
+> be in touch. That note, which Mike Rose donated to the Silicon Valley 
+> Archives at Stanford in 1998, is reproduced below. “They are 2 guys – they 
+> build kits – operate out of a garage,” Rose wrote. “Sounds flakey. Watch 
+> it!”
+
+> The note is wonderful in part because it reveals how much Silicon Valley has 
+> changed in 35 years.  In 1976, two guys trying to launch a tech company from 
+> a garage in the heart of Silicon Valley were flakes. Now, someone in Mike 
+> Rose’s position might well ask for a piece of the action – payment in the 
+> form of a small bit of stock, perhaps?
+
+> The note also shows us that in some ways, the twenty-one-year-old Steve Jobs 
+> was not too different from the man he later became.  Jobs may have struck 
+> Rose as a “joker,” but the young entrepreneur is concerned about secrecy 
+> (“Wouldn’t trust me,” Rose writes) and drives a hard bargain (“wants it for 
+> nothing”).
+
+> In the end, Jobs rejected Rose’s bid as too high and went on to have a 
+> typesetter handle production of the Apple I manual.   That manual, too, 
+> shows how much has changed in thirty-five years.  On the cover, the company 
+> was called Apple Computer, not Apple.  The logo was not the famous fruit 
+> with a missing bite, but an elaborate illustration, drawn by Ron Wayne, 
+> depicting Isaac Newton reading a book – reading a book! – beneath an apple 
+> tree.  [A quote from Wordsworth encircles the drawing: “A mind forever 
+> voyaging through strange seas of thought – alone.”]
+> And the product described in the manual’s twelve pages, while advanced for 
+> its day, is far from the elegant, user-friendly device associated with Apple 
+> today.  The manual includes schematics and instructions for a test to run 
+> upon starting the machine:  Step Two: “Type- 0 : A9 b 0 b AA b 20 b EF b EF 
+> b FF b E8 b 8A b 4C b 2 b 0 (RET)”.  And then there is the description of 
+> the computer itself: “The Apple Computer is fully assembled, tested, and 
+> burned in.  The only external devices necessary for operation of the system 
+> are: An ASCII encoded keyboard, a video display monitor, and AC power 
+> sources of 8 to 10 Volts (RMS) @ 3 amps and 28 Volts (RMS) @ 1 amp.”
+
+## Silicon Valley's Spatial History
+
+* Alexis Madrigal, "[Not Even Silicon Valley Escapes History][9]," *The Atlantic*, July 23, 2013.
+
+## Valley of the Shadow
+
+* William G. Thomas III and Edward Ayers, "[The Differences Slavery Made: A Close Analysis of Two American Communities][10]", *American Historical 
+Review*
+* William G. Thomas, "[Writing A Digital History Journal Article from Scratch: An Account][11]," December 2007.
+
+![xkcd Heat Map][12]
+
+
+[1]: /assets/images/jobs-flakey.jpg
+[2]: http://www.mactrast.com/2011/12/steve-jobs-was-a-hard-bargaining-secretive-joker-according-to-1976-letter/
+[3]: http://lib.stanford.edu/stanford-silicon-valley-archives
+[4]: http://library.stanford.edu/areas/apple-computer-collections
+[5]: http://web.stanford.edu/dept/SUL/library/extra4/sloan/MouseSite/1968Demo.html
+[6]: http://www.nytimes.com/2008/11/23/business/23proto.html?scp=10&sq=%22Leslie+Berlin%22&st=nyt&_r=0
+[7]: http://dotcomarchive.org/
+[8]: http://web.stanford.edu/dept/SUL/library/extra4/sloan/MouseSite/1968Demo.html
+[9]: http://www.theatlantic.com/technology/archive/2013/07/not-even-silicon-valley-escapes-history/277824/
+[10]: http://www2.vcdh.virginia.edu/AHR/
+[11]: http://digitalhistory.unl.edu/essays/thomasessay.php
+[12]: http://imgs.xkcd.com/comics/heatmap.png
