@@ -36,6 +36,12 @@ Below are some additional links that might be of use (thanks to [Lincoln Mullen]
     books.
 -   [Project GITenberg][] has many of the same book available via Git.
 
+## Silicon Valley
+
+- [Silicon Genesis: An Oral History of Semiconductor Technology][1]
+- PBS American Experience, [Silicon Valley][2]
+- Computer History Museum, [Oral History Collection](http://www.computerhistory.org/collections/oralhistories/)
+
 ## Programming
 
 -   [The Programming Historian][]
@@ -111,3 +117,5 @@ Below are some additional links that might be of use (thanks to [Lincoln Mullen]
   [Interactive Data Visualization for the Web]: http://alignedleft.com/work/d3-book
   [Digital History Methods in R]: http://dh-r.lincolnmullen.com/
   [D3.js in Action]: http://www.manning.com/meeks/
+  [1]: http://silicongenesis.stanford.edu/
+  [2]: http://www.pbs.org/wgbh/americanexperience/films/silicon/
