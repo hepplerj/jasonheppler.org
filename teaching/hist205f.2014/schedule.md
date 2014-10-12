@@ -197,8 +197,7 @@ Take the time to examine a couple of these projects and be prepared to discuss t
 Introduction to Google Maps Engine Lite. **Prior to class**, complete the
 following tutorial on Google Maps Engine: Jim Clifford, Josh MacFadyen, and
 Daniel Macfarlane, "[Intro to Google Maps and Google Earth][52]." **In
-class**, we will take a look at D3.js and visualizing historical data using
-data you find on the web. Consult the Resources page on the course website to
+class**, we will take a look at Neatline and Omeka for creating spatial exhibits. Consult the Resources page on the course website to
 find potential sources of historical data, or work with the data you've
 discovered in your research.
 
@@ -208,7 +207,7 @@ discovered in your research.
 Google Maps and Google Earth tutorial, begin by creating a historical
 geolocated Google map using a map of your choice from the [David Rumsey
 Historical Maps Collection][53] or using maps you've discovered in your
-research. Include screen captures or embedded maps in your post. Reflect on
+research. **Include screen captures or embedded maps in your post**. Reflect on
 spatial history and the usefulness of analyzing historical events spatially.
 How might we understand the history of Silicon Valley through spatial history?
 Due by **Saturday October 18 at midnight**.
@@ -247,8 +246,7 @@ discuss them:
 ## Exercise
 
 Introduction to Gephi. **Prior to class**, complete this [tutorial for Gephi
-by Martin Grandjean][62]. Create a network using historical data provided by
-the instructor, or use data you've uncovered in your own research. Play around
+by Martin Grandjean][62]. Create a network using historical data provided Grandjean, find practice datasets on the [Gephi wiki](https://wiki.gephi.org/index.php/Datasets), or use data you've uncovered in your own research. Play around
 with different layouts and algorithms and take note of how it changes the
 network and your interpretations of the network.
 
@@ -258,7 +256,7 @@ network and your interpretations of the network.
 in their work. What sort of relationships might networks allow us to see? What
 sort of networks did you create and what did you learn about the different
 algorithms? What sort of historical questions could we pose about Silicon
-Valley using networks? Post due by **Saturday October 25 at midnight**.
+Valley using networks? **Try to include screenshots from your Gephi exercise.** Post due by **Saturday October 25 at midnight**.
 * Discussion questions posted to the course website by **Sunday October 26 at
 midnight**.
 
