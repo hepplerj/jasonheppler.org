@@ -1,0 +1,29 @@
+---
+layout: syllabus_post
+title: 'Week 5: Spatial History'
+date: 2014-10-21 21:51:48
+category: hist205f_2014 
+...
+
+![Steinberg, New Yorker](/assets/images/steinberg_new_yorker.jpg)  
+Saul Steinberg, "[A View of the World from 9th Avenue](http://en.wikipedia.org/wiki/View_of_the_World_from_9th_Avenue)," *New Yorker*, March 
+29, 1976 
+
+## Spatial History
+
+* Paul Carter, *[The Road to Botony Bay](http://www.amazon.com/The-Road-Botany-Bay-Exploration/dp/081666997X)*
+* William Cronon, *[Nature's Metropolis](http://www.amazon.com/Natures-Metropolis-Chicago-Great-West/dp/0393308731)*
+* Timothy Mahoney, *[Gilded Age Plains City: The Great Sheedy Murder Trial and the Booster Ethos in Lincoln, Nebraska](http://gildedage.unl.edu)*
+* [City Nature](http://citynature.stanford.edu)
+* "[Welcome to the Anthropocene](http://story.maps.arcgis.com/apps/MapJournal/?appid=d14f53dcaf7b4542a8c9110eeabccf1c)," ESRI.
+* Google Earth Engine, [Landsat Annual Timelapse 1984-2012](https://earthengine.google.org/#intro)
+
+## Spatial Tools
+
+* [Neatline](http://neatline.org)
+* [Curatescape](http://curatescape.org)
+* [ESRI StoryMap](http://storymaps.arcgis.com/en/)
+* [d3.carto](https://github.com/emeeks/d3-carto-map/)
+* [Spatial Humanities Step by Step](http://spatial.scholarslab.org/stepbystep/)
+* Harvard, [WorldMap](http://worldmap.harvard.edu)
+  * See, especially, the work by [historian Colin Gordon](http://worldmap.harvard.edu/mappingdecline/)
