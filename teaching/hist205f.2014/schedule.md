@@ -280,7 +280,7 @@ Guest: Nicholas Bauch, Spatial History Project
 
 ### Exercise:
 
-Examine at least two of the following projects and be prepared to discuss them 
+Examine at least two of the following projects and be prepared to discuss them
 in class:
 
 *   [Snow Fall][65], *New York Times*, 2012.
@@ -310,13 +310,9 @@ midnight**.
 
 ## Nov 10: NO CLASS
 
-Work on projects
-
-## Nov 17: NO CLASS
-
 Work on projects. **Schedule a time this week to check-in with the instructor on the progress of your project.**
 
-## Nov 24: The Futures of Digital History
+## Nov 17: The Futures of Digital History
 
 You will present on the progress of your research to the class. Come prepared
 to talk for at least five minutes, with an additional five to ten minutes of
@@ -331,13 +327,22 @@ research questions.
 have seen over the course of the quarter. What do you envision will be the
 future of digital history? Do you think digital history will play a role in
 the way we analyze and interpret the past? Are there ways that digital history
-fall short and where can it improve it? Post due by **Saturday November 22 at
+fall short and where can it improve it? Post due by **Saturday November 17 at
 midnight**.
-* **Final book review due**
+
+## Nov 24: NO CLASS
+
+Thanksgiving Break. Work on projects.
 
 ## Dec 1: Final presentations and electronic poster session
 
 Wallenberg Learning Theater
+
+## Dec 8: NO CLASS
+
+Good luck on finals!
+
+**Final book review due December 8**
 
 
 [1]: http://wcm1.web.rice.edu/howtoread.html
