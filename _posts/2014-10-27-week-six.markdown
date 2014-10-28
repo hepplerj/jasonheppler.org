@@ -1,0 +1,22 @@
+---
+layout: syllabus_post
+title: 'Week 6: Networks'
+date: 2014-10-27 13:02:57
+category: hist205f_2014
+...
+
+![Silicon Valley geneology](https://raw.githubusercontent.com/stanford-history/stanford-history.github.io/master/data/silicon-valley-genealogy.jpg)  
+<figcaption><a href="https://github.com/stanford-history/stanford-history.github.io/tree/master/data">Source</a></figcaption>
+
+## Traitorous Eight and Silicon Valley
+
+- PBS American Experience, [Silicon Valley](http://www.pbs.org/wgbh/americanexperience/films/silicon/)
+
+## Networks
+
+- Kieran Healy, "[Using Metadata to Find Paul Revere](http://kieranhealy.org/blog/archives/2013/06/09/using-metadata-to-find-paul-revere/)," June 9, 2013
+- Kieran Healy, "[Following Up on Paul Revere](http://kieranhealy.org/blog/archives/2013/06/11/following-up-on-paul-revere/)," June 11, 2013
+- Joanna Pearlstein, "[The Schools Where Apple, Google, and Facebook Get Their Recruits](http://www.wired.com/2014/05/alumni-network-2/)," *Wired* May 22, 2014
+- [Knot](http://vimeo.com/67392476), Humanities+Design
+- Andy Baio, "[72 Hours of #Gamergate](https://medium.com/message/72-hours-of-gamergate-e00513f7cf5d)," *Medium*, October 27, 2014
+- Marten Düring, [Bibliography](http://historicalnetworkresearch.org/bibliography/), *Historical Network Research*
