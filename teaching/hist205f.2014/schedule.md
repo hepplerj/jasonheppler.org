@@ -272,16 +272,14 @@ Guest: Nicholas Bauch, Spatial History Project
 
 ### Readings:
 
-*   Franco Moretti, *Graphs, Maps, Trees: Abstract Models for a Literary History*, chapters 1 & 2
-*   Stephen Robertson, "[Doing History in Hypertext][64]," *Journal of the Association for History and Computing*, August 2004.
+* Nick Bauch, *Enchanting the Desert* (website and credentials via CourseWork)
+  * We will also be reading the anonymous peer reviews of the project and Nick's responses to the reviews. Make sure to spend a significant amount of time with Nick's project -- at least an hour or two.
 *   John Theibault, "[Visualization and Historical Arguments][66]"
 *   Johanna Drucker, "[Humanities Approaches to the Graphic Display][67]," *Digital Humanities Quarterly* 5 (2011).
-*   Andrew Kirk, "Appropriating Technology: Alternative Technology, The Whole Earth Catalog and Counterculture Environmental Politics," *Environmental History* 6.3 (2001): 374-394.
 
 ### Exercise:
 
-Examine at least two of the following projects and be prepared to discuss them
-in class:
+Examine one or two of the following projects:
 
 *   [Snow Fall][65], *New York Times*, 2012.
 *   [A Game of Shark and Minnow](http://www.nytimes.com/newsgraphics/2013/10/27/south-china-sea/), *New York Times*, 2013.
@@ -302,6 +300,8 @@ midnight**.
 
 ### Recommended:
 
+*   Andrew Kirk, "Appropriating Technology: Alternative Technology, The Whole Earth Catalog and Counterculture Environmental Politics," *Environmental History* 6.3 (2001): 374-394.
+*   Stephen Robertson, "[Doing History in Hypertext][64]," *Journal of the Association for History and Computing*, August 2004.
 *   Janet H. Murray, "From Additive to Expressive Form," *Hamlet on the Holodeck: The Future of Narrative in Cyberspace*.
 *   Edward Tufte, *[Envisioning Information][68]*
 *   William G. Thomas, "[Writing A Digital History Journal Article from Scratch: An Account][69]" (December 2007).
