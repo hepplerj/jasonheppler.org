@@ -20,7 +20,7 @@ end
 desc "Nuke and rebuild"
 task :nuke do
     sh 'rm -rf _site'
-    system "jekyll"
+    sh "jekyll"
 end
 
 desc "Build the production version of the site"
