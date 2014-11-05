@@ -26,6 +26,26 @@ Silicon Valley, 1945-1990*, University of Nebraska-Lincoln (expected 2015).
 > Silicon Valley's development, but Americans' changing understanding of 
 > nature and the environmental costs of urban and industrial development.
 
+*Superfund Sites of Silicion Valley*: Soon to be released, this interactive map 
+will allow users to explore Superfund sites in the Bay Area and add layers 
+of information including environment features, Census data, historical tech 
+companies, and zoning records.
+
+![Superfund sites](/assets/images/diss_superfund.png)
+
+*Zoning the Bay Area*: A work in progress, I attempt to chart zoning and zoning 
+changes in the Bay Area.
+
+![Zoning changes](/assets/images/diss_zoning.png)
+
+*Open Space of the Bay Area*: A work in progress, I am creating an interactive 
+map charting the establishment of open space, parks, reserves, and wilderness 
+areas on an interactive timeline. The map will include information layers that 
+include acres under protection, governmental units that oversee protected 
+areas, and urban-rural fringes. 
+
+![Open space](/assets/images/diss_green_space.png)
+
 ## Geography of the Post
 
 In collaboration with Cameron Blevins, we visualized 14,000 post offices in 
