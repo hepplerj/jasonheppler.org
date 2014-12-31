@@ -62,8 +62,8 @@ task :write do |t|
     post.puts "tags: []"
     post.puts "---"
   end
-  puts "Now opening #{path} in Sublime..."
-  system "subl #{path}"
+  puts "Now opening #{path} in vim..."
+  system "mvim #{path}"
 end
 
 def get_stdin(message)

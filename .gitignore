@@ -25,6 +25,7 @@ _bak
 *.rar
 *.tar
 *.zip
+Gemfile.lock
 
 # Logs and databases #
 ######################
