@@ -18,7 +18,7 @@ American West, and digital and public history. I am a fourth generation westerne
 
 I am the Academic Technology Specialist in the [Department of History][] at [Stanford University][], where I collaborate with faculty and graduate students on innovations in using technology in their teaching and research. Most of my work focuses on data visualization, design, and digital and spatial history.
 
-Additionally, I am a Ph.D. Candidate in [History] at the [University of Nebraska-Lincoln][] specializing in the North American West, 20th century United States, and digital history. My dissertation research focuses on the urban and environmental history of Silicon Valley and the rise of environmental politics in the postwar era.
+Additionally, I am a Ph.D. Candidate in [History] at the [University of Nebraska-Lincoln][] specializing in the North American West, 20th century United States, and digital history. My dissertation research focuses on the urban and environmental history of Silicon Valley and the rise of environmental politics in the Sunbelt.
 
 I serve as a digital content advisor for [The American Yawp][], a free, online, collaboratively-written textbook of American history, and as the digital editor for [The Middle West Review][], a peer-reviewed online journal of Midwestern history.
 
@@ -43,7 +43,7 @@ I am scattered around the Internet:
 * [Twitter][]
 * [Zotero][]
 
-I also maintain a linkblog at Tumblr and have contributed to Gradhacker, Profhacker, and BlogWest:
+I also maintain a linkblog at Tumblr and occasionally contribute to Gradhacker, Profhacker, and BlogWest:
 
 * [Tumbclio][]
 * [Gradhacker][]

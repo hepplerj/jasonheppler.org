@@ -32,7 +32,7 @@
  */
 
 html {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", Georgia, serif;
 }
 @media (min-width: 48rem) {
   html {

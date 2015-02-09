@@ -38,7 +38,7 @@ body {
 }
 
 html {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", Georgia, serif;
   font-size: 100%;
   line-height: 1.5;
   color: #222;
@@ -277,6 +277,13 @@ tbody tr:nth-child(odd) th {
   margin-right: auto;
 }
 
+aside {
+  padding: 2em;
+  margin-bottom: 2em;
+  text-align: justify;
+  font-size: .8em;
+  background: #ECF0F1;
+}
 
 /*
  * Masthead
@@ -705,6 +712,16 @@ a.sidebar-nav-item:focus {
     margin-left: 22rem;
     margin-right: 4rem;
   }
+}
+
+.bio {
+  border: 1px solid #268bd2;
+  padding: 1rem;
+  margin-bottom: 4rem;
+}
+
+.bio p {
+  margin-bottom: 0;
 }
 
 /*

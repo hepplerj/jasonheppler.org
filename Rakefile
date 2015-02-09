@@ -66,6 +66,25 @@ task :write do |t|
   system "mvim #{path}"
 end
 
+desc "rsync to server"
+task :rsync do
+	puts "\nDeploying the site via rsync..."
+
+	ssh_port       = "22"
+	ssh_user       = "jasonhep@jasonheppler.org"
+	rsync_delete   = true
+	rsync_options  = "--checksum --stats -avz -e"
+	public_dir     = "_site/"
+	document_root  = "~/public_html/jasonheppler/"
+
+	exclude = ""
+	if File.exists?('./rsync-exclude')
+		exclude = "--exclude-from '#{File.expand_path('./rsync-exclude')}'"
+	end
+
+	ok_failed system("rsync #{rsync_options} 'ssh -p #{ssh_port}' #{exclude} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}")
+end
+
 def get_stdin(message)
   print message
   STDIN.gets.chomp
