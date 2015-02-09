@@ -206,7 +206,7 @@ conflicts with Native Americans are happening throughout the west in the
 1870s and 1880s. You can select those years. You can look at places
 where communities go away and where they spring up -- and that's key.
 
-**What the map does is leads me questions.** It leads me to places on a
+**What the map does is lead me to questions.** It leads me to places on a
 map that may be overlooked by historians. Some of these places no longer
 exist; they, quite literally, are removed from the historical record.
 Some of these places are mining camps -- they exist only for a year
