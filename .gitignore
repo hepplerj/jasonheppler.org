@@ -1,17 +1,7 @@
 # Specific Jekyll Files #
 #########################
-_drafts
 _site
-_bak
-
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
+_www
 
 # Packages #
 ############
@@ -36,6 +26,24 @@ Gemfile.lock
 # OS generated files #
 ######################
 .DS_Store*
+DS_Store
 ehthumbs.db
 Icon?
 Thumbs.db
+
+*.vcf
+.bundle
+.gist-cache
+.preview-mode
+.pygments-cache
+.sass-cache
+_deploy
+node_modules
+source/downloads/pdf/jah-cv.pdf
+vendor
+._sass
+
+.gitignore
+
+# Files, folders, and paths
+source/_drafts

@@ -1,26 +1,65 @@
 # Jason Heppler
-# Updated 2014-07-13
+# Updated 2015-02-24
 
 require "rake/clean"
 require "stringex"
+require "yaml"
+require "fileutils"
 
-## -- Config -- ##
-source_dir  = "_site"
-draft_dir   = "_drafts"
-posts_dir   = "_posts"
-server_port = "4000"
+# Configuration
 
-## -- Working with Jekyll -- ##
-desc 'default: list available rake tasks'
-task :default do
-	puts 'Try one of these specific tasks:'
-	sh 'rake --tasks --silent'
+# Set "rake watch" as default
+task :default => :preview
+
+# Load the configuration file
+CONFIG = YAML.load_file("_config.yml")
+
+# Get and parse the date
+DATE = Time.now.strftime("%Y-%m-%d")
+
+# Directories
+POSTS = "source/_posts"
+DRAFTS = "source/_drafts"
+
+# Tasks
+
+desc "New draft post"
+task :draft do |t|
+  title = get_stdin("What is the title of the post? ")
+  link_check = get_stdin("Is this a link post? (y/n) ")
+  link_url = if link_check == "y" then get_stdin("Enter url: ") end
+  filename = "source/_drafts/#{title.to_url}.md"
+
+  puts "Creating new draft: #{filename}" 
+  open(filename, "w") do |post|
+    post.puts "---"
+    post.puts "layout: post"
+    post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
+    post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+    if link_check == "y" then post.puts "external-url: #{link_url}" end
+    if link_check == "n" then post.puts "image: \n    feature: \n    thumb: " end
+    post.puts "categories: "
+    post.puts "tags: "
+    post.puts "..."
+  end
 end
 
-desc "Nuke and rebuild"
-task :nuke do
-    sh 'rm -rf _site'
-    sh "jekyll"
+desc "Move a post from _drafts to _posts"
+task :publish do
+  extension = "md"
+  files = Dir["#{DRAFTS}/*.#{extension}"]
+  files.each_with_index do |file, index|
+    puts "#{index + 1}: #{file}".sub("#{DRAFTS}/", "")
+  end
+  print "> "
+  number = $stdin.gets
+  if number =~ /\D/
+    filename = files[number.to_i - 1].sub("#{DRAFTS}/", "")
+    FileUtils.mv("#{DRAFTS}/#{filename}", "#{POSTS}/#{DATE}-#{filename}")
+    puts "#{filename} was moved to '#{POSTS}'."
+  else
+    puts "Please choose a draft by the assigned number."
+  end
 end
 
 desc "Build the production version of the site"
@@ -32,39 +71,24 @@ end
 desc "Preview the site with Jekyll"
 task :preview do
   puts "Previewing the site locally with Jekyll."
-  jekyllPid  = Process.spawn("jekyll serve --watch")
+
+  jekyllPid  = Process.spawn("jekyll build --watch --drafts --limit_posts 5")
+
   trap("INT") {
     [jekyllPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
   }
+
   [jekyllPid].each { |pid| Process.wait(pid) }
 end
 
-desc "Give title as argument and create new post"
-# usage rake write["Post Title Goes Here",category]
-# category is optional
-task :write do |t|
-  title = get_stdin("What is the title of the post? ")
-  link_check = get_stdin("Is this a link post? (y/n) ")
-  link_url = if link_check == "y" then get_stdin("Enter url: ") end
-
-  filename = "#{Time.now.strftime('%Y-%m-%d')}-#{title.gsub(/\s/, '-').downcase}.md"
-  path = File.join("_posts", filename)
-    if File.exist? path; raise RuntimeError.new("Won't clobber #{path}"); end
-  File.open(path, 'w') do |post|
-    post.puts "---"
-    post.puts "layout: post"
-    post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
-    post.puts "date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}"
-    if link_check == "y" then post.puts "external-url: #{link_url}" end
-    if link_check == "n" then post.puts "image: \n    feature: \n    thumb: " end
-    post.puts "categories: []"
-    post.puts "tags: []"
-    post.puts "---"
-  end
-  puts "Now opening #{path} in vim..."
-  system "mvim #{path}"
+task :build do
+  puts "\nBuilding the production version of the site ..."
+  system "jekyll build"
 end
+
+desc "Build and deploy the production version of the site"
+task :deploy => [:build, :rsync]
 
 desc "rsync to server"
 task :rsync do

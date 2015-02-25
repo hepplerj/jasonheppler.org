@@ -1,6 +1,7 @@
 # Dependencies
 multivews:      true
-source:         .
+source:         source
+destination:    _site
 highlighter:    pygments
 markdown:       kramdown
 # http://jekyllrb.com/docs/permalinks/
@@ -16,7 +17,7 @@ url:
 owner:
   name: Jason Heppler
   email: jason@jasonheppler.org
-  vita: https://www.dropbox.com/s/lbre2593encazi3/jah-vita.pdf
+  vita: /downloads/pdf/jah-vita.pdf
   twitter: jaheppler
   instagram: "hepplerj"
   github: "hepplerj"
@@ -51,7 +52,7 @@ instructor_twitter: jaheppler
 instructor_website: http://jasonheppler.org
 course_description: "An introduction to digital history."
 
-paginate:         8
+paginate:         10
 
 figures:
   dir: /figures
@@ -71,5 +72,7 @@ links:
     url: /research/
   - title: Teaching
     url: /teaching/
+  - title: Vita
+    url: /cv/
 
 google_analytics_tracking_id: UA-12786552-1
