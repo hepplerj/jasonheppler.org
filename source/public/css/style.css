@@ -269,7 +269,7 @@ tbody tr:nth-child(odd) th {
   margin-right: auto;
 }
 
-aside {
+aside.post {
   padding: 2em;
   margin-bottom: 2em;
   text-align: justify;

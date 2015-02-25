@@ -87,9 +87,6 @@ task :build do
   system "jekyll build"
 end
 
-desc "Build and deploy the production version of the site"
-task :deploy => [:build, :rsync]
-
 desc "rsync to server"
 task :rsync do
 	puts "\nDeploying the site via rsync..."
@@ -108,6 +105,9 @@ task :rsync do
 
 	ok_failed system("rsync #{rsync_options} 'ssh -p #{ssh_port}' #{exclude} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}")
 end
+
+desc "Build and deploy the production version of the site"
+task :deploy => [:build, :rsync]
 
 def get_stdin(message)
   print message

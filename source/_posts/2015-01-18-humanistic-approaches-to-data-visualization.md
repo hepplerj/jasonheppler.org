@@ -9,7 +9,7 @@ categories: [hacks]
 tags: [visualization, digital history]
 ---
 
-<aside>
+<aside class="post">
 I delivered a version of these comments at the
 <a href="http://www.meetup.com/BayAreaDH/events/219132485/">d3.digitalhumanities()</a> meetup in San Francisco on January 14, 2015.
 A recording of the talk is <a href="https://www.youtube.com/watch?v=UIrSCg2MmX4">available on YouTube</a>.
