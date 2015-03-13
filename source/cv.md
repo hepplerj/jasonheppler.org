@@ -33,7 +33,7 @@ Stanford CA 94305-2024
 
 *Stanford University*
 
-Digital Research Scientist in the Humanities, [Department of
+Academic Technology Specialist, [Department of
 History](http://history.stanford.edu) and Center for Interdisciplinary
 Digital Research (CIDR) (2013--present)
 
@@ -76,7 +76,9 @@ Visualization
 
 ### Journal Articles
 
-"Crowdsourcing Public Digital History," with Gabriel Wolfenstein, *The American Historian*, forthcoming.
+"[Crowdsourcing Public Digital 
+History](http://tah.oah.org/content/crowdsourcing-digital-public-history/)," 
+with Gabriel Wolfenstein, *The American Historian*, March 2015.
 
 "[A Call to Redefine Historical Scholarship in the Digital Turn](http://journalofdigitalhumanities.org/1-4/a-call-to-redefine-historical-scholarship-in-the-digital-turn/)," with
 Alex Galarza and Douglas Seefeldt, *Journal of Digital Humanities*,
@@ -177,7 +179,7 @@ Project, February 2008.
 
 # Invited Talks
 
-"Doing Digital History in the Classroom," Missouri Valley History
+"Digital Humanities in the History Classroom," workshop, Missouri Valley History
 Conference, March 2015. Omaha, Nebraska.
 
 "Humanistic Approaches to Data Visualization," d3.digitalhumanities()
@@ -200,8 +202,6 @@ October 2007, Brookings, South Dakota.
 "Networks in the Humanities," lighting talk, with Brian Sarnacki, Rebecca Wingo, Robert Jordan, and Andy Wilson, HASTAC, May 2015.
 
 Working group facilitator, "Public History as Digital History as Public History," National Council on Public History Annual Meeting, Nashville, Tennessee, April 2015.
-
-"Public Digital History and the Classroom," Missouri Valley History Conference, March 2015, Omaha, Nebraska.
 
 "Digital Scholarship, Academic Careers, and Tenure," round table with Jana Remy, Andrew Torget, Mills Kelly, and Katina Rogers, 129th Annual Meeting of the American Historical Association, January 2015, New York City, New York.
 
