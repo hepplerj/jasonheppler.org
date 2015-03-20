@@ -8,7 +8,7 @@ tags: digital-humanities
 ...
 
 Interesting piece over at the Duke Library blog on defining digital
-humanities (hat tip to [Mike Widner](https://twitter.com/mwidner).
+humanities (hat tip to [Mike Widner](https://twitter.com/mwidner)).
 
 > The research model is going to be harder to quantify. We do have some
 measurable components: we provide some services, and we do (or will do)
