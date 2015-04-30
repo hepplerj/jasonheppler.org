@@ -58,7 +58,7 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #268bd2;
+  color: #DC2522;
   text-decoration: none;
 }
 /* `:focus` is linked to `:hover` for basic accessibility */
@@ -621,8 +621,8 @@ figure a img:hover {
   text-align: center;
   /*text-shadow: 1px 1px 1px black;*/
   padding: 2rem 1rem;
-  color: #333;
-  background-color: #fff;
+  color: #f2f2f2;
+  background-color: #374140;
   /*background-image: url("/assets/images/west_desert2.jpg");*/
   /*background-size: cover;
   background-repeat: no-repeat;*/
@@ -640,13 +640,13 @@ figure a img:hover {
 
 /* Sidebar links */
 .sidebar a {
-  color: #333;
+  color: #f2f2f2;
   font-size: 0.95em;
 }
 
 /* About section */
 .sidebar-about h1 {
-  color: #333;
+  color: #f2f2f2;
   margin-top: 0;
   font-size: 1.6em;
 }
@@ -659,7 +659,7 @@ figure a img:hover {
 .sidebar-nav-item {
   display: inline;
 }
-.sidebar-nav-item:after { content: " / "; color: #ECF0F1;}
+.sidebar-nav-item:after { content: " / "; color: #2a2c2b;}
 .sidebar-nav-item:last-child:after{content:"";}
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
