@@ -179,6 +179,8 @@ Project, February 2008.
 
 # Invited Talks
 
+Panel Discussion, "Humanities + Digital Tools," Stanford Humanities Center, May 5, Stanford, California.
+
 "Digital Humanities in the History Classroom," workshop, Missouri Valley History
 Conference, March 2015. Omaha, Nebraska.
 

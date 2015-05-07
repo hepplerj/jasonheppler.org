@@ -52,7 +52,7 @@ instructor_twitter: jaheppler
 instructor_website: http://jasonheppler.org
 course_description: "An introduction to digital history."
 
-paginate:         10
+# paginate:         10
 
 figures:
   dir: /figures
