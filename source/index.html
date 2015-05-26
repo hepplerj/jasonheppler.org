@@ -16,7 +16,7 @@ title: Home
     {% if post.external-url %}
     <li>
         <a href="{{ post.url }}">
-          &#8734; {{ post.title }}
+          ✚ {{ post.title }}
         </a>
         <time class="posttime" datetime="{{ post.date | date_to_xmlschema }}">
           {{ post.date | date_to_string }}
