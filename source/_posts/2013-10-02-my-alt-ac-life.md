@@ -16,7 +16,7 @@ Started in March this year as a way to teach myself D3.js, [Cameron Blevins](htt
 
 The project is not yet live so I can't point you the full project, but here's a teaser:
 
-![Geography of the Post](/assets/images/post.png "Geography of the Post")
+![Geography of the Post](/assets/img/post.png "Geography of the Post")
 
 We've been aided by a couple of amazing undergraduate research assistants, whose ideas and programming skills have added greatly to the project's current shape. I'm generally enthralled by how D3 can be used in visualizations and I look forward to using it in further research projects. 
 

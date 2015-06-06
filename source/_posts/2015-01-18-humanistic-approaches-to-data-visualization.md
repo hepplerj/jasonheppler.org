@@ -2,9 +2,6 @@
 layout: post
 title: "Humanistic Approaches to Data Visualization"
 date: 2015-01-18 20:20:29
-image:
-    feature:
-    thumb:
 categories: [hacks]
 tags: [visualization, digital history]
 ---
@@ -20,13 +17,13 @@ with a question about how to visualize his research into the U.S. post
 office. This presented a fantastic opportunity for both of us: as a
 research collaboration and a chance to learn [d3.js](http://d3js.org).
 
-![What do you do with 14000 post offices?](/assets/images/d3dh-p3.png)
+![What do you do with 14000 post offices?](/assets/img/d3dh-p3.png)
 
 DH likes to ask [what to do with a million books](http://www.dlib.org/dlib/march06/crane/03crane.html). I wanted to ask what to
 do with 14,000 post offices. We wanted to know -- what insight could we
 gain from visualizing the Post?
 
-![White on visualization](/assets/images/d3dh-p4.png)
+![White on visualization](/assets/img/d3dh-p4.png)
 
 Visualization, as historian Richard White [argues](https://web.stanford.edu/group/spatialhistory/cgi-bin/site/pub.php?id=29), is a means of
 doing research: of posing questions we otherwise could not ask without
@@ -41,7 +38,7 @@ and where communities tended to cluster in the West. But we wanted more
 than just the presentation of points on a map---we wanted to represent
 knowledge.
 
-![Offices in Oregon](/assets/images/d3dh-p5.png)
+![Offices in Oregon](/assets/img/d3dh-p5.png)
 
 Our iterations of the project were straightforward. Our
 test case focused on Oregon, and we started plotting offices onto a
@@ -75,7 +72,7 @@ massively. He now have data for the entire United States. Thus, we are
 confronted with the architecture of our data. Then we had to ask the
 really dangerous question: Where does the West begin?
 
-![Where is the West?](/assets/images/d3dh-p9.png)
+![Where is the West?](/assets/img/d3dh-p9.png)
 
 Part of our argument is that we can use the post office as a proxy for
 understanding settlement patterns in the West. Many of these nineteenth
@@ -91,7 +88,7 @@ visually. One of the more popular techniques is [choropleths](http://bl.ocks.org
 there's a problem with the chropleth when it comes to the West: we have
 what Cameron has called the West's "[county problem](http://www.cameronblevins.org/posts/the-county-problem-in-the-west/)."
 
-![County problem](/assets/images/d3dh-p13.png)
+![County problem](/assets/img/d3dh-p13.png)
 
 The problem with western counties is that they're huge. Look at San
 Bernardino in Southern California, which includes the metropolis of Los
@@ -106,7 +103,7 @@ lots of people, a rough idea of where they're at in the states with the
 choropleth. But it's hard to really know unless you compare this with
 our map.
 
-![Comparison](/assets/images/d3dh-p14.png)
+![Comparison](/assets/img/d3dh-p14.png)
 
 Two things stand out to me here. One, these two things map onto each
 other well. If we overlaid the population data with the post data, I
@@ -121,7 +118,7 @@ settlement patterns of the western US, it matters a great deal to me to
 know where exactly those communities are at. The Post
 gives me a window into that process.
 
-![Post as Proxy](/assets/images/d3dh-p15.png)
+![Post as Proxy](/assets/img/d3dh-p15.png)
 
 So, the Post becomes a proxy for a town. You wouldn't have a post office
 where there's no town. This is the way people communicated in the
@@ -139,7 +136,7 @@ offices and say: this doesn't work. There's no story here. Let me give
 you one more example; I have to give a shoutout to [Ben Schmidt](http://benschmidt.org/), a
 historian at Northeastern, for alerting me to these maps.
 
-![1915 Statistical Atlas](/assets/images/d3dh-p17.png)
+![1915 Statistical Atlas](/assets/img/d3dh-p17.png)
 
 In 1915, the U.S. Census Bureau published the Statistical Atlas of the
 United States. It's a beautiful book filled with some stellar
@@ -152,7 +149,7 @@ If post offices happen to line up well with the Census bureau's own
 statistics, to me that's further evidence that I can treat these as
 indications of settlement. So, let's look.
 
-![Colorado-New Mexico](/assets/images/d3dh-p18.png)
+![Colorado-New Mexico](/assets/img/d3dh-p18.png)
 
 Here's our Colorado -- New Mexico corridor in 1870. I apologize that my
 projection is different from that used by the Census Bureau, so you may
@@ -179,13 +176,13 @@ treat the Post as a proxy for communities?
 Because the story isn't just about the rise of communities; it's also
 about their decline. You don't see this in the Census maps.
 
-![Growth](/assets/images/d3dh-p20.png)
+![Growth](/assets/img/d3dh-p20.png)
 
 If we look at the progression of the maps from 1870 to 1890, the maps
 tell a particular story: one of growth, one of progress. Let's return to
 our Colorado - New Mexico corridor.  What you don't see in these is the communities that don't thrive.
 
-![Decline](/assets/images/d3dh-p22.png)
+![Decline](/assets/img/d3dh-p22.png)
 
 Here's our corridor in the Southwest again; these are post offices that
 close between 1870 and 1890.

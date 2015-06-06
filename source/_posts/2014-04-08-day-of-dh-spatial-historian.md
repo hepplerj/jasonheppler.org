@@ -43,7 +43,7 @@ implementation of a timeline that allows users to drag, resize, and move spans
 of time in order to change the status of a post office for that particular time
 range (either closed, opened, active throughout the time period, and so on).
 
-![Geography of the Post](/assets/images/gotp_preview.png)
+![Geography of the Post](/assets/img/gotp_preview.png)
 
 The project is nearly ready for a beta launch. Some of my morning time belongs
 to my dissertation, but my day will likely be spent on D3: tracking down a few

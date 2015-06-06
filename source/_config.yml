@@ -1,0 +1,41 @@
+title: Jason Heppler
+description: Historian of the American West 
+
+url: http://jasonheppler.org
+baseurl: ""
+paginate_path: "/page:num/"
+permalink: :year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: pygments
+paginate: 5
+
+owner:
+  name: Jason Heppler
+  email: jason@jasonheppler.org
+  vita: /downloads/pdf/jah-vita.pdf
+  twitter: jaheppler
+  instagram: "hepplerj"
+  github: "hepplerj"
+  facebook: "jason.heppler"
+  google:
+    analytics: UA-12786552-1
+    plus: http://plus.google.com/112447146120355094986
+  bing:
+    verify: D81F4C18A6CB3018F64D7C827D953DFD
+
+navigation:
+ - title: About
+   url: /about/
+ - title: Archives 
+   url: /archives/
+ - title: "Digital & Public History"
+   url: /digital/
+ - title: Research
+   url: /research/
+ - title: Teaching
+   url: /teaching/
+ - title: Vita
+   url: /cv/
+
+google_analytics_tracking_id: UA-12786552-1

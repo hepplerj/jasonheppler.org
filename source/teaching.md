@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Teaching
 permalink: /teaching/
 ---
@@ -22,12 +22,6 @@ material in digital form, and addresses scholarly questions often difficult, if 
 impossible, to ask using non-computational methods.
 
 ## Workshops
-
-### Classroom as History Lab
-
-University of Nebraska-Omaha, March 2015
-
-> Workshopping courses
 
 ### Doing Digital History
 

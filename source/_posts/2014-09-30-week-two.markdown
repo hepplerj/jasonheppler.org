@@ -90,7 +90,7 @@ Review*
 ![xkcd Heat Map][12]
 
 
-[1]: /assets/images/jobs-flakey.jpg
+[1]: /assets/img/jobs-flakey.jpg
 [2]: http://www.mactrast.com/2011/12/steve-jobs-was-a-hard-bargaining-secretive-joker-according-to-1976-letter/
 [3]: http://lib.stanford.edu/stanford-silicon-valley-archives
 [4]: http://library.stanford.edu/areas/apple-computer-collections

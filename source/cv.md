@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: 'Jason A. Heppler - CV'
 permalink: /cv/
 ---
@@ -376,6 +376,10 @@ Workshop, "Introduction to XML," Brian Pytlik-Zillig, Center for Digital
 Research in the Humanities, University of Nebraska-Lincoln, October 2007.
 
 # Teaching
+
+*Digital Humanities Summer Institute*
+
+- "R, D3.js, and Visualization for the Humanities," with Lincoln Mullen (June 2016)
 
 *Stanford University (2013--present)*
 

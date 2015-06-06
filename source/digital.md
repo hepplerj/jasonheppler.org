@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Digital &amp; Public History
 permalink: /digital/
 ---

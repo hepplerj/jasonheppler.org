@@ -14,11 +14,11 @@ The design of the project went through several iterations as we sought to solve 
 
 Second, our bigger question revolved around how to present the information. We wanted to determine what sort of views we could present to users in order to ask interesting research questions. Our early design iterations focused on Oregon. We started by loading our data onto a Google map:
 
-![Google map](/assets/images/gotp_google.png)
+![Google map](/assets/img/gotp_google.png)
 
 We experimented with alternative views, such as [hex binning](https://www.mapbox.com/blog/binning-alternative-point-maps/) visually understand geographic concentrations of post offices through histograms:
 
-![Hex bin map](/assets/images/gotp_hex.png)
+![Hex bin map](/assets/img/gotp_hex.png)
 
 These were useful views, but we had considerations that we wanted to take into account with the offices that simply plotting points doesn't let us get at. It's interesting, in one sense, to see the concentrations of post offices. But these points don't represent much else. If we are using the post to understand something about the movement of people into the American West, we needed more interaction with the points in order for us to query the information with more granularity.
 
@@ -27,7 +27,7 @@ Jocelyn Hickock and Tara Balakrishnan -- we created methods for determining the 
 
 A second view of the post offices we built into the project is what we've called "Status View." This view shows us one of four statuses that a post office can be in during a given span of time: closed, opened, open throughout, or open and closed. The view gives us a chance to look for large areas of closings or openings in the context of surrounding post offices and raise questions about why those changes are occurring.
 
-![Side by side comparison of current design](/assets/images/gotp_sideby.png)
+![Side by side comparison of current design](/assets/img/gotp_sideby.png)
 
 Why document our design decisions? Part of my own goal in digital humanities 
 generally is the reusability of approaches, methods, tools, code, and design 
@@ -39,7 +39,7 @@ in their design process. Furthermore, exposing our design and thought process ha
 
 In other words, I am trying to answer Trevor Owens' call that we take "a few moments at the end of a project to reflect on what you wanted to accomplish, what actually happened, and what you learned from the process."[^1] Our goal at the outset was to determine what we could about the relationship between the U.S. Post and population growth in the American West. By and large, I think the project goes a long way in giving us an overall picture of population growth at specific areas in the West, a more granular view of populations than we can see in [choropleth maps](http://en.wikipedia.org/wiki/Choropleth_map) because of the [West's county problem](http://www.cameronblevins.org/posts/the-county-problem-in-the-west/). Since counties are so large in the West, a choropleth fails to really give us a sense of where people are at in space.
 
-![The West's county problem, by Cameron Blevins](/assets/images/gotp_westcountyproblem.jpg)  
+![The West's county problem, by Cameron Blevins](/assets/img/gotp_westcountyproblem.jpg)  
 <small>Population in the West, 1870. Map by Cameron Blevins.</small>
 
 But the choice of using post office points to surmise about the growth of population centers gives us a greater sense of where people are going in the West. To make that process more clear than a static map could convey, we designed a timeline feature that allows users to drag a span of time -- from a single year to the entire span of time contained in the dataset -- and visualize how these changes occur over the course of the century. You have a specific interest in the West during the Civil War? You can draw the timespan and see those offices between 1860 and 1865. More interested in the late nineteenth century? Select those years. Want to watch year-by-year how post offices grow in the West? Select a year, and drag across the timeline to watch places in the West expand.
