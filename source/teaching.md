@@ -4,7 +4,7 @@ title: Teaching
 permalink: /teaching/
 ---
 
-For more teaching information, see <a href="{{ site.url }}/cv/">my vita</a>.
+For more teaching information, see <a href="{{ site.owner.vita }}">my vita</a>.
 
 ## Courses
 
