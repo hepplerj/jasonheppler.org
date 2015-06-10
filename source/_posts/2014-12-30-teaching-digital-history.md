@@ -7,6 +7,7 @@ image:
     thumb:
 categories: [hacks]
 tags: [teaching, education]
+comments: true
 ---
 
 In the fall quarter I taught, for the first time, [a digital history

@@ -7,6 +7,7 @@ image:
     thumb: 
 categories: [hacks]
 tags: [interview]
+comments: true
 ---
 
 **When did you start your blog (career wise: as a grad student, 

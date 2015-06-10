@@ -8,6 +8,7 @@ image:
 categories: podcasts
 tags: podcasts
 intro: Here are a few of my favorite podcasts.
+comments: true
 ...
 
 A couple of years ago I wrote about some of [my favorite podcasts](http://jasonheppler.org/2012/09/03/podcasts/), and I thought it would be good to update the list. Some of those podcasts have ended, others still keep on, and I've added new ones to my [podcatcher of choice](https://overcast.fm/). 

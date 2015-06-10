@@ -7,6 +7,7 @@ image:
     thumb: 
 categories: [hacks]
 tags: [dissertation, research]
+comments: true
 ---
 
 I am excited to finally release the digital component of my 
