@@ -1,19 +1,30 @@
 ---
 layout: default
 ---
+
 <div class="post">
-  {% if page.image %}
-    <div class="featuredImage">
-        <img src="{{ '/assets/img/' | prepend: site.baseurl | append: page.image }}" alt="" />
-      </div>
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date">{{ page.date | date_to_string }} | {{ page.content | number_of_words | divided_by:180 }} Minute Read</span>
+  {% if page.image.feature %}
+    <div class="overlay"></div>
+    <img class="featured-image" src="{{ site.url }}/assets/images/{{ page.image.feature }}"/>
   {% endif %}
-  <h1 class="postTitle">{{ page.title }}</h1>
-  <p class="meta">{{ page.date | date: '%B %d, %Y' }} | <span class="time">{{ page.content | number_of_words | divided_by:180 }}</span> Minute Read</p>
-  
+
   {{ content }}
 
   {% if page.external-url %}
-  	<p class="link-post-out"><a href="{{ page.external-url }}">{{ page.title }} →</a></p>
+  <p class="link-post-out"><a href="{{ page.external-url }}">{{ page.title }} →</a></p>
   {% endif %}
+</div>
 
+<div class="essay-info">
+  <figure class="essay-info-avatar"><img src="/assets/images/me.jpg" title="Hello, nice to meet you."></figure>
+
+  <div class="essay-info-biography">
+    <h5>About Jason</h5>
+    <p>I'm an historian from the Great Plains working at Stanford University. I like to write about history, technology, environment, culture, and coffee. You can follow <a href="http://twitter.com/jaheppler">me on Twitter</a>, or learn <a href="/about/" title="More about Jason">more about me</a>.</p>
+    <p>This was written on {{ page.date | date: "%B %d, %Y" }}.</p>
+
+    <p><a href="/archives/">&larr; Read more essays</a></p>
+  </div>
 </div>

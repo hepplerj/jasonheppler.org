@@ -5,7 +5,6 @@ date: 2015-03-22 08:35
 external-url: http://elizabethcatte.com/2015/01/27/the-budget-guide-to-nashville-ncph2015/
 categories: 
 tags: ncph, public history
-intro: Going to NCPH? Here's some suggestions for the trip.
 ...
 
 If you, like me, will be heading to Nashville in a few weeks for the

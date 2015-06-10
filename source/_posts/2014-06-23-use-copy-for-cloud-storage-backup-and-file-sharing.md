@@ -15,14 +15,14 @@ Recent announcements are showing a trend in cheaper storage solutions and cloud 
 
 Allow me to throw another one on your desk to review. Among the newer cloud-based storage offerings is a service called [Copy](https://www.copy.com/home/). I've been trying it out for the last few weeks, and so far I've found a lot to like. Similar to Dropbox, Copy syncs files from a local folder on your desktop to its cloud servers. So far, I haven't noticed Copy being significantly slower than Dropbox. But the great advantage of Copy over Dropbox? You get 15 GB of space for free versus Dropbox's 2 GB. And referrals grant you a whopping 5 GB per referral (versus Dropbox's 500 MB) and, at least as of this writing, has no max bonus for referrals. If you need more storage, Copy's paid plans start at $99 per year for 250 GB.
 
-![Copy local](/assets/img/copy_local.png)
+![Copy local](/assets/images/copy_local.png)
 
 Copy has many similar features to Dropbox, including easy folder and file sharing with collaborators. However, unlike Dropbox where shared folders within your Dropbox account also count against your storage quota, Copy has implemented what they call "[fair share](https://www.youtube.com/watch?v=m36ZMdE-vro&feature=youtu.be)." Fair share splits the size of a shared folder evenly across the number of people you've shared with. For example, a 5 GB folder synced between you and a collaborator counts at 2.5 GB per person. 
 
-![Copy actions](/assets/img/copy_actions.png)
+![Copy actions](/assets/images/copy_actions.png)
 
 And like Dropbox, Copy syncs across various devices. Copy can be installed on iOS, Android, Mac, Windows, and Linux. Dropbox currently has the market cornered on integration with mobile applications, but hopefully Copy will soon come to other applications. On top of that, Copy also has a web interface that is well designed and easy to use. 
 
-![Copy web](/assets/img/copy_web.png)
+![Copy web](/assets/images/copy_web.png)
  
 If you're in the market for a new cloud storage service, I would give Copy a chance!

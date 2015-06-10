@@ -1,19 +1,13 @@
 ---
 layout: default
+title: Home
 ---
 
-<div class="home" id="home">
+<div class="posts">
 
-<ul class="posts noList">
-  {% for post in site.posts limit:1 %}
-  <li>
-    <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
-    <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-    <p class="description">{% if post.description %}{{ post.description | strip_html | strip_newlines | truncate: 250 }}{% else %}{{ post.excerpt }}{% endif %}</p>
-    <p><a href="{{ post.url }}" class="continue">Continue Reading: {{ post.title }} . . .</a></p>
-  </li>
-  {% endfor %}
-</ul>
+<!--   <aside class="post">
+    <p class="lead">Greetings! I'm <a href="/about/">Jason</a>. I am the <a href="https://library.stanford.edu/research/center-interdisciplinary-digital-research-cidr">Academic Technology Specialist</a> in the <a href="http://history.stanford.edu">Department of History</a> at Stanford University and a historian of the American West. You can reach me on Twitter <a href="http://twitter.com/jaheppler">@jaheppler</a> or at<code>jason@jasonheppler.org</code>.</p>
+  </aside> -->
 
   <hr>
   <div id="note">
@@ -21,39 +15,30 @@ layout: default
   </div>
   <hr>
 
- <ul class="posts noList">
-  {% for post in site.posts offset:1 limit:6 %}
-  <li>
-    <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
-    <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-    <p class="description">{% if post.intro %}{{ post.intro }}{% else %}{{ post.excerpt }}{% endif %}</p>
-  </li>
-  {% endfor %}
-</ul>
-
-<center>
-<div class="archive-posts">
-  <a href="/archives/" class="previous button__outline">Archives</a>
-</div>
-</center>
-<!-- 
-  <ul class="posts noList">
-    {% for post in paginator.posts %}
-      <li>
-        <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
-        <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-        <p class="description">{% if post.description %}{{ post.description | strip_html | strip_newlines | truncate: 250 }}{% else %}{{ post.excerpt }}{% endif %}</p>
-        <p><a href="{{ post.url }}" class="continue">Continue Reading: {{ post.title }} . . .</a></p>
+<section id="blog-posts">
+  <h2>Recent Posts</h2>
+  <ul id="recent-posts">
+    {% for post in site.posts limit: 10 %}
+    {% if post.external-url %}
+    <li>
+        <a href="{{ post.url }}">
+          ✚ {{ post.title }}
+        </a>
+        <time class="posttime" datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date_to_string }}
+        </time> 
       </li>
+    {% else %}
+      <li>
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+        <time class="posttime" datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date_to_string }}
+        </time> 
+      </li>
+    {% endif %}
     {% endfor %}
-  </ul> -->
-  <!-- Pagination links -->
-<!--   <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous button__outline">Newer Posts</a> 
-    {% endif %}
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next button__outline">Older Posts</a>
-    {% endif %}
-  </div> -->
-</div>
+  </ul>
+  <a href="{{ site.baseurl }}/archives/" class="more-posts">Archives &rarr;</a>
+</section>

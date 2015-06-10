@@ -8,7 +8,6 @@ image:
     thumb: 
 categories: hacks
 tags: mapping, census, data
-intro: We're building a dataset of historical U.S. cities.
 ...
 
 Thanks to the hard work of Erik Steiner and Jan Lahmeyer, the [Spatial History

@@ -3,7 +3,9 @@ layout: post
 title: Western History and the California Drought
 description: A historical perspective on the California drought and what it can teach us about western history and sustainability. 
 date: 2014-02-24 21:16:26
-image: sj_ponds.jpg
+image:
+  feature: sj_ponds.jpg
+  thumb:
 categories: [essay, research]
 tags: [California, drought, water, American West]
 series: Living West
@@ -16,7 +18,7 @@ There is no shortage of news articles appearing today that discuss California's 
 Aridity is no stranger to the region. Stephen Long dubbed the Great Plains the "Great American Desert" in 1823 and the dust storms of the 1920s and 1930s are the stuff of legend. Nor are droughts a rare occurrence for my part of the state. The Mediterranean climate of the Bay Area means that most rainfall occurs between November and March (what Northern Californians refer to as "winter," causing this Midwesterner to chuckle) and amounts to roughly fifteen to twenty inches of rain annually. The majority of the Bay Area's water supply comes from other sources -- the Hetch-Hetchy water supply, surface water runoff capture, underground aquifers, and snowfall in the Sierra Nevadas. But the Sierras are [nearly devoid of snow](http://www.theatlanticcities.com/jobs-and-economy/2014/01/case-californias-disappearing-snow/8108/), and rainfall has been far below average. California is experiencing its driest year on record. And over the weekend, the Central Valley -- supplier of around 50% of the nation's fruits and vegetables -- learned they will be getting [no federal irrigation water](http://www.sfgate.com/news/article/Drought-Feds-cut-water-to-Central-Valley-farmers-5256131.php). 
 
 <figure>
-    <img src="/assets/img/powell_sheds.png" alt="John Wesley Powell's watershed map">
+    <img src="/assets/images/powell_sheds.png" alt="John Wesley Powell's watershed map">
     <figcaption>John Wesley Powell imagined creating states along watershed boundaries.</figcaption>
 </figure>
 

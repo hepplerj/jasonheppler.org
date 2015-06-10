@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Research
 permalink: /research/
 ---
@@ -32,7 +32,7 @@ The digital components of my dissertation are being released at *Machines in the
 
 [Machines in the Valley](http://dissertation.jasonheppler.org)
 
-![Superfund sites](/assets/img/diss_superfund.png)
+![Superfund sites](/assets/images/diss_superfund.png)
 
 ## Geography of the Post
 
@@ -42,7 +42,7 @@ post](http://jasonheppler.org/2014/10/30/research-design-in-geography-of-the-pos
 
 [Geography of the Post](http://cameronblevins.org/gotp/)
 
-![Geography of the Post](/assets/img/gotp_final.png)
+![Geography of the Post](/assets/images/gotp_final.png)
 
 ## Middle West Review
 
@@ -51,7 +51,7 @@ of the American Midwest, where I serve as the digital editor.
 
 [Middle West Review](http://uimiddle.wordpress.com)
 
-![Middle West Review](/assets/img/mwr_preview.png)
+![Middle West Review](/assets/images/mwr_preview.png)
 
 ## William F. "Buffalo Bill" Cody
 
@@ -60,14 +60,14 @@ Indians](http://segonku.unl.edu/~jheppler/showindian/): Digital history
 analysis of Buffalo Bill's Wild West and the ways American Indian performers
 were portrayed.
 
-![Buffalo Bill Wild West](/assets/img/cody_prog2_preview.png)
+![Buffalo Bill Wild West](/assets/images/cody_prog2_preview.png)
 
 ["Self-sustaining and a good citizen": William F. Cody and the Progressive Wild West](http://codystudies.org/showindians/): The above project morphed into this
 project for the Cody Studies platform, seeking to examine William F. Cody's
 attitudes towards Native people and argues for thinking about Cody as a form
 of progressive reformer.
 
-![Progressive Wild West](/assets/img/cody_prog_preview.png)
+![Progressive Wild West](/assets/images/cody_prog_preview.png)
 
 [Cody Studies](http://codystudies.org/): This project
 aims to collect documentary materials, create historical data and
@@ -75,7 +75,7 @@ visualizations, to explore, compare, query, and manipulate historical
 information to advance scholarship on Cody's role in the making of the modern
 American West.
 
-![Cody Studies](/assets/img/cody_studies.png)
+![Cody Studies](/assets/images/cody_studies.png)
 
 [William F. Cody Digital Archive](http://codyarchive.org): In January 2011 I
 joined the [Center for Digital Research in the
@@ -84,7 +84,7 @@ Nebraska-Lincoln, where I served as the project manager for the
 Cody Archive, a joint project of CDRH and the Buffalo
 Bill Center for the West in Cody, Wyoming.
 
-![Cody Archive](/assets/img/cody_archive.png)
+![Cody Archive](/assets/images/cody_archive.png)
 
 ## American Indian Movement
 
@@ -103,7 +103,7 @@ South Dakota State Historical Society Press.
 [Framing Red Power](http://www.framingredpower.org/): Digital history
 analysis of the Trail of Broken Treaties and mass media.
 
-![Framing Red Power](/assets/img/frp_preview.png)
+![Framing Red Power](/assets/images/frp_preview.png)
 
 ## Coding
 

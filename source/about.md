@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: page
 title: Colophon
 permalink: /about/
 ---
 
 <div class="about-intro">
 <figure>
-  <img src="/assets/img/me.jpg"/>
+  <img src="/assets/images/me.jpg"/>
   <figcaption>Photo by Carlos Seligo</figcaption>
 </figure>
 </div>

@@ -5,7 +5,7 @@ date: 2014-10-21 21:51:48
 category: hist205f_2014 
 ...
 
-![Steinberg, New Yorker](/assets/img/steinberg_new_yorker.jpg)  
+![Steinberg, New Yorker](/assets/images/steinberg_new_yorker.jpg)  
 Saul Steinberg, "[A View of the World from 9th Avenue](http://en.wikipedia.org/wiki/View_of_the_World_from_9th_Avenue)," *New Yorker*, March 
 29, 1976 
 

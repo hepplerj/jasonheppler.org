@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Teaching
 permalink: /teaching/
 ---
@@ -22,6 +22,12 @@ material in digital form, and addresses scholarly questions often difficult, if 
 impossible, to ask using non-computational methods.
 
 ## Workshops
+
+### Teaching Digital History
+
+[Missouri Valley History Conference](https://docs.google.com/document/d/11Efu9HDXd2ASVCDIGUtJxQE-JOlOCSw1G5V26TTOuNU/edit?usp=sharing), University of Nebraska-Omaha, March 2015
+
+> In this workshop, we will discuss ways to integrate digital methods into history classrooms. These new approaches aid students, teachers, and professors in working with primary sources, crafting original arguments, and presenting historical work in a public venue.
 
 ### Doing Digital History
 

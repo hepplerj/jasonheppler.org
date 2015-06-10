@@ -3,7 +3,9 @@ layout: post
 title: "What does Missile Command have to do with Digital History?"
 description:
 date: 2014-06-04  6:46:47
-image: dhsi2014_game.jpg
+image:
+  feature: dhsi2014_game.jpg
+  thumb:
 categories: [hacks]
 tags: [DHSI]
 ---

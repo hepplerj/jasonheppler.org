@@ -60,6 +60,8 @@ figures:
   analytics: true
 
 links:
+  - title: Home
+    url: /
   - title: Colophon
     url: /about/
   - title: Archives

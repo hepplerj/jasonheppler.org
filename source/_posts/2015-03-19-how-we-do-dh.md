@@ -5,7 +5,6 @@ date: 2015-03-19 10:52
 external-url: http://blogs.library.duke.edu/dcthree/2015/03/18/how-we-do-dh/
 categories: hacks
 tags: digital-humanities
-intro: "Our basic approach, whether we're staff or faculty, is research-driven."
 ...
 
 Interesting piece over at the Duke Library blog on defining digital
