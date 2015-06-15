@@ -197,11 +197,17 @@ October 2007, Brookings, South Dakota.
 
 "Alternative Academic Careers," GradHacker Podcast, February 2013.
 
+# Public Talks and Presentations
+
+"Visualizing Consumption: The 17th-century Kitchen Records of the Palace in Königsberg, Prussia," with Molly Taylor-Poleskey, Center for Spatial and Textual Analysis, June 2015.
+
 # Academic Conferences and Meetings
+
+"A Campfire Conversation About Small Data and Big Stories," co-organizer with Finn Arne Jørgensen, American Society for Environmental History, March 2016, Seattle, Washington.
 
 "The Graduation Threshold: A Discussion on Bridging the Gap from Graduation to Employment," co-organizer and round table discussant with Elaine Nelson, Leisl Carr-Childers, Sarah Keyes, and Elise Boxer, 55th Annual Conference of the Western History Association, October 2015, Portland, Oregon.
 
-"Networks in the Humanities," lighting talk, with Brian Sarnacki, Rebecca Wingo, Robert Jordan, and Andy Wilson, HASTAC, May 2015.
+"Networks in the Humanities," lighting talk, with Brian Sarnacki, Rebecca Wingo, and Andy Wilson, HASTAC, May 2015.
 
 Working group facilitator, "Public History as Digital History as Public History," National Council on Public History Annual Meeting, Nashville, Tennessee, April 2015.
 

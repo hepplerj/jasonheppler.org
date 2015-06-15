@@ -58,7 +58,7 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #962D3E;
+  color: #BB3F06;
   text-decoration: none;
 }
 /* `:focus` is linked to `:hover` for basic accessibility */
@@ -663,7 +663,7 @@ figure a img:hover {
   /*text-shadow: 1px 1px 1px black;*/
   padding: 2rem 1rem;
   color: #f2f2f2;
-  background-color: #2B3A42;
+  background-color: #125688;/* #2B3A42;*/
   /*background-image: url("/assets/images/west_desert2.jpg");*/
   /*background-size: cover;
   background-repeat: no-repeat;*/
