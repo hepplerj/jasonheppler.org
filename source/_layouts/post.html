@@ -3,8 +3,14 @@ layout: default
 ---
 
 <div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }} | {{ page.content | number_of_words | divided_by:180 }} Minute Read</span>
+  <!-- <h1 class="post-title">{{ page.title }}</h1> -->
+  <div class="posthead">
+  <p class="byline">{% if page.post_type %}{{ page.post_type }}{% endif %} <span>{{ page.date | date: "%-m.%-d.%y" }} | {{ page.content | number_of_words | divided_by:180 }} Minute Read</span></p>
+  <p class="break">–</p>
+  <h1 class="title">{{ page.title }}</h1>
+  {% if page.intro %}<p class="description">{{ page.intro }}</p>{% endif %}
+  </div>
+  <!-- <span class="post-date">{{ page.date | date_to_string }} | {{ page.content | number_of_words | divided_by:180 }} Minute Read</span> -->
   {% if page.image.feature %}
     <div class="overlay"></div>
     <img class="featured-image" src="{{ site.url }}/assets/images/{{ page.image.feature }}"/>

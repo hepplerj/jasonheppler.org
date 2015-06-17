@@ -60,11 +60,14 @@ body {
 a {
   color: #BB3F06;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all .25s;
+  display: inline-block;
 }
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  text-decoration: underline;
+  border-bottom-color: #666666;
 }
 
 /* Headings */
@@ -74,6 +77,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
   color: #313131;
   text-rendering: optimizeLegibility;
+  font-family: "Muli",sans-serif;
 }
 h1 {
   font-size: 2em;
@@ -144,6 +148,53 @@ abbr[title] {
   cursor: help;
   border-bottom: 1px dotted #e5e5e5;
 }
+
+/* Testing */
+
+.posthead {
+  position: relative;
+  width: 850px;
+  margin: 0 auto 50px;
+  color: #263645;
+}
+
+.byline {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  margin-bottom: -0.5rem;
+}
+
+.byline span {
+  font-size: 11px;
+}
+
+.break {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.description {
+  margin-top: 40px;
+  width: 306px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7em;
+  color: #CF3621;
+  text-transform: uppercase;
+}
+
+/* === */
 
 /* Code */
 code,
@@ -311,7 +362,7 @@ aside.cv {
 
 hr {
   width: 68%;
-  border: 3px solid #f2f0ed;
+  border: 3px solid rgba(35,55,70,0.8);
   /*margin-top: 4em;*/
   /*margin-bottom: 2em;*/
   margin-left: auto;
@@ -662,8 +713,9 @@ figure a img:hover {
   text-align: center;
   /*text-shadow: 1px 1px 1px black;*/
   padding: 2rem 1rem;
-  color: #f2f2f2;
-  background-color: #125688;/* #2B3A42;*/
+  color: #333333;
+  background-color: #F3F2F0;/* #2B3A42;*/
+  border-right: 1px solid #c8cacb;
   /*background-image: url("/assets/images/west_desert2.jpg");*/
   /*background-size: cover;
   background-repeat: no-repeat;*/
@@ -681,13 +733,13 @@ figure a img:hover {
 
 /* Sidebar links */
 .sidebar a {
-  color: #f2f2f2;
+  color: #333333;
   font-size: 0.95em;
 }
 
 /* About section */
 .sidebar-about h1 {
-  color: #f2f2f2;
+  color: #333333;
   margin-top: 0;
   font-size: 1.6em;
 }
@@ -700,7 +752,7 @@ figure a img:hover {
 .sidebar-nav-item {
   display: inline;
 }
-.sidebar-nav-item:after { content: " / "; color: #2a2c2b;}
+.sidebar-nav-item:after { content: " / "; color: #D9D9D7;}
 .sidebar-nav-item:last-child:after{content:"";}
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
@@ -733,7 +785,7 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    4rem;
+  padding-top:    2rem;
   padding-bottom: 4rem;
 }
 
