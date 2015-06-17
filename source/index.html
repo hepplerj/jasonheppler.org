@@ -5,10 +5,6 @@ title: Home
 
 <div class="posts">
 
-<!--   <aside class="post">
-    <p class="lead">Greetings! I'm <a href="/about/">Jason</a>. I am the <a href="https://library.stanford.edu/research/center-interdisciplinary-digital-research-cidr">Academic Technology Specialist</a> in the <a href="http://history.stanford.edu">Department of History</a> at Stanford University and a historian of the American West. You can reach me on Twitter <a href="http://twitter.com/jaheppler">@jaheppler</a> or at<code>jason@jasonheppler.org</code>.</p>
-  </aside> -->
-
   <hr>
   <div id="note">
     <span>Greetings! I'm <a href="/about/">Jason</a>. I am the <a href="https://library.stanford.edu/research/center-interdisciplinary-digital-research-cidr">Academic Technology Specialist</a> in the <a href="http://history.stanford.edu">Department of History</a> at Stanford University and a historian of the American West. You can reach me on Twitter <a href="http://twitter.com/jaheppler">@jaheppler</a> or at<code>jason@jasonheppler.org</code>.</span>
@@ -25,7 +21,14 @@ title: Home
           ✚ {{ post.title }}
         </a>
         <time class="posttime" datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | date_to_string }}
+          {% assign m = post.date | date: "%B" %} 
+          {% case m %}
+            {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
+            {% when 'September' %}Sept.
+            {% else %}{{ post.date | date: "%b" }}.
+          {% endcase %}
+          {{ post.date | date: "%-d" }}, 
+          {{ post.date | date: "%Y"}}
         </time> 
       </li>
     {% else %}
@@ -34,7 +37,14 @@ title: Home
           {{ post.title }}
         </a>
         <time class="posttime" datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | date_to_string }}
+          {% assign m = post.date | date: "%B" %} 
+          {% case m %}
+            {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
+            {% when 'September' %}Sept.
+            {% else %}{{ post.date | date: "%b" }}.
+          {% endcase %}
+          {{ post.date | date: "%-d" }}, 
+          {{ post.date | date: "%Y"}}
         </time> 
       </li>
     {% endif %}
