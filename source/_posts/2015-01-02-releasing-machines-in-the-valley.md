@@ -5,7 +5,8 @@ date: 2015-01-02 10:30:26
 image: 
     feature: 
     thumb: 
-categories: [hacks]
+categories: [hacks, essay]
+post_type: Essay
 tags: [dissertation, research]
 comments: true
 ---

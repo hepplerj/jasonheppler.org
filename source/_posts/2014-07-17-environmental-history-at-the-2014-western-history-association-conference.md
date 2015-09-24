@@ -5,7 +5,8 @@ date: 2014-07-17 15:22:41
 image: 
     feature: 
     thumb: 
-categories: [research]
+categories: [research, shorts]
+post_type: Shorts
 tags: [WHA, conference]
 ---
 

@@ -5,7 +5,8 @@ date: 2015-01-18 20:20:29
 image:
     feature:
     thumb:
-categories: [hacks]
+categories: [hacks, essay]
+post_type: Essay
 tags: [visualization, digital history]
 ---
 

@@ -5,7 +5,8 @@ date: 2014-09-21 21:11:38
 image: 
     feature: 
     thumb: 
-categories: [teaching]
+categories: [teaching, shorts]
+post_type: Shorts
 tags: ["digital history"]
 ---
 

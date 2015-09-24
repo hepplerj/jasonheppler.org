@@ -5,7 +5,7 @@ date: 2015-06-06 10:26
 image: 
     feature: 
     thumb: 
-categories: podcasts
+categories: podcasts, essay
 tags: podcasts
 post_type: Essay
 intro: Here are a few of my favorite podcasts.

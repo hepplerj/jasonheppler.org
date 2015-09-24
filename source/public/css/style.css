@@ -18,6 +18,8 @@
  * Themes
  */
 
+ @import url(http://fonts.googleapis.com/css?family=Lato:400,300,700);@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville);/*!
+
 
 /*
  * Body resets
@@ -38,9 +40,9 @@ body {
 }
 
 html {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-size: 100%;
-  line-height: 1.5;
+  font-family: "Libre Baskerville", sans-serif;
+  font-weight:300;
+  line-height:22px;
   color: #222;
 }
 @media (min-width: 38rem) {
@@ -58,26 +60,26 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #BB3F06;
+  color: #337ab7;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: all .25s;
-  display: inline-block;
 }
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
   border-bottom-color: #666666;
+  color: #23527c;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", sans-serif;
   margin-bottom: .5rem;
-  font-weight: 600;
+  font-weight: 300;
   line-height: 1.25;
   color: #313131;
   text-rendering: optimizeLegibility;
-  font-family: "Muli",sans-serif;
 }
 h1 {
   font-size: 2em;
@@ -99,13 +101,16 @@ h4, h5, h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 1em;
+  /*font-size: 18px;*/
   font-weight: 300;
   line-height: 1.6em;
+  font-family: "Libre Baskerville", sans-serif;
 }
 
 ul, ul li {
   font-weight: 300;
+  font-family: "Libre Baskerville", sans-serif;
+  font-size: 16px;
 }
 
 /*.post ul, ul li {
@@ -169,6 +174,34 @@ abbr[title] {
   font-size: 11px;
 }
 
+.entry-title {
+  font-size: 2.3em;
+  font-weight: 400;
+}
+.entry-title a {
+  text-decoration: none;
+  border: none;
+  color: #333;
+  font-weight: 400;
+}
+.entry-time {
+  font-weight: 400;
+  font-style: normal;
+  color: #888;
+  font-size: 0.8em;
+}
+.excerpt {
+  font-weight: 400;
+  font-style: normal;
+  color: #bf616a;
+  font-size: 1em;
+  font-style: italic;
+}
+
+.contact-email {
+  font-size: 12px;
+}
+
 .break {
   font-size: 20px;
   font-weight: 400;
@@ -190,7 +223,7 @@ abbr[title] {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.7em;
-  color: #CF3621;
+  color: #bf616a;
   text-transform: uppercase;
 }
 
@@ -282,7 +315,7 @@ tbody tr:nth-child(odd) th {
  */
 
 .lead {
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   font-weight: 300;
 }
 
@@ -357,7 +390,6 @@ aside.cv {
   margin: auto;
   padding: 1em;
   width: 80%;
-  text-align: justify;
 }
 
 hr {
@@ -582,7 +614,7 @@ svg {
  */
 
 html {
-  font-family: Lato,Helvetica,Arial,sans-serif;
+  font-family: 'Roboto Slab',serif;
 }
 @media (min-width: 48rem) {
   html {
@@ -711,14 +743,11 @@ figure a img:hover {
 
 .sidebar {
   text-align: center;
-  /*text-shadow: 1px 1px 1px black;*/
   padding: 2rem 1rem;
-  color: #333333;
-  background-color: #F3F2F0;/* #2B3A42;*/
+  color: #f2f2f2;
+  background-color: #2B3A42;
   border-right: 1px solid #c8cacb;
-  /*background-image: url("/assets/images/west_desert2.jpg");*/
-  /*background-size: cover;
-  background-repeat: no-repeat;*/
+  font-family: "Lato",sans-serif;
 }
 @media (min-width: 48rem) {
   .sidebar {
@@ -733,15 +762,19 @@ figure a img:hover {
 
 /* Sidebar links */
 .sidebar a {
-  color: #333333;
+  color: #f2f2f2;
   font-size: 0.95em;
+  border: none;
+}
+.sidebar a:hover {
+  border: none;
 }
 
 /* About section */
 .sidebar-about h1 {
-  color: #333333;
+  color: #f2f2f2;
   margin-top: 0;
-  font-size: 1.6em;
+  font-size: 1.7em;
 }
 
 /* Sidebar nav */
@@ -829,6 +862,11 @@ a.sidebar-nav-item:focus {
   padding: 2em 0 1em;
   text-align: center; }
 
+.essay-info p {
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+}
+
 .essay-info-avatar {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -843,7 +881,7 @@ a.sidebar-nav-item:focus {
     -o-border-radius: 50%;
     border-radius: 50%;
     height: auto;
-    width: 100%; }
+    width: 80%; }
 
 .essay-info-biography {
   display: inline-block;
@@ -907,6 +945,6 @@ a.sidebar-nav-item:focus {
 }
 
 footer {
-  font-size: 13px;
+  font-size: 11px;
   margin-top: 25px;
 }

@@ -5,7 +5,8 @@ date: 2014-12-31 07:38:01
 image:
     feature:
     thumb:
-categories: [research]
+categories: [research, shorts]
+post_type: Short
 tags: [conferences, american historical association]
 ---
 

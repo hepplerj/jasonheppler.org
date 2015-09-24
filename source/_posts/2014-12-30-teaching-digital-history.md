@@ -5,7 +5,8 @@ date: 2014-12-30 17:29:51
 image:
     feature:
     thumb:
-categories: [hacks]
+categories: [hacks, essay]
+post_type: Essay
 tags: [teaching, education]
 comments: true
 ---

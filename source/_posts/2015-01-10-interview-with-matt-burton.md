@@ -5,7 +5,8 @@ date: 2015-01-10  8:05:24
 image: 
     feature: 
     thumb: 
-categories: [hacks]
+categories: [hacks, essay]
+post_type: Essay
 tags: [interview]
 comments: true
 ---

@@ -3,7 +3,7 @@ layout: post
 title: Research Design and Geography of the Post
 date: 2014-10-30 08:57:21
 modified: 2014-10-30 08:57:31
-categories: [hacks]
+categories: [hacks, essay]
 tags: [Stanford, Geography of the Post, research]
 ---
 *[Read this along with [Cameron Blevins's companion post](http://www.cameronblevins.org/posts/postal-geography-and-the-golden-west/).]*

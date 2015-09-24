@@ -3,52 +3,18 @@ layout: default
 title: Home
 ---
 
-<div class="posts">
+<div class="about-intro">
+<figure>
+  <img src="/assets/images/me.jpg"/>
+  <figcaption>Photo by Carlos Seligo</figcaption>
+</figure>
+</div>
 
-  <hr>
-  <div id="note">
-    <span>Greetings! I'm <a href="/about/">Jason</a>. I am the <a href="https://library.stanford.edu/research/center-interdisciplinary-digital-research-cidr">Academic Technology Specialist</a> in the <a href="http://history.stanford.edu">Department of History</a> at Stanford University and a historian of the American West. You can reach me on Twitter <a href="http://twitter.com/jaheppler">@jaheppler</a> or at<code>jason@jasonheppler.org</code>.</span>
-  </div>
-  <hr>
+<h2>Hi. I'm Jason.</h2>
 
-<section id="blog-posts">
-  <h2>Recent Posts</h2>
-  <ul id="recent-posts">
-    {% for post in site.posts limit: 10 %}
-    {% if post.external-url %}
-    <li>
-        <a href="{{ post.url }}">
-          ✚ {{ post.title }}
-        </a>
-        <time class="posttime" datetime="{{ post.date | date_to_xmlschema }}">
-          {% assign m = post.date | date: "%B" %} 
-          {% case m %}
-            {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
-            {% when 'September' %}Sept.
-            {% else %}{{ post.date | date: "%b" }}.
-          {% endcase %}
-          {{ post.date | date: "%-d" }}, 
-          {{ post.date | date: "%Y"}}
-        </time> 
-      </li>
-    {% else %}
-      <li>
-        <a href="{{ post.url }}">
-          {{ post.title }}
-        </a>
-        <time class="posttime" datetime="{{ post.date | date_to_xmlschema }}">
-          {% assign m = post.date | date: "%B" %} 
-          {% case m %}
-            {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
-            {% when 'September' %}Sept.
-            {% else %}{{ post.date | date: "%b" }}.
-          {% endcase %}
-          {{ post.date | date: "%-d" }}, 
-          {{ post.date | date: "%Y"}}
-        </time> 
-      </li>
-    {% endif %}
-    {% endfor %}
-  </ul>
-  <a href="{{ site.baseurl }}/archives/" class="more-posts">Archives &rarr;</a>
-</section>
+<p></p>
+
+<p>I am the Academic Technology Specialist in the <a href="">Department of History</a> at <a href="">Stanford University</a>, where I collaborate with faculty and graduate students on innovations in using technology in their teaching and research. Most of my work focuses on data visualization, humanities design, and digital and spatial history. I write here regulary on <a href="{{site.url}}/archives/">my blog</a>, contribute to the <a href="http://blogwest.org">BlogWest</a> group blog, and co-host <a href="http://www.fiddly.fm/firstdraft/">The First Draft</a> podcast.</p>
+
+<p>I am a 20th century U.S. historian specializing in environmental, the North
+American West, and digital and public history. I'm completing my dissertation through the <a href="">University of Nebraska-Lincoln</a>. My dissertation research focuses on the urban and environmental history of Silicon Valley and the rise of environmental politics in the American Sunbelt.</p>

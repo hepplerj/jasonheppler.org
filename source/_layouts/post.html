@@ -5,7 +5,16 @@ layout: default
 <div class="post">
   <!-- <h1 class="post-title">{{ page.title }}</h1> -->
   <div class="posthead">
-  <p class="byline">{% if page.post_type %}{{ page.post_type }}{% endif %} <span>{{ page.date | date: "%-m.%-d.%y" }} | {{ page.content | number_of_words | divided_by:180 }} Minute Read</span></p>
+  <p class="byline">{% if page.post_type %}{{ page.post_type }}{% endif %} <span><time datetime="{{ page.date | date_to_xmlschema }}">
+          {% assign m = page.date | date: "%B" %}
+          {% case m %}
+            {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
+            {% when 'September' %}Sept.
+            {% else %}{{ page.date | date: "%b" }}.
+          {% endcase %}
+          {{ page.date | date: "%-d" }},
+          {{ page.date | date: "%Y"}}
+        </time> | {{ page.content | number_of_words | divided_by:180 }} Minute Read</span></p>
   <p class="break">–</p>
   <h1 class="title">{{ page.title }}</h1>
   {% if page.intro %}<p class="description">{{ page.intro }}</p>{% endif %}
@@ -40,7 +49,7 @@ layout: default
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES * * */
         var disqus_shortname = 'jasonhepplerorgsite';
-        
+
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

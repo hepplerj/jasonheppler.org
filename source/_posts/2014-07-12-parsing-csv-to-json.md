@@ -6,7 +6,8 @@ date: 2014-07-12 08:09:46
 image:
   feature:
   thumb:
-categories: [hacks]
+categories: [hacks, essay]
+post_type: Essay
 tags: [Ruby, D3.js, JSON]
 ---
 

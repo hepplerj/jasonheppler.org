@@ -3,7 +3,7 @@ layout: post
 title: "AeroPress Recipes"
 date: 2015-04-09 07:29
 external-url: http://toolsandtoys.net/guides/aeropress-recipes/
-categories: 
+categories: linkblog
 tags: coffee 
 ...
 
