@@ -1,0 +1,367 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>A timeline of wars of the United States</title>
+  <meta charset="utf-8" />
+    <style type="text/css">
+    body {
+      color: #525252;
+    }
+    a {
+      color: #337ab7;
+    }
+      svg#war {
+        height: 980px;
+        width: 1200px;
+      }
+
+      svg#peace {
+        height: 60px;
+        width: 1200px;
+      }
+
+      div#viz {
+        width: 1035px;
+      }
+      path.domain {
+        stroke: none;
+        stroke-width: 1px;
+        fill: none;
+      }
+      g.tick > line {
+        stroke-dasharray: 5 5;
+        stroke: gray;
+        stroke-width: 1px;
+      }
+      p, h1, h2, h4 {
+        font-family: "Open Sans";
+        margin: 10px 40px;
+        font-weight: 300;
+      }
+      text {
+        font-family: "Lato";
+      }
+
+      /*p:last-child {
+        margin: 10px 40px 80px;
+      }*/
+
+      h1 {
+        font-size: 28px;
+        padding-left: 96px;
+      }
+
+      h4 {
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        border-top: 1px solid lightgray;
+        margin: 30px 315px 50px;
+        padding: 10px 0;
+      }
+
+      p {
+        margin: 10px 40px 10px 132px;
+        font-size: 10pt;
+      }
+
+      h4 > a {
+        text-decoration: none;
+      }
+
+      text.periodLabel {
+        font-family: "Lato";
+      }
+      g.tick > text {
+        font-size: 12px;
+      }
+      </style>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400,300' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+<script src="d3.layout.timeline.js" charset="utf-8" type="text/javascript"></script>
+<script src="simple_statistics.js" charset="utf-8" type="text/javascript"></script>
+
+<script>
+
+types = ["Europe","Southeast Asia","Far East Asia","Oceania","North America","Latin America","Middle East","Africa"];
+
+colorScale = d3.scale.ordinal()
+  .domain(types)
+  .range(["#EFB605", "#E58903", "#E01A25", "#C20049", "#991C71", "#66489F", "#2074A0", "#10A66E", "#7EB852"]);
+
+
+d3.csv("wars.csv", function (csv) {
+  var timeline = d3.layout.timeline()
+    .size([900,80])
+    .extent(["7/4/1770", "12/31/2015"])
+    .padding(3)
+    .maxBandHeight(12);
+
+  xScale = d3.time.scale()
+  .domain([new Date("7/4/1770"), new Date("12/31/2015")])
+  .range([0,900]);
+
+  xScaleYear = d3.scale.linear()
+  .domain([1770, 2015])
+  .range([0,900]);
+
+  middles = csv
+  .map(function (d) {return (xScale(new Date(d.start)) + xScale(new Date(d.end))) / 2});
+
+  breaks = ss.ckmeans(middles,4);
+
+  d3.select("svg#war").append("g").attr("class", "timeline")
+  .attr("transform", "translate(0,150)")
+
+  d3.select("svg#war").append("text").attr("x", 130)
+  .attr("y", 70)
+  .style("text-anchor", "start")
+  .style("font-size", "60px")
+  .text("Wars of the United States");
+
+  axis = d3.svg.axis().scale(xScale)
+  .orient("bottom")
+  .tickSize(775);
+
+  axisYear = d3.svg.axis().scale(xScaleYear)
+  .orient("bottom")
+  .tickSize(40)
+  .tickFormat(function (d) {return d; });
+
+  d3.select("g.timeline")
+  .append("g")
+  .attr("class", "axis")
+  .attr("transform", "translate(100,15)")
+  .call(axis);
+
+types.forEach(function (type, i) {
+  onlyThisType = csv.filter(function(d) {return d.sphere === type});
+
+  theseBands = timeline(onlyThisType);
+
+  d3.select("g.timeline").append("g")
+  .attr("class", "categories")
+  .attr("transform", "translate(100," + (35 + (i * 90)) + ")")
+  .selectAll("rect")
+  .data(theseBands)
+.enter().append("rect")
+  .attr("rx", 2)
+  .attr("x", function (d) {return d.start})
+  .attr("y", function (d) {return d.y})
+  .attr("height", function (d) {return d.dy})
+  .attr("width", function (d) {return d.end - d.start})
+  .style("fill", function (d) {return colorScale(d.sphere)})
+  .style("stroke", "none")
+  .style("stroke-width", 1)
+  .style("cursor", "pointer")
+  .on("mouseover", function (d) {hoverText(d,i)})
+  .on("click", function (d) {console.log(d.link);window.open(d.link)});
+
+d3.select("g.timeline").append("text")
+  .text(type)
+  .attr("y", 45 + (i * 90))
+  .attr("x", 110)
+  .style("font-size", "12px")
+  .style("text-anchor", "end")
+
+})
+
+  periodBars = [];
+  periods = ["Revolution", "Conquest", "Influence", "Empire"]
+
+  breaks.forEach(function(breaks, i) {
+    periodBars.push({start: breaks[0], end: breaks[breaks.length-1], name: periods[i]});
+
+    d3.selectAll("rect")
+    .filter(function(d) {return (d.start + d.end) / 2 >= breaks[0]})
+    .each(function (d) {
+      d.period = i;
+    });
+  });
+
+  d3.select("g.timeline").selectAll("rect.periodBars")
+  .data(periodBars)
+  .enter()
+  .insert("rect", "g")
+  .attr("y", 15)
+  .attr("x", function (d) {return d.start + 100})
+  .attr("width", function (d) {return d.end - d.start})
+  .attr("height", 775)
+  .style("fill", "#f6f6f6")
+  .style("fill-opacity", 1)
+
+  d3.select("g.timeline").selectAll("text.periodBars")
+  .data(periodBars)
+  .enter()
+  .insert("text", "g")
+  .attr("y", 5)
+  .attr("x", function (d) {return d.start + 98})
+  .attr("class", "periodLabel")
+  .style("font-weight", 100)
+  .style("font-size", "20px")
+  .style("fill", "#1A1A1A")
+  .style("opacity", .6)
+  .text(function (d) {return d.name})
+
+  allBands = timeline(csv);
+
+allBands.forEach(function(band) {band.startYear = band.originalStart.getFullYear();band.endYear = band.originalEnd.getFullYear();})
+
+var x = 1776;
+
+var nowar = [];
+while (x <= 2015) {
+  var wars = allBands.filter(function(d) {
+    return d.startYear <= x && d.endYear >= x
+  }).length;
+
+  nowar.push({x: x, y: wars});
+  x++;
+}
+
+var peaceG = d3.select("svg#peace").append("g")
+  .attr("transform", "translate(100,0)");
+
+peaceG.append("g")
+.call(axisYear);
+
+peaceG
+.selectAll("circle")
+  .data(nowar.filter(function (d) {return d.y === 0}))
+  .enter()
+  .append("circle")
+  .attr("r", 2)
+  .attr("cx", function (d) {return xScaleYear(d.x)})
+  .attr("cy", 20);
+
+  distributionData = [];
+
+  allBands
+  .sort(function (a,b) {
+    if (a.start < b.start) {
+      return -1;
+    }
+    if (b.start > a.start) {
+      return 1;
+    }
+    return 1;
+  })
+  .forEach(function(d, i) {
+    num = allBands.filter(function (p) {
+      return (p.start <= d.start && p.end >= d.start)
+    }).length;
+    distributionData.push({x: d.start, y: num});
+
+  })
+
+//  yRange = d3.extent(distributionData, function (d) {return d.y});
+//  distScale = d3.scale.linear().domain(yRange).range([100,0]);
+  yRange = d3.extent(nowar, function (d) {return d.y});
+  distScale = d3.scale.linear().domain(yRange).range([100,0]);
+
+  distLine = d3.svg.line().y(function (d) {return distScale(d.y)})
+  .x(function (d) {return xScaleYear(d.x)})
+  .interpolate("step")
+
+  var distG = d3.select("g.timeline")
+  .insert("g", "g.axis")
+  .attr("transform", "translate(100,680)");
+
+  distG
+  .append("text")
+  .text("Concurrent war")
+  .attr("x", 10)
+  .attr("y", 70)
+  .style("text-anchor", "end")
+  .style("font-size", "12px");
+
+  distG
+  .append("path")
+  .style("fill", "none")
+  .style("stroke", "gray")
+  .style("stroke-width", "2px")
+  .attr("d", distLine(nowar));
+
+  distG
+  .append("rect")
+  .style("stroke", "none")
+  .style("fill", "white")
+  .attr("x", 0)
+  .attr("y", 98)
+  .attr("width", 1000)
+  .attr("height", 6)
+
+
+
+})
+
+function hoverText(d, i) {
+  d3.selectAll("text.label")
+  .remove();
+
+  d3.select("g.timeline").append("text")
+  .attr("class", "label")
+  .attr("x", d.start + 100)
+  .attr("y", d.y + (31 + (i * 90)))
+  .style("opacity", .9)
+  .style("fill", "white")
+  .style("stroke", "white")
+  .style("stroke-width", 2)
+  .style("pointer-events", "none")
+    .text("")
+    .transition()
+    .duration(d.name.length * 10)
+     .tween("text", function() {
+         var interpolator = d3.interpolateRound( 0, d.name.length );
+        return function(t) {
+          var c = Math.floor(t * (d.name.length))
+            this.textContent = d.name.substring(0, interpolator(t));
+        };
+  })
+
+  d3.select("g.timeline").append("text")
+  .attr("class", "label")
+  .attr("x", d.start + 100)
+  .attr("y", d.y + (31 + (i * 90)))
+  .style("pointer-events", "none")
+    .text("")
+    .transition()
+    .duration(d.name.length * 10)
+     .tween("text", function() {
+         var interpolator = d3.interpolateRound( 0, d.name.length );
+        return function(t) {
+          var c = Math.floor(t * (d.name.length))
+            this.textContent = d.name.substring(0, interpolator(t));
+        };
+  });
+
+}
+
+</script>
+<body>
+<div id="viz">
+
+  <svg id="war" style="background:white;" height=1000 width=1100></svg>
+
+<p>This is an alternative view of Elijah Meeks' <a href="http://elijahmeeks.com/wars/">War timeline</a> built using his <a href="https://github.com/emeeks/d3.layout.timeline">D3 timeline layout</a>. Original data derived from <a href="https://en.wikipedia.org/wiki/List_of_wars_involving_the_United_States">Wikipedia</a>.</p>
+
+<p>Elijah's original timeline categorized conflicts by five categories: European, Native, Colonial, Latin America, and Internal. I was a little put off by some of these categorizations. For example, he mixed both areas of the world (Latin America) with types of conflicts (Internal). This also begs the question of defining these categories by theme. After all, one could argue that many of the Latin American conflicts were colonial in nature.</p>
+
+<p>I'm not suggesting my view is better than Elijah's; his timeline is making a particular point, and I think makes that point well. The point of his visualiation remains: the United States fights wars, and lots of them. But this view tries to revlea the regions of the world the U.S. fought those conflicts. I also extended Elijah's original dataset, including <a href="https://en.wikipedia.org/wiki/Covert_United_States_foreign_regime_change_actions">covert operations</a> run by the United States during the Cold War. The timeline above seeks to provide another view, by looking at the regions of the world where these conflicts were fought as a way to see where the United States engaged over time. </p>
+
+<h1>Times of Peace in the United States</h1>
+<svg id="peace" style="background:white;" height=200 width=1100>
+
+  <h4><a target="_blank" href="http://jasonheppler.org/">Jason Heppler</a></h4>
+
+
+</div>
+<footer>
+</footer>
+</body>
+</html>
