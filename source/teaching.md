@@ -10,6 +10,12 @@ For more teaching information, see <a href="{{ site.owner.vita }}">my vita</a>.
 
 ### Digital History: Sources, Methods, Problems
 
+[Course Website](/teaching/hist205f.2016/), Stanford University, Spring 2016
+
+> This class is about learning to do history using digital tools. The course teaches the fundamentals of information technology by applying them to historical problems. During the quarter, students will work on a research project in order to learn how to acquire, question, analyze, and interpret data; they will create visualizations of datasets; and present visual and textual material online. By learning through doing, students will gain digital skills and their application to historical research and thinking.
+
+### Digital History: Sources, Methods, Problems
+
 [Course Website](/teaching/hist205f.2014/), Stanford University, Fall 2014
 
 > This is a hands-on course that introduces students to the use of digital tools

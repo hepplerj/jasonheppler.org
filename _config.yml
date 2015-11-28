@@ -72,3 +72,6 @@ links:
     url: /teaching/
 
 google_analytics_tracking_id: UA-12786552-1
+
+gems:
+    - jekyll-feed

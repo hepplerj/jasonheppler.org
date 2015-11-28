@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Shootings</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400,300' rel='stylesheet' type='text/css'>
+
+    <style>
+      body {
+      	padding: 1% 1% 0;
+      	font: 0.63em/1.5 Helvetica, Arial, sans-serif;
+        color: #525252;
+      }
+
+      p, h1, h2, h4 {
+        font-family: "Open Sans";
+        margin: 10px 40px;
+        font-weight: 300;
+      }
+
+      text {
+        font-family: "Lato";
+      }
+
+      a {
+        color: #337ab7;
+      }
+
+      h1 {
+        font-size: 28px;
+        padding-left: 96px;
+      }
+
+      h4 {
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        border-top: 1px solid lightgray;
+        margin: 30px 315px 50px;
+        padding: 10px 0;
+      }
+
+      p {
+        margin: 10px 40px 10px 132px;
+        font-size: 10pt;
+      }
+
+      div#viz {
+        width: 1035px;
+      }
+      div#chart {
+        margin-left: 110px;
+      }
+      div#barchart {
+        margin-left: 110px;
+      }
+
+      h4 > a {
+        text-decoration: none;
+      }
+
+      /* Barchart */
+      .axis path,
+      .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+      }
+
+      .bar {
+        fill: steelblue;
+      }
+
+      .x.axis path {
+        display: none;
+      }
+      .x.axis text {
+        font-size: 4px;
+      }
+    </style>
+  </head>
+  <body>
+
+  <h1 style="margin-left: 6vw;">Mass Shootings in the United States, 2015</h1>
+
+<div id="viz">
+  <div id="chart"></div>
+
+  <p>This is a calendar heatmap of mass shootings in the United States in 2015. Calendar heatmaps are useful for visualizing time-series data, but can also be impactful for the underlying patterns they reveal. The color shading above <strong>do not indicate the number injured or killed</strong>. They only indicate <strong>how many shootings happened on a particular day</strong>.</p>
+
+  <p>Data is drawn from the crowd-sourced <a href="http://shootingtracker.com/wiki/Main_Page">Mass Shootings Tracker</a>. Last updated: 2015-11-28. The visualizations are built with <a href="http://bl.ocks.org/mbostock/4063318">D3.js</a>. Code and data is available on <a href="https://gist.github.com/hepplerj/8fd6299245dfa28fe19b">Github</a>.</p>
+
+  <h1>Deaths and Injuries to Mass Shootings, 2015</h1>
+
+  <div id="barchart"></div>
+
+  <p>Questions? Feedback? I'm <a href="http://twitter.com/jaheppler">@jaheppler</a> on Twitter.</p>
+
+  <h4><a target="_blank" href="http://jasonheppler.org/">Jason Heppler</a></h4>
+
+</div>
+
+  <script src="barchart.js" charset="utf-8"></script>
+  <script src="script.js" charset="utf-8"></script>
+
+  </body>
+</html>
