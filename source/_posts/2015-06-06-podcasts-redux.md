@@ -2,17 +2,17 @@
 layout: post
 title: "Podcasts Redux"
 date: 2015-06-06 10:26
-image: 
-    feature: 
-    thumb: 
+image:
+    feature:
+    thumb:
 categories: podcasts, essay
 tags: podcasts
 post_type: Essay
 intro: Here are a few of my favorite podcasts.
 comments: true
-...
+---
 
-A couple of years ago I wrote about some of [my favorite podcasts](http://jasonheppler.org/2012/09/03/podcasts/), and I thought it would be good to update the list. Some of those podcasts have ended, others still keep on, and I've added new ones to my [podcatcher of choice](https://overcast.fm/). 
+A couple of years ago I wrote about some of [my favorite podcasts](http://jasonheppler.org/2012/09/03/podcasts/), and I thought it would be good to update the list. Some of those podcasts have ended, others still keep on, and I've added new ones to my [podcatcher of choice](https://overcast.fm/).
 
 I'm currently subscribed to thirty-two podcasts. I might have a problem.[^1]
 
@@ -28,14 +28,14 @@ I'm currently subscribed to thirty-two podcasts. I might have a problem.[^1]
 	Friday](http://5by5.tv/geekfriday). Dan and [Haddie
 	Cooke](http://5by5.tv/people/haddie-cooke) cover a range of topics
 	regarding technology, gear, entertainment, and culture. Plus, the on-air
-	chemisty between Dan and Haddie is great. 
+	chemisty between Dan and Haddie is great.
 *	**[DLC](http://5by5.tv/dlc), 5by5**: Yes, another 5by5 show. No, this isn't
 	the last one. The DLC podcast hosted by Jeff Cannata and Christian Spicer
 	is among my favorite gaming-focused podcasts, and every week they talk to
 	somebody in or near the gaming industry. And lest you think it's all about
 	video games, it's not! Although video games are often the focus, they also
 	have a regular Tabletop Time where they share their favorite boardgames.
-	I've picked up many suggestions from that segment of the show. 
+	I've picked up many suggestions from that segment of the show.
 *	**Additional 5by5 shows**: Although they're produced less often, both [The
 	Frequency](http://5by5.tv/frequency) and [Grit](http://5by5.tv/grit) are
 	great shows---The Frequency for its news, and Grit for it's discussions on
