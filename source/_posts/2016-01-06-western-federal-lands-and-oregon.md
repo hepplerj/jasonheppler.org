@@ -9,6 +9,10 @@ categories: research
 tags: [public lands, politics]
 ...
 
+<aside class="post">
+This post also appears at <a href="http://blogwest.org/2016/01/07/federal-policy-western-lands-and-malheur/">BlogWest</a>.
+</aside>
+
 > At the root of these controversies was not just "interest" in the
 > conventional sense of an economic stake but values. The economic interest of
 > producers undergirded their opposition. But at a deeper level of human

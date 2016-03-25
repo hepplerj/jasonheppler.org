@@ -193,7 +193,7 @@ d3.select("g.timeline").append("text")
   .attr("width", function (d) {return d.end - d.start})
   .attr("height", 775)
   .style("fill", "#f6f6f6")
-  .style("fill-opacity", 1)
+  .style("fill-opacity", function(d) { if d. : 1} )
 
   d3.select("g.timeline").selectAll("text.periodBars")
   .data(periodBars)

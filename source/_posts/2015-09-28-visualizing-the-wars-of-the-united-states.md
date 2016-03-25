@@ -9,7 +9,7 @@ categories: hacks
 tags: d3js visualization
 ---
 
-The yesterday [I published a visualization of wars](http://jasonheppler.org/projects/war/) fought by the United States based off another timeline [created by Elijah Meeks](http://elijahmeeks.com/wars/) using his [`d3.layout.timeline`](https://github.com/emeeks/d3.layout.timeline). In Elijah's timeline, he depicted the timeline of war around five categories that defined the type of conflict: European, Internal, Latin America, Native, and so on. Elijah's visualization was compelling in demonstrating the near-continual perpetuation of warfare that the U.S. participated in. As [Brandon Locke noted](https://twitter.com/brandontlocke/status/648613981695815680), Elijah's timeline of peace was particularly compelling: only thirty-seven years of the nation's history have been without war.
+Yesterday [I published a visualization of wars](http://jasonheppler.org/projects/war/) fought by the United States based off another timeline [created by Elijah Meeks](http://elijahmeeks.com/wars/) using his [`d3.layout.timeline`](https://github.com/emeeks/d3.layout.timeline). In Elijah's timeline, he depicted the timeline of war around five categories that defined the type of conflict: European, Internal, Latin America, Native, and so on. Elijah's visualization was compelling in demonstrating the near-continual perpetuation of warfare that the U.S. participated in. As [Brandon Locke noted](https://twitter.com/brandontlocke/status/648613981695815680), Elijah's timeline of peace was particularly compelling: only thirty-seven years of the nation's history have been without war.
 
 ![Persistent war.](/assets/images/em_wars.png)
 

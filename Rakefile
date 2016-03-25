@@ -1,18 +1,11 @@
 # Jason Heppler
-# Updated 2015-02-24
+# Updated 2016-01-23
 
 require "rake/clean"
 require "stringex"
-require "yaml"
-require "fileutils"
-
-# Configuration
 
 # Set "rake watch" as default
 task :default => :preview
-
-# Load the configuration file
-CONFIG = YAML.load_file("_config.yml")
 
 # Get and parse the date
 DATE = Time.now.strftime("%Y-%m-%d")
@@ -68,11 +61,12 @@ task :build do
   ok_failed system "jekyll build"
 end
 
-desc "Preview the site with Jekyll"
+
+desc "Preview the site with Jekyll with POW"
 task :preview do
   puts "Previewing the site locally with Jekyll."
 
-  jekyllPid  = Process.spawn("jekyll serve --watch")
+  jekyllPid  = Process.spawn("jekyll build --watch --config _config.yml")
 
   trap("INT") {
     [jekyllPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }

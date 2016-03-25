@@ -14,12 +14,14 @@ layout: default
           {% endcase %}
           {{ page.date | date: "%-d" }},
           {{ page.date | date: "%Y"}}
-        </time> | {{ page.content | number_of_words | divided_by:180 }} Minute Read</span></p>
+          </time> | {{ page.content | number_of_words | divided_by:180 }} Minute Read
+                  | {{page.content | number_of_words}} Words</span></p>
+  
+  </p>
   <p class="break">–</p>
   <h1 class="title">{{ page.title }}</h1>
   {% if page.intro %}<p class="description">{{ page.intro }}</p>{% endif %}
   </div>
-  <!-- <span class="post-date">{{ page.date | date_to_string }} | {{ page.content | number_of_words | divided_by:180 }} Minute Read</span> -->
   {% if page.image.feature %}
     <div class="overlay"></div>
     <img class="featured-image" src="{{ site.url }}/assets/images/{{ page.image.feature }}"/>
@@ -28,14 +30,16 @@ layout: default
   {{ content }}
 
   {% if page.external-url %}
-  <p class="link-post-out"><a href="{{ page.external-url }}">{{ page.title }} →</a></p>
+  <p class="link-post-out"><i class="fa fa-link"></i> <a href="{{ page.external-url }}">{{ page.title }} →</a></p>
   {% endif %}
 </div>
+
 
 <div class="essay-info">
   <figure class="essay-info-avatar"><img src="/assets/images/me.jpg" title="Hello, nice to meet you."></figure>
 
   <div class="essay-info-biography">
+
     <h5>About Jason</h5>
     <p>I'm an historian from the Great Plains working at Stanford University. I like to write about history, technology, environment, culture, and coffee. You can follow <a href="http://twitter.com/jaheppler">me on Twitter</a>, or learn <a href="/about/" title="More about Jason">more about me</a>.</p>
     <p>This was written on {{ page.date | date: "%B %d, %Y" }}.</p>

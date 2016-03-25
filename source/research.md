@@ -105,6 +105,10 @@ analysis of the Trail of Broken Treaties and mass media.
 
 ![Framing Red Power](/assets/images/frp_preview.png)
 
+## Publications
+
+Douglas Seefeldt and Jason Heppler, "A National Monument," in *The Companion to Custer and the Little Big Horn*, ed. Brad D. Lookinbill (Wiley Blackwell, 2015), 462--484. [PDF preprint](https://www.academia.edu/15865723/A_National_Monument)
+
 ## Coding
 
 In the course of my research, I rely on code and software for visualization

@@ -18,7 +18,7 @@
  * Themes
  */
 
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300);@import url(http://fonts.googleapis.com/css?family=Lato:400,300,700);@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville);/*!
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300);@import url(http://fonts.googleapis.com/css?family=Lato:400,300,700);@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville);
 
 /*
  * Body resets
@@ -59,7 +59,7 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #337ab7;
+  color: #ac4142;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: all .25s;
@@ -67,8 +67,8 @@ a {
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  border-bottom-color: #666666;
-  color: #23527c;
+  border-bottom-color: #B71C1C;
+  color: #333;
 }
 
 /* Headings */
@@ -224,6 +224,8 @@ abbr[title] {
   color: #bf616a;
   text-transform: uppercase;
 }
+
+
 
 /* === */
 
@@ -743,10 +745,52 @@ figure a img:hover {
   text-align: center;
   padding: 2rem 1rem;
   color: #f2f2f2;
-  background-color: #2B3A42;
-  border-right: 1px solid #c8cacb;
   font-family: "Lato",sans-serif;
+  border: none;
+  background: #B71C1C;
+  -webkit-animation:cyclecolors linear infinite;
+  -webkit-animation-duration: 90s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  letter-spacing: .1em;
+  list-style: none;
+  width: 100%;
 }
+
+/* navbar color cycle animation */
+
+@keyframes cyclecolors 
+
+  {
+    0%  {background:#B71C1C;}
+    16%  {background:#4A148C;}
+    32%  {background:#1A237E;}
+    48% {background:#0D47A1;}
+    64% {background:#004D40;}
+    96% {background:#212121;}
+  }
+
+@-webkit-keyframes cyclecolors /* Safari */
+  {   
+    0%  {background:#B71C1C;}
+    16%  {background:#4A148C;}
+    32%  {background:#1A237E;}
+    48% {background:#0D47A1;}
+    64% {background:#004D40;}
+    96% {background:#212121;}
+  }
+  
+@-moz-keyframes cyclecolors /* Firefox */
+  {
+    0%  {background:#B71C1C;}
+    16%  {background:#4A148C;}
+    32%  {background:#1A237E;}
+    48% {background:#0D47A1;}
+    64% {background:#004D40;}
+    96% {background:#212121;}
+  }
+
 @media (min-width: 48rem) {
   .sidebar {
     position: fixed;
@@ -785,7 +829,7 @@ figure a img:hover {
   display: inline;
   font-size: 0.9em;
 }
-.sidebar-nav-item:after { content: " / "; color: #D9D9D7;}
+.sidebar-nav-item:after { content: " · "; color: #D9D9D7;}
 .sidebar-nav-item:last-child:after{content:"";}
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
