@@ -15,7 +15,7 @@ layout: default
           {{ page.date | date: "%-d" }},
           {{ page.date | date: "%Y"}}
           </time> | {{ page.content | number_of_words | divided_by:180 }} Minute Read
-                  | {{page.content | number_of_words}} Words</span></p>
+                  | {{page.content | number_of_words | thousands_separated }} Words</span></p>
   
   </p>
   <p class="break">–</p>
