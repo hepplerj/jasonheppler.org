@@ -8,7 +8,7 @@ For more teaching information, see <a href="{{ site.owner.vita }}">my vita</a>.
 
 ## Courses
 
-### Digital History: Sources, Methods, Problems
+### Digital Public History
 
 Stanford University, Fall 2016
 
@@ -55,9 +55,15 @@ Stanford University, Spring 2016
 
 ## Workshops
 
+### Maps and Networks in the Classroom
+
+[Carl Bimson Humanities Seminar](http://jasonheppler.org/projects/csu-workshop/), Colorado State University, July 2016
+
+> This seminar will emphasize the hands-on learning of working with geospatial and network data, with special attention paid to its application to the classroom. The workshop seeks to prep teachers to instruct their students in various approaches to digital humanities in their classes.
+
 ### Teaching Digital History
 
-[Missouri Valley History Conference](https://docs.google.com/document/d/11Efu9HDXd2ASVCDIGUtJxQE-JOlOCSw1G5V26TTOuNU/edit?usp=sharing), University of Nebraska-Omaha, March 2015
+[Missouri Valley History Conference](https://docs.google.com/document/d/11Efu9HDXd2ASVCDIGUtJxQE-JOlOCSw1G5V26TTOuNU/edit?usp=sharing), University of Nebraska at Omaha, March 2015
 
 > In this workshop, we will discuss ways to integrate digital methods into
 > history classrooms. These new approaches aid students, teachers, and
