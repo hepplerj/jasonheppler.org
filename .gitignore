@@ -2,6 +2,7 @@
 #########################
 _site
 _www
+.jekyll-metadata
 
 # Packages #
 ############
