@@ -5,20 +5,7 @@ layout: default
 <div class="post">
   <!-- <h1 class="post-title">{{ page.title }}</h1> -->
   <div class="posthead">
-  <p class="byline">{% if page.post_type %}{{ page.post_type }}{% endif %} <span><time datetime="{{ page.date | date_to_xmlschema }}">
-          {% assign m = page.date | date: "%B" %}
-          {% case m %}
-            {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
-            {% when 'September' %}Sept.
-            {% else %}{{ page.date | date: "%b" }}.
-          {% endcase %}
-          {{ page.date | date: "%-d" }},
-          {{ page.date | date: "%Y"}}
-          </time> | {{ page.content | number_of_words | divided_by:180 }} Minute Read
-                  | {{page.content | number_of_words | thousands_separated }} Words</span></p>
-  
-  </p>
-  <p class="break">–</p>
+  <p class="byline"><span><a href="{{ site.url }}" style="color: #222; border-bottom: 1px solid rgba(36,64,76,.5);">{{ site.title }}</a> / <a href="{{site.url}}/archives/" style="border-bottom: 1px solid rgba(36,64,76,.5);">Writing</a> / {{page.title}}</span></p>
   <h1 class="title">{{ page.title }}</h1>
   {% if page.intro %}<p class="description">{{ page.intro }}</p>{% endif %}
   </div>
@@ -42,7 +29,8 @@ layout: default
 
     <h5>About Jason</h5>
     <p>I'm an historian from the Great Plains working at Stanford University. I like to write about history, technology, environment, culture, and coffee. You can follow <a href="http://twitter.com/jaheppler">me on Twitter</a>, or learn <a href="/about/" title="More about Jason">more about me</a>.</p>
-    <p>This was written on {{ page.date | date: "%B %d, %Y" }}.</p>
+    <p>This was written on {{ page.date | date: "%B %d, %Y" }} | {{ page.content | number_of_words | divided_by:180 }} Minute Read
+                    | {{page.content | number_of_words | thousands_separated }} Words</p>
 
     <p><a href="/archives/">&larr; Read more essays</a></p>
   </div>
