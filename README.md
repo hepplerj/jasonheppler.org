@@ -53,6 +53,10 @@ Only use this to regenerate everything. The command deletes everything (assets, 
 
 Gulp tasks inspired by [Made Mistakes](https://github.com/mmistakes/made-mistakes-jekyll).
 
+### `gulp deploy`
+
+When development is done and the site has been built with either `gulp --prod` or `gulp build --prod` you can deploy with rsync. Sitemap is submitted to Google and Bing.
+
 # Licensing
 
 All the content (files and folders in `_posts`) along with the HTML files and 
@@ -60,4 +64,4 @@ index are under the [Attribution 3.0 Unported (CC BY
 3.0)](http://creativecommons.org/licenses/by/3.0/) license (in short, my work 
 is my contribution to free culture.) Feel free to use the HTML and CSS as you 
 please. If you do use them, I would appreciate a link back to 
-[http://github.com/hepplerj/hepplerj.github.com](http://github.com/hepplerj/hepplerj.github.com). 
+[http://github.com/hepplerj/jasonheppler.org](http://github.com/hepplerj/jasonheppler.org). 
