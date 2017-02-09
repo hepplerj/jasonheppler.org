@@ -22,7 +22,7 @@ kramdown:
   auto_ids      : true
   entity_output : as_char
 permalink       : /:year/:month/:day/:title/
-highlighter     : rogue
+highlighter     : rouge
 
 # Site owner
 owner:
