@@ -25,14 +25,6 @@ research, and digital history methods generally. Digital history
 provides historians new ways to think about historical causation and
 events through new research methods and visualizations.
 
-## Projects
-
-* [William F. Cody Archive](http://codyarchive.org/): Digital archive for the Papers of William F. Cody, a partnership between the Center for Digital Research in the Humanities and the Buffalo Bill Historical Center.
-* [What Is Digital Humanities?](http://whatisdigitalhumanities.com): Perpetual answers to the perpetual question.
-* [The Rubyist Historian: Ruby Fundamentals for Humanists](http://hepplerj.github.com/rubyist-historian/): A user's manual on the basics of Ruby programming for humanities scholars.
-* [FREQr: Word Frequency Generator](https://github.com/hepplerj/FREQr): A Ruby command line word frequency generator.
-* [HStream](https://github.com/hepplerj/HStream): An iOS RSS reader dedicated to aggregating news about digital humanities.
-
 ## Posts
 
 <ul class="listing">

@@ -6,7 +6,7 @@ image:
   feature:
   thumb:
 categories: research
-tags: [public lands, politics]
+tags: [public-lands, politics, american-west]
 ...
 
 <aside class="post">

@@ -4,7 +4,7 @@ title: About Beards
 external-url: http://the-northwind.com/bout-beards
 date: 2012-12-13 23:15:18
 tags:
-- link
+- personal
 ---
 David Dennis has [a nice write-up on beards](http://the-northwind.com/bout-beards). 
 

@@ -7,7 +7,7 @@ image:
     thumb: 
 categories: [hacks, essay]
 post_type: Essay
-tags: [dissertation, research]
+tags: [dissertation, research, digital-history]
 comments: true
 ---
 

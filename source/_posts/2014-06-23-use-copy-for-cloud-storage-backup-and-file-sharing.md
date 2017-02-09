@@ -8,7 +8,7 @@ image:
   thumb:
 categories: hacks, essay
 post_type: Essay
-tags: Copy, backup
+tags: review
 ---
 *[This post originally appeared at [ProfHacker](http://chronicle.com/blogs/profhacker/use-copy-for-cloud-storage-backup-and-file-sharing/57377) on 2014-06-23.]*
 

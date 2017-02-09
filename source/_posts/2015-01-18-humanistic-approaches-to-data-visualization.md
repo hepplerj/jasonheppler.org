@@ -7,7 +7,7 @@ image:
     thumb:
 categories: [hacks, essay]
 post_type: Essay
-tags: [visualization, digital history]
+tags: [visualization, digital-history]
 ---
 
 <aside class="post">

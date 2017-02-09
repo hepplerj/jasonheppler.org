@@ -5,7 +5,9 @@ description:
 date: 2013-11-03 09:34:02
 categories: [essay]
 tags:
-- 
+- history
+- career
+- academia
 ---
 On Wednesday, the *New York Times* [published an article](http://www.nytimes.com/2013/10/31/education/as-interest-fades-in-the-humanities-colleges-worry.html?ref=stanforduniversity&_r=0) covering the supposed decline in humanities majors, although the evidence for the "crisis" seems chosen to fit the narrative of "crisis in the humanities" rather than the actual facts.
 

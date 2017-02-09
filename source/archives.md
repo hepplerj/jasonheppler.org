@@ -12,6 +12,7 @@ permalink: /archives/
 
 I've written <strong>{{ totals | thousands_separated }}</strong> words here since 2008, averaging around <strong>{{ average }}</strong> per post. The longest post is <strong>{{ longest | thousands_separated }}</strong> words.
 
+<ul>
   {% for post in site.posts %}
     {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
     {% capture next_year %}{{ post.next.date | date: '%Y' }}{% endcapture %}
@@ -19,7 +20,7 @@ I've written <strong>{{ totals | thousands_separated }}</strong> words here sinc
       <h3>{{ post.date | date: '%Y' }}</h3>
     {% endif %}
 
-  &middot; <time>
+  <li><time>
   {% assign m = post.date | date: "%B" %}
   {% case m %}
     {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
@@ -30,6 +31,7 @@ I've written <strong>{{ totals | thousands_separated }}</strong> words here sinc
   </time>
 
 
-  <a href="{{ post.url }}">{{ post.title }}</a>
+  <a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
+</ul>
 </div>

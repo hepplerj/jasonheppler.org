@@ -1,0 +1,9 @@
+# site wide config
+
+url           : ""
+profile       : true
+future        : true
+show_drafts   : false
+
+google_site_verificiation: ""
+google_analytics: ""

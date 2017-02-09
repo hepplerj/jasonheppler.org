@@ -1,19 +1,20 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <h1>{{ site.title }}</h1>
-<p><a href="http://twitter.com/jaheppler"><i class="fa fa-twitter"></i></a> <a 
+      <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+      <p>
+        <a href="http://twitter.com/jaheppler"><i class="fa fa-twitter"></i></a> <a 
     href="http://github.com/hepplerj"><i class="fa fa-github"></i></a> <a 
     href="mailto:jason@jasonheppler.org"><i class="fa fa-fw 
-      fa-envelope-o"></i></a> <a href="https://www.instagram.com/hepplerj/"><i class="fa fa-instagram"></i></a>
-</p>
+      fa-envelope-o"></i></a> <a href="https://www.linkedin.com/in/jasonheppler"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+      </p>
     </div>
 
     <ul class="sidebar-nav">
       {% for link in site.links %}
       <li itemscope itemtype="http://schema.org/SiteNavigationElement" class="sidebar-nav-item{% if page.title == node.url %} active{% endif %}"><a href="{{ site.url }}{{ link.url }}" itemprop="url"><span itemprop="name">{{ link.title }}</span></a></li>
       {% endfor %}
-      <li itemscope itemtype="http://schema.org/SiteNavigationElement" class="sidebar-nav-item{% if page.title == node.url %} active{% endif %}"><a href="/downloads/pdf/jah-cv.pdf" onclick="ga('send', 'event', { 'eventCategory': 'PDF', 'eventAction': 'Download', 'eventLabel': 'jah-vita.pdf'});" itemprop="url"><span itemprop="name">Vita</span></a></li>
+      <li itemscope itemtype="http://schema.org/SiteNavigationElement" class="sidebar-nav-item{% if page.title == node.url %} active{% endif %}"><a href="/downloads/pdf/jah-cv.pdf" onclick="ga('send', 'event', { 'eventCategory': 'PDF', 'eventAction': 'Download', 'eventLabel': 'jah-vita.pdf'});" itemprop="url"><span itemprop="name">Vita</span></a> <i class="fa fa-file-pdf-o" aria-hidden="true"></i></li>
     </ul>
   </div>
 </div>

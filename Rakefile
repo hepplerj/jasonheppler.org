@@ -33,6 +33,7 @@ task :draft do |t|
     if link_check == "n" then post.puts "image: \n    feature: \n    thumb: " end
     post.puts "categories: "
     post.puts "tags: "
+    post.puts "comments: false"
     post.puts "..."
   end
 end
@@ -58,7 +59,7 @@ end
 desc "Build the production version of the site"
 task :build do
   puts "\nBuilding the production version of the site ..."
-  ok_failed system "jekyll build"
+  ok_failed system "bundle exec jekyll build --profile"
 end
 
 
@@ -66,7 +67,7 @@ desc "Preview the site with Jekyll with POW"
 task :preview do
   puts "Previewing the site locally with Jekyll."
 
-  jekyllPid  = Process.spawn("jekyll serve --watch --incremental --config _config.yml,_config-pow.yml")
+  jekyllPid  = Process.spawn("bundle exec jekyll serve --watch --incremental --config _config.yml")
 
 
   trap("INT") {
@@ -79,7 +80,7 @@ end
 
 task :build do
   puts "\nBuilding the production version of the site ..."
-  system "jekyll build"
+  system "bundle exec jekyll build"
 end
 
 desc "rsync to server"

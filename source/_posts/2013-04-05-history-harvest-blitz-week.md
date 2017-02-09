@@ -3,7 +3,7 @@ layout: post
 title: History Harvest Blitz Week
 date: 2013-04-05 22:43:46
 tags:
-- History Harvest
+- public-history
 category: hacks
 ---
 

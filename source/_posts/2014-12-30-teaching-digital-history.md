@@ -5,10 +5,9 @@ date: 2014-12-30 17:29:51
 image:
     feature:
     thumb:
-categories: [hacks, essay]
-post_type: Essay
-tags: [teaching, education]
-comments: true
+categories: teaching
+tags: [teaching, digital-history]
+comments: false
 ---
 
 In the fall quarter I taught, for the first time, [a digital history

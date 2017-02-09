@@ -4,9 +4,7 @@ title: My Alt-Ac Life
 date: 2013-10-02 09:52:27
 categories: [hacks, essay]
 tags:
-- alt-ac
 - career
-- work
 ---
 A few weeks ago my colleague Mike Widner [wrote a post](https://people.stanford.edu/widner/content/alt-ac-notes-building-towards-fall-and-winter-quarters) about his alt-ac life here at Stanford, and his post inspired me to do the same. I've been working as an [alt-ac](http://mediacommons.futureofthebook.org/alt-ac/) full time now for roughly a year, having started at Stanford in January. As we kick off the Fall Quarter, I already have a full plate of projects or planned projects that I contribute to regularly.
 

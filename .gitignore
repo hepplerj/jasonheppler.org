@@ -3,6 +3,10 @@
 _site
 _www
 .jekyll-metadata
+prod
+export.xml
+rsync-credentials.json
+.tmp
 
 # Packages #
 ############

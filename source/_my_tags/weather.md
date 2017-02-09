@@ -1,0 +1,4 @@
+---
+slug: weather
+name: Weather
+---

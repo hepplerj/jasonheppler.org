@@ -4,7 +4,7 @@ title: "The Budget Guide to NCPH"
 date: 2015-03-22 08:35
 external-url: http://elizabethcatte.com/2015/01/27/the-budget-guide-to-nashville-ncph2015/
 categories: linkblog
-tags: ncph, public history
+tags: ncph, public-history
 ---
 
 If you, like me, will be heading to Nashville in a few weeks for the

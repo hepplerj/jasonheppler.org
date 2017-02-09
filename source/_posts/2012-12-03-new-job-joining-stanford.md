@@ -4,6 +4,7 @@ title: New Job, Joining Stanford
 date: 2012-12-03 11:46:53
 tags:
 - personal
+- career
 ---
 [Horace Greeley](https://en.wikipedia.org/wiki/Horace_Greeley) once called upon Americans to "go West!" Well, I'm not fulfilling anyone's Manifest Destiny, but I am going (further) West. I am pleased to announce that I have accepted a position as the [Academic Technology Specialist](http://acomp.stanford.edu/faculty/atsp) in the History Department at Stanford University. I'll be stepping into the role in January and will be working with the department faculty and graduate students on some [cool projects](http://cesta.stanford.edu), act as a proponent for digital humanities in research and teaching, and serve as the technical expert in digital methods.
 

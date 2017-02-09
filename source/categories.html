@@ -1,0 +1,20 @@
+---
+layout: default
+permalink: /tags/
+title: Tagged Posts
+---
+
+<h2>{{page.title}}</h2>
+
+<p>Notes organized by category.</p>
+
+{% assign collection = site.posts | group_by: "categories" %}
+{% for group in collection %}
+{% comment %} This is super hacky and I don't like it {% endcomment%}
+  <h3>{{ group.name | replace: '"', '' | replace: '[', '' | replace: ']', '' }}</h3>
+  <ul>
+  {% for item in group.items %}
+    <li><a href="{{ item.url | prepend: site.baseurl | prepend: site.url }}">{{ item.title }}</a></li>
+  {% endfor %}
+  </ul>
+{%endfor%}

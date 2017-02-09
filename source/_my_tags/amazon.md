@@ -1,0 +1,4 @@
+---
+slug: amazon
+name: Amazon
+---

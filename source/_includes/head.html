@@ -15,7 +15,34 @@
   <meta http-equiv="cleartype" content="on">
   <meta http-equiv="x-dns-prefetch-control" content="off">
   <link rel="canonical" href="http://jasonheppler.org/" />
+  
+  <!-- RDFa Metadata (in DublinCore) -->
+  <meta property="dc:title" content="" />
+  <meta property="dc:creator" content="Jason A. Heppler" />
+  <meta property="dc:date" content="{{ site.time }}" />
+  <meta property="dc:format" content="text/html" />
+  <meta property="dc:language" content="en" />
+  <meta property="dc:identifier" content="/" />
+  <meta property="dc:rights" content="CC BY-NC-SA 3.0" />
+  <meta property="dc:source" content="Jason Heppler weblog" />
+  <meta property="dc:subject" content="History" />
+  <meta property="dc:type" content="website" />
 
+  <!-- RDFa Metadata (in OpenGraph) -->
+  <meta property="og:title" content="" />
+  <meta property="og:author" content="http://jasonheppler.org" />
+  <meta property="og:site_name" content="Jason Heppler weblog" />
+  <meta property="og:url" content="/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Scholar Metadata -->
+  <meta name="citation_author" content="Jason A. Heppler"/>
+  <meta name="citation_date" content="{{ site.time }}"/>
+  <meta name="citation_title" content=""/>
+  <meta name="citation_journal_title" content="Jason Heppler weblog"/>
+
+
+  <!-- Twitter cards -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@jaheppler">
   <meta name="twitter:creator" content="@jaheppler">
@@ -32,21 +59,16 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/public/css/style.css">
-  <link rel="stylesheet" href="/public/css/syntax.css">
-  <link rel="stylesheet" href="/public/css/rrssb.css">
-  <link rel="stylesheet" href="/public/css/bigfoot-default.css">
+  <link rel="stylesheet" href="/assets/stylesheets/style.css">
+  <link rel="stylesheet" href="/assets/stylesheets/syntax.css">
+  <link rel="stylesheet" href="/assets/stylesheets/rrssb.css">
+  <link rel="stylesheet" href="/assets/stylesheets/bigfoot-default.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-
-  <!-- <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic,700italic' rel='stylesheet' type='text/css'> -->
-  <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700' rel='stylesheet' type='text/css'> -->
-  <!-- <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'> -->
 
 <!-- Javascript -->
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript" src="/js/bigfoot.min.js"></script>
+<script type="text/javascript" src="/assets/javascripts/bigfoot.min.js"></script>
 <script type="text/javascript">
     $.bigfoot();
 </script>
@@ -56,5 +78,5 @@
   <link rel="shortcut icon" href="/public/favicon.ico">
 
   <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 </head>

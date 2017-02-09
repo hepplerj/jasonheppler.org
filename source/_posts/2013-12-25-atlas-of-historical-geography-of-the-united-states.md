@@ -6,9 +6,8 @@ date: 2013-12-26 09:52:15
 categories:
 - hacks
 tags:
-- historical geography
-- spatial history
-- linkblog
+- mapping
+- spatial-history
 ---
 
 I am thrilled to see that the University of Richmond's Digital Scholarship Lab 

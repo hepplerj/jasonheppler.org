@@ -4,7 +4,7 @@ title: Mendeley and Open Access
 date: 2013-04-12  9:48:46
 external-url: http://www.zephoria.org/thoughts/archives/2013/04/11/mendeley-elsevier.html
 tags:
-- open access
+- open-access
 category: hacks
 ---
 [danah boyd](http://www.zephoria.org/thoughts/archives/2013/04/11/mendeley-elsevier.html):

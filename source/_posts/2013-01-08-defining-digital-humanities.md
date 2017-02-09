@@ -3,6 +3,7 @@ layout: post
 title: "Defining Digital Humanities"
 date: Tue Jan 08 09:35:31 2013
 category: research
+tags: digital-humanities
 ---
 
 A few years ago I included a definition of digital history here on my site, in which I said:

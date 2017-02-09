@@ -1,36 +1,88 @@
-# Dependencies
-multivews:      true
-source:         source
-destination:    _site
-plugins_dir:    plugins
-highlighter:    pygments
-markdown:       kramdown
-# http://jekyllrb.com/docs/permalinks/
-permalink:      /:year/:month/:day/:title/
+# Site wide config
+source          : source
+destination     : prod
 
-# Setup
-title:            Jason Heppler
-tagline:          "History, technology, coffee"
-description:      'Historian of the American West.'
-url:
+title           : "Jason Heppler"
+description     : 'Historian of the American West.'
+tagline         : "History, technology, coffee"
+url             : "http://jasonheppler.org"
+repository      : "http://github.com/hepplerj/hepplerj.github.com"
+
+# Jekyll configuration 
+multivews       : true
+plugins_dir     : plugins
+lsi             : false
+future          : false
+show_drafts     : false
+markdown        : kramdown
+kramdown:
+  toc_levels    : 1..3
+  input         : GFM
+  hard_wrap     : false
+  auto_ids      : true
+  entity_output : as_char
+permalink       : /:year/:month/:day/:title/
+highlighter     : rogue
 
 # Site owner
 owner:
   name: Jason Heppler
   email: jason@jasonheppler.org
-  vita: /downloads/pdf/jah-vita.pdf
+  vita: http://jasonheppler.org/downloads/pdf/jah-cv.pdf
   twitter: jaheppler
   instagram: "hepplerj"
   github: "hepplerj"
   facebook: "jason.heppler"
-  google:
-    analytics: UA-12786552-1
-    plus: http://plus.google.com/112447146120355094986
-  bing:
-    verify: D81F4C18A6CB3018F64D7C827D953DFD
+  google_analytics: UA-12786552-1
+  google_plus: http://plus.google.com/112447146120355094986
+  bing_verify: D81F4C18A6CB3018F64D7C827D953DFD
 
   bio: "Historian of the North American West, environmental and urban history, digital history, coffee hobbyist"
   avatar: avatar.jpg
+
+# Settings
+assets:
+  compress:
+    css: true
+    js: true
+  features:
+    automatic_img_size: false
+  sources:
+    - assets/fonts
+    - assets/images
+    - assets/javascripts
+    - assets/stylesheets
+collections:
+  my_tags:
+    output: true
+    permalink: /tag/:slug/
+defaults:
+  -
+    scope:
+      path: ""
+      type: my_tags
+    values:
+      layout: articles_by_tag
+exclude:
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - Capfile
+  - config
+  - export.xml
+  - Gemfile
+  - Gruntfile.js
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+gems:
+  - jekyll-assets
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Course information
 course_baseurl: "/teaching/hist205f.2014"
@@ -61,8 +113,6 @@ figures:
   analytics: true
 
 links:
-  - title: Home
-    url: /
   - title: Archives
     url: /archives/
   - title: "Digital & Public History"
@@ -73,6 +123,3 @@ links:
     url: /teaching/
 
 google_analytics_tracking_id: UA-12786552-1
-
-gems:
-    - jekyll-feed

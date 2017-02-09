@@ -1,0 +1,4 @@
+---
+slug: politics
+name: Politics
+---

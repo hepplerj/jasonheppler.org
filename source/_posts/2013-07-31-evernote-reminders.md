@@ -7,7 +7,7 @@ external-url: http://blog.evernote.com/blog/2013/05/23/evernote-reminders-are-he
 categories:
 - technology
 tags:
-- evernote
+- review
 ---
 I've been taking another look at Evernote for organizing my non-research notes. I've been using a plaintext system for the last couple of years, using a combination of nvALT, Nebulous Notes for iOS, and Dropbox to keep everything in sync. But I've been impressed with Evernote's latest redesigns, and their service seems to have gotten much better. Plus, if I ever get nervous about lock-in I can easily export Evernote notes as HTML and convert them to Markdown via Pandoc with ease. 
 

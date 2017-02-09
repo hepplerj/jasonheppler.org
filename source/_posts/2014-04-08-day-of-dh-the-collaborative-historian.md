@@ -7,7 +7,7 @@ image:
   feature:
   thumb:
 categories: [essay, hacks]
-tags: [DH]
+tags: [digital-humanities]
 ---
 
 *[This post originally appeared at [Day of DH](http://dayofdh2014.matrix.msu.edu/jasonheppler/2014/04/08/the-collaborative-historian/) on 2014-04-08]*

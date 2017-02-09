@@ -6,8 +6,9 @@ date: 2013-08-06 22:14:20
 categories:
 - hacks
 tags:
-- Javascript
-- D3
+- programming
+- d3js
+- javascript
 ---
 Over the last few months I have been learning [D3.js](http://d3js.org/), a Javascript library developed by [Mike Bostock](http://bost.ocks.org/mike/) designed for creating data-driven visualizations and the manipulation of DOM elements. Since I've started picking it up, I've also had the opportunity to work with two undergraduate research assistants and, inexplicably, I convinced a graduate school friend to learn Javascript. In helping introduce others to D3, I noticed I had a consistent set of resources, sites, people, and tutorials I pointed them towards. So, I thought I would bring all of this together into an annotated blog post that will be useful not only for me to point people to, but other readers might also find helpful.
 

@@ -2,8 +2,7 @@
 layout: post
 title: The Link Blog Experiment
 date: 2013-02-24 09:40:32
-tags:
-- personal
+tags: personal
 ---
 For the last couple of years here I've tried out the link blogging style popularized by [John Gruber's Linked List](http://daringfireball.net/linked/). I'm not alone -- many other bloggers likewise use this style to add short commentaries to the links they share with their readers. In the case of John Gruber and [Jim Dalrymple](http://www.loopinsight.com), the linked blog is part of their [business](http://shawnblanc.net/2008/02/interview-john-gruber/). For me, it was an opportunity to share things I liked or found interesting.
 

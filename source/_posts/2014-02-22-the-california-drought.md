@@ -7,7 +7,7 @@ image:
   feature: sj_ponds.jpg
   thumb:
 categories: [essay, research]
-tags: [California, drought, water, American West]
+tags: [california, american-west]
 series: Living West
 ---
 

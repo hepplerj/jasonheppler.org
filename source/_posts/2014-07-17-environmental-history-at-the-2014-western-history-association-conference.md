@@ -7,7 +7,7 @@ image:
     thumb: 
 categories: [research, shorts]
 post_type: Shorts
-tags: [WHA, conference]
+tags: [wha, conferences]
 ---
 
 I'm stealing an idea from my friend and fellow Husker Brenden Rensink. Brenden [just wrote a post](http://www.bwrensink.org/2014/07/15/borderlands-and-transnational-history-at-the-2014-western-history-association-conference/) summarizing borderlands and transnational history panels -- his area of study -- at the Western History Association Conference this year. I thought I'd do similar with environmental history.

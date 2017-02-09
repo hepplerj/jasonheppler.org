@@ -4,7 +4,7 @@ title: Digital Jubilee
 external-url: http://frankchimero.com/blog/2012/12/digital-jubilee/
 date: 2012-12-15 15:23:30
 tags:
-- link
+- personal
 ---
 [Frank Chimero](http://frankchimero.com/blog/2012/12/digital-jubilee/):
 

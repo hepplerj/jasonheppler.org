@@ -7,7 +7,7 @@ image:
   feature: dhsi2014_game.jpg
   thumb:
 categories: [hacks]
-tags: [DHSI]
+tags: [dhsi, conferences]
 ---
 
 I am spending the week at the University of Victoria for this year's [Digital

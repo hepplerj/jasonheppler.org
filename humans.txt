@@ -1,0 +1,13 @@
+---
+---
+
+/* JASON HEPPLER */
+
+  Author:     Jason A. Heppler
+  Twitter:    @jaheppler
+  Location:   Omaha, Nebr.
+
+  Last updated: {{ site.time }}
+  Language:     English
+  Built with:   Jekyll {{ jekyll.version }} <http://jekyllrb.com>
+                Gulp <http://gulpjs.com>

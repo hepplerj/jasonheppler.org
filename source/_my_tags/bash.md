@@ -1,0 +1,4 @@
+---
+slug: bash
+name: bash
+---

@@ -4,6 +4,7 @@ title: Parsing CSV Data with Ruby
 date: 2013-01-28 20:10:39
 tags:
 - ruby
+- data
 category: hacks
 ---
 

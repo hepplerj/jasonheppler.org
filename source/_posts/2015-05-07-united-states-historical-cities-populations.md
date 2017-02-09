@@ -7,7 +7,7 @@ image:
     feature:
     thumb:
 categories: hacks, linkblog
-tags: mapping, census, data
+tags: mapping, data
 ---
 
 Thanks to the hard work of Erik Steiner and Jan Lahmeyer, the [Spatial History

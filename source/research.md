@@ -4,125 +4,70 @@ title: Research
 permalink: /research/
 ---
 
-My work broadly centers on twentieth century political and environmental American history. My work ranges from political and cultural change, urban and environmental history, political culture, historical memory, and the North American West. Posts collected here are items related to my research projects. Material relating to research workflows and programming can be found in the [Digital History]({{ site.url }}/digital/) section. See also my <a href="{{ site.url }}/cv/">curriculum vita</a> for more academic information.
+My work broadly centers on twentieth century political and environmental American history. My work ranges from political and cultural change, urban and environmental history, political culture, historical memory, and the North American West. Posts collected here are items related to my research projects. Material relating to research workflows and programming can be found in the [Digital History]({{ site.url }}/digital/) section. See also <a href="{{ site.owner.vita }}">my vita</a> for more academic information.
 
-## Dissertation
+<ul>
+  <li><a href="#in-progress">In Progress</a></li>
+  <li><a href="#books-articles-book-chapters">Books, Articles, Book Chapters</a></li>
+  <li><a href="#digital-research-and-scholarship">Digital Research and Scholarship</a></li>
+  <li><a href="#posts">Related Posts</a></li>
+</ul>
 
-*Machines in the Valley: Growth, Conflict, and Environmental Politics in
-Silicon Valley, 1945-1990*, University of Nebraska-Lincoln (expected 2015).
+## In Progress
 
-> My dissertation examines the environmental, economic, and cultural conflicts
-> over the suburbanization and post-industrialization of California's Santa
-> Clara Valley -- today known as Silicon Valley -- between 1940 and 2000. High
-> technology industrialization emerged as a key component of economic and
-> urban development in postwar era, particularly in western states seeking to
-> diversify their economic activities. Industrialization produced thousands of
-> new jobs, but development proved problematic when faced with competing views
-> about land use. The natural allure that accompanied the thousands coming
-> West gave rise to a modern environmental movement calling for strict
-> limitations on urban growth, the preservation of open spaces, and pollution
-> reduction. These views on land use lay at the center of these conflicts.
-> Conflict over the Santa Clara Valley's land use tells the story not only of
-> Silicon Valley's development, but Americans' changing understanding of
-> nature and the environmental costs of urban and industrial development.
+### 2016
 
-## Machines in the Valley
+<i class="fa fa-file-o" style="color:#03396c;font-size:80%;padding-top:6px;"></i> “Green Dreams, Toxic Legacies: The Digital Political Ecology of Silicon Valley” &middot; Forthcoming in the *International Journal of Humanities and Arts Computing*.
 
-The digital components of my dissertation are being released at *Machines in the Valley*. Still a work in progress, the project includes evidence visualization, digital history, data, and narrative.
+<i class="fa fa-file-o" style="color:#03396c;font-size:80%;padding-top:6px;"></i> “Humanistic Approaches to Data Visualization” &middot; Forthcoming in *The Companion to Digital History*, ed. David Staley. Hoboken: Wiley and Sons.
 
-[Machines in the Valley](http://dissertation.jasonheppler.org)
+## Books, Articles, Book Chapters
 
-![Superfund sites](/assets/images/diss_superfund.png)
+### 2016
 
-## Geography of the Post
+<i class="fa fa-pencil" style="color:#03396c;font-size:80%;padding-top:6px;"></i> “[Machines in the Valley: Community, Urban Change, and Environmental Politics in Silicon Valley, 1945-1990](http://digitalcommons.unl.edu/historydiss/86/)."
 
-In collaboration with Cameron Blevins, we visualized 14,000 post offices in
-the nineteenth century American West. [Read the blog
-post](http://jasonheppler.org/2014/10/30/research-design-in-geography-of-the-post/) on how and why.
+### 2015
 
-[Geography of the Post](http://cameronblevins.org/gotp/)
+<i class="fa fa-file" style="color:#03396c;font-size:80%;padding-top:6px;"></i> “A National Monument.” Published in *The Companion to Custer and the Little Big Horn*, edited by Brad Lookingbill (Hoboken: Wiley and Sons). [PDF preprint](https://www.academia.edu/15865723/A_National_Monument)
 
-![Geography of the Post](/assets/images/gotp_final.png)
+<i class="fa fa-file" style="color:#03396c;font-size:80%;padding-top:6px;"></i> “[Crowdsourcing Public Digital History](http://tah.oah.org/content/crowdsourcing-digital-public-history/),” *The American Historian*.
 
-## Middle West Review
+### 2012
 
-A new publication by the University of Nebraska Press focusing on the history
-of the American Midwest, where I serve as the digital editor.
+<i class="fa fa-file" style="color:#03396c;font-size:80%;padding-top:6px;"></i> Jason Heppler, Alex Galarza, and Doug Seefeldt, “[A Call to Redefine Historical Scholarship in the Digital Turn](http://journalofdigitalhumanities.org/1-4/a-call-to-redefine-historical-scholarship-in-the-digital-turn/)” *The Journal of Digital Humanities* vol. 1 no. 4 (Fall 2012).
 
-[Middle West Review](http://uimiddle.wordpress.com)
+<i class="fa fa-book" style="color:#03396c;font-size:80%;padding-top:6px;"></i> [The Rubyist Historian: Ruby Fundamentals for Humanist Scholars](http://hepplerj.github.io/rubyist-historian/).
 
-![Middle West Review](/assets/images/mwr_preview.png)
+### 2011
 
-## William F. "Buffalo Bill" Cody
+<i class="fa fa-file" style="color:#03396c;font-size:80%;padding-top:6px;"></i> “[The American Indian Movement and South Dakota Politics](http://www.sdshspress.com/index.php?&id=236&action=912)." Published in *The Plains Political Tradition*, edited by Jon Lauck, John E. Miller, and Donald Simmons (Pierre, SD: South Dakota State Historical Society Press).
 
-[Buffalo Bill's Wild West and the Progressive Image of American
-Indians](http://segonku.unl.edu/~jheppler/showindian/): Digital history
-analysis of Buffalo Bill's Wild West and the ways American Indian performers
-were portrayed.
+### 2009
 
-![Buffalo Bill Wild West](/assets/images/cody_prog2_preview.png)
+<i class="fa fa-pencil" style="color:#03396c;font-size:80%;padding-top:6px;"></i> “[Framing Red Power: The American Indian Movement, the Trail of Broken Treaties, and the Politics of Media](http://digitalcommons.unl.edu/historydiss/21/).”
 
-["Self-sustaining and a good citizen": William F. Cody and the Progressive Wild West](http://codystudies.org/showindians/): The above project morphed into this
-project for the Cody Studies platform, seeking to examine William F. Cody's
-attitudes towards Native people and argues for thinking about Cody as a form
-of progressive reformer.
+## Digital Research and Scholarship
 
-![Progressive Wild West](/assets/images/cody_prog_preview.png)
+### 2016
 
-[Cody Studies](http://codystudies.org/): This project
-aims to collect documentary materials, create historical data and
-visualizations, to explore, compare, query, and manipulate historical
-information to advance scholarship on Cody's role in the making of the modern
-American West.
+<i class="fa fa-file-code-o" style="color:#03396c;font-size:80%;padding-top:6px;"></i> “[Machines in the Valley: Growth, Conflict, and Environmental Politics in Silicon Valley](http://dissertation.jasonheppler.org/).”
 
-![Cody Studies](/assets/images/cody_studies.png)
+### 2015
 
-[William F. Cody Digital Archive](http://codyarchive.org): In January 2011 I
-joined the [Center for Digital Research in the
-Humanities](http://cdrh.unl.edu) (CDRH) at the University of
-Nebraska-Lincoln, where I served as the project manager for the
-Cody Archive, a joint project of CDRH and the Buffalo
-Bill Center for the West in Cody, Wyoming.
+<i class="fa fa-file-code-o" style="color:#03396c;font-size:80%;padding-top:6px;"></i> “[What is Digital Humanities?](http://whatisdigitalhumanities.org)”
 
-![Cody Archive](/assets/images/cody_archive.png)
+### 2014
 
-## American Indian Movement
+<i class="fa fa-file-code-o" style="color:#03396c;font-size:80%;padding-top:6px;"></i> “[Geography of the Post](http://cameronblevins.org/gotp/).” 
 
-I have done prior work on the American Indian Movement (AIM), a Native
-American activist organization that started in the late 1960s. My Masters
-thesis examined media coverage of AIM during the Trail of Broken Treaties
-Caravan, which was a march on Washington D.C. in 1972 meant to draw attention
-to issues facing reservation and urban Indians. My Masters thesis is available
-as open access and can be [downloaded from UNL Digital
-Commons](http://digitalcommons.unl.edu/historydiss/21/). I also contributed a
-chapter to *[The Plains Political Tradition: Essays on South Dakota Political
-Culture](http://www.sdshspress.com/index.php?&id=236&action=912)* about AIM's
-influence upon South Dakota politics. The book was published in 2011 by the
-South Dakota State Historical Society Press.
+### 2012
 
-[Framing Red Power](http://www.framingredpower.org/): Digital history
-analysis of the Trail of Broken Treaties and mass media.
+<i class="fa fa-file-code-o" style="color:#03396c;font-size:80%;padding-top:6px;"></i> “['Self-sustaining and a good citizen': William F. Cody and the Progressive Wild West](http://www.codystudies.org/showindians/).”
 
-![Framing Red Power](/assets/images/frp_preview.png)
+### 2009
 
-## Publications
-
-Douglas Seefeldt and Jason Heppler, "A National Monument," in *The Companion to Custer and the Little Big Horn*, ed. Brad D. Lookinbill (Wiley Blackwell, 2015), 462--484. [PDF preprint](https://www.academia.edu/15865723/A_National_Monument)
-
-## Coding
-
-In the course of my research, I rely on code and software for visualization
-and analysis. Below, I have some of the software I've written. All of my code
-projects can be found on [Github](http://github.com/hepplerj).
-
-* [CSV to JSON](http://jasonheppler.org/2014/07/12/parsing-csv-to-json/) - a
-Python script for converting CSV data into simply structured JSON.
-* [Python parsing to JSON](https://gist.github.com/hepplerj/373f59d91bd101d5d5c2) - a Python script
-for converting a string of characters into hierarchical JSON.
-* [FREQr](https://github.com/hepplerj/FREQr) - a Ruby script for calculating word frequencies.
-* [History Bibliography](https://github.com/hepplerj/bib) - a BibTeX database of citations in environmental,
-urban, and North American West history.  
-* [Dotfiles](https://github.com/hepplerj/dotfiles) - my Unix/Mac configuration files for ZSH, vim, Git, Ruby, and JavaScript.
+<i class="fa fa-file-code-o" style="color:#03396c;font-size:80%;padding-top:6px;"></i> “[Framing Red Power: The Trail of Broken Treaties, the American Indian Movement, and the Politics of Media](http://www.framingredpower.org/)."
 
 ## Posts
 

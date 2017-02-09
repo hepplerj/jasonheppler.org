@@ -5,9 +5,8 @@ date: 2014-09-21 21:11:38
 image: 
     feature: 
     thumb: 
-categories: [teaching, shorts]
-post_type: Shorts
-tags: ["digital history"]
+categories: teaching
+tags: [digital-history, teaching]
 ---
 
 This fall I am teaching an undergraduate/graduate colloquium called "Digital History," joining the lineup of the History Department's stellar [Visualizing Evidence](https://visualizing-evidence.stanford.edu/), [Spatial History](https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&page=0&catalog=&q=HISTORY+401A%3A+Spatial+History%3A+Concepts%2C+Methods%2C+Problems&collapse=), and [The Digital Historian's Toolkit](http://www.cameronblevins.org/teaching/dhtk2012/). My aim is to get students familiar with various approaches to digital history -- data mining, spatial history, visualization, and so on -- and how to apply these approaches to historical questions. 
