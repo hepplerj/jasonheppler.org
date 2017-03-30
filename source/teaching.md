@@ -42,7 +42,7 @@ At THATCamp AHA, I proposed this session. Over the course of my training as a di
 
 ## Posts
 
-<ul class="listing">
+<ul class="list-items">
 {% for post in site.categories.teaching %}
     <li>
         <span>{{ post.date | date: "%B %e, %Y" | ordinalize  }}</span>

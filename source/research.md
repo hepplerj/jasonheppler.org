@@ -6,7 +6,7 @@ permalink: /research/
 
 My work broadly centers on twentieth century political and environmental American history. My work ranges from political and cultural change, urban and environmental history, political culture, historical memory, and the North American West. Posts collected here are items related to my research projects. Material relating to research workflows and programming can be found in the [Digital History]({{ site.url }}/digital/) section. See also <a href="{{ site.owner.vita }}">my vita</a> for more academic information.
 
-<ul>
+<ul class="list-items">
   <li><a href="#in-progress">In Progress</a></li>
   <li><a href="#books-articles-book-chapters">Books, Articles, Book Chapters</a></li>
   <li><a href="#digital-research-and-scholarship">Digital Research and Scholarship</a></li>
@@ -71,7 +71,7 @@ My work broadly centers on twentieth century political and environmental America
 
 ## Posts
 
-<ul class="listing">
+<ul class="list-items">
 {% for post in site.categories.research %}
     <li>
         <span>{{ post.date | date: "%B %e, %Y" | ordinalize  }}</span>

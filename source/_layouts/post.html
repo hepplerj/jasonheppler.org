@@ -5,7 +5,6 @@ layout: default
 <div class="post">
   <!-- <h1 class="post-title">{{ page.title }}</h1> -->
   <div class="posthead">
-  <p class="byline"><span><a href="{{ site.url }}">{{ site.title }}</a> / <a href="{{site.url}}/archives/">Writing</a> / {{page.title}}</span></p>
   <h1 class="title">{{ page.title }}</h1>
   {% if page.intro %}<p class="description">{{ page.intro }}</p>{% endif %}
   </div>
@@ -21,27 +20,9 @@ layout: default
   {% endif %}
 </div>
 
-
 <div class="essay-info">
-  <figure class="essay-info-avatar"><img src="/assets/images/me.jpg" title="Hello, nice to meet you."></figure>
-
-  <div class="essay-info-biography">
-
-    <h5>About Jason</h5>
-    <p>I am a digital historian at the University of Nebraska at Omaha and a scholar of the twentieth-century United States. I often write here about the history of the North American West, technology, the environment, politics, culture, and coffee. You can follow <a href="http://twitter.com/jaheppler" title="Follow Jason on Twitter">me on Twitter</a>, or learn <a href="{{ site.url }}" title="More about Jason">more about me</a>.</p>
-    
-	<p>This was written on <a href="{{page.url}}" title="{{page.date}}">{{ page.date | date: "%B %d, %Y" }}</a> | {% capture words %}
-            {{ page.content | number_of_words }}
-          {% endcapture %}
-          {% unless words contains "-" %}
-            {{ words | plus: 250 | divided_by: 250 | append: " minute read" }}
-          {% endunless %} | {{page.content | number_of_words | thousands_separated }} Words<br/>
-		  Filed under: 
-					{% for tag in page.tags %}
-					<a href="{{ 'tag/' | relative_url }}{{ tag }}" title="See posts tagged with {{ tag }}">{{ tag }}</a>
-			        {% endfor %}</p>
-
-    <p><a href="/archives/">&larr; Read more essays</a></p>
+  <div class="essay-info-biography">    
+    <p>{{ page.date | date: "%B %d, %Y" }} <a href="http://twitter.com/{{site.owner.twitter}}">@jaheppler</a></p>
   </div>
 </div>
 

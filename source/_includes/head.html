@@ -8,7 +8,7 @@
   <meta name="copyright" content="&copy; Copyright 2008 to Present"/>
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, minimum-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta property="twitter:account_id" content="16240799"/>
@@ -41,7 +41,6 @@
   <meta name="citation_title" content=""/>
   <meta name="citation_journal_title" content="Jason Heppler weblog"/>
 
-
   <!-- Twitter cards -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@jaheppler">
@@ -65,18 +64,25 @@
   <link rel="stylesheet" href="/assets/stylesheets/bigfoot-default.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-<!-- Javascript -->
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript" src="/assets/javascripts/bigfoot.min.js"></script>
-<script type="text/javascript">
-    $.bigfoot();
-</script>
+  <!-- Javascripts -->
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/javascripts/bigfoot.min.js"></script>
+  <script type="text/javascript">
+      $.bigfoot();
+  </script>
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
   <link rel="shortcut icon" href="/public/favicon.ico">
 
   <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+  <link rel=alternate type='application/rss+xml' title='jasonheppler.org' href='http://jasonheppler.org/rss.xml' />
+  <link rel=alternate type='application/atom+xml' title='jasonheppler.org' href='http://jasonheppler.org/atom.xml' />
+  <script type="application/ld+json">
+  { "@context": "http://schema.org",
+    "@type": "CreativeWork",
+    
+    "author": "Jason A. Heppler" }
+  </script>
 </head>

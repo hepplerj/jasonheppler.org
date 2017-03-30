@@ -115,11 +115,17 @@ figures:
 links:
   - title: Archives
     url: /archives/
-  - title: "Digital & Public History"
+  - title: "Digital"
     url: /digital/
   - title: Research
     url: /research/
   - title: Teaching
     url: /teaching/
+  - title: About
+    url: /about/
+  - title: Github
+    url: "http://github.com/hepplerj"
+  - title: Twitter
+    url: "http://twitter.com/jaheppler"
 
 google_analytics_tracking_id: UA-12786552-1

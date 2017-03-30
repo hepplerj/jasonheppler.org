@@ -27,7 +27,7 @@ events through new research methods and visualizations.
 
 ## Posts
 
-<ul class="listing">
+<ul class="list-items">
 {% for post in site.categories.hacks %}
     <li>
         <span>{{ post.date | date: "%B %e, %Y" | ordinalize  }}</span>

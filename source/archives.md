@@ -12,7 +12,7 @@ permalink: /archives/
 
 I've written <strong>{{ totals | thousands_separated }}</strong> words here since 2008, averaging around <strong>{{ average }}</strong> per post. The longest post is <strong>{{ longest | thousands_separated }}</strong> words.
 
-<ul>
+<ul class="list-items">
   {% for post in site.posts %}
     {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
     {% capture next_year %}{{ post.next.date | date: '%Y' }}{% endcapture %}

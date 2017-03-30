@@ -5,14 +5,14 @@
 
   <body>
 
-    {% include sidebar.html %}
-
     <div class="content container">
 
-      {{ content }}
+    {% include navigation.html %}
+
+    {{ content }}
 
     <footer>
-      <p>Written by Jason Heppler &#149; Powered by <a
+      <p>Written by <a href="{{ site.url }}">Jason Heppler</a> &#149; Powered by <a
       href="http://github.com/mojombo/jekyll">Jekyll</a> and <span class="fa fa-coffee"></span> &#149; Made in Omaha, Nebr. <br/> Licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA Creative Commons</a> • <a href="http://www.jasonheppler.org/feed.xml">Subscribe to RSS</a></p>
       <p>Remember <a href="http://lessig.tumblr.com/post/40347463044/prosecutor-as-bully">Aaron Swartz</a></p>
     </footer>
