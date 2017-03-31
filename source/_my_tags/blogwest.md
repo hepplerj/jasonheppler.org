@@ -1,4 +1,0 @@
----
-slug: blogwest
-name: BlogWest
----

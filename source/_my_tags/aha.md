@@ -1,4 +1,0 @@
----
-slug: aha
-name: AHA
----

@@ -1,4 +1,0 @@
----
-slug: podcast
-name: Podcast
----

@@ -1,4 +1,0 @@
----
-slug: review
-name: Review
----

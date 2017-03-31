@@ -1,4 +1,0 @@
----
-slug: latex
-name: LaTeX
----

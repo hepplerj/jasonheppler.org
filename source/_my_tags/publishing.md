@@ -1,4 +1,0 @@
----
-slug: publishing
-name: Publishing
----

@@ -1,4 +1,0 @@
----
-slug: california
-name: California
----

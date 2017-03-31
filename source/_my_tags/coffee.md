@@ -1,4 +1,0 @@
----
-slug: coffee
-name: Coffee
----

@@ -1,4 +1,0 @@
----
-slug: dissertation
-name: Dissertation
----

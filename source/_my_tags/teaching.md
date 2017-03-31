@@ -1,4 +1,0 @@
----
-slug: teaching
-name: Teaching
----

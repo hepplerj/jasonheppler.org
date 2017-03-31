@@ -1,4 +1,0 @@
----
-slug: data
-name: Data
----

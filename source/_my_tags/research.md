@@ -1,4 +1,0 @@
----
-slug: research
-name: Research
----

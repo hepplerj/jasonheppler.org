@@ -1,4 +1,0 @@
----
-slug: career
-name: Career
----

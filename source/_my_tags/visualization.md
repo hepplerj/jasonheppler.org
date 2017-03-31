@@ -1,4 +1,0 @@
----
-slug: visualization
-name: Visualization
----

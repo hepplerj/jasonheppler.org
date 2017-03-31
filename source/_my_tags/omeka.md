@@ -1,4 +1,0 @@
----
-slug: omeka
-name: Omeka
----

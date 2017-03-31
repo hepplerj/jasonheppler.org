@@ -1,4 +1,0 @@
----
-slug: environment
-name: Environment
----

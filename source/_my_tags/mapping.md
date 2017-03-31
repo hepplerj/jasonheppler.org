@@ -1,4 +1,0 @@
----
-slug: mapping
-name: Mapping
----

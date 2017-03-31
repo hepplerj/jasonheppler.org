@@ -1,4 +1,0 @@
----
-slug: vim
-name: vim
----

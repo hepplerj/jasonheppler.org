@@ -1,4 +1,0 @@
----
-slug: dpla
-name: DPLA
----

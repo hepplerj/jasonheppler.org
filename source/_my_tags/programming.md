@@ -1,4 +1,0 @@
----
-slug: programming
-name: Programming
----

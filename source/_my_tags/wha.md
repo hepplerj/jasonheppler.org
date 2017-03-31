@@ -1,4 +1,0 @@
----
-slug: wha
-name: WHA
----

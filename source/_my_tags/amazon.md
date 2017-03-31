@@ -1,4 +1,0 @@
----
-slug: amazon
-name: Amazon
----

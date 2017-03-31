@@ -1,4 +1,0 @@
----
-slug: midwest
-name: Midwest
----

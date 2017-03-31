@@ -52,17 +52,7 @@ assets:
     - assets/images
     - assets/javascripts
     - assets/stylesheets
-collections:
-  my_tags:
-    output: true
-    permalink: /tag/:slug/
-defaults:
-  -
-    scope:
-      path: ""
-      type: my_tags
-    values:
-      layout: articles_by_tag
+
 exclude:
   - .asset-cache
   - .bundle
@@ -104,8 +94,6 @@ instructor_officehours_link: http://jasonheppler.org/officehours
 instructor_twitter: jaheppler
 instructor_website: http://jasonheppler.org
 course_description: "An introduction to digital history."
-
-# paginate:         10
 
 figures:
   dir: /figures

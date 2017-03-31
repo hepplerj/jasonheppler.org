@@ -1,4 +1,0 @@
----
-slug: writing
-name: Writing
----

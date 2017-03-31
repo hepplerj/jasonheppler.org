@@ -1,4 +1,0 @@
----
-slug: textexpander
-name: TextExpander
----

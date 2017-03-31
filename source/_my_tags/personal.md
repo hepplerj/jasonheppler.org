@@ -1,4 +1,0 @@
----
-slug: personal
-name: Personal
----
