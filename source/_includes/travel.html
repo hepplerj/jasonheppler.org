@@ -1,0 +1,19 @@
+{% assign trips = site.data.travel | sort: 'datestart' %}
+{% for trip in trips %}
+<p>
+{% if trip.url %}
+  <strong><a href="{{ trip.url }}">{{ trip.venue }}</a></strong>
+{% else %}
+  <strong>{{ trip.venue }}</strong>
+{% endif %}
+<br>
+{% if trip.location %}
+  {{ trip.location }}: 
+{% endif %}
+{% if trip.dateend %}
+  {{ trip.datestart | date: '%B %-d, %Y' }} - {{ trip.dateend | date: '%B %-d, %Y' }}
+{% else %}
+  {{ trip.datestart | date: '%B %-d, %Y' }}
+{% endif %}
+</p>
+{% endfor %}
