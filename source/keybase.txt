@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/jaheppler
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jasonheppler.org
+  * I am jaheppler (https://keybase.io/jaheppler) on keybase.
+  * I have a public key ASDXbDTSmWJiyDZ6URLp6rKUdG-84IRsPjYEJWYog7YOcgo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120d76c34d2996262c8367a5112e9eab294746fbce0846c3e360425662883b60e720a",
+            "host": "keybase.io",
+            "kid": "0120d76c34d2996262c8367a5112e9eab294746fbce0846c3e360425662883b60e720a",
+            "uid": "852e4c4d547e4784f1261a412db96419",
+            "username": "jaheppler"
+        },
+        "service": {
+            "hostname": "jasonheppler.org",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.20"
+    },
+    "ctime": 1491704387,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1491704348,
+        "hash": "49f987779bcfb380ec1f9ba72f63b3092888d8d175e9e0d9a81d0e48b82a6795cbbeaf722794e0aee986e962d1d364a236b4741710358cdc3e6e2e1ec0a63af7",
+        "seqno": 1007515
+    },
+    "prev": "9c6e632977132ff550ba2c3ebfc9e8b7e40fc9f05ae522555b9628914b8356f2",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg12w00pliYsg2elES6eqylHRvvOCEbD42BCVmKIO2DnIKp3BheWxvYWTFAvp7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZDc2YzM0ZDI5OTYyNjJjODM2N2E1MTEyZTllYWIyOTQ3NDZmYmNlMDg0NmMzZTM2MDQyNTY2Mjg4M2I2MGU3MjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZDc2YzM0ZDI5OTYyNjJjODM2N2E1MTEyZTllYWIyOTQ3NDZmYmNlMDg0NmMzZTM2MDQyNTY2Mjg4M2I2MGU3MjBhIiwidWlkIjoiODUyZTRjNGQ1NDdlNDc4NGYxMjYxYTQxMmRiOTY0MTkiLCJ1c2VybmFtZSI6ImphaGVwcGxlciJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiamFzb25oZXBwbGVyLm9yZyIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjIwIn0sImN0aW1lIjoxNDkxNzA0Mzg3LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0OTE3MDQzNDgsImhhc2giOiI0OWY5ODc3NzliY2ZiMzgwZWMxZjliYTcyZjYzYjMwOTI4ODhkOGQxNzVlOWUwZDlhODFkMGU0OGI4MmE2Nzk1Y2JiZWFmNzIyNzk0ZTBhZWU5ODZlOTYyZDFkMzY0YTIzNmI0NzQxNzEwMzU4Y2RjM2U2ZTJlMWVjMGE2M2FmNyIsInNlcW5vIjoxMDA3NTE1fSwicHJldiI6IjljNmU2MzI5NzcxMzJmZjU1MGJhMmMzZWJmYzllOGI3ZTQwZmM5ZjA1YWU1MjI1NTViOTYyODkxNGI4MzU2ZjIiLCJzZXFubyI6NywidGFnIjoic2lnbmF0dXJlIn2jc2lnxEAIwsne6RyKvUmiMXWCkFaGhxGhnAxnfwkW0Ih1om7SP1xaVD4GrKm0B8h4MDlMpryBt3TrNlyDjkvXd2eqArQHqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgaTMUjow14tAaVzwBse13ABwnwL0kv/ZemYOdQme1zISjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jaheppler
+
+==================================================================
