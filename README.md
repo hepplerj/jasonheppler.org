@@ -13,6 +13,8 @@ Test everything locally before uploading your site.
 
 Thanks!
 
+[Jason A. Heppler](http://jasonheppler.org) | University of Nebraska at Omaha
+
 # Getting Started
 
 ## Dependences
