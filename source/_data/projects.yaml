@@ -1,0 +1,46 @@
+published:
+  - title: '"A National Monument," with Douglas Seefeldt, _The Companion to Custer and the Little Big Horn_, edited by Brad Lookingbill (Hoboken: Wiley and Sons).'
+    url: https://www.academia.edu/15865723/A_National_Monument
+    snippet: 'We explore how shifting interpretations of the Little Bighorn by Native peoples, Custer enthusiasts, and the National Park Service shape the dominant public memory of the Little Bighorn National Monument.'
+    date: "2015"
+    type: section
+  - title: '"Crowdsourcing Public Digital History," with Gabriel K. Wolfenstein, _The American Historian_.'
+    url: http://tah.oah.org/content/crowdsourcing-digital-public-history/
+    snippet: "The digital turn has offered new technologies to harness communal knowledge and engage with communities. We discuss some successful and well-known crowdsourced projects and explore one of the projects underway at Stanford's Center for Spatial and Textual Analysis."
+    date: "2015"
+    type: section
+  - title: '"A Call to Redefine Historical Scholarship in the Digital Turn," with Alex Galarza and Douglas Seefeldt, _The Journal of Digital Humanities_ vol. 1, no. 4'
+    url: http://journalofdigitalhumanities.org/1-4/a-call-to-redefine-historical-scholarship-in-the-digital-turn/
+    snippet: "This is a collaboratively-written call for the American Historical Association to appoint a task force to survey the profession as to the place of digital historical scholarship in promotion and tenure and graduate student training and to recommend standards and guidelines for the profession to follow."
+    date: "2012"
+dh:
+  - title: "Machines in the Valley: Growth, Conflict, and Environmental Politics in Silicon Valley"
+    url: http://dissertation.jasonheppler.org
+    snippet: 'The digital component of my PhD dissertation using spatial history and digital narrative to explore the environmental history of Silicon Valley.'
+    date: "2016"
+  - title: "Framing Red Power: The Trail of Broken Treaties, the American Indian Movement, and the Politics of Media"
+    url: http://framingredpower.org
+    snippet: "The digital component to my Master's thesis using text analysis to explore how media received the American Indian Movement's message during the Trail of Broken Treaties."
+    date: "2009"
+  - title: "Geography of the Post"
+    url: http://cameronblevins.org/gotp/
+    snippet: 'In collaboration with Cameron Blevins, we visualized the spread of 14,000 post offices in the nineteenth-century American West.'
+    date: "2014"
+  - title: Marriage of Thames and Rhine
+    url: 
+    snippet: 'In collaboration with Molly Taylor-Poleskey, we created an interactive narrative of the journey of the court of Prince-Elector Friedrich Wilhelm.'
+    date: "2016"
+  - title: Visualizing Chinese Keyboard Input
+    url:
+    snippet: 'In collaboration with Tom Mullaney, we visualized the keyboard input of Chinese input editors to explore what Chinese writing looks like in the 21st century.'
+    date: "2016"
+  - title: '"Self-sustaining and a good citizen: William F. Cody and the Progressive Wild West'
+    url: http://www.codystudies.org/showindians/
+    snippet: "William F. Cody and the Progressive Wild West seeks to examine Cody's attitudes towards American Indians and present a scholarly argument in the digital form."
+    date: "2012"
+other:
+  - title: "Machines in the Valley: Community, Urban Change, and Environmental Politics in Silicon Valley, 1945-1990"
+    url: http://digitalcommons.unl.edu/historydiss/86/
+    snippet: "My Ph.D. dissertation explored the rise of environmental politics in Silicon Valley during the postwar era."
+    date: "May 2016"
+    type: thesis
