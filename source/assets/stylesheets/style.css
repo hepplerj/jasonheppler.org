@@ -86,79 +86,6 @@ abbr[title] {
   cursor: help;
   border-bottom: 1px dotted #e5e5e5;
 }
-/*
-
-.posthead {
-  position: relative;
-  margin: 0 auto 50px;
-  color: #263645;
-}
-
-.byline {
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  margin-bottom: -0.5rem;
-}
-
-.byline span {
-  font-size: 11px;
-}
-
-.entry-title {
-  font-size: 2.3em;
-  font-weight: 400;
-}
-.entry-title a {
-  text-decoration: none;
-  border: none;
-  color: #333;
-  font-weight: 400;
-}
-.entry-time {
-  font-weight: 400;
-  font-style: normal;
-  color: #888;
-  font-size: 0.8em;
-}
-.excerpt {
-  font-weight: 400;
-  font-style: normal;
-  color: #bf616a;
-  font-size: 1em;
-  font-style: italic;
-}
-
-.contact-email {
-  font-size: 12px;
-}
-
-.break {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0.1em;
-}
-
-.title {
-  font-size: 2.2em;
-  font-weight: 500;
-  line-height: 45px;
-}
-
-.description {
-  margin-top: 40px;
-  width: 306px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.7em;
-  color: #bf616a;
-  text-transform: uppercase;
-}
-
-
-*/
-/* === */
 
 /* Code */
 code,
@@ -315,6 +242,34 @@ hr {
   background: #f2f2f2;
   padding: 5px;
   border: 1px solid #e5e5e5;
+}
+
+.article-list {
+  display: block;
+  padding: 0;
+  margin: 50px 0;
+  list-style: none;
+}
+
+.article-list li {
+  padding: 30px 0;
+  border-bottom: 1px solid #ebeaea;
+}
+
+.article-list-tags {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.article-list-footer {
+  display: block;
+}
+
+.article-list-footer span {
+  display: inline-block;
+  font-size: 11px;
+  color: #333;
+  vertical-align: middle;
 }
 
 /* data viz */

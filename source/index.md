@@ -24,30 +24,12 @@ To keep updated on my work, follow me on [Twitter](http://twitter.com/jaheppler)
 
 [Contact me about speaking at your institution!](/speaking)
 
-#### Things I've written recently:
+#### Recent Writings
 
 <ul class="list-items">
   {% for post in site.posts limit: 5 %}
-	<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+	<li><time datetime="{{ post.date }}">{{ post.date | date: "%d %b %y" }}</time> &middot; <a href="{{ post.url }}">{{ post.title | markdownify | replace: "<p>", "" | replace: "</p>", "" | strip }}</a></li>
   {% endfor %}
-  <li><a href="{{site.url}}/archives/">There's {{ site.posts | size }} more in the archives...</a></li>
-</ul>
-
-#### Digital Projects
-
-<ul class="list-items">
-	<li><a href="http://dissertation.jasonheppler.org">Machines in the Valley</a> a digital dissertation</li>
-	<li><a href="http://cameronblevins.org/gotp/">The Geography of the Post</a> visualizing the spread of the nineteenth century U.S. post</li>
-	<li><a href="/digital/">More projects...</a></li>
-</ul>
-
-<h4>Teaching</h4>
-<ul class="list-items">
-	<li>April 2017 &middot; "<a href="http://jasonheppler.org/projects/bsu-workshop/">Network Analysis</a>," workshop, Ball State University.
-	<li>April 2017 &middot; "What is Endangered Data?", workshop, University of Nebraska at Omaha.</li>
-	<li>April 2017 &middot; "Web Scraping with R," workshop, University of Nebraska at Omaha.</li>
-	<li>April 2017 &middot; "Data Manipulation with R," workshop, University of Nebraska at Omaha.</li>
-	<li>January 2017 &middot; AHA Digital History Workshop: "<a href="http://jasonheppler.org/projects/aha-workshop/">Network Analysis</a>," American Historical Association.</li>
-	<li><a href="/teaching/">More teaching...</a></li>
+  	<li><a href="{{site.url}}/archives/">There's {{ site.posts | size }} more in the archives...</a></li>
 </ul>
 
