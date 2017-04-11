@@ -7,7 +7,8 @@ image:
     thumb: 
 categories: [hacks, essay]
 post_type: Essay
-tags: [digital-humanities]
+tags: 
+- digital humanities
 comments: true
 ---
 

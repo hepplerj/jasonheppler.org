@@ -3,7 +3,7 @@ layout: post
 title: Initial Thoughts on TileMill
 date: 2011-03-15 08:00:11 -05:00
 tags:
-- spatial-humanities
+- spatial history
 - review
 category: research
 ---

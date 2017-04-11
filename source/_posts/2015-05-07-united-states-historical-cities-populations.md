@@ -7,7 +7,9 @@ image:
     feature:
     thumb:
 categories: hacks, linkblog
-tags: mapping, data
+tags:
+- gis
+- data
 ---
 
 Thanks to the hard work of Erik Steiner and Jan Lahmeyer, the [Spatial History

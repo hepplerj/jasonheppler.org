@@ -3,9 +3,8 @@ layout: post
 title: "Using Notational Velocity"
 date: Fri Jul 22 22:53:44 -0600 2011
 tags:
-- workflow
 - productivity
-- nvalt
+- review
 category: hacks
 ---
 

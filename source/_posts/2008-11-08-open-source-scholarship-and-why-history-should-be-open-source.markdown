@@ -5,9 +5,9 @@ title: Open Source Scholarship, and Why History Should Be Open Source
 date: 2008-11-08 15:36:35 -06:00
 wordpress_url: http://www.jasonheppler.org/?p=51
 tags: 
-- openaccess 
-- digital-humanities
-- opensource
+- open access 
+- digital history
+- open source
 category: Academe
 ---
 In June 2006 the late Roy Rosenzweig <a href="http://chnm.gmu.edu/resources/essays/d/42" target="_blank">published</a> an article entitled "Can History be Open Source?  Wikipedia and the  Future of the Past" in the <em>Journal of American History</em>.  Open  source models like Wikipedia, Rosenzweig suggests, might offer  alternatives to the historian's highly individualistic and possessive  craft.  The triumph of Wikipedia indicates the thirst for free and  accessible information people have. The methods and approaches that have  characterized Wikipedia's success raises questions about how we  produce, share, and debate scholarly work.

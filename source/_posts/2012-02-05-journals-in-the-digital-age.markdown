@@ -3,8 +3,8 @@ layout: post
 title: "Journals in the Digital Age"
 date: Sun Feb 05 09:00:46 -0500 2012 
 tags:
-- history
 - publishing
+- digital humanities
 category: research
 ---
 

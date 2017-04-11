@@ -6,7 +6,7 @@ date: 2013-08-30 12:09:13
 external-url: http://madebyloren.com/github-for-writers
 categories: [linked]
 tags:
-- github
+- academia
 ---
 A new interesting project by Loren Burton that envisions a Github-style platform for writers.
 

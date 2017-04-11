@@ -3,6 +3,9 @@ layout: post
 title: Interview for Digital History@Rice
 date: 2013-03-26 9:13:37
 category: teaching
+tags:
+- teaching
+- digital history
 ---
 
 *[This post originally appeared at [Digital History@Rice](http://digitalhistory.blogs.rice.edu/2013/03/27/interview-with-jason-heppler/). Thanks to Caleb McDaniel for his invitation to participate in the course!]*

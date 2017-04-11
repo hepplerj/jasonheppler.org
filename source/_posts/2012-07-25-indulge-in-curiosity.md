@@ -4,7 +4,7 @@ title: Indulge in Curiosity
 date: 2012-07-25  8:12:07
 external-url: http://www.wired.com/epicenter/2011/10/jobs/all/1
 tags:
-- productivity
+- personal
 category: Link
 ---
 [Steve Jobs](http://www.wired.com/epicenter/2011/10/jobs/all/1):

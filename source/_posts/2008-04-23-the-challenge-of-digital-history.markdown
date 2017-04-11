@@ -5,7 +5,7 @@ title: The Challenge of Digital History
 date: 2008-04-23 16:28:29 -05:00
 wordpress_url: http://www.jasonheppler.org/?p=38
 tags:
-- digital-humanities
+- digital history
 category: Academe
 ---
 Over at his blog, Dan Cohen  writes about “<a href="http://www.dancohen.org/2008/04/22/the-pirate-problem/">The  Pirate Problem</a>” in digital history. He says that “the digital  humanities represent a scary, rule-breaking, swashbuckling movement for  many historians and other scholars. We must remember that these scholars  have had—for generations and still in today’s graduate schools—a very  clear path for how they do their work, publish, and get rewarded.” It is  a somber look at what digital humanitarians have to face when  explaining what digital history means the profession.

@@ -3,7 +3,6 @@ layout: post
 title: A Few New Scripts
 date: 2012-06-07 19:18:08
 tags:
-- scripts
 - bash
 category: research
 ---

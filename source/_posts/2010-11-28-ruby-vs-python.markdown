@@ -5,7 +5,7 @@ title: Ruby vs. Python
 date: 2010-11-28 10:31:57 -06:00
 external-url: http://allthingsprogress.com/posts/ruby-is-beautiful-but-im-moving-to-python
 tags:
-- programming
+- code
 - ruby
 - python
 category: Link

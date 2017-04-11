@@ -3,7 +3,6 @@ layout: post
 title: "Silicon Valley and the Cold War"
 date: Wed Jun 29 21:13:22 -0500 2011
 tags:
-- history
 - dissertation
 category: Academe
 ---

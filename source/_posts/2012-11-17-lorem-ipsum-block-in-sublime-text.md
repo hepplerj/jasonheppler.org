@@ -3,7 +3,7 @@ layout: post
 title: Lorem Ipsum Block in Sublime Text
 date: 2012-11-17 18:24:38
 tags:
-- sublime-text
+- productivity
 ---
 Awesome little feature in Sublime Text:
 

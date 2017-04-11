@@ -6,8 +6,10 @@ date: 2014-06-04  6:46:47
 image:
   feature: dhsi2014_game.jpg
   thumb:
-categories: [hacks]
-tags: [dhsi, conferences]
+categories:
+- hacks
+tags:
+- conference
 ---
 
 I am spending the week at the University of Victoria for this year's [Digital

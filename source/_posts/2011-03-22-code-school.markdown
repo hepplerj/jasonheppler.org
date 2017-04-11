@@ -4,7 +4,7 @@ title: Code School
 date: 2011-03-22 21:22:35 -05:00
 external-url: http://codeschool.com/
 tags:
-- programming
+- code
 category: Link
 ---
 

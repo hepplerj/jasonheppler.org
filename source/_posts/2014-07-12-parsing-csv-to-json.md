@@ -7,7 +7,9 @@ image:
   feature:
   thumb:
 categories: [hacks]
-tags: [ruby, d3js]
+tags:
+- ruby
+- data
 ---
 
 I took a moment yesterday morning to start work on a Ruby script to convert CSV files to JSON. My main motivation for writing the script was to get data into a format that more easily works with [D3.js](http://d3js.org). 

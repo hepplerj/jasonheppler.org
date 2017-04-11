@@ -5,7 +5,7 @@ title: Less Yack, More Hack
 date: 2011-02-02 12:03:40 -06:00
 external-url: http://chronicle.com/blogs/profhacker/more-hackety-hack-less-yackety-yack-ruby-for-humanists/30175
 tags:
-- programming
+- code
 - ruby
 category: Link
 ---

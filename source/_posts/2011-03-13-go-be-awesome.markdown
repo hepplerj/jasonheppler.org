@@ -4,7 +4,6 @@ title: Go Be Awesome
 date: 2011-03-13 23:05:55 -05:00
 external-url: https://www.youtube.com/watch?v=UF8uR6Z6KLc
 tags:
-- apple
 - productivity
 category: Link
 ---

@@ -7,7 +7,8 @@ image:
     thumb:
 categories: [research, shorts]
 post_type: Short
-tags: [conferences, aha]
+tags:
+- conference
 ---
 
 This weekend I'll be in New York for the American Historical

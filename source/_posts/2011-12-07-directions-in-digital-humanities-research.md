@@ -4,11 +4,8 @@ layout: post
 title: "Directions in Digital Humanities Research"
 date: Wed Dec 07 20:56:37 -0600 2011
 tags:
-- unl-dhs
-- history
-- digitalhistory
+- digital history
 - research
-- scholarship
 category: research
 ---
 

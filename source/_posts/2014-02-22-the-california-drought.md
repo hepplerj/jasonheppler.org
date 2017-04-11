@@ -7,7 +7,8 @@ image:
   feature: sj_ponds.jpg
   thumb:
 categories: [essay, research]
-tags: [california, american-west]
+tags:
+- American West
 series: Living West
 ---
 

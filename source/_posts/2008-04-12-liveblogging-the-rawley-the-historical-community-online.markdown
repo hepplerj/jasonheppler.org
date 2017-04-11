@@ -5,7 +5,8 @@ title: "Liveblogging the Rawley: The Historical Community Online"
 date: 2008-04-12 09:35:23 -05:00
 wordpress_url: http://www.jasonheppler.org/?p=36
 tags: 
-- digital-humanities
+- digital history
+- conference
 category: Academe
 ---
 Today, the UNL History Graduate Students' Association is hosting the  Third Annual James Rawley Conference in the Humanities.  The panel  coming up is entitled "The Historical Community Online: Using Digital  Tools to Interpret the Past," which features my colleague, Brent.  More  below the jump.

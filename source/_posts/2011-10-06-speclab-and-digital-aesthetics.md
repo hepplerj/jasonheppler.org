@@ -3,7 +3,7 @@ layout: post
 title: "SpecLab and Digital Aesthetics"
 date: Thu Oct 06 10:53:20 -0500 2011
 tags:
-- unl-dhs
+- digital history
 category: research
 ---
 

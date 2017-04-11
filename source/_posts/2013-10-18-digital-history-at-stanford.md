@@ -4,7 +4,7 @@ title: Digital History at Stanford
 date: 2013-10-18 12:26:32
 categories: [hacks, essay]
 tags:
-- digital-history
+- digital history
 ---
 *[This post originally appeared at [Digital Humanities at Stanford](http://digitalhumanities.stanford.edu) on 2013-10-21]*
 

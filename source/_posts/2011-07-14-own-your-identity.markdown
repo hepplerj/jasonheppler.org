@@ -3,8 +3,7 @@ layout: post
 title: "Own Your Identity"
 date: Mon Jul 17 11:00:40 -0500 2011
 tags:
-- identity
-- internet
+- personal
 category: Original
 ---
 

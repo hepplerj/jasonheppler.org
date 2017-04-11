@@ -5,8 +5,7 @@ title: Kindle as a Metaphore for the History Web
 date: 2008-05-02 19:41:01 -05:00
 wordpress_url: http://www.jasonheppler.org/?p=41
 tags: 
-- kindle
-- digital-humanities
+- digital history
 category: Academe
 ---
 Amazon is featuring on its <a href="http://www.amazon.com/">main  page</a> that the Kindle is shipping right away after months of being  back ordered because of insufficient production to meet the demand.  Also, they’ve published their <a href="http://g-ecx.images-amazon.com/images/G/01/digital/fiona/general/2007letter.pdf">letter  to shareholders</a> (PDF alert), which focuses almost exclusively on  the Kindle. Reading the letter, it sounds like Jeff Bezos has some big  plans for going completely electronic.  More below the jump.

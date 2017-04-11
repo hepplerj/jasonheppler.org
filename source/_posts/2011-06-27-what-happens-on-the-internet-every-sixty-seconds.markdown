@@ -4,7 +4,7 @@ title: "What Happens On the Internet Every Sixty Seconds"
 date: Mon Jun 27 11:35:59 -0500 2011
 external-url: http://technolog.msnbc.msn.com/_news/2011/06/16/6874191-what-happens-on-the-internet-every-60-seconds
 tags:
-- internet
+- technology
 category: Link
 ---
 [Rosa Golijan](http://technolog.msnbc.msn.com/_news/2011/06/16/6874191-what-happens-on-the-internet-every-60-seconds):

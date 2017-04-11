@@ -3,7 +3,7 @@ layout: post
 title: Better Web Scraping with Nokogiri
 date: 2012-10-12 14:17:15
 tags:
-- programming
+- code
 - ruby
 category: hacks
 ---

@@ -6,7 +6,9 @@ image:
     feature:
     thumb:
 categories: teaching
-tags: [teaching, digital-history]
+tags:
+- teaching
+- digital history
 comments: false
 ---
 

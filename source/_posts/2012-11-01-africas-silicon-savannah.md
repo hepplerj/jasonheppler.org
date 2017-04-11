@@ -4,7 +4,7 @@ title: Africa's Silicon Savannah
 external-url: http://www.guardian.co.uk/world/2012/oct/30/kenya-silicon-savannah-digital-technology?CMP=twt_gu
 date: 2012-11-01 10:02:32
 tags:
-- computers
+- technology
 category: Link
 ---
 [David Smith writes about Africa's Silicon Savannah in Kenya](http://www.guardian.co.uk/world/2012/oct/30/kenya-silicon-savannah-digital-technology?CMP=twt_gu), where technology companies are beginning to establish themselves:

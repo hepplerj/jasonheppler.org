@@ -4,7 +4,7 @@ layout: post
 title: "The Rubyist Historian: Our First Program"
 date: 2011-01-12 10:50:41 -06:00
 tags: 
-- programming
+- code
 - ruby
 category: research
 ---

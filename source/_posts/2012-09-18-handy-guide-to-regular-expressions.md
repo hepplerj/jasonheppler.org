@@ -4,7 +4,7 @@ title: Handy Guide to Regular Expressions
 external-url: http://etext.lib.virginia.edu/services/helpsheets/unix/regex.html
 date: 2012-09-18  9:28:07
 tags:
-- programming
+- code
 category: Link
 ---
 

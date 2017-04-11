@@ -4,7 +4,7 @@ title: "The Humanities Done Digitally"
 date: Mon May 09 18:27:56 -0500 2011
 external-url: http://chronicle.com/article/The-Humanities-Done-Digitally/127382/
 tags:
-- digital-humanities
+- digital humanities
 category: Link
 ---
 [Kathleen Fitzpatrick](http://chronicle.com/article/The-Humanities-Done-Digitally/127382/):

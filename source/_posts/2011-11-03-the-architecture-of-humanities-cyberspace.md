@@ -4,9 +4,7 @@ layout: post
 title: "The Architecture of Humanities Cyberspace"
 date: Thu Nov 03 10:22:11 -0500 2011
 tags: 
-- unl-dhs
-- law
-- digitalhistory
+- digital history
 category: research
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: Digital History and Continuous Deployment
 date: 2011-03-02 07:45:53 -06:00
 tags:
-- digital-humanities
+- digital history
 - publishing
 category: research
 ---

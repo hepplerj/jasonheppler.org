@@ -4,9 +4,8 @@ title: Open Source Data Journalism Handbook Launched
 date: 2012-05-08  7:46:29
 external-url: http://datajournalismhandbook.org/1.0/en/index.html
 tags:
-- datamining
-- journalism
-- tools
+- data mining
+- digital humanities
 category: Link
 ---
 [The free Data Journalism Handbook seeks to help journalists with the challenges of working with lots of data](http://datajournalismhandbook.org/1.0/en/index.html). The handbook contains case studies and serves as a guide to gathering, understanding, and delivering data. 

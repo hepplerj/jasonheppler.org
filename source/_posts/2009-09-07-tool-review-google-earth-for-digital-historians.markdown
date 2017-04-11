@@ -5,8 +5,7 @@ title: "Tool Review: Google Earth for Digital Historians"
 date: 2009-09-07 07:43:59 -05:00
 tags:
 - review
-- spatial-humanities
-- google
+- spatial history
 category: teaching
 ---
 <em>[Review cross-posted at <a href="http://digitalhistory.unl.edu/t-reviews/geheppler.html">Digital History</a> and originally written in HIST 970: Digital History.]</em>

@@ -5,7 +5,6 @@ title: "The Paleo Diet"
 date: Thu Feb 02 09:20:33 -0600 2012
 category: full
 tags: 
-- paleo
 - personal
 category: Original
 ---

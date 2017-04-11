@@ -3,9 +3,8 @@ layout: post
 title: "Information and Data in the Digital Age"
 date: Thur Sep 22 09:23:33 -0500 2011
 tags:
-- unl-dhs
-- information
 - data
+- digital history
 category: research
 ---
 

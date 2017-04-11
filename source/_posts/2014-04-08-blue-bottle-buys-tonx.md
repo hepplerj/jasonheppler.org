@@ -8,7 +8,8 @@ image:
   feature:
   thumb:
 categories: [linked]
-tags: [coffee]
+tags:
+- coffee
 ---
 [Mat Honan](http://www.wired.com/2014/04/blue-bottle-tonx-handsome/all/1)
  in *Wired*:

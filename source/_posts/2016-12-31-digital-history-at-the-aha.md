@@ -6,7 +6,9 @@ image:
     feature: 
     thumb: 
 categories: 
-tags: digital-history 
+tags:
+- digital history
+- conference
 comments: false
 ...
 

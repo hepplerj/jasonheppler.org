@@ -4,7 +4,8 @@ title: Dotfiles on Github
 date: 2012-06-16  0:21:35
 external-url: http://dotfiles.github.com/
 tags:
-- github
+- technology
+- digital humanities
 category: Link
 ---
 

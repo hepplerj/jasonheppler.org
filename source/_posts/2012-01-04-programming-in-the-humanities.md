@@ -7,7 +7,8 @@ image:
   feature:
   thumb:
 categories: [hacks]
-tags: [THATCamp, Chicago, AHA]
+tags: 
+- conference
 ---
 
 Over the course of my training as a digital historian, I have had two 

@@ -6,7 +6,7 @@ date: 2010-12-29 07:30:49 -06:00
 wordpress_url: http://www.jasonheppler.org/?p=545
 tags:
 - ruby
-- programming
+- code
 category: research
 ---
 The purpose of this ebook is to provide a brief overview of the Ruby programming language and consider ways Ruby (or any other programming language) can be applied to the day-to-day operations of humanities scholars.  Once you complete this book, you should have a good understanding of Ruby basics, be able to complete basic tasks with Ruby, and hopefully leave with a solid basis that will allow you to continue learning.  <!--more-->

@@ -5,7 +5,7 @@ title: "Digital History at the AHA"
 date: Thu Jan 05 10:12:16 -0600 2012
 tags: 
 - conference
-- digitalhistory
+- digital history
 category: Academe
 ---
 

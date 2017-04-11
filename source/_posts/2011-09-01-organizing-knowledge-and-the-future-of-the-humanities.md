@@ -3,8 +3,7 @@ layout: post
 title: "Organizing Knowledge and the Future of the Humanities"
 date: Mon Sept 01 12:17:36 -0600 2011
 tags:
-- unl-dhs
-- knowledge
+- digital history
 category: research
 ---
 

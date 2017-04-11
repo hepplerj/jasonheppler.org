@@ -6,7 +6,8 @@ image:
     feature:
     thumb:
 categories: podcasts, essay
-tags: podcasts
+tags: 
+- podcast
 post_type: Essay
 intro: Here are a few of my favorite podcasts.
 comments: true

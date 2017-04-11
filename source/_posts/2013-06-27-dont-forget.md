@@ -6,6 +6,7 @@ date: 2013-06-27 15:28:43
 categories:
 - Technology
 tags:
+- technology
 ---
 Dave Winer has a reminder that you should [download your Google Reader subscriptions list](http://dave.smallpict.com//2013/06/26/downloadYourGoogleReaderSubsBeforeMonday) before Monday. 
 

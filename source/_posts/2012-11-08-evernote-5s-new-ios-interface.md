@@ -4,7 +4,7 @@ title: Evernote 5's New iOS Interface
 external-url: http://blog.evernote.com/2012/11/08/the-new-evernote-5-for-iphone-ipad-and-ipod-touch/ 
 date: 2012-11-08 10:47:59
 tags:
-- Evernote
+- review
 category: Link
 ---
 

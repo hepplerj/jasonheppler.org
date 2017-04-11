@@ -4,7 +4,7 @@ title: Instapaper 3.0
 date: 2011-03-12 16:48:11 -06:00
 external-url: http://blog.instapaper.com/post/3772087268
 tags:
-- instapaper
+- review
 category: Link
 ---
 

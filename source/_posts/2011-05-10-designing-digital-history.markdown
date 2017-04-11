@@ -3,7 +3,7 @@ layout: post
 title: "Designing Digital History"
 date: Mon May 10 11:25:19 -0500 2011
 tags:
-- digital-humanities
+- digital humanities
 - design
 category: teaching
 ---

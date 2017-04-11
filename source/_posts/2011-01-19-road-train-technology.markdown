@@ -5,7 +5,7 @@ title: Road Train Technology
 date: 2011-01-19 09:01:28 -06:00
 external-url: http://www.newscientist.com/article/dn19987-road-train-technology-can-drive-your-car-for-you.html
 tags:
-- machine-learning
+- machine learning
 category: Link
 ---
 <a href="http://www.newscientist.com/article/dn19987-road-train-technology-can-drive-your-car-for-you.html"><em>New Scientist</em></a> reports on an automatic driving system being developed and tested for the first time in Sweden.  Cars are linked together wirelessly to form a "train" of semi-autonomous convoys controlled by a lead vehicle driven by a human.  Researchers are hoping that road speeds can be reduced, improve fuel efficiency, and cut congestion.  A navigation and communication system measures the car's speed and direction and constantly makes adjustments.  Steering and speed are all automatic. <!--more-->

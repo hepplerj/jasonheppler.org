@@ -4,9 +4,8 @@ layout: post
 title: "Models for Narrative in Digital Humanities"
 date: Thurs Oct 13 17:03:39 -0500 2011
 tags: 
-- unl-dhs
-- scholarship
 - writing
+- digital history
 category: research
 ---
 

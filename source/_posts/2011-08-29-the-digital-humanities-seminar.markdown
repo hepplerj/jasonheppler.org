@@ -3,7 +3,7 @@ layout: post
 title: "The Digital Humanities Seminar"
 date: Sun Aug 29 12:55:34 -0600 2011
 tags:
-- unl-dhs
+- digital history
 category: research
 ---
 

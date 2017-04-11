@@ -5,7 +5,7 @@ title: "The Rubyist Historian: Working With Advanced Data"
 date: 2011-01-07 14:16:47 -06:00
 wordpress_url: http://www.jasonheppler.org/?p=1090
 tags: 
-- programming
+- code
 - ruby
 category: research
 ---

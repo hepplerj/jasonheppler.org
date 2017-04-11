@@ -4,7 +4,7 @@ title: Backup Now
 date: 2012-08-06  6:06:21
 external-url: http://www.marco.org/2012/08/04/mat-hacked
 tags:
-- backup
+- technology
 category: Link
 ---
 [Marco Arment](http://www.marco.org/2012/08/04/mat-hacked):

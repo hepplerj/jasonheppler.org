@@ -6,7 +6,9 @@ image:
     feature: 
     thumb: 
 categories: teaching
-tags: [digital-history, teaching]
+tags:
+- digital history
+- teaching
 ---
 
 This fall quarter I am teaching my digital history course. You can find the draft of the [syllabus here](http://jasonheppler.org/courses/dph.2016/). While the title of the course hasn't changed since the [last time I taught it](http://jasonheppler.org/teaching/hist205f.2014/), I've made two substantial changes to the overall structure of the course. First, the course focuses more heavily on *public* history instead of a range of digital methodologies. Part of this is self-serving---I've always wanted to teach a public history course, and the opportunity to combine *public* and *digital* was a welcome opportunity. 

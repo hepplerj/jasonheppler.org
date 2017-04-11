@@ -4,9 +4,8 @@ layout: post
 title: "Peer Reviewing Writing History in the Digital Age"
 date: Thu Oct 27 09:51:58 -0500 2011
 tags: 
-- unl-dhs
-- peer-review
-- open-access
+- digital history
+- open access
 category: research
 ---
 

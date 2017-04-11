@@ -3,8 +3,7 @@ layout: post
 title: "Thanks, Steve"
 date: Thu Oct 06 07:56:58 -0500 2011
 tags:
-- history
-- apple
+- technology
 category: Apple
 ---
 

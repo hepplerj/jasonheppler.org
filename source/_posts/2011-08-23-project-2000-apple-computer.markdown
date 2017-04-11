@@ -4,8 +4,7 @@ title: "Project 2000 - Apple Computer"
 date: Tue Aug 23 09:58:37 -0500 2011
 external-url: http://www.stephenwolfram.com/publications/articles/computing/88-academic/1/text.html
 tags:
-- apple
-- history
+- technology
 category: Link
 ---
 

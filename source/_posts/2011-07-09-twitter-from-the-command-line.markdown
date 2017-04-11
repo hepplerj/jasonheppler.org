@@ -3,8 +3,7 @@ layout: post
 title: "Twitter from the Command Line"
 date: Sat Jul 09 22:22:14 -0500 2011
 tags:
-- twitter
-- terminal
+- code
 category: hacks
 ---
 

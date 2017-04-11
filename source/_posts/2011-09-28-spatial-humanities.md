@@ -3,8 +3,8 @@ layout: post
 title: "Spatial Humanities and Visual Narratives"
 date: Wed Sep 28 10:10:25 -0500 2011
 tags:
-- unl-dhs
-- spatial-humanities
+- spatial history 
+- digital history
 category: research
 ---
 

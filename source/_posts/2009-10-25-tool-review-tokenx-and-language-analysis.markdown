@@ -4,7 +4,7 @@ title: "Tool Review: TokenX and Language Analysis"
 date: 2009-10-25 13:56:27 -05:00
 tags:
 - review
-- text-analysis
+- text analysis
 category: teaching
 ---
 <em>[This review is cross-posted at <a href="http://digitalhistory.unl.edu/t-reviews/tokenxhepplerrogers.php">Digital History</a>.]</em>

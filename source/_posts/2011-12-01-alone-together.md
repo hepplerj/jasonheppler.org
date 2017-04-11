@@ -4,9 +4,8 @@ layout: post
 title: "Alone Together"
 date: Wed Dec 01 10:47:00 -0600 2011
 tags: 
-- unl-dhs 
-- robotics
-- machine-learning
+- machine learning
+- digital history
 category: research
 ---
 

@@ -4,8 +4,6 @@ title: "Internet Predictions from 1982"
 date: Wed Jun 29 10:50:44 -0500 2011
 external-url: http://www.nytimes.com/1982/06/14/us/study-says-technology-could-transform-society.html
 tags:
-- internet
-- history
 - dissertation
 category: Link
 ---

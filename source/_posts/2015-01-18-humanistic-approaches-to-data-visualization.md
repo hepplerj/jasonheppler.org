@@ -7,7 +7,10 @@ image:
     thumb:
 categories: [hacks, essay]
 post_type: Essay
-tags: [visualization, digital-history]
+tags:
+- data visualization
+- digital history
+- d3js
 ---
 
 <aside class="post">

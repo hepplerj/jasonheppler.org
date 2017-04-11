@@ -4,7 +4,6 @@ title: Opening Marked in Vim
 date: 2012-10-16 17:01:51
 tags:
 - vim
-- marked
 category: hacks
 ---
 

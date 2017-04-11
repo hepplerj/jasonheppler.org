@@ -5,9 +5,6 @@ external-url: http://www.wired.com/threatlevel/2012/03/ff_nsadatacenter/all/1
 date: 2012-09-19 15:14:30
 tags:
 - American West
-- NSA
-- spying
-- privacy
 - dissertation
 - research
 category: Link

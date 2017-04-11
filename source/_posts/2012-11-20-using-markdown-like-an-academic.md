@@ -3,7 +3,7 @@ layout: post
 title: Using Markdown Like an Academic
 date: 2012-11-20  9:06:45
 tags:
-- markdown
+- academia
 category: hacks
 ---
 *[This post originally appeared at [Gradhacker](http://www.gradhacker.org/2012/11/20/using-markdown-like-an-academic/) on 2012-11-20]*

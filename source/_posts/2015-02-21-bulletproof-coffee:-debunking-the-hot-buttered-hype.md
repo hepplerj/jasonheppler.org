@@ -4,7 +4,8 @@ title: "Bulletproof Coffee: Debunking the Hot Buttered Hype"
 date: 2015-02-21  5:35:34
 external-url: http://gizmodo.com/bulletproof-coffee-debunking-the-hot-buttered-hype-1681321467
 categories: linkblog
-tags: [coffee]
+tags:
+- coffee
 ---
 
 Nicely researched piece from Brent Rose. I've never really bought the 

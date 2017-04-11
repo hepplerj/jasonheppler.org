@@ -3,7 +3,7 @@ layout: post
 title: "The Medium of Digital Humanities"
 date: Wed Sep 07 09:14:54 -0600 2011
 tags:
-- unl-dhs
+- digital history
 category: research
 ---
 

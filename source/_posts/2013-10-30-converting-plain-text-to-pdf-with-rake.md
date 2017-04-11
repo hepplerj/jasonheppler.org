@@ -8,7 +8,6 @@ tags:
 - pandoc
 - bash
 - dissertation
-- programming
 ---
 I've written in the past about [my love for Markdown](http://jasonheppler.org/2012/11/20/using-markdown-like-an-academic.html), especially in its relation to scholarly work. Some people have [written whole books with plain text](http://wcm1.web.rice.edu/my-academic-book-in-plain-text.html), and my dissertation is being written entirely in Markdown. But I often need the plain text converted to, well, a more commonly-used file format. My system ties together Markdown and Pandoc for converting plain text into PDF or .docx for distribution.
 

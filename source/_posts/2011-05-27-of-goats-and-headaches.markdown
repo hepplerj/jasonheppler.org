@@ -4,7 +4,7 @@ title: "Of Goats and Headaches"
 date: Sat May 27 10:51:53 -0500 2011
 external-url: http://www.economist.com/node/18744177
 tags:
-- publishing
+- digital humanities
 - libraries
 category: Link
 ---

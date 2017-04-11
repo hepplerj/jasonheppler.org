@@ -5,7 +5,6 @@ title: The Importance of No
 date: 2011-01-26 00:12:29 -06:00
 external-url: http://www.inc.com/magazine/20101201/how-to-kill-a-bad-idea.html
 tags:
-- workflow
 - productivity
 category: Link
 ---

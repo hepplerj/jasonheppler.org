@@ -5,7 +5,7 @@ title: "A Literary History of Word Processing"
 external-url: http://www.nytimes.com/2011/12/26/books/a-literary-history-of-word-processing.html
 date: Tue Dec 27 15:52:45 -0600 2011
 tags:
-- history
+- digital humanities
 category: Link
 ---
 

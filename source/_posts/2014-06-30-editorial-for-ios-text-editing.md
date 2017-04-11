@@ -8,7 +8,8 @@ image:
   thumb:
 categories: [hacks, essay]
 post_type: Essay
-tags: review
+tags:
+- review
 ---
 
 *[This post originally appeared at [ProfHacker](http://chronicle.com/blogs/profhacker/editorial-ios-text-editing/57431) on 2014-06-30.]*

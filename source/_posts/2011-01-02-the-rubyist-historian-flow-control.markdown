@@ -5,7 +5,7 @@ title: "The Rubyist Historian: Loops and Control Structures"
 date: 2011-01-02 07:30:33 -06:00
 wordpress_url: http://www.jasonheppler.org/?p=651
 tags:
-- programming
+- code
 - ruby
 category: research
 ---

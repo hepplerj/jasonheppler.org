@@ -4,8 +4,7 @@ layout: post
 title: "Latour and the Social"
 date: Thu Oct 20 10:52:40 -0500 2011
 tags:
-- unl-dhs
-- digital-humanities
+- digital history
 category: research
 ---
 

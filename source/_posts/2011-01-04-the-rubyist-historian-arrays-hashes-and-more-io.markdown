@@ -5,7 +5,7 @@ title: "The Rubyist Historian: Arrays and Hashes"
 date: 2011-01-04 07:30:52 -06:00
 wordpress_url: http://www.jasonheppler.org/?p=715
 tags:
-- programming
+- code
 - ruby
 category: research
 ---

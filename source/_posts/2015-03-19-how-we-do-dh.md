@@ -4,7 +4,8 @@ title: "How We Do DH"
 date: 2015-03-19 10:52
 external-url: http://blogs.library.duke.edu/dcthree/2015/03/18/how-we-do-dh/
 categories: hacks, linkblog
-tags: digital-humanities
+tags:
+- digital humanities
 ---
 
 Interesting piece over at the Duke Library blog on defining digital

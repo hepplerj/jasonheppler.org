@@ -5,9 +5,8 @@ description:
 date: 2013-12-17 19:45:10
 categories: [hacks, essay]
 tags:
-- digital-history
-- BlogWest
-- western-history
+- digital history
+- American West
 ---
 
 *[This post originally appeared at [BlogWest](http://blogwest.org/2013/12/16/a-conversation-with-jason-heppler/) on 2013-12-16. Thanks to my friend Michael Childers for his invitation to participate!]*

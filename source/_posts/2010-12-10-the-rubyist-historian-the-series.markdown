@@ -5,7 +5,7 @@ title: "The Rubyist Historian: The Series"
 date: 2010-12-10 07:40:53 -06:00
 wordpress_url: http://www.jasonheppler.org/?p=514
 tags:
-- programming
+- code
 - ruby
 category: research
 ---

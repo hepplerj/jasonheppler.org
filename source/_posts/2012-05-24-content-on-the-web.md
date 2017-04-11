@@ -4,7 +4,7 @@ title: Content on the Web
 date: 2012-05-24 14:01:10
 external-url: https://twitter.com/dancohen/status/205670836693250048
 tags:
-- web
+- technology
 category: Link
 ---
 

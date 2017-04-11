@@ -4,8 +4,13 @@ title: Research Design and Geography of the Post
 date: 2014-10-30 08:57:21
 modified: 2014-10-30 08:57:31
 categories: [hacks, essay]
-tags: [mapping, visualization, research]
+tags: 
+- gis
+- data visualization
+- research
+- d3js
 ---
+
 *[Read this along with [Cameron Blevins's companion post](http://www.cameronblevins.org/posts/postal-geography-and-the-golden-west/).]*
 
 After more than a year of work, [Geography of the Post is live](http://cameronblevins.org/gotp/). I wanted to take a moment at the project's launch to reflect back on the design decisions we made with the project and to document these changes.[^2]

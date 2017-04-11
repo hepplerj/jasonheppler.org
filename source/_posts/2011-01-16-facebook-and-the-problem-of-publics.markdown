@@ -4,9 +4,8 @@ layout: post
 title: Facebook and the Problem of Publics
 date: 2011-01-16 21:42:00 -06:00
 tags:
-- internet
-- facebook
-- privacy
+- personal
+- technology
 category: Original
 ---
 <a href="http://www.forbes.com/2010/04/05/google-facebook-twitter-technology-security-10-privacy.html">Bruce Schneier</a> on privacy:

@@ -3,8 +3,7 @@ layout: post
 title: "Electronic Text and the Digital Humanities"
 date: Wed Sep 14 14:01:49 -0500 2011
 tags:
-- unl-dhs
-- digitalhistory
+- digital history
 category: research
 ---
 

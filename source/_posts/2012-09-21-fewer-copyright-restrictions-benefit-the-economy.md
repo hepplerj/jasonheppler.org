@@ -4,7 +4,7 @@ title: Fewer Copyright Restrictions Benefit the Economy
 external-url: https://www.eff.org/deeplinks/2012/09/copyright-and-campaign-misinformation-new-study-affirms-less-copyright
 date: 2012-09-21 20:47:20
 tags:
-- copyright
+- digital humanities
 category: Link
 ---
 [The Electronic Frontier Foundation reports](https://www.eff.org/deeplinks/2012/09/copyright-and-campaign-misinformation-new-study-affirms-less-copyright) that Australia has found that loosening copyright restrictions has an overall affect of improving the economy:

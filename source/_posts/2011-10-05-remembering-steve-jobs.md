@@ -3,8 +3,7 @@ layout: post
 title: "Remembering Steve Jobs"
 date: Wed Oct 05 19:11:35 -0500 2011
 tags:
-- apple
-- history
+- technology
 category: Apple
 ---
 

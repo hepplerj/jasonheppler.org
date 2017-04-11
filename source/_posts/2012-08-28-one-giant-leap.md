@@ -4,7 +4,7 @@ title: One Giant Leap
 date: 2012-08-28  9:58:01
 external-url: http://tightwind.net/2012/08/one-giant-leap/
 tags:
-- links
+- personal
 category: Link
 ---
 Kyle Baxter [reflects on the passing of Neil Armstrong](http://tightwind.net/2012/08/one-giant-leap/):

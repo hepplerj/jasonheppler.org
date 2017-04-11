@@ -4,8 +4,8 @@ title: 1862 Great Plains Symposium
 date: 2012-03-28 15:19:36
 external-url: http://www.unl.edu/plains/seminars/2012_Symposium/home.shtml
 tags:
-- history
-- research
+- Midwest
+- Great Plains
 - conference
 category: Link
 ---
