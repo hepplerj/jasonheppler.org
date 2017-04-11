@@ -7,6 +7,7 @@ description     : 'Historian of the American West.'
 tagline         : "History, technology, coffee"
 url             : "http://jasonheppler.org"
 repository      : "http://github.com/hepplerj/hepplerj.github.com"
+timeline        : America/Chicago
 
 # Jekyll configuration 
 multivews       : true
@@ -52,6 +53,19 @@ assets:
     - assets/images
     - assets/javascripts
     - assets/stylesheets
+
+# collections:
+#   post_tags:
+#     output: true
+#     permalink: /tag/:name/
+
+# defaults:
+#   -
+#     scope:
+#       path: ""
+#       type: post_tags
+#     values:
+#       layouts: articles_by_tag
 
 exclude:
   - .asset-cache
@@ -103,8 +117,6 @@ figures:
 links:
   - title: Archives
     url: /archives/
-  - title: "Digital"
-    url: /digital/
   - title: Research
     url: /research/
   - title: Speaking
