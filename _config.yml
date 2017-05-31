@@ -3,9 +3,10 @@ source          : source
 destination     : prod
 
 title           : "Jason Heppler"
-description     : 'Historian of the American West.'
+description     : 'Historian. Librarian. Technologist.'
 tagline         : "History, technology, coffee"
 url             : "http://jasonheppler.org"
+base            : ""
 repository      : "http://github.com/hepplerj/hepplerj.github.com"
 timeline        : America/Chicago
 
@@ -41,6 +42,8 @@ owner:
   bio: "Historian of the North American West, environmental and urban history, digital history, coffee hobbyist"
   avatar: avatar.jpg
 
+google_analytics_tracking_id: UA-12786552-1
+
 # Settings
 assets:
   compress:
@@ -53,6 +56,21 @@ assets:
     - assets/images
     - assets/javascripts
     - assets/stylesheets
+
+# Navigation
+links:
+  - title: Archives
+    url: /archives/
+  - title: Research
+    url: /research/
+  - title: Speaking
+    url: /speaking/
+  - title: Teaching
+    url: /teaching/
+  - title: Github
+    url: "http://github.com/hepplerj"
+  - title: Twitter
+    url: "http://twitter.com/jaheppler"
 
 # collections:
 #   post_tags:
@@ -87,6 +105,16 @@ gems:
   - jekyll-assets
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-feed
+
+# Plugin settings
+feed:
+  path: source/feed.xml
+
+figures:
+  dir: /figures
+  enumerate: true
+  analytics: true
 
 # Course information
 course_baseurl: "/teaching/hist205f.2014"
@@ -108,24 +136,3 @@ instructor_officehours_link: http://jasonheppler.org/officehours
 instructor_twitter: jaheppler
 instructor_website: http://jasonheppler.org
 course_description: "An introduction to digital history."
-
-figures:
-  dir: /figures
-  enumerate: true
-  analytics: true
-
-links:
-  - title: Archives
-    url: /archives/
-  - title: Research
-    url: /research/
-  - title: Speaking
-    url: /speaking/
-  - title: Teaching
-    url: /teaching/
-  - title: Github
-    url: "http://github.com/hepplerj"
-  - title: Twitter
-    url: "http://twitter.com/jaheppler"
-
-google_analytics_tracking_id: UA-12786552-1

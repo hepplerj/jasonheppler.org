@@ -1,6 +1,6 @@
 # site wide config
 
-url           : ""
+url           : "http://localhost:4000"
 profile       : true
 future        : true
 show_drafts   : false
