@@ -77,8 +77,8 @@
   <link rel="shortcut icon" href="/public/favicon.ico">
 
   <!-- RSS -->
-  <link rel=alternate type='application/rss+xml' title='jasonheppler.org' href='http://jasonheppler.org/rss.xml' />
-  <link rel=alternate type='application/atom+xml' title='jasonheppler.org' href='http://jasonheppler.org/atom.xml' />
+  <link rel="alternate" title="{{ site.title }}" type="application/rss+xml" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="alternate" title="{{ site.title }}" type="application/json" href="{{ "/feed.json" | prepend: site.baseurl | prepend: site.url }}" />
   <script type="application/ld+json">
   { "@context": "http://schema.org",
     "@type": "CreativeWork",

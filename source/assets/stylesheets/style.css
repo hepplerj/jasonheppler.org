@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:400,600|Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400,600|Open+Sans:300,400');
 
 /* Resets */
 
@@ -15,23 +15,23 @@ body {
 }
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight:300;
   line-height:31px;
-  color:rgba(0,0,0,.9);
+  color:rgba(0,0,0,.6);
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #fff;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 
-a{color:#0366d6;text-decoration:underline;background:transparent}
-a:hover{color:#2f314b}
+a{color:#089970; transition: all .05s ease-out;}
+a:hover{background-color: #e4f7f0;}
 
 /* Headings */
-h1,h2,h3,h4,h5,h6{font-family:"Fira Sans", sans-serif;font-weight:600;}
+h1,h2,h3,h4,h5,h6{font-family:"Fira Sans", sans-serif;font-weight:600;color:#273d44;}
 h1{font-size:2.25rem}
 h1,h2{margin-bottom:.5rem;line-height:1.25}
 h2{font-size:1.5rem}
@@ -46,12 +46,13 @@ h5{margin-bottom:.5rem;line-height:1.25;font-size:.875rem}
 p {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6em;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 ul, ul li {
-  font-weight: 300;
   font-size: 16px;
 }
 
@@ -115,6 +116,9 @@ pre code {
   color: inherit;
   background-color: transparent;
 }
+code a {
+  border: none;
+}
 .highlight {
 	white-space: pre;
 	overflow: auto;
@@ -132,10 +136,12 @@ pre code {
 blockquote {
   margin: 0 0 20px;
   padding: 9px 20px 0 19px;
-  border-left: .25em solid #ffd43b;
+  border-left: 2px solid rgba(67, 131, 191, 0.3);
   font-style: italic;
 }
-
+blockquote p {
+  color: #4383bf;
+}
 blockquote p:last-child {
   margin-bottom: 0;
 }
@@ -270,6 +276,10 @@ hr {
   font-size: 11px;
   color: #333;
   vertical-align: middle;
+}
+
+.meta a {
+  text-decoration: none;
 }
 
 /* data viz */
@@ -417,7 +427,7 @@ ul.navigation{
   font-size: 0.9em;
 }
 li#nav-title {font-family:"Fira Sans";}
-li#nav-title a {color:rgba(0,0,0,0.9);text-decoration: none;}
+li#nav-title a {color:#333;text-decoration: none;border:none;}
 .sidebar-nav-item:after { content: " · "; color: #D9D9D7;}
 .sidebar-nav-item:last-child:after{content:"";}
 a.sidebar-nav-item:hover,
@@ -437,5 +447,10 @@ footer {
   margin-top: 25px;
 }
 footer p {
-  font-size: 0.8em;
+  font-size: 0.7em;
+}
+.revisions::before {
+  content: "\f040";
+  font-family: FontAwesome;
+  font-size: 0.9rem;
 }

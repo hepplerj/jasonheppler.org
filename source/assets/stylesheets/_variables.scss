@@ -1,10 +1,11 @@
 /*
-   Typography related variables
+   Typography
    -------------------------------------------------------------------------- */
 
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:400,600|Open+Sans:300,400');
 $serif                        : "PT Serif", serif;
-$sans-serif                   : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-$monospace                    : Menlo, Consolas, Monaco, "Courier New", Courier, monospace;
+$sans-serif                   : 'Open Sans', -apple-system, "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+$monospace                    : "Fira Mono", Menlo, Consolas, Monaco, "Courier New", Courier, monospace;
 
 $doc-font-size                : 16;
 $doc-line-height              : 24;
