@@ -6,6 +6,8 @@ permalink: /research/
 
 My work broadly centers on twentieth century political and environmental American history. My work ranges from political and cultural change, urban and environmental history, political culture, historical memory, and the North American West. Posts collected here are items related to my research projects. See <a href="{{ site.owner.vita }}">my vita</a> for more information about my research and community engagement.
 
+My first book, tentatively titled *Suburban by Nature: Environmental Politics and the Imagining of Silicon Valley*, explores the postwar growth of the cities in Silicon Valley and the ways that their growth not only led to ecological disaster but introduced social inequality that fueled an environmental politic that redefined liberal and conservative politics in the region. While Silicon Valley's high-tech companies were imagined as a clean and green alternative to industrialization, the growth, manufacturing, and economic activity introduced challenges to the region's wildlife and its residents. *Suburban by Nature* looks at how local communities confronted these challenges and offers a case study for other high-tech regions seeking to balance nature and city.  
+
 As a public historian, I find ways to make academically-oriented history
 accessible to the general public and involve communities in their local
 histories. My belief in the importance of public history enhances my
