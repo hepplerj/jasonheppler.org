@@ -30,6 +30,6 @@ Towards that end, I've been working with the [Midwestern History Association](ht
 
 But the map contains a fair bit of data: demographic information we've derived from [IPUMS' NHGIS project](https://www.nhgis.org/) and city population data compiled by [Stanford's Center for Spatial and Textual Analysis](https://github.com/cestastanford/historical-us-city-populations). What I'd like to see in the fu[ture for this project, and part of what I'll detail in the keynote, is how we can build [deep maps](https://en.wikipedia.org/wiki/Deep_map) to help us explore and explain the history of the region. I'd like to see a deep map that pairs narrative essays with place-stories of the region, allowing historians to work at multiple geographic scales across time. 
 
-I hope you'll [check out the map](http://165.227.4.129:3838/midwest/). We're more than happy to [hear feedback](), or if you want to help contribute to the project send me your pull requests! 
+I hope you'll [check out the map](http://165.227.4.129:3838/midwest/). We're more than happy to [hear feedback](https://github.com/hepplerj/midwest-map-population), or if you want to help contribute to the project send me your pull requests! 
 
 [^1]: There's a decent chance that I may re-write this in Javascript. 
