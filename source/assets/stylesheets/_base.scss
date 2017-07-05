@@ -1,5 +1,15 @@
+/* Resets
+   -------------------------------------------------------------------------- */
+
 * {
-	box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 /* Typography 
@@ -23,23 +33,14 @@ html {
   font-size: 100%;
   line-height: 1.625;
   color: #333;
-
-  @include breakpoint($medium) {
-    font-size: 115%;
-  }
-
-  @include breakpoint($large) {
-    font-size: 125%;
-  }
-
-  @include breakpoint($x-large) {
-    font-size: 135%;
-  }
 }
 
 body {
   margin: 0;
   padding: 0;
+  background-color: $white;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 small {
@@ -104,6 +105,7 @@ blockquote {
 a {
   color: $link-color;
   text-decoration: none;
+  transition: all .05s ease-out;
 
   &:focus {
     @extend %tab-focus;
@@ -113,6 +115,7 @@ a {
   &:active {
     color: $link-color-hover;
     outline: 0;
+    background-color: $link-background-color;
   }
 
   &:hover {
@@ -187,12 +190,4 @@ a img {
 /* fix IE9 SVG bug */
 svg:not(:root) {
   overflow: hidden;
-}
-
-/*
-   Global animation transition
-   -------------------------------------------------------------------------- */
-
-b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, tr, td, form button, input[type="submit"], .btn, .highlight, .palette__swatch {
-  transition: $global-transition;
 }
