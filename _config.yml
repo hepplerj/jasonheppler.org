@@ -4,7 +4,7 @@ destination     : prod
 
 title           : "Jason Heppler"
 description     : 'Historian. Librarian. Technologist.'
-tagline         : "History, technology, coffee"
+tagline         : "History, technology, design"
 url             : "http://jasonheppler.org"
 base            : ""
 repository      : "http://github.com/hepplerj/hepplerj.github.com"
@@ -71,19 +71,6 @@ links:
     url: "http://github.com/hepplerj"
   - title: Twitter
     url: "http://twitter.com/jaheppler"
-
-# collections:
-#   post_tags:
-#     output: true
-#     permalink: /tag/:name/
-
-# defaults:
-#   -
-#     scope:
-#       path: ""
-#       type: post_tags
-#     values:
-#       layouts: articles_by_tag
 
 exclude:
   - .asset-cache
