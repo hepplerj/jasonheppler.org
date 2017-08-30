@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400,600|Open+Sans:300,400');
-
 /* Resets */
 
 * {
@@ -15,9 +13,20 @@ body {
 }
 
 html {
-  font-family: 'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight:300;
-  line-height:31px;
+  font-family: -apple-system, 
+               BlinkMacSystemFont, 
+               "Segoe UI", 
+               Roboto, 
+               Oxygen,
+               Ubuntu,
+               Cantarell,
+               "Fira Sans",
+               "Droid Sans",
+               "Helvetica Neue", 
+               sans-serif;
+  /*font-weight:300;*/
+  text-rendering: optimizeLegibility;
+  line-height:1.6;
   color:rgba(0,0,0,.6);
 }
 
@@ -31,7 +40,7 @@ a{color:#089970; transition: all .05s ease-out;}
 a:hover{background-color: #e4f7f0;}
 
 /* Headings */
-h1,h2,h3,h4,h5,h6{font-family:"Fira Sans", sans-serif;font-weight:600;color:#273d44;}
+h1,h2,h3,h4,h5,h6{font-weight:600;color:#273d44;}
 h1{font-size:2.25rem}
 h1,h2{margin-bottom:.5rem;line-height:1.25}
 h2{font-size:1.5rem}
@@ -89,10 +98,13 @@ abbr[title] {
 }
 
 /* Code */
-code,
-pre {
-  font-family: "Fira Mono", Menlo, Monaco, "Courier New", monospace;
-}
+.code,
+g.highlight,
+li code,
+p code,
+pre code{font-family:San Francisco Mono,Monaco,Consolas,Lucida Console,DejaVu Sans Mono,Bitstream Vera Sans Mono,monospace;
+         font-size: 90%;}
+
 code {
   padding: .25em .5em;
   font-size: 85%;
@@ -426,7 +438,7 @@ ul.navigation{
   display: inline;
   font-size: 0.9em;
 }
-li#nav-title {font-family:"Fira Sans";}
+/*li#nav-title {font-family:"Fira Sans";}*/
 li#nav-title a {color:#333;text-decoration: none;border:none;}
 .sidebar-nav-item:after { content: " · "; color: #D9D9D7;}
 .sidebar-nav-item:last-child:after{content:"";}
