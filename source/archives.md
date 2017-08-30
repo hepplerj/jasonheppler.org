@@ -20,16 +20,7 @@ I've written <strong>{{ totals | thousands_separated }}</strong> words here sinc
       <h3>{{ post.date | date: '%Y' }}</h3>
     {% endif %}
 
-  <li><time>
-  {% assign m = post.date | date: "%B" %}
-  {% case m %}
-    {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
-    {% when 'September' %}Sept.
-    {% else %}{{ post.date | date: "%b" }}.
-  {% endcase %}
-  {{ post.date | date: "%-d" }}
-  </time>
-
+  <li><span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y %m %d" }}</time></span> &middot;
 
   <a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
