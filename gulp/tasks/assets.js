@@ -59,35 +59,35 @@ gulp.task('scripts', () =>
 // 'gulp styles' -- creates a CSS file from SCSS, adds prefixes and creates a Sourcemap
 // 'gulp styles --prod' -- creates a CSS file from your SCSS, adds prefixes, minifies,
 // gzips and cache busts it. Does not create a Sourcemap
-gulp.task('styles', () =>
-  gulp.src([paths.sassFiles + '/style.scss'])
-    .pipe(when(!argv.prod, sourcemaps.init()))
-    .pipe(sass({
-      precision: 10
-    }).on('error', sass.logError))
-    .pipe(postcss([
-      autoprefixer({browsers: ['last 2 versions', '> 5%', 'IE 9']})
-    ]))
-    .pipe(size({
-      showFiles: true
-    }))
-    .pipe(gulp.dest(paths.sourceDir + paths.includesFolderName))
-    .pipe(when(argv.prod, rename({suffix: '.min'})))
-    .pipe(when(argv.prod, when('*.css', cssnano({autoprefixer: false}))))
-    .pipe(when(argv.prod, size({
-      showFiles: true
-    })))
-    .pipe(when(argv.prod, rev()))
-    .pipe(when(!argv.prod, sourcemaps.write('.')))
-    .pipe(when(argv.prod, gulp.dest(paths.sassFilesTemp)))
-    .pipe(when(argv.prod, when('*.css', gzip({append: true}))))
-    .pipe(when(argv.prod, size({
-      gzip: true,
-      showFiles: true
-    })))
-    .pipe(gulp.dest(paths.sassFilesTemp))
-    .pipe(when(!argv.prod, browserSync.stream()))
-);
+// gulp.task('styles', () =>
+//   gulp.src([paths.sassFiles + '/style.scss'])
+//     .pipe(when(!argv.prod, sourcemaps.init()))
+//     .pipe(sass({
+//       precision: 10
+//     }).on('error', sass.logError))
+//     .pipe(postcss([
+//       autoprefixer({browsers: ['last 2 versions', '> 5%', 'IE 9']})
+//     ]))
+//     .pipe(size({
+//       showFiles: true
+//     }))
+//     .pipe(gulp.dest(paths.sourceDir + paths.includesFolderName))
+//     .pipe(when(argv.prod, rename({suffix: '.min'})))
+//     .pipe(when(argv.prod, when('*.css', cssnano({autoprefixer: false}))))
+//     .pipe(when(argv.prod, size({
+//       showFiles: true
+//     })))
+//     .pipe(when(argv.prod, rev()))
+//     .pipe(when(!argv.prod, sourcemaps.write('.')))
+//     .pipe(when(argv.prod, gulp.dest(paths.sassFilesTemp)))
+//     .pipe(when(argv.prod, when('*.css', gzip({append: true}))))
+//     .pipe(when(argv.prod, size({
+//       gzip: true,
+//       showFiles: true
+//     })))
+//     .pipe(gulp.dest(paths.sassFilesTemp))
+//     .pipe(when(!argv.prod, browserSync.stream()))
+// );
 
 var pageDimensions = [{
                         width: 320,
@@ -123,6 +123,6 @@ gulp.task('serve', (done) => {
   gulp.watch([paths.mdFilesGlob, paths.htmlFilesGlob, paths.ymlFilesGlob], gulp.series('build:site', reload));
   gulp.watch([paths.xmlFilesGlob, paths.txtFilesGlob], gulp.series('site', reload));
   gulp.watch(paths.jsFilesGlob, gulp.series('scripts', reload));
-  gulp.watch(paths.sassFilesGlob, gulp.series('styles'));
+  // gulp.watch(paths.sassFilesGlob, gulp.series('styles'));
   gulp.watch(paths.imageFilesGlob, gulp.series('images', 'images:feature', reload));
 });

@@ -15,7 +15,7 @@ gulp.task('build:site', gulp.series('site:tmp', 'inject', 'site', 'copy:site'));
 
 // remove assets and rebuild
 gulp.task('assets', gulp.series(
-  gulp.parallel('styles', 'scripts'),
+  gulp.parallel('scripts'),
   gulp.series('images', 'images:feature', 'copy:assets')
 ));
 
