@@ -14,7 +14,7 @@
   <meta property="twitter:account_id" content="16240799"/>
   <meta http-equiv="cleartype" content="on">
   <meta http-equiv="x-dns-prefetch-control" content="off">
-  <link rel="canonical" href="http://jasonheppler.org/" />
+  <link rel="canonical" href="https://jasonheppler.org/" />
   
   <!-- RDFa Metadata (in DublinCore) -->
   <meta property="dc:title" content="" />
@@ -29,7 +29,7 @@
   <meta property="dc:type" content="website" />
 
   <!-- RDFa Metadata (in OpenGraph) -->
-  <meta property="og:title" content="" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} &middot; {{ site.title }}{% else %}{{ site.title }} &middot; {{ site.tagline }}{% endif %}" />
   <meta property="og:author" content="http://jasonheppler.org" />
   <meta property="og:site_name" content="Jason Heppler weblog" />
   <meta property="og:url" content="/" />
