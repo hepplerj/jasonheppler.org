@@ -30,7 +30,7 @@ events through new research methods and visualizations.
 ## Select Books, Articles, Book Chapters
 
 {% for project in site.data.projects.published %}
-<i class="fa fa-file" style="color:#03396c;font-size:80%;padding-top:6px;"></i> [{{ project.title }}]({{ project.url }}) ({{ project.date }}) &middot; {{ project.snippet }}
+<i class="fa fa-file" style="color:#03396c;font-size:80%;padding-top:6px;"></i> [{{ project.title }}]({{ project.url }}). {{project.venue}} {% if project.publisher %} ({{project.publisher}}) {% endif %} ({{ project.date }})
 {% endfor %}
 
 ## Select Digital Projects

@@ -20,7 +20,7 @@ I've written <strong>{{ totals | thousands_separated }}</strong> words here sinc
       <h3>{{ post.date | date: '%Y' }}</h3>
     {% endif %}
 
-  <li><span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y %m %d" }}</time></span> &middot;
+  <li><span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></span> &middot;
 
   <a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}

@@ -1,18 +1,49 @@
-- class: "Keynote: Approaching a New Historical Atlas of Midwestern History with Deep Maps and Digital History"
-  location: Midwestern History Association, Grand Rapids, Michigan
-  datestart: 2017-06-07 00:00:00 -0800
-  url:
-- class: "'Don't Let Industry Do its Business In Our Water!!!': Urban Space and Environmental Politics in Silicon Valley." 
-  location: Ball State University, Muncie, Indiana
-  datestart: 2017-04-12 00:00:00 -0800
-  url:
-- class: Arguing with Digital History
-  location: George Mason University
-  datestart: 2017-09-15 00:00:00 -0800
-  dateend: 2017-09-16 00:00:00 -0800
-  url:
-- class: "Digital History"
+- class: "Introduction to Digital Humanities"
+  location: University of Nebraska at Omaha
+  datestart: 2018-01-06 00:00:00 -0800
+  dateend: 2018-05-14 00:00:00 -0800
+  url: https://jasonheppler.org/teaching/hist2990.2018/
+  semester: Spring 2018
+- class: "Introduction to Network Analysis (workshop)"
+  location: American Historical Association
+  datestart: 2018-01-06 00:00:00 -0800
+  dateend: 
+  url: http://jasonheppler.org/projects/aha-workshop-2018/
+  semester: Spring 2018
+- class: "Introduction to Network Analysis (workshop)"
+  location: Ball State University
+  datestart: 2017-05-06 00:00:00 -0800
+  dateend: 2017-05-07 00:00:00 -0800
+  url: https://jasonheppler.org/projects/bsu-workshop/
+  semester: Spring 2017
+- class: "Introduction to Network Analysis (workshop)"
+  location: American Historical Association
+  datestart: 2017-01-06 00:00:00 -0800
+  dateend: 
+  url: http://jasonheppler.org/projects/aha-workshop/
+  semester: Spring 2017
+- class: Maps and Networks in the Classroom (workshop)
+  location: Carl Bimson Humanities Seminar, Colorado State University
+  datestart: 2016-06-01 00:00:00 -0800
+  dateend: 2016-06-03 00:00:00 -0800
+  url: http://jasonheppler.org/projects/csu-workshop/
+  semester: Summer 2016
+  description: This seminar will emphasize the hands-on learning of working with geospatial and network data, with special attention paid to its application to the classroom. The workshop seeks to prep teachers to instruct their students in various approaches to digital humanities in their classes.
+- class: "R, Interactive Graphics, and Data Visualization"
+  location: Digital Humanities Summer Institute
+  datestart: 2016-06-01 00:00:00 -0800
+  dateend: 2016-06-07 00:00:00 -0800
+  semester: Summer 2016
+  url: http://lincolnmullen.com/files/Heppler_Mullen-DHSI.pdf
+- class: "Teaching Digital History (workshop)"
+  location: Missouri Valley History Conference
+  datestart: 2015-04-01 00:00:00 -0800
+  dateend:
+  semester: Spring 2015
+  url: https://docs.google.com/document/d/11Efu9HDXd2ASVCDIGUtJxQE-JOlOCSw1G5V26TTOuNU/edit
+- class: "Digital History: Sources, Methods, Problems"
   location: Stanford University
-  datestart: 2017-03-17 00:00:00 -0800
-  dateend: 2017-01-01 00:00:00 -0800
-  url:
+  datestart: 2014-09-01 00:00:00 -0800
+  dateend: 2014-12-17 00:00:00 -0800
+  semester: Fall 2014
+  url: https://jasonheppler.org/teaching/hist205f.2014/

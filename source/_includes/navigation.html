@@ -1,7 +1,7 @@
 
     <ul class="navigation">
 	
-		<li class="sidebar-nav-item" id="nav-title"><strong><a href="/">Jason Heppler</a></strong></li>
+		<li class="sidebar-nav-item" id="nav-title"><strong><a href="/">Jason A. Heppler</a></strong></li>
       	{% for link in site.links %}
       	<li itemscope itemtype="http://schema.org/SiteNavigationElement" class="sidebar-nav-item{% if page.title == node.url %} active{% endif %}"><a href="{{ site.url }}{{ link.url }}" itemprop="url"><span itemprop="name">{{ link.title }}</span></a></li>
 		{% endfor %}

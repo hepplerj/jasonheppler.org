@@ -1,0 +1,19 @@
+{% assign classes = site.data.teaching | sort: 'datestart' | reverse %}
+{% for class in classes %}
+<p>
+{% if class.url %}
+  <strong><a href="{{ class.url }}">{{ class.class }}</a></strong>
+{% else %}
+  <strong>{{ class.location }}</strong>
+{% endif %}
+<br>
+{% if class.location %}
+  {{ class.location }}: 
+{% endif %}
+{% if class.dateend %}
+  {{ class.semester }}
+{% else %}
+  {{ class.semester }}
+{% endif %}
+</p>
+{% endfor %}

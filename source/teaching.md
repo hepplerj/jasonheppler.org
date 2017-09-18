@@ -6,6 +6,8 @@ permalink: /teaching/
 
 Some of the classes and workshops I have offered in recent years, including pointers to upcoming courses and other resources when available. For more teaching information, see <a href="{{ site.owner.vita }}">my vita</a>.
 
+I would be honored to teach at your institution about **digital history**, **data visualization**, **spatial history**, **network analysis**, or **urban environmental history**. You can reach me at [@jaheppler](http://twitter.com/{{site.owner.twitter}}) or by [email](mailto:{{site.owner.email}}). 
+
 ## 2017
 
 #### <i class="fa fa-graduation-cap" style="color: #0336c; font-size: 80%; padding-top: 6px;"></i> [DH Workshop: Network Analysis](http://jasonheppler.org/projects/aha-workshop/)  

@@ -1,15 +1,20 @@
 published:
-  - title: '"A National Monument," with Douglas Seefeldt, _The Companion to Custer and the Little Big Horn_, edited by Brad Lookingbill (Hoboken: Wiley and Sons).'
+  - title: '"A National Monument," with Douglas Seefeldt'
+    venue: _The Companion to Custer and the Little Big Horn_
+    publisher: "Hoboken: Wiley and Sons"
     url: https://www.academia.edu/15865723/A_National_Monument
     snippet: 'We explore how shifting interpretations of the Little Bighorn by Native peoples, Custer enthusiasts, and the National Park Service shape the dominant public memory of the Little Bighorn National Monument.'
     date: "2015"
     type: section
-  - title: '"Crowdsourcing Public Digital History," with Gabriel K. Wolfenstein, _The American Historian_.'
+  - title: '"Crowdsourcing Public Digital History," with Gabriel K. Wolfenstein'
+    venue: _The American Historian_
+    publisher:
     url: http://tah.oah.org/content/crowdsourcing-digital-public-history/
     snippet: "The digital turn has offered new technologies to harness communal knowledge and engage with communities. We discuss some successful and well-known crowdsourced projects and explore one of the projects underway at Stanford's Center for Spatial and Textual Analysis."
     date: "2015"
     type: section
-  - title: '"A Call to Redefine Historical Scholarship in the Digital Turn," with Alex Galarza and Douglas Seefeldt, _The Journal of Digital Humanities_ vol. 1, no. 4'
+  - title: '"A Call to Redefine Historical Scholarship in the Digital Turn," with Alex Galarza and Douglas Seefeldt'
+    venue: "_The Journal of Digital Humanities_ vol. 1, no. 4"
     url: http://journalofdigitalhumanities.org/1-4/a-call-to-redefine-historical-scholarship-in-the-digital-turn/
     snippet: "This is a collaboratively-written call for the American Historical Association to appoint a task force to survey the profession as to the place of digital historical scholarship in promotion and tenure and graduate student training and to recommend standards and guidelines for the profession to follow."
     date: "2012"
