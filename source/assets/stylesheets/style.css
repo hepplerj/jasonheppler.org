@@ -13,21 +13,22 @@ body {
 }
 
 html {
-  font-family: -apple-system, 
-               BlinkMacSystemFont, 
-               "Segoe UI", 
-               Roboto, 
+  font-family: Lato,
+               -apple-system,
+               BlinkMacSystemFont,
+               "Segoe UI",
+               Roboto,
                Oxygen,
                Ubuntu,
                Cantarell,
                "Fira Sans",
                "Droid Sans",
-               "Helvetica Neue", 
+               "Helvetica Neue",
                sans-serif;
-  /*font-weight:300;*/
   text-rendering: optimizeLegibility;
-  line-height:1.6;
-  color:rgba(0,0,0,.6);
+  line-height:1.7;
+  color: #2a2f35;
+  font-weight: 300;
 }
 
 body {
@@ -36,18 +37,31 @@ body {
       -ms-text-size-adjust: 100%;
 }
 
-a{color:#089970; transition: all .05s ease-out;}
-a:hover{background-color: #e4f7f0;}
+a{color:#2E69BF;}
+a:hover{color: #4c6296}
+
+strong{ font-weight: 700; }
 
 /* Headings */
-h1,h2,h3,h4,h5,h6{font-weight:600;color:#273d44;}
-h1{font-size:2.25rem}
+h1,h2,h3,h4,h5,h6{font-weight:600;}
+/*h1{font-size:2.25rem}
 h1,h2{margin-bottom:.5rem;line-height:1.25}
 h2{font-size:1.5rem}
 h3{font-size:1.25rem}
 h3,h4{margin-bottom:.5rem;line-height:1.25}
 h4{font-size:1rem}
-h5{margin-bottom:.5rem;line-height:1.25;font-size:.875rem}
+h5{margin-bottom:.5rem;line-height:1.25;font-size:.875rem}*/
+
+.size-2x {
+  font-size: calc(1em + .5vw);
+  margin-bottom: 1.5em;
+  font-weight: 300;
+}
+
+.pad2y {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
 .list-items{list-style-type:none;margin:0;padding:0}
 .list-items, p{margin:1rem 0;font-size:1rem}
@@ -57,8 +71,8 @@ p {
   margin-bottom: 1rem;
   font-weight: 300;
   line-height: 1.6em;
-  font-size: 16px;
-  color: rgba(0, 0, 0, 0.6);
+  /*font-size: 18px;*/
+  font-size: calc(14px + .25vw);
 }
 
 ul, ul li {
@@ -79,11 +93,11 @@ dd {
 }
 
 hr {
-  position: relative;
-  margin: 1.5rem 0;
+  background-color: #dfe1e4;
+  width: 100px;
+  height: 1px;
   border: 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #fff;
+  margin: 2rem auto;
 }
 
 abbr {
@@ -188,7 +202,7 @@ tbody tr:nth-child(odd) th {
 }
 
 .container {
-  max-width: 40rem;
+  max-width: 45rem;
   padding-left:  1rem;
   padding-right: 1rem;
   margin-left:  auto;
