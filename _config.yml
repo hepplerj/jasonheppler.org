@@ -10,7 +10,7 @@ base            : ""
 repository      : "http://github.com/hepplerj/hepplerj.github.com"
 timeline        : America/Chicago
 
-# Jekyll configuration 
+# Jekyll configuration
 multivews       : true
 plugins_dir     : plugins
 lsi             : false
@@ -67,10 +67,6 @@ links:
     url: /speaking/
   - title: Teaching
     url: /teaching/
-  - title: Github
-    url: "http://github.com/hepplerj"
-  - title: Twitter
-    url: "http://twitter.com/jaheppler"
 
 exclude:
   - .asset-cache
