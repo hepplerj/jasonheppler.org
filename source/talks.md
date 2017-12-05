@@ -9,6 +9,7 @@ talks:
     location: Grand Rapids, Michigan
     date: 06 June 2017
     invited: true
+    url: https://blogwest.org/2017/09/21/mapping-the-midwest-keynote-at-the-midwestern-history-association/
   - year: 2017
     text: "'Don't Let Industry Do its Business In Our Water!!!': Urban Space and Environmental Politics in Silicon Valley"
     place: Ball State University
@@ -47,5 +48,5 @@ I would be honored to come and speak at your institution about **digital history
 ## Recent invited lectures
 
 {% for lecture in page.talks %}
-- **{{ lecture.text }}**, {{ lecture.place }}, {{ lecture.location }} ({{ lecture.date }})
+- {% if lecture.url %}**[{{lecture.text}}]({{lecture.url}})**{% else %}**{{ lecture.text }}**{% endif %}, {{ lecture.place }}, {{ lecture.location }} ({{ lecture.date }})
 {% endfor %}
