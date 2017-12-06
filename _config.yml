@@ -35,6 +35,7 @@ owner:
   instagram: "hepplerj"
   github: "hepplerj"
   facebook: "jason.heppler"
+  linkedin: "jasonheppler"
   google_analytics: UA-12786552-1
   google_plus: http://plus.google.com/112447146120355094986
   bing_verify: D81F4C18A6CB3018F64D7C827D953DFD
@@ -59,6 +60,8 @@ assets:
 
 # Navigation
 links:
+  - title: About
+    url: /about/
   - title: Archives
     url: /archives/
   - title: Research
