@@ -8,7 +8,7 @@ tags:
 category: Original
 ---
 
-*[This is a reading reflection for HIST946: Digital Humanities for Prof. William G. Thomas during the Fall 2011 semester. This week's readings were Evgeny Morozov, *[The Net Delusion: The Dark Side of Internet Freedom](http://www.amazon.com/Net-Delusion-Dark-Internet-Freedom/dp/1586488740)* and Jaron Lanier "[Digital Maoism: The Hazards of the New Online Collectivism](http://edge.org/3rd_culture/lanier06/lanier06_index.html)". You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html).]*
+*[This is a reading reflection for HIST946: Digital Humanities for Prof. William G. Thomas during the Fall 2011 semester. This week's readings were Evgeny Morozov, *[The Net Delusion: The Dark Side of Internet Freedom](http://www.amazon.com/Net-Delusion-Dark-Internet-Freedom/dp/1586488740)* and Jaron Lanier "[Digital Maoism: The Hazards of the New Online Collectivism](http://edge.org/3rd_culture/lanier06/lanier06_index.html)". You can find related posts [here](https://jasonheppler.org/the-digital-humanities-seminar.html).]*
 
 The thread running through the two readings this week force us to think about the
 potential pitfalls of the Internet. Evgeny Morozov and Jaron Lanier both point out

@@ -15,4 +15,4 @@ This fall I am teaching an undergraduate/graduate colloquium called "Digital His
 
 The main outcome for the course will be a beta project that serves as an equivalent to a capstone paper. To get there, the undergraduates in the course are spending our time focusing on the history of Silicon Valley and exploring questions and issues relevant to this region's history. That means I'll have students working in the university archives, digitizing material, creating historical data, and building visualizations. I have some additional ideas for the graduate students in the course, which I will share soon. I cannot wait to see what we all come up with over the course of the quarter.
 
-Here is the [syllabus for the course](http://jasonheppler.org/teaching/hist205f.2014/).
+Here is the [syllabus for the course](https://jasonheppler.org/teaching/hist205f.2014/).

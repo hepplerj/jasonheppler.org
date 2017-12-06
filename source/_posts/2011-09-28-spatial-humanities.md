@@ -12,7 +12,7 @@ category: research
 Professor William Thomas during the Fall 2011 semester. This week's readings
 were Richard White, "[What is Spatial History?](http://www.stanford.edu/group/spatialhistory/cgi-bin/site/pub.php?id=29)," Philip Ethington, "[Los Angeles
 and the Problem of Urban Historical Knowledge](http://www.usc.edu/dept/LAS/history/historylab/LAPUHK/)," and David Staley, "[Historical
-Visualizations](http://quod.lib.umich.edu/j/jahc/3310410.0003.304?rgn=main;view=fulltext)". You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html).]*
+Visualizations](http://quod.lib.umich.edu/j/jahc/3310410.0003.304?rgn=main;view=fulltext)". You can find related posts [here](https://jasonheppler.org/the-digital-humanities-seminar.html).]*
 
 Computer visualizations offer new ways for humanist scholars to reconfigure the notion of
 narrative As David Staley notes, visualizations have the ability to depict

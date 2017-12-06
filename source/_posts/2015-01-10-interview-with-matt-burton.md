@@ -82,7 +82,7 @@ finishing a dissertation, and the demands beyond professional life.
 strictly about your work, or do you ever mix in other topics?**
 
 I've [mentioned 
-elsewhere](http://jasonheppler.org/2012/07/11/what-i-learned-as-an-academic-blogger/) 
+elsewhere](https://jasonheppler.org/2012/07/11/what-i-learned-as-an-academic-blogger/) 
 that I believe you should write about whatever motivates you to write. 
 That's what matters. Most of my writing revolves around digital history 
 and my research, which is a broad enough organizing theme that it 
@@ -222,7 +222,7 @@ American history.
 popular?**
 
 I'd say the most popular had to be the [Rubyist Historian 
-series](http://jasonheppler.org/rubyist-historian/) that I wrote for 
+series](https://jasonheppler.org/rubyist-historian/) that I wrote for 
 introducing humanities scholars to the Ruby programming language. It's 
 the only post, for example, that found it's way onto DHNow. 
 

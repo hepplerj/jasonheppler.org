@@ -11,7 +11,7 @@ tags:
 - teaching
 ---
 
-This fall quarter I am teaching my digital history course. You can find the draft of the [syllabus here](http://jasonheppler.org/courses/dph.2016/). While the title of the course hasn't changed since the [last time I taught it](http://jasonheppler.org/teaching/hist205f.2014/), I've made two substantial changes to the overall structure of the course. First, the course focuses more heavily on *public* history instead of a range of digital methodologies. Part of this is self-serving---I've always wanted to teach a public history course, and the opportunity to combine *public* and *digital* was a welcome opportunity. 
+This fall quarter I am teaching my digital history course. You can find the draft of the [syllabus here](https://jasonheppler.org/courses/dph.2016/). While the title of the course hasn't changed since the [last time I taught it](https://jasonheppler.org/teaching/hist205f.2014/), I've made two substantial changes to the overall structure of the course. First, the course focuses more heavily on *public* history instead of a range of digital methodologies. Part of this is self-serving---I've always wanted to teach a public history course, and the opportunity to combine *public* and *digital* was a welcome opportunity. 
 
 The course remains motivated by my belief that it's easier to teach digital humanities when it's motivated by a scholarly question---in other words, teaching digital humanities in the abstract can be difficult to grasp, but seeing methods and frameworks applied in practice helps make things more concrete. The class, like last time, remains centered around the history of Silicon Valley in order to promote this way of learning by doing.
 

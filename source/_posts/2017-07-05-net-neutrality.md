@@ -11,7 +11,7 @@ tags:
 comments: false
 ...
 
-In 2012, [I took my site down](http://jasonheppler.org/2012/01/18/standing_against_sopa/) in protest of the Stop Online Piracy Act (SOPA). 
+In 2012, [I took my site down](https://jasonheppler.org/2012/01/18/standing_against_sopa/) in protest of the Stop Online Piracy Act (SOPA). 
 
 It's time to stand up again. 
 

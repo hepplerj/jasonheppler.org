@@ -8,7 +8,7 @@ tags:
 category: Link
 ---
 
-![Internet](http://jasonheppler.org/images/netmap2.jpg "Internet")
+![Internet](https://jasonheppler.org/images/netmap2.jpg "Internet")
 
 [The Atlantic](http://www.theatlantic.com/technology/archive/2012/07/what-the-internet-actually-looks-like/259815/):
 

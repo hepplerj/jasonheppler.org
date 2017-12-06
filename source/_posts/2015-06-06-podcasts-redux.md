@@ -13,7 +13,7 @@ intro: Here are a few of my favorite podcasts.
 comments: true
 ---
 
-A couple of years ago I wrote about some of [my favorite podcasts](http://jasonheppler.org/2012/09/03/podcasts/), and I thought it would be good to update the list. Some of those podcasts have ended, others still keep on, and I've added new ones to my [podcatcher of choice](https://overcast.fm/).
+A couple of years ago I wrote about some of [my favorite podcasts](https://jasonheppler.org/2012/09/03/podcasts/), and I thought it would be good to update the list. Some of those podcasts have ended, others still keep on, and I've added new ones to my [podcatcher of choice](https://overcast.fm/).
 
 I'm currently subscribed to thirty-two podcasts. I might have a problem.[^1]
 

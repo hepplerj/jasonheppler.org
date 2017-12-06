@@ -8,6 +8,6 @@ tags:
 category: Link
 ---
 
-![Coffee beans](http://jasonheppler.org/images/coffeebeans.jpg "Coffee beans")
+![Coffee beans](https://jasonheppler.org/images/coffeebeans.jpg "Coffee beans")
 
-[Désirée Fawn writes about her method of producing an excellent French press coffee](http://www.sofawned.com/2012/01/how-to-brew-french-press-coffee-or-one.html). I'm in love with my new [AeroPress](http://jasonheppler.org/2012/04/25/adam-lisagors-aeropress-tribute.html), but still enjoy an excellent cup of coffee from [my French Press](http://jasonheppler.org/2012/02/15/the_french_press_method.html). 
+[Désirée Fawn writes about her method of producing an excellent French press coffee](http://www.sofawned.com/2012/01/how-to-brew-french-press-coffee-or-one.html). I'm in love with my new [AeroPress](https://jasonheppler.org/2012/04/25/adam-lisagors-aeropress-tribute.html), but still enjoy an excellent cup of coffee from [my French Press](https://jasonheppler.org/2012/02/15/the_french_press_method.html). 

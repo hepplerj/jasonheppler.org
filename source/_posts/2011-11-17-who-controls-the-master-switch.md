@@ -8,7 +8,7 @@ tags:
 category: research
 ---
 
-*[This is a reading reflection for HIST946: Digital Humanities for Prof. William G. Thomas during the Fall 2011 semester. This week's readings was Tim Wu, *[The Master Switch: The Rise and Fall of Information Empires](http://www.amazon.com/Master-Switch-Information-Empires-Vintage/dp/0307390993/ref=sr_1_1?s=books&ie=UTF8&qid=1322756473&sr=1-1)*. You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html).]*
+*[This is a reading reflection for HIST946: Digital Humanities for Prof. William G. Thomas during the Fall 2011 semester. This week's readings was Tim Wu, *[The Master Switch: The Rise and Fall of Information Empires](http://www.amazon.com/Master-Switch-Information-Empires-Vintage/dp/0307390993/ref=sr_1_1?s=books&ie=UTF8&qid=1322756473&sr=1-1)*. You can find related posts [here](https://jasonheppler.org/the-digital-humanities-seminar.html).]*
 
 Mark Twain allegedly once said that the past doesn't repeat itself, but it does rhyme. Tim Wu offers a warning to the public: if you expect the web to stay open, you must be eternally vigilant. He traces the information industry through what he calls the "Cycle," alternating periods where companies drift from open and closed. He sees the theme recurring throughout the history of information media, starting with telephone and continuing through radio, television, film, and the Internet. All forms of information distribution are susceptible to the cycle because they depend on networks. Once a company builds a network or begins to control one, monopoly is surely to follow. As Lawrence Lessig saw the demise of the open web in its commercialization, Wu frames it in a historical cycle of open information industries inevitably becoming closed.
 

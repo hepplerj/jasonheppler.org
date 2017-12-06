@@ -11,7 +11,7 @@ category: research
 
 *[This is a reading reflection for HIST946: Digital Humanities with Professor William
 G. Thomas during the Fall 2011 semester. This week's reading was Franco Moretti,
-*[Graphs, Maps, Trees: Abstract Models for Literary History](http://www.amazon.com/gp/product/1844671852/ref=as_li_tf_tl?ie=UTF8&tag=thekinofelfs2-20&linkCode=as2&camp=217145&creative=399373&creativeASIN=1844671852)*. You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html).]*
+*[Graphs, Maps, Trees: Abstract Models for Literary History](http://www.amazon.com/gp/product/1844671852/ref=as_li_tf_tl?ie=UTF8&tag=thekinofelfs2-20&linkCode=as2&camp=217145&creative=399373&creativeASIN=1844671852)*. You can find related posts [here](https://jasonheppler.org/the-digital-humanities-seminar.html).]*
 
 The main argument put forth by Franco Moretti is compelling: instead of *reading*
 texts we should *mine* them for data. Moretti suggests a new way of analyzing

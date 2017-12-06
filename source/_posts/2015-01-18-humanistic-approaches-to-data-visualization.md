@@ -37,7 +37,7 @@ doing research: of posing questions we otherwise could not ask without
 the aid of computers; of identifying patterns that might otherwise go
 undiscovered.
 
-The design of the project went through [several iterations](http://jasonheppler.org/2014/10/30/research-design-in-geography-of-the-post/) as we tried to
+The design of the project went through [several iterations](https://jasonheppler.org/2014/10/30/research-design-in-geography-of-the-post/) as we tried to
 solve a key question: how to present the data in a meaningful way.
 Plotting points on a map is a simple enough exercise, and I find even
 that process can be arresting---to see the massive network of the Post

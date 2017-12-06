@@ -9,7 +9,7 @@ tags:
 category: research
 ---
 
-*[In lieu of a reading reflection this week for HIST946: Digital Humanities, Prof. Thomas asked us to speculate on how we might incorporate digital humanities into our research agendas. Although unrelated to my dissertation work, I am still examining aspects of Buffalo Bill's Wild West and his employment of Native Americans. You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html).]*
+*[In lieu of a reading reflection this week for HIST946: Digital Humanities, Prof. Thomas asked us to speculate on how we might incorporate digital humanities into our research agendas. Although unrelated to my dissertation work, I am still examining aspects of Buffalo Bill's Wild West and his employment of Native Americans. You can find related posts [here](https://jasonheppler.org/the-digital-humanities-seminar.html).]*
 
 William F. Cody's impact on the historical and idealized American West is unmistakable. As proprietor of Buffalo Bill's Wild West between 1883 and 1916, he presented to a generation of Americans and Europeans what he believed to be an "authentic" American West experience. Central to his narrative of frontier life — indeed, to the very story of America — were Native Americans. Cody drew primarily from the Lakota from the Pine Ridge Agency and hundreds were employed by the Wild West. The Lakota called themselves *oskate wicasa*, or "one who performs." Some excellent historical work has been done that document the Show Indian experience but we remain unclear about the personal experiences many of them went through while under Cody's employ.
 

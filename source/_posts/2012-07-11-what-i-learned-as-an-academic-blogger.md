@@ -7,7 +7,7 @@ tags:
 category: research
 ---
 
-In 2008, a year after I graduated college and a year into my Masters program, I started JasonHeppler.org.[^fn-precise] My writing here started out slowly, as a visit to the [archives](http://jasonheppler.org/archives.html) can attest. Even so, I never wanted the site to become overwhelming either for myself to maintain or readers that find enjoyment in the things I write about or link to. 
+In 2008, a year after I graduated college and a year into my Masters program, I started JasonHeppler.org.[^fn-precise] My writing here started out slowly, as a visit to the [archives](https://jasonheppler.org/archives.html) can attest. Even so, I never wanted the site to become overwhelming either for myself to maintain or readers that find enjoyment in the things I write about or link to. 
 
 I've been reflecting on the things I've learned as an academic blogger, and [Shawn Blanc's recent post](http://shawnblanc.net/2012/07/50-things/) prompted me to write up a few things I've learned over the last four years of writing here.[^fn1-blogging] Here's an unordered list of thirty things.
 

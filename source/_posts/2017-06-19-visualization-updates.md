@@ -15,8 +15,8 @@ Just a few updates on some data visualization work I've either been taking in or
 
 ## Projects
 
-- I [recently posted a map I created](http://jasonheppler.org/projects/western-lands/) some time ago in the aftermath of the Malheur occupation. It's similar to the map I [created in R](http://jasonheppler.org/2016/01/06/western-federal-lands-and-oregon/), but built in D3.js instead.
-- Following the 2017 elections, [I created a simple interactive map and dumbbell chart](http://jasonheppler.org/projects/midwest-votes/) of midwestern votes for president. I don't think I ever advertised it on Twitter, so I'm noting it here. (And as I pointed out last week, I have a new interactive map up for [exploring Midwestern population change](http://jasonheppler.org/2017/06/06/mapping-midwest/).)
+- I [recently posted a map I created](https://jasonheppler.org/projects/western-lands/) some time ago in the aftermath of the Malheur occupation. It's similar to the map I [created in R](https://jasonheppler.org/2016/01/06/western-federal-lands-and-oregon/), but built in D3.js instead.
+- Following the 2017 elections, [I created a simple interactive map and dumbbell chart](https://jasonheppler.org/projects/midwest-votes/) of midwestern votes for president. I don't think I ever advertised it on Twitter, so I'm noting it here. (And as I pointed out last week, I have a new interactive map up for [exploring Midwestern population change](https://jasonheppler.org/2017/06/06/mapping-midwest/).)
 
 ## Reading
 

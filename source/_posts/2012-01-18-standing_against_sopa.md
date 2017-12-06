@@ -6,7 +6,7 @@ tags:
 - technology
 category: Web
 ---
-If you visited [in the last twenty-four hours](http://jasonheppler.org/sopa.html), you would've seen that the site was, like many others, silenced to protest SOPA.
+If you visited [in the last twenty-four hours](https://jasonheppler.org/sopa.html), you would've seen that the site was, like many others, silenced to protest SOPA.
 
 ![Protesting SOPA](/assets/images/jh_sopa.png "Jason Heppler protest of SOPA")
 

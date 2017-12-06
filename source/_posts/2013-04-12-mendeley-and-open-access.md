@@ -22,6 +22,6 @@ time ago but never got on the platform, instead preferring Zotero (which
 	 scholars is key. The knowledge and information we create as
 	 scholars shouldn't be locked behind expensive silos or straining
 	 library budgets with exorbitant subscriptions. We have an
-	 [obligation](http://jasonheppler.org/2011/10/25/the-obligation-of-open-access.html)
+	 [obligation](https://jasonheppler.org/2011/10/25/the-obligation-of-open-access.html)
 	 to make our work available to anyone who might be interested in
 	 accessing it.

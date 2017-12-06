@@ -8,7 +8,7 @@ tags:
 category: research
 ---
 
-*[This is a reading reflection for HIST946: Digital Humanities for Prof. William G. Thomas during the Fall 2011 semester. This week's reading was Lawrence Lessig, *[Code, and Other Laws of Cyberspace](http://codev2.cc/)*. You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html).]*
+*[This is a reading reflection for HIST946: Digital Humanities for Prof. William G. Thomas during the Fall 2011 semester. This week's reading was Lawrence Lessig, *[Code, and Other Laws of Cyberspace](http://codev2.cc/)*. You can find related posts [here](https://jasonheppler.org/the-digital-humanities-seminar.html).]*
 
 Most broadly, Lawrence Lessig is suggesting that we are going to get the Internet that we build. "Code is law," he writes, not only in the bits that make up the hardware and software that runs the Internet but also the norms and constraints that are adopted in cyberspace. He warns it is a mistake to assume the Internet carries with it a free and open nature without understanding that new layers of architecture can be built upon the core and change its functions. The threat of the new layers of architecture are whether they will serve as an open gateway to the web or centralize control.
 

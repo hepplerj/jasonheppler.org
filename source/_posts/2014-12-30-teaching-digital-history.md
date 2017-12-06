@@ -13,7 +13,7 @@ comments: false
 ---
 
 In the fall quarter I taught, for the first time, [a digital history
-course](http://jasonheppler.org/teaching/hist205f.2014/), a colloquium with undergraduate and graduate students from
+course](https://jasonheppler.org/teaching/hist205f.2014/), a colloquium with undergraduate and graduate students from
 history, computer science, journalism, and earth sciences. The course
 was a blast to teach and I am extremely pleased with how the final
 projects ended up. I had an amazing group of students who not only

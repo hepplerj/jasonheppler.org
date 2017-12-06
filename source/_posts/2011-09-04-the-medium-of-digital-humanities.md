@@ -7,7 +7,7 @@ tags:
 category: research
 ---
 
-*[This is a thought piece written for HIST946: Digital Humanities with Professor William Thomas during the Fall 2011 semester. This week's reading was Marshall McLuhan, *The Medium is the Massage: An Inventory of Effects*. You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html).]*
+*[This is a thought piece written for HIST946: Digital Humanities with Professor William Thomas during the Fall 2011 semester. This week's reading was Marshall McLuhan, *The Medium is the Massage: An Inventory of Effects*. You can find related posts [here](https://jasonheppler.org/the-digital-humanities-seminar.html).]*
 
 > "All media work us over completely. They are so pervasive in their personal, political, economic, aesthetic, pyschological, moral, ethical, and social consequences that they leave no part of us untouched, unaffected, unaltered. The medium is the massage. Any understanding of social and cultural change is impossible without a knowledge of the way media work as environments. All media are extensions of some human faculty--psychic or physical."
 > 

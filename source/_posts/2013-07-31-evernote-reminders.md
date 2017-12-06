@@ -13,4 +13,4 @@ I've been taking another look at Evernote for organizing my non-research notes. 
 
 One of the things that grabbed my attention was this post back in May that [Evernote notes can now include reminders](http://blog.evernote.com/blog/2013/05/23/evernote-reminders-are-here-on-mac-ios-and-web-2/). Reminders will trigger iOS and Mac notifications when due. That could be quite handy. An alternative, plaintext based approach would be this nifty tool by Brett Terpstra called [nvremind](http://brettterpstra.com/projects/nvremind/).
 
-(Yes, I know, I said I [wasn't doing link posts](http://jasonheppler.org/2013/02/24/the-link-blog-experiment.html) anymore. But I do enjoy doing them, and might try them out again.)
+(Yes, I know, I said I [wasn't doing link posts](https://jasonheppler.org/2013/02/24/the-link-blog-experiment.html) anymore. But I do enjoy doing them, and might try them out again.)
