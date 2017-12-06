@@ -5,7 +5,7 @@ destination     : prod
 title           : "Jason Heppler"
 description     : 'Historian. Librarian. Technologist.'
 tagline         : "History, technology, design"
-url             : "http://jasonheppler.org"
+url             : "https://jasonheppler.org"
 base            : ""
 repository      : "http://github.com/hepplerj/hepplerj.github.com"
 timeline        : America/Chicago
