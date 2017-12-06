@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Map Literacy</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<!-- begin in_header.html -->
+<meta name="description" content="Workshop materials for the Bimson workshop at CSU">
+<meta name="author" content="Jason Heppler">
+<link rel="shortcut icon" href="img/favicon.png">
+
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+<script>
+
+</script>
+<!-- end in_header.html -->
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="libs/custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="fluid-row">
+  <div class="col-sm-12">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="./">Carl Bimson Workshop</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://jasonheppler.org">Jason Heppler</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="fluid-row">
+  <div class="col-sm-3">
+    <div class="list-group">
+      <a class="list-group-item" href="./">Home</a>
+      <a class="list-group-item" href="introduction.html">Introduction</a>
+      <a class="list-group-item" href="resources.html">Resources</a>
+      <h5>Digital Mapmaking</h5>
+      <a class="list-group-item" href="map-literacy.html">Spatial Literacy</a>
+      <a class="list-group-item" href="cartodb.html">CartoDB</a>
+      <a class="list-group-item" href="storymap.html">StoryMap.js</a>
+      <h5>Network Analysis</h5>
+      <a class="list-group-item" href="network-literacy.html">Network Literacy</a>
+      <a class="list-group-item" href="palladio.html">Palladio</a>
+      <a class="list-group-item" href="gephi.html">Gephi</a>
+    </div>
+    <script>
+      // manage active state of toc based on current page
+    var href = window.location.pathname;
+    href = href.substr(href.lastIndexOf('/') + 1);
+    if (href === "" || href === "index.html")
+      href = "./";
+    $('a.list-group-item[href="' + href + '"]').addClass('active');
+    </script>
+  </div>
+  <div class="col-sm-9 content-body">
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Map Literacy</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#map-categories">Map Categories</a></li>
+<li><a href="#reading-maps">Reading Maps</a></li>
+</ul>
+</div>
+
+<blockquote>
+<p>“What is important about assigning a geographic reference to data is that it then becomes possible to compare that characteristic, event, phenomenon, etc. with others that exist or have existed in the same geographic space. What were previously unrelated facts become integrated and correlated.” —Karen Kemp<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+</blockquote>
+<p>Spatial literacy is a core competency to maps and mapping: an ability to read maps as a secondary source, as a primary source, or read texts for spatial clues. Maps aren’t simply containers for spatial information—they carry particular ways of looking at the world, including the very maps we use on our devices today.</p>
+<div id="map-categories" class="section level2">
+<h2>Map Categories</h2>
+<p>Maps tend to fall into one of three categories. <strong>Narrative maps</strong> exist not to render data, but to provide visuals tied to a spatial argument. Many texts, for example, have spatial components that could be rendered into a narrative map. Classes might map the movements of a character through space, for example, or track architectural styles across space. <strong>Thematic maps</strong> display variables on a map, often rendering data on top of a base map (such as Census tract or county-level patterns) or occassionally distorting spatial accuracy to illustrate scales (such as a cartogram). <strong>Deep maps</strong> exist to map place rather than space. We refer to <em>space</em> as anything that can be referenced by a coordinate system. For example, Fort Collins exists in space at 40.5853° N, 105.0844° W. <em>Place</em>, on the other hand, is how people create meaning out of space. Wounded Knee exists in space, but is also a place fraught with contested meanings. Place might be highly stylized in its representation as well. Consider the famous <em>New Yorker</em> cover form 1976:</p>
+<div class="figure">
+<img src="img/NewYorker1976.jpg" alt="The View from New York" />
+<p class="caption">The View from New York</p>
+</div>
+</div>
+<div id="reading-maps" class="section level2">
+<h2>Reading Maps</h2>
+<p>Break into groups and become familiar with a variety of the maps below:</p>
+<ul>
+<li><a href="http://benschmidt.org/migration2/">American Migrations to 1880</a></li>
+<li><a href="https://sites.google.com/site/atlanticnetworksproject/home">Atlantic Networks Project</a></li>
+<li><a href="http://dsl.richmond.edu/panorama/">American Panorama</a></li>
+<li><a href="http://dsl.richmond.edu/historicalatlas/">Atlas of the Historical Geography of the United States</a></li>
+<li><a href="http://darmc.harvard.edu/icb/icb.do">Digital Atlas of Roman and Medieval Civilizations</a></li>
+<li><a href="http://digitalharlem.org/">Digital Harlem</a></li>
+<li><a href="http://digitalharrisburg.com/">Digital Harrisburg</a></li>
+<li>Cameron Blevins and Jason Heppler, <a href="http://cameronblevins.org/gotp/">Geography of the Post</a></li>
+<li><a href="http://mallhistory.org/">Histories of the National Mall</a></li>
+<li><a href="http://web.stanford.edu/group/spatialhistory/cgi-bin/site/project.php?id=1015">Holocaust Geographies Collective</a></li>
+<li><a href="http://www.nytimes.com/interactive/2015/05/15/upshot/the-places-that-discourage-marriage-most.html?rref=upshot&amp;abt=0002&amp;abg=1">How Your Hometown Affects Your Chances of Marriage</a></li>
+<li><a href="http://www.locatinglondon.org/">Locating London’s Past</a></li>
+<li><a href="http://republicofletters.stanford.edu/">Mapping the Republic of Letters</a></li>
+<li><a href="http://www.theatlantic.com/features/archive/2015/01/mapping-the-state-of-the-union/384576/">Mapping the State of the Union</a></li>
+<li><a href="http://mappingtexts.org/">Mapping Texts</a></li>
+<li><a href="http://mapoflondon.uvic.ca/index.htm">Map of Early Modern London</a></li>
+<li><a href="http://archaeologydataservice.ac.uk/archives/view/atlas_ahrb_2005/atlas.cfm">Mapping the Medieval Townscape</a></li>
+<li><a href="http://www.nytimes.com/newsgraphics/2014/01/05/poverty-map/">Mapping Poverty in America</a></li>
+<li><a href="http://www.nytimes.com/interactive/2014/11/04/upshot/senate-maps.html">Midterm Elections</a></li>
+<li><a href="http://orbis.stanford.edu/">Orbis</a></li>
+<li><a href="http://pleiades.stoa.org/home">Pleiades</a></li>
+<li>William G. Thomas, <a href="http://railroads.unl.edu/">Railroads and the Making of Modern America</a></li>
+<li><a href="http://dsl.richmond.edu/holc/">Redlining Richmond</a></li>
+<li>Ben Schmidt, <a href="http://sappingattention.blogspot.com/2012/11/reading-digital-sources-case-study-in.html">Mapping ship logs</a></li>
+<li>Lincoln Mullen, <a href="http://lincolnmullen.com/projects/slavery/">Spread of U.S. Slavery, 1790–1860</a></li>
+<li><a href="http://web.stanford.edu/group/spatialhistory/cgi-bin/site/projects.php">Stanford Spatial History Project</a></li>
+<li><a href="http://www.usnewsmap.com/">U.S. News Map</a></li>
+<li><a href="http://dsl.richmond.edu/emancipation/">Visualizing Emancipation</a></li>
+</ul>
+<p>In your groups, try and answer these questions for each project you look at:</p>
+<ul>
+<li>What maps stood out to you and why?</li>
+<li>Which maps would be good examples to show students? Why so?</li>
+<li>Which maps were the worst? What made them the worst?</li>
+<li>How do these maps drive interpretation? How do they carry narrative weight?</li>
+<li>What categories do these maps fit into (<a href="http://en.wikipedia.org/wiki/Thematic_map">thematic</a>, narrative, or exploration)?</li>
+<li>What’s the audience for these maps? How effective is their interface?</li>
+</ul>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Quoted in Stephen Robertson, “Putting Harlem on the Map,” <em>Writing History in the Digital Age</em>, edited by Jack Dougherty and Kristen Nawrotzki (University of Michigan Press, 2012)<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+
+<footer>
+  <p>
+    
+    <small>
+Made with <span style="color: red; font-size: 8pt;"><i class="fa fa-heart" aria-hidden="true"></i></span> and <span style="color: brown; font-size: 8pt;"><i class="fa fa-coffee" aria-hidden="true"></i></span> in California.
+      
+      <br/>
+      These workshops materials are &copy; 2016 <a href="http://jasonheppler.org">Jason Heppler</a>. Licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+      <br>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    </small>
+  </p>
+</footer>
+
+  </div>
+</div>
+
+<script>
+  $.each($("img"), function(i, v) {
+    var img = $(v);
+    img.wrap("<a href='" + img.attr("src") + "'>");
+  })
+</script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

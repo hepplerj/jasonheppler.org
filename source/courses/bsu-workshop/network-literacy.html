@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Network Literacy</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<!-- begin in_header.html -->
+<meta name="description" content="Workshop materials for the AHA Network Analysis Workshop">
+<meta name="author" content="Jason Heppler">
+<link rel="shortcut icon" href="img/favicon.png">
+
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Open+Sans:300,400" rel="stylesheet">
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+<script>
+
+</script>
+<!-- end in_header.html -->
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="libs/custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="fluid-row">
+  <div class="col-sm-12">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a style="font-family: 'Fira Sans'" class="navbar-brand" href="./">Ball State University Network Analysis Workshop</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://jasonheppler.org">Jason Heppler</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="fluid-row">
+  <div class="col-sm-3">
+    <div class="list-group">
+      <a class="list-group-item" href="./">Home</a>
+      <a class="list-group-item" href="introduction.html">Introduction</a>
+      <a class="list-group-item" href="resources.html">Resources</a>
+      <h5>Network Analysis</h5>
+      <a class="list-group-item" href="network-literacy.html">Network Literacy</a>
+      <a class="list-group-item" href="gephi.html">Introduction to Gephi</a>
+      <a class="list-group-item" href="advanced-gephi.html">Advanced Gephi</a>
+      <a class="list-group-item" href="palladio.html">Alternatives</a>
+    </div>
+    <script>
+      // manage active state of toc based on current page
+    var href = window.location.pathname;
+    href = href.substr(href.lastIndexOf('/') + 1);
+    if (href === "" || href === "index.html")
+      href = "./";
+    $('a.list-group-item[href="' + href + '"]').addClass('active');
+    </script>
+  </div>
+  <div class="col-sm-9 content-body">
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Network Literacy</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#network-fundamentals">Network fundamentals</a><ul>
+<li><a href="#nodes-edges-attributes">Nodes, Edges, Attributes</a></li>
+<li><a href="#directed-vs-undirected">Directed vs undirected</a></li>
+<li><a href="#bipartite-k-partite">Bipartite &amp; k-partite</a></li>
+</ul></li>
+<li><a href="#a-few-metrics">A few metrics</a><ul>
+<li><a href="#centrality">Centrality</a></li>
+<li><a href="#pagerank">PageRank</a></li>
+<li><a href="#density">Density</a></li>
+<li><a href="#community-detection">Community Detection</a></li>
+</ul></li>
+<li><a href="#network-types">Network types</a><ul>
+<li><a href="#trees-and-hierarchies">Trees and hierarchies</a></li>
+<li><a href="#network-matrices-and-adjacency-matrices">Network matrices and adjacency matrices</a></li>
+<li><a href="#sankey-diagrams">Sankey diagrams</a></li>
+</ul></li>
+<li><a href="#reading-networks">Reading networks</a></li>
+</ul>
+</div>
+
+<blockquote>
+<p>“There is a tendency when using graphs to become smitten with one’s own data. Even though a graph of a few hundred nodes quickly becomes unreadable, it is often satisfying for the creator because the resulting figure is elegant and complex and may be subjectively beautiful, and the notion that the creator’s data is”complex&quot; fits just fine with the creator’s own interpretation of it. Graphs have a tendency of making a data set look sophisticated and important, without having solved the problem of enlightening the viewer.&quot; —Ben Fry<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+</blockquote>
+<p>Networks come with a particular vocabulary and methodology that digital scholars should be aware of if they’re adopting the method for their research and teaching.</p>
+<div id="network-fundamentals" class="section level2">
+<h2>Network fundamentals</h2>
+<div id="nodes-edges-attributes" class="section level3">
+<h3>Nodes, Edges, Attributes</h3>
+<p>Networks, also referred to as <em>graphs</em>, seek to represent the interrelationship of observations. Networks allow you to view two things: <strong>entities</strong> and <strong>relationships</strong>. We refer to entities as <strong>nodes</strong>, and represent the relationship between nodes with <strong>edges</strong> (or <strong>links</strong>).</p>
+<p>Let’s consider a basic set of nodes. Nodes can represent anything, from people to places to themes and concepts.</p>
+<p><img src="network-literacy_files/figure-html/unnamed-chunk-1-1.png" /><!-- --></p>
+<p>Edges connect these nodes, representing a relationship. They might connect citations among scholarly works, siblings, or archival objects. Network representations almost always represent edges only between two nodes.</p>
+<p><img src="network-literacy_files/figure-html/unnamed-chunk-2-1.png" /><!-- --></p>
+<p>Nodes and edges can also be given <strong>attributes</strong> to allow for descriptive and statistical measure of the nodes. For example, you might calculate the importance of a node to a network and assign a value to that node, resizing the circle to indicate a node’s importance. Or if nodes represent places and edges travel among places, nodes might be sized by the population of a place or sized based on the number of travelers passing through a place. In our Tudor network, we can change the color of our edges to represent the type of relationship (child or spouse).</p>
+<p><img src="network-literacy_files/figure-html/unnamed-chunk-3-1.png" /><!-- --></p>
+<p>Edges can also take on what are called <strong>weights</strong>, a numeric value indicating the strength of a connection between two nodes. Usually the greater the weight, the stronger the two nodes are attached. We can use these weights to visually indicate the strength of connections. If we look at a network of <em>Les Miserables</em> character interactions, for example, we can weight the edges based on the number of interactions they have.</p>
+<p><img src="network-literacy_files/figure-html/unnamed-chunk-4-1.png" /><!-- --></p>
+</div>
+<div id="directed-vs-undirected" class="section level3">
+<h3>Directed vs undirected</h3>
+<p>Often when you’re building networks, you’ll come across the attribute of “directed” or “undirected” for edges. A <strong>directed edge</strong> is one that is part of an asymmetrical relationship, often represented by an arrow pointing to one or two nodes that share an edge. We could think of a Twitter network, where I may follow someone on Twitter but they may not follow me. Since that’s an asymmetrical relationship, we would refer to this as a <strong>directed network</strong>. Similarly, networks described as <strong>undirected</strong> are generally symmetrical. Facebook, for example, tends to be a symmetrical network—in order to follow someone, you must be friends with them.</p>
+<p>Note that the distinction of undirected and directed networks can have significant consequences to analysis. Directionality of edges can dramatiacally change a network structure, so algorithms designed for undirected networks will produce unlikely results. Be careful with the algorithms you use and the networks you create.</p>
+</div>
+<div id="bipartite-k-partite" class="section level3">
+<h3>Bipartite &amp; k-partite</h3>
+<p>Most basic networks can only support one kind of node type—think of connections among co-authors on a book. This network would not, however, connect both books and authors in the same network. Network theory assumes that nodes in a network are of the same type, thus limiting the kinds of analysis one can do with a network. Furthermore, network scientists have not yet created many algorithms for dealing with <strong>multimodal networks</strong>. We’re limited by theory and practice.</p>
+<p>We can, however, take advantage of what is called a <strong>bipartite network</strong>, an especially useful concept for humanistic and social science data. These bimodal networks support two node types, but note that edges in these kind of networks <strong>must only allow edges beteween types, not edges within types</strong>. That means we can draw a connection between book authors and the books they’ve authored.</p>
+<p>If generalized far enough, a network can be a <strong>multimodal</strong> or <strong><em>k</em>-partite</strong> network. These networks represent various types of nodes that can feature only links between similar types. But, again, we’re limited in the number of algorithms we can use for analysing <em>k</em>-partite networks. You will need to control the complexity of your network data to meaningfully extract information or run it through network software packages.</p>
+</div>
+</div>
+<div id="a-few-metrics" class="section level2">
+<h2>A few metrics</h2>
+<div id="centrality" class="section level3">
+<h3>Centrality</h3>
+<p>Digital scholars are often interested in the importance of particular nodes to a network, such as intellectuals whose ideas are important to a Republic of Letters or cities that are frequently traveled through. The network metric used for analysing this phenomenon is called <strong>centrality</strong> (when edge directionality is not relevant) or <strong>prestige</strong> (when edge directionality is relevant). One measure of centrality called <strong>degree centrality</strong> which measures the number of edges connected to a node. The greater the number of connections, the greater the centrality. This measure is usually a good indicator of how many neighbors a node has, but as networks scale in size the measure begins to lose its meaningfulness.</p>
+<p>Network scientists have created more complex measures of centrality including <strong>betweenness centrality</strong> and <strong>closeness centrality</strong>. These measures not only look at the local centrality of a node but contextualizes that measure with the rest of the network. For example, assume a network of roads and cities. A city with the highest betweenness measure, for example, would represent the shortest path between all node pairs in the network.</p>
+</div>
+<div id="pagerank" class="section level3">
+<h3>PageRank</h3>
+<p>Developed by Google to improve it’s search results, PageRank gives high scores to popular pages as a measure of <strong>prestige</strong>. Thus, PageRank attempts to measure the centrality of a node by taking into account the edges coming into or leading away from it. PageRank attempts to take into account not only the number of links a node receives, but also the propensity of the links to the node as well as the centrality of nodes linking to it. Scholars using PageRank would likely find themselves unsurprised by the results. If you applied PageRank to a corpus of letters, it would likely point to figures well-known in history, for example.</p>
+</div>
+<div id="density" class="section level3">
+<h3>Density</h3>
+<p>Density provides a global look at the network by dividing the number of edges by the potential of all edges a network could have. An very dense network, however, is not analytically rich since common connections among nodes reveals little about the structure of a network. The density measure of my neighborhood in San Jose, for example, would have a very high measure since it’s likely we all know each other. But the density measure between my neighborhood and a large city, say Fresno or Sacramento, likely dwindles considerably since my neighbors know far fewer people in these places. For analysis, if you’re seeing an increase in density measure over time, you might be seeing something like the creation of a new community.</p>
+</div>
+<div id="community-detection" class="section level3">
+<h3>Community Detection</h3>
+<p>Community detection allows you to look for subgraphs inside graphs. Gephi calls this <strong>modularity</strong>, while programming libraries like <a href="http://cran.rstudio.org/web/packages/igraph/">igraph</a> provide a variety of algorithms including <strong>edge betweenness</strong>, <strong>walktrap</strong>, and <strong>fastgreedy</strong>. Note that these algorithms all measure community a bit differently, some by grouping nodes others by grouping edges, some by hierarchical nested communities, some by community overlap. Be aware of what the algorithms are doing with your data. Community detection assigns a community to each node in a network to analyze how closely connected nodes are internally to a network.</p>
+</div>
+</div>
+<div id="network-types" class="section level2">
+<h2>Network types</h2>
+<div id="trees-and-hierarchies" class="section level3">
+<h3>Trees and hierarchies</h3>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/Manhttan_Project_Organization_Chart.gif" alt="The Manhattan Project organizational chart, 1946." />
+<p class="caption">The Manhattan Project organizational chart, 1946.</p>
+</div>
+</div>
+<div id="network-matrices-and-adjacency-matrices" class="section level3">
+<h3>Network matrices and adjacency matrices</h3>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/adjmatrix_comm.png" alt="Thanks to Matt Lincoln." />
+<p class="caption">Thanks to <a href="http://matthewlincoln.net/2014/12/20/adjacency-matrix-plots-with-r-and-ggplot2.html">Matt Lincoln</a>.</p>
+</div>
+</div>
+<div id="sankey-diagrams" class="section level3">
+<h3>Sankey diagrams</h3>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/sankey.png" alt="Thanks to Mike Bostock." />
+<p class="caption">Thanks to <a href="https://bost.ocks.org/mike/sankey/">Mike Bostock</a>.</p>
+</div>
+</div>
+</div>
+<div id="reading-networks" class="section level2">
+<h2>Reading networks</h2>
+<p>Break into groups and become familiar with a variety of networks below:</p>
+<ul>
+<li>Micki Kaufman, <a href="http://blog.quantifyingkissinger.com/">“Everything on Paper Will Be Used Against Me”: Quantifying Kissinger</a></li>
+<li><a href="http://republicofletters.stanford.edu/">Mapping the Republic of Letters</a></li>
+<li><a href="http://viraltexts.org/">Viral Texts: Mapping Networks of Reprinting in 19th-Century Newspapers and Magazines</a></li>
+<li>Rebecca Wingo, “<a href="http://homestead.unl.edu/projects/homesteading-the-plains/">Homestead Nebraska</a>”</li>
+<li>Brian Sarnacki, “<a href="http://www.briansarnacki.com/the_corrupt_network/">The Corrupt Network</a>”</li>
+<li><a href="http://orbis.stanford.edu/">ORBIS</a></li>
+<li>Andy Wilson, <a href="https://andrewwilson84.wordpress.com/2016/03/07/mapping-the-revolution/">Mapping the Revolution</a></li>
+<li><a href="http://earlywashingtondc.org/">O San Can You See: Early Washington D.C. Law &amp; Family</a></li>
+<li><a href="https://www.macalester.edu/~abeverid/thrones.html">Network of Thrones</a></li>
+<li><a href="http://kindred.stanford.edu/">Kindred Britain</a></li>
+</ul>
+<p>In your groups, try and answer these questions for each project you look at:</p>
+<ul>
+<li>What networks stood out to you and why?</li>
+<li>Which networks would be good examples to show students? Why so?</li>
+<li>Which networks were the worst? What made them the worst?</li>
+<li>How do these networks drive interpretation? How do they carry narrative weight?</li>
+<li>What’s the audience for these networks? How effective is their interface?</li>
+</ul>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Ben Fry, <em>Visualizing Data: Exploring and Explaining Data with the Processing Environment</em> (Sebastopol, CA: O’Reilly Media, 2007).<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+
+<footer>
+  <p>
+    
+    <small>
+Made with <span style="color: red; font-size: 8pt;"><i class="fa fa-heart" aria-hidden="true"></i></span> and <span style="color: #403B2E; font-size: 8pt;"><i class="fa fa-coffee" aria-hidden="true"></i></span> in Nebraska.
+      
+      <br/>
+      These workshops materials are &copy; 2017 <a href="http://jasonheppler.org">Jason Heppler</a>. Licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+      <br>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    </small>
+  </p>
+</footer>
+
+  </div>
+</div>
+
+<script>
+  $.each($("img"), function(i, v) {
+    var img = $(v);
+    img.wrap("<a href='" + img.attr("src") + "'>");
+  })
+</script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

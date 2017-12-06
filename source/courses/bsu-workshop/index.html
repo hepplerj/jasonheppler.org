@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Network Analysis</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<!-- begin in_header.html -->
+<meta name="description" content="Workshop materials for the AHA Network Analysis Workshop">
+<meta name="author" content="Jason Heppler">
+<link rel="shortcut icon" href="img/favicon.png">
+
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Open+Sans:300,400" rel="stylesheet">
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+<script>
+
+</script>
+<!-- end in_header.html -->
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="libs/custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="fluid-row">
+  <div class="col-sm-12">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a style="font-family: 'Fira Sans'" class="navbar-brand" href="./">Ball State University Network Analysis Workshop</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://jasonheppler.org">Jason Heppler</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="fluid-row">
+  <div class="col-sm-3">
+    <div class="list-group">
+      <a class="list-group-item" href="./">Home</a>
+      <a class="list-group-item" href="introduction.html">Introduction</a>
+      <a class="list-group-item" href="resources.html">Resources</a>
+      <h5>Network Analysis</h5>
+      <a class="list-group-item" href="network-literacy.html">Network Literacy</a>
+      <a class="list-group-item" href="gephi.html">Introduction to Gephi</a>
+      <a class="list-group-item" href="advanced-gephi.html">Advanced Gephi</a>
+      <a class="list-group-item" href="palladio.html">Alternatives</a>
+    </div>
+    <script>
+      // manage active state of toc based on current page
+    var href = window.location.pathname;
+    href = href.substr(href.lastIndexOf('/') + 1);
+    if (href === "" || href === "index.html")
+      href = "./";
+    $('a.list-group-item[href="' + href + '"]').addClass('active');
+    </script>
+  </div>
+  <div class="col-sm-9 content-body">
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Network Analysis</h1>
+
+</div>
+
+
+<p style="font-size: 1.2em; text-align: center; color: #595241; border: 1px solid #040404; padding: 3px;">
+Portions of this site are still in draft form and may change prior to the workshop.
+</p>
+<p>This workshop emphasizes hands-on learning of working with network data and visualization. Historians working out the complex documentary relationships between people and institutions can often find surprising, or previously unexplored, connections by using network analysis and its visual representations. This workshop will help participants familiarize themselves with basic network-analysis vocabulary as well as using Gephi for network analysis and visualization.</p>
+<p>The workshop will address:</p>
+<ul>
+<li>how networks are used in scholarship</li>
+<li>how we can use networks in the classroom and in research</li>
+<li>how to find, create, and use network data</li>
+<li>how to use Gephi and alternative network analysis tools</li>
+</ul>
+<div id="schedule" class="section level2">
+<h2>Schedule</h2>
+<ul>
+<li><em>Hour 1:</em> <a href="network-literacy.html">Network Literacy</a></li>
+<li><em>Hour 2:</em> <a href="gephi.html">Introduction to Gephi</a> | <a href="advanced-gephi.html">Advanced Gephi</a></li>
+<li><em>Hour 3:</em> <a href="advanced-gephi.html">Advanced Gephi</a> | <a href="palladio.html">Alternatives</a></li>
+</ul>
+</div>
+
+<footer>
+  <p>
+    
+    <small>
+Made with <span style="color: red; font-size: 8pt;"><i class="fa fa-heart" aria-hidden="true"></i></span> and <span style="color: #403B2E; font-size: 8pt;"><i class="fa fa-coffee" aria-hidden="true"></i></span> in Nebraska.
+      
+      <br/>
+      These workshops materials are &copy; 2017 <a href="http://jasonheppler.org">Jason Heppler</a>. Licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+      <br>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    </small>
+  </p>
+</footer>
+
+  </div>
+</div>
+
+<script>
+  $.each($("img"), function(i, v) {
+    var img = $(v);
+    img.wrap("<a href='" + img.attr("src") + "'>");
+  })
+</script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

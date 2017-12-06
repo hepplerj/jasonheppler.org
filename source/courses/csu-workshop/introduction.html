@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Introduction</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/htmlwidgets-0.6.1/htmlwidgets.js"></script>
+<script src="libs/viz-0.3/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-0.8.1/grViz.js"></script>
+<!-- begin in_header.html -->
+<meta name="description" content="Workshop materials for the Bimson workshop at CSU">
+<meta name="author" content="Jason Heppler">
+<link rel="shortcut icon" href="img/favicon.png">
+
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+<script>
+
+</script>
+<!-- end in_header.html -->
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="libs/custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="fluid-row">
+  <div class="col-sm-12">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="./">Carl Bimson Workshop</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://jasonheppler.org">Jason Heppler</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="fluid-row">
+  <div class="col-sm-3">
+    <div class="list-group">
+      <a class="list-group-item" href="./">Home</a>
+      <a class="list-group-item" href="introduction.html">Introduction</a>
+      <a class="list-group-item" href="resources.html">Resources</a>
+      <h5>Digital Mapmaking</h5>
+      <a class="list-group-item" href="map-literacy.html">Spatial Literacy</a>
+      <a class="list-group-item" href="cartodb.html">CartoDB</a>
+      <a class="list-group-item" href="storymap.html">StoryMap.js</a>
+      <h5>Network Analysis</h5>
+      <a class="list-group-item" href="network-literacy.html">Network Literacy</a>
+      <a class="list-group-item" href="palladio.html">Palladio</a>
+      <a class="list-group-item" href="gephi.html">Gephi</a>
+    </div>
+    <script>
+      // manage active state of toc based on current page
+    var href = window.location.pathname;
+    href = href.substr(href.lastIndexOf('/') + 1);
+    if (href === "" || href === "index.html")
+      href = "./";
+    $('a.list-group-item[href="' + href + '"]').addClass('active');
+    </script>
+  </div>
+  <div class="col-sm-9 content-body">
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Introduction</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#maps-networks-and-the-digital-humanities">Maps, networks, and the digital humanities</a></li>
+<li><a href="#how-this-workshop-will-proceed">How this workshop will proceed</a></li>
+<li><a href="#the-spatial-toolbox">The spatial toolbox</a><ul>
+<li><a href="#gis">GIS</a></li>
+<li><a href="#web-mapping-tools">Web mapping tools</a></li>
+<li><a href="#command-line-tools">Command line tools</a></li>
+</ul></li>
+<li><a href="#the-network-toolbox">The network toolbox</a><ul>
+<li><a href="#gephi">Gephi</a></li>
+<li><a href="#cytoscape">Cytoscape</a></li>
+<li><a href="#palladio">Palladio</a></li>
+</ul></li>
+<li><a href="#programming-languages">Programming languages</a></li>
+<li><a href="#before-this-workshop">Before this workshop</a></li>
+</ul>
+</div>
+
+<div id="maps-networks-and-the-digital-humanities" class="section level2">
+<h2>Maps, networks, and the digital humanities</h2>
+<p><a href="http://whatisdigitalhumanities.com/">Digital humanities</a> offers a wide variety of methodological and pedagogical approaches, including text and data mining, network analysis, and spatial analysis.</p>
+<p>Digital maps have become easier for scholars and students to create. Maps serve several purposes, from data exploration to the communication of an argument. These approaches have been made easier in the last few years with the availability of desktop and web-based mapping platforms. This means researchers and students won’t need to bring specialized knowledge of cartography or GIS to their work, but can begin producing digital maps that give you a great degree of control over interactivity and the display of evidence.</p>
+<p>Networks have not been aided by the same set of easy-to-use tools, but a couple of options exist for integrating network analysis into research and teaching. Among the more powerful desktop applications for network analysis, these software provide algorithms for interpreting networks and relationships as well as creating visualizations. Web approaches, to date, have not come with the computational power of desktop applications, but allow the easier creation of network visualizations. Networks also tend to be tricker to comprehend over maps, which entails a more intense methodological borrowing than we do with maps. That includes using algorithms designed by computer scientists for purposes that <a href="https://tedunderwood.com/2011/10/16/lsa-is-a-marvellous-tool-but-humanists-may-no-use-it-the-way-computer-scientists-do/">might be at odds</a> of the humanities scholar. As Scott Weingart <a href="http://www.scottbot.net/HIAL/index.html@p=6279.html">once warned</a>, “Networks <em>can</em> be used on any project. Networks <em>should</em> be used on far fewer.”</p>
+<p>The aim of this workshop is to help introduce you to some of these approaches for making digital maps and networks.</p>
+</div>
+<div id="how-this-workshop-will-proceed" class="section level2">
+<h2>How this workshop will proceed</h2>
+<p>Our time together is limited and we cannot go too deeply into working with spatial or network data. Our hope is to introduce you to the basics, provide a set of tools to demonstrate what is possible, and continue the conversation beyond this seminar.</p>
+<p>Be aware, also, that far more time will be spent preparing and cleaning data than creating the visualizations themselves. <a href="http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html?_r=0">Some argue</a> that you’ll spend as much as 80% of your time preparing your data for visualization, while the remainder 20% goes to the work of visualization itself. Since we’re together for a limited time, we won’t have a chance to really experience the tedious, frustrating, and arduous work that can go into preparing maps and networks. These are approaches that you will need to develop for your research, and skills that you will bring to your students. As you take these skills to the classroom, consider the kinds of things your students can complete and receive the most reward for effort.</p>
+<p>That said, digital maps and networks—through desktop software and web-based platforms—have made the tools of these visualizations easier for scholars and students to grapple with. Maps are often more readily understood than networks—because we frequently use maps as part of our day to day lives, their use for research and narrative is more apparent than networks which comes with an entire set of vocabulary, methods, theory, and approaches. The interactivity of maps allows scholars to filter data, to operate at different spatial scales, and embed sources into maps. Similarly, networks can move from large-scale relationships to explorations of smaller connections. These techniques, however, take time. Once you’ve begun to master them, consider how to bring these approaches and skills into your classroom and your research.</p>
+<p>As noted above, the biggest challenge with creating maps and networks is the data—namely, once the data is ready and you’ve gained some competendnce in making these visualizations, the process proceeds quickly. Far more of your time—and your student’s time—will be spent in preparing data, a task that’s highly variable to the visualization and evidence you are working with. In other words, the evidence you’re attempting to visualize comes with the very thing humanities scholars spend their time on—the finding and interpretation of evidence.</p>
+<div id="htmlwidget-3078" style="width:100%;height:192px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3078">{"x":{"diagram":"\n      digraph nicegraph {\n      graph [overlap = true,\n             rankdir = LR,\n             label = <The Process of Visualization<br/><br/>>,\n             fontname = Lato,\n             labelloc = \"t\"\n]\n\n      node [shape = box,\n           overlap = true,\n           fontname = Lato,\n           fontsize = 10]\n      A [label = \"Find or create data\"]\n      B [label = \"Clean/tidy data\"]\n      C [label = \"Explore and \n transform the data\"]\n      D [label = \"Visualize\"]\n      E [label = \"Interpret\"]\n      F [label = \"Communicate\"]\n\n      A->B->C->D->E->F [splines = \"line\"]\n      E->C [splines = \"curved\"]\n      C->A [splines = \"curved\"]\n      }\n      ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p><em>(Figure adapted from <a href="http://lincolnmullen.com/projects/spatial-workshop/introduction.html">Lincoln Mullen.</a>)</em></p>
+</div>
+<div id="the-spatial-toolbox" class="section level2">
+<h2>The spatial toolbox</h2>
+<div id="gis" class="section level3">
+<h3>GIS</h3>
+<p><a href="http://en.wikipedia.org/wiki/Geographic_information_system">Geographic information system</a> is the most common tool for doing spatial work, from which the discipline GIS takes its name. GIS tools are usually <a href="https://en.wikipedia.org/wiki/Graphical_user_interface">GUI-based</a> programs that handle everything from data storage to final presentation. <a href="http://desktop.arcgis.com/en/">ArcGIS</a> by ESRI is the industry standard for GIS work, but the program is extremely expensive (although your institution my have a subscription). An alternative is <a href="">QGIS</a>, an open-source GIS program available for Windows, Mac, and Linux. You will likely achieve much of what you’d hope to achive with ArcGIS with QGIS, and what you learn in one is broadly applicable to the other. We won’t have time to dig into the intricacies of either program during the workshop, but you can find more about these in the <a href="resources.html">resources</a>.</p>
+</div>
+<div id="web-mapping-tools" class="section level3">
+<h3>Web mapping tools</h3>
+<p>There has been a veritable explosion of GIS software on the web that offer various ways for making maps, ranging from <a href="http://maps.google.com">Google Maps</a> and <a href="http://earth.google.com">Google Earth</a> to <a href="palladio.designhumanities.org">Palladio</a> and <a href="https://carto.com/">CartoDB</a>. ESRI has also entered the web-based GIS realm, offering an <a href="http://www.esri.com/software/arcgis/arcgisonline">ArcGIS Online</a> platform. As teaching tools, these are excellent resources since they do not require the installation of software and produce maps ready for the web. We will be looking at <a href="https://carto.com/">CartoDB</a> and <a href="https://storymap.knightlab.com/">StoryMap.js</a> this week as two options for web-based interactive maps.</p>
+<div class="figure">
+<img src="img/cartodb-screenshot.png" alt="Creating a map in CartoDB." />
+<p class="caption">Creating a map in CartoDB.</p>
+</div>
+</div>
+<div id="command-line-tools" class="section level3">
+<h3>Command line tools</h3>
+<p>Many tasks for manipulating spatial data are more easily achieved with command line tools. The command line tool <a href="http://www.gdal.org/">Geospatial Data Abstraction Library</a> (GDAL/OGR) can be used to convert a file from one format to another, for example:</p>
+<pre><code>ogr2ogr -f &quot;ESRI Shapefile&quot; -t_srs EPSG:4326 coastline.geosjon CoastCut_50m.shp</code></pre>
+<div class="figure">
+<img src="img/command-line-screenshot.png" alt="Converting a shapefile to GeoJSON using OGR." />
+<p class="caption">Converting a shapefile to GeoJSON using OGR.</p>
+</div>
+<p>Command line tools are often an essential part of the process, but they come with a steep learning curve. We won’t have time in our two days together to dig into GDAL/OGR for manipulating spatial data, but you can find more about these tools in the <a href="resources.html">resources</a>. If the command line route is one you intend to pursue, see also the <a href="geojson-utilities.html">GeoJSON utilities</a>.</p>
+</div>
+</div>
+<div id="the-network-toolbox" class="section level2">
+<h2>The network toolbox</h2>
+<div id="gephi" class="section level3">
+<h3>Gephi</h3>
+<p><a href="https://gephi.org/">Gephi</a> is an open-source network analysis and visualization platform developed by the University of Technology of Compiégne in France. Gephi is currently the most popular software package for creating network graphs, combining both various algorithmic approaches to analyzing networks with the visualization of the network itself.</p>
+<p>Note that we may run into some problems with Gephi. It has a <a href="https://medium.com/coder-snorts/gephi-is-broken-on-mac-os-97fbaef4305e#.cogwsls13">notorious problem with Java</a>, and although the new version <a href="https://github.com/gephi/gephi/wiki/Releases">claims to be more stable</a>, many have reported that isn’t the case (myself included.)</p>
+<div class="figure">
+<img src="img/gephi-screenshot.png" alt="Previewing a network in Gephi." />
+<p class="caption">Previewing a network in Gephi.</p>
+</div>
+</div>
+<div id="cytoscape" class="section level3">
+<h3>Cytoscape</h3>
+<p><a href="http://www.cytoscape.org/">Cytoscape</a> is an open-source software platform designed originally for scientists, largely used in biological research, but can graph any network of nodes and edges. Like Gephi, it has an ecosystem of plugins developed by others in the community that provide various alternative ways of visualizing networks in the platform.</p>
+<div class="figure">
+<img src="img/cytoscape-screenshot.png" alt="Previewing a network with Cytoscape." />
+<p class="caption">Previewing a network with Cytoscape.</p>
+</div>
+</div>
+<div id="palladio" class="section level3">
+<h3>Palladio</h3>
+<p><a href="http://hdlab.stanford.edu/palladio/">Palladio</a>, developed by the <a href="http://hdlab.stanford.edu/">Humanities+Design</a> lab at Stanford University, is designed for the easy visualization of humanities data as a map, graph, table, or gallery. Palladio’s network visualization capabilities allow for the visualization of a bivariate graph based on any two dimensions inside a dataset, that can then be filtered based on attributes in the data.</p>
+<div class="figure">
+<img src="img/palladio-screenshot.png" alt="Previewing a network with Palladio." />
+<p class="caption">Previewing a network with Palladio.</p>
+</div>
+</div>
+</div>
+<div id="programming-languages" class="section level2">
+<h2>Programming languages</h2>
+<p>The most powerful method for creating networks and maps come from programming languages such as <a href="http://www.r-project.org/">R</a>, <a href="https://www.python.org/">Python</a>, and <a href="http://www.w3schools.com/js/">Javascript</a>. These languages allow you to create your own custom maps, leverage custom basemaps, and control various algorithmic and aesthetic aspects of network visualizations. These include powerful libraries such as <a href="">igraph</a> and <a href="">sne</a>. We won’t be digging into any languages during this workshop, but there are many resources available for getting started with programmatic approaches to visualization. See the <a href="resources.html">resources page</a> for more.</p>
+</div>
+<div id="before-this-workshop" class="section level2">
+<h2>Before this workshop</h2>
+<p>There are a few things to install for the workshop:</p>
+<ul>
+<li><a href="https://gephi.org/">Gephi</a>. A common platform for building network visualizations.</li>
+<li>A plain text editor. For Mac I recommend <a href="http://www.barebones.com/products/textwrangler/">TextWrangler</a>. Please do not use TextEdit. For Windows, <a href="https://notepad-plus-plus.org/">Notepad++</a>.</li>
+<li>A program for editing <a href="https://en.wikipedia.org/wiki/Comma-separated_values">comma-separated values (CSV)</a> files. Microsoft Excel does things to data that should never be done to data, so I recommend <a href="https://www.libreoffice.org/">Libre Office</a> as a more reliable alternative.</li>
+</ul>
+<p>Additionally, an FTP/SFTP client for accessing websites might be useful but is optional. On Mac and Windows I recommend <a href="https://cyberduck.io/?l=en">Cyberduck</a>.</p>
+</div>
+
+<footer>
+  <p>
+    
+    <small>
+Made with <span style="color: red; font-size: 8pt;"><i class="fa fa-heart" aria-hidden="true"></i></span> and <span style="color: brown; font-size: 8pt;"><i class="fa fa-coffee" aria-hidden="true"></i></span> in California.
+      
+      <br/>
+      These workshops materials are &copy; 2016 <a href="http://jasonheppler.org">Jason Heppler</a>. Licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+      <br>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    </small>
+  </p>
+</footer>
+
+  </div>
+</div>
+
+<script>
+  $.each($("img"), function(i, v) {
+    var img = $(v);
+    img.wrap("<a href='" + img.attr("src") + "'>");
+  })
+</script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

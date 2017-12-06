@@ -1,0 +1,136 @@
+body {
+  margin: 4rem 0 4rem 0;
+  font-family: Lato, 'Open Sans', sans-serif;
+  background: #fff;
+}
+
+.container {
+  max-width: 800px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 3rem 0 1rem 0;
+  font-weight: 400;
+}
+h1 { font-size: 3.2rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 2.4rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 2.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 1.8rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.6rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.6rem; line-height: 1.6;  letter-spacing: 0; }
+
+blockquote p {
+  font-size: 9pt;
+}
+
+.site-title {
+  font-size: 4.0rem;
+  margin-top: 0rem;
+}
+
+.site-title a, .site-title a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.draft-warning {
+  padding: 1rem;
+  border: 2px solid rgb(156,45,59);
+  font-weight: bold;
+  text-align: center;
+}
+
+nav {
+  margin: 0 0 2rem 0;
+}
+
+nav a {
+  margin-right: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.metadata {
+  border: 1px solid gray;
+  padding: 2rem;
+}
+
+.metadata p {
+  margin-bottom: 0;
+}
+
+a, a:hover {
+  color: rgb(156,45,59);
+}
+
+footer {
+  padding-top: 2rem;
+  border-top: 1px solid gray;
+  font-size: 10pt;
+}
+
+footer h4, footer h5 {
+  margin: 0 0 0.5rem 0;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style-type: square;
+  margin-bottom: 2.5rem;
+}
+
+li {
+  list-style-position: outside;
+  margin-left: 2rem;
+  margin-bottom: 0;
+}
+
+li p {
+  margin-bottom: 0;
+}
+
+table {
+  min-width: 30rem;
+  line-height: 1.5rem;
+}
+
+td {
+  padding: 1.0rem;
+}
+
+#cc {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-bottom: -0.2rem;
+}
+
+.footnoteRef {
+  text-decoration: none; 
+}
+
+section.footnotes {
+  font-size: 0.8em;
+}
+
+figure {
+  margin: 0;
+}
+
+figure img {
+  max-width: 100%;
+  padding: 5px;
+  border: 1px solid gray;
+}
+
+
+figcaption {
+  font-size: 0.9em;
+  margin-left: 3em;
+}

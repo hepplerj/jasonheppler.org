@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>GeoJSON Utilities</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<!-- begin in_header.html -->
+<meta name="description" content="Workshop materials for the Bimson workshop at CSU">
+<meta name="author" content="Jason Heppler">
+<link rel="shortcut icon" href="img/favicon.png">
+
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+<script>
+
+</script>
+<!-- end in_header.html -->
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="libs/custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="fluid-row">
+  <div class="col-sm-12">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="./">Carl Bimson Workshop</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://jasonheppler.org">Jason Heppler</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="fluid-row">
+  <div class="col-sm-3">
+    <div class="list-group">
+      <a class="list-group-item" href="./">Home</a>
+      <a class="list-group-item" href="introduction.html">Introduction</a>
+      <a class="list-group-item" href="resources.html">Resources</a>
+      <h5>Digital Mapmaking</h5>
+      <a class="list-group-item" href="map-literacy.html">Spatial Literacy</a>
+      <a class="list-group-item" href="cartodb.html">CartoDB</a>
+      <a class="list-group-item" href="storymap.html">StoryMap.js</a>
+      <h5>Network Analysis</h5>
+      <a class="list-group-item" href="network-literacy.html">Network Literacy</a>
+      <a class="list-group-item" href="palladio.html">Palladio</a>
+      <a class="list-group-item" href="gephi.html">Gephi</a>
+    </div>
+    <script>
+      // manage active state of toc based on current page
+    var href = window.location.pathname;
+    href = href.substr(href.lastIndexOf('/') + 1);
+    if (href === "" || href === "index.html")
+      href = "./";
+    $('a.list-group-item[href="' + href + '"]').addClass('active');
+    </script>
+  </div>
+  <div class="col-sm-9 content-body">
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">GeoJSON Utilities</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#operations">Operations</a></li>
+<li><a href="#editors">Editors</a></li>
+<li><a href="#validation">Validation</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#conversion">Conversion</a></li>
+<li><a href="#data">Data</a></li>
+<li><a href="#credit">Credit</a></li>
+</ul>
+</div>
+
+<p>GeoJSON utilities that make things easier.</p>
+<div id="operations" class="section level3">
+<h3>Operations</h3>
+<ul>
+<li><a href="https://github.com/mapbox/geojson-coords">geojson-coords</a>: Extract coordinates from GeoJSON</li>
+<li><a href="https://www.npmjs.com/package/geojson-extent">geojson-extent</a>: Compute the bounding box of geojson features</li>
+<li><a href="https://github.com/mapbox/geojson-flatten">geojson-flatten</a>: Flatten multi geometries into normal geometries</li>
+<li><a href="https://github.com/maxogden/geojson-js-utils">geojson-js-utils</a>: JavaScript helper functions for manipulating GeoJSON</li>
+<li><a href="https://github.com/mapbox/geojson-merge">geojson-merge</a>: Merge multiple GeoJSON files into one FeatureCollection.</li>
+<li><a href="https://github.com/mapbox/geojson-normalize">geojson-normalize</a>: Normalize any GeoJSON object into a GeoJSON featurecollection.</li>
+<li><a href="https://www.npmjs.com/package/geojson-pick">geojson-pick</a>: Remove all but specified properties from features in a GeoJSON featurecollection.</li>
+<li><a href="https://github.com/mapbox/geojson-summary">geojson-summary</a>: get a plain-english summary of what’s in a GeoJSON file.</li>
+<li><a href="https://github.com/substack/point-grouper">point-grouper</a>: Group GeoJSON points into containing polygons.</li>
+<li><a href="https://github.com/tmcw/geojson-join">geojson-join</a>: Join GeoJSON against json, dbf, and csv files.</li>
+<li><a href="https://github.com/Turfjs/turf">turf</a>: A collection of Javascript functions for spatial operations and analysis</li>
+</ul>
+</div>
+<div id="editors" class="section level3">
+<h3>Editors</h3>
+<ul>
+<li><a href="http://geojson.io/">geojson.io</a>: Web-based GeoJSON editor that supports many filetype.</li>
+<li><a href="http://mapstarter.com/">mapstarter</a>: Helps generate SVG, images, and code from GeoJSON.</li>
+</ul>
+</div>
+<div id="validation" class="section level3">
+<h3>Validation</h3>
+<ul>
+<li><a href="https://github.com/mapbox/geojsonhint">geojsonhint</a>: A linter for finding errors in your GeoJSON files.</li>
+</ul>
+</div>
+<div id="services" class="section level3">
+<h3>Services</h3>
+<ul>
+<li><a href="https://github.com/mapbox/geojsonio-cli">geojsonio-cli</a>: Send GeoJSON features to <a href="http://geojson.io/">geojson.io</a> from the command line.</li>
+<li><a href="https://github.com/mapbox/geojsonio-extension">geojsonio-extension</a>: Chrome extension for editing Github files in geojson.io.</li>
+<li><a href="http://geojsonlint.com/">geojsonlint</a>: REST interface for GeoJSON validation.</li>
+<li><a href="http://mapshaper.org/">mapshaper</a>: Simple interface for simplification and conversion of GeoJSON and TopoJSON.</li>
+</ul>
+</div>
+<div id="conversion" class="section level3">
+<h3>Conversion</h3>
+<ul>
+<li><a href="https://github.com/mapbox/csv2geojson">csv2geojson</a>: Convert CSV to GeoJSON.</li>
+<li><a href="https://github.com/mapbox/geojson-mapnikify">geojson-mapnikify</a>: Transform GeoJSON objects into Mapnik XML stylesheets.</li>
+<li><a href="https://github.com/mapbox/geojson-vt">geojson-vt</a>: Slice GeoJSON into vector tiles on the fly in the browser.</li>
+<li><a href="https://github.com/mapbox/geojson2dsv">geojson2dsv</a>: Convert GeoJSON to CSV and TSV.</li>
+<li><a href="https://github.com/maxogden/geojson2rtree">geojson2rtree</a>: Generate a static rtree (using terraformer) from a set of GeoJSON features.</li>
+<li><a href="http://www.gdal.org/ogr2ogr.html">ogr2ogr</a>: Convert anything spatial to anything spatial.</li>
+<li><a href="https://github.com/mapbox/minjur">minjur</a>: Converts OpenStreetMap data to GeoJSON.</li>
+<li><a href="https://github.com/substack/shp2json">shp2json</a>: Convert shapefile to GeoJSON.</li>
+<li><a href="https://github.com/mapbox/togeojson">togeojson</a>: Convert GPX &amp; KML to GeoJSON.</li>
+<li><a href="https://github.com/mapbox/tokml">tokml</a>: Convert GeoJSON to KML.</li>
+<li><a href="https://github.com/mbostock/topojson">topojson</a>: Convert GeoJSON to and from TopoJSON; join data from CSV.</li>
+<li><a href="https://github.com/developmentseed/vt-geojson">vt-geojson</a>: Extract GeoJSON from Mapbox vector tiles.</li>
+<li><a href="https://github.com/mapbox/wellknown">wellknown</a>: Convert WKT to GeoJSON.</li>
+<li><a href="https://github.com/tyrasd/osmtogeojson">osmtogeojson</a>: Convert OpenStreetMap data to GeoJSON.</li>
+<li><a href="https://github.com/project-open-data/esri2open">esri2open</a>: Convert proprietary Esri formats to GeoJSON.</li>
+<li><a href="https://github.com/tmcw/gtfs2geojson">gtfs2geojson</a>: Convert GTFS transit data to GeoJSON.</li>
+<li><a href="https://github.com/koopjs/geoxform">geoxform</a>: Convert any size stream of GeoJSON into CSV, shapefile, or KML.</li>
+</ul>
+</div>
+<div id="data" class="section level3">
+<h3>Data</h3>
+<ul>
+<li><a href="http://www.naturalearthdata.com/">natural earth</a>: country, province, and geographical data.</li>
+<li><a href="https://github.com/mbostock/world-atlas">world-atlas</a>: customizable simplified versions of natural earth data.</li>
+<li><a href="https://github.com/tmcw/openflights-geojson">openflights-geojson</a>: <a href="http://openflights.org/">openflights</a> airports &amp; airplane routes.</li>
+<li><a href="https://github.com/mbostock/us-atlas">us-atlas</a>: geojson &amp; topojson for United States features.</li>
+<li><a href="https://mapzen.com/data/metro-extracts">metro-extracts</a>: regional OpenStreetMap data as GeoJSON.</li>
+<li><a href="https://github.com/straup/whereonearth-airport">whereonearth-airport</a>: outlines of every airport.</li>
+<li><a href="https://github.com/straup/whereonearth-building/">whereonearth-building</a>: building outlines.</li>
+<li><a href="https://github.com/search?q=user%3Astraup+whereonearth">whereonearth repos</a>: other features output from GeoPlanet by Aaron Straup Cope.</li>
+<li><a href="https://github.com/straup/tgn-geojson">tgn-geojson</a>: The Getty Thesaurus of Geographic Names (TGN) As GeoJSON.</li>
+<li><a href="https://github.com/taketime/strava-to-geojsonio">strava-to-geojsonio</a>: export runs &amp; rides from Strava to GeoJSON.</li>
+<li><a href="https://github.com/tmcw/strava-geojson">strava-geojson</a>: export <em>all</em> strava data to geojson, in node &amp; <a href="http://www.macwright.org/strava-geojson/">on the web</a></li>
+</ul>
+</div>
+<div id="credit" class="section level1">
+<h1>Credit</h1>
+<p>Based off Tom MacWright’s <a href="https://github.com/tmcw/awesome-geojson">awesome geojson</a>.</p>
+</div>
+
+<footer>
+  <p>
+    
+    <small>
+Made with <span style="color: red; font-size: 8pt;"><i class="fa fa-heart" aria-hidden="true"></i></span> and <span style="color: brown; font-size: 8pt;"><i class="fa fa-coffee" aria-hidden="true"></i></span> in California.
+      
+      <br/>
+      These workshops materials are &copy; 2016 <a href="http://jasonheppler.org">Jason Heppler</a>. Licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+      <br>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    </small>
+  </p>
+</footer>
+
+  </div>
+</div>
+
+<script>
+  $.each($("img"), function(i, v) {
+    var img = $(v);
+    img.wrap("<a href='" + img.attr("src") + "'>");
+  })
+</script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

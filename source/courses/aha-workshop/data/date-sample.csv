@@ -1,0 +1,14 @@
+Source,Target,Date start,Date end,Relationship
+Andy,Jon,2012-01-01,2015-01-01,Friend
+Andy,Robert,2013-01-01,2015-01-01,Colleague
+Robert,Jason,2013-01-01,2015-01-01,Competitor
+Jason,Rebecca,2009-01-01,2011-01-01,Competitor
+Robert,Rebecca,2008-01-01,2009-01-01,Friend
+Robert,Jon,2008-01-01,2015-01-01,Colleage
+Elaine,Leisl,2014-01-01,2015-01-01,Colleague
+Leisl,Mike,2010-01-01,2013-01-01,Friend
+Mike,Kent,2011-01-01,2015-01-01,Competitor
+Leisl,Kent,2011-01-01,2015-01-01,Friend
+Leisl,Mike,2008-01-01,2009-01-01,Friend
+Leisl,Robert,2009-01-01,2014-01-01,Colleague
+Leisl,Jason,2008-01-01,2015-01-01,Competitor

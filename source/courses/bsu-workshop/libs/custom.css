@@ -1,0 +1,97 @@
+body {
+  font-family: "Open Sans", "Lato", "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-top: 20px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Fira Sans", "Lato", "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+strong {
+  padding: .2rem .4rem;
+  display: inline-block;
+  line-height: 1;
+  border-radius: 2px;
+  background-color: #FAF4C1;
+}
+
+.navbar-inverse {
+  background-color: #4c4c4c;
+  border-color: #333;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+footer {
+  border-top: 1px solid #CCC;
+  margin-top: 60px;
+  margin-bottom: 48px;
+  opacity: 0.75;
+}
+
+.content-body>:first-child, .content-body>:first-child>:first-child {
+  margin-top: 0 !important;
+}
+
+p code {
+  white-space: inherit;
+}
+
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  background-color: #4c4c4c;
+  border-color: #4c4c4c;
+}
+
+a {
+  color: #2375c1;
+}
+
+a:hover {
+  color: #205f9d;
+}
+
+.figure, iframe, .html-widget-static-bound {
+  margin: 4rem 0 4rem 0;
+}
+
+.figure img, iframe, .html-widget-static-bound {
+  border: 1px solid gray;
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+
+.caption {
+  margin: 0.1rem 4rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.caption>em {
+  font-style: normal;
+}
+
+p a, li a {
+  text-decoration: underline;
+}
+
+.footnoteRef, nav a {
+  text-decoration: none;
+}
+
+blockquote {
+  margin: 2em 1em 2em 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-style: italic;
+  border-left: 0.25em solid #ffd43b;
+  color: #333;
+}
+
+#htmlwidget-4686 .leaflet-tile {
+  border: 1px solid black;
+}

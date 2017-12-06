@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Palladio</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<!-- begin in_header.html -->
+<meta name="description" content="Workshop materials for the Bimson workshop at CSU">
+<meta name="author" content="Jason Heppler">
+<link rel="shortcut icon" href="img/favicon.png">
+
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+<script>
+
+</script>
+<!-- end in_header.html -->
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="libs/custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="fluid-row">
+  <div class="col-sm-12">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="./">Carl Bimson Workshop</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://jasonheppler.org">Jason Heppler</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="fluid-row">
+  <div class="col-sm-3">
+    <div class="list-group">
+      <a class="list-group-item" href="./">Home</a>
+      <a class="list-group-item" href="introduction.html">Introduction</a>
+      <a class="list-group-item" href="resources.html">Resources</a>
+      <h5>Digital Mapmaking</h5>
+      <a class="list-group-item" href="map-literacy.html">Spatial Literacy</a>
+      <a class="list-group-item" href="cartodb.html">CartoDB</a>
+      <a class="list-group-item" href="storymap.html">StoryMap.js</a>
+      <h5>Network Analysis</h5>
+      <a class="list-group-item" href="network-literacy.html">Network Literacy</a>
+      <a class="list-group-item" href="palladio.html">Palladio</a>
+      <a class="list-group-item" href="gephi.html">Gephi</a>
+    </div>
+    <script>
+      // manage active state of toc based on current page
+    var href = window.location.pathname;
+    href = href.substr(href.lastIndexOf('/') + 1);
+    if (href === "" || href === "index.html")
+      href = "./";
+    $('a.list-group-item[href="' + href + '"]').addClass('active');
+    </script>
+  </div>
+  <div class="col-sm-9 content-body">
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Palladio</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#preparing-and-loading-your-data">Preparing and loading your data</a></li>
+<li><a href="#lets-make-a-network">Let’s make a network</a></li>
+<li><a href="#next-steps">Next steps</a></li>
+</ul>
+</div>
+
+<p>Palladio is an <a href="http://www.neh.gov/divisions/odh/grant-news/announcing-6-digital-humanities-implementation-grant-awards-july-2013">NEH Implementation grant</a> funded project developed by <a href="http://hdlab.stanford.edu/">Humanities+Design</a> that seeks to design graphical interfaces for humanistic inquiry. Palladio is the result of realizing that humanities scholars needed to play a role in designing tools for research. The platform offers various ways to visualize data, including maps, networks, tables, and galleries. Among the more powerful features includes the ability to filter the data based on facets, allowing you to visualize your data based on different criteria or at different points in time.</p>
+<div id="preparing-and-loading-your-data" class="section level2">
+<h2>Preparing and loading your data</h2>
+<p>The easiest way to get data into Palladio is to export a <a href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> of a spreadsheet. CSV’s can be copied and pasted into the input pane, or drag the file onto the pane for Palladio to import.</p>
+<div class="figure">
+<img src="http://hdlab.stanford.edu/palladio/assets/resources/CCA953052BB0485A2C6F75A3D36E6A8E.png" alt="Loading data in Palladio." />
+<p class="caption">Loading data in Palladio.</p>
+</div>
+<div class="figure">
+<img src="http://hdlab.stanford.edu/palladio/assets/resources/9D91FDA048353B3B13A2C97B1EE3EAD0.png" alt="Data dropped into the input pane of Palladio." />
+<p class="caption">Data dropped into the input pane of Palladio.</p>
+</div>
+<p>Once youve loaded the data into Palladio, it will show you the dimensions of your data as well as flag any potential issues with your data. These flags may include special characters that appear in text (like hyphens or commas), potential problems with coordinates, or issues with dates.</p>
+<div class="figure">
+<img src="http://hdlab.stanford.edu/palladio/assets/resources/5157C75F563570400BAA24D02BD3130E.png" alt="Data review in Palladio." />
+<p class="caption">Data review in Palladio.</p>
+</div>
+<p>You can select a particular dimension to reveal the data.</p>
+<div class="figure">
+<img src="http://hdlab.stanford.edu/palladio/assets/resources/C2FB570D1D5A1E9CA00BBE9B932E4D86.png" alt="Data containing multiple values in one cell." />
+<p class="caption">Data containing multiple values in one cell.</p>
+</div>
+<p>Once you’ve reviewed your data, you may want to download the Palladio project for future use. Palladio projects are not persistent, so you will need to keep a copy of the work you’ve done so you can load up the visualizations and data at any time.</p>
+</div>
+<div id="lets-make-a-network" class="section level2">
+<h2>Let’s make a network</h2>
+<p>Palladio makes it easy to create bivariate network graphs to illustrate relationships between two dimensions. By default, Palladio creates a force-directed layout. Palladio, however, is currently limited to this layout. The platform has no way of doing computational or algorithmic analysis of your graphs; you will need a more powerful program like Gephi or igraph to do that work.</p>
+<p>Any dimension of the data can be used as the source and target of a graph.</p>
+<div class="figure">
+<img src="img/palladio-dimensions.png" alt="Dimensions in Palladio." />
+<p class="caption">Dimensions in Palladio.</p>
+</div>
+<p>For this data, if we graph the “position” of each “name,” we get a graph like the one below.</p>
+<div class="figure">
+<img src="img/palladio-simple.png" alt="Simple bivariate network graph." />
+<p class="caption">Simple bivariate network graph.</p>
+</div>
+<p>We can also size the nodes based on the number of connections.</p>
+<div class="figure">
+<img src="img/palladio-node-size.png" alt="Sizing nodes based on their degree." />
+<p class="caption">Sizing nodes based on their degree.</p>
+</div>
+<p>You can also choose to drag points of the network to different areas of your screen to lay out the network that might be more meaningful to you.</p>
+<div class="figure">
+<img src="img/palladio-drag.gif" alt="Dragging nodes in Palladio." />
+<p class="caption">Dragging nodes in Palladio.</p>
+</div>
+<p>Palladio comes with a powerful tool called facet filters, which allow you to change your data on the fly and create new visualizations. If we want to examine this network but only see females, we can select “female” from our “Gender” dimension and change how the network looks.</p>
+<div class="figure">
+<img src="img/palladio-facets.png" alt="Facet filters in Palladio." />
+<p class="caption">Facet filters in Palladio.</p>
+</div>
+<p>We can also apply timelines or timespans to view changes over time.</p>
+<div class="figure">
+<img src="img/palladio-timespan.png" alt="Using Timespan in Palladio." />
+<p class="caption">Using Timespan in Palladio.</p>
+</div>
+</div>
+<div id="next-steps" class="section level2">
+<h2>Next steps</h2>
+<p>Working individually or in groups, play around with Palladio and get a feel for how it ingests data, the types of data review you can do, and the sorts of visualizations you can create. Feel free to use your own data, or the sample data provided by Palladio. Create a few different visualizations. How does the facet filtering help you see different things in the data? What visualizations work best for the data you’re working with? What limitations do you run into with Palladio?</p>
+</div>
+
+<footer>
+  <p>
+    
+    <small>
+Made with <span style="color: red; font-size: 8pt;"><i class="fa fa-heart" aria-hidden="true"></i></span> and <span style="color: brown; font-size: 8pt;"><i class="fa fa-coffee" aria-hidden="true"></i></span> in California.
+      
+      <br/>
+      These workshops materials are &copy; 2016 <a href="http://jasonheppler.org">Jason Heppler</a>. Licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+      <br>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    </small>
+  </p>
+</footer>
+
+  </div>
+</div>
+
+<script>
+  $.each($("img"), function(i, v) {
+    var img = $(v);
+    img.wrap("<a href='" + img.attr("src") + "'>");
+  })
+</script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Resources for Network Analysis</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<!-- begin in_header.html -->
+<meta name="description" content="Workshop materials for the AHA Network Analysis Workshop">
+<meta name="author" content="Jason Heppler">
+<link rel="shortcut icon" href="img/favicon.png">
+
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Open+Sans:300,400" rel="stylesheet">
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+<script>
+
+</script>
+<!-- end in_header.html -->
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="libs/custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="fluid-row">
+  <div class="col-sm-12">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a style="font-family: 'Fira Sans'" class="navbar-brand" href="./">Ball State University Network Analysis Workshop</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://jasonheppler.org">Jason Heppler</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="fluid-row">
+  <div class="col-sm-3">
+    <div class="list-group">
+      <a class="list-group-item" href="./">Home</a>
+      <a class="list-group-item" href="introduction.html">Introduction</a>
+      <a class="list-group-item" href="resources.html">Resources</a>
+      <h5>Network Analysis</h5>
+      <a class="list-group-item" href="network-literacy.html">Network Literacy</a>
+      <a class="list-group-item" href="gephi.html">Introduction to Gephi</a>
+      <a class="list-group-item" href="advanced-gephi.html">Advanced Gephi</a>
+      <a class="list-group-item" href="palladio.html">Alternatives</a>
+    </div>
+    <script>
+      // manage active state of toc based on current page
+    var href = window.location.pathname;
+    href = href.substr(href.lastIndexOf('/') + 1);
+    if (href === "" || href === "index.html")
+      href = "./";
+    $('a.list-group-item[href="' + href + '"]').addClass('active');
+    </script>
+  </div>
+  <div class="col-sm-9 content-body">
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Resources for Network Analysis</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#sample-data-sets">Sample data sets</a></li>
+<li><a href="#data-repositories">Data repositories</a></li>
+<li><a href="#tutorials">Tutorials</a></li>
+<li><a href="#writing-on-networks">Writing on networks</a></li>
+<li><a href="#digital-projects">Digital projects</a></li>
+</ul>
+</div>
+
+<div id="sample-data-sets" class="section level2">
+<h2>Sample data sets</h2>
+<p><a href="http://sedac.ciesin.org/data/collection/cddc">China Dimensions data collection</a></p>
+<p><a href="https://snap.stanford.edu/data/">Stanford Large Network Dataset Collection</a></p>
+<p><a href="https://github.com/gephi/gephi/wiki/Datasets">Gephi datasets</a></p>
+<p>Lincoln Mullen, <a href="https://github.com/ropensci/historydata">historydata: Datasets for Historians</a></p>
+</div>
+<div id="data-repositories" class="section level2">
+<h2>Data repositories</h2>
+<p><a href="http://datahub.io/">Datahub</a>.</p>
+<p><a href="http://www.data.gov/">Data.gov</a></p>
+<p><a href="http://data.gov.uk/">Data.gov.uk</a></p>
+</div>
+<div id="tutorials" class="section level2">
+<h2>Tutorials</h2>
+<p>Marten Düring, “<a href="http://programminghistorian.org/lessons/creating-network-diagrams-from-historical-sources">From Hermeneutics to Data to Networks: Data Extraction and Network Visualization of Historical Sources</a>”</p>
+<p>Martin Grandjean, “<a href="http://www.martingrandjean.ch/gephi-introduction/">Introduction to Network Analysis and Visualization</a>”</p>
+<p>Miriam Posner, <a href="https://github.com/miriamposner/cytoscape_tutorials">Cytoscape tutorials</a></p>
+<p>Brian Sarnacki, <a href="http://www.briansarnacki.com/gephi-tutorial/">The Complete n00b’s Guide to Gephi</a></p>
+</div>
+<div id="writing-on-networks" class="section level2">
+<h2>Writing on networks</h2>
+<p>Peter Bearman, James Moody, and Robert Faris, “Networks and History” <em>Complexity</em> 8 (2012): 61–71.</p>
+<p>Shawn Graham, Ian Milligan, and Scott Weingart, <em>The Historian’s Macroscope: Big Digital History</em> (Imperial College Press, 2016). See especially <a href="http://www.themacroscope.org/?page_id=889">Network Analysis</a> and <a href="http://www.themacroscope.org/?page_id=892">Network Analysis Fundamentals</a>.</p>
+<p>Kieran Healy, “<a href="https://kieranhealy.org/blog/archives/2013/06/09/using-metadata-to-find-paul-revere/%22">Using Metadata to Find Paul Revere</a> (June 9, 2013)</p>
+<p>Claire Lemercier, “<a href="https://hal.archives-ouvertes.fr/file/index/docid/649316/filename/lemercier_A_zg.pdf">Formal network methods in history: why and how?</a>”</p>
+<p>Manuel Lima, <em><a href="http://www.bookoftrees.info/bt/">The Book of Trees: Visualizing Branches of Knowledge</a></em> (Princeton Architectural Press, 2013).</p>
+<p>Franco Moretti, <em><a href="https://www.versobooks.com/books/261-graphs-maps-trees">Graphs, Maps, and Trees: Abstract Models for Literary History</a></em> (Verso, 2005).</p>
+<p>Scott Weingart’s series on “<a href="http://scottbot.net/tag/networks-demystified/">Networks Demystified</a>”.</p>
+<p>The <a href="http://historicalnetworkresearch.org/resources/bibliography/">Historical Network Research bibliography</a>.</p>
+</div>
+<div id="digital-projects" class="section level1">
+<h1>Digital projects</h1>
+<ul>
+<li>Micki Kaufman, <a href="http://blog.quantifyingkissinger.com/">“Everything on Paper Will Be Used Against Me”: Quantifying Kissinger</a></li>
+<li><a href="http://republicofletters.stanford.edu/">Mapping the Republic of Letters</a></li>
+<li><a href="http://viraltexts.org/">Viral Texts: Mapping Networks of Reprinting in 19th-Century Newspapers and Magazines</a></li>
+<li>Rebecca Wingo, “<a href="http://homestead.unl.edu/projects/homesteading-the-plains/">Homestead Nebraska</a>”</li>
+<li>Brian Sarnacki, “<a href="http://www.briansarnacki.com/the_corrupt_network/">The Corrupt Network</a>”</li>
+<li><a href="http://orbis.stanford.edu/">ORBIS</a></li>
+<li>Andy Wilson, <a href="https://andrewwilson84.wordpress.com/2016/03/07/mapping-the-revolution/">Mapping the Revolution</a></li>
+<li><a href="http://earlywashingtondc.org/">O San Can You See: Early Washington D.C. Law &amp; Family</a></li>
+<li><a href="https://www.macalester.edu/~abeverid/thrones.html">Network of Thrones</a></li>
+<li><a href="http://kindred.stanford.edu/">Kindred Britain</a></li>
+<li><a href="https://interactive.twitter.com/game-of-thrones/#?episode=60">How every #GameOfThrones episode has been discussed on Twitter</a></li>
+<li><a href="http://www.martingrandjean.ch/network-visualization-shakespeare/">Network visualization: mapping Shakespeare’s tragedies</a></li>
+<li><a href="https://datascopeanalytics.com/startrekviz/">Star Trek character network</a></li>
+</ul>
+</div>
+
+<footer>
+  <p>
+    
+    <small>
+Made with <span style="color: red; font-size: 8pt;"><i class="fa fa-heart" aria-hidden="true"></i></span> and <span style="color: #403B2E; font-size: 8pt;"><i class="fa fa-coffee" aria-hidden="true"></i></span> in Nebraska.
+      
+      <br/>
+      These workshops materials are &copy; 2017 <a href="http://jasonheppler.org">Jason Heppler</a>. Licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+      <br>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    </small>
+  </p>
+</footer>
+
+  </div>
+</div>
+
+<script>
+  $.each($("img"), function(i, v) {
+    var img = $(v);
+    img.wrap("<a href='" + img.attr("src") + "'>");
+  })
+</script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Advanced Gephi</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<!-- begin in_header.html -->
+<meta name="description" content="Workshop materials for the AHA Network Analysis Workshop">
+<meta name="author" content="Jason Heppler">
+<link rel="shortcut icon" href="img/favicon.png">
+
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Open+Sans:300,400" rel="stylesheet">
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+<script>
+
+</script>
+<!-- end in_header.html -->
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="libs/custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="fluid-row">
+  <div class="col-sm-12">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a style="font-family: 'Fira Sans'" class="navbar-brand" href="./">Ball State University Network Analysis Workshop</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://jasonheppler.org">Jason Heppler</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="fluid-row">
+  <div class="col-sm-3">
+    <div class="list-group">
+      <a class="list-group-item" href="./">Home</a>
+      <a class="list-group-item" href="introduction.html">Introduction</a>
+      <a class="list-group-item" href="resources.html">Resources</a>
+      <h5>Network Analysis</h5>
+      <a class="list-group-item" href="network-literacy.html">Network Literacy</a>
+      <a class="list-group-item" href="gephi.html">Introduction to Gephi</a>
+      <a class="list-group-item" href="advanced-gephi.html">Advanced Gephi</a>
+      <a class="list-group-item" href="palladio.html">Alternatives</a>
+    </div>
+    <script>
+      // manage active state of toc based on current page
+    var href = window.location.pathname;
+    href = href.substr(href.lastIndexOf('/') + 1);
+    if (href === "" || href === "index.html")
+      href = "./";
+    $('a.list-group-item[href="' + href + '"]').addClass('active');
+    </script>
+  </div>
+  <div class="col-sm-9 content-body">
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Advanced Gephi</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#spatial-networks">Spatial Networks</a></li>
+<li><a href="#dynamic-networks">Dynamic Networks</a><ul>
+<li><a href="#generating-a-dynamic-network">Generating a Dynamic Network</a></li>
+<li><a href="#gephi-and-dynamic-data">Gephi and Dynamic Data</a></li>
+</ul></li>
+<li><a href="#next-steps">Next steps</a></li>
+</ul>
+</div>
+
+<div id="spatial-networks" class="section level2">
+<h2>Spatial Networks</h2>
+<p>To make spatial networks, Gephi needs the <strong>GeoLayout</strong> plugin and your node attributes must include columns for latitude and longitude coordinates.</p>
+<p>Download these datasets, courtesey of Martin Grandjean: <a href="data/Nodes1.csv">nodes table</a> and <a href="data/Edges1.csv">edges table</a>. Note that Grandjean’s data is separated by a semicolon. You’ll need to select the semicolon as the column separator in the CSV during import. <strong>Be sure to import the nodes table first.</strong></p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-spatial-nodes.png" alt="Importing nodes." />
+<p class="caption">Importing nodes.</p>
+</div>
+<p>On the next screen, we need to tell Gephi that our latitude and longitude columns are <strong>double</strong>, not <strong>integer</strong>.</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-spatial-double.png" alt="Selecting the double attribute for latitude and longitude coordinates." />
+<p class="caption">Selecting the double attribute for latitude and longitude coordinates.</p>
+</div>
+<p>Once the nodes are imported, import the edges table.</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-spatial-import-edges.png" alt="Importing edges." />
+<p class="caption">Importing edges.</p>
+</div>
+<p>On the next screen, be sure to uncheck “Create missing nodes.”</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-spatial-missing.png" alt="Do not check Create missing nodes." />
+<p class="caption">Do not check “Create missing nodes.”</p>
+</div>
+</div>
+<div id="dynamic-networks" class="section level2">
+<h2>Dynamic Networks</h2>
+<p style="font-size: 1.5em; text-align: center; color: #c0392b;">
+The dynamic networks feature may be unstable, especially for very large networks. Save your work often.
+</p>
+<p>As historians, our networks may not always exist as a consistent entity. They may, in other words, change over time, and we may want to explore how a network changes. Gephi provides a way for exploring a network’s timeline.</p>
+<p>Note that we can refer to two types of dynamics when it comes to networks:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Dynamic topology</strong> refers to nodes and edges that can change position, or appear and/or disappear through time.</li>
+<li><strong>Dynamic attributes</strong> refers to nodes, edges, and labels that might change in size and color through time, reflecting changes in the value of attributes in the data.</li>
+</ol>
+<div id="generating-a-dynamic-network" class="section level3">
+<h3>Generating a Dynamic Network</h3>
+<p>We’re going to use Gephi’s built-in dynamic network generator to play around with this feature. Under <code>File</code>, select <code>Generate</code>, and select <code>Dynamic Graph Example...</code>. Once the network loads, you’ll see a new toolbar along the bottom of Gephi to allow you to enable the timeline. Select that button and you’ll be presented with the timeline with the entire timeframe selected by default.</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-dynamic-generate.png" alt="Generating a random dynamic network." />
+<p class="caption">Generating a random dynamic network.</p>
+</div>
+<p>Our default timeline selects the full span of time available in the dataset.</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-dynamic-timeline.png" alt="The default timeline." />
+<p class="caption">The default timeline.</p>
+</div>
+<p>We can narrow our selection to a span of time we’d like to investigate.</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-dynamic-timeline-selection.png" alt="Selecting a span of time by dragging the edges of the timeline to the area we want to examine." />
+<p class="caption">Selecting a span of time by dragging the edges of the timeline to the area we want to examine.</p>
+</div>
+<p>You can then animate your network, either by clicking and dragging the selection box or by clicking the Play button to the left of the timeline.</p>
+<p>While this basic animation is great, it gets better: we can run layouts while the timeline is running; perform ranking operations to change color, size, edges, or labels according to changes in attributes; and we can turn on filters while the timeline is running. For these to work in your network, you will need to toggle the Auto Apply appearance button to allow nodes to change dynamically in size, color, or position.</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-auto-toggle.png" alt="The Auto Apply button for dynamic networks." />
+<p class="caption">The Auto Apply button for dynamic networks.</p>
+</div>
+</div>
+<div id="gephi-and-dynamic-data" class="section level3">
+<h3>Gephi and Dynamic Data</h3>
+<p>Gephi offers two formats for dynamic data: <em>timestamp</em> and <em>interval</em>.</p>
+<div id="timestamps" class="section level4">
+<h4>Timestamps</h4>
+<p><em>Timestamps</em> allow you to define exact times in a node or edge. In your data, time stamps are formatted as:</p>
+<pre><code>&lt;[time1, time2, time4]&gt;</code></pre>
+<p>This would indicate to the network that network elements exist at times 1, 2, and 4.</p>
+<p>Timestamped data can also contain values to indicate the attribute of a node or edge at a given moment. They can be formatted as:</p>
+<pre><code>&lt;[time1, value1]; [time2, value2]; [time4, value4]&gt;</code></pre>
+<p>For each case above, each <em>time</em> element had a particular value at that moment.</p>
+</div>
+<div id="interval" class="section level4">
+<h4>Interval</h4>
+<p><em>Interval</em> allows you to identify elements that exists over periods of time. They are indicated as:</p>
+<pre><code>&lt;[time1, time3, value1]; [time4, time9, value2]&gt;</code></pre>
+<p>The above indicates that an element had a <code>value</code> from time 1 through 3, and another value from time 4 through 9. If we used a paretheses instead of a square closing bracket, we can indicate an open interval (for example, <code>[time1, time5)</code> means the interval goes up to but does not include <em>time5</em>).</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-timeline-time-example.png" alt="Time interval data in Gephi." />
+<p class="caption">Time interval data in Gephi.</p>
+</div>
+<p>At the moment, there is no way to export the animation of the network. If you need an animation to share, you’ll have to capture a screen recording of the network that you can then share.</p>
+</div>
+</div>
+</div>
+<div id="next-steps" class="section level2">
+<h2>Next steps</h2>
+<p>Individually or in groups, create your own network visualization.</p>
+<ol style="list-style-type: decimal">
+<li>Select another sample dataset from Gephi, <a href="https://github.com/gephi/gephi/wiki/Datasets">download one of their samples</a>, or load in your own network data.</li>
+<li>Try running some of the network statistics on the network. Select a few different ones, examine what they’re doing to the network data and what the results are inferring. What do these various measures tell you about your network?</li>
+<li>Once you have some network measures ready, try adjusting the visuals in the network—node size and color, edge colors and weights, layouts, and so on.</li>
+<li>Output your network as a PDF or PNG. We’ll come back together, time permitting, to talk about your results.</li>
+<li>Examine some of the <a href="https://marketplace.gephi.org/plugins/">plugins for Gephi</a>. You can, for example, embed latitude and longitude data for nodes and <a href="https://marketplace.gephi.org/plugin/geolayout/">geographically layout the network</a>. There are <a href="https://marketplace.gephi.org/plugin_categories/plugin-layout/">many possible layout options</a>.</li>
+</ol>
+</div>
+
+<footer>
+  <p>
+    
+    <small>
+Made with <span style="color: red; font-size: 8pt;"><i class="fa fa-heart" aria-hidden="true"></i></span> and <span style="color: #403B2E; font-size: 8pt;"><i class="fa fa-coffee" aria-hidden="true"></i></span> in Nebraska.
+      
+      <br/>
+      These workshops materials are &copy; 2017 <a href="http://jasonheppler.org">Jason Heppler</a>. Licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+      <br>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    </small>
+  </p>
+</footer>
+
+  </div>
+</div>
+
+<script>
+  $.each($("img"), function(i, v) {
+    var img = $(v);
+    img.wrap("<a href='" + img.attr("src") + "'>");
+  })
+</script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

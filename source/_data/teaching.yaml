@@ -12,7 +12,7 @@ workshops:
     location: Ball State University
     datestart: 2017-05-07 00:00:00 -0800
     dateend: 
-    url: https://jasonheppler.org/projects/bsu-workshop/
+    url: https://jasonheppler.org/courses/bsu-workshop/
     semester: Spring 2017
     description: This workshop emphasizes hands-on learning of working with network data and visualization. Historians working out the complex documentary relationships between people and institutions can often find surprising, or previously unexplored, connections by using network analysis and its visual representations. This workshop will help participants familiarize themselves with basic network-analysis vocabulary as well as using Gephi for network analysis and visualization.
     kind: workshop
@@ -21,7 +21,7 @@ workshops:
     location: American Historical Association
     datestart: 2017-01-06 00:00:00 -0800
     dateend:
-    url: http://jasonheppler.org/projects/aha-workshop/
+    url: https://jasonheppler.org/courses/aha-workshop/
     semester: Spring 2017
     description: This workshop emphasizes hands-on learning of working with network data and visualization. Historians working out the complex documentary relationships between people and institutions can often find surprising, or previously unexplored, connections by using network analysis and its visual representations. This workshop will help participants familiarize themselves with basic network-analysis vocabulary as well as using Gephi for network analysis and visualization.
     kind: workshop
@@ -30,7 +30,7 @@ workshops:
     location: Carl Bimson Humanities Seminar, Colorado State University
     datestart: 2016-06-01 00:00:00 -0800
     dateend:
-    url: http://jasonheppler.org/projects/csu-workshop/
+    url: https://jasonheppler.org/courses/csu-workshop/
     semester: Summer 2016
     description: This seminar will emphasize the hands-on learning of working with geospatial and network data, with special attention paid to its application to the classroom. The workshop seeks to prep teachers to instruct their students in various approaches to digital humanities in their classes.
     kind: workshop
@@ -49,7 +49,7 @@ classes:
     location: University of Nebraska at Omaha
     datestart: 2018-01-06 00:00:00 -0800
     dateend: 2018-05-14 00:00:00 -0800
-    url: http://jasonheppler.org/courses/dh.2018s/
+    url: https://jasonheppler.org/courses/dh.2018s/
     semester: Spring 2018
     description: This course confronts the current and potential influence of digital media on the theory and practice of history. We will focus on resources enabling new forms of scholarship, looking at tools for visualization and text analysis for generating historical interpretations, and explore alternative forms of publishing, design, and research. The course covers a range of readings along with a critical engagement with tools and resources. Students will also contribute to a digital spatial exhibit on the history of Omaha.
     kind: course
@@ -60,7 +60,7 @@ classes:
     dateend: 2016-12-17 00:00:00 -0800
     semester: Fall 2016
     description: This course confronts the current and potential influence of digital media on the theory and practice of history. We will focus on resources enabling new forms of scholarship, looking at tools for visualization and text analysis for generating historical interpretations, and explore alternative forms of publishing, design, and research. The course covers a range of readings along with a critical engagement with tools and resources. Students will also contribute to a digital spatial exhibit on the history of Silicon Valley.
-    url: http://jasonheppler.org/courses/dph.2016/
+    url: https://jasonheppler.org/courses/dph.2016/
     kind: course
 
   - class: "R, Interactive Graphics, and Data Visualization"
@@ -68,7 +68,7 @@ classes:
     datestart: 2016-06-01 00:00:00 -0800
     dateend: 2016-06-07 00:00:00 -0800
     semester: Summer 2016
-    url: http://lincolnmullen.com/files/Heppler_Mullen-DHSI.pdf
+    url: https://lincolnmullen.com/files/Heppler_Mullen-DHSI.pdf
     description: The visualization of historical and literary data has become a common practice in digital humanities, drawing on older traditions of visualizing in these disciplines. A variety of out-of-the-box tools exist for easily jumping in to data and information visualization, but when we use these tools we run the risk of research questions being wedged into a tool rather than the tool fitting the research. This course introduces students to humanities visualizations, using a programming language that let researchers prioritize their questions over the requirements of ready-made tools.
     kind: course
 

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Introduction to Gephi</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<!-- begin in_header.html -->
+<meta name="description" content="Workshop materials for the AHA Network Analysis Workshop">
+<meta name="author" content="Jason Heppler">
+<link rel="shortcut icon" href="img/favicon.png">
+
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Open+Sans:300,400" rel="stylesheet">
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+<script>
+
+</script>
+<!-- end in_header.html -->
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="libs/custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="fluid-row">
+  <div class="col-sm-12">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a style="font-family: 'Fira Sans'" class="navbar-brand" href="./">Ball State University Network Analysis Workshop</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://jasonheppler.org">Jason Heppler</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="fluid-row">
+  <div class="col-sm-3">
+    <div class="list-group">
+      <a class="list-group-item" href="./">Home</a>
+      <a class="list-group-item" href="introduction.html">Introduction</a>
+      <a class="list-group-item" href="resources.html">Resources</a>
+      <h5>Network Analysis</h5>
+      <a class="list-group-item" href="network-literacy.html">Network Literacy</a>
+      <a class="list-group-item" href="gephi.html">Introduction to Gephi</a>
+      <a class="list-group-item" href="advanced-gephi.html">Advanced Gephi</a>
+      <a class="list-group-item" href="palladio.html">Alternatives</a>
+    </div>
+    <script>
+      // manage active state of toc based on current page
+    var href = window.location.pathname;
+    href = href.substr(href.lastIndexOf('/') + 1);
+    if (href === "" || href === "index.html")
+      href = "./";
+    $('a.list-group-item[href="' + href + '"]').addClass('active');
+    </script>
+  </div>
+  <div class="col-sm-9 content-body">
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Introduction to Gephi</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#getting-started">Getting Started</a><ul>
+<li><a href="#plugins">Plugins</a></li>
+</ul></li>
+<li><a href="#preparing-and-loading-your-data">Preparing and loading your data</a></li>
+<li><a href="#lets-make-a-network">Let’s make a network</a></li>
+<li><a href="#next-steps">Next steps</a></li>
+</ul>
+</div>
+
+<div id="getting-started" class="section level2">
+<h2>Getting Started</h2>
+<p>Download the <a href="https://gephi.org/">latest version</a> of Gephi. Gephi runs on an older version of Java, so you’ll need to download and install a previous version of the language (Java 6). You’ll find more information about this issue on the <a href="https://forum.gephi.org/viewforum.php?f=3">Gephi forums</a> or <a href="https://www.facebook.com/groups/gephi/">Gephi Facebook group</a> (if you’re running into problems on a Mac, see <a href="https://medium.com/coder-snorts/gephi-is-broken-on-mac-os-97fbaef4305e">here</a>.)</p>
+<div id="plugins" class="section level3">
+<h3>Plugins</h3>
+<p>We’ll also need a few extra plugins to extend what we can do with Gephi: <strong>GeoLayout</strong>, <strong>Maps of Countries</strong>, <strong>Noverlap</strong>, and <strong>Sigma</strong>. You can search for these in the Plugins menu. You’ll be prompted to restart Gephi after installing the plugins.</p>
+</div>
+</div>
+<div id="preparing-and-loading-your-data" class="section level2">
+<h2>Preparing and loading your data</h2>
+<p>We can set up a very basic network by defining a <code>source</code> / <code>target</code> relationship in an edges table. In this case, we might be interested in the relationship among people.</p>
+<table>
+<caption>Example edges table.</caption>
+<thead>
+<tr class="header">
+<th>source</th>
+<th>target</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Jason</td>
+<td>Robert</td>
+</tr>
+<tr class="even">
+<td>Jason</td>
+<td>Andy</td>
+</tr>
+<tr class="odd">
+<td>Robert</td>
+<td>Andy</td>
+</tr>
+<tr class="even">
+<td>Andy</td>
+<td>Josh</td>
+</tr>
+<tr class="odd">
+<td>Jason</td>
+<td>Doug</td>
+</tr>
+<tr class="even">
+<td>Doug</td>
+<td>Rebecca</td>
+</tr>
+<tr class="odd">
+<td>Rebecca</td>
+<td>Jason</td>
+</tr>
+<tr class="even">
+<td>Rebecca</td>
+<td>Elaine</td>
+</tr>
+<tr class="odd">
+<td>Elaine</td>
+<td>Mike</td>
+</tr>
+<tr class="even">
+<td>Leisl</td>
+<td>Mike</td>
+</tr>
+</tbody>
+</table>
+<p>This table sets up our relationships by defining the <strong>edges</strong> in our network. The nodes are generated automatically based on the label of the source and/or target. If we plotted this network, we would end up with something like the below graph.</p>
+<p><img src="gephi_files/figure-html/unnamed-chunk-1-1.png" /><!-- --></p>
+<p>Let’s take a look at the <em>Les Miserables</em> sample data in Gephi.</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-starting.png" alt="Gephi’s blank canvas." />
+<p class="caption">Gephi’s blank canvas.</p>
+</div>
+<p>Open Gephi and select the <code>Les Miserables.gexf</code> sample. Once the data is loaded, click the “Data Laboratory” tab on the top of the window to examine the data behind this network. There are two possible views. The first is the “Nodes” tab that lets us see the nodes of the data, in this case set up with an <code>id</code>, <code>label</code>, and <code>modularity class</code>.</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-data-nodes.png" alt="Nodes table in Gephi." />
+<p class="caption">Nodes table in Gephi.</p>
+</div>
+<p>Our edges table defines the <code>source</code> and <code>target</code> relationship for our nodes based on the node’s <code>id</code>. The edges table also defines whether an edge is directed or undirected, and may include some statistics (in this case, <code>weight</code>).</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-data-edges.png" alt="Edges table in Gephi." />
+<p class="caption">Edges table in Gephi.</p>
+</div>
+</div>
+<div id="lets-make-a-network" class="section level2">
+<h2>Let’s make a network</h2>
+<p>Click on the “Overview” tab along the top of the window to see the network (yours may look different from the below).</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-starting-network.png" alt="The default view of a network." />
+<p class="caption">The default view of a network.</p>
+</div>
+<p>Generally when you open your data in Gephi, you will see something like the above. We want to give this network something more meaningful for us to look at, so we’ll do a few things to change the layout and include some network statistics to examine various aspects of the network. Let’s start by adjusting the layout. In the lower left corner you’ll see the “Layout” pane. From the dropdown, select <code>Force Atlas 2</code> and click “Run.” You can adjust various aspects of the layout algorithm, including the strength of the gravity, preventing node overlap, dissuading hubs, and so on. Play around with these options until you have the layout you like, then click “Stop.”</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-layout.png" alt="Adjusting the layout with force atlas." />
+<p class="caption">Adjusting the layout with force atlas.</p>
+</div>
+<p>Now that our layout has given us something a little easier to look at, let’s do some network statistics. Let’s say we want to know which node in this character interaction network is the most important. Thinking back on our <a href="network-literacy.html">network literacy</a>, one measure might be centrality. Let’s use Gephi’s <a href="https://en.wikipedia.org/wiki/Centrality">Eigenvector centrality</a> measure to find important nodes. Along the righthand side, you’ll find the network algorithms for analyzing the relationships. Click “Run” next to Eigenvector Centrality to start the analysis.</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-eigenvector.png" alt="Adding new statistics like Eigenvector centrality." />
+<p class="caption">Adding new statistics like Eigenvector centrality.</p>
+</div>
+<p>Once the analysis runs, we’ll be presented with a graph of the centrality distribution. You may or may not want to include this information in a publication for explaining your methodology.</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-eigenvector-results.png" alt="Adding new statistics like Eigenvector centrality." />
+<p class="caption">Adding new statistics like Eigenvector centrality.</p>
+</div>
+<p>Once the statistics are available, we can now apply the measures to various visual aspects of the graph. Since Eigenvector is a measure of node importance, let’s use the results to change the size of the nodes based on their centrality. In the “Appearance” pane in the upperlefthand side, select the “Size” tab (the three circle icon), select “Attribute”, and from the dropdown choose “Eigenvector Centrality.” Feel free to adjust the minimum and maximum size of the circles. Otherwise, select “Apply” and our nodes will resize based on their Eigenvector measure.</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-eigenvector-visual.png" alt="Adding new statistics like Eigenvector centrality." />
+<p class="caption">Adding new statistics like Eigenvector centrality.</p>
+</div>
+<p>We can now see the more important nodes in the network based on their centrality. We can also do additional statistical measures such as <code>modularity</code> to find communities in the network. In the “Statistics” pane run “Modularity”. Once the measures are available, let’s color the nodes based on their communities. In the “Appearance” pane, select “Nodes,” select the “Color” tab (the painting palette), select “Attributes” and choose “Modularity Class” from the dropdown. You can change the color palette if you choose. Then “Apply” the changes to see the measure applied to the nodes.</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-applying-modularity.png" alt="Applying modularity for the communities." />
+<p class="caption">Applying modularity for the communities.</p>
+</div>
+<p>When your happy with your network, you can select the “Preview” pane in the upper toolbar to create a visually-pleasing output that can be saved as an SVG, PDF, or PNG. You can adjust node labels, edge sizes and appearance, and other features of the network. Select “Refresh” to see the changes.</p>
+<div class="figure">
+<img src="/Users/jheppler/Dropbox/teaching/workshop-bsu/img/gephi-visual-results.png" alt="Previewing our network in Gephi." />
+<p class="caption">Previewing our network in Gephi.</p>
+</div>
+</div>
+<div id="next-steps" class="section level2">
+<h2>Next steps</h2>
+<p>Individually or in groups, create your own network visualization.</p>
+<ol style="list-style-type: decimal">
+<li>Select another sample dataset from Gephi, <a href="https://github.com/gephi/gephi/wiki/Datasets">download one of their samples</a>, or load in your own network data.</li>
+<li>Try running some of the network statistics on the network. Select a few different ones, examine what they’re doing to the network data and what the results are inferring. What do these various measures tell you about your network?</li>
+<li>Once you have some network measures ready, try adjusting the visuals in the network—node size and color, edge colors and weights, layouts, and so on.</li>
+<li>Output your network as a PDF or PNG. We’ll come back together, time permitting, to talk about your results.</li>
+<li>Examine some of the <a href="https://marketplace.gephi.org/plugins/">plugins for Gephi</a>. You can, for example, embed latitude and longitude data for nodes and <a href="https://marketplace.gephi.org/plugin/geolayout/">geographically layout the network</a>. There are <a href="https://marketplace.gephi.org/plugin_categories/plugin-layout/">many possible layout options</a>.</li>
+</ol>
+</div>
+
+<footer>
+  <p>
+    
+    <small>
+Made with <span style="color: red; font-size: 8pt;"><i class="fa fa-heart" aria-hidden="true"></i></span> and <span style="color: #403B2E; font-size: 8pt;"><i class="fa fa-coffee" aria-hidden="true"></i></span> in Nebraska.
+      
+      <br/>
+      These workshops materials are &copy; 2017 <a href="http://jasonheppler.org">Jason Heppler</a>. Licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+      <br>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    </small>
+  </p>
+</footer>
+
+  </div>
+</div>
+
+<script>
+  $.each($("img"), function(i, v) {
+    var img = $(v);
+    img.wrap("<a href='" + img.attr("src") + "'>");
+  })
+</script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

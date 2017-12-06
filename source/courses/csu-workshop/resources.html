@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Resources for Spatial Humanities and Network Analysis</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<!-- begin in_header.html -->
+<meta name="description" content="Workshop materials for the Bimson workshop at CSU">
+<meta name="author" content="Jason Heppler">
+<link rel="shortcut icon" href="img/favicon.png">
+
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+<script>
+
+</script>
+<!-- end in_header.html -->
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="libs/custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="fluid-row">
+  <div class="col-sm-12">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="./">Carl Bimson Workshop</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://jasonheppler.org">Jason Heppler</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="fluid-row">
+  <div class="col-sm-3">
+    <div class="list-group">
+      <a class="list-group-item" href="./">Home</a>
+      <a class="list-group-item" href="introduction.html">Introduction</a>
+      <a class="list-group-item" href="resources.html">Resources</a>
+      <h5>Digital Mapmaking</h5>
+      <a class="list-group-item" href="map-literacy.html">Spatial Literacy</a>
+      <a class="list-group-item" href="cartodb.html">CartoDB</a>
+      <a class="list-group-item" href="storymap.html">StoryMap.js</a>
+      <h5>Network Analysis</h5>
+      <a class="list-group-item" href="network-literacy.html">Network Literacy</a>
+      <a class="list-group-item" href="palladio.html">Palladio</a>
+      <a class="list-group-item" href="gephi.html">Gephi</a>
+    </div>
+    <script>
+      // manage active state of toc based on current page
+    var href = window.location.pathname;
+    href = href.substr(href.lastIndexOf('/') + 1);
+    if (href === "" || href === "index.html")
+      href = "./";
+    $('a.list-group-item[href="' + href + '"]').addClass('active');
+    </script>
+  </div>
+  <div class="col-sm-9 content-body">
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Resources for Spatial Humanities and Network Analysis</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#sample-data-sets">Sample data sets</a></li>
+<li><a href="#data-repositories">Data repositories</a></li>
+<li><a href="#historical-maps">Historical maps</a></li>
+<li><a href="#tutorials">Tutorials</a></li>
+<li><a href="#writing-on-maps-and-mapmaking">Writing on maps and mapmaking</a></li>
+<li><a href="#writing-on-networks">Writing on networks</a></li>
+</ul>
+</div>
+
+<div id="sample-data-sets" class="section level2">
+<h2>Sample data sets</h2>
+<p><a href="http://www.naturalearthdata.com/">Natural Earth</a>: cultural and physical data. <a href="http://naciscdn.org/naturalearth/packages/Natural_Earth_quick_start.zip">Download Quick Start Kit</a>.</p>
+<p><a href="https://github.com/cestastanford/historical-us-city-populations">U.S. Cities and Populations</a>. U.S. Census Bureau and Erik Steiner, Spatial History Project, Center for Spatial and Textual Analysis, Stanford University.</p>
+<p>Will Thomas, et al., <a href="http://railroads.unl.edu/resources/">Railroads and the Making of Modern America</a> (University of Nebraska, Lincoln, 2011). Historical railroad information for the United States in a variety of formats.</p>
+<p>John H. Long, et al., <em><a href="http://publications.newberry.org/ahcbp/">Atlas of Historical County Boundaries</a></em>, Dr. William M. Scholl Center for American History and Culture, The Newberry Library, Chicago (2010).</p>
+<p>Jason Heppler, “<a href="http://dissertation.jasonheppler.org/data/">Machines in the Valley</a>” (2015).</p>
+<p><a href="https://www.nhgis.org/">National Historic GIS</a>. U.S. Census data available via the NHGIS data finder.</p>
+<p><a href="http://darmc.harvard.edu/icb/icb.do?keyword=k40248&amp;pageid=icb.page601659">Digital Atlas of Roman and Medieval Civilizations</a></p>
+<p><a href="https://sites.google.com/site/atlanticnetworksproject/home/a-webmap-of-atlantic-networks">The Atlantic Netowrks Projects</a></p>
+<p><a href="http://www.gapminder.org/data/">Gapminder</a>, world demographic and health data</p>
+<p><a href="http://pleiades.stoa.org/downloads">Pleiades</a></p>
+<p><a href="http://elections.lib.tufts.edu/">A New Nation Votes</a></p>
+<p><a href="http://www.slavevoyages.org/tast/database/download.faces">Trans-Atlantic Slave Trade Database</a></p>
+<p><a href="http://sedac.ciesin.org/data/collection/cddc">China Dimensions data collection</a></p>
+<p><a href="https://snap.stanford.edu/data/">Stanford Large Network Dataset Collection</a></p>
+<p><a href="https://github.com/gephi/gephi/wiki/Datasets">Gephi datasets</a></p>
+<p>Lincoln Mullen, <a href="https://github.com/ropensci/historydata">historydata: Datasets for Historians</a></p>
+</div>
+<div id="data-repositories" class="section level2">
+<h2>Data repositories</h2>
+<p><a href="http://datahub.io/">Datahub</a>.</p>
+<p><a href="http://www.data.gov/">Data.gov</a></p>
+<p><a href="http://data.gov.uk/">Data.gov.uk</a></p>
+</div>
+<div id="historical-maps" class="section level2">
+<h2>Historical maps</h2>
+<p><a href="http://www.davidrumsey.com/">David Rumsey Map Collection</a></p>
+<p>New York Public Library: <a href="http://digitalcollections.nypl.org/search/index?filters%5BphysicalLocation_mtxt_s%5D%5B%5D=Map+Division&amp;keywords=&amp;sort=dateDigitized_dt+desc">Map Division</a></p>
+<p><a href="http://ngmdb.usgs.gov/maps/Topoview/">USGS topoView</a></p>
+<p><a href="http://imagesearchnew.library.illinois.edu/cdm/search/collection/africanmaps">Maps of Africa</a></p>
+</div>
+<div id="tutorials" class="section level2">
+<h2>Tutorials</h2>
+<p><a href="http://academy.cartodb.com/">CartoDB Map Academy</a></p>
+<p><a href="http://www.qgistutorials.com/en/docs/learning_resources.html">QGIS Tutorials and Tips</a></p>
+<p>Scholar’s Lab, <a href="http://spatial.scholarslab.org/stepbystep/">Spatial Humanities Step by Step</a></p>
+<p>Fred Gibbs, <a href="http://fredgibbs.net/tutorials/making-a-map-with-qgis/">Making a Map with QGIS</a>, <a href="http://fredgibbs.net/tutorials/linking-and-styling-data-with-qgis/">Linking and Styling Data with QGIS</a>, <a href="http://fredgibbs.net/tutorials/using-historic-maps-with-qgis/">Using Historic Maps with QGIS</a>.</p>
+<p>Data Driven Journalism’s basic tutorial on “<a href="http://datadrivenjournalism.net/resources/DDJSchool_Tutorial_How_to_Create_Maps_with_QGIS">How to Create Maps with QGIS</a>.”</p>
+<p>Axis Maps, <a href="http://axismaps.github.io/thematic-cartography/">Thematic Cartography Guide</a></p>
+<p>Miriam Posner, <a href="https://github.com/miriamposner/cytoscape_tutorials">Cytoscape tutorials</a></p>
+</div>
+<div id="writing-on-maps-and-mapmaking" class="section level2">
+<h2>Writing on maps and mapmaking</h2>
+<p>David J. Bodenhamer, John Corrigan, and Trevor M. Harris, eds., <em>Deep Maps and Spatial Narratives</em>, The Spatial Humanities (Indiana University Press, 2015).</p>
+<p>David J. Bodenhamer, John Corrigan, and Trevor M. Harris, eds., <em>The Spatial Humanities: GIS and the Future of Humanities Scholarship</em>, Spatial Humanities (Indiana University Press, 2010).</p>
+<p>Tim Cresswell, <em>Geographic Thought: A Critical Introduction</em>, Critical Introductions to Geography (Wiley-Blackwell, 2013).</p>
+<p>Tim Cresswell, <em>Place: A Short Introduction</em>, Short Introductions to Geography (Blackwell Pub, 2004).</p>
+<p>Tom Elliott and Sean Gillies, “<a href="http://www.digitalhumanities.org/dhq/vol/3/1/000031/000031.html">Digital Geography and Classics</a>,” <em>Digital Humanities Quarterly</em> 3, no. 1 (2009).</p>
+<p>Ian N. Gregory and A. Geddes, eds., <em>Toward Spatial Humanities: Historical GIS and Spatial History</em>, The Spatial Humanities (Indiana University Press, 2014).</p>
+<p>Jo Guldi, “<a href="http://spatial.scholarslab.org/spatial-turn/">What is the Spatial Turn?</a>” <em>Spatial Humanities: A Project of the Institute for Enabling Geospatial Scholarship</em>.</p>
+<p>Isabel Meirelles, <em><a href="http://www.amazon.com/gp/product/1592538061/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1592538061&amp;linkCode=as2&amp;tag=thebacgla-20&amp;linkId=W7VH76N6YRQFILBO">Design for Information: An Introduction to the Histories, Theories, and Best Practices Behind Effective Information Visualizations</a></em> (Rockport Publishers, 2013).</p>
+<p>Mark Monmonier and H. J. de Blij, <em>How to Lie with Maps</em>, 2nd ed. (University Of Chicago Press, 1996).</p>
+<p>Mia Ridge, Don Lafreniere, and Scott Nesbit, “Creating Deep Maps and Spatial Narratives through Design,” <em>International Journal of Humanities and Arts Computing</em> 7, no. 1–2 (October 1, 2013): 176–89, <a href="doi:10.3366/ijhac.2013.0088" class="uri">doi:10.3366/ijhac.2013.0088</a>.</p>
+<p>Stephen Robertson, “<a href="http://quod.lib.umich.edu/d/dh/12230987.0001.001/1:8/--writing-history-in-the-digital-age?g=dculture;rgn=div1;view=fulltext;xc=1#8.2">Putting Harlem on the Map</a>,” <em>Writing History in the Digital Age</em>, edited by Jack Dougherty and Kristen Nawrotzki (University of Michigan Press, 2012).</p>
+<p>Susan Schulten, <em><a href="http://www.amazon.com/gp/product/0226740560/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0226740560&amp;linkCode=as2&amp;tag=thebacgla-20&amp;linkId=DWICCEJK742M2BMO">The Geographical Imagination in America, 1880–1950</a></em> (Chicago: University of Chicago Press, 2002).</p>
+<p>Susan Schulten, <em><a href="http://www.amazon.com/gp/product/022610396X/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=022610396X&amp;linkCode=as2&amp;tag=thebacgla-20&amp;linkId=MPXUUOKZRIHIAELA">Mapping the Nation: History and Cartography in Nineteenth-Century America</a></em> (Chicago: University of Chicago Press, 2012).</p>
+<p>Richard White, “<a href="http://web.stanford.edu/group/spatialhistory/cgi-bin/site/pub.php?id=29">What is Spatial History</a>?” (Stanford University, Spatial History Project, 2010).</p>
+</div>
+<div id="writing-on-networks" class="section level2">
+<h2>Writing on networks</h2>
+<p>Peter Bearman, James Moody, and Robert Faris, “Networks and History” <em>Complexity</em> 8 (2012): 61–71.</p>
+<p>Shawn Graham, Ian Milligan, and Scott Weingart, <em>The Historian’s Macroscope: Big Digital History</em> (Imperial College Press, 2016). See especially <a href="http://www.themacroscope.org/?page_id=889">Network Analysis</a> and <a href="http://www.themacroscope.org/?page_id=892">Network Analysis Fundamentals</a>.</p>
+<p>Kieran Healy, “<a href="https://kieranhealy.org/blog/archives/2013/06/09/using-metadata-to-find-paul-revere/%22">Using Metadata to Find Paul Revere</a> (June 9, 2013)</p>
+<p>Manuel Lima, <em><a href="http://www.bookoftrees.info/bt/">The Book of Trees: Visualizing Branches of Knowledge</a></em> (Princeton Architectural Press, 2013).</p>
+<p>Franco Moretti, <em><a href="https://www.versobooks.com/books/261-graphs-maps-trees">Graphs, Maps, and Trees: Abstract Models for Literary History</a></em> (Verso, 2005).</p>
+<p>Scott Weingart’s series on “<a href="http://scottbot.net/tag/networks-demystified/">Networks Demystified</a>”.</p>
+<p>The <a href="http://historicalnetworkresearch.org/resources/bibliography/">Historical Network Research bibliography</a>.</p>
+</div>
+
+<footer>
+  <p>
+    
+    <small>
+Made with <span style="color: red; font-size: 8pt;"><i class="fa fa-heart" aria-hidden="true"></i></span> and <span style="color: brown; font-size: 8pt;"><i class="fa fa-coffee" aria-hidden="true"></i></span> in California.
+      
+      <br/>
+      These workshops materials are &copy; 2016 <a href="http://jasonheppler.org">Jason Heppler</a>. Licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+      <br>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    </small>
+  </p>
+</footer>
+
+  </div>
+</div>
+
+<script>
+  $.each($("img"), function(i, v) {
+    var img = $(v);
+    img.wrap("<a href='" + img.attr("src") + "'>");
+  })
+</script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>StorymapJS</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<!-- begin in_header.html -->
+<meta name="description" content="Workshop materials for the Bimson workshop at CSU">
+<meta name="author" content="Jason Heppler">
+<link rel="shortcut icon" href="img/favicon.png">
+
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+<script>
+
+</script>
+<!-- end in_header.html -->
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="libs/custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="fluid-row">
+  <div class="col-sm-12">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="./">Carl Bimson Workshop</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://jasonheppler.org">Jason Heppler</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="fluid-row">
+  <div class="col-sm-3">
+    <div class="list-group">
+      <a class="list-group-item" href="./">Home</a>
+      <a class="list-group-item" href="introduction.html">Introduction</a>
+      <a class="list-group-item" href="resources.html">Resources</a>
+      <h5>Digital Mapmaking</h5>
+      <a class="list-group-item" href="map-literacy.html">Spatial Literacy</a>
+      <a class="list-group-item" href="cartodb.html">CartoDB</a>
+      <a class="list-group-item" href="storymap.html">StoryMap.js</a>
+      <h5>Network Analysis</h5>
+      <a class="list-group-item" href="network-literacy.html">Network Literacy</a>
+      <a class="list-group-item" href="palladio.html">Palladio</a>
+      <a class="list-group-item" href="gephi.html">Gephi</a>
+    </div>
+    <script>
+      // manage active state of toc based on current page
+    var href = window.location.pathname;
+    href = href.substr(href.lastIndexOf('/') + 1);
+    if (href === "" || href === "index.html")
+      href = "./";
+    $('a.list-group-item[href="' + href + '"]').addClass('active');
+    </script>
+  </div>
+  <div class="col-sm-9 content-body">
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">StorymapJS</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#creating-a-storymap">Creating a StoryMap</a></li>
+<li><a href="#lets-make-a-map">Let’s make a map</a></li>
+</ul>
+</div>
+
+<p><a href="https://storymap.knightlab.com/">StoryMapJS</a> is a tool built by the Knight Lab at Northwestern University, primarily built for creating <a href="map-literacy.html">narrative maps</a> for journalists but also useful for teaching. The interface for StoryMapJS is easy and simple, and allows users to connect text and images to points in space through a linear narrative.</p>
+<div id="creating-a-storymap" class="section level2">
+<h2>Creating a StoryMap</h2>
+<p>On the <a href="https://storymap.knightlab.com/">main page</a>, select “Make a storymap now” to get started. StoryMap will need to connect to your Google Account—all of the data you create is stored in a Google Spreadsheet, which means you don’t need to worry about maintaining a database or content management system for the map to work.</p>
+<div class="figure">
+<img src="img/storymap-login.png" alt="Log in prompt for StoryMapJS." />
+<p class="caption">Log in prompt for StoryMapJS.</p>
+</div>
+<p>Upon logging in with your Google account, you are presented with a blank map and an interface reminiscent of a powerpoint presentation along the lefthand side. Note a few of the other parts of the interface: in the upper left, there are <em>Options</em> for the map and narrative; in the upper right an option to <em>Share</em> the map once it’s ready.</p>
+<div class="figure">
+<img src="img/storymap-default.png" alt="The blank canvas of StoryMapJS." />
+<p class="caption">The blank canvas of StoryMapJS.</p>
+</div>
+<p>By default, StoryMapJS presents you with <a href="http://stamen.com/">Stamen Design</a>’s toner map, but there are additional options for basemap types.</p>
+<div class="figure">
+<img src="img/storymap-maptypes.png" alt="StoryMapJS basemap types." />
+<p class="caption">StoryMapJS basemap types.</p>
+</div>
+<p>Elements of the narrative map are added by creating new slides. The first slide is the title slide, which you can include the title of the project, some explanatory text, and will show an overview of all the points on your map. As we add slides, we can create narrative text and include media elements like images and embedded YouTube videos.</p>
+<div class="figure">
+<img src="img/storymap-coopersmith-youtube.png" alt="Creating slides in StoryMapJS with a YouTube video." />
+<p class="caption">Creating slides in StoryMapJS with a YouTube video.</p>
+</div>
+<p>Here’s the full map in all it’s glory (you can also view it <a href="https://uploads.knightlab.com/storymapjs/3d95893d413a82cbcd535c5ada2ef490/bimson-example/index.html">in its own window</a>):</p>
+<iframe src="https://uploads.knightlab.com/storymapjs/3d95893d413a82cbcd535c5ada2ef490/bimson-example/index.html" frameborder="0" width="100%" height="800">
+</iframe>
+</div>
+<div id="lets-make-a-map" class="section level2">
+<h2>Let’s make a map</h2>
+<p>During the workshop, we’ll create a narrative map of William F. Cody’s time in Colorado. You can find a variety of documents at the William F. Cody Archive, which I’ve <a href="http://codyarchive.org/search/places.html?q=Colorado">narrowed down to Colorado-related documents</a>.</p>
+<p>Working individually or in groups, create your map with the following steps:</p>
+<ol style="list-style-type: decimal">
+<li>Go to StoryMap and click “Make a story map now.” You’ll be prompted to log in with your Google account.</li>
+<li>Create a title slide. The title slide will be created from places on later slides, so not much will be shown at first. But add a title and some opening text.</li>
+<li>Create at least two slides, selecting objects from the Cody Archive that make sense to you. Feel free to search beyond the results I’ve provided (for example, maybe you’re interested in locations mentioned in books authored by Cody). Each of the slides should be associated with a point, which you can either search for or drag the pointer to a location. Try uploading an image and adding texts (for the sake of time, dummy text is fine).</li>
+<li>Explore the slide options and general options.</li>
+</ol>
+</div>
+
+<footer>
+  <p>
+    
+    <small>
+Made with <span style="color: red; font-size: 8pt;"><i class="fa fa-heart" aria-hidden="true"></i></span> and <span style="color: brown; font-size: 8pt;"><i class="fa fa-coffee" aria-hidden="true"></i></span> in California.
+      
+      <br/>
+      These workshops materials are &copy; 2016 <a href="http://jasonheppler.org">Jason Heppler</a>. Licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+      <br>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    </small>
+  </p>
+</footer>
+
+  </div>
+</div>
+
+<script>
+  $.each($("img"), function(i, v) {
+    var img = $(v);
+    img.wrap("<a href='" + img.attr("src") + "'>");
+  })
+</script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
