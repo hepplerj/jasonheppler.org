@@ -53,7 +53,7 @@ title: Home
 ### Projects
 
 Superfundr &middot; R data package. [Github](https://github.com/hepplerj/superfundr)  
-[Machines in the Valley](http://dissertation.jasonheppler.org) &middot; Digital history. [Github](https://github.com/hepplerj/machinesvalley)  
+[Machines in the Valley](http://machinesinthevalley.org) &middot; Digital history. [Github](https://github.com/hepplerj/machinesvalley)  
 Historical city populations &middot; R data package. [Github](https://github.com/cestastanford/historical-us-city-populations)  
 Mapping Midwest &middot; Digital history. [Github](https://github.com/hepplerj/midwest-map-population)  
 [Geography of the Post](http://cameronblevins.org/gotp/) &middot; Digital history. [Github](https://github.com/hepplerj/geographypost)  
