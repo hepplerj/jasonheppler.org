@@ -6,6 +6,12 @@
           box-sizing: border-box;
 }
 
+::selection {
+  background: rgba(30, 108, 227, 0.6);
+  color: #fff;
+  text-shadow: none;
+}
+
 html,
 body {
   margin: 0;
@@ -37,20 +43,13 @@ body {
       -ms-text-size-adjust: 100%;
 }
 
-a{color:#2E69BF;}
-a:hover{color: #4c6296}
+a{color:#0c7fb9; text-decoration: none;}
+a:hover{color: #136ce3; text-decoration: underline;}
 
 strong{ font-weight: 700; }
 
 /* Headings */
 h1,h2,h3,h4,h5,h6{font-weight:600;}
-/*h1{font-size:2.25rem}
-h1,h2{margin-bottom:.5rem;line-height:1.25}
-h2{font-size:1.5rem}
-h3{font-size:1.25rem}
-h3,h4{margin-bottom:.5rem;line-height:1.25}
-h4{font-size:1rem}
-h5{margin-bottom:.5rem;line-height:1.25;font-size:.875rem}*/
 
 .size-2x {
   font-size: calc(1em + .5vw);
@@ -241,6 +240,8 @@ hr {
 .page,
 .post {
   margin-bottom: 4em;
+  padding-bottom: 3em;
+  border-bottom: 1px solid #cccddf;
 }
 
 .page-title,
@@ -441,6 +442,7 @@ figure a img:hover {
 ul.navigation{
   margin: 0;
   padding: 0;
+  padding-bottom: 2em;
 }
 .sidebar-nav {
   padding-left: 0;
@@ -473,6 +475,7 @@ footer {
 footer p {
   font-size: 0.7em;
 }
+
 .revisions::before {
   content: "\f040";
   font-family: FontAwesome;
