@@ -3,6 +3,8 @@ layout: default
 title: Home
 ---
 
+**Hi. I'm [Jason]({{site.url}}/about/)**. I am a historian of twentieth-century United States history, with a focus on digital and computational history, urban environmental politics and policy, and the North American West. I am the [Digital Engagement Librarian](http://www.unomaha.edu/criss-library/about-us/staff-directory/jason-heppler.php) and [Assistant Professor of History](http://www.unomaha.edu/college-of-arts-and-sciences/history/) at the [University of Nebraska at Omaha](http://unomaha.edu), where I lead initiatives in digital engagement and public history. I am also affiliated faculty with UNO's [Center for Urban Sustainability](https://www.unomaha.edu/sustainability/center-for-urban-sustainability/index.php) and a Researcher with Stanford University's [Spatial History Project](http://spatialhistory.stanford.edu). I often write [here on my blog](/archives) and contribute to the [BlogWest](http://blogwest.org) group blog.
+
 ### Recently
 
 <ul class="list-items">
