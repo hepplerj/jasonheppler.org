@@ -1,22 +1,12 @@
-- venue: "Keynote: Approaching a New Historical Atlas of Midwestern History with Deep Maps and Digital History"
-  location: Midwestern History Association, Grand Rapids, Michigan
-  datestart: 2017-06-07 00:00:00 -0800
-- venue: "'Don't Let Industry Do its Business In Our Water!!!': Urban Space and Environmental Politics in Silicon Valley." 
-  location: Ball State University, Muncie, Indiana
-  datestart: 2017-04-12 00:00:00 -0800
-- venue: Arguing with Digital History
-  location: George Mason University
-  datestart: 2017-09-15 00:00:00 -0800
-  dateend: 2017-09-16 00:00:00 -0800
-- venue: "Preserving Histories Digitally"
-  location: Information Exchange, Omaha, Nebraska
-  datestart: 2017-03-17 00:00:00 -0800
-- venue: "Mapping Silicon Valley"
-  location: Digital Humanities 2017, Montreal, Canada
-  datestart: 2017-08-09 00:00:00 -0800
-- venue: "Mobile Digitization Lab for Rural Community Archives"
-  location: LYRASIS Member Summit, Philadelphia, Pennsylvania
-  datestart: 2017-10-11 00:00:00 -0800
-- venue: "<em>Oskate Wicasa</em>, Progressive Thought, and the Digital Publics of Buffalo Bill's Wild West"
-  location: Western History Association, San Diego, California
-  datestart: 2017-11-03 00:00:00 -0800
+- venue: "Shaping the Digital Humanities: UNL Alumni"
+  location: Digital Humanities Forum, Lincoln, Nebraska
+  datestart: 2018-04-12 00:00:00 -0800
+  url: https://cdrh.unl.edu/neforum
+- venue: "The Tap Water Rebellion: High-Tech Industrialization and Suburban Politics in Silicon Valley"
+  location: American Society for Environmental History, Riverside, California
+  datestart: 2018-03-14 00:00:00 -0800
+  url: http://aseh.net/conference-workshops/2018-conference-riverside-ca
+- venue: "DH Workshop: Networks and Network Visualizations"
+  location: American Historical Association, Washington, D.C.
+  datestart: 2018-01-04 00:00:00 -0800
+  url: https://www.historians.org/annual-meeting/2018-program
