@@ -1,12 +1,12 @@
-- venue: "Shaping the Digital Humanities: UNL Alumni"
-  location: Digital Humanities Forum, Lincoln, Nebraska
-  datestart: 2018-04-12 00:00:00 -0800
-  url: https://cdrh.unl.edu/neforum
-- venue: "The Tap Water Rebellion: High-Tech Industrialization and Suburban Politics in Silicon Valley"
-  location: American Society for Environmental History, Riverside, California
-  datestart: 2018-03-14 00:00:00 -0800
-  url: http://aseh.net/conference-workshops/2018-conference-riverside-ca
 - venue: "DH Workshop: Networks and Network Visualizations"
   location: American Historical Association, Washington, D.C.
   datestart: 2018-01-04 00:00:00 -0800
   url: https://www.historians.org/annual-meeting/2018-program
+- venue: "The Tap Water Rebellion: High-Tech Industrialization and Suburban Politics in Silicon Valley"
+  location: American Society for Environmental History, Riverside, California
+  datestart: 2018-03-14 00:00:00 -0800
+  url: http://aseh.net/conference-workshops/2018-conference-riverside-ca
+- venue: "Shaping the Digital Humanities: UNL Alumni"
+  location: Digital Humanities Forum, Lincoln, Nebraska
+  datestart: 2018-04-12 00:00:00 -0800
+  url: https://cdrh.unl.edu/neforum
