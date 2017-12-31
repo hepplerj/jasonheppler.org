@@ -42,6 +42,7 @@ vendor
 ._sass
 
 .gitignore
+package-lock.json
 
 # Files, folders, and paths
 source/_drafts
