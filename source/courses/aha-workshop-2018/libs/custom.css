@@ -1,10 +1,10 @@
 body {
-  font-family: "Lato", "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Lato", "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding-top: 20px;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: "Lato", "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Fira Sans", "Lato", "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 strong {
@@ -16,7 +16,7 @@ strong {
 }
 
 .navbar-inverse {
-  background-color: #34495e;
+  background-color: #074358;
   border-color: #333;
 }
 
@@ -42,13 +42,14 @@ p code {
 .list-group-item.active,
 .list-group-item.active:hover,
 .list-group-item.active:focus {
-  background-color: #34495e;
-  border-color: #34495e;
+  background-color: #074358;
+  border-color: #4c4c4c;
 }
 
 a {
-  color: #34495e;
+  color: #A55C55;
 }
+
 
 .figure, iframe, .html-widget-static-bound {
   margin: 4rem 0 4rem 0;
@@ -80,9 +81,12 @@ p a, li a {
 }
 
 blockquote {
-  font-size: 20px;
-  margin-left: 4rem;
-  border-left: 3px solid #e7e9ec;
+  margin: 2em 1em 2em 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-style: italic;
+  border-left: 0.25em solid #ffd43b;
+  color: #333;
 }
 
 #htmlwidget-4686 .leaflet-tile {

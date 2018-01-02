@@ -4,7 +4,7 @@
 
 <head>
 
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
@@ -20,16 +20,17 @@
 <script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="libs/navigation-1.1/tabsets.js"></script>
-<script src="libs/htmlwidgets-0.8/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-0.9/htmlwidgets.js"></script>
 <script src="libs/viz-0.3/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-0.8.4/grViz.js"></script>
+<script src="libs/grViz-binding-0.9.2/grViz.js"></script>
 <!-- begin in_header.html -->
-<meta name="description" content="Workshop materials for the AHA Network Analysis Workshop">
+<meta name="description" content="Workshop materials for the Ball State University Network Analysis Workshop">
 <meta name="author" content="Jason Heppler">
 <link rel="shortcut icon" href="img/favicon.png">
 
-<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Open+Sans:300,400" rel="stylesheet">
+
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
 <script>
@@ -118,7 +119,7 @@ $(document).ready(function () {
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <a class="navbar-brand" href="./">AHA Network Analysis Workshop</a>
+          <a style="font-family: 'Fira Sans'" class="navbar-brand" href="./">AHA Network Analysis Workshop</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="http://jasonheppler.org">Jason Heppler</a></li>
@@ -161,7 +162,7 @@ $(document).ready(function () {
 
 <div id="TOC">
 <ul>
-<li><a href="#networks-and-digital-history">Networks and digital history</a></li>
+<li><a href="#networks-and-digital-scholarship">Networks and digital scholarship</a></li>
 <li><a href="#how-this-workshop-will-proceed">How this workshop will proceed</a></li>
 <li><a href="#the-network-toolbox">The network toolbox</a><ul>
 <li><a href="#gephi">Gephi</a></li>
@@ -173,10 +174,10 @@ $(document).ready(function () {
 </ul>
 </div>
 
-<div id="networks-and-digital-history" class="section level2">
-<h2>Networks and digital history</h2>
-<p><a href="http://whatisdigitalhumanities.com/">Digital humanities</a> offers a wide variety of methodological and pedagogical approaches, including text and data mining, network analysis, and spatial analysis.</p>
-<p>Among the more powerful desktop applications for network analysis such as Gephi, these software provide algorithms for interpreting networks and relationships as well as creating visualizations. Web approaches, to date, have not come with the computational power of desktop applications, but allow the easier creation of network visualizations. Networks also tend to be tricker to comprehend over maps, which entails a more intense methodological borrowing than we do with maps. That includes using algorithms designed by computer scientists for purposes that <a href="https://tedunderwood.com/2011/10/16/lsa-is-a-marvellous-tool-but-humanists-may-no-use-it-the-way-computer-scientists-do/">might be at odds</a> of the humanities scholar. As Scott Weingart <a href="http://www.scottbot.net/HIAL/index.html@p=6279.html">once warned</a>, “Networks <em>can</em> be used on any project. Networks <em>should</em> be used on far fewer.”</p>
+<div id="networks-and-digital-scholarship" class="section level2">
+<h2>Networks and digital scholarship</h2>
+<p>Digital scholarship offers a wide variety of methodological and pedagogical approaches, including text and data mining, network analysis, and spatial analysis.</p>
+<p>Among the more powerful desktop applications for network analysis such as Gephi, these software provide algorithms for interpreting networks and relationships as well as creating visualizations. Web approaches, to date, have not come with the computational power of desktop applications, but allow the easier creation of network visualizations. Networks also tend to be tricker to comprehend over maps, which entails a more intense methodological borrowing than we do with maps. That includes using algorithms designed by computer scientists for purposes that <a href="https://tedunderwood.com/2011/10/16/lsa-is-a-marvellous-tool-but-humanists-may-no-use-it-the-way-computer-scientists-do/">might be at odds</a> of the digital scholar. As Scott Weingart <a href="http://www.scottbot.net/HIAL/index.html@p=6279.html">once warned</a>, “Networks <em>can</em> be used on any project. Networks <em>should</em> be used on far fewer.”</p>
 <p>The aim of this workshop is to help introduce you to some of these approaches for making and using networks.</p>
 </div>
 <div id="how-this-workshop-will-proceed" class="section level2">
@@ -184,7 +185,7 @@ $(document).ready(function () {
 <p>Our time together is limited and we cannot go too deeply into working with, obtaining, or preparing network data. My hope is to introduce you to the basics, provide a set of tools to demonstrate what is possible, and continue the conversation beyond this workshop.</p>
 <p>Be aware, also, that far more time will be spent preparing and cleaning data than creating the visualizations themselves. <a href="http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html?_r=0">Some argue</a> that you’ll spend as much as 80% of your time preparing your data for visualization, while the remainder 20% goes to the work of visualization itself. Since we’re together for a limited time, we won’t have a chance to really experience the tedious, frustrating, and arduous work that can go into preparing network data. These are approaches that you will need to develop for your research, and skills that you will bring to your students. As you take these skills to the classroom, consider the kinds of things your students can complete and receive the most reward for effort.</p>
 <p>That said, networks—through desktop software and web-based platforms—have made the tools of these visualizations easier for scholars and students to grapple with. Maps are often more readily understood than networks—because we frequently use maps as part of our day to day lives, their use for research and narrative is more apparent than networks which comes with an entire set of vocabulary, methods, theory, and approaches. The interactivity of maps allows scholars to filter data, to operate at different spatial scales, and embed sources into maps. Similarly, networks can move from large-scale relationships to explorations of smaller connections. These techniques, however, take time. Once you’ve begun to master them, consider how to bring these approaches and skills into your classroom and your research.</p>
-<p>As noted above, the biggest challenge with creating networks is the data—namely, once the data is ready and you’ve gained some competendnce in making these visualizations, the process proceeds quickly. Far more of your time—and your student’s time—will be spent in preparing data, a task that’s highly variable to the visualization and evidence you are working with. In other words, the evidence you’re attempting to visualize comes with the very thing humanities scholars spend their time on—the finding and interpretation of evidence.</p>
+<p>As noted above, the biggest challenge with creating networks is the data—namely, once the data is ready and you’ve gained some competendnce in making these visualizations, the process proceeds quickly. Far more of your time—and your student’s time—will be spent in preparing data, a task that’s highly variable to the visualization and evidence you are working with. In other words, the evidence you’re attempting to visualize comes with the very thing digital scholars spend their time on—the finding and interpretation of evidence.</p>
 <div id="htmlwidget-4e418d0e777bcf5e8b2b" style="width:100%;height:192px;" class="grViz html-widget"></div>
 <script type="application/json" data-for="htmlwidget-4e418d0e777bcf5e8b2b">{"x":{"diagram":"\n      digraph nicegraph {\n      graph [overlap = true,\n             rankdir = LR,\n             label = <The Process of Visualization<br/><br/>>,\n             fontname = Lato,\n             labelloc = \"t\"\n]\n\n      node [shape = box,\n           overlap = true,\n           fontname = Lato,\n           fontsize = 10]\n      A [label = \"Find or create data\"]\n      B [label = \"Clean/tidy data\"]\n      C [label = \"Explore and \n transform the data\"]\n      D [label = \"Visualize\"]\n      E [label = \"Interpret\"]\n      F [label = \"Communicate\"]\n\n      A->B->C->D->E->F [splines = \"line\"]\n      E->C [splines = \"curved\"]\n      C->A [splines = \"curved\"]\n      }\n      ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p><em>(Figure adapted from <a href="http://lincolnmullen.com/projects/spatial-workshop/introduction.html">Lincoln Mullen.</a>)</em></p>
@@ -236,10 +237,10 @@ $(document).ready(function () {
   <p>
     
     <small>
-Made with <span style="color: red; font-size: 8pt;"><i class="fa fa-heart" aria-hidden="true"></i></span> and <span style="color: brown; font-size: 8pt;"><i class="fa fa-coffee" aria-hidden="true"></i></span> in Nebraska.
+Made with <span style="color: red; font-size: 8pt;"><i class="fa fa-heart" aria-hidden="true"></i></span> and <span style="color: #403B2E; font-size: 8pt;"><i class="fa fa-coffee" aria-hidden="true"></i></span> in Nebraska.
       
       <br/>
-      These workshops materials are &copy; 2016 <a href="http://jasonheppler.org">Jason Heppler</a>. Licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+      These workshops materials are &copy; 2018 <a href="http://jasonheppler.org">Jason Heppler</a>. Licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
       <br>
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
     </small>
@@ -278,7 +279,7 @@ $(document).ready(function () {
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
