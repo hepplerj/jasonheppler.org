@@ -19,11 +19,10 @@ To keep updated on my work, follow my [research](http://jasonheppler.org/researc
 ## Upcoming Public Appearances
 
 <ul class="list-items">
-{% assign lectures = site.data.travel | sort: 'datestart' | reverse %}
+{% assign lectures = site.data.travel | sort: 'datestart' %}
 {% for lecture in lectures limit:4 %}
 <li>"<a href="{{lecture.url}}">{{ lecture.venue }}</a>" <br> {{ lecture.location }}  &middot; {{ lecture.datestart | date: '%b %Y'}}</li>
 {% endfor %}
-<li><a href="/speaking">And more...</a></li>
 </ul>
 
 ## Recently
