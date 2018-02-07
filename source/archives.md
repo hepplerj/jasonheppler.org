@@ -20,9 +20,25 @@ I've written <strong>{{ totals | thousands_separated }}</strong> words here sinc
       <h3>{{ post.date | date: '%Y' }}</h3>
     {% endif %}
 
-  <li><span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></span> &middot;
+  {% if post.medium %}
+  <li><i class="fab fa-medium"></i> <span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></span> &middot; <a href="{{ post.medium }}">{{ post.title | markdownify | replace: "<p>", "" | replace: "</p>", "" | strip }}</a></li>
+  {% elsif post.the_conversation %}
+  <li><i class="far fa-comment"></i> <span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></span> &middot; <a href="{{ post.the_conversation }}">{{ post.title | markdownify | replace: "<p>", "" | replace: "</p>", "" | strip }}</a></li>
+  {% elsif post.blogwest %}
+  <li><i class="fab fa-wordpress"></i> <span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></span> &middot; <a href="{{ post.blogwest }}">{{ post.title | markdownify | replace: "<p>", "" | replace: "</p>", "" | strip }}</a></li>
+  {% elsif post.newspaper %}
+  <li><i class="far fa-newspaper"></i> <span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></span> &middot; <a href="{{ post.newspaper }}">{{ post.title | markdownify | replace: "<p>", "" | replace: "</p>", "" | strip }}</a></li>
+  {% elsif post.published_elsewhere %}
+  <li><i class="fas fa-pencil-alt"></i> <span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></span> &middot; <a href="{{ post.published_elsewhere }}">{{ post.title | markdownify | replace: "<p>", "" | replace: "</p>", "" | strip }}</a></li>
+  {% elsif post.external-url %}
+  <li><i class="fas fa-external-link-square-alt"></i> <span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></span> &middot; <a href="{{ post.url }}">{{ post.title | markdownify | replace: "<p>", "" | replace: "</p>", "" | strip }}</a></li>
+  {% else %}
+  <li><span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></span> &middot; <a href="{{ post.url }}">{{ post.title | markdownify | replace: "<p>", "" | replace: "</p>", "" | strip }}</a></li>
+  {% endif %}
 
-  <a href="{{ post.url }}">{{ post.title }}</a></li>
+
+
+
   {% endfor %}
 </ul>
 </div>
