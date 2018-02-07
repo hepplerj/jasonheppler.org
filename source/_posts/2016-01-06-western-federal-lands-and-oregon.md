@@ -10,6 +10,7 @@ tags:
 - American West
 - politics
 - r
+blogwest: "https://blogwest.org/2016/01/07/federal-policy-western-lands-and-malheur/"
 ...
 
 <aside class="post">
