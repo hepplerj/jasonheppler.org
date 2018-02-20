@@ -7,7 +7,7 @@ title: Home
 
 <img class="avatar" src="assets/images/me.jpg" height="150" width="150" align="left"/>
 
-I am the [digital engagement librarian](http://library.unomaha.edu) at the University of Nebraska at Omaha, a [historian](#historian) of urban environmental politics and policy, [author](#current-writing), [teacher](#teaching), [editor at BlogWest](#blogwest), [public speaker](#upcoming-public-appearances), [cycling advocate](#cycling-advocacy), and [writer](#recently).
+I am the [digital engagement librarian](http://library.unomaha.edu) at the University of Nebraska at Omaha, a [historian](#historian) of urban environmental politics and policy, [author](#current-writing), [teacher](#teaching), [editor at BlogWest](#blogwest), [public speaker](#upcoming-public-appearances), [open data enthusiast](#open-data), [cycling advocate](#cycling-advocacy), and [writer](#recently).
 
 You can find me on [Twitter](https://twitter.com/jaheppler), [Github](https://www.github.com/hepplerj), and [Medium](https://medium.com/@jaheppler). Feel free to email me at `jason@jasonheppler.org`. If it's a sensitive email, you can <a href="https://jasonheppler.org/jasonheppler.asc">grab my public key</a> for that address. I’m also `jaheppler` on Keybase.
 
@@ -30,6 +30,10 @@ I teach a variety of classes and workshops. You can find a listing of the course
 ## BlogWest
 
 [BlogWest](https://blogwest.org/) was started to provide thoughtful conversation about the history of the North American West. Edited by five historians of the West, we bring our own expertise to the site as well as collaborate with other historians, intellectuals, journalists, and others who write about and think about the West.
+
+## Open Data
+
+I am committed to open data advocacy to improve transparency and access to information, from promoting open research practices to open government data. I'm active in communities advancing open research including DataRefuge, Mozilla Open Leadership, and Data for Democracy. I am co-organizer and founding member of [Endangered Data Week](http://endangereddataweek.org), an annual event to promote a culture of data consciousness by creating training materials, guidelines, and resources to advocate for open data and promote awareness around threats to publicly available data. 
 
 ## Cycling Advocacy
 
