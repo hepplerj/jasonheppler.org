@@ -1,0 +1,29 @@
+---
+layout: post
+title: "Endangered Data Week"
+date: 2018-02-21 
+image:
+    feature:
+    thumb:
+categories: Web
+tags:
+- technology
+comments: false
+medium: "https://medium.com/@jaheppler/endangered-data-week-72ef12b25905"
+...
+
+In 2017, [Brandon Locke](http://brandontlocke.com/) [voiced an idea on Twitter](https://twitter.com/brandontlocke/status/826939862368518144): we needed an event to raise awareness, like Banned Books Week, to threats to publicly available data. Those threats were [widespread and various](https://jasonheppler.org/2017/04/24/endangered-data-week/): from outright censorship to benign neglect. We were inspired by the work of others, namely DataRefuge, the Environmental Data and Governance Initiative, and the work they were doing to secure environmental and climate data from an incoming presidential administration that [does not believe in climate change](https://twitter.com/realdonaldtrump/status/265895292191248385?lang=en). Joining with the [Digital Library Federation](https://diglib.org/), volunteers from around the world helped make EDW more successful that I could have imagined. With the support of our other partners --- the [Mozilla Science Lab](https://science.mozilla.org/), [CLIR](https://www.clir.org/), [DataRefuge](https://www.datarefuge.org/) --- we helped showcase events all around the world focused on threats to public data.
+
+We're at it again this year. Next week, **February 26 to March 2**, is [Endangered Data Week](http://endangereddataweek.org/). And the concerns of last year are no less present this time around.
+
+-----
+
+This year's events once again cover a range of approaches, themes, and skills training. We currently have forty-two events scheduled so far across the U.S. and Canada, where attendees are learning:
+
+- **Health hackathons**: Want to contribute to citizen science health initiatives? Northeastern University is [hosting a hack-a-thon](http://endangereddataweek.org/events/2018-02-13-citizen-science-health-hackathon/) on how to contribute to citizen science initiatives. Or, if you're near the University of Virginia, stop by and [hear a presentation](http://endangereddataweek.org/events/2018-02-26-data-sharing-in-public-health-energencies/) on data sharing during public health emergencies.
+- **Working with open data**: Michigan State University is leading workshops on [organizing and using government data](http://endangereddataweek.org/events/2018-02-27-organizing-and-using-government-data/). Or perhaps you want to know what to do with the data once you have it? The University of Nebraska at Omaha is leading workshops on the [R programming language to teach data manipulation and visualization](http://endangereddataweek.org/events/2018-02-28-data-manipulation-and-visualization-with-r/). If you're in Chicago, the Illinois Institute of Technology is leading a workshop on [using the city's open data](http://endangereddataweek.org/events/2018-02-28-exploring-chicago-s-open-data/).
+- **Working with difficult data**: Interested in [digitizing and preserving analog video](http://endangereddataweek.org/events/2018-02-26-a-different-kind-of-data-rescue-digitizing-preserving-obsolete-analog-video/)? Barnard College has you covered, hosting a workshop on the challenges and opportunities surrounding magnetic media. Or maybe you're worried about [the disappearance of early video games](http://endangereddataweek.org/events/2018-02-26-endangered-video-games/)? The University of Victoria is helping raise awareness the preservation of software, hardware, and data.
+- Virtual events: There are a variety of virtual events as well, ranging from [how to protect federal government data](http://endangereddataweek.org/events/2018-02-27-what-can-be-done-to-protect-endangered-government-data/), an [introduction to DataLumos](http://endangereddataweek.org/events/2018-02-27-datalumos-a-tool-for-improving-the-future-accessibility-of-valuable-government-data/), the [impact of local data](http://endangereddataweek.org/events/2018-03-01-open-baltimore-the-impact-of-local-data/), and [Twitter chats](http://endangereddataweek.org/events/2018-02-26-public-data-stories/).
+- [Find other events near you, or sign up to host your own](http://endangereddataweek.org/map/?sorts%5Bdate%5D=1)! There's still plenty of time!
+
+Adding to our excitement this year is an announcement: Sarah Melton, Rachel Mattson, Brandon, and I are part of [Mozilla's fifth round of Open Leaders](https://mozilla.github.io/leadership-training/round-5/projects/). Endangered Data Week's curriculum development will be part of the Global Sprint May 10--11, 2018, as well. With Mozilla, we'll be building out more instruction resources under the aegis of Endangered Data Week to promote data literacy, civic engagement, and a culture of data consciousness.
