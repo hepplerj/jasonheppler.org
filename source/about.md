@@ -13,3 +13,5 @@ Other things I'm involved with: I serve as a community representative for the [D
 To keep updated on my work, follow my [research](/research/), follow me on [Twitter](http://twitter.com/jaheppler) or [Github](http://github.com/hepplerj), or subscribe to [RSS](https://jasonheppler.org/feed.xml) or [JSON](https://jasonheppler.org/feed.json).
 
 Feel free to email me at `jason@jasonheppler.org`. If it's a sensitive email, you can [grab my public key](https://jasonheppler.org/jasonheppler.asc) for that address. I'm also `jaheppler` on Keybase.
+
+I use Google Analytics, including [Demographics and Interest Reports](https://support.google.com/analytics/answer/2799357?hl=en) and [Platform](https://support.google.com/platformspolicy). So if you’re sensitive about that kinda thing, consider using Google's [opt-out extension](https://tools.google.com/dlpage/gaoptout) or a private browser.
