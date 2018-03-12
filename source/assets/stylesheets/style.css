@@ -266,6 +266,10 @@ hr {
   font-size: 0.8rem;
 }
 
+.title {
+  line-height: 2.5rem;
+}
+
 .link-post-out {
   display: block;
   background: #f2f2f2;
