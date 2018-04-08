@@ -2,5 +2,11 @@
     <ul class="navigation">
 
 		<li class="sidebar-nav-item" id="nav-title"><strong><a href="/">Jason A. Heppler</a></strong></li>
-
+        {% for link in site.links %}
+       	<li itemscope itemtype="http://schema.org/SiteNavigationElement" class="sidebar-nav-item{% if page.title == node.url %} active{% endif %}"><a href="{{ site.url }}{{ link.url }}" itemprop="url"><span itemprop="name">{{ link.title }}</span></a></li>
+        {% endfor %}
+        <li itemscope itemtype="http://schema.org/SiteNavigationElement" class="sidebar-nav-item{% if page.title == node.url %} active{% endif %}"><a href="https://www.dropbox.com/s/cpbo7md7dooffg1/jah-cv.pdf?dl=0" onclick="ga('send', 'event', { 'eventCategory': 'PDF', 'eventAction': 'Download', 'eventLabel': 'jah-vita.pdf'});" itemprop="url"><span itemprop="name">Vita</span></a></li>
+        <li itemscope itemtype="http://schema.org/SiteNavigationElement" class="sidebar-nav-item{% if page.title == node.url %} active{% endif %}"><a class="twitter page-link" href="https://twitter.com/{{site.owner.twitter}}"><span class="fab fa-twitter"></span></a></li>
+        <li itemscope itemtype="http://schema.org/SiteNavigationElement" class="sidebar-nav-item{% if page.title == node.url %} active{% endif %}"><a class="github page-link" href="https://www.github.com/{{site.owner.github}}"><span class="fab fa-github"></span></a></li>
+        <li itemscope itemtype="http://schema.org/SiteNavigationElement" class="sidebar-nav-item{% if page.title == node.url %} active{% endif %}"><a class="linkedin page-link" href="https://www.linkedin.com/in/{{site.owner.linkedin}}"><span class="fab fa-linkedin"></span></a></li>
     </ul>

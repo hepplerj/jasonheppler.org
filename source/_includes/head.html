@@ -74,11 +74,19 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500" rel="stylesheet">
+
 
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/public/favicon.ico">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="/public/touchicon.png">
+  <link rel="icon" href="/public/favicon.png">
+  <!--[if IE]><link rel="shortcut icon" href="/public/favicon.ico"><![endif]-->
+  <!-- or, set /favicon.ico for IE10 win -->
+  <meta name="msapplication-TileColor" content="#D83434">
+  <meta name="msapplication-TileImage" content="/public/tileicon.png">
 
   <!-- RSS - xml and json -->
   <link rel="alternate" title="{{ site.title }}" type="application/rss+xml" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
@@ -90,7 +98,4 @@
     "author": "Jason A. Heppler" }
   </script>
 
-
-  <!-- Fight for the Open Web -->
-  <script src="https://widget.battleforthenet.com/widget.js" async></script>
 </head>
