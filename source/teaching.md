@@ -18,9 +18,9 @@ I would be honored to teach at your institution about **digital history**, **dat
 {% for class in courses %}
 <p>
 {% if class.kind == "course" %}
-<i class="fa fa-graduation-cap" style="color: #0336c; font-size: 80%; padding-top: 6px;"></i>
+<i class="fas fa-graduation-cap" style="color: #0336c; font-size: 80%; padding-top: 6px;"></i>
 {% else %}
-<i class="fa fa-users" style="color: #0336c; font-size: 80%; padding-top: 6px;"></i>
+<i class="fas fa-users" style="color: #0336c; font-size: 80%; padding-top: 6px;"></i>
 {% endif %}
 {% if class.url %}
   <strong><a href="{{ class.url }}">{{ class.class }}</a></strong> &middot; <em>{{ class.location }}</em>
@@ -43,9 +43,9 @@ I would be honored to teach at your institution about **digital history**, **dat
 {% for class in workshops %}
 <p>
 {% if class.kind == "course" %}
-<i class="fa fa-graduation-cap" style="color: #0336c; font-size: 80%; padding-top: 6px;"></i>
+<i class="fas fa-graduation-cap" style="color: #0336c; font-size: 80%; padding-top: 6px;"></i>
 {% else %}
-<i class="fa fa-users" style="color: #0336c; font-size: 80%; padding-top: 6px;"></i>
+<i class="fas fa-users" style="color: #0336c; font-size: 80%; padding-top: 6px;"></i>
 {% endif %}
 {% if class.url %}
   <strong><a href="{{ class.url }}">{{ class.class }}</a></strong> &middot; <em>{{class.location}}</em>
