@@ -1,24 +1,16 @@
-- venue: "DH Workshop: Networks and Network Visualizations"
-  location: American Historical Association, Washington, D.C.
-  datestart: 2018-01-04 00:00:00 -0800
-  url: https://www.historians.org/annual-meeting/2018-program
-- venue: "Arguing with Digital History: A Roundtable on Using Digital History to Make Arguments for Academic Audiences"
-  location: American Historical Association, Washington, D.C.
-  datestart: 2018-01-06 00:00:00 -0800
-  url:
-- venue: "The Tap Water Rebellion: High-Tech Industrialization and Suburban Politics in Silicon Valley"
-  location: American Society for Environmental History, Riverside, California
-  datestart: 2018-03-14 00:00:00 -0800
-  url: http://aseh.net/conference-workshops/2018-conference-riverside-ca
 - venue: "'Piecemeal, Patchwork, Prop-Up': Urban Planning and Environmental Change in Postwar Silicon Valley"
   location: "You Are Here Conference, Omaha, Nebraska"
-  datestart: 2018-05-23 00:00:00 -0800
-  url:
+  datestart: 2018-03-24 00:00:00 -0800
+  url: https://youarehereconference.wordpress.com/
 - venue: "Integrating Space and Place in the Undergraduate Experience"
   location: "You Are Here Conference, Omaha, Nebraska"
-  datestart: 2018-05-23 00:00:00 -0800
-  url:
+  datestart: 2018-03-24 00:00:00 -0800
+  url: https://youarehereconference.wordpress.com/
 - venue: "Shaping the Digital Humanities: UNL Alumni"
   location: Digital Humanities Forum, Lincoln, Nebraska
   datestart: 2018-04-12 00:00:00 -0800
   url: https://cdrh.unl.edu/neforum
+- venue: "Six Shooters Lightning Round"
+  location: Western History Association, San Antonio, Texas
+  datestart: 2018-10-17 00:00:00 -0800
+  url: https://www.westernhistory.org/2018
