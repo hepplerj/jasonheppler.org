@@ -1,0 +1,50 @@
+- title: "Machines in the Valley: Growth, Conflict, and Environmental Politics in Silicon Valley"
+  url: http://machinesinthevalley.org
+  snippet: 'The digital component of my PhD dissertation using spatial history and digital narrative to explore the environmental history of Silicon Valley.'
+  date: "2016"
+  preview: "/assets/images/portfolio_machinesvalley.png"
+- title: "Geography of the Post"
+  url: http://cameronblevins.org/gotp/
+  snippet: 'In collaboration with Cameron Blevins, we visualized the spread of 14,000 post offices in the nineteenth-century American West.'
+  date: "2014"
+  preview: "assets/images/portfolio_gotp.png"
+- title: Marriage of Thames and Rhine
+  url: http://cesta.su.domains/projects/rhine/neatline/show/jdtr
+  snippet: 'In collaboration with Molly Taylor-Poleskey, we created an interactive narrative of the journey of the court of Prince-Elector Friedrich Wilhelm.'
+  date: "2016"
+  preview: "/assets/images/portfolio_marriage.png"
+- title: Prussian Foodstuffs
+  url: http://digitalhistory.stanford.edu/projects/mtpoleskey/zscore2/
+  snippet: 'In collaboration with Molly Taylor-Poleskey, we attempted to explore food consumption recorded at the palace in Königsberg, Prussia during the reign of Friedrich Wilhelm in order to explore changes in taste over time.'
+  date: "2016"
+  preview: "/assets/images/portfolio_prussia.png"
+- title: '"Self-sustaining and a good citizen: William F. Cody and the Progressive Wild West'
+  url: http://www.codystudies.org/showindians/
+  snippet: "William F. Cody and the Progressive Wild West seeks to examine Cody's attitudes towards American Indians and present a scholarly argument in the digital form."
+  date: "2012"
+  preview: "/assets/images/portfolio_showindians.png"
+- title: 'Wars of the United States'
+  url: https://jasonheppler.org/projects/war/
+  snippet: "Visualizing the wars of the United States, emphasizing the regional exertion of power in the nation's history."
+  date: "2015"
+  preview: "/assets/images/portfolio_war.png"
+- title: 'Western Federal Lands'
+  url: https://blogwest.org/2016/01/07/federal-policy-western-lands-and-malheur/
+  snippet: "Visualizing the federal government's holdings of Western land."
+  date: "2016"
+  preview: "/assets/images/portfolio_federallands.png"
+- title: 'Chinese computing'
+  url: http://bl.ocks.org/hepplerj/e5d3d5787f348cc3b032
+  snippet: 'In collaboration with Tom Mullaney, we visualized the keyboard input of Chinese input editors to explore what Chinese writing looks like in the 21st century.'
+  date: "2016"
+  preview: "/assets/images/portfolio_chinesecomputing.png"
+- title: '#deletefacebook'
+  url: https://jheppler.shinyapps.io/deletefacebook/
+  snippet: 'Scraping Twitter to explore trends in #deletefacebook.'
+  date: "2018"
+  preview: "/assets/images/portfolio_deletefacebook.png"
+- title: 'Mapping Omaha Bikes'
+  url: https://jheppler.shinyapps.io/omaha-bikes/
+  snippet: 'Mapping the most dangerous areas in the city for bicyclists and pedestrians.'
+  date: "2017"
+  preview: "/assets/images/portfolio_omahabikes.png"
