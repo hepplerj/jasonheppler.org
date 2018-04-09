@@ -13,15 +13,20 @@ body {
 }
 
 html {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
   text-rendering: optimizeLegibility;
   line-height: 24px;
   color: #484848;
   font-size: 16px;
 }
 
+.clearfix {
+  height:1%;
+  overflow:visible;
+}
+
 body {
-  background-color: #f4f4f4;
+  background-color: white; /*#f4f4f4;*/
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -35,22 +40,22 @@ body {
 
 span.spark {
   font-family: "ATF-Spark";
-  color: #a30000;
+  color: #1d78bd;
   -webkit-font-variant-ligatures: contextual;
           font-variant-ligatures: contextual;
   -webkit-font-feature-settings: "calt";
   font-feature-settings: "calt"; }
 
-  span.sparkline {
-    font-family: "ATF-Spark";
-    color: #a30000;
-    -webkit-font-variant-ligatures: contextual;
-            font-variant-ligatures: contextual;
-    -webkit-font-feature-settings: "calt";
-    font-feature-settings: "calt"; }
+span.sparkline {
+  font-family: "ATF-Spark";
+  color: #1d78bd;
+  -webkit-font-variant-ligatures: contextual;
+          font-variant-ligatures: contextual;
+  -webkit-font-feature-settings: "calt";
+  font-feature-settings: "calt"; }
 
 
-a{color:#a30000; text-decoration: underline;}
+a{color:#1d78bd; text-decoration: underline;}
 a:hover{color: #0B4970; }
 
 strong{ font-weight: 700; }
@@ -62,6 +67,35 @@ h2 {
   font-size: 1.7em;
   line-height: 1.4em;
   font-weight: 500;
+}
+
+h3.inline-year {
+  font-size: 2rem;
+  /* margin: 2em 0 0em 0.57em; */
+  color: #222 !important;
+  line-height: 1;
+  overflow: hidden;
+  z-index: 100;
+  position: relative;
+}
+
+h3.inline-year span {
+  display: inline-block;
+  position: relative;
+}
+
+h3.inline-year span::after {
+  left: 100%;
+  margin-left: 0.5em;
+}
+
+h3.inline-year span::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  border-bottom: 1px solid #D9D9D7;
+  top: 49%;
+  width: 10000%
 }
 
 .size-2x {
@@ -83,10 +117,78 @@ h2 {
 .list-items{list-style-type:none;margin:0;padding:0; font-weight: 300;}
 .list-items, p{margin:1rem 0;font-size:1rem}
 
+.list-items li {
+  display: block;
+  border-bottom: 1px solid #D9D9D7;
+  /* min-height: 180px; */
+}
+
+.list-items a {
+  text-decoration: none;
+  color: #4A4235;
+  border: none;
+}
+
+.list-items h3 {
+  color: #1d78bd;
+  -moz-transition: color 0.25s ease-in-out;
+  -webkit-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
+}
+
+.list-items .oneliner {
+  color: #4A4235;
+}
+
+.hero-wrap img {
+  max-width: 200px;
+  float: right;
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.view-more-posts {
+  text-align: center;
+  margin-top: 2.5em;
+  margin-bottom: 1.2em;
+}
+
+.view-more-posts h2 {
+  line-height: 1;
+  margin-bottom: 0;
+  font-size: 1.05rem;
+}
+
+.view-more-posts h2 a {
+  text-decoration: none;
+  line-height: 1;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #1D78BD;
+  padding: 0.7rem 1.3rem 0.65rem;
+  border: 1px solid #1D78BD;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;  
+}
+
+.view-more-posts h2 a:hover {
+  background: #1D78BD;
+  color: white;
+}
+
+.view-more-posts small {
+  color: #aaa;
+  display: block;
+  margin-top: 1.65em;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
 p {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6em;
   /*font-size: 18px;*/
   font-size: calc(14px + .25vw);
@@ -140,7 +242,7 @@ code {
   padding: .25em .5em;
   font-size: 85%;
   color: #bf616a;
-  background-color: #ffffff;
+  background-color: #f4f4f4;
   border-radius: 3px;
 }
 pre {
