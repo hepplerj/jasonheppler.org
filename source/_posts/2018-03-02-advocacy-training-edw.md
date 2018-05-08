@@ -4,7 +4,7 @@ title: "Advocacy, training, and awareness through Endangered Data Week"
 date: 2018-03-02
 image:
     feature:
-    thumb:
+    thumb: http://endangereddataweek.org/img/edw-logo.png
 categories: Web
 tags:
 - technology

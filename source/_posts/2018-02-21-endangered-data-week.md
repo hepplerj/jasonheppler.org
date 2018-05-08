@@ -4,7 +4,7 @@ title: "Endangered Data Week"
 date: 2018-02-21 
 image:
     feature:
-    thumb:
+    thumb: http://endangereddataweek.org/img/edw-logo.png
 categories: Web
 tags:
 - technology
