@@ -46,17 +46,17 @@ owner:
 google_analytics_tracking_id: UA-12786552-1
 
 # Settings
-assets:
-  compress:
-    css: true
-    js: true
-  features:
-    automatic_img_size: false
-  sources:
-    - assets/fonts
-    - assets/images
-    - assets/javascripts
-    - assets/stylesheets
+#assets:
+#  compress:
+#    css: true
+#    js: true
+#  features:
+#    automatic_img_size: false
+#  sources:
+#    - assets/fonts
+#    - assets/images
+#    - assets/javascripts
+#    - assets/stylesheets
 
 # Navigation
 links:
@@ -87,11 +87,6 @@ exclude:
   - Rakefile
   - README
   - tmp
-gems:
-  - jekyll-assets
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-feed
 
 # Plugin settings
 feed:
