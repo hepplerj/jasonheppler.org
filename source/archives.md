@@ -17,28 +17,27 @@ I've written <strong>{{ totals | thousands_separated }}</strong> words here sinc
     {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
     {% capture next_year %}{{ post.next.date | date: '%Y' }}{% endcapture %}
     {% if year != next_year %}
-      <h3>{{ post.date | date: '%Y' }}</h3>
+      <h2 class="inline-year"><span>{{ post.date | date: '%Y' }}</span></h2>
     {% endif %}
-
-  {% if post.medium %}
-  <li><i class="fab fa-medium"></i> <span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></span> &middot; <a href="{{ post.medium }}">{{ post.title | markdownify | replace: "<p>", "" | replace: "</p>", "" | strip }}</a></li>
-  {% elsif post.the_conversation %}
-  <li><i class="far fa-comment"></i> <span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></span> &middot; <a href="{{ post.the_conversation }}">{{ post.title | markdownify | replace: "<p>", "" | replace: "</p>", "" | strip }}</a></li>
-  {% elsif post.blogwest %}
-  <li><i class="fab fa-wordpress"></i> <span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></span> &middot; <a href="{{ post.blogwest }}">{{ post.title | markdownify | replace: "<p>", "" | replace: "</p>", "" | strip }}</a></li>
-  {% elsif post.newspaper %}
-  <li><i class="far fa-newspaper"></i> <span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></span> &middot; <a href="{{ post.newspaper }}">{{ post.title | markdownify | replace: "<p>", "" | replace: "</p>", "" | strip }}</a></li>
-  {% elsif post.published_elsewhere %}
-  <li><i class="fas fa-pencil-alt"></i> <span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></span> &middot; <a href="{{ post.published_elsewhere }}">{{ post.title | markdownify | replace: "<p>", "" | replace: "</p>", "" | strip }}</a></li>
-  {% elsif post.external-url %}
-  <li><i class="fas fa-external-link-square-alt"></i> <span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></span> &middot; <a href="{{ post.url }}">{{ post.title | markdownify | replace: "<p>", "" | replace: "</p>", "" | strip }}</a></li>
-  {% else %}
-  <li><span class="code"><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></span> &middot; <a href="{{ post.url }}">{{ post.title | markdownify | replace: "<p>", "" | replace: "</p>", "" | strip }}</a></li>
-  {% endif %}
-
-
-
-
-  {% endfor %}
+    <li class="clearfix {% if post.image.thumb %}featured{% endif %}">
+      <header>
+        <a href="{{ post.url }}" title="{{ post.title }}">
+          <div class="archived">
+          {% if post.image.thumb %}
+          <div class="hero-wrap">
+            <img class="hero-img" src="{{ post.image.thumb }}">
+          </div>
+          {% endif %}
+            <h3 {% if post.external-url %}class="external-url" {% endif %}>{{ post.title }} {% if post.external-url %}<i class="fas fa-link"></i>{% endif %}</h3>
+            {% unless post.external-url %}
+            {% if post.excerpt %}
+              <p class="oneliner">{{ post.excerpt | strip_html | truncatewords: 35 }}</p>
+            {% endif %}
+            {% endunless %}
+          </div>
+        </a>
+      </header>
+    </li>
+    {% endfor %}
 </ul>
 </div>
