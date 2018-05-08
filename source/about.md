@@ -39,7 +39,7 @@ You can write great emails by following [this advice from Jason Freedman](http:/
 
 ## Privacy
 
-I take your privacy seriously. I have installed a local analytics package called [Matomo](https://matomo.org/), which interprets information your browser already sends (like IP address, screen resolution, browser, and operating system.) This information is regularly flushed, kept anonymous, and passowrd-protected. I take precautions to ensure no one else sees this information, either. If you're running Do Not Track on your browser, Matomo won't track you. 
+I take your privacy seriously. I have installed a local analytics package called [Matomo](https://matomo.org/), which interprets information your browser already sends (like IP address, screen resolution, browser, and operating system.) This information is regularly flushed, kept anonymous, and password-protected. I take precautions to ensure no one else sees this information, either. If you're running Do Not Track on your browser, Matomo won't track you. 
 
 If you email me something I keep that anonymous, especially when sent encrypted. If I decide I would like to quote something from your email, I will ask you first. If you've emailed me about something I got wrong, I may use your name to credit the correction but I won't if it's not public information. [Here's my public key](https://jasonheppler.org/jasonheppler.asc). I'm also `jaheppler` on Keybase.
 
