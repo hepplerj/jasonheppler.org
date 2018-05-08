@@ -3,7 +3,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
   <!-- Enable responsiveness on mobile devices-->
-  <meta name="description" content="A blog on history and technology by historian Jason A. Heppler."/>
+  <meta name="description" content="A blog on history and technology by Jason A. Heppler."/>
   <meta name="author" content="Jason A. Heppler"/>
   <meta name="copyright" content="&copy; Copyright 2008 to Present"/>
   <meta name="HandheldFriendly" content="True">
@@ -14,7 +14,7 @@
   <meta property="twitter:account_id" content="16240799"/>
   <meta http-equiv="cleartype" content="on">
   <meta http-equiv="x-dns-prefetch-control" content="off">
-  <link rel="canonical" href="http://jasonheppler.org/" />
+  <link rel="canonical" href="https://jasonheppler.org/" />
 
   <!-- RDFa Metadata (in DublinCore) -->
   <meta property="dc:title" content="" />
@@ -30,7 +30,7 @@
 
   <!-- RDFa Metadata (in OpenGraph) -->
   <meta property="og:title" content="{% if page.title %}{{ page.title }} &middot; {{ site.title }}{% else %}{{ site.title }} &middot; {{ site.tagline }}{% endif %}" />
-  <meta property="og:author" content="http://jasonheppler.org" />
+  <meta property="og:author" content="https://jasonheppler.org" />
   <meta property="og:site_name" content="Jason Heppler weblog" />
   <meta property="og:url" content="/" />
   <meta property="og:type" content="website" />
@@ -45,9 +45,9 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@jaheppler">
   <meta name="twitter:creator" content="@jaheppler">
-  <meta name="twitter:url" content="http://jasonheppler.org">
+  <meta name="twitter:url" content="https://jasonheppler.org">
   <meta name="twitter:title" content="History, Technology, and Design">
-  <meta name="twitter:description" content="A blog on history and technology by historian Jason A. Heppler.">
+  <meta name="twitter:description" content="A blog on history and technology by Jason A. Heppler.">
 
   <title>
     {% if page.title %}
@@ -60,7 +60,6 @@
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/stylesheets/style.css">
   <link rel="stylesheet" href="/assets/stylesheets/syntax.css">
-  <link rel="stylesheet" href="/assets/stylesheets/rrssb.css">
   <link rel="stylesheet" href="/assets/stylesheets/bigfoot-default.css">
 
   <!-- Javascripts -->
@@ -97,5 +96,21 @@
 
     "author": "Jason A. Heppler" }
   </script>
+
+  <!-- Matomo -->
+  <script type="text/javascript">
+    var _paq = _paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//jasonheppler.org/analytics/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', '1']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
 
 </head>
