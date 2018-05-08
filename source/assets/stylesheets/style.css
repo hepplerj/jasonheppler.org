@@ -15,9 +15,9 @@ body {
 html {
   font-family: "Lato", -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
   text-rendering: optimizeLegibility;
-  line-height: 24px;
+  line-height: 1.75;
   color: #484848;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .clearfix {
@@ -109,13 +109,46 @@ h3.inline-year span::after {
   padding-bottom: 20px;
 }
 
+.limiter {
+  max-width: 1200px;
+  padding: 0 40px;
+}
+
+.project-box {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+a.project {
+  text-decoration: none;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+a.project img {
+  display: block;
+  margin-bottom: 10px;
+}
+
+span.dropcap {
+  font-size: 3.75rem;
+  float: left;
+  margin-right: .15rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
 .intro__main {
   font-size: 2.2rem;
   max-width: 60%;
 }
 
+.list-posts{list-style-type:none;margin:0;padding:0; font-weight: 300;}
+
 .list-items{list-style-type:none;margin:0;padding:0; font-weight: 300;}
-.list-items, p{margin:1rem 0;font-size:1rem}
+/* .list-items{margin:1rem 0;font-size:1rem} */
 
 .list-items li {
   display: block;
@@ -140,11 +173,40 @@ h3.inline-year span::after {
   color: #4A4235;
 }
 
+.list-items .featured {
+  min-height: 200px;
+}
+
 .hero-wrap img {
   max-width: 200px;
   float: right;
   margin-left: 1.5em;
   margin-bottom: 1.5em;
+}
+
+.external-url {
+  font-weight: 300;
+}
+
+p.sublarge {
+  font-size: 1.2em;
+  margin-top: -0.3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  color: #5b666d;
+  line-height: 1.5;
+  position: relative;
+}
+
+p.sublarge::after {
+  width: 4em;
+  position: absolute;
+  content: "";
+  height: 2px;
+  display: block;
+  left: 0;
+  bottom: 0;
+  background: #d6d6d6;
 }
 
 .view-more-posts {
@@ -190,8 +252,6 @@ p {
   margin-bottom: 1rem;
   font-weight: 400;
   line-height: 1.6em;
-  /*font-size: 18px;*/
-  font-size: calc(14px + .25vw);
 }
 
 ul, ul li {
@@ -212,12 +272,22 @@ dd {
 }
 
 hr {
+  height: 3px;
+  border-radius: 3px;
+  background: #e8e8e8;
+  border: none;
+  width: 8rem;
+  margin: 4rem auto 4rem;
+  display: block;
+}
+
+/* hr {
   background-color: #c5c5c5;
   width: 66%;
   height: 1px;
   border: 0;
   /* margin: 2rem auto; */
-}
+} */
 
 abbr {
   font-size: 85%;
@@ -279,17 +349,48 @@ code a {
 
 /* Quotes */
 blockquote {
-  margin: 0 0 20px;
-  padding: 9px 20px 0 19px;
-  border-left: 2px solid rgba(67, 131, 191, 0.3);
-  font-style: italic;
+  position: relative;
+  margin: 0 0 1.5em;
+  padding: 0.75em 1.5em 0.75em;
+  font-size: 1rem;
+  color: #3b3d40;
 }
-blockquote p {
-  color: #4383bf;
+
+blockquote.huge {
+  max-width: 130%;
+  border: none;
+  color: #678;
+  padding: 0;
+  font-size: 1.7rem;
+  margin: 1.7em -15% 1.7em;
 }
-blockquote p:last-child {
-  margin-bottom: 0;
+
+blockquote.pull-right {
+  margin: 0.2rem -20% 0.4rem 1.5rem;
+  float: right;
+  line-height: 1.5;
+  padding: 0;
+  width: 40%;
+  border: none;
+  color: #678;
+  font-size: 1.15rem;
 }
+
+blockquote .author {
+  font-size: 1.2rem;
+}
+
+blockquote::before {
+  position: absolute;
+  content: " ";
+  left: 0;
+  width: 4px;
+  background: #cfd7dd;
+  top: .5em;
+  border-radius: 6px;
+  height: calc(100% - 1em);
+}
+
 @media (min-width: 30rem) {
   blockquote {
     padding-right: 5rem;
@@ -429,7 +530,7 @@ tbody tr:nth-child(odd) th {
 
 /* Content */
 .container {
-  max-width: 45rem;
+  max-width: 42rem;
   padding-left:  1rem;
   padding-right: 1rem;
   margin-left:  auto;
@@ -447,13 +548,12 @@ tbody tr:nth-child(odd) th {
   text-align:left;
 }
 
-aside.post {
+aside {
   padding: 5px 10px;
   margin-bottom: 2em;
   font-size: small;
   background: rgba(0, 0, 0, 0.07);
   line-height: 1.5em;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 aside.cv {
