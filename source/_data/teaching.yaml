@@ -1,5 +1,5 @@
 workshops:
-  - class: "Introduction to Network Analysis (workshop)"
+  - class: "Introduction to Network Analysis"
     location: American Historical Association
     datestart: 2018-01-06 17:00:00 -0800
     dateend:
@@ -8,7 +8,7 @@ workshops:
     description: This workshop emphasizes hands-on learning of working with network data and visualization. Historians working out the complex documentary relationships between people and institutions can often find surprising, or previously unexplored, connections by using network analysis and its visual representations. This workshop will help participants familiarize themselves with basic network-analysis vocabulary as well as using Gephi for network analysis and visualization.
     kind: workshop
 
-  - class: "Introduction to Network Analysis (workshop)"
+  - class: "Introduction to Network Analysis"
     location: Ball State University
     datestart: 2017-05-07 00:00:00 -0800
     dateend: 
@@ -17,7 +17,7 @@ workshops:
     description: This workshop emphasizes hands-on learning of working with network data and visualization. Historians working out the complex documentary relationships between people and institutions can often find surprising, or previously unexplored, connections by using network analysis and its visual representations. This workshop will help participants familiarize themselves with basic network-analysis vocabulary as well as using Gephi for network analysis and visualization.
     kind: workshop
 
-  - class: "Introduction to Network Analysis (workshop)"
+  - class: "Introduction to Network Analysis"
     location: American Historical Association
     datestart: 2017-01-06 00:00:00 -0800
     dateend:
@@ -26,7 +26,7 @@ workshops:
     description: This workshop emphasizes hands-on learning of working with network data and visualization. Historians working out the complex documentary relationships between people and institutions can often find surprising, or previously unexplored, connections by using network analysis and its visual representations. This workshop will help participants familiarize themselves with basic network-analysis vocabulary as well as using Gephi for network analysis and visualization.
     kind: workshop
 
-  - class: Maps and Networks in the Classroom (workshop)
+  - class: Maps and Networks in the Classroom 
     location: Carl Bimson Humanities Seminar, Colorado State University
     datestart: 2016-06-01 00:00:00 -0800
     dateend:
@@ -35,7 +35,7 @@ workshops:
     description: This seminar will emphasize the hands-on learning of working with geospatial and network data, with special attention paid to its application to the classroom. The workshop seeks to prep teachers to instruct their students in various approaches to digital humanities in their classes.
     kind: workshop
 
-  - class: "Teaching Digital History (workshop)"
+  - class: "Teaching Digital History"
     location: Missouri Valley History Conference
     datestart: 2015-04-01 00:00:00 -0800
     dateend:
