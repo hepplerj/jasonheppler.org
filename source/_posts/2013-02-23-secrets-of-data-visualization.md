@@ -3,6 +3,7 @@ layout: post
 title: Secrets of Data Visualization
 external-url: http://www.netmagazine.com/features/seven-dirty-secrets-data-visualisation
 date: 2013-02-23  9:07:13
+category: dataviz
 tags:
 - data visualization
 ---

@@ -5,7 +5,7 @@ date: 2015-06-06 10:26
 image:
     feature:
     thumb:
-categories: podcasts, essay
+categories: 
 tags: 
 - podcast
 post_type: Essay

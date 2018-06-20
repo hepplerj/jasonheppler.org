@@ -5,7 +5,7 @@ date: 2016-12-31 16:29
 image: 
     feature: 
     thumb: 
-categories: 
+categories: hacks 
 tags:
 - digital history
 - conference

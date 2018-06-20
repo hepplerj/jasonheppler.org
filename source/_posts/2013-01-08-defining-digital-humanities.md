@@ -2,7 +2,7 @@
 layout: post
 title: "Defining Digital Humanities"
 date: Tue Jan 08 09:35:31 2013
-category: research
+category: hacks
 tags: 
 - digital humanities
 ---

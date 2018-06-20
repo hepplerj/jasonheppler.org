@@ -5,7 +5,7 @@ date: 2015-09-28 21:12
 image:
     feature:
     thumb:
-categories: hacks
+categories: hacks, javascript
 tags: 
 - data visualization
 - d3js

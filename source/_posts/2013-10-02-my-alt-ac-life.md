@@ -2,7 +2,7 @@
 layout: post
 title: My Alt-Ac Life
 date: 2013-10-02 09:52:27
-categories: [hacks, essay]
+categories: [hacks, dataviz, maps]
 tags:
 - career
 ---

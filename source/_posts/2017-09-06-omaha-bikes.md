@@ -5,7 +5,7 @@ date: 2017-09-06
 image: 
     feature:
     thumb: 
-categories: hacks
+categories: maps 
 tags:
 - omaha
 - cycling

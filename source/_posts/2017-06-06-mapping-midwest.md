@@ -5,7 +5,7 @@ date: 2017-06-06
 image: 
     feature:
     thumb: 
-categories: 
+categories: maps 
 tags:
 - mapping 
 - Midwest

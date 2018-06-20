@@ -2,7 +2,7 @@
 layout: post
 title: "How Silicon Valley industry polluted the sylvan California dream"
 date: 2017-11-16
-categories: research
+categories: hacks
 tags:
 - Silicon Valley
 comments: false

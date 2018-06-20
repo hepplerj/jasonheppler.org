@@ -6,7 +6,7 @@ date: 2014-02-24 21:16:26
 image:
   feature: sj_ponds.jpg
   thumb:
-categories: [essay, research]
+categories: research
 tags:
 - American West
 series: Living West

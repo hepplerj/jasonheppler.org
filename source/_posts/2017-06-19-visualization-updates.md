@@ -5,7 +5,7 @@ date: 2017-06-19
 image: 
     feature:
     thumb: 
-categories: 
+categories: dataviz 
 tags:
 - data visualization 
 comments: false

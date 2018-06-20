@@ -5,7 +5,7 @@ date: 2015-01-02 10:30:26
 image: 
     feature: 
     thumb: 
-categories: [hacks, essay]
+categories: hacks
 post_type: Essay
 tags:
 - dissertation

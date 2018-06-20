@@ -5,7 +5,7 @@ date: 2017-09-21
 image:
     feature:
     thumb:
-categories: research
+categories: maps 
 tags:
 - midwest
 - digital history

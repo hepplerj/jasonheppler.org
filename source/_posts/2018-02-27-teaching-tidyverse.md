@@ -5,7 +5,7 @@ date: 2018-02-27
 image:
     feature:
     thumb:
-categories: Web
+categories: r
 tags:
 - technology
 comments: false

@@ -5,7 +5,7 @@ date: 2017-11-13
 image:
     feature:
     thumb:
-categories: Web
+categories: hacks
 tags:
 - technology
 comments: false

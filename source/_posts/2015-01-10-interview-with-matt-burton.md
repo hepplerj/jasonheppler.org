@@ -5,7 +5,7 @@ date: 2015-01-10  8:05:24
 image: 
     feature: 
     thumb: 
-categories: [hacks, essay]
+categories: hacks
 post_type: Essay
 tags: 
 - digital humanities

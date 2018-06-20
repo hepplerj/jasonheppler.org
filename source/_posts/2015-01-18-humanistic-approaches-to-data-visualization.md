@@ -5,7 +5,7 @@ date: 2015-01-18 20:20:29
 image:
     feature:
     thumb:
-categories: [hacks, essay]
+categories: dataviz 
 post_type: Essay
 tags:
 - data visualization

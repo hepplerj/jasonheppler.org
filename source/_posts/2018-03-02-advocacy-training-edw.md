@@ -5,7 +5,7 @@ date: 2018-03-02
 image:
     feature:
     thumb: http://endangereddataweek.org/img/edw-logo.png
-categories: Web
+categories: security 
 tags:
 - technology
 comments: false
