@@ -60,14 +60,12 @@ google_analytics_tracking_id: UA-12786552-1
 
 # Navigation
 links:
-  - title: About
+  - title: About me
     url: /about/
   - title: Archives
     url: /archives/
-  - title: Research
+  - title: Work 
     url: /research/
-  - title: Speaking
-    url: /speaking/
   - title: Teaching
     url: /teaching/
 
