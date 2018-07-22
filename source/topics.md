@@ -14,7 +14,7 @@ permalink: /topics/
 
 <p>View as <a href="/archives/">Chronological</a> | <strong>Topics</strong></p>
 
-<h2>Posts about Digital Humanities</h2>
+<h3>Posts about Digital Humanities</h3>
 
 <p>Writing about the field of digital humanities.</p>
 
@@ -26,7 +26,7 @@ permalink: /topics/
 {% endfor %}
 </ul>
 
-<h2>Posts about Decentralization / Privacy / Open Web</h2>
+<h3>Posts about Decentralization / Privacy / Open Web</h3>
 
 <p>Writing on decentralization, privacy, and Internet health.</p>
 
@@ -39,7 +39,7 @@ permalink: /topics/
 </ul>
 
 
-<h2>Posts about JavaScript</h2>
+<h3>Posts about JavaScript</h3>
 
 <p>My primary language for building interactive data visualizations.</p>
 
@@ -51,7 +51,7 @@ permalink: /topics/
 {% endfor %}
 </ul>
 
-<h2>Posts about R</h2>
+<h3>Posts about R</h3>
 
 <p>My other go-to language for data science, exploration, and visualization.</p>
 
@@ -63,7 +63,7 @@ permalink: /topics/
 {% endfor %}
 </ul>
 
-<h2>Posts about Maps</h2>
+<h3>Posts about Maps</h3>
 
 <p>Maps, geography, space, and place.</p>
 
@@ -75,7 +75,7 @@ permalink: /topics/
 {% endfor %}
 </ul>
 
-<h2>Posts about Data Visualization</h2>
+<h3>Posts about Data Visualization</h3>
 
 <p>Projects and experiments in visualizing data.</p>
 
@@ -88,7 +88,7 @@ permalink: /topics/
 </ul>
 
 
-<h2>Posts about Teaching</h2>
+<h3>Posts about Teaching</h3>
 
 <p>Writing about teaching, workshops, syllabuses, and so on.</p>
 
