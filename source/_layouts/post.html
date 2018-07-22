@@ -20,6 +20,10 @@ layout: default
   {% if page.external-url %}
   <p class="link-post-out"><i class="fa fa-link"></i> <a href="{{ page.external-url }}">{{ page.title }} →</a></p>
   {% endif %}
+
+  {% if page.medium_crosspost %}
+  <p class="crosspost"><i class="fab fa-medium"></i> <a href="{{ post.medium_crosspost }}">Cross-posted at {{ page. title }}</a></p>
+  {% endif %}
 </div>
 
 <div class="essay-info">
