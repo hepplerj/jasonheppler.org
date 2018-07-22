@@ -3,7 +3,7 @@ layout: post
 title: "The Budget Guide to NCPH"
 date: 2015-03-22 08:35
 external-url: http://elizabethcatte.com/2015/01/27/the-budget-guide-to-nashville-ncph2015/
-categories: linkblog
+categories: excerpt
 tags: 
 - conference
 - public history
