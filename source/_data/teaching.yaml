@@ -1,4 +1,36 @@
 workshops:
+  - class: "Introduction to Github"
+    location: University of Nebraska at Omaha 
+    datestart: 2017-05-23 17:00:00 -0800
+    dateend:
+    url: https://github.com/endangereddataweek/resources/tree/master/workshop-introduction-to-github 
+    semester: Spring 2017
+    description: 
+    kind: workshop
+  - class: "Introduction to Data Manipulation with R"
+    location: University of Nebraska at Omaha 
+    datestart: 2018-02-28 17:00:00 -0800
+    dateend:
+    url: https://github.com/endangereddataweek/resources/tree/master/workshop-r-data-manipulation 
+    semester: Spring 2018
+    description: 
+    kind: workshop
+  - class: "Introduction to Data Visualization with R"
+    location: University of Nebraska at Omaha 
+    datestart: 2018-02-28 17:00:00 -0800
+    dateend:
+    url: https://github.com/endangereddataweek/resources/tree/master/workshop-r-data-visualization
+    semester: Spring 2018
+    description: 
+    kind: workshop
+  - class: "Web Scraping with R"
+    location: University of Nebraska at Omaha 
+    datestart: 2017-05-22 17:00:00 -0800
+    dateend:
+    url: https://github.com/endangereddataweek/resources/tree/master/workshop-r-web-scraping
+    semester: Spring 2018
+    description: 
+    kind: workshop
   - class: "Introduction to Network Analysis"
     location: American Historical Association
     datestart: 2018-01-06 17:00:00 -0800
