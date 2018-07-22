@@ -8,7 +8,7 @@ Some of the classes and workshops I have offered in recent years, including poin
 
 I currently run digital research workshops focused on **network analysis**, **spatial analysis**, and **data visualization**. If your company, university, institution, or lab could benefit from a full or half-day workshop on one of these topics, I'd love to help provide one! Workshops come full with practical examples, exercises, and insights that attendees can take away and apply immediately.
 
-## Term-length Courses
+### Term-length Courses
 
 {% assign courses = site.data.teaching.classes | sort: 'datestart' | reverse %}
 {% for class in courses %}
@@ -22,7 +22,7 @@ I currently run digital research workshops focused on **network analysis**, **sp
 </ul>
 {% endfor %}
 
-## Workshops
+### Workshops
 
 {% assign workshops = site.data.teaching.workshops | sort: 'datestart' | reverse %}
 {% for class in workshops %}
@@ -35,14 +35,3 @@ I currently run digital research workshops focused on **network analysis**, **sp
   ({{ class.semester }})
 </ul>
 {% endfor %}
-
-## Posts
-
-<ul class="list-items">
-{% for post in site.categories.teaching %}
-    <li>
-        <span>{{ post.date | date: "%B %e, %Y" | ordinalize  }}</span>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-{% endfor %}
-</ul>
