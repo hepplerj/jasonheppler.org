@@ -5,7 +5,8 @@ date: 2017-07-05
 image:
     feature:
     thumb:
-categories: security 
+categories: 
+- open web 
 tags:
 - technology
 comments: false

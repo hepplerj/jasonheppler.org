@@ -4,7 +4,7 @@ title: Full Trash
 date: 2012-03-03 22:33:40
 tags:
 - personal
-category: Original
+category: Hepp
 ---
 ![Trashcan](http://www.jasonheppler.org/images/trash.png "Trashcan")
 

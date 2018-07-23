@@ -7,7 +7,7 @@ external-url: http://www.wired.com/2014/04/blue-bottle-tonx-handsome/all/1
 image:
   feature:
   thumb:
-categories: [linked]
+categories: coffee
 tags:
 - coffee
 ---

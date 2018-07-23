@@ -5,7 +5,8 @@ date: 2017-06-06
 image: 
     feature:
     thumb: 
-categories: maps 
+categories: 
+- digital humanities
 tags:
 - mapping 
 - Midwest

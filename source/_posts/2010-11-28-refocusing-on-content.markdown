@@ -6,7 +6,7 @@ date: 2010-11-28 00:24:07 -06:00
 wordpress_url: http://www.jasonheppler.org/?p=470
 tags:
 - writing
-category: Original
+category: excerpt
 ---
 <a href="http://writetodone.com/2009/03/05/how-to-write-quality-posts-when-you-have-a-day-job/">Leo Babauta</a>:
 

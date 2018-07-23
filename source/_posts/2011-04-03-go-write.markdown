@@ -5,7 +5,7 @@ date: 2011-04-03 12:05:23 -05:00
 external-url: http://blog.frankchimero.com/post/4212953701/tweeting-and-writing-and-deflating-like-a-balloon
 tags:
 - writing
-category: Link
+categories: excerpt
 ---
 
 [Frank Chimero](http://blog.frankchimero.com/post/4212953701/tweeting-and-writing-and-deflating-like-a-balloon): 

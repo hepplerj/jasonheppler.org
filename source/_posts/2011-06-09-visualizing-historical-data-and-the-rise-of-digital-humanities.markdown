@@ -7,7 +7,7 @@ tags:
 - digital history
 - data visualization
 - data
-category: Link
+categories: excerpt
 ---
 
 [David Zax](http://www.fastcompany.com/1758538/the-rise-of-digital-humanities): 

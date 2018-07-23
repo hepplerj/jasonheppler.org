@@ -4,8 +4,8 @@ title: Evernote Reminders
 description: 
 date: 2013-07-31 22:11:55
 external-url: http://blog.evernote.com/blog/2013/05/23/evernote-reminders-are-here-on-mac-ios-and-web-2/
-categories:
-- technology
+categories: 
+- tech life
 tags:
 - review
 ---

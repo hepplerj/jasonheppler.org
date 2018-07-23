@@ -6,8 +6,8 @@ date: 2010-10-08 22:05:22 -05:00
 wordpress_url: http://www.jasonheppler.org/?p=330
 tags:
 - open access
+category:
 - digital humanities
-category: Original
 ---
 <em>[This post <a href="http://whadigitalfrontiers.wordpress.com/2010/10/05/open-access-scholarship-and-computers-in-the-humanities/">originally appeared</a> on the <a href="http://whadigitalfrontiers.wordpress.com/">WHA Digital Frontiers</a> blog on October 5, 2010.  I've reproduced it here.  Many thoughts in this piece echo some early ideas I started considering in "<a href="http://www.jasonheppler.org/2008/11/08/open-source-scholarship-and-why-history-should-be-open-source/">Open Source Scholarship</a>."]</em>
 

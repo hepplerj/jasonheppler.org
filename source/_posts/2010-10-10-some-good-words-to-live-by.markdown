@@ -6,7 +6,7 @@ date: 2010-10-10 08:56:58 -05:00
 external-url: http://en.wikipedia.org/wiki/Hackers:_Heroes_of_the_Computer_Revolution
 tags:
 - personal
-category: Link
+categories: excerpt
 ---
 The Hacker Ethic:
 

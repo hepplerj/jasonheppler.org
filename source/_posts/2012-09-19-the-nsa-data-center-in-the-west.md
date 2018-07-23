@@ -7,7 +7,7 @@ tags:
 - American West
 - dissertation
 - research
-category: Link
+categories: excerpt
 ---
 [Wired covers the construction of a top-secret National Security Agency building in Utah](http://www.wired.com/threatlevel/2012/03/ff_nsadatacenter/all/1) that will analyze digital communication:
 

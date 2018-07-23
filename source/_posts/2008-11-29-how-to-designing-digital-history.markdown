@@ -5,9 +5,9 @@ date: 2008-11-29 12:12:29 -06:00
 tags:
 - design
 - digital history
-category: teaching
+category: design
 ---
-Our digital history seminar  is currently in the midst of designing  our digital projects and has gotten me thinking about how to design  digital scholarship and the tools that are available for helping in the  construction of projects.  Beginners to digital history are somewhat  daunted by the design process.  The lingo of web design - HTML, CSS,  Javascript, XML, metadata, hypertext - seems like an endless alphabet of  ambiguous elements in the digital environment. This post means to  highlight some tools and resources digital humanists might find useful  in constructing their own projects, as well as impart some of my  first-hand experience thus far in the design process.
+Our digital history seminar is currently in the midst of designing  our digital projects and has gotten me thinking about how to design  digital scholarship and the tools that are available for helping in the  construction of projects.  Beginners to digital history are somewhat  daunted by the design process.  The lingo of web design - HTML, CSS,  Javascript, XML, metadata, hypertext - seems like an endless alphabet of  ambiguous elements in the digital environment. This post means to  highlight some tools and resources digital humanists might find useful  in constructing their own projects, as well as impart some of my  first-hand experience thus far in the design process.
 
 Like it or  not, the truth is that <a href="http://chnm.gmu.edu/digitalhistory/designing/" target="_blank">good design matters</a>.  Dan Cohen <a href="http://www.dancohen.org/2008/11/12/design-matters/" target="_blank">points out </a>that digital history must be useful and  used -- useful because users can explore and learn from digital  projects, and used because users utilize the resource and spread the  word about the project.  We've all probably stumbled upon poor websites  with eye-straining backgrounds, flashing items, text and images spread  everywhere, and a lack of a coherent layout or navigation (check out  some of the pages featured on <a href="http://www.webpagesthatsuck.com/" target="_blank">Web Pages that Suck</a>).
 

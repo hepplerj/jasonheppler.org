@@ -3,7 +3,8 @@ layout: post
 title: Digital History Interview with BlogWest
 description:
 date: 2013-12-17 19:45:10
-categories: [hacks, essay]
+categories: 
+- digital humanities
 tags:
 - digital history
 - American West

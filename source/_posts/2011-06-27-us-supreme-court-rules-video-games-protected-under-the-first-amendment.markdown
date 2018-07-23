@@ -6,7 +6,7 @@ external-url: http://www.nytimes.com/2011/06/28/us/28scotus.html
 tags:
 - digital humanities
 - gaming
-category: Link
+categories: excerpt
 ---
 [New York Times](http://www.nytimes.com/2011/06/28/us/28scotus.html):
 

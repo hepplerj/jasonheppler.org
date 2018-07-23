@@ -3,8 +3,7 @@ layout: post
 title: Getting Started with D3
 description: Some resources for getting started with D3.js.
 date: 2013-08-06 22:14:20
-categories:
-- hacks
+categories: programming
 tags:
 - d3js
 - javascript

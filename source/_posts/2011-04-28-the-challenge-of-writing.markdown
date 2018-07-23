@@ -5,7 +5,7 @@ date: Thu Apr 28 15:10:51 -0500 2011
 external-url: http://www.boston.com/news/local/articles/2006/12/31/columnist_donald_murray_dies_at_82/
 tags:
 - writing
-category: Link
+categories: excerpt
 ---
 [Don Murray](http://www.boston.com/news/local/articles/2006/12/31/columnist_donald_murray_dies_at_82/):
 

@@ -6,7 +6,7 @@ date: Thu Feb 02 09:20:33 -0600 2012
 category: full
 tags: 
 - personal
-category: Original
+category: Hepp
 ---
 
 Over the past few months I took up the Paleo diet. Since then, a lot of people have asked me about it. Paleo isn't so much a diet as a lifestyle change that eliminates glutens, refined sugars, among other things. Paleo isn't all that new, popularized in the 1970s but stretches back further, and differs in some ways from other low carb and slow carb diets.

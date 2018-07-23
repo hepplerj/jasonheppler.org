@@ -6,7 +6,8 @@ date: Thurs Oct 13 17:03:39 -0500 2011
 tags: 
 - writing
 - digital history
-category: research
+category: 
+- digital humanities
 ---
 
 *[This is a reading reflection for HIST946: Digital Humanities with Professor William

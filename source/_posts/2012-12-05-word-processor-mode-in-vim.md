@@ -5,7 +5,8 @@ date: 2012-12-05 22:48:56
 tags:
 - vim
 - writing
-category: hacks
+category: 
+- tech life
 ---
 
 One of my favorite functions I have added to

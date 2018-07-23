@@ -5,7 +5,7 @@ date: 2012-05-15 16:16:56
 external-url: https://worldaeropresschampionship.wordpress.com/recipes/
 tags:
 - coffee
-category: linked
+categories: coffee
 ---
 
 [AeroPress recipes from the World AeroPress Championship](https://worldaeropresschampionship.wordpress.com/recipes/). Yes, this exists.

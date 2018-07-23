@@ -4,7 +4,7 @@ title: Grad Students Guide to Good Coffee
 date: 2012-09-24 20:27:38
 tags:
 - coffee
-category: articles
+category: coffee
 ---
 *[This post originally appeared at [Gradhacker](http://www.gradhacker.org/2012/09/24/grad-students-guide-to-good-coffee/) on 2012-09-24]*
 

@@ -6,7 +6,8 @@ date: Thu Oct 27 09:51:58 -0500 2011
 tags: 
 - digital history
 - open access
-category: research
+category: 
+- digital humanities
 ---
 
 *[In lieu of a reading reflection this week for HIST946: Digital Humanities, we were tasked with reading an essay or two from [Writing History in the Digital Age](http://writinghistory.trincoll.edu/) that is currently open for public peer review. I read Frederick W. Gibbs and Trevor Owens, "[The Hermeneutics of Data and Historical Writing](http://writinghistory.trincoll.edu/data/hermeneutics-of-data-and-historical-writing-gibbs-owens/). You can find related posts [here](https://jasonheppler.org/the-digital-humanities-seminar.html)."]*

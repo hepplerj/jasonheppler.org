@@ -6,7 +6,8 @@ date: 2014-04-08 10:27:52
 image:
   feature:
   thumb:
-categories: [maps, hacks]
+categories: 
+- digital humanities
 tags:
 - digital humanities
 ---

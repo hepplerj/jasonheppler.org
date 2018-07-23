@@ -5,9 +5,10 @@ date: 2018-02-27
 image:
     feature:
     thumb:
-categories: r
+categories: programming
 tags:
 - technology
+- r
 comments: false
 medium: "https://medium.com/@jaheppler/teaching-the-tidyverse-to-r-novices-7747e8ce14e"
 ...

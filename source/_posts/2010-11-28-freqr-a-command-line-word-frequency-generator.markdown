@@ -6,9 +6,9 @@ date: 2010-11-28 10:05:47 -06:00
 wordpress_url: http://www.jasonheppler.org/?p=498
 tags:
 - ruby
-- code
 - text analysis
-category: Original
+category: 
+- programming
 ---
 I wrote this simple Ruby program while enrolled in Prof. Steve Ramsay's Electronic Text course.  I'm releasing it into the wild for anyone that might find it useful.  You'll need to have Ruby installed on your machine to run the program.  Simply pass the program a file name and it will output to the screen a numerically-sorted list of word frequencies.  <!--more-->
 

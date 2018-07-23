@@ -5,7 +5,7 @@ external-url: http://www.salon.com/1999/10/28/internet_2/print/
 date: 2012-09-27 17:33:23
 tags:
 - dissertation
-category: Link
+categories: excerpt
 ---
 
 In 1999 [Paulina Borsook lamented the changes happening in her home town of San Francisco](http://www.salon.com/1999/10/28/internet_2/print/) in the wake of dot-com entrepreneurs :

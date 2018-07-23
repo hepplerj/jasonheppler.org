@@ -5,8 +5,8 @@ date: 2015-01-02 10:30:26
 image: 
     feature: 
     thumb: 
-categories: hacks
-post_type: Essay
+categories: 
+- digital humanities
 tags:
 - dissertation
 - research

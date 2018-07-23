@@ -3,7 +3,7 @@ layout: post
 title: "First Draft Podcast: Humanities Savior Narrative"
 date: 2014-07-22 14:35:28
 external-url: http://www.firstdraftpodcast.com/post/92555886158/s1e7-humanities-savior-narrative-glen-worthey
-categories: [hacks, linkblog]
+categories: excerpt
 tags: 
 - podcast
 ---

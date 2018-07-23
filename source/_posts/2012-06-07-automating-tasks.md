@@ -4,7 +4,8 @@ title: A Few New Scripts
 date: 2012-06-07 19:18:08
 tags:
 - bash
-category: research
+category: 
+- tech life
 ---
 
 Here's a few nerdy bits I've been working on lately in my free time -- just a few scripts that I've been using to take care of things on my Mac automatically.

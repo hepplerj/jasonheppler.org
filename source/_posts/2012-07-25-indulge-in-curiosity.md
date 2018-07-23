@@ -5,7 +5,7 @@ date: 2012-07-25  8:12:07
 external-url: http://www.wired.com/epicenter/2011/10/jobs/all/1
 tags:
 - personal
-category: Link
+categories: excerpt
 ---
 [Steve Jobs](http://www.wired.com/epicenter/2011/10/jobs/all/1):
 

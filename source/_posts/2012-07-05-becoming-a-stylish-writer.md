@@ -5,7 +5,7 @@ date: 2012-07-05 21:59:41
 external-url: http://chronicle.com/article/Becoming-a-Stylish-Writer/132677/
 tags:
 - writing
-category: Link
+categories: excerpt
 ---
 
 [Rachel Toor argues for academic writing](http://chronicle.com/article/Becoming-a-Stylish-Writer/132677/) that is engaging for a wider audience:

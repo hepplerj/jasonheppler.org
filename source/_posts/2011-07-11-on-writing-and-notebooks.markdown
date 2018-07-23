@@ -4,7 +4,7 @@ title: "On Writing and Notebooks"
 date: Tue Jul 12 08:30:00 -0500 2011
 tags:
 - writing
-category: Original
+category: Hepp
 ---
 
 [Episode 23 of Back to Work](http://5by5.tv/b2w/23) is officially my favorite episode so far. There are a lot of great messages in the entire episode, but I was interested in Merlin Mann's discussion of notebooks and writing.

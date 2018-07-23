@@ -6,7 +6,7 @@ external-url: http://chronicle.com/blogs/wiredcampus/gaming-the-archives/31435
 tags:
 - digital humanities
 - gaming
-category: Link
+categories: excerpt
 ---
 [Jennifer Howard](http://chronicle.com/blogs/wiredcampus/gaming-the-archives/31435):
 

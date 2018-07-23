@@ -5,7 +5,7 @@ external-url: http://training.github.com/
 date: 2012-10-08 16:48:14
 tags:
 - code
-category: Link
+categories: excerpt
 ---
 Github has announced a new site called [GitHub:Training](http://training.github.com/): 
 

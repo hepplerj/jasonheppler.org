@@ -5,7 +5,7 @@ date: 2011-03-15 11:57:23 -05:00
 external-url: http://player.vimeo.com/video/20290657
 tags:
 - career
-category: Link
+categories: excerpt
 ---
 Some good and timely advice from Seth Godin. Useful as I embark on my new job as a project manager for the <a href="http://codypapers.org/">William F. Cody Archive</a>, but also applies to life in general.
 

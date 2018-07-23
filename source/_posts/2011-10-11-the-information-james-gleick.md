@@ -5,7 +5,7 @@ date: Tue Oct 11 14:29:56 -0500 2011
 tags:
 - review
 - digital history
-category: Review
+category: academia
 ---
 
 I just finished reading James Gleick's [The Information: A History, a Theory, a

@@ -6,7 +6,7 @@ date: Thu Jan 05 10:12:16 -0600 2012
 tags: 
 - conference
 - digital history
-category: Academe
+category: academia
 ---
 
 I'm excited to be attending the American Historical Association meeting in Chicago, not only because it is my first AHA but also because of the great number of sessions on Digital History. Kaci Nash, Leslie Working, and myself will be blogging at [The Digital History Project blog](https://digitalhistory.wordpress.com/) summarizing as many of the sessions as we can at the end of each day. We will also be live tweeting from as many as we can. You can follow tweets about the AHA with [#AHA2012](https://twitter.com/#!/search/%23aha2012).

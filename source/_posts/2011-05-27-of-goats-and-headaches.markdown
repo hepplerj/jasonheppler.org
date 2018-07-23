@@ -6,7 +6,7 @@ external-url: http://www.economist.com/node/18744177
 tags:
 - digital humanities
 - libraries
-category: Link
+categories: excerpt
 ---
 [The Economist](http://www.economist.com/node/18744177):
 

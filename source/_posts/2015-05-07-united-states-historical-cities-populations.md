@@ -6,7 +6,8 @@ external-url: https://github.com/cestastanford/historical-us-city-populations
 image:
     feature:
     thumb:
-categories: hacks, linkblog
+categories: 
+- digital humanities
 tags:
 - gis
 - data

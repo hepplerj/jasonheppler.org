@@ -5,7 +5,8 @@ title: "Latour and the Social"
 date: Thu Oct 20 10:52:40 -0500 2011
 tags:
 - digital history
-category: research
+category: 
+- digital humanities
 ---
 
 *[This is a reading reflection for HIST946: Digital Humanities with Professor William

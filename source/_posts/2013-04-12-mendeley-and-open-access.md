@@ -5,7 +5,7 @@ date: 2013-04-12  9:48:46
 external-url: http://www.zephoria.org/thoughts/archives/2013/04/11/mendeley-elsevier.html
 tags:
 - open access
-category: hacks
+category: academia
 ---
 [danah boyd](http://www.zephoria.org/thoughts/archives/2013/04/11/mendeley-elsevier.html):
 
@@ -14,14 +14,4 @@ category: hacks
 > I see no indication of a reformed Elsevier, no indication of a path forward that is actually respectful of scholars, scholarship, librarians, or universities. All I see is a company looking to make a profit in an unethical manner and trying to assuage angry customers and laborers with small tokens.
 
 There's a lot to agree with in danah's post. I tried out Mendeley some
-time ago but never got on the platform, instead preferring Zotero (which
-		I've been using for almost 5 years now). But more importantly,
-	 for me, isn't what happened to Mendeley. I was never a user of the
-	 service so their purchase doesn't affect me in any tangible way.
-	 But danah's larger point about open access and the labor of
-	 scholars is key. The knowledge and information we create as
-	 scholars shouldn't be locked behind expensive silos or straining
-	 library budgets with exorbitant subscriptions. We have an
-	 [obligation](https://jasonheppler.org/2011/10/25/the-obligation-of-open-access.html)
-	 to make our work available to anyone who might be interested in
-	 accessing it.
+time ago but never got on the platform, instead preferring Zotero (which I've been using for almost 5 years now). But more importantly, for me, isn't what happened to Mendeley. I was never a user of the service so their purchase doesn't affect me in any tangible way. But danah's larger point about open access and the labor of scholars is key. The knowledge and information we create as scholars shouldn't be locked behind expensive silos or straining library budgets with exorbitant subscriptions. We have an [obligation](https://jasonheppler.org/2011/10/25/the-obligation-of-open-access.html) to make our work available to anyone who might be interested in accessing it.

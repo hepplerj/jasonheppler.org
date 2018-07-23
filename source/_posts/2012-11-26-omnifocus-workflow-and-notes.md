@@ -4,6 +4,8 @@ title: OmniFocus Workflow and Notes
 date: 2012-11-26 20:50:52
 tags:
 - academia
+category: 
+- tech life
 ---
 
 [Gabe Weatherhead](http://www.macdrifter.com/2012/11/omnifocus-workflow-and-notes-link.html) points to Sean Korzdorfer's [great outline on how he uses OmniFocus and notes](http://www.seankorzdorfer.com/open_notebook/omnifocus%20work%20flow%20and%20notes.html). I was particularly interested in his time-based contexts:

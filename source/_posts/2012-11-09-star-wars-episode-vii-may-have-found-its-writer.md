@@ -5,7 +5,7 @@ external-url: http://www.vulture.com/2012/11/star-wars-episode-vii-may-have-foun
 date: 2012-11-09  9:26:22
 tags:
 - personal
-category: Link
+categories: excerpt
 ---
 
 [Claude Brodesser-Akner says that Star Wars Episode VII may be written by Michael Arndt](http://www.vulture.com/2012/11/star-wars-episode-vii-may-have-found-its-writer.html):

@@ -5,7 +5,7 @@ date: 2016-01-06 14:41
 image:
   feature:
   thumb:
-categories: Maps 
+categories: design 
 tags:
 - American West
 - politics

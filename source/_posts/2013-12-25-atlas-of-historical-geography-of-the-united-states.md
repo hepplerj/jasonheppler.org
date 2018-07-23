@@ -3,8 +3,8 @@ layout: post
 title: Atlas of Historical Geography of the United States
 external-url: http://dsl.richmond.edu/historicalatlas/
 date: 2013-12-26 09:52:15
-categories:
-- hacks
+categories: 
+- digital humanities
 tags:
 - gis
 - spatial history

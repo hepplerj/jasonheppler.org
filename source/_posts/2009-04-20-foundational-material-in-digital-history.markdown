@@ -7,7 +7,8 @@ wordpress_url: http://www.jasonheppler.org/?p=57
 tags:
 - teaching
 - digital history
-category: teaching
+category:
+- digital humanities
 ---
 <a href="http://transducer.ontoligent.com/archives/250" target="_blank">This post</a> by Rafael Alvarado has been making the rounds on Twitter and got me thinking about, more specifically, what material would be a useful introduction to digital history (as opposed to digital humanities).  Here's my list in chronological order:
 <ol>

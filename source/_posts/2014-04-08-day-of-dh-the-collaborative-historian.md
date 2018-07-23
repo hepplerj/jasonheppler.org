@@ -6,7 +6,8 @@ date: 2014-04-08 14:46:13
 image:
   feature:
   thumb:
-categories: [essay, hacks]
+categories: 
+- digital humanities
 tags: 
 - digital humanities
 ---

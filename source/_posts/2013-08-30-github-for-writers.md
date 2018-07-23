@@ -4,7 +4,7 @@ title: Github for Writers
 description: 
 date: 2013-08-30 12:09:13
 external-url: http://madebyloren.com/github-for-writers
-categories: [linked]
+categories: excerpt
 tags:
 - academia
 ---

@@ -3,7 +3,7 @@ layout: post
 title: Research Design and Geography of the Post
 date: 2014-10-30 08:57:21
 modified: 2014-10-30 08:57:31
-categories: [hacks, maps]
+categories: design
 tags: 
 - gis
 - data visualization

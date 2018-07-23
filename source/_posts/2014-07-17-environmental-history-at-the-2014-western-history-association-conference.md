@@ -5,8 +5,7 @@ date: 2014-07-17 15:22:41
 image: 
     feature: 
     thumb: 
-categories: [research, shorts]
-post_type: Shorts
+categories: academia
 tags:
 - conference
 - environmental history

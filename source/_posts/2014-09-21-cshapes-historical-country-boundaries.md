@@ -3,7 +3,7 @@ layout: post
 title: "CShapes: Historical Country Boundaries"
 date: 2014-09-21 21:30:34
 external-url: http://nils.weidmann.ws/projects/cshapes/
-categories: [hacks, linkblog]
+categories: excerpt
 tags:
 - data
 - gis

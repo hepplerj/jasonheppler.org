@@ -5,7 +5,7 @@ date: 2012-05-10  9:25:45
 external-url: http://www.theparisreview.org/interviews/4825/the-art-of-fiction-no-21-ernest-hemingway
 tags:
 - writing
-category: Link
+categories: writing
 ---
 
 [Ernest Hemingway in a 1958 interview with George Plimpton](http://www.theparisreview.org/interviews/4825/the-art-of-fiction-no-21-ernest-hemingway):

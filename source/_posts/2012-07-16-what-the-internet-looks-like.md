@@ -5,7 +5,7 @@ external-url: http://www.theatlantic.com/technology/archive/2012/07/what-the-int
 date: 2012-07-16 20:47:29
 tags:
 - technology
-category: Link
+categories: excerpt
 ---
 
 ![Internet](https://jasonheppler.org/images/netmap2.jpg "Internet")

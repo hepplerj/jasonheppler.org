@@ -3,8 +3,8 @@ layout: post
 title: Don't Forget Google Reader Goes Dark Monday
 description: 
 date: 2013-06-27 15:28:43
-categories:
-- Technology
+categories: 
+- tech life
 tags:
 - technology
 ---

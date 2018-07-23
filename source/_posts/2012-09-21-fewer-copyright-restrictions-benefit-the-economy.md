@@ -5,7 +5,7 @@ external-url: https://www.eff.org/deeplinks/2012/09/copyright-and-campaign-misin
 date: 2012-09-21 20:47:20
 tags:
 - digital humanities
-category: Link
+categories: excerpt
 ---
 [The Electronic Frontier Foundation reports](https://www.eff.org/deeplinks/2012/09/copyright-and-campaign-misinformation-new-study-affirms-less-copyright) that Australia has found that loosening copyright restrictions has an overall affect of improving the economy:
 

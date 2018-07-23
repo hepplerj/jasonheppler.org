@@ -3,8 +3,8 @@ layout: post
 title: Using Editorial and Bibkeys Together
 description: Using Editorial with Bibkeys for citation management. 
 date: 2013-08-21 10:43:15
-categories:
-- Hacks
+categories: 
+- tech life
 tags:
 - review 
 ---

@@ -5,7 +5,8 @@ title: "Who Controls the Master Switch"
 date: Thu Nov 17 10:43:15 -0600 2011
 tags: 
 - digital history
-category: research
+category: 
+- digital humanities
 ---
 
 *[This is a reading reflection for HIST946: Digital Humanities for Prof. William G. Thomas during the Fall 2011 semester. This week's readings was Tim Wu, *[The Master Switch: The Rise and Fall of Information Empires](http://www.amazon.com/Master-Switch-Information-Empires-Vintage/dp/0307390993/ref=sr_1_1?s=books&ie=UTF8&qid=1322756473&sr=1-1)*. You can find related posts [here](https://jasonheppler.org/the-digital-humanities-seminar.html).]*

@@ -5,7 +5,7 @@ date: Sat May 18 10:59:13 -0500 2011
 external-url: http://www.instapaper.com/faq
 tags:
 - writing
-category: Link
+categories: excerpt
 ---
 
 [Marco Arment](http://www.instapaper.com/faq):

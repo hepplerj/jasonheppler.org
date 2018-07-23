@@ -7,7 +7,7 @@ external-url: http://www.youtube.com/embed/JUs7iG1mNjI
 tags:
 - technology
 - dissertation
-category: Link
+categories: excerpt
 ---
 An interesting video from 1994 of journalists trying to wrap their heads around the idea of the Internet, via <a href="http://thinkvitamin.com/asides/what-is-internet/">Ryan Carson</a>:
 

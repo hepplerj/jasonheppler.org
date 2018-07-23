@@ -6,7 +6,8 @@ date: 2011-01-16 21:42:00 -06:00
 tags:
 - personal
 - technology
-category: Original
+category: 
+- tech life
 ---
 <a href="http://www.forbes.com/2010/04/05/google-facebook-twitter-technology-security-10-privacy.html">Bruce Schneier</a> on privacy:
 

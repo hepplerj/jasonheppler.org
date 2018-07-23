@@ -4,8 +4,7 @@ title: A Simple Ruby NGram Generator
 date: 2012-04-24 15:45:43
 tags:
 - ruby
-- code
-category: research
+category: programming
 ---
 
 I was playing around with Ruby the other night and wrote a simple n-gram generator. In case anyone is interested, here is the script:

@@ -5,7 +5,7 @@ date: Wed Jun 29 10:50:44 -0500 2011
 external-url: http://www.nytimes.com/1982/06/14/us/study-says-technology-could-transform-society.html
 tags:
 - dissertation
-category: Link
+categories: excerpt
 ---
 [This New York Times article from 1982 writes about a National Science Foundation study speculating on the impact of internet technology](http://www.nytimes.com/1982/06/14/us/study-says-technology-could-transform-society.html). Some interesting -- and not too far off -- predictions:
 

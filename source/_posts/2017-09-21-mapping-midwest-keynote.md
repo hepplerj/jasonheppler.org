@@ -5,7 +5,8 @@ date: 2017-09-21
 image:
     feature:
     thumb:
-categories: maps 
+categories: 
+- digital humanities 
 tags:
 - midwest
 - digital history

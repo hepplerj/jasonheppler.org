@@ -6,7 +6,8 @@ date: 2010-10-08 21:41:06 -05:00
 wordpress_url: http://www.jasonheppler.org/?p=313
 tags:
 - personal
-category: Original
+category:
+- tech life
 ---
 I'm considering going back to a blog format rather than launch page format for the site.  I'll be toying around with this minimalist theme (<a href="http://shaheeilyas.com/barecity/">barecity</a>) for a while and see if I like it.  Watch for the pages to return soon once I reformat them to fit the new theme.
 

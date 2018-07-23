@@ -4,7 +4,8 @@ title: "Organizing Knowledge and the Future of the Humanities"
 date: Mon Sept 01 12:17:36 -0600 2011
 tags:
 - digital history
-category: research
+category: 
+- digital humanities
 ---
 
 *[This is a thought piece written for HIST946: Digital Humanities with Professor William Thomas during the Fall 2011 semester. You can find related posts [here](https://jasonheppler.org/the-digital-humanities-seminar.html).]*

@@ -5,7 +5,7 @@ date: 2011-03-04 00:19:09 -06:00
 external-url: http://kottke.org/11/03/upgrading-windows-from-10-to-70
 tags:
 - technology
-category: Link
+categories: excerpt
 ---
 Some guy upgrades his computer through every version of Windows starting with a clean install of MS-DOS 5.0 all the way through Windows 7, via <a href="http://kottke.org/11/03/upgrading-windows-from-10-to-70">Jason Kottke</a>:
 

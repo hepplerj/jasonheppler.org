@@ -4,7 +4,7 @@ title: "Silicon Valley and the Cold War"
 date: Wed Jun 29 21:13:22 -0500 2011
 tags:
 - dissertation
-category: Academe
+category: academia
 ---
 
 An interesting presentation on the military history of Silicon Valley. The topic is right up my alley since my research agenda has shifted recently to computers and the North American West.

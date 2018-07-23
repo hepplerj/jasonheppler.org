@@ -4,7 +4,8 @@ title: Using Text Expansion in My Research Workflow
 date: 2012-12-07 08:00:00
 tags:
 - review
-category: hacks
+category: 
+- tech life
 ---
 *[This post originally appeared at [GradHacker](http://www.gradhacker.org/2012/12/07/using-text-expansion-software-in-your-workflow/) on 2012-12-06]*
 

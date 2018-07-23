@@ -6,7 +6,7 @@ date: Sat Dec 17 15:43:45 -0700 2011
 tags:
 - research
 - productivity
-category: research
+category: academia
 ---
 
 I am a young historian -- heck, I barely even qualify for that title when I have no book to my name and don't hold a PhD yet. But as a researcher very early in my career, one thing I think about frequently is the legacy of the digital files that I create. Perhaps it's a residual anxiety that accompanies the idea that physical files will "last" or are more easily preserved that I continue to hold on to.

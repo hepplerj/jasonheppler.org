@@ -5,7 +5,7 @@ date: 2013-01-28 20:10:39
 tags:
 - ruby
 - data
-category: hacks
+category: programming
 ---
 
 Computers offer us a wonderful opportunity to automate and ease some of

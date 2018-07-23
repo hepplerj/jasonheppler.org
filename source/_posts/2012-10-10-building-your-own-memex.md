@@ -6,7 +6,8 @@ tags:
 - productivity
 - academia
 - digital humanities
-category: hacks
+category: 
+- tech life
 ---
 *[This post originally appeared at [Gradhacker](http://www.gradhacker.org/2012/10/10/building-your-own-memex/) on 2012-10-10]*
 

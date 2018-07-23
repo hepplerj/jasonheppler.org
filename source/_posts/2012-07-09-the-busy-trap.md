@@ -5,7 +5,7 @@ date: 2012-07-09 22:57:37
 external-url: http://opinionator.blogs.nytimes.com/2012/06/30/the-busy-trap/
 tags:
 - productivity
-category: Link
+categories: excerpt
 ---
 [Tim Kreider writes about the importance of idleness](http://opinionator.blogs.nytimes.com/2012/06/30/the-busy-trap/) not only to our creativity and productivity, but to our health:
 

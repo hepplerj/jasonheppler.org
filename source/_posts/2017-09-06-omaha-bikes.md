@@ -5,7 +5,7 @@ date: 2017-09-06
 image: 
     feature:
     thumb: 
-categories: maps 
+categories: biking 
 tags:
 - omaha
 - cycling

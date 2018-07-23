@@ -5,7 +5,7 @@ external-url: http://www.loopinsight.com/2012/11/10/what-your-web-design-says-ab
 date: 2012-11-10 21:26:39
 tags:
 - design
-category: Link
+categories: excerpt
 ---
 [Ella-raye Dickens](http://www.loopinsight.com/2012/11/10/what-your-web-design-says-about-you/):
 

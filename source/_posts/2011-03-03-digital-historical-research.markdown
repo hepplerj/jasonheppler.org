@@ -6,6 +6,6 @@ external-url: http://www.historians.org/Perspectives/issues/2011/1103/1103pre1.c
 tags:
 - research
 - digital history
-category: Link
+categories: excerpt
 ---
 AHA president Anthony Grafton <a href="http://www.historians.org/Perspectives/issues/2011/1103/1103pre1.cfm">provides his thoughts</a> on digital historical research in the March 2011 edition of Perspectives. Highly recommended.

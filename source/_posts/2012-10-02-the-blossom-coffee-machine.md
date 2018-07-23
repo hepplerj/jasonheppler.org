@@ -5,7 +5,7 @@ external-url: http://www.theverge.com/2012/10/1/3432980/blossom-one-limited-coff
 date: 2012-10-02 10:31:24
 tags:
 - coffee
-category: Link
+categories: excerpt
 ---
 
 [The Verge writes about an $11,000 coffee machine](http://www.theverge.com/2012/10/1/3432980/blossom-one-limited-coffee-maker-11111) constructed with exotic materials and tooled to brew the perfect cup of coffee:

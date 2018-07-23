@@ -5,7 +5,8 @@ date: 2017-05-23 10:29
 image: 
     feature: mozsprint.jpeg
     thumb: 
-categories: security
+categories: 
+- open web
 tags:
 - Mozilla 
 - data

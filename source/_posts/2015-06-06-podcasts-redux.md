@@ -6,6 +6,7 @@ image:
     feature:
     thumb:
 categories: 
+- tech life
 tags: 
 - podcast
 post_type: Essay

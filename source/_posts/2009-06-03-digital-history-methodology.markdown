@@ -5,7 +5,8 @@ title: Digital History as a Research Methodology
 date: 2009-06-03 18:41:15 -05:00
 tags:
 - digital history
-category: research
+category:
+- digital humanities
 ---
 In the process of researching and writing my thesis I turned to the  emerging methodology of digital history, and would like to document here  the process of doing digital work and the future possibilities for  digital history.  <em>Framing Red Power</em> sought to utilize digital  technology to investigate and analyze the interaction between media and  politics by focusing on the Trail of Broken Treaties as a lens to  understand the complex connections between political movements and mass  media.  The American Indian Movement was well-known for its propensity  for grabbing headlines.  While the occupation of Wounded Knee in 1973 is  highly significant and symbolic, it has received substantial attention  from scholars.  The Trail of Broken Treaties, on the other hand, was  AIM’s first sustained media coverage of the sort they wanted.  The type  of language and rhetoric deployed by the media and by AIM, the narrative  frameworks, and public discourse both shaped and were shaped by the  Trail of Broken Treaties and the context of the early 1970s.  At its  core,  my thesis attempted to shed light on the broader interaction  between media and politics, and how this complex relationship shapes  political culture and ideology.
 

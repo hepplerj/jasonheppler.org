@@ -5,7 +5,7 @@ date: 2014-12-31 07:38:01
 image:
     feature:
     thumb:
-categories: [research, shorts]
+categories: academia
 post_type: Short
 tags:
 - conference

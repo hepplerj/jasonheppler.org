@@ -5,7 +5,7 @@ external-url: http://ryan.cordells.us/blog/2012/09/12/useful-resources-for-the-a
 date: 2012-09-12 10:19:12
 tags:
 - career
-category: Link
+categories: excerpt
 ---
 [Ryan Cordell has put together a great collection of resources](http://ryan.cordells.us/blog/2012/09/12/useful-resources-for-the-academic-job-market/) for graduate students entering or contemplating the job market.
 

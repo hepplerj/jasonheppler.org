@@ -3,8 +3,8 @@ layout: post
 title: Popup Footnotes
 date: 2012-06-06  9:26:20
 tags:
-- personal
-category: javascript
+- javascript
+category: programming
 ---
 
 After discovering [this post](http://www.leancrew.com/all-this/2010/05/a-small-popup-footnote-change/) by Dr. Drang about popup footnotes, I've added the feature to my blog. Now, thanks to some jQuery, when you hover your mouse over a footnote link you'll see a popup box.[^1]

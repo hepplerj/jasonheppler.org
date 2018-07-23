@@ -2,7 +2,8 @@
 layout: post
 title: Digital History at Stanford
 date: 2013-10-18 12:26:32
-categories: hacks
+categories: 
+- digital humanities
 tags:
 - digital history
 ---

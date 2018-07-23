@@ -6,7 +6,7 @@ date: 2008-10-26 16:53:47 -05:00
 wordpress_url: http://www.jasonheppler.org/?p=46
 tags:
 - conference
-category: Academe
+category: academia
 ---
 The Nebraska Crew<sup>TM</sup> made it back safely from Salt Lake, where a group of us attended the WHA Conference. I think  I can speak for the group when I say we had a blast.  Additionally, the  digital history panel went as well as we could've hoped.  There were a  couple of problems.  Unfortunately, Dr. Seefeldt was unable to join us  and Nathan lost his voice (though regained enough of it to present) and  we didn't have wireless Internet, the panel went off without a hitch and  generated some great discussion. And having Dr. Richard White comment on the panelists was a real honor.  If you weren't able to attend, check  out <a href="http://digitalhistory.unl.edu/blog/" target="_blank">Doing  Digital History</a> to catch up on the three presentations and add some comments. My guess is one of us will be doing at least one more post  about the conference at DDH.
 

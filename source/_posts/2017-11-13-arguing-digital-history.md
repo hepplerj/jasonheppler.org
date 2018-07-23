@@ -5,7 +5,8 @@ date: 2017-11-13
 image:
     feature:
     thumb:
-categories: hacks
+categories: 
+- digital humanities
 tags:
 - technology
 comments: false

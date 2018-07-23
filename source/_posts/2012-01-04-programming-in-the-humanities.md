@@ -6,7 +6,7 @@ date: 2012-01-04 12:50:14
 image:
   feature:
   thumb:
-categories: [hacks]
+categories: academia
 tags: 
 - conference
 ---

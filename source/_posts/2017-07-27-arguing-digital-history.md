@@ -5,7 +5,8 @@ date: 2017-08-18
 image: 
     feature:
     thumb: 
-categories: hacks
+categories: 
+- digital humanities
 tags:
 - digital history
 - narrative

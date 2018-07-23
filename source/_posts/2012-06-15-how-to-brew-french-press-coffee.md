@@ -5,7 +5,7 @@ date: 2012-06-15 20:27:41
 external-url: http://www.sofawned.com/2012/01/how-to-brew-french-press-coffee-or-one.html
 tags:
 - coffee
-category: Link
+categories: coffee
 ---
 
 ![Coffee beans](https://jasonheppler.org/images/coffeebeans.jpg "Coffee beans")

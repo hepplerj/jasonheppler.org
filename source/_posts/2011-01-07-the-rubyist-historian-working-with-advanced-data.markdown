@@ -7,7 +7,8 @@ wordpress_url: http://www.jasonheppler.org/?p=1090
 tags: 
 - code
 - ruby
-category: research
+category: 
+- programming
 ---
 In this section, a whole new world of programing is about to open before your eyes. So far, we've been working with simple data inputs through the use of .gets(), but the method only allows us to call upon a single data entry.  What would be infinitely more useful would be the ability to read files outside the program. We can do this with Ruby's <code>File</code> class.<!--more-->
 

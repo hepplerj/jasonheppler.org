@@ -6,7 +6,7 @@ date: 2014-07-12 08:09:46
 image:
   feature:
   thumb:
-categories: [hacks]
+categories: programming
 tags:
 - ruby
 - data

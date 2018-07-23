@@ -5,7 +5,7 @@ date: Mon Jun 27 12:18:19 -0500 2011
 external-url: http://www.aaronmahnke.com/post/6829568465
 tags:
 - writing
-category: Link
+categories: excerpt
 ---
 [Aaron Mahnke](http://www.aaronmahnke.com/post/6829568465): 
 

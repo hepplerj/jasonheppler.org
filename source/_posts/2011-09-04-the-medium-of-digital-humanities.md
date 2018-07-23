@@ -4,7 +4,8 @@ title: "The Medium of Digital Humanities"
 date: Wed Sep 07 09:14:54 -0600 2011
 tags:
 - digital history
-category: research
+category: 
+- digital humanities
 ---
 
 *[This is a thought piece written for HIST946: Digital Humanities with Professor William Thomas during the Fall 2011 semester. This week's reading was Marshall McLuhan, *The Medium is the Massage: An Inventory of Effects*. You can find related posts [here](https://jasonheppler.org/the-digital-humanities-seminar.html).]*

@@ -4,7 +4,8 @@ title: History Harvest Blitz Week
 date: 2013-04-05 22:43:46
 tags:
 - public history
-category: hacks
+category: 
+- digital humanities
 ---
 
 Next week, April 8th-12th, William G. Thomas and Patrick Jones will be hosting virtual sessions on [History Harvest](http://historyharvest.unl.edu) for anyone interested in learning more. I had the good fortune of participating in the first History Harvest in Lincoln, Nebraska, in 2010, and have watched the program grow over the last couple of years. And for all of the talk surrounding MOOCs, it's refreshing to see alternative approaches to utilizing technology that better serves students (indeed, the [Chronicle has called this](http://chronicle.com/blogs/wiredcampus/history-harvest-project-may-spawn-a-new-kind-of-mooc/41329) a "new kind of MOOC").

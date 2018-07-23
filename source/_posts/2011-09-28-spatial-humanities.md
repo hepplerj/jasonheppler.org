@@ -5,7 +5,8 @@ date: Wed Sep 28 10:10:25 -0500 2011
 tags:
 - spatial history 
 - digital history
-category: research
+category: 
+- digital humanities
 ---
 
 *[This is a reading reflection written for HIST946: Digital Humanities with

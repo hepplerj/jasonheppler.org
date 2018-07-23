@@ -5,7 +5,8 @@ title: Why I Don't Use A Commenting System
 date: 2011-03-01 15:03:33 -06:00
 tags:
 - personal
-category: Original
+category:
+- tech life
 ---
 I've gone back and forth between supporting commenting and not supporting it. I've decided that I will not, for a variety of reasons. The primary reason is the utter lack of thought that goes into comments. Reading some of the items left by readers at places like Hacker News, Reddit, or Gawker sites either fail to contribute to the subject or are downright nasty. I don't allow commenting here not because I don't want to engage with my readers, but rather if someone will be leaving a comment I want them to own that comment.
 

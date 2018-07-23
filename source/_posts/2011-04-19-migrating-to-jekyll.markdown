@@ -4,7 +4,8 @@ title: "Migrating to Jekyll"
 date: Tue Apr 19 11:53:16 -0500 2011
 tags:
 - writing
-category: hacks
+category: 
+- tech life
 ---
 During some free time over the course of the semester, I began learning about Jekyll, a simple static site generator. I've done away with the CMS format of blogging -- no more admin panel to edit and manage posts, no need to run frequent updates, no need at all for a database. I write in the editor of my choice (vim, TextMate, gEdit, and so on) in a syntax called [markdown](http://daringfireball.net/projects/markdown/). Once things are ready to go, I can run <code>jekyll</code> in the command line and it will create static, flat HTML files. Good bye, MySQL.
 

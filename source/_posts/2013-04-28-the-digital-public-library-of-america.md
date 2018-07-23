@@ -4,7 +4,8 @@ title: The Digital Public Library of America
 date: 2013-04-28 12:50:35
 tags:
 - digital humanities
-category: hacks
+category: 
+- digital humanities
 ---
 *[This post originally appeared at [Hive Talkin'](https://www.stanford.edu/group/ats/cgi-bin/hivetalkin/?p=3331) on 2013-04-18.]*
 

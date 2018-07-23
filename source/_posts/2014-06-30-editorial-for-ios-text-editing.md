@@ -6,8 +6,8 @@ date: 2014-06-30 21:18:49
 image:
   feature:
   thumb:
-categories: [hacks, essay]
-post_type: Essay
+categories: 
+- tech life
 tags:
 - review
 ---

@@ -5,7 +5,7 @@ date: 2012-05-15 22:49:09
 post-type: full
 tags:
 - code
-category: research
+category: programming
 ---
 
 There have been a lot of discussions today about developer Jeff Atwood's post pleading people to [not learn to code](http://www.codinghorror.com/blog/2012/05/please-dont-learn-to-code.html). Atwood is responding to the "everyone should code" and new features like Code Academy that promises to introduce people to the ins and outs of programming.

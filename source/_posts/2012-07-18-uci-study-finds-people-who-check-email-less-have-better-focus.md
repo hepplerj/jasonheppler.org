@@ -7,6 +7,6 @@ tags:
 - productivity
 - personal
 - career
-category: Link
+categories: excerpt
 ---
 A new study by the University of California-Irvine finds that people who check email less frequently have better focus. Surprise!

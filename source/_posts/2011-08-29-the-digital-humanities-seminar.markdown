@@ -4,7 +4,8 @@ title: "The Digital Humanities Seminar"
 date: Sun Aug 29 12:55:34 -0600 2011
 tags:
 - digital history
-category: research
+category: 
+- digital humanities
 ---
 
 This semester I am enrolled in a [reading seminar on digital humanities](http://railroads.unl.edu/blog/wp-content/uploads/2011/08/946seminar.syllabus.pdf) with [Professor William Thomas](http://railroads.unl.edu/blog/?p=548). The course is shaping up to be quite exciting: in addition to getting a better grasp on a wider range of digital humanities issues through our readings, we're also building an iOS application in our first month. We will also be having visits with leaders in the field, including Robert Nelson at the University of Richmond, Stefan Sinclair at McGill University, and Lisa Spiro at NITLE Labs.

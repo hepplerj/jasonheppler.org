@@ -4,7 +4,7 @@ title: AHA Forming a Task Force on Digital Scholarship
 date: 2012-06-06 12:46:55
 tags:
 - digital humanities
-category: research
+category: academia
 ---
 
 In January, Prof. Douglas Seefeldt, my friend Alex Galarza, and myself, along with the support and advice of many others, [co-authored an open letter](https://jasonheppler.org/2012/01/22/redefining_scholarship_in_the_digital_age.html) to the American Historical Association asking them to take up the issue of assessing digital scholarship. At the end of January we were informed that the issue was being placed on the agenda for the AHA council's mid-year meeting at the beginning of this month. I'm thrilled to see [the announcement today](http://blog.historians.org/news/1664/decisions-of-the-aha-council-june-2012) that the AHA is establishing a task force on digital scholarship. I think it's an important issue for the AHA to address, so I will eagerly watch how things unfold going forward.

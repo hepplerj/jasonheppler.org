@@ -5,8 +5,7 @@ date: 2015-01-18 20:20:29
 image:
     feature:
     thumb:
-categories: dataviz 
-post_type: Essay
+categories: design 
 tags:
 - data visualization
 - digital history

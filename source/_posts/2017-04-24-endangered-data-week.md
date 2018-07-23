@@ -5,7 +5,8 @@ date: 2017-04-24 10:29
 image: 
     feature: 
     thumb: 
-categories: security
+categories: 
+- open web
 tags:
 - digital humanities
 - libraries

@@ -4,7 +4,7 @@ title: "Grown Up Computing"
 date: Wed Jun 30 21:53:14 -0500 2011
 tags:
 - productivity
-category: research
+category: Hepp
 ---
 
 [Marco Arment](http://articles.marco.org/145):

@@ -5,7 +5,8 @@ date: 2016-02-09 13:38
 image: 
     feature: 
     thumb: 
-categories: hacks 
+categories: 
+- digital humanities 
 tags: 
 - research
 - digital history
