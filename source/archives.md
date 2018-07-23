@@ -10,7 +10,7 @@ permalink: /archives/
 {% capture average %} {% posts_word_count average %}{% endcapture %}
 {% capture longest %} {% posts_word_count longest %}{% endcapture %}
 
-<p>I've written <strong>{{ totals | thousands_separated }}</strong> words here since 2008, averaging around <strong>{{ average }}</strong> per post. The longest post is <strong>{{ longest | thousands_separated }}</strong> words.</p>
+<p>I've written <strong>{{ totals | thousands_separated }}</strong> words among <strong>{{ site.posts | size }}</strong> posts here since 2009, averaging around <strong>{{ average }}</strong> per post. The longest post is <strong>{{ longest | thousands_separated }}</strong> words.</p>
 
 <form role = "search" class = "searchform" action="https://duckduckgo.com/">
   <input type="text" name="q" placeholder = "Search for programming, open data, history, leadership, or whatever.">
@@ -35,7 +35,7 @@ permalink: /archives/
       <time class="date">{{ post.date | date: '%B %d'}}</time>
       </a>
       <span class="cat">
-        <a href="/archives/" rel="category tag">{{ post.categories }}</a>
+        <a href="/topics/#{{post.categories}}" rel="category tag">{{ post.categories }}</a>
       </span> <br/>
       <a href="{{ post.url }}">
         <span class="title">{{ post.title}}</span>

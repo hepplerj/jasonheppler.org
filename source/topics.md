@@ -10,7 +10,7 @@ permalink: /topics/
 {% capture average %} {% posts_word_count average %}{% endcapture %}
 {% capture longest %} {% posts_word_count longest %}{% endcapture %}
 
-<p>I've written <strong>{{ totals | thousands_separated }}</strong> words here since 2008, averaging around <strong>{{ average }}</strong> per post. The longest post is <strong>{{ longest | thousands_separated }}</strong> words.</p>
+<p>I've written <strong>{{ totals | thousands_separated }}</strong> words among <strong>{{ site.posts | size }}</strong> posts here since 2008, averaging around <strong>{{ average }}</strong> per post. The longest post is <strong>{{ longest | thousands_separated }}</strong> words.</p>
 
 <p>View as <a href="/archives/">Chronological</a> | <strong>Topics</strong></p>
 
