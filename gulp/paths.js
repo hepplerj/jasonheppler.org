@@ -12,7 +12,7 @@ paths.sourceFolderName = 'source';
 paths.stylesFolderName = 'stylesheets';
 paths.tempFolderName = '.tmp';
 
-paths.prodUrl = 'http://jasonheppler.org';
+paths.prodUrl = 'https://jasonheppler.org';
 
 // Directory locations
 paths.sourceDir = paths.sourceFolderName + '/';

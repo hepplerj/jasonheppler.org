@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "ATF-Spark";
+    src: url("/assets/fonts/Sparks-Bar-Medium.eot"), url("/assets/fonts/Sparks-Bar-Medium.woff2") format("woff2"), url("/assets/fonts/Sparks-Bar-Medium.woff") format("woff"), url("/assets/fonts/Sparks-Dotline-Thin.eot"), url("/assets/fonts/Sparks-Dotline-Thin.woff2") format("woff2"), url("/assets/fonts/Sparks-Dotline-Thin.woff") format("woff");
+  }
+  
+  span {
+    &.spark, &.sparkline {
+      font-family: "ATF-Spark";
+      color: #1d78bd;
+      -webkit-font-variant-ligatures: contextual;
+      font-variant-ligatures: contextual;
+      -webkit-font-feature-settings: "calt";
+      font-feature-settings: "calt";
+    }
+  }

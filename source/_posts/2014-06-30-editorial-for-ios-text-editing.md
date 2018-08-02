@@ -12,7 +12,11 @@ tags:
 - review
 ---
 
-*[This post originally appeared at [ProfHacker](http://chronicle.com/blogs/profhacker/editorial-ios-text-editing/57431) on 2014-06-30.]*
+
+
+<p class="aside">
+This post <a href="http://chronicle.com/blogs/profhacker/editorial-ios-text-editing/57431">originally appeared at ProfHacker</a> on 2014-06-30.
+</p>
 
 ![The overall view of Editorial for iPad](/assets/images/overall.png)
 

@@ -8,19 +8,19 @@ var tasks       = requireDir('./gulp/tasks', {recurse: true});
 var paths       = require('./gulp/paths');
 
 // inject CSS and JS to includes
-gulp.task('inject', gulp.parallel('inject:css', 'inject:scripts'));
+// gulp.task('inject', gulp.parallel('inject:css', 'inject:scripts'));
 
 // copies, builds
-gulp.task('build:site', gulp.series('site:tmp', 'inject', 'site', 'copy:site'));
+gulp.task('build:site', gulp.series('site:tmp', 'site', 'copy:site'));
 
 // remove assets and rebuild
 gulp.task('assets', gulp.series(
-  gulp.parallel('scripts'),
+  gulp.parallel('styles', 'scripts'),
   gulp.series('images', 'images:feature', 'copy:assets')
 ));
 
 // remove assets
-gulp.task('clean', gulp.parallel('clean:assets', 'clean:gzip', 'clean:dist', 'clean:site'));
+gulp.task('clean', gulp.parallel('clean:assets', 'clean:gzip', 'clean:prod', 'clean:site'));
 
 // same as default gulp, but no server
 gulp.task('build', gulp.parallel('clean', 'assets', 'build:site', 'html', 'xml'));

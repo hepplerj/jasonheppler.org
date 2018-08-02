@@ -12,7 +12,7 @@ workshops:
     datestart: 2018-02-28 17:00:00 -0800
     dateend:
     url: https://github.com/endangereddataweek/resources/tree/master/workshop-r-data-manipulation 
-    semester: Spring 2018
+    semester: Spring 2017, Spring 2018
     description: 
     kind: workshop
   - class: "Introduction to Data Visualization with R"
@@ -20,7 +20,7 @@ workshops:
     datestart: 2018-02-28 17:00:00 -0800
     dateend:
     url: https://github.com/endangereddataweek/resources/tree/master/workshop-r-data-visualization
-    semester: Spring 2018
+    semester: Spring 2017, Spring 2018
     description: 
     kind: workshop
   - class: "Web Scraping with R"
@@ -31,15 +31,30 @@ workshops:
     semester: Spring 2018
     description: 
     kind: workshop
+  - class: "Dynamic Digital Methods for Integrating Local History into Public History Institutions and the K-16 Classroom"
+    location: Western Historical Association
+    datestart: 2018-10-20 17:00:00 -0800
+    dateend:
+    url:
+    description:
+    semester: Fall 2018
+    kind: workshop
   - class: "Introduction to Network Analysis"
     location: American Historical Association
     datestart: 2018-01-06 17:00:00 -0800
     dateend:
     url: https://jasonheppler.org/courses/aha-workshop-2018/
-    semester: Spring 2018
+    semester: Spring 2017, Spring 2018
     description: This workshop emphasizes hands-on learning of working with network data and visualization. Historians working out the complex documentary relationships between people and institutions can often find surprising, or previously unexplored, connections by using network analysis and its visual representations. This workshop will help participants familiarize themselves with basic network-analysis vocabulary as well as using Gephi for network analysis and visualization.
     kind: workshop
-
+  - class: "Data Preparation and Data Uncertainty"
+    location: American Historical Association
+    datestart: 2016-01-06 17:00:00 -0800
+    dateend:
+    url:
+    semester: Spring 2016
+    description: 
+    kind: workshop
   - class: "Introduction to Network Analysis"
     location: Ball State University
     datestart: 2017-05-07 00:00:00 -0800

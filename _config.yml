@@ -43,8 +43,6 @@ owner:
   bio: "Historian of the North American West, environmental and urban history, digital history, coffee hobbyist"
   avatar: avatar.jpg
 
-google_analytics_tracking_id: UA-12786552-1
-
 # Settings
 #assets:
 #  compress:
@@ -78,13 +76,13 @@ exclude:
   - config
   - export.xml
   - Gemfile
-  - Gruntfile.js
   - log
   - node_modules
   - package.json
   - Rakefile
   - README
   - tmp
+  - gulpfile.js
 
 # Plugin settings
 feed:

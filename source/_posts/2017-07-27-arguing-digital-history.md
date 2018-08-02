@@ -13,9 +13,10 @@ tags:
 comments: false
 ---
 
-<aside class="post">
+<p class="aside">
+
 This is the piece I wrote for the Roy Rosenzweig Center for History and New Media's <a href="https://rrchnm.org/news/arguing-with-digital-history-workshop-to-address-a-central-problem-in-digital-history/">Arguing with Digital History workshop</a>, being held September 15-16, 2017. A draft of this talk is versioned on <a href="https://github.com/hepplerj/arguing-digital-history">Github</a>, which will also likely include the most up-to-date version of this essay.
-</aside>
+</p>
 
 First, a loose definition of "digital history": I take digital history to mean a variety of approaches to using computational, visual, and informational methods in analyzing, visualizing, and presenting historical analysis and arguments. As I consider the ways that "digital history" can engage with argumentation, then, I assume particularities of digital history that rely on graphical displays (maps, networks), take advantage of narrative and hypertextuality, provide access to digitized primary sources, share historical evidence and data compiled for computation and visualization, and that takes the form of a digital scholarly website that integrates some or all of these aspects of research and communication. Such projects are distinct from efforts that define themselves as public history; while much of digital history can be said to be public scholarship, that does not mean they rise to the criteria of public history.[^1] Under this definition, to state it plainly, digital history must be explicitly *digital*: that the arguments, visualizations, and narrative are much harder to achieve in print and, thus, can only exist as a digital version.
 

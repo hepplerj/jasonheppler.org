@@ -11,11 +11,9 @@ permalink: /about/
     </figure>
 </div>
 
-## **Hi. I'm Jason Heppler.** I'm the digital engagement librarian at the [University of Nebraska at Omaha](http://library.unomaha.edu/), where I lead initiatives in digital humanities, information management, and data visualization. I am a historian and information designer with 10+ years experience in building digital projects.
+<p class="size-2x"><strong>Hi. I'm Jason Heppler</strong>. I'm the digital engagement librarian at the <a href="http://library.unomaha.edu/">University of Nebraska at Omaha</a>, where I lead initiatives in digital humanities, information management, and data visualization. I am a historian and information designer with 12+ years experience in building tools for research and learning.</p>
 
 Before joining UNO, I was an Academic Technology Specialist with the [Center for Interdisciplinary Digital Research](http://cidr.stanford.edu) at Stanford University Libraries and a member of the research staff at the [Center for Spatial and Textual Analysis](http://cesta.stanford.edu) at Stanford University. Prior to Stanford, I was a project manager on the [William F. Cody Archive](http://codyarchive.org) at the University of Nebraska-Lincoln's [Center for Digital Research in the Humanities](http://cdrh.unl.edu). I remain a faculty affiliate with the [Spatial History Project](http://spatialhistory.stanford.edu) and [Humanities + Design](http://hdlab.stanford.edu/) at Stanford University.
-
-<!-- I promote making openness the norm in innovation and research and am passionate about building deep creative partnerships that bring together diverse disciplines and expertise. I am an open project lead for [Endangered Data Week](http://endangereddataweek.org), and work with organizations like [Mode Shift Omaha](https://modeshiftomaha.org/), [UNO's Center for Urban Sustainability](https://jasonheppler.org/about/), [Stanford University's Spatial History Project](http://spatialhistory.stanford.edu/), [BlogWest](https://blogwest.org/), and [Data for Democracy](http://datafordemocracy.org). -->
 
 ### Contact
 

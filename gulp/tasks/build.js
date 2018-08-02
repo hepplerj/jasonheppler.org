@@ -1,6 +1,5 @@
 'use strict';
-
-var argv = require('yargs').argv;
+var argv  = require('yargs').argv;
 var gulp  = require('gulp');
 var shell = require('shelljs');
 var size  = require('gulp-size');
@@ -10,8 +9,8 @@ var paths = require('../paths');
 
 // 'gulp site:tmp' -- copies Jekyll site to a temporary directory to be processed
 gulp.task('site:tmp', () =>
-  gulp.src([paths.sourceFolderName + '/**/*', '!' + paths.sourceDir + paths.assetsFolderName + '/**/*', '!' + paths.sourceDir + paths.assetsFolderName], {dot: true})
-    .pipe(gulp.dest(paths.tempDir + paths.sourceFolderName))
+  gulp.src(['src/**/*', '!src/assets/**/*', '!src/assets'], {dot: true})
+    .pipe(gulp.dest('.tmp/src'))
     .pipe(size({title: 'Jekyll'}))
 );
 
@@ -27,7 +26,7 @@ gulp.task('site', done => {
   }
 });
 
-// 'gulp site:check' -- runs Jekyll doctor
+// 'gulp site:check' -- builds site with production settings then tests with html-proofer
 gulp.task('site:check', done => {
   shell.exec('bundle exec jekyll doctor');
   done();

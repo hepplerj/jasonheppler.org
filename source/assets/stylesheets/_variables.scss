@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+/* Breakpoint widths */
+$small: 320px;
+$medium: 768px;
+$large: 1024px;
+$xlarge: 1280px;
+
+/* Fluid type */
+$base-font-size: 15px;
+$min-vw: $small;
+$max-vw: $xlarge;
+$min-font-size: 15px;
+$max-font-size: 24px;
+
+/* Calculate Modular Scale */
+$modular-scale-1: 1.067; /* small */
+$modular-scale-2: 1.296; /* large */
+/* Heading 1 */
+$h1-min: $modular-scale-1 * $modular-scale-1 * $modular-scale-1 *
+  $modular-scale-1 * $base-font-size;
+$h1-max: $modular-scale-2 * $modular-scale-2 * $modular-scale-2 *
+  $modular-scale-2 * $base-font-size;
+/* Heading 2 */
+$h2-min: $modular-scale-1 * $modular-scale-1 * $modular-scale-1 *
+  $base-font-size;
+$h2-max: $modular-scale-2 * $modular-scale-2 * $modular-scale-2 *
+  $base-font-size;
+/* Heading 3 */
+$h3-min: $modular-scale-1 * $modular-scale-1 * $base-font-size;
+$h3-max: $modular-scale-2 * $modular-scale-2 * $base-font-size;
+/* Heading 4 */
+$h4-min: $modular-scale-1 * $base-font-size;
+$h4-max: $modular-scale-2 * $base-font-size;
+/* Heading 5 */
+$h5-min: $base-font-size;
+$h5-max: $base-font-size;
+/* Heading 6 */
+$h6-min: ($base-font-size / $modular-scale-1);
+$h6-max: ($base-font-size / $modular-scale-2);
+
+/* Font weights */
+$weight-500: 500;
+$weight-700: 700;
+
+/* Base font family */
+$base-font-family: "Noto Serif", Georgia, serif;
+/* Other font families */
+$sans-serif-font-family: 'IBM Plex Sans', "Fira Sans", sans-serif;
+$headline-font-family: 'IBM Plex Sans', "Fira Sans", sans-serif;
+$monospace-font-family: San Francisco Mono,Monaco,Consolas,Lucida Console,DejaVu Sans Mono,Bitstream Vera Sans Mono,monospace;
+
+/* Colors */
+$base-color: #393e46;
+$text-color: #333333;
+$accent-color: #00638a;
+$background-color: #fff;
+$code-background-color: tint($base-color, 95%);
+$border-color: tint($base-color, 80%);
+$overlay-color: $base-color;
+$section-bg-color: mix($base-color, #fff, 10%);
+$section-dark-bg-color: mix(#000, $base-color, 50%);
+$section-about-bg-color: mix(#000, #2a201b, 50%);
+$section-work-bg-color: mix(#000, #6e2364, 50%);
+
+$link: #333333;
+$link-hover: #888888;
+$link-focus: #888888;
+$link-under: #aaaaaa;
+
+$primary-color: #00638a;
+$success-color: #40c057;
+$warning-color: #fcc419;
+$danger-color: #f03e3e;
+$info-color: #1c7cd6;
+
+$aside: #fbf1a9;
+$aside-inner: #fffceb;
+
+/* Syntax highlighting (base16) colors */
+$base00: #fafafa;
+$base01: #073642;
+$base02: #586e75;
+$base03: #657b83;
+$base04: #839496;
+$base05: #586e75;
+$base06: #eee8d5;
+$base07: #fdf6e3;
+$base08: #dc322f;
+$base09: #cb4b16;
+$base0a: #b58900;
+$base0b: #859900;
+$base0c: #2aa198;
+$base0d: #268bd2;
+$base0e: #6c71c4;
+$base0f: #d33682;
+
+/* Max-width of the main content */
+$main-max-width: $xlarge;
+
+/* Width of the sidebar */
+$sidebar-width: $small;
+
+/* Background color of the sidebar */
+$sidebar-background-color: $base-color;
+
+/* Border radius */
+$border-radius: 0.25em;
+
+/* Site image */
+$site-image-width: 25px;
+$site-image-height: 25px;

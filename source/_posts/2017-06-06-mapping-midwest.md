@@ -13,9 +13,10 @@ tags:
 comments: false
 ...
 
-<aside class="post">
+<p class="aside">
+
 The slides for my talk at the Midwestern History Association conference are <a href="https://jasonheppler.org/presentations/keynote_mha/">now online</a>.
-</aside>
+</p>
 
 This week I am delivering a keynote address at the Midwestern History Association conference, where I'll be making the case for the creation of a Midwestern atlas.
 

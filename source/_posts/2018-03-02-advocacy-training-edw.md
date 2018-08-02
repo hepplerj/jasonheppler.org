@@ -13,9 +13,9 @@ comments: false
 published_elsewhere: "http://parameters.ssrc.org/2018/03/advocacy-training-and-awareness-through-endangered-data-week/"
 ...
 
-<aside>
+<p class="aside">
 This essay was co-authored with Brandon Locke, Sarah Melton, and Rachel Mattson for the SSRC's <em>Parameters</em>.
-</aside>
+</p>
 
 In the wake of the 2016 US presidential election, librarians, civic hackers, technologists, cultural heritage institutions, journalists, and citizen scientists grew increasingly concerned that government data—particularly data related to topics like climate change, gerrymandering and redlining, and other politically charged subjects—might be threatened through censorship or neglect. Initiatives have sprung up throughout the country, spearheaded by groups like [DataRefuge](https://www.datarefuge.org/), the [Environmental Data & Governance Initiative (EDGI)](https://envirodatagov.org/), and the [End of Term Web Archive](http://eotarchive.cdlib.org/), that attempted to collect, secure, and document government data. The vulnerability of these data underscored the need for quick action on the one hand, and sustained attention to the mechanisms that support (or fail to support) preservation and access to government data, information, and records on the other.
 
