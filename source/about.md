@@ -15,11 +15,7 @@ permalink: /about/
 
 Before joining UNO, I was an Academic Technology Specialist with the [Center for Interdisciplinary Digital Research](http://cidr.stanford.edu) at Stanford University Libraries and a member of the research staff at the [Center for Spatial and Textual Analysis](http://cesta.stanford.edu) at Stanford University. Prior to Stanford, I was a project manager on the [William F. Cody Archive](http://codyarchive.org) at the University of Nebraska-Lincoln's [Center for Digital Research in the Humanities](http://cdrh.unl.edu). I remain a faculty affiliate with the [Spatial History Project](http://spatialhistory.stanford.edu) and [Humanities + Design](http://hdlab.stanford.edu/) at Stanford University.
 
-### Contact
-
-To keep updated on my work, follow my [research](/research/), follow me on [Twitter](http://twitter.com/jaheppler) or [Github](http://github.com/hepplerj), connect with me at [LinkedIn](https://www.linkedin.com/in/jasonheppler/), or subscribe to [RSS](https://jasonheppler.org/feed.xml) or [JSON](https://jasonheppler.org/feed.json).
-
-Feel free to email me at `jason@jasonheppler.org`. If it's a sensitive email, you can [grab my public key](https://jasonheppler.org/jasonheppler.asc) for that address.
+To keep updated on my work, follow my [research](/research/), follow me on [Twitter](http://twitter.com/jaheppler) or [Github](http://github.com/hepplerj), connect with me at [LinkedIn](https://www.linkedin.com/in/jasonheppler/), or subscribe to [RSS](https://jasonheppler.org/feed.xml) or [JSON](https://jasonheppler.org/feed.json). Feel free to email me at `jason@jasonheppler.org`. If it's a sensitive email, you can [grab my public key](https://jasonheppler.org/jasonheppler.asc) for that address.
 
 ### Current Writing
 
