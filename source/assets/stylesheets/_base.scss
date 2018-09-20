@@ -88,6 +88,7 @@
     line-height: 1.6em;
     &.size-2x {
       font-size: $base-font-size * 2;
+      font-weight: $weight-100;
     }
     &.emphasis {
         font-family: $headline-font-family;
@@ -190,8 +191,8 @@
   a {
     color: $link;
     text-decoration: none;
-	border-bottom: 1px solid $link-under;
-	-webkit-transition: border .15s ease-in-out, color .15s ease-in-out;
+    border-bottom: 1px solid $link-under;
+    -webkit-transition: border .15s ease-in-out, color .15s ease-in-out;
   	-moz-transition: border .15s ease-in-out, color .15s ease-in-out;
   	-ms-transition: border .15s ease-in-out, color .15s ease-in-out;
   	-o-transition: border .15s ease-in-out, color .15s ease-in-out;
@@ -202,7 +203,7 @@
     }
   
     &:visited {
-      color: $link-focus;
+      color: $link;
       outline: none !important;
     }
   }

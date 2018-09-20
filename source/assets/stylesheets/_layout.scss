@@ -9,6 +9,35 @@
     margin-right: auto;
   }
 
+  .writing {
+    padding-bottom: 5px;
+  }
+
+  .writing > div {
+    grid-template-columns: 1fr min-content;
+    display: grid;
+    grid-column-gap: 5px;
+    padding-top: 5px;
+    font-size: $base-font-size * 1.2;
+  }
+
+  .writing > div div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .writing > div div:last-child {
+    padding-right: 0.25em;
+    color: #888;
+    font-size: $base-font-size * 0.9;
+    padding-top: 1px;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.012em;
+  }
+
+
+
   .pad2y {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -25,7 +54,7 @@
     background: #e8e8e8;
     border: none;
     width: 8rem;
-    margin: 4rem auto 4rem;
+    margin: 2rem auto 2rem;
     display: block;
   }
 
