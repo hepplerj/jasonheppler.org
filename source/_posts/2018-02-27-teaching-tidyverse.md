@@ -17,7 +17,7 @@ This semester I am [running my R workshops](https://github.com/endangereddatawee
 
 I’ve taken this approach to using the `tidyverse` instead of base R for two primary reasons. First, learning how to manipulate data with dplyr and tidyr is easy to understand conceptually and often easier than learning the idiosyncrasies of R. When I show students two lines of code that achieve the same thing in base R and `dplyr`, I've always gotten the same answer: the `dplyr` way is much easier to read and understand.
 
-![The ease of reading dplyr code vs. base R.]()
+![The ease of reading dplyr code vs. base R.](/assets/images/tidyvr.png)
 
 I’m not alone in my approach here — David Robinson has [made the same case](http://varianceexplained.org/r/teach-tidyverse/) in regard to `ggplot2`. My rationale largely follows his: that teaching students the basics of the `tidyverse` means they can be up and running with a powerful set of tools quickly. In the case of Endangered Data Week, that means introducing students to messy government data, tidying that data, working with data to produce new data, and drawing conclusions. I’m able to teach these concepts relatively quickly thanks to the power behind `dplyr` and `tidyr`. I don’t need to worry about teaching the syntax around `[[]]` or `$` or `c()`. If students need base R techniques or have questions, they can always get in touch with me for more pointers.
 
