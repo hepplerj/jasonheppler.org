@@ -9,7 +9,7 @@ $large: 1024px;
 $xlarge: 1280px;
 
 /* Fluid type */
-$base-font-size: 12px;
+$base-font-size: 14px;
 $min-vw: $small;
 $max-vw: $xlarge;
 $min-font-size: 15px;
@@ -47,10 +47,10 @@ $weight-500: 500;
 $weight-700: 700;
 
 /* Base font family */
-$base-font-family: -apple-system,BlinkMacSystemFont,'avenir next',avenir,helvetica,'helvetica neue',ubuntu,roboto,noto,'segoe ui',arial,sans-serif;
+$base-font-family: "europa", -apple-system,BlinkMacSystemFont,'avenir next',avenir,helvetica,'helvetica neue',ubuntu,roboto,noto,'segoe ui',arial,sans-serif;
 /* Other font families */
-$sans-serif-font-family: -apple-system,BlinkMacSystemFont,'avenir next',avenir,helvetica,'helvetica neue',ubuntu,roboto,noto,'segoe ui',arial,sans-serif;
-$headline-font-family: -apple-system,BlinkMacSystemFont,'avenir next',avenir,helvetica,'helvetica neue',ubuntu,roboto,noto,'segoe ui',arial,sans-serif;
+$sans-serif-font-family: "europa", -apple-system,BlinkMacSystemFont,'avenir next',avenir,helvetica,'helvetica neue',ubuntu,roboto,noto,'segoe ui',arial,sans-serif;
+$headline-font-family: "europa", -apple-system,BlinkMacSystemFont,'avenir next',avenir,helvetica,'helvetica neue',ubuntu,roboto,noto,'segoe ui',arial,sans-serif;
 $monospace-font-family: San Francisco Mono,Monaco,"Consolas","Lucida Console","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
 
 /* Colors */

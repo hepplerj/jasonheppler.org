@@ -8,7 +8,7 @@
   }
   
   body {
-    background: $background-color;
+    background: $background-color; 
     color: $text-color;
     text-rendering: optimizeLegibility;
     line-height: 1.5;
@@ -90,6 +90,11 @@
       font-size: $base-font-size * 2;
       font-weight: $weight-100;
     }
+    &.home-intro {
+      font-size: $base-font-size * 2.4;
+      width: 34rem;
+      font-weight: $weight-100;
+    }
     &.emphasis {
         font-family: $headline-font-family;
     }
@@ -100,6 +105,10 @@
         font-size: $base-font-size;
         &.size-2x {
             font-size: $base-font-size * 1.2;
+        }
+        &.home-intro {
+          font-size: $base-font-size * 1.4;
+          width: 18rem;
         }
     }
   }
