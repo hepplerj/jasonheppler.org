@@ -295,7 +295,7 @@
 /* Document
    ========================================================================== */
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+  font-family: "europa", -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
   /* 1 */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -454,8 +454,7 @@ kbd,
 samp {
   font-family: monospace, monospace;
   /* 1 */
-  font-size: 1em;
-  /* 2 */ }
+  font-size: 14px; }
 
 /**
  * Add the correct font style in Android 4.3-.
@@ -559,7 +558,7 @@ select,
 textarea {
   margin: 0;
   /* 2 */
-  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+  font-family: "europa", -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
   /* 1 */
   font-size: 100%;
   /* 1 */
@@ -763,7 +762,7 @@ body {
   color: #333333;
   text-rendering: optimizeLegibility;
   line-height: 1.5;
-  font-size: 12px;
+  font-size: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -828,26 +827,33 @@ p {
   margin-top: 0;
   margin-bottom: 1rem;
   font-weight: 400;
-  font-size: 14.4px;
+  font-size: 16.8px;
   line-height: 1.6em; }
   p.size-2x {
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: 100; }
+  p.home-intro {
+    font-size: 33.6px;
+    width: 34rem;
     font-weight: 100; }
   p.emphasis {
-    font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
+    font-family: "europa", -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
 
 @media screen and (max-width: 480px) {
   p {
-    font-size: 12px; }
+    font-size: 14px; }
     p.size-2x {
-      font-size: 14.4px; } }
+      font-size: 16.8px; }
+    p.home-intro {
+      font-size: 19.6px;
+      width: 18rem; } }
 
 ul, ul li {
-  font-size: 14.4px; }
+  font-size: 16.8px; }
 
 @media screen and (max-width: 480px) {
   ul, ul li {
-    font-size: 12px; } }
+    font-size: 14px; } }
 
 h1,
 h2,
@@ -859,67 +865,67 @@ h6 {
   /* enable common ligatures and kerning */ }
 
 h1 {
-  font-size: 15.5538864375px; }
+  font-size: 18.1462008437px; }
   @media screen and (min-width: 320px) {
     h1 {
-      font-size: calc( 15.5538864375px + 18.299432452 * ((100vw - 320px) / 960)); } }
+      font-size: calc( 18.1462008437px + 21.3493378607 * ((100vw - 320px) / 960)); } }
   @media screen and (min-width: 1280px) {
     h1 {
-      font-size: 33.8533188895px; } }
+      font-size: 39.4955387044px; } }
 
 h2 {
   font-weight: 500; }
   h2 {
-    font-size: 14.577213156px; }
+    font-size: 17.006748682px; }
     @media screen and (min-width: 320px) {
       h2 {
-        font-size: calc( 14.577213156px + 11.544174876 * ((100vw - 320px) / 960)); } }
+        font-size: calc( 17.006748682px + 13.468204022 * ((100vw - 320px) / 960)); } }
     @media screen and (min-width: 1280px) {
       h2 {
-        font-size: 26.121388032px; } }
+        font-size: 30.474952704px; } }
 
 h3 {
-  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+  font-family: "europa", -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
   font-weight: 500;
   margin-bottom: .5rem; }
   h3 {
-    font-size: 13.661868px; }
+    font-size: 15.938846px; }
     @media screen and (min-width: 320px) {
       h3 {
-        font-size: calc( 13.661868px + 6.493524 * ((100vw - 320px) / 960)); } }
+        font-size: calc( 15.938846px + 7.575778 * ((100vw - 320px) / 960)); } }
     @media screen and (min-width: 1280px) {
       h3 {
-        font-size: 20.155392px; } }
+        font-size: 23.514624px; } }
 
 h4 {
-  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+  font-family: "europa", -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
   margin-bottom: .5rem; }
   h4 {
-    font-size: 12.804px; }
+    font-size: 14.938px; }
     @media screen and (min-width: 320px) {
       h4 {
-        font-size: calc( 12.804px + 2.748 * ((100vw - 320px) / 960)); } }
+        font-size: calc( 14.938px + 3.206 * ((100vw - 320px) / 960)); } }
     @media screen and (min-width: 1280px) {
       h4 {
-        font-size: 15.552px; } }
+        font-size: 18.144px; } }
 
 h5 {
-  font-size: 12px; }
+  font-size: 14px; }
   @media screen and (min-width: 320px) {
     h5 {
-      font-size: calc( 12px + 0 * ((100vw - 320px) / 960)); } }
+      font-size: calc( 14px + 0 * ((100vw - 320px) / 960)); } }
   @media screen and (min-width: 1280px) {
     h5 {
-      font-size: 12px; } }
+      font-size: 14px; } }
 
 h6 {
-  font-size: 11.2464854733px; }
+  font-size: 13.1208997188px; }
   @media screen and (min-width: 320px) {
     h6 {
-      font-size: calc( 11.2464854733px + -1.987226214 * ((100vw - 320px) / 960)); } }
+      font-size: calc( 13.1208997188px + -2.318430583 * ((100vw - 320px) / 960)); } }
   @media screen and (min-width: 1280px) {
     h6 {
-      font-size: 9.2592592593px; } }
+      font-size: 10.8024691358px; } }
 
 dt {
   font-weight: bold; }
@@ -991,7 +997,7 @@ li > img {
   display: grid;
   grid-column-gap: 5px;
   padding-top: 5px;
-  font-size: 14.4px; }
+  font-size: 16.8px; }
 
 .writing > div div {
   white-space: nowrap;
@@ -1001,10 +1007,45 @@ li > img {
 .writing > div div:last-child {
   padding-right: 0.25em;
   color: #888;
-  font-size: 10.8px;
+  font-size: 12.6px;
   padding-top: 1px;
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.012em; }
+
+/* Custom Home setup */
+.home {
+  background: #1352a2;
+  color: white; }
+  .home.navigation {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2em; }
+  .home.sidebar-nav {
+    padding-left: 0;
+    list-style: none; }
+  .home.sidebar-nav-item {
+    display: inline;
+    font-size: 15.4px;
+    margin-right: 20px;
+    font-family: "europa", -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
+  .home li#nav-title a {
+    color: white;
+    text-decoration: none;
+    border: none; }
+  .home li.sidebar-nav-item a {
+    border: none; }
+  .home a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    -webkit-transition: border .15s ease-in-out, color .15s ease-in-out;
+    transition: border .15s ease-in-out, color .15s ease-in-out; }
+    .home a:hover {
+      color: rgba(255, 255, 255, 0.5);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+    .home a:visited {
+      color: white;
+      outline: none !important; }
 
 .pad2y {
   padding-top: 20px;
@@ -1024,8 +1065,8 @@ hr {
   display: block; }
 
 .bigfoot-footnote__content p {
-  font-size: 9.6px;
-  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
+  font-size: 11.2px;
+  font-family: "europa", -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
 
 /* Search Form */
 .searchform {
@@ -1203,7 +1244,7 @@ a img {
 figcaption {
   padding-top: 10px;
   clear: both;
-  font-size: 8.4px;
+  font-size: 9.8px;
   font-style: italic;
   line-height: 1.3;
   color: #3c3c3c;
@@ -1259,7 +1300,7 @@ figure {
 .about-intro figcaption {
   color: #999;
   display: block;
-  font-size: 8.4px;
+  font-size: 9.8px;
   text-align: left; }
 
 .image-credit {
@@ -1271,7 +1312,7 @@ figure {
 footer {
   margin-top: 100px; }
   footer p {
-    font-size: 10.8px; }
+    font-size: 12.6px; }
 
 @font-face {
   font-family: "ATF-Spark";
@@ -1296,9 +1337,9 @@ ul.navigation {
 
 .sidebar-nav-item {
   display: inline;
-  font-size: 13.2px;
+  font-size: 15.4px;
   margin-right: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
+  font-family: "europa", -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
 
 li#nav-title a {
   color: #333333;
