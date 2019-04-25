@@ -1,0 +1,21 @@
+---
+layout: default
+---
+{% capture bookmark_url %}{{ page.bookmark-of[0].url }}{% endcapture %}
+{% capture bookmark_name %}{{ page.bookmark-of[0].name }}{% endcapture %}
+{% capture note_content %}{{ content | strip }}{% endcapture %}
+{% capture note_content_size %}{{ content | strip | size }}{% endcapture %}
+{% capture categories %}{{ page.categories | category_links | size }}{% endcapture %}
+<div class="{% unless cat == '0' %}entry-{{ page.categories | join: ' entry-' }}{% endunless %}">
+
+<main id="main" class="page-content" aria-label="Content">
+  <div class="inner ">
+    <article class="entry  {% unless cat == '0' %}entry-{{ page.categories | join: ' entry-' }}{% endunless %}">
+      <div class="entry-content h-entry">
+      {% include note-content.html bookmark_url=bookmark_url bookmark_name=bookmark_name note_content=note_content note_content_size=note_content_size %}
+      </div>
+    </article>
+
+  </div>
+</main>
+</div>
