@@ -43,6 +43,10 @@ owner:
   bio: "Historian of the North American West, environmental and urban history, digital history, coffee hobbyist"
   avatar: avatar.jpg
 
+collections:
+  portfolio:
+    output: true
+
 # Settings
 #assets:
 #  compress:
@@ -60,12 +64,12 @@ owner:
 links:
   - title: About me
     url: /about/
-  - title: Archives
-    url: /archives/
   - title: Work 
     url: /research/
   - title: Teaching
     url: /teaching/
+  - title: Archives 
+    url: /archives/
 
 exclude:
   - .asset-cache
@@ -74,7 +78,6 @@ exclude:
   - .sass-cache
   - Capfile
   - config
-  - export.xml
   - Gemfile
   - log
   - node_modules
@@ -92,6 +95,20 @@ figures:
   dir: /figures
   enumerate: true
   analytics: true
+
+collections:
+  notes:
+    output: true
+    permalink: /:year/:y_day/:title/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: notes
+    values:
+      category: note
+      layout: note
 
 # Course information
 course_baseurl: "/teaching/hist205f.2014"
