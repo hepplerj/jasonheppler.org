@@ -1,4 +1,12 @@
 workshops:
+  - class: "Introduction to Network Analysis"
+    location: Native American Literature Symposium
+    datestart: 2019-03-08 15:00:00 -0800
+    dateend:
+    url: https://jasonheppler.org/courses/nals-2019/
+    semester: Spring 2019
+    description: This workshop emphasizes hands-on learning of working with network data and visualization. Historians working out the complex documentary relationships between people and institutions can often find surprising, or previously unexplored, connections by using network analysis and its visual representations. This workshop will help participants familiarize themselves with basic network-analysis vocabulary as well as using Gephi for network analysis and visualization.
+    kind: workshop
   - class: "Introduction to Github"
     location: University of Nebraska at Omaha 
     datestart: 2017-05-23 17:00:00 -0800
