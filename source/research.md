@@ -11,8 +11,7 @@ Most of my work sits at the intersection of digital humanities, history, data sc
 {% for project in sorted %}
   <a class="project" href="{{ project.url }}">
     <img src="{{ project.preview }}" alt="{{ project.title }}"/>
-    <h4>{{ project.title }}</h4> 
-    <p class="small">{{ project.snippet }}</p>
+    <p class="small"><strong>{{ project.title }}</strong> {{ project.snippet }}</p>
   </a>
 {% endfor %}
 </div>
