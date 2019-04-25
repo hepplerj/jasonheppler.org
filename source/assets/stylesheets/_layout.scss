@@ -1,6 +1,6 @@
 /* Main */ 
 .container {
-    max-width: 970px;
+    max-width: 750px;
     padding-left:  20px;
     padding-right: 20px;
     padding-top: 4rem;
@@ -71,6 +71,17 @@
       }
     }
 
+    #intro-block h1 {
+      letter-spacing: -0.5px;
+      margin: 0;
+      padding: 0;
+    }
+
+    #intro-block h2 {
+      margin-top: 4px;
+      font-size: 1rem;
+    }
+
     a {
       color: white;
       text-decoration: none;
@@ -114,13 +125,13 @@
   }
 
   .bigfoot-footnote__content p {
-      font-size: $base-font-size * 0.8;
+      font-size: $base-font-size;
       font-family: $sans-serif-font-family;
   }
 
   /* Search Form */ 
   .searchform {
-    background: #e5e7e7;
+    background: rgba(0,0,0,0.1);
     box-sizing: border-box;
     margin-top: 29px;
     opacity: 0.5;
@@ -141,6 +152,30 @@
     }
   }
 
+  /* Books */
+
+  .books>div{display:grid;grid-column-gap:5px;padding-top:5px}
+  .books>div{grid-template-columns: repeat(3, 1fr);}
+  .books>div div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .books .cat {
+    color: #1352a2; //rgb(60, 179, 113);
+    font-weight: $weight-500;
+  }
+
+  /* Photos */ 
+
+  div.archive {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  div.archive>div{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+
   /* Projects */ 
 
   .projects .limiter {
@@ -152,7 +187,7 @@
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+    grid-gap: 10px;
   }
   
   @media screen and (max-width: 1024px) {
@@ -161,7 +196,7 @@
     }
     .project-box {
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 30px;
+      grid-gap: 10px;
     }
   }
   
@@ -187,6 +222,7 @@
     img {
       display: block;
       margin-bottom: 10px;
+      border-radius: 0;
     }
   }
 
@@ -252,7 +288,7 @@
       }
     }
     h3 {
-      color: #cbcece;
+      // color: #cbcece;
     }
     a {
       color: #323232;
@@ -266,19 +302,25 @@
   }
   
   time, .entry-date {
-    font-family: "IBM Plex Sans", sans-serif;
+    // font-family: "IBM Plex Sans", sans-serif;
     font-size: 13px;
     font-weight: 300;
     text-transform: uppercase;
-    color: #7e7e7e;
+    // color: #7e7e7e;
   }
   
   .home-archives {
     .cat {
-      color: #cd3700;
+      color: #1352a2; //rgb(60, 179, 113);
+      font-weight: $weight-500;
+    }
+    h3 {
+      color: #1352a2;
+      font-weight: 700;
     }
     a[rel*="category"] {
-      color: rgba(205, 55, 0, 0.75);
+      // color: rgba(205, 55, 0, 0.75);
+      color: #1352a2; //rgb(60, 179, 113);
       font-family: "IBM Plex Sans", sans-serif;
       margin-left: 5px;
       text-transform: uppercase;

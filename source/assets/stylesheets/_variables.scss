@@ -10,6 +10,7 @@ $xlarge: 1280px;
 
 /* Fluid type */
 $base-font-size: 14px;
+$smaller-font: $base-font-size - 2px;
 $min-vw: $small;
 $max-vw: $xlarge;
 $min-font-size: 15px;
@@ -55,9 +56,9 @@ $monospace-font-family: San Francisco Mono,Monaco,"Consolas","Lucida Console","D
 
 /* Colors */
 $base-color: #393e46;
-$text-color: #333333;
+$text-color: rgb(0,0,0);
 $accent-color: #00638a;
-$background-color: #fff;
+$background-color: rgb(246, 242, 239);
 $code-background-color: tint($base-color, 95%);
 $border-color: tint($base-color, 80%);
 $overlay-color: $base-color;

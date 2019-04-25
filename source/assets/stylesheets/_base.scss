@@ -21,7 +21,7 @@
     margin: 0 0 1.5em;
     padding: 0.75em 1.5em 0.75em;
     font-size: 1rem;
-    color: #3b3d40;
+    color: $text-color;
     &.huge {
       max-width: 130%;
       border: none;
@@ -48,7 +48,7 @@
       content: " ";
       left: 0;
       width: 4px;
-      background: #cfd7dd;
+      background: rgb(252, 218, 102);
       top: .5em;
       border-radius: 6px;
       height: calc(100% - 1em);
@@ -89,6 +89,7 @@
     &.size-2x {
       font-size: $base-font-size * 2;
       font-weight: $weight-100;
+      line-height: 1.4;
     }
     &.home-intro {
       font-size: $base-font-size * 2.4;
@@ -97,6 +98,9 @@
     }
     &.emphasis {
         font-family: $headline-font-family;
+    }
+    &.small {
+      font-size: $base-font-size - 2;
     }
   }
 
@@ -217,6 +221,25 @@
     }
   }
   
+//  p a {
+//     background-image: linear-gradient(to bottom, transparent 65%, #fcf113 10%);
+//     background-size: 0% 100%;
+//     background-repeat: no-repeat;
+//     text-decoration: none;
+//     -webkit-transition: background-size 0.4s ease;
+//     -moz-transition: background-size 0.4s ease;
+//     -ms-transition: background-size 0.4s ease;
+//     -o-transition: background-size 0.4s ease;
+//     transition: background-size 0.4s ease;
+//     border-bottom: 2px solid;
+//     color: #515e65;
+//     border-color: #515e65;
+//  }
+//  p a:hover, p a:focus {
+//   background-size: 100% 100%;
+//   cursor: pointer;
+// }
+
   img {
     /* lazysizes plugin */
     &[data-sizes="auto"] {
