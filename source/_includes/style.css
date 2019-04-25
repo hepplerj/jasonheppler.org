@@ -758,8 +758,8 @@ html {
         font-size: 24px; } }
 
 body {
-  background: #fff;
-  color: #333333;
+  background: #f6f2ef;
+  color: black;
   text-rendering: optimizeLegibility;
   line-height: 1.5;
   font-size: 14px;
@@ -772,7 +772,7 @@ blockquote {
   margin: 0 0 1.5em;
   padding: 0.75em 1.5em 0.75em;
   font-size: 1rem;
-  color: #3b3d40; }
+  color: black; }
   blockquote.huge {
     max-width: 130%;
     border: none;
@@ -796,7 +796,7 @@ blockquote {
     content: " ";
     left: 0;
     width: 4px;
-    background: #cfd7dd;
+    background: #fcda66;
     top: .5em;
     border-radius: 6px;
     height: calc(100% - 1em); }
@@ -831,13 +831,16 @@ p {
   line-height: 1.6em; }
   p.size-2x {
     font-size: 28px;
-    font-weight: 100; }
+    font-weight: 100;
+    line-height: 1.4; }
   p.home-intro {
     font-size: 33.6px;
     width: 34rem;
     font-weight: 100; }
   p.emphasis {
     font-family: "europa", -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
+  p.small {
+    font-size: 12px; }
 
 @media screen and (max-width: 480px) {
   p {
@@ -980,7 +983,7 @@ li > img {
 
 /* Main */
 .container {
-  max-width: 970px;
+  max-width: 750px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 4rem;
@@ -1014,8 +1017,8 @@ li > img {
 
 /* Custom Home setup */
 .home {
-  background: #1352a2;
-  color: white; }
+  background: #74c25f;
+  color: #333; }
   .home.navigation {
     margin: 0;
     padding: 0;
@@ -1029,23 +1032,27 @@ li > img {
     margin-right: 20px;
     font-family: "europa", -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
   .home li#nav-title a {
-    color: white;
+    color: #333;
     text-decoration: none;
     border: none; }
   .home li.sidebar-nav-item a {
     border: none; }
+  .home #intro-block h1 {
+    letter-spacing: -0.5px;
+    margin: 0;
+    padding: 0; }
+  .home #intro-block h2 {
+    margin-top: 4px;
+    font-size: 1rem; }
   .home a {
-    color: white;
+    color: #333;
     text-decoration: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #333;
     -webkit-transition: border .15s ease-in-out, color .15s ease-in-out;
     transition: border .15s ease-in-out, color .15s ease-in-out; }
     .home a:hover {
-      color: rgba(255, 255, 255, 0.5);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
-    .home a:visited {
-      color: white;
-      outline: none !important; }
+      color: #C9F2CF;
+      border-bottom: 1px solid #C9F2CF; }
 
 .pad2y {
   padding-top: 20px;
@@ -1065,12 +1072,12 @@ hr {
   display: block; }
 
 .bigfoot-footnote__content p {
-  font-size: 11.2px;
+  font-size: 14px;
   font-family: "europa", -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
 
 /* Search Form */
 .searchform {
-  background: #e5e7e7;
+  background: rgba(0, 0, 0, 0.1);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-top: 29px;
@@ -1091,6 +1098,39 @@ hr {
   .searchform .searchsubmit {
     display: none; }
 
+/* Books */
+.books > div {
+  display: grid;
+  grid-column-gap: 5px;
+  padding-top: 5px; }
+
+.books > div {
+  grid-template-columns: repeat(3, 1fr); }
+
+.books > div div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.books .cat {
+  color: #1352a2;
+  font-weight: 500; }
+
+/* Photos */
+div.archive {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+div.archive > div {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 /* Projects */
 .projects .limiter {
   max-width: 1200px;
@@ -1100,14 +1140,14 @@ hr {
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px; }
+  grid-gap: 10px; }
 
 @media screen and (max-width: 1024px) {
   .projects .limiter {
     padding: 0 20px; }
   .project-box {
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px; } }
+    grid-gap: 10px; } }
 
 @media screen and (max-width: 800px) {
   .project-box {
@@ -1125,7 +1165,8 @@ a.project {
     color: #000; }
   a.project img {
     display: block;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    border-radius: 0; }
 
 /* Posts */
 .list-posts {
@@ -1175,9 +1216,6 @@ p.aside {
     font-size: 13px;
     margin-bottom: 15px; }
 
-.home-archives h3 {
-  color: #cbcece; }
-
 .home-archives a {
   color: #323232;
   border: none;
@@ -1185,17 +1223,20 @@ p.aside {
   transition: all 0.1s ease; }
 
 time, .entry-date {
-  font-family: "IBM Plex Sans", sans-serif;
   font-size: 13px;
   font-weight: 300;
-  text-transform: uppercase;
-  color: #7e7e7e; }
+  text-transform: uppercase; }
 
 .home-archives .cat {
-  color: #cd3700; }
+  color: #1352a2;
+  font-weight: 500; }
+
+.home-archives h3 {
+  color: #1352a2;
+  font-weight: 700; }
 
 .home-archives a[rel*="category"] {
-  color: rgba(205, 55, 0, 0.75);
+  color: #1352a2;
   font-family: "IBM Plex Sans", sans-serif;
   margin-left: 5px;
   text-transform: uppercase;
@@ -1363,7 +1404,6 @@ a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
    ========================================================================== */
 div.highlighter-rouge,
 figure.highlight {
-  background: #fafafa;
   color: #586e75;
   font-family: San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   line-height: 1.8;
