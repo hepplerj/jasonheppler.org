@@ -19,7 +19,7 @@ Thanks!
 
 ## Dependences
 
-- **Hugo**: >2.0
+- **Hugo**: >0.55.6
 - **Node**: >4.2 and Yo >1.7.0
 - **Gulp**: install `gulp-cli`: `npm install gulp-cli -g`
 
