@@ -1,0 +1,33 @@
+{{ partial "head.html" . }}
+
+<article id='{{ urlize .Title }}' class="h-entry post">
+  <header>
+    <h2 class="post-title"><a href='{{ .Permalink }}' class='p-name'>{{ .Title }}</a></h2>
+    <a href='{{ .Permalink }}' class='u-url u-uid permalink'><time class='dt-published' datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "January 2, 2006" }}</time></a>
+  </header>
+
+  {{ with .Params.image }}
+  <img src="/assets/images/{{ . }}" />
+  {{ end }}
+
+  {{ if lt .Date.Year 2017 }}
+  <aside class="warn">
+    I've recently migrated this blog, and the older posts might not yet be 
+    satisfactorily cleaned up. Apologies for the temporary mess.
+  </aside>
+
+  {{ end }}
+  <div class='post-body e-content'>
+    {{ .Content }}
+  </div>
+
+  {{ if isset .Params "external" }}
+  <p class="link-post-out"><a href="{{ index .Params "external" }}">{{ index .Params "title" }} →</a></p>
+  {{ end }}
+
+</article>
+<div class="post-separator narrow"></div>
+
+{{ partial "blog-comments" . }}
+{{ partial "blog-nav" . }}
+{{ partial "foot" . }}

@@ -1,0 +1,403 @@
+---
+author: "Intermediate ggplot: Humanities Visualization in R"
+title: Jason A. Heppler
+maketitle: true
+output:
+  rmdshower::shower_presentation:
+    self_contained: false
+    katex: true
+    theme: material
+---
+
+```{r, echo=FALSE}
+# superfund sites CSV
+# superfund_sites <- read.csv("data/superfund_sites.csv") %>%
+#   mutate(
+#     Latitude = as.numeric(gsub("[^0-9.-]", "", Latitude)), 
+#     Longitude = as.numeric(gsub("[^0-9.-]", "", Longitude)) 
+#   )  
+# sites_keep <- c("St", "Site.Name","Address","City","Zip","County","Latitude","Longitude","Final.Date")
+# superfund_sites <- superfund_sites[sites_keep]
+# superfund_sites$date <- as.Date(superfund_sites$Final.Date, "%m/%d/%y")
+# superfund_sites <- setNames(superfund_sites, tolower(names(superfund_sites)))
+# library(lubridate)
+# superfund_sites$year <- year(superfund_sites$date)
+```
+
+## Advanced ggplot
+
+1.  Theming
+2.  Labels and Annotation
+3.  Network Visualization
+4.  Mapping
+
+## Theming
+
+Themes allow you to control the appearance of **non-data** elements. We can build graphics that are visually appealing through the modification, addition, or subtraction of titles, axis labels, tick marks, and legends. 
+
+Consult the [theming documentation](http://docs.ggplot2.org/current/theme.html) to see all the available options.
+
+---
+
+## Theming
+
+Let's look at a new data set.
+
+```{r, message = F, warning = F}
+library(historydata)
+data("early_colleges")
+early_colleges %>% head(5)
+```
+
+## Theming
+
+```{r, fig.height = 4, fig.align = 'center', message = F, warning = F}
+ggplot(early_colleges, aes(x = state)) +
+  geom_bar() +
+  labs(title = "Early Colleges")
+```
+
+---
+
+## Theming
+
+`ggplot` comes with a few default themes:
+
+| Theme             | Description                                                         |
+| :----             | ------------------------------------------------------------------: |
+| theme_bw()        | A theme with white background and black gridlines.                  |
+| theme_classic()   | A classic-looking theme, with x and y axis lines and no gridlines.  |
+| theme_gray()      | The default theme function.                                         |
+| theme_minimal()   | A minimal theme with white background and faint gridlines.          |
+| theme_linedraw()  | A theme for making line graphs have high contrast.                  |
+
+## Theming - Minimal
+
+```{r, fig.height = 4, fig.align = 'center', message = F, warning = F}
+ggplot(early_colleges, aes(x = state)) +
+  geom_bar() +
+  theme_minimal() +
+  labs(title = "Early Colleges")
+```
+
+## Theming - Classic
+
+```{r, fig.height = 4, fig.align = 'center', message = F, warning = F}
+ggplot(early_colleges, aes(x = state)) +
+  geom_bar() +
+  theme_classic() +
+  labs(title = "Early Colleges")
+```
+
+## ggthemes
+
+We could also leverage the `ggthemes` package, which collects several theme options you can call upon for your visualizations.
+
+```{r}
+# install.packages('ggthemes')
+library(ggthemes)
+```
+
+## ggthemes - The Economist
+
+```{r, fig.height = 4, fig.align = 'center', message = F, warning = F}
+ggplot(early_colleges, aes(x = state)) +
+  geom_bar() +
+  theme_economist() +
+  labs(title = "Early Colleges")
+```
+
+## ggthemes - Stephen Few
+
+Using Stephen Few's "[Practical Rules for Using Color in Charts](http://www.perceptualedge.com/articles/visual_business_intelligence/rules_for_using_color.pdf)."
+
+```{r, fig.height = 4, fig.align = 'center', message = F, warning = F}
+ggplot(early_colleges, aes(x = state)) +
+  geom_bar() +
+  theme_few() +
+  labs(title = "Early Colleges")
+```
+
+## ggthemes - FiveThirtyEight
+
+```{r, fig.height = 4, fig.align = 'center', message = F, warning = F}
+ggplot(early_colleges, aes(x = state)) +
+  geom_bar() +
+  theme_fivethirtyeight() +
+  labs(title = "Early Colleges")
+```
+
+## ggthemes - Edward Tufte
+
+```{r, fig.height = 4, fig.align = 'center', message = F, warning = F}
+ggplot(early_colleges, aes(x = state)) +
+  geom_bar() +
+  theme_tufte() +
+  labs(title = "Early Colleges")
+```
+
+## Theming - Creating Your Own
+
+For example:
+
+```{r, eval=F}
+theme(
+    axis.text = element_text(size = 14),
+    legend.key = element_rect(fill = "navy"),
+    legend.background = element_rect(fill = "white"),
+    legend.position = c(0.14, 0.80),
+    panel.grid.major = element_line(colour = "grey40"),
+    panel.grid.minor = element_blank(),
+    panel.background = element_rect(fill = "navy")
+  )
+```
+
+## Theming
+
+Let's modify our college counts chart. 
+
+- apply the `ggplot` minimal theme
+- make the x-axis labels bold
+- rotate the x-asix labels to make them easier to read
+
+## Theming
+
+```{r, fig.height = 3, fig.align = 'center', message = F, warning = F}
+library(showtext) # custom fonts
+font.add.google("Lato")
+
+ggplot(early_colleges, aes(x = state)) +
+  geom_bar(fill = "#007D68") +
+  labs(title = "Early Colleges by State") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 15, face = "bold"),
+    text = element_text(family="Lato", size=12),
+    axis.text = element_text(face = "bold", size = 8),
+    axis.text.x = element_text(angle = 90, hjust = 1)
+   )
+```
+
+## Labels and Annotation
+
+```{r, message = F, warning = F}
+data("judges_people")
+# Remove rows with missing data
+judges_sub <- judges_people[complete.cases(judges_people),]
+judges_sub %>% head(5)
+```
+
+## Labels and Annotation
+
+```{r, message = F, warning = F, eval = F}
+ggplot(judges_sub, 
+       aes(x = death_date,
+           y = reorder(factor(name_last), death_date))) +
+geom_point() +
+  labs(x = "", y ="",
+       title = "Federal Judges, Death Date")
+```
+
+## { .fullpage }
+
+<div class="fullpage width">
+```{r, echo=FALSE}
+ggplot(judges_sub, 
+       aes(x = death_date,
+           y = reorder(factor(name_last), death_date))) +
+geom_point() +
+  labs(x = "", y ="",
+       title = "Federal Judges, Death Date")
+```
+</div>
+
+## Labels and Annotation
+
+```{r, message = F, warning = F, eval = F}
+judges.plot.lifespan <- ggplot(judges_sub, aes(x = death_date, 
+                            y = reorder(factor(name_last), birth_date)))
+judges.plot.lifespan + geom_segment(aes(yend = name_last, xend=birth_date)) + 
+  geom_point() +
+  theme_minimal() +
+  labs( x="Year of Death", 
+        y="",
+        title="Lifespans of Appointed Judges") +
+  theme(panel.grid.major.y=element_blank(), 
+        axis.ticks=element_blank(),
+        axis.title=element_text(size=8,face="bold"),
+        axis.text.y = element_text(size=6)
+        )
+```
+
+## { .fullpage }
+
+<div class="fullpage width">
+```{r, echo=FALSE}
+judges.plot.lifespan <- ggplot(judges_sub, aes(x = death_date, 
+                            y = reorder(factor(name_last), birth_date)))
+judges.plot.lifespan + geom_segment(aes(yend = name_last, xend=birth_date)) + 
+  geom_point() +
+  theme_minimal() +
+  labs( x="Year of Death", 
+        y="",
+        title="Lifespans of Appointed Judges") +
+  theme(panel.grid.major.y=element_blank(), 
+        axis.ticks=element_blank(),
+        axis.title=element_text(size=8,face="bold"),
+        axis.text.y = element_text(size=6)
+        )
+```
+</div>
+
+## { .fullpage }
+
+<div class="fullpage width">
+```{r, echo = F}
+judges.plot.lifespan + geom_segment(aes(yend = name_last, xend=birth_date, color = death_date < 1980)) + 
+  geom_point() +
+  theme_minimal() +
+  labs( x="Year of Death", 
+        y="",
+        title="Lifespans of Appointed Judges") +
+  theme(panel.grid.major.y=element_blank(), 
+        axis.ticks=element_blank(),
+        axis.title=element_text(size=8,face="bold"),
+        axis.text.y = element_text(size=6)
+        )
+```
+</div>
+
+## Annotation
+
+Let's load up another set of data by reading in a CSV file.
+
+```{r, message = F, warning = F}
+# Data prep for next example
+superfund <- read.csv("../data/superfund_sites.csv")
+superfund.by.state <- superfund %>%
+  group_by(St) %>% # St=state
+  summarise(count=n())
+
+superfund.by.state %>% head(5)
+```
+
+## Annotation
+
+```{r, message = F, warning = F}
+ggplot(superfund.by.state, aes(St, count)) +
+  geom_bar(stat="identity") +
+  labs(title="Superfund Sites by State") +
+  theme_minimal() + theme(legend.position='none') +
+  labs(x = "State", y = "Count")
+```
+
+## Annotation
+
+```{r, fig.height=4, message = F, warning = F}
+ggplot(superfund.by.state, aes(St, count)) +
+  geom_bar(stat="identity", aes(fill = count > 60)) +
+  labs(title="Superfund Sites by State") +
+  theme_minimal() + theme(legend.position='none') +
+  labs(x = "State", y = "Count") +
+  scale_fill_manual(values = c('#4C4C4C', '#8E001C'))
+```
+
+## ggrepel
+
+```{r, fig.height=5, message = F, warning = F}
+# install.packages('gapminder')
+library(gapminder)
+keepers <- subset(gap_with_colors,
+                continent %in% c("Africa", "Europe") & year == 2007)
+
+ggplot(keepers, aes(x = gdpPercap, y = lifeExp)) + 
+  geom_jitter(position = position_jitter(width = 0.1, height = 0), alpha = 1/4) +
+  geom_text(data = subset(keepers, gdpPercap > 30000), aes(label = country))
+```
+
+## ggrepel
+
+```{r, fig.height = 5, message = F, warning = F}
+# install.packages('gapminder')
+# install.packages('ggrepel')
+library(gapminder)
+library(ggrepel)
+keepers <- subset(gap_with_colors,
+                continent %in% c("Africa", "Europe") & year == 2007)
+
+ggplot(keepers, aes(x = gdpPercap, y = lifeExp)) + 
+  geom_jitter(position = position_jitter(width = 0.1, height = 0), alpha = 1/4) +
+  geom_text_repel(data = subset(keepers, gdpPercap > 30000), aes(label = country))
+```
+
+## Network Analysis
+
+`ggplot` does not come with a default method for visualizing networks, but communities of users are working to bring network visualization into the grammar of graphics.
+
+Note that these are only for building network visualizations. If you need to do network analysis, you will need to leverage packages like [igraph](http://igraph.org/r/).
+
+## Extending - geom_net
+
+```{r, message = F, warning = F}
+# install.packages("geomnet")
+library(geomnet)
+library(historydata)
+data('tudors')
+
+tudors %>% head(5)
+```
+
+## Extending - geom_net
+
+```{r, message = F, warning = F}
+tudor.network <- ggplot(data = tudors, aes(from_id = person_2, to_id = person_1))
+tudor.network + geom_net(label = TRUE, linewidth=0.5, 
+           fontsize = 3, size = 6,
+           ecolour = ifelse(tudors$relationship == "child", "#a6cee3", "#b2df8a")) +
+  theme_net() +
+  labs(title = "Tudors")
+```
+
+## Extending - geom_net
+
+```{r, message = F, warning = F}
+data("lesmis")
+lesmisnet <- merge(lesmis$edges, lesmis$vertices, 
+                   by.x="from", by.y="label", all=TRUE)
+lemisnetwork <- ggplot(data=lesmisnet, aes(from_id=from, to_id=to))
+lemisnetwork + geom_net(layout="fruchtermanreingold", 
+                        label=TRUE, vjust=-0.5, 
+                        aes(linewidth = degree/5)) + theme_net()
+```
+
+## Mapping
+
+```{r, message=FALSE, warning=FALSE, eval=F}
+library(ggmap)
+basemap <- get_map(location="United States", zoom = 4, maptype = "terrain")
+
+ggmap(basemap) +
+  geom_point(data=superfund_sites, aes(x=longitude, y=latitude), color="#894D46", size = 0.5, na.rm = TRUE) +
+  coord_map() 
+  theme(axis.ticks.y = element_blank(),axis.text.y = element_blank(), # get rid of x ticks/text
+                 axis.ticks.x = element_blank(),axis.text.x = element_blank(), # get rid of y ticks/text
+                 plot.title = element_text(lineheight=.8, face="bold", vjust=1))
+```
+
+## { .fullpage }
+
+<div class="fullpage width">
+```{r, echo=FALSE}
+library(ggmap)
+basemap <- get_map(location="United States", zoom = 4, maptype = "terrain")
+
+ggmap(basemap) +
+  geom_point(data=superfund_sites, aes(x=longitude, y=latitude), color="#894D46", size = 0.5, na.rm = TRUE) +
+  coord_map() +
+  theme(axis.ticks.y = element_blank(),axis.text.y = element_blank(), # get rid of x ticks/text
+                 axis.ticks.x = element_blank(),axis.text.x = element_blank(), # get rid of y ticks/text
+                 plot.title = element_text(lineheight=.8, face="bold", vjust=1))
+```
+</div>
+
+## Worksheet #2: Intermediate ggplot

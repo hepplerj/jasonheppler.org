@@ -1,0 +1,10 @@
+wiki/
+software/
+projects/
+files/
+cgi-bin/
+.DS_Store
+.well-known/
+.ftpquota
+node_modules/
+rsync-credentials.json

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Collect &amp; Prep Your Data for Visualization and Analysis with R</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Jason Heppler, PhD @jaheppler" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="hepp.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Collect &amp; Prep Your Data for Visualization and Analysis with R
+## University of Nebraska at Omaha Libraries
+### Jason Heppler, PhD<br><span class="citation">@jaheppler</span>
+### March 11, 2019<br><br>Slides and code on GitHub: <strong>github.com/unolibraries/workshops/</strong>
+
+---
+
+
+class: fullscreen, inverse, bottom, left, text-white
+background-image: url("images/me-speaking.jpg")
+
+.font150[**Hi, I'm Jason. &lt;br&gt;I like to gesture at screens.**]
+
+**Digital Engagement Librarian**, University of Nebraska at Omaha&lt;br&gt;Mentor, **Mozilla Open Leaders**&lt;br&gt;Researcher,  **Humanities+Design**, Stanford University
+
+
+
+
+---
+layout: true
+# Why *tidyverse*?
+---
+
+.left-column[
+![](images/hadley.jpg)
+__Hadley Wickham__
+]
+
+.right-column[.font150[
+Formerly known as the **hadleyverse**
+
+A highly-functional data manipulation and analysis package that makes the weird parts of R much easier.]
+]
+
+
+---
+
+## My personal reasons
+
+- .hl[Functional] data analysis and manipulation
+
+- Easy to .hl[iterate]
+
+- Easy to be .hl[consistent]
+
+- Easy to .hl[reproduce] your research methods
+
+- Easy to .hl[reason] about how data drives visualization
+
+---
+layout: false
+
+# What are we getting into?
+
+&lt;br&gt;
+`tidyverse` is a huge package: philosophy + functions
+&lt;br&gt;...but it's very well organized
+
+--
+
+&lt;br&gt;&lt;br&gt;
+Going to throw a lot at you
+&lt;br&gt;...but you'll know *where* and *what* to look for
+
+--
+
+.img-right[![](images/poppins-bag.gif)]
+
+---
+layout: true
+# Let's get started!
+---
+
+**Easy**: install the [tidyverse](http://tidyverse.org)
+
+```r
+install.packages('tidyverse')
+```
+
+**Expert**: install from GitHub
+
+```r
+devtools::install_github('tidyverse/ggplot2')
+```
+
+## Load the tidyverse
+
+
+```r
+library(tidyverse)
+```
+
+---
+layout: true
+# Welcome to the tidyverse
+
+.left-column[
+### Tidy Data
+
+]
+
+---
+
+.right-column[
+
+1. Each variable forms a .hl[column]
+
+2. Each observation forms a .hl[row]
+
+3. Each observational unit forms a table
+
+&lt;br&gt;&lt;br&gt;The following example draws from
+
+```r
+data(population, package = "tidyr")
+```
+
+]
+
+---
+
+.right-column[
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; country &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; 1995 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; 2000 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; 2005 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; 2010 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Canada &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 29.2949 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30.69742 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 32.25309 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 34.12624 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; China &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1237.5314 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1280.42858 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1318.17683 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1359.82146 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; USA &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 268.0397 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 284.59440 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 298.16580 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 312.24712 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+---
+
+.right-column[
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; year &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Canada &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; China &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; USA &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1995 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 29.29490 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1237.531 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 268.0397 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 2000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30.69742 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1280.429 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 284.5944 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 2005 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 32.25309 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1318.177 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 298.1658 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 2010 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 34.12624 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1359.821 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 312.2471 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+---
+
+.right-column[
+
+```r
+tidy1 &lt;- gather(messy1, 'year', 'population', -country)
+```
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; country &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; year &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; population &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Canada &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1995 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 29.295 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; China &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1995 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1237.531 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; USA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1995 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 268.040 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Canada &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30.697 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; China &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1280.429 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; USA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 284.594 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Canada &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2005 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 32.253 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; China &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2005 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1318.177 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; USA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2005 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 298.166 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Canada &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2010 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 34.126 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; China &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2010 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1359.821 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; USA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2010 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 312.247 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+---
+
+.right-column[
+The `tidyverse` is a collection of several packages useful for data manipulation, tidying, and visualization.
+
+- `ggplot2`, for data visualization
+- `dplyr`, for data manipulation
+- `tidyr`, for data tidying
+- `readr`, for data import
+- `purrr`, for functional programming
+- `tibble`, a re-imagining of data frames
+]
+
+---
+
+layout: true
+# The grammar of data manipulation
+
+.left-column[
+### dplyr + tidyr
+
+]
+
+---
+
+.right-column[
+`tidyr` and `dplyr` are great for making data tidy, and for manipulating tidy data.
+
+- `select()`: pick columns/variables
+- `filter()`: pick rows/observations
+- `arrange()`: sort by a column or set of columns
+- `mutate()`: compute a new column from existing columns
+- `left_join()`: connect two datasets with a common variable
+- `group_by()` and `summarize()`: aggregate data into groups
+- `gather()` and `spread()`: switch between wide and long data
+]
+
+---
+
+.right-column[
+The grammar of the `tidyverse` makes running and writing code much easier and cleaner. Let's compare. 
+
+Base R:
+
+`crime.ny.2005[, c("Type.of.Crime", "Count")]`
+
+dplyr:
+
+`crime.ny.2005 %&gt;% 
+  select(Type.of.Crime, Count)`
+]
+
+---
+
+layout: false
+class: inverse, center, middle
+
+.font150[
+Open the file &lt;https://bit.ly/2Qi32P7&gt;. Copy and paste into RStudio and follow along to practice the grammar of data manipulation.
+]
+
+---
+layout: true
+### Review
+
+
+---
+layout: false
+class: inverse, center, middle
+
+# Thanks!
+
+.font150.text-white[
+@jaheppler &lt;br&gt;
+github.com/hepplerj &lt;br&gt;
+Jason Heppler, PhD
+]
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "%current%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

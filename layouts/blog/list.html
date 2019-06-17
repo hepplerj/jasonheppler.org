@@ -1,0 +1,20 @@
+{{ partial "head.html" . }}
+
+{{ .Content }}
+
+{{ partial "blog-nav" }}
+
+{{ range first 10 .Pages }}
+<article id='{{ urlize .Title }}' class="h-entry post">
+  <header>
+    <h2 class="post-title"><a href='{{ .Permalink }}' class='p-name'>{{ .Title }}</a></h2>
+    <a href='{{ .Permalink }}' class='u-url u-uid permalink'><time class='dt-published' datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "January 2, 2006" }}</time></a>
+  </header>
+  <div class='post-body e-content'>
+    {{ .Content }}
+  </div>
+</article>
+<div class="post-separator"></div>
+{{ end }}
+{{ partial "blog-nav" }}
+{{ partial "foot.html" . }}

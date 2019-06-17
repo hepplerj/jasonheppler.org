@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Podcast Show Notes</title>
+<meta name="author" content="Jason Heppler">
+<meta name="description" content="Podcast show notes.">
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/css/normalize.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/css/foundation.min.css">
+
+
+<style>
+.podlink {
+  background: #f2f2f2;
+  padding: 3px;
+}
+.podlink a {
+  text-decoration: none;
+}
+.podlink a:hover {
+  text-decoration: none;
+}
+</style>
+
+</head>
+
+<body>
+<div class="row">
+  <h1>Podcast Tools</h1>
+</div>
+
+<div class="row">
+  <hr>
+</div>
+
+<div class="row">
+  <div id="description">
+    <h4>Show Notes</h4>
+    <p>
+    To create show notes more easily, I've created a small JavaScript bookmarklet. To use:
+    </p>
+
+    <ol>
+      <li>Drag <a href="javascript:(function(s)%7Btry%7Bs%3Ddocument.selection.createRange().text%7Dcatch(_)%7Bs%3Ddocument.getSelection()%7Dprompt(%27Copy text%27,%27%5B%27%2Bdocument.title%2B%27%5D(%27%2Blocation%2B%27)%5Cn%5Cn> %27%2Bs)%7D)()" class="podlink">this link</a> to your bookmarks bar.</li>
+      <li>Visit a page you want to include in show notes. Highlight an excerpt of text.</li>
+      <li>Click the bookmarklet. A popup window will appear with the page title, URL, and highlighted text formatted as Markdown.</li>
+      <li>Copy the text from the window and click "OK" or "Cancel." Paste the text into the show notes document.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="row">
+  <p id="back-link">
+    <a href="http://jasonheppler.org">&larr; Back to home page</a>
+  </p>
+</div>
+
+</body>
+</html>
+

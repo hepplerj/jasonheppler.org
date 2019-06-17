@@ -1,0 +1,37 @@
+Redirect 301 /blog/feed/atom/ https://jasonheppler.org/feed.xml
+Redirect 301 /posts.atom.xml https://jasonheppler.org/feed.xml
+Redirect 301 /atom.xml https://jasonheppler.org/feed.xml
+Redirect 302 /cv/index.html https://jasonheppler.org/files/jah-vita.pdf
+Redirect 302 /cv/ https://jasonheppler.org/files/jah-vita.pdf
+
+ErrorDocument 404 /404.html
+
+<ifModule mod_gzip.c>
+mod_gzip_on Yes
+mod_gzip_dechunk Yes
+mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
+mod_gzip_item_include handler ^cgi-script$
+mod_gzip_item_include mime ^text/.*
+mod_gzip_item_include mime ^application/x-javascript.*
+mod_gzip_item_exclude mime ^image/.*
+mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</ifModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^blog/wp-content/uploads/(.*)$ https://jasonheppler.org/files/uploads/$1 [L,R=302]
+RewriteRule ^course-blogs/(.*)$ https://jasonheppler.org/ [L,R=301]
+RewriteRule ^projects/notebook/(.*)$ https://jasonheppler.org/ [R=301,NC,L]
+RewriteRule ^downloads/(.*)$ https://jasonheppler.org/files/downloads/$1 [R=301,NC,L]
+RewriteRule ^figures/(.*)$ https://jasonheppler.org/files/figures/$1 [R=301,NC,L]
+
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+</IfModule>
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>

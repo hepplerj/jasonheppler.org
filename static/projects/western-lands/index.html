@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>U.S. Federal Lands</title>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400,300' rel='stylesheet' type='text/css'>
+
+    <style>
+      body {
+      	padding: 1% 1% 0;
+      	font: 0.63em/1.5 Helvetica, Arial, sans-serif;
+        color: #525252;
+      }
+
+      p, h1, h2, h4 {
+        font-family: "Open Sans";
+        margin: 10px 40px;
+        font-weight: 300;
+      }
+
+      text {
+        font-family: "Lato";
+      }
+
+      a {
+        color: #007D68;
+      }
+
+      h1 {
+        font-size: 28px;
+        padding-left: 96px;
+      }
+
+      h4 {
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        border-top: 1px solid lightgray;
+        margin: 30px 315px 50px;
+        padding: 10px 0;
+      }
+
+      p {
+        margin: 10px 40px 10px 132px;
+        font-size: 10pt;
+      }
+
+      div#viz {
+        width: 1035px;
+      }
+      div#chart {
+        margin-left: 110px;
+      }
+
+      .fedland {
+        fill: #007D68;
+        stroke: none;
+      }
+
+      .fedland:hover {
+        fill: #003A63;
+      }
+
+      .state-boundary, .national-boundary {
+        fill: none;
+        stroke: #f1f1f1;
+        stroke-width: 1px;
+      }
+
+      .state {
+        fill: #ddd;
+      }
+
+      .admins {
+        cursor: pointer;
+      }
+
+      svg {
+        display: block;
+        margin: auto;
+        font: 14px sans-serif;
+      }
+
+      svg, body {
+        background: #f1f1f1;
+      }
+
+      h4 > a {
+        text-decoration: none;
+      }
+      mark {
+        background-color: #FAF4C1;
+        color: #202020;
+        text-decoration: none; }
+    </style>
+  </head>
+  <body>
+
+  <h1 style="margin-left: 6vw;">U.S. Federal Lands</h1>
+
+<div id="viz">
+  <div id="chart"></div>
+
+  <p>This map depicts the U.S. Federal land holdings. Of the nation's 2.27 billion acres, roughly <mark>28% of the land is owned by the federal government</mark>. In the American West, federal ownship accounts for <mark>630 million acres</mark>. These are the nation's public lands.</p>
+
+  <p>
+    See also my version of this map <a href="https://github.com/hepplerj/us-federal-lands">built in R</a>, and its <a href="http://jasonheppler.org/2016/01/06/western-federal-lands-and-oregon/">corresponding blog post</a>.
+  </p>
+
+  <p>Questions? Feedback? I'm <a href="http://twitter.com/jaheppler">@jaheppler</a> on Twitter.</p>
+
+  <h4><a target="_blank" href="http://jasonheppler.org/">Jason Heppler</a></h4>
+
+</div>
+
+  <script src="fedlands.js" charset="utf-8"></script>
+
+  </body>
+</html>

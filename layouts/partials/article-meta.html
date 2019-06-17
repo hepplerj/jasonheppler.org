@@ -1,0 +1,10 @@
+<div class="article-meta">
+{{ if (gt .Params.date 0) }}<time class="post-date" datetime="2006-01-02">{{ .Date.Format "2 January 2006" }}</time>{{ end }}
+
+{{ if .Site.Params.categories }}
+{{ if .Params.categories }}
+  &middot;
+  <span class="post-categories">{{ range $index, $category := .Params.categories }}{{ if gt $index 0 }}, {{ end }}<a href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}</span>
+{{ end }}
+{{ end }}
+</div>

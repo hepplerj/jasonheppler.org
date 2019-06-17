@@ -1,0 +1,12 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+<div class="book">
+<h3>{{ .Get "title" }}</h3>
+<p class="short-description">{{ .Get "publisher" }}, {{ .Get "year" }}</p>
+
+{{ if (isset .Params "image") }}
+<a href='{{ .Get "url" }}'><img src='/assets/images/{{ .Get "image" }}' alt='{{ .Get "title" }}'></a>
+{{ end }}
+
+{{ .Inner }}
+
+</div>

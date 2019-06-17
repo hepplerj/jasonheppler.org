@@ -1,0 +1,287 @@
+---
+title       : "Introduction to htmlwidgets"
+author      : Jason A. Heppler
+maketitle: true
+ratio: "16x10"
+output:
+  rmdshower::shower_presentation:
+    self_contained: false
+    katex: true
+    theme: material
+    css: custom.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache = TRUE)
+
+library(historydata)
+library(dplyr)
+library(ggplot2)
+library(readr)
+library(RColorBrewer)
+library(jahMisc)
+```
+
+## Before we start
+
+```{r, eval=F}
+library(historydata)
+library(dplyr)
+library(ggplot2)
+library(readr)
+library(RColorBrewer)
+```
+
+## htmlwidgets
+
+An R package for integrating JavaScript libraries into R visualizations. Visualizations can appear in RMarkdown documents, RStudio, or Shiny web applications (more on this on Day 4).
+
+You can find the full documentation for `htmlwidgets` at <http://www.htmlwidgets.org>.
+
+## htmlwidgets
+
+There are many widgets available for building interactive graphics:
+
+- `networkD3`: force directed networks, Sankey diagrams, tree networks
+- `edgebundleR`: hierarchical edge bundle plots
+- `pairsD3`: interactive scatterplot matrices
+- `dygraphs`: charting time-series data
+- `leaflet`: dynamic maps
+- `DT`: interactive data tables
+- `rpivotTables`: build pivot tables to dynamically slice and plot data
+
+## htmlwidgets
+
+<center>
+<http://gallery.htmlwidgets.org>
+
+![htmlwidgets gallery](assets/img/htmlwidgets.png)
+</center>
+
+
+## Why htmlwidgets?
+
+- Works relatively well without an Internet connection (once you've downloaded the package)
+- Customization (sometimes)
+- Active community of users and creators
+    - Some people are [extremely active](http://www.buildingwidgets.com/blog) -- building one htmlwidget a week
+- If you want to make your own, some [good documentation]() on how to create, including D3 examples.
+
+## htmlwidgets - Installation
+
+```{r, eval=FALSE}
+# from CRAN
+install.packages("htmlwidgets")
+
+# or the development version
+devtools::install_github("ramnathv/htmlwidgets")
+
+library(htmlwidgets)
+```
+
+## Specific Widgets
+
+You don't necessarily need the entire `htmlwidgets` package. We can call upon specific packages:
+
+```{r, eval=FALSE}
+# time series charts
+devtools::install_github("rstudio/dygraphs")
+
+# interactive data tables
+devtools::install_github("rstudio/DT")
+
+# leaflet maps
+devtools::install_github("rstudio/leaflet")
+```
+
+## Plotly
+
+```{r, eval=FALSE}
+install.packages("plotly")
+```
+
+A package for leveraging the [plotly.js](https://plot.ly/) library API. 
+
+- Build browser-based charts and graphics
+- Works locally in the HTML widgets framework
+- Provides standard events to work across plot types
+- Easy to hook events into Shiny apps
+- And the best news:
+
+## {.fullscreen}
+
+<center>
+<p style="font-size: 34px;"> 🎈Plotly works with `ggplot`🎈 </p>
+</center>
+
+<center>
+![Party](assets/img/swanson.gif)
+</center>
+
+## Let's start with what we know
+
+Let's use this weather data on San Francisco.
+
+```{r}
+# install.packages("readr")
+library(readr)
+sf_weather <- read_csv("http://bl.ocks.org/bricedev/raw/458a01917183d98dff3c/sf.csv")
+
+# We'll make the variable names easier to work with
+names(sf_weather) <- names(sf_weather) %>% 
+  str_to_lower() %>% 
+  str_replace("\\s+", "_")
+
+# We only want a couple columns
+sf_weather <- sf_weather %>% 
+  select(date, max_temperaturec, min_temperaturec)
+```
+
+## {.fullscreen}
+
+```{r}
+sf_weather
+```
+
+## Plotly
+
+```{r, eval=FALSE}
+ggplot() +
+  geom_line(data = sf_weather, 
+            aes(x = date, y = min_temperaturec), 
+            color = RColorBrewer::brewer.pal(3, "Set1")[2]) +
+  geom_line(data = sf_weather, 
+            aes(x = date, y = max_temperaturec), 
+            color = RColorBrewer::brewer.pal(3, "Set1")[1]) +
+    labs(title = "San Francisco Weather, 2014-2015",
+       x = "Date",
+       y = "Minimum and Maxium Temperature (C)") +
+  theme_jah() #ignore: my custom theming
+```
+
+## {.fullscreen}
+
+```{r, echo=F}
+ggplot() +
+  geom_line(data = sf_weather, 
+            aes(x = date, y = min_temperaturec), 
+            color = RColorBrewer::brewer.pal(3, "Set1")[2]) +
+  geom_line(data = sf_weather, 
+            aes(x = date, y = max_temperaturec), 
+            color = RColorBrewer::brewer.pal(3, "Set1")[1]) +
+    labs(title = "San Francisco Weather, 2014-2015",
+       x = "Date",
+       y = "Minimum and Maxium Temperature (C)") +
+  theme_jah() #ignore: my custom theming
+```
+
+## Plotly
+
+```{r, eval=F}
+library(devtools)
+devtools::install_github("ropensci/plotly")
+```
+
+For reference, the `ggplot2` and `plotly` documentation: <https://plot.ly/ggplot2/>
+
+## Plotly
+
+```{r, eval=F}
+ggplot() +
+  geom_line(data = sf_weather, 
+            aes(x = date, y = min_temperaturec), 
+            color = RColorBrewer::brewer.pal(3, "Set1")[2]) +
+  geom_line(data = sf_weather, 
+            aes(x = date, y = max_temperaturec), 
+            color = RColorBrewer::brewer.pal(3, "Set1")[1]) +
+    labs(title = "San Francisco Weather, 2014-2015",
+       x = "Date",
+       y = "Minimum and Maxium Temperature (C)") +
+  theme_jah() #ignore: my custom theming
+```
+
+## Plotly
+
+```{r, eval=F}
+viz <- ggplot() +
+  geom_line(data = sf_weather, 
+            aes(x = date, y = min_temperaturec), 
+            color = RColorBrewer::brewer.pal(3, "Set1")[2]) +
+  geom_line(data = sf_weather, 
+            aes(x = date, y = max_temperaturec), 
+            color = RColorBrewer::brewer.pal(3, "Set1")[1]) +
+    labs(title = "San Francisco Weather, 2014-2015",
+       x = "Date",
+       y = "Minimum and Maxium Temperature (C)") +
+  theme_jah() #ignore: my custom theming
+```
+
+## Plotly
+
+All we need is to call `ggplotly` and pass our `viz` variable as an argument.
+
+```{r, echo = FALSE}
+ggplotly(viz)
+```
+
+## ... and much more
+
+```{r}
+plot_ly(z = volcano, type = "surface")
+```
+
+## Interactive Network Visualization
+
+htmlwidgets comes with a few options
+
+- networkD3: using the `D3.js` JavaScript library
+- visNetwork: using the `vis.js` JavaScript library
+
+## networkD3
+
+![D3js](assets/img/d3js.png)
+
+## networkD3
+
+Let's say we want to exame a character network from *Les Miserables*.
+
+```{r}
+data(MisLinks, MisNodes)
+MisLinks %>% head(5)
+MisNodes %>% head(5)
+```
+
+## networkD3
+
+```{r}
+library(networkD3)
+forceNetwork(Links = MisLinks, Nodes = MisNodes,
+             Source = "source", Target = "target", 
+             NodeID = "name", # label nodes
+             Group = "group", # color nodes by group, calculated earlier
+             charge = -70, # node repulsion
+             linkDistance = 25, # distance between any two connected nodes
+             zoom = T, 
+             opacity = 0.8)
+```
+
+## networkD3 - Modifying with D3.js
+
+```{r}
+# with a simple click action - make the circles bigger when clicked
+node_size_on_click <- 
+  ' d3.select(this).select("circle")
+      .transition().duration(750)
+      .attr("r", 40)'
+
+forceNetwork(Links = MisLinks, Nodes = MisNodes, Source = "source",
+             Target = "target", Value = "value", NodeID = "name",
+             Group = "group", opacity = 1, zoom = T, fontSize=24,
+             clickAction = node_size_on_click)
+```
+
+## {.fullscreen}
+
+> There is a tendency when using graphs to become smitten with one's own data. Even though a graph of a few hundred nodes quickly becomes **unreadable**, it is often satisfying for the creator because the resulting figure is **elegant** and **complex** and may be subjectively beautiful, and the notion that the creator's data is "complex" fits just fine with the creator's own interpretation of it. **Graphs have a tendency of making a data set look sophisticated and important, without having solved the problem of enlightening the viewer.**
+
+-- Ben Fry, *Visualizing Data* (Sebastopol, Calif.: O'Reilly, 2008), p. 240

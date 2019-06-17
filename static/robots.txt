@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /dossier/
+
+Sitemap: https://jasonheppler.org/sitemap.xml

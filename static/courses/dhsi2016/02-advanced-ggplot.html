@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Intermediate ggplot: Humanities Visualization in R</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="02-advanced-ggplot_files/rmdshower/node_modules/shower-material/styles/screen-4x3.css">
+  <link rel="stylesheet" href="02-advanced-ggplot_files/rmdshower/style-common.css">
+  <link rel="stylesheet" href="02-advanced-ggplot_files/rmdshower/style-material.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  <script src="02-advanced-ggplot_files/rmdshower/auto-render.min.js" type="text/javascript"></script>
+  
+  
+    <style type="text/css">
+   div.sourceCode { overflow-x: auto; }
+   table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+     margin: 0; padding: 0; vertical-align: baseline; border: none; }
+   table.sourceCode { width: 100%; line-height: 100%; }
+   td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+   td.sourceCode { padding-left: 5px; }
+   code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+   code > span.dt { color: #902000; } /* DataType */
+   code > span.dv { color: #40a070; } /* DecVal */
+   code > span.bn { color: #40a070; } /* BaseN */
+   code > span.fl { color: #40a070; } /* Float */
+   code > span.ch { color: #4070a0; } /* Char */
+   code > span.st { color: #4070a0; } /* String */
+   code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+   code > span.ot { color: #007020; } /* Other */
+   code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+   code > span.fu { color: #06287e; } /* Function */
+   code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+   code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+   code > span.cn { color: #880000; } /* Constant */
+   code > span.sc { color: #4070a0; } /* SpecialChar */
+   code > span.vs { color: #4070a0; } /* VerbatimString */
+   code > span.ss { color: #bb6688; } /* SpecialString */
+   code > span.im { } /* Import */
+   code > span.va { color: #19177c; } /* Variable */
+   code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+   code > span.op { color: #666666; } /* Operator */
+   code > span.bu { } /* BuiltIn */
+   code > span.ex { } /* Extension */
+   code > span.pp { color: #bc7a00; } /* Preprocessor */
+   code > span.at { color: #7d9029; } /* Attribute */
+   code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+   code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+   code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+   code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  
+  
+  
+</head>
+
+<body class="shower list">
+
+  <header class="caption">
+    <h1>Intermediate ggplot: Humanities Visualization in R</h1>
+    <p>Jason A. Heppler</p>
+  </header>
+
+    <section class="slide level1 titlepage">
+    <h1>Intermediate ggplot: Humanities Visualization in R</h1>
+    <h2>Jason A. Heppler <br> </h2>
+  </section>
+    
+  
+<section id="advanced-ggplot" class="slide level2">
+<h2>Advanced ggplot</h2>
+<ol type="1">
+<li>Theming</li>
+<li>Labels and Annotation</li>
+<li>Network Visualization</li>
+<li>Mapping</li>
+</ol>
+</section>
+<section id="theming" class="slide level2">
+<h2>Theming</h2>
+<p>Themes allow you to control the appearance of <strong>non-data</strong> elements. We can build graphics that are visually appealing through the modification, addition, or subtraction of titles, axis labels, tick marks, and legends.</p>
+<p>Consult the <a href="http://docs.ggplot2.org/current/theme.html">theming documentation</a> to see all the available options.</p>
+</section>
+<section id="theming-1" class="slide level2">
+<h2>Theming</h2>
+<p>Let’s look at a new data set.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(historydata)
+<span class="kw">data</span>(<span class="st">&quot;early_colleges&quot;</span>)
+early_colleges %&gt;%<span class="st"> </span><span class="kw">head</span>(<span class="dv">5</span>)</code></pre></div>
+<pre><code>## Source: local data frame [5 x 6]
+## 
+##                  college         original_name         city state
+##                    (chr)                 (chr)        (chr) (chr)
+## 1                Harvard                    NA    Cambridge    MA
+## 2       William and Mary                    NA Williamsburg    VA
+## 3                   Yale                    NA    New Haven    CT
+## 4 Pennsylvania, Univ. of                    NA Philadelphia    PA
+## 5              Princeton College of New Jersey    Princeton    NJ
+## Variables not shown: established (int), sponsorship (chr)</code></pre>
+</section>
+<section id="theming-2" class="slide level2">
+<h2>Theming</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(early_colleges, <span class="kw">aes</span>(<span class="dt">x =</span> state)) +
+<span class="st">  </span><span class="kw">geom_bar</span>() +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;Early Colleges&quot;</span>)</code></pre></div>
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-3-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="theming-3" class="slide level2">
+<h2>Theming</h2>
+<p><code>ggplot</code> comes with a few default themes:</p>
+<table style="width:103%;">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 94%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Theme</th>
+<th style="text-align: right;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">theme_bw()</td>
+<td style="text-align: right;">A theme with white background and black gridlines.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">theme_classic()</td>
+<td style="text-align: right;">A classic-looking theme, with x and y axis lines and no gridlines.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">theme_gray()</td>
+<td style="text-align: right;">The default theme function.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">theme_minimal()</td>
+<td style="text-align: right;">A minimal theme with white background and faint gridlines.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">theme_linedraw()</td>
+<td style="text-align: right;">A theme for making line graphs have high contrast.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="theming---minimal" class="slide level2">
+<h2>Theming - Minimal</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(early_colleges, <span class="kw">aes</span>(<span class="dt">x =</span> state)) +
+<span class="st">  </span><span class="kw">geom_bar</span>() +
+<span class="st">  </span><span class="kw">theme_minimal</span>() +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;Early Colleges&quot;</span>)</code></pre></div>
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-4-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="theming---classic" class="slide level2">
+<h2>Theming - Classic</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(early_colleges, <span class="kw">aes</span>(<span class="dt">x =</span> state)) +
+<span class="st">  </span><span class="kw">geom_bar</span>() +
+<span class="st">  </span><span class="kw">theme_classic</span>() +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;Early Colleges&quot;</span>)</code></pre></div>
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-5-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="ggthemes" class="slide level2">
+<h2>ggthemes</h2>
+<p>We could also leverage the <code>ggthemes</code> package, which collects several theme options you can call upon for your visualizations.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&#39;ggthemes&#39;)</span>
+<span class="kw">library</span>(ggthemes)</code></pre></div>
+<pre><code>## Warning: package &#39;ggthemes&#39; was built under R version 3.2.3</code></pre>
+</section>
+<section id="ggthemes---the-economist" class="slide level2">
+<h2>ggthemes - The Economist</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(early_colleges, <span class="kw">aes</span>(<span class="dt">x =</span> state)) +
+<span class="st">  </span><span class="kw">geom_bar</span>() +
+<span class="st">  </span><span class="kw">theme_economist</span>() +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;Early Colleges&quot;</span>)</code></pre></div>
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-7-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="ggthemes---stephen-few" class="slide level2">
+<h2>ggthemes - Stephen Few</h2>
+<p>Using Stephen Few’s “<a href="http://www.perceptualedge.com/articles/visual_business_intelligence/rules_for_using_color.pdf">Practical Rules for Using Color in Charts</a>.”</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(early_colleges, <span class="kw">aes</span>(<span class="dt">x =</span> state)) +
+<span class="st">  </span><span class="kw">geom_bar</span>() +
+<span class="st">  </span><span class="kw">theme_few</span>() +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;Early Colleges&quot;</span>)</code></pre></div>
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-8-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="ggthemes---fivethirtyeight" class="slide level2">
+<h2>ggthemes - FiveThirtyEight</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(early_colleges, <span class="kw">aes</span>(<span class="dt">x =</span> state)) +
+<span class="st">  </span><span class="kw">geom_bar</span>() +
+<span class="st">  </span><span class="kw">theme_fivethirtyeight</span>() +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;Early Colleges&quot;</span>)</code></pre></div>
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-9-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="ggthemes---edward-tufte" class="slide level2">
+<h2>ggthemes - Edward Tufte</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(early_colleges, <span class="kw">aes</span>(<span class="dt">x =</span> state)) +
+<span class="st">  </span><span class="kw">geom_bar</span>() +
+<span class="st">  </span><span class="kw">theme_tufte</span>() +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;Early Colleges&quot;</span>)</code></pre></div>
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-10-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="theming---creating-your-own" class="slide level2">
+<h2>Theming - Creating Your Own</h2>
+<p>For example:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">theme</span>(
+    <span class="dt">axis.text =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">14</span>),
+    <span class="dt">legend.key =</span> <span class="kw">element_rect</span>(<span class="dt">fill =</span> <span class="st">&quot;navy&quot;</span>),
+    <span class="dt">legend.background =</span> <span class="kw">element_rect</span>(<span class="dt">fill =</span> <span class="st">&quot;white&quot;</span>),
+    <span class="dt">legend.position =</span> <span class="kw">c</span>(<span class="fl">0.14</span>, <span class="fl">0.80</span>),
+    <span class="dt">panel.grid.major =</span> <span class="kw">element_line</span>(<span class="dt">colour =</span> <span class="st">&quot;grey40&quot;</span>),
+    <span class="dt">panel.grid.minor =</span> <span class="kw">element_blank</span>(),
+    <span class="dt">panel.background =</span> <span class="kw">element_rect</span>(<span class="dt">fill =</span> <span class="st">&quot;navy&quot;</span>)
+  )</code></pre></div>
+</section>
+<section id="theming-4" class="slide level2">
+<h2>Theming</h2>
+<p>Let’s modify our college counts chart.</p>
+<ul>
+<li>apply the <code>ggplot</code> minimal theme</li>
+<li>make the x-axis labels bold</li>
+<li>rotate the x-asix labels to make them easier to read</li>
+</ul>
+</section>
+<section id="theming-5" class="slide level2">
+<h2>Theming</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(showtext) <span class="co"># custom fonts</span>
+<span class="kw">font.add.google</span>(<span class="st">&quot;Lato&quot;</span>)
+
+<span class="kw">ggplot</span>(early_colleges, <span class="kw">aes</span>(<span class="dt">x =</span> state)) +
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">fill =</span> <span class="st">&quot;#007D68&quot;</span>) +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;Early Colleges by State&quot;</span>) +
+<span class="st">  </span><span class="kw">theme_minimal</span>() +
+<span class="st">  </span><span class="kw">theme</span>(
+    <span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">15</span>, <span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>),
+    <span class="dt">text =</span> <span class="kw">element_text</span>(<span class="dt">family=</span><span class="st">&quot;Lato&quot;</span>, <span class="dt">size=</span><span class="dv">12</span>),
+    <span class="dt">axis.text =</span> <span class="kw">element_text</span>(<span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>, <span class="dt">size =</span> <span class="dv">8</span>),
+    <span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">90</span>, <span class="dt">hjust =</span> <span class="dv">1</span>)
+   )</code></pre></div>
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-12-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="labels-and-annotation" class="slide level2">
+<h2>Labels and Annotation</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(<span class="st">&quot;judges_people&quot;</span>)
+<span class="co"># Remove rows with missing data</span>
+judges_sub &lt;-<span class="st"> </span>judges_people[<span class="kw">complete.cases</span>(judges_people),]
+judges_sub %&gt;%<span class="st"> </span><span class="kw">head</span>(<span class="dv">5</span>)</code></pre></div>
+<pre><code>## Source: local data frame [5 x 13]
+## 
+##   judge_id name_first name_middle  name_last name_suffix birth_date
+##      (int)      (chr)       (chr)      (chr)       (chr)      (int)
+## 1     2705      James     Lindsay     Almond         Jr.       1898
+## 2       58      Glenn       Leroy     Archer         Jr.       1929
+## 3       87     Thomas      Austin Ballantine         Jr.       1926
+## 4     3297    Lindley    Garrison  Beckworth         Sr.       1913
+## 5      144      David        Owen      Belew         Jr.       1920
+## Variables not shown: birthplace_city (chr), birthplace_state (chr),
+##   death_date (int), death_city (chr), death_state (chr), gender (chr),
+##   race (chr)</code></pre>
+</section>
+<section id="labels-and-annotation-1" class="slide level2">
+<h2>Labels and Annotation</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(judges_sub, 
+       <span class="kw">aes</span>(<span class="dt">x =</span> death_date,
+           <span class="dt">y =</span> <span class="kw">reorder</span>(<span class="kw">factor</span>(name_last), death_date))) +
+<span class="kw">geom_point</span>() +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;&quot;</span>, <span class="dt">y =</span><span class="st">&quot;&quot;</span>,
+       <span class="dt">title =</span> <span class="st">&quot;Federal Judges, Death Date&quot;</span>)</code></pre></div>
+</section>
+<section id="section" class="slide level2 fullpage">
+<h2></h2>
+<div class="fullpage width">
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-15-1.png" width="768" /></p>
+</div>
+</section>
+<section id="labels-and-annotation-2" class="slide level2">
+<h2>Labels and Annotation</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">judges.plot.lifespan &lt;-<span class="st"> </span><span class="kw">ggplot</span>(judges_sub, <span class="kw">aes</span>(<span class="dt">x =</span> death_date, 
+                            <span class="dt">y =</span> <span class="kw">reorder</span>(<span class="kw">factor</span>(name_last), birth_date)))
+judges.plot.lifespan +<span class="st"> </span><span class="kw">geom_segment</span>(<span class="kw">aes</span>(<span class="dt">yend =</span> name_last, <span class="dt">xend=</span>birth_date)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>() +
+<span class="st">  </span><span class="kw">theme_minimal</span>() +
+<span class="st">  </span><span class="kw">labs</span>( <span class="dt">x=</span><span class="st">&quot;Year of Death&quot;</span>, 
+        <span class="dt">y=</span><span class="st">&quot;&quot;</span>,
+        <span class="dt">title=</span><span class="st">&quot;Lifespans of Appointed Judges&quot;</span>) +
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">panel.grid.major.y=</span><span class="kw">element_blank</span>(), 
+        <span class="dt">axis.ticks=</span><span class="kw">element_blank</span>(),
+        <span class="dt">axis.title=</span><span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">8</span>,<span class="dt">face=</span><span class="st">&quot;bold&quot;</span>),
+        <span class="dt">axis.text.y =</span> <span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">6</span>)
+        )</code></pre></div>
+</section>
+<section id="section-1" class="slide level2 fullpage">
+<h2></h2>
+<div class="fullpage width">
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-17-1.png" width="768" /></p>
+</div>
+</section>
+<section id="section-2" class="slide level2 fullpage">
+<h2></h2>
+<div class="fullpage width">
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-18-1.png" width="768" /></p>
+</div>
+</section>
+<section id="annotation" class="slide level2">
+<h2>Annotation</h2>
+<p>Let’s load up another set of data by reading in a CSV file.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Data prep for next example</span>
+superfund &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../data/superfund_sites.csv&quot;</span>)
+superfund.by.state &lt;-<span class="st"> </span>superfund %&gt;%
+<span class="st">  </span><span class="kw">group_by</span>(St) %&gt;%<span class="st"> </span><span class="co"># St=state</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">count=</span><span class="kw">n</span>())
+
+superfund.by.state %&gt;%<span class="st"> </span><span class="kw">head</span>(<span class="dv">5</span>)</code></pre></div>
+<pre><code>## Source: local data frame [5 x 2]
+## 
+##       St count
+##   (fctr) (int)
+## 1            1
+## 2     AK     6
+## 3     AL    13
+## 4     AR     9
+## 5     AZ     9</code></pre>
+</section>
+<section id="annotation-1" class="slide level2">
+<h2>Annotation</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(superfund.by.state, <span class="kw">aes</span>(St, count)) +
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>) +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">title=</span><span class="st">&quot;Superfund Sites by State&quot;</span>) +
+<span class="st">  </span><span class="kw">theme_minimal</span>() +<span class="st"> </span><span class="kw">theme</span>(<span class="dt">legend.position=</span><span class="st">&#39;none&#39;</span>) +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;State&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Count&quot;</span>)</code></pre></div>
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-20-1.png" width="768" /></p>
+</section>
+<section id="annotation-2" class="slide level2">
+<h2>Annotation</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(superfund.by.state, <span class="kw">aes</span>(St, count)) +
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="kw">aes</span>(<span class="dt">fill =</span> count &gt;<span class="st"> </span><span class="dv">60</span>)) +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">title=</span><span class="st">&quot;Superfund Sites by State&quot;</span>) +
+<span class="st">  </span><span class="kw">theme_minimal</span>() +<span class="st"> </span><span class="kw">theme</span>(<span class="dt">legend.position=</span><span class="st">&#39;none&#39;</span>) +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;State&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Count&quot;</span>) +
+<span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> <span class="kw">c</span>(<span class="st">&#39;#4C4C4C&#39;</span>, <span class="st">&#39;#8E001C&#39;</span>))</code></pre></div>
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-21-1.png" width="768" /></p>
+</section>
+<section id="ggrepel" class="slide level2">
+<h2>ggrepel</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&#39;gapminder&#39;)</span>
+<span class="kw">library</span>(gapminder)
+keepers &lt;-<span class="st"> </span><span class="kw">subset</span>(gap_with_colors,
+                continent %in%<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Africa&quot;</span>, <span class="st">&quot;Europe&quot;</span>) &amp;<span class="st"> </span>year ==<span class="st"> </span><span class="dv">2007</span>)
+
+<span class="kw">ggplot</span>(keepers, <span class="kw">aes</span>(<span class="dt">x =</span> gdpPercap, <span class="dt">y =</span> lifeExp)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_jitter</span>(<span class="dt">position =</span> <span class="kw">position_jitter</span>(<span class="dt">width =</span> <span class="fl">0.1</span>, <span class="dt">height =</span> <span class="dv">0</span>), <span class="dt">alpha =</span> <span class="dv">1</span>/<span class="dv">4</span>) +
+<span class="st">  </span><span class="kw">geom_text</span>(<span class="dt">data =</span> <span class="kw">subset</span>(keepers, gdpPercap &gt;<span class="st"> </span><span class="dv">30000</span>), <span class="kw">aes</span>(<span class="dt">label =</span> country))</code></pre></div>
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-22-1.png" width="768" /></p>
+</section>
+<section id="ggrepel-1" class="slide level2">
+<h2>ggrepel</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&#39;gapminder&#39;)</span>
+<span class="co"># install.packages(&#39;ggrepel&#39;)</span>
+<span class="kw">library</span>(gapminder)
+<span class="kw">library</span>(ggrepel)
+keepers &lt;-<span class="st"> </span><span class="kw">subset</span>(gap_with_colors,
+                continent %in%<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Africa&quot;</span>, <span class="st">&quot;Europe&quot;</span>) &amp;<span class="st"> </span>year ==<span class="st"> </span><span class="dv">2007</span>)
+
+<span class="kw">ggplot</span>(keepers, <span class="kw">aes</span>(<span class="dt">x =</span> gdpPercap, <span class="dt">y =</span> lifeExp)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_jitter</span>(<span class="dt">position =</span> <span class="kw">position_jitter</span>(<span class="dt">width =</span> <span class="fl">0.1</span>, <span class="dt">height =</span> <span class="dv">0</span>), <span class="dt">alpha =</span> <span class="dv">1</span>/<span class="dv">4</span>) +
+<span class="st">  </span><span class="kw">geom_text_repel</span>(<span class="dt">data =</span> <span class="kw">subset</span>(keepers, gdpPercap &gt;<span class="st"> </span><span class="dv">30000</span>), <span class="kw">aes</span>(<span class="dt">label =</span> country))</code></pre></div>
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-23-1.png" width="768" /></p>
+</section>
+<section id="network-analysis" class="slide level2">
+<h2>Network Analysis</h2>
+<p><code>ggplot</code> does not come with a default method for visualizing networks, but communities of users are working to bring network visualization into the grammar of graphics.</p>
+<p>Note that these are only for building network visualizations. If you need to do network analysis, you will need to leverage packages like <a href="http://igraph.org/r/">igraph</a>.</p>
+</section>
+<section id="extending---geom_net" class="slide level2">
+<h2>Extending - geom_net</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&quot;geomnet&quot;)</span>
+<span class="kw">library</span>(geomnet)
+<span class="kw">library</span>(historydata)
+<span class="kw">data</span>(<span class="st">&#39;tudors&#39;</span>)
+
+tudors %&gt;%<span class="st"> </span><span class="kw">head</span>(<span class="dv">5</span>)</code></pre></div>
+<pre><code>## Source: local data frame [5 x 3]
+## 
+##       person_1            person_2 relationship
+##          (chr)               (chr)        (chr)
+## 1    Henry VII   Elizabeth of York       spouse
+## 2 Arthur Tudor Catharine of Aragon       spouse
+## 3   Henry VIII Catharine of Aragon       spouse
+## 4   Henry VIII         Anne Boleyn       spouse
+## 5   Henry VIII        Jane Seymour       spouse</code></pre>
+</section>
+<section id="extending---geom_net-1" class="slide level2">
+<h2>Extending - geom_net</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tudor.network &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> tudors, <span class="kw">aes</span>(<span class="dt">from_id =</span> person_2, <span class="dt">to_id =</span> person_1))
+tudor.network +<span class="st"> </span><span class="kw">geom_net</span>(<span class="dt">label =</span> <span class="ot">TRUE</span>, <span class="dt">linewidth=</span><span class="fl">0.5</span>, 
+           <span class="dt">fontsize =</span> <span class="dv">3</span>, <span class="dt">size =</span> <span class="dv">6</span>,
+           <span class="dt">ecolour =</span> <span class="kw">ifelse</span>(tudors$relationship ==<span class="st"> &quot;child&quot;</span>, <span class="st">&quot;#a6cee3&quot;</span>, <span class="st">&quot;#b2df8a&quot;</span>)) +
+<span class="st">  </span><span class="kw">theme_net</span>() +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;Tudors&quot;</span>)</code></pre></div>
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-25-1.png" width="768" /></p>
+</section>
+<section id="extending---geom_net-2" class="slide level2">
+<h2>Extending - geom_net</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(<span class="st">&quot;lesmis&quot;</span>)
+lesmisnet &lt;-<span class="st"> </span><span class="kw">merge</span>(lesmis$edges, lesmis$vertices, 
+                   <span class="dt">by.x=</span><span class="st">&quot;from&quot;</span>, <span class="dt">by.y=</span><span class="st">&quot;label&quot;</span>, <span class="dt">all=</span><span class="ot">TRUE</span>)
+lemisnetwork &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>lesmisnet, <span class="kw">aes</span>(<span class="dt">from_id=</span>from, <span class="dt">to_id=</span>to))
+lemisnetwork +<span class="st"> </span><span class="kw">geom_net</span>(<span class="dt">layout=</span><span class="st">&quot;fruchtermanreingold&quot;</span>, 
+                        <span class="dt">label=</span><span class="ot">TRUE</span>, <span class="dt">vjust=</span>-<span class="fl">0.5</span>, 
+                        <span class="kw">aes</span>(<span class="dt">linewidth =</span> degree/<span class="dv">5</span>)) +<span class="st"> </span><span class="kw">theme_net</span>()</code></pre></div>
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-26-1.png" width="768" /></p>
+</section>
+<section id="mapping" class="slide level2">
+<h2>Mapping</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggmap)
+basemap &lt;-<span class="st"> </span><span class="kw">get_map</span>(<span class="dt">location=</span><span class="st">&quot;United States&quot;</span>, <span class="dt">zoom =</span> <span class="dv">4</span>, <span class="dt">maptype =</span> <span class="st">&quot;terrain&quot;</span>)
+
+<span class="kw">ggmap</span>(basemap) +
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data=</span>superfund_sites, <span class="kw">aes</span>(<span class="dt">x=</span>longitude, <span class="dt">y=</span>latitude), <span class="dt">color=</span><span class="st">&quot;#894D46&quot;</span>, <span class="dt">size =</span> <span class="fl">0.5</span>, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) +
+<span class="st">  </span><span class="kw">coord_map</span>() +
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.ticks.y =</span> <span class="kw">element_blank</span>(),<span class="dt">axis.text.y =</span> <span class="kw">element_blank</span>(), <span class="co"># get rid of x ticks/text</span>
+                 <span class="dt">axis.ticks.x =</span> <span class="kw">element_blank</span>(),<span class="dt">axis.text.x =</span> <span class="kw">element_blank</span>(), <span class="co"># get rid of y ticks/text</span>
+                 <span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">lineheight=</span>.<span class="dv">8</span>, <span class="dt">face=</span><span class="st">&quot;bold&quot;</span>, <span class="dt">vjust=</span><span class="dv">1</span>))</code></pre></div>
+</section>
+<section id="section-3" class="slide level2 fullpage">
+<h2></h2>
+<div class="fullpage width">
+<pre><code>## Warning: package &#39;ggmap&#39; was built under R version 3.2.3</code></pre>
+<pre><code>## Google Maps API Terms of Service: http://developers.google.com/maps/terms.</code></pre>
+<pre><code>## Please cite ggmap if you use it: see citation(&#39;ggmap&#39;) for details.</code></pre>
+<pre><code>## 
+## Attaching package: &#39;ggmap&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:plotly&#39;:
+## 
+##     wind</code></pre>
+<pre><code>## The following object is masked from &#39;package:magrittr&#39;:
+## 
+##     inset</code></pre>
+<pre><code>## Map from URL : http://maps.googleapis.com/maps/api/staticmap?center=United+States&amp;zoom=4&amp;size=640x640&amp;scale=2&amp;maptype=terrain&amp;language=en-EN&amp;sensor=false</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=United%20States&amp;sensor=false</code></pre>
+<p><img src="02-advanced-ggplot_files/figure-revealjs/unnamed-chunk-28-1.png" width="768" /></p>
+</div>
+</section>
+<section id="worksheet-2-intermediate-ggplot" class="slide level2">
+<h2>Worksheet #2: Intermediate ggplot</h2>
+</section>
+
+  <!--
+  To hide progress bar from entire presentation
+  just remove “progress” element.
+  -->
+  <!-- <div class="progress"></div> -->
+  <script src="02-advanced-ggplot_files/rmdshower/node_modules/shower/node_modules/shower-core/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+
+    <script>renderMathInElement(document.body);</script>
+  
+  
+</body>
+</html>

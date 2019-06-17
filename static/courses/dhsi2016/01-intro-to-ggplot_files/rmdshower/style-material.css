@@ -1,0 +1,47 @@
+/* Overrides for the material style */
+
+/* Both input and output */
+
+.slide pre code {
+    display: block;
+    line-height: 1.2;
+    background: #eee;
+    color: #333;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 80%;
+}
+
+/* Code input, we need to undo unwanted changes here */
+
+.slide pre.sourceCode code {
+    background: #fff;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#smaller {
+  font-size: 15px;
+}
+
+#bigger {
+  font-size: 82px;
+}
+
+strong {
+  font-weight: normal;
+  background-color: #faf4c1;
+  padding: .2rem .4rem;
+  display: inline-block;
+  line-height: 1;
+  border-radius: 2px;
+  color: #202020;
+}
+
+.slide ol li {
+  text-indent: 0;
+}
+
+.javascript {
+  font-size: 12px;
+}

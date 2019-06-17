@@ -1,0 +1,113 @@
+library-tidyverse	
+library-extra	
+tidy-messy1	messy1	messy2	pop_simple
+tidy-tidy1	tidy1
+tidy-tidy2	tidy2
+ggplot2-geom-names	old_width
+first-plot1a	
+first-plot1a-out	
+first-plot1b	
+first-plot1b-out	
+first-plot1c	
+first-plot1c-out	
+first-plot1	
+first-plot1-out	
+first-plot2-fake	
+first-plot2-fake-out	
+first-plot2	
+first-plot2-out	
+stat-prep	sw_chars
+stat-prep-table	
+stat-example	
+stat-example-out	
+stat-example2	
+stat-example2-out	
+stat-prep-identity	sw_chars_id
+stat-prep-identity-table	
+stat-example4	
+stat-example4-out	
+stat-example5	
+stat-example5-out	
+stat-example3	
+stat-example3-out	
+unnamed-chunk-1	
+unnamed-chunk-2	
+facet_example_setup	sw_chars
+facet_wrap_example	g
+unnamed-chunk-3	
+unnamed-chunk-4	
+unnamed-chunk-5	
+unnamed-chunk-6	g
+unnamed-chunk-7	
+unnamed-chunk-8	g
+unnamed-chunk-9	
+unnamed-chunk-10	
+unnamed-chunk-11	
+theme_set	my_theme
+unnamed-chunk-12	
+unnamed-chunk-13	
+unnamed-chunk-14	tips
+unnamed-chunk-15	
+tips-plot1	
+tips-plot1-out	
+tips-plot-density1	
+tips-plot-density1-out	
+tips-plot-density2	
+tips-plot-density2-out	
+tips-plot-density3	
+tips-plot-density3-out	
+tips-plot-total1	
+tips-plot-total1-out	
+tips-plot-total2	
+tips-plot-total2-out	
+tips-plot-total3	
+tips-plot-total3-out	
+tips-plot-total4	
+tips-plot-total4-out	
+tips-plot-total5	
+tips-plot-total5-out	tips
+tips-plot-total5b	
+tips-plot-total5b-out	tips
+tips-plot-total6	
+tips-plot-total6-out	
+tips-plot-total62	
+tips-plot-total62-out	tips
+tips-plot-total7	
+tips-plot-total7-out	
+tips-plot-total8	
+tips-plot-total8-out	
+tips-plot-total9	
+tips-plot-total9-out	g
+tips-plot-total10	
+tips-plot-total10-out	
+unnamed-chunk-16	babynames
+unnamed-chunk-17	
+babynames_pop2015	babynames_pop2015
+unnamed-chunk-18	
+babynames-popular-base-a	g_babynames
+unnamed-chunk-19	
+babynames-popular-base-b	g_babynames
+unnamed-chunk-20	
+babynames-popular-base-c	g_babynames
+unnamed-chunk-21	
+babynames-popular-base-d	g_babynames
+unnamed-chunk-22	
+babynames-popular-base-e	g_babynames
+unnamed-chunk-23	
+unnamed-chunk-24	g_babynames
+babynames-popular	
+babynames-popular-out-callout	
+babynames-popular-out	
+unnamed-chunk-25	babynames_plot	if_na	names_f2m	names_m2f	sel_change_babynames	top_change_babynames
+unnamed-chunk-26	
+genben-plot1	
+genben-plot1-out	
+genben-plot2	
+genben-plot2-out	
+genben-plot3	
+genben-plot3-out	
+genben-plot4	
+genben-plot4-out	g_bnc
+genben-plot5	g_bnc
+genben-plot5-out	
+genben-plot-out	

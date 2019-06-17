@@ -1,0 +1,11 @@
+---
+date: 2012-07-23T17:04:50Z
+external: http://arstechnica.com/tech-policy/2012/07/wsj-mangles-history-to-argue-government-didnt-launch-the-internet/
+categories:
+- history
+- internet
+title: Mangling the Origins of the Early Internet
+url: /2012/07/23/mangling-the-origins-of-the-early-internet/
+---
+
+[Timothy B. Lee of *Ars Technica* writes on a poorly researched piece by L. Gordon Crovitz in the *Wall Street Journal*](http://arstechnica.com/tech-policy/2012/07/wsj-mangles-history-to-argue-government-didnt-launch-the-internet/), who maintains that government played little role in the early Internet. It's certainly the case that the Internet as we know it today exists because of private sector development, but the private sector's involvement in the Internet doesn't come to fruition until around 1995. The technical origins and standards trace their roots to government-funded research. Thus is the nature of the mixed economy in the late twentieth century United States: government investment makes early research possible through prodigious funding, and private investment furthers development and brings the fruits of the research to the public. Lee offers plenty of useful corrections, including pointing out Crovitz's misunderstandings of Internet technology, as does [Michael Moyer](http://blogs.scientificamerican.com/observations/2012/07/23/yes-government-researchers-really-did-invent-the-internet/) at *Scientific American*. 

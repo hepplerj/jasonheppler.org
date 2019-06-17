@@ -1,0 +1,759 @@
+html {
+  color: #000000;
+  font-size: 1.1em;
+  line-height: 1.4;
+  font-family: 'europa','Avenir Next', 'Avenir', 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+strong {
+  font-weight: 600;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+  clear: both;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+Author's custom styles
+========================================================================== */
+
+body {
+  background: #f6f2ef;
+  font-size: 16.8px;
+  max-width: 750px;
+  margin: 0rem auto;
+  padding: 2rem;
+  line-height: 1.6em;
+  font-weight: 400;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+nav {
+  padding-bottom: 2em;
+}
+
+nav a {
+  padding-right: 0.6rem;
+  text-decoration: none;
+  white-space: nowrap;
+  border: none;
+}
+
+#description {
+  position: relative;
+}
+
+a,
+a:visited {
+  color: #1352a2;
+  outline: none !important;
+  /* text-decoration: none; */
+  /* border-bottom: 1px solid #333; */
+  -webkit-transition: border .15s ease-in-out, color .15s ease-in-out;
+  transition: border .15s ease-in-out, color .15s ease-in-out;
+}
+
+a:hover {
+  color: #888;
+}
+
+ul {
+  list-style-type: square;
+}
+
+.feed-icon {
+  height: 20px;
+  width: auto;
+  margin-top: -1px;
+}
+
+#description ul a {
+  text-decoration: none;
+}
+
+.pad2y {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.size-2x {
+  font-size: 28px;
+  font-weight: 100;
+  line-height: 1.4;
+}
+
+.book {
+  margin: 0 0 1rem 0;
+  clear: both;
+  position: relative;
+  overflow: auto;
+}
+
+.book img {
+  float: right;
+  margin: 0 0 0.5em 1em;
+  max-width: 220px;
+  border: 1px solid #ccc;
+  padding: 3px;
+}
+
+#code h4 {
+  margin-top: 2rem;
+  margin-bottom: 0.0rem;
+}
+
+.semester {
+  min-width: 140px;
+  display: inline-block;
+}
+
+td {
+  padding: 8px 4px;
+}
+
+.short-description {
+  margin-top: 0em;
+  font-style: italic;
+}
+
+.site-title {
+  font-weight: 600;
+  text-decoration: none;
+  color: black!important;
+}
+
+.rss-feed {
+  width: auto;
+  height: 16px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+h2 {
+  font-size: 1.25rem; 
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.book h2 {
+  margin-bottom: 0.25em;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+h1 + p, h2 + p, h3 + p {
+  margin-top: 0.5rem;
+}
+
+hr.nav {
+  margin-top: 1rem;
+  border-top: 2px solid #2770e6;
+  margin-bottom: 2rem;
+}
+
+/* A .date-list-table is used for the blog archive and for the list of syllabi */
+table.date-list-table {
+  width: 100%;
+  border: none;
+}
+
+table.date-list-table tr td {
+  padding: 0.3rem 0; 
+  vertical-align: top;
+  border: none;
+  word-break: keep-all;
+}
+
+article {
+	counter-reset: figures;
+}
+
+figure {
+	counter-increment: figures;
+}
+
+figure figcaption {
+  display: inline-block;
+}
+
+figure figcaption p {
+  display: inline; 
+  font-style: italic;
+}
+
+figure figcaption:before {
+	content: 'Figure ' counter(figures) '. ';
+	white-space: nowrap;
+	display: inline;
+	font-style: italic;
+}
+
+article img,
+article figure img {
+  max-width: 100%;
+}
+
+#publications-and-projects p {
+  text-align: left;
+}
+
+article p,
+#publications-and-projects .book p {
+  text-align: left;
+}
+
+.migration-warning {
+  margin: 1em 0em;
+  border: 1px solid lightgrey;
+  padding: 1em;
+  font-style: italic;
+}
+
+.blog-nav {
+  margin: 2rem 0 2rem 0;
+  padding: 1.0rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.subscribe {
+  margin-left: 1rem;
+}
+
+.blog-comments {
+  font-size: 0.8333rem;
+  font-style: italic;
+}
+
+aside {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 0.85em;
+}
+
+aside.warn {
+  background:rgba(0, 0, 0, 0.05);
+}
+
+.post-categories,
+.post-categories a {
+  color: #777;
+}
+
+.highlight {
+  margin-left: 2em;
+}
+
+.post-title {
+  margin-bottom: 0;
+}
+
+time.dt-published {
+  font-size: 0.8333rem;
+}
+
+a.permalink, a.permalink:visited {
+  color: black;
+  text-decoration: none;
+  border: none;
+}
+
+.post-title a, .post-title a:visited {
+  text-decoration: none;
+  color: black;
+  border: none;
+}
+
+.footnotes hr {
+  width: 20%;
+  color: rgb(240, 240, 240);
+  margin: 1.5rem 0;
+}
+
+.footnotes ol {
+  font-size: 0.8rem;
+}
+
+.footnote-ref a,
+a.footnote-return {
+  text-decoration: none;
+  border: none;
+}
+
+.post-separator {
+  margin-top: 4rem;
+  border-bottom: 1.25px dashed #049013;
+  margin-bottom: 4rem;
+}
+
+.post-separator.narrow {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Align the post titles in the blog list */
+.blog-archive li time.date {
+  width: 80px;
+  display: inline-block;
+}
+
+a.post-link {
+  display: inline-block;
+} 
+
+.profile-photo {
+  max-width: 250px;
+  float: left;
+  margin: 0 1em 0.5em 0;
+}
+
+footer {
+  margin-top: 100px;
+}
+
+footer p {
+  font-size: 12.6px;
+}
+
+/* Projects */
+.projects .limiter {
+  max-width: 1200px;
+  padding: 0 40px; }
+
+.project-box {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px; }
+
+@media screen and (max-width: 1024px) {
+  .projects .limiter {
+    padding: 0 20px; }
+  .project-box {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px; } }
+
+@media screen and (max-width: 800px) {
+  .project-box {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 480px) {
+  .project-box {
+    grid-template-columns: repeat(1, 1fr); } }
+
+a.project {
+  border: none;
+  text-decoration: none;
+  color: #666; }
+  a.project:hover {
+    color: #000; }
+  a.project img {
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 0; }
+
+/* ==========================================================================
+ * Two columns
+========================================================================== */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+.col {
+	display: block;
+	float:left;
+	margin: 0 0 0 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+.span_2_of_2 {
+	width: 100%;
+}
+.span_1_of_2 {
+	width: 65%;
+}
+
+/* ==========================================================================
+Helper classes
+========================================================================== */
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0,0,0,0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+table {
+    /* Remove spacing between table cells (from Normalize.css) */
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
+}
+
+table caption {
+    color: #000;
+    font: italic 85%/1 arial, sans-serif;
+    padding: 1em 0;
+    text-align: center;
+}
+
+table td,
+table th {
+    border-left: 1px solid #cbcbcb;/*  inner column border */
+    border-width: 0 0 0 1px;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible; /*to make ths where the title is really long work*/
+    padding: 0.5em 1em; /* cell padding */
+}
+
+/* Consider removing this next declaration block, as it causes problems when
+there's a rowspan on the first cell. Case added to the tests. issue#432 */
+table td:first-child,
+table th:first-child {
+    border-left-width: 0;
+}
+
+table thead {
+    background-color: #e0e0e0;
+    color: #000;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+/*
+striping:
+   even - #fff (white)
+   odd  - #f2f2f2 (light gray)
+*/
+table td {
+    background-color: transparent;
+}
+table-odd td {
+    background-color: #f2f2f2;
+}
+
+/* nth-child selector for modern browsers */
+table-striped tr:nth-child(2n-1) td {
+    background-color: #f2f2f2;
+}
+
+/* BORDERED TABLES */
+table-bordered td {
+    border-bottom: 1px solid #cbcbcb;
+}
+table-bordered tbody > tr:last-child > td {
+    border-bottom-width: 0;
+}
+
+
+/* HORIZONTAL BORDERED TABLES */
+
+table-horizontal td,
+table-horizontal th {
+    border-width: 0 0 1px 0;
+    border-bottom: 1px solid #cbcbcb;
+}
+table-horizontal tbody > tr:last-child > td {
+    border-bottom-width: 0;
+}
+
+/* Syllabus specific */
+article.syllabus header {
+  /* background: rgb(243, 243, 243); */
+  border: 1.25px solid #2770e6;
+  padding: 0.20rem 1.0rem;
+}
+
+/* Make h1s on a syllabus the same as h2s elsewhere */
+article.syllabus h1 {
+  font-size: 1.25rem; 
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+/* but not the title */
+article.syllabus h1.syllabus-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+article.syllabus h3 {
+  margin-top: 1.5rem;
+}
+
+article.syllabus nav#TableOfContents {
+  margin: 2rem 0 1rem 0;
+}
+
+article.syllabus nav#TableOfContents ul li ul {
+  display: none;
+}
+
+article.syllabus nav#TableOfContents ul {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  padding: 0;
+  margin-top: 4px;
+}
+
+article.syllabus nav#TableOfContents ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+blockquote {
+  margin: 0 4rem 0 2rem;
+}
+
+/* ==========================================================================
+Media Queries
+========================================================================== */
+
+@media only screen and (max-width: 875px) {
+  .span_2_of_2, .span_1_of_2 { width: 100%; }
+  
+  blockquote {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+	.book img,
+	.profile-photo {
+    float: none;
+    margin: 0;
+    /* max-width: 200px; */
+  }
+  article p,
+  #publications-and-projects .book p {
+    text-align: left;
+  }
+  .subscribe {
+    margin-left: 0
+  }
+  .subscribe::before {
+    content: "\A";
+    white-space: pre;
+  }
+  article.syllabus nav#TableOfContents ul {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
+  article.syllabus nav#TableOfContents ul li {
+    list-style-type: square;
+    margin: 0;
+    padding: 0;
+  }
+  article.syllabus ul {
+    margin-left: 1.25rem;
+    padding-left: 0;
+  }
+}
+
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+Print styles
+========================================================================== */
+/* Print only styles */
+.print-only {
+  display: none;
+}
+
+@media print {
+
+  .no-print {
+    display: none;
+  }
+
+  .print-only{
+    display: block;
+  }
+
+  @page {
+    margin: 1.0in 0.75in 0.75in 0.75in;
+  }
+
+  html {
+    font-size: 0.8333em;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1.syllabus-title {
+    margin-top: 0;
+  }
+
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2, h3, h4 {
+    page-break-after: avoid;
+  }
+
+  article.syllabus header {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jason A. Heppler</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="01-intro-to-ggplot_files/rmdshower/node_modules/shower-material/styles/screen-4x3.css">
+  <link rel="stylesheet" href="01-intro-to-ggplot_files/rmdshower/style-common.css">
+  <link rel="stylesheet" href="01-intro-to-ggplot_files/rmdshower/style-material.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  <script src="01-intro-to-ggplot_files/rmdshower/auto-render.min.js" type="text/javascript"></script>
+  
+  
+    <style type="text/css">
+   div.sourceCode { overflow-x: auto; }
+   table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+     margin: 0; padding: 0; vertical-align: baseline; border: none; }
+   table.sourceCode { width: 100%; line-height: 100%; }
+   td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+   td.sourceCode { padding-left: 5px; }
+   code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+   code > span.dt { color: #902000; } /* DataType */
+   code > span.dv { color: #40a070; } /* DecVal */
+   code > span.bn { color: #40a070; } /* BaseN */
+   code > span.fl { color: #40a070; } /* Float */
+   code > span.ch { color: #4070a0; } /* Char */
+   code > span.st { color: #4070a0; } /* String */
+   code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+   code > span.ot { color: #007020; } /* Other */
+   code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+   code > span.fu { color: #06287e; } /* Function */
+   code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+   code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+   code > span.cn { color: #880000; } /* Constant */
+   code > span.sc { color: #4070a0; } /* SpecialChar */
+   code > span.vs { color: #4070a0; } /* VerbatimString */
+   code > span.ss { color: #bb6688; } /* SpecialString */
+   code > span.im { } /* Import */
+   code > span.va { color: #19177c; } /* Variable */
+   code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+   code > span.op { color: #666666; } /* Operator */
+   code > span.bu { } /* BuiltIn */
+   code > span.ex { } /* Extension */
+   code > span.pp { color: #bc7a00; } /* Preprocessor */
+   code > span.at { color: #7d9029; } /* Attribute */
+   code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+   code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+   code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+   code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  
+  
+  
+</head>
+
+<body class="shower list">
+
+  <header class="caption">
+    <h1>Jason A. Heppler</h1>
+    <p>Introduction to ggplot: Visualization in the Humanities</p>
+  </header>
+
+    <section class="slide level1 titlepage">
+    <h1>Jason A. Heppler</h1>
+    <h2>Introduction to ggplot: Visualization in the Humanities <br> </h2>
+  </section>
+    
+  
+<section id="why-computer-programming-at-all" class="slide level2">
+<h2>Why computer programming at all?</h2>
+<ol type="1">
+<li class="fragment next">You understand more deeply what computers do to your data. By understanding the workings of an algorithm, you can better justify your scholarly claims as well as understand the ways algorithms may distort.</li>
+<li class="fragment next">The work of data analysis becomes transparent. Since we’re writing code, we can trace the steps we made to make something.</li>
+<li class="fragment next">We start to correct for the problem of tools shaping research questions. In other words, we build the tool to fit our questions.</li>
+</ol>
+</section>
+<section id="why-r" class="slide level2">
+<h2>Why R?</h2>
+<ol type="1">
+<li class="fragment next">The range of libraries is quite large.</li>
+<li class="fragment next">The language is designed for data analysis.</li>
+<li class="fragment next">R has a set of tools available that makes writing code easier.</li>
+<li class="fragment next">There are several humanities scholars using R.</li>
+<li class="fragment next">Reproducable research.</li>
+</ol>
+</section>
+<section id="visualization-design" class="slide level2">
+<h2>Visualization Design</h2>
+<p>Edward Tufte suggests that graphical excellence is defined by “that which gives the viewer the <strong>greatest number of ideas</strong>, in the <strong>shortest time</strong>, with the <strong>least ink</strong>, the <strong>smallest space</strong>, and which <strong>tells the truth about data</strong>.”</p>
+<p><span id="smaller"> Edward Tufte, <em>The Visual Display of Quantitative Information</em> (Graphics Press, 1983). </span></p>
+</section>
+<section id="visualization-design-1" class="slide level2">
+<h2>Visualization Design</h2>
+<center>
+<p><span id="bigger"> <strong>truth</strong> </span></p>
+<span id="bigger"> <strong>data</strong> </span>
+</center>
+</section>
+<section id="visualization-design-2" class="slide level2">
+<h2>Visualization Design</h2>
+<p>Edward Tufte suggests that graphical excellence is defined by “that which gives the viewer the <strong>greatest number of ideas</strong>, in the <strong>shortest time</strong>, with the <strong>least ink</strong>, the <strong>smallest space</strong>, and which <strong>tells the truth about data</strong>.”</p>
+<p><span id="smaller"> Edward Tufte, <em>The Visual Display of Quantitative Information</em> (Graphics Press, 1983). </span></p>
+</section>
+<section id="visualization-deception" class="slide level2">
+<h2>Visualization Deception</h2>
+<p><img src="assets/img/foxnews.jpeg" alt="Bad visualization design." /></p>
+</section>
+<section id="visualization-design-3" class="slide level2">
+<h2>Visualization Design</h2>
+<p>Edward Tufte suggests that graphical excellence is defined by “that which gives the viewer the <strong>greatest number of ideas</strong>, in the <strong>shortest time</strong>, with the <strong>least ink</strong>, the <strong>smallest space</strong>, and which <strong>tells the truth about data</strong>.”</p>
+<p><span id="smaller"> Edward Tufte, <em>The Visual Display of Quantitative Information</em> (Graphics Press, 1983). </span></p>
+</section>
+<section id="installing-packages" class="slide level2">
+<h2>Installing Packages</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># First, download from CRAN:</span>
+<span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)
+<span class="kw">install.packages</span>(<span class="st">&#39;ggplot2&#39;</span>)
+
+<span class="co"># Then, from Github:</span>
+devtools::<span class="kw">install_github</span>(<span class="st">&quot;lmullen/historydata&quot;</span>)</code></pre></div>
+</section>
+<section id="population-data" class="slide level2">
+<h2>Population Data</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(historydata)
+<span class="kw">data</span>(us_state_populations)
+
+<span class="co"># Let&#39;s look at the first five rows</span>
+us_state_populations</code></pre></div>
+<pre><code>## Source: local data frame [983 x 4]
+## 
+##    GISJOIN  year          state population
+##      (chr) (int)          (chr)      (int)
+## 1     G090  1790    Connecticut     237655
+## 2     G100  1790       Delaware      59096
+## 3     G130  1790        Georgia      82548
+## 4     G240  1790       Maryland     319728
+## 5     G250  1790  Massachusetts     475199
+## 6     G330  1790  New Hampshire     141899
+## 7     G340  1790     New Jersey     184139
+## 8     G360  1790       New York     340241
+## 9     G370  1790 North Carolina     395005
+## 10    G420  1790   Pennsylvania     433611
+## ..     ...   ...            ...        ...</code></pre>
+</section>
+<section id="plotting-population-data" class="slide level2">
+<h2>Plotting Population Data</h2>
+<p>A ridiculous example.</p>
+<p><img src="01-intro-to-ggplot_files/figure-revealjs/unnamed-chunk-3-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="the-grammar-of-graphics" class="slide level2">
+<h2>The Grammar of Graphics</h2>
+<p>A visualization concept created by Leland Wilkinson (1999) to <strong>define</strong> the elements of statistical graphics:</p>
+<blockquote>
+<p>. . . describes the meaning of what we do when we construct statistical graphics . . . More than a taxonomy . . . Computational system based on the underlying mathematics of representing statistical functions of data.</p>
+</blockquote>
+</section>
+<section id="the-grammar-of-graphics-1" class="slide level2">
+<h2>The Grammar of Graphics</h2>
+<p>Adapted by the creator of <code>ggplot</code>, Hadley Wickham, in 2009. <code>ggplot</code> offers a:</p>
+<ol type="1">
+<li class="fragment next"><strong>consistent and simple syntax</strong> for</li>
+<li class="fragment next"><strong>describing statistical graphics</strong>, and is</li>
+<li class="fragment next"><strong>highly modular</strong> to break graphs into</li>
+<li class="fragment next"><strong>semantic components</strong>.</li>
+</ol>
+<p><span id="smaller"> <em>See</em> Hadley Wickham, “A Layered Grammar of Graphics,” <em>Journal of Computational and Graphical Statistics</em> vol. 19 no. 1 (2010): 3–28 <a href="http://vita.had.co.nz/papers/layered-grammar.pdf" class="uri">http://vita.had.co.nz/papers/layered-grammar.pdf</a>. </span></p>
+</section>
+<section id="the-grammar-of-graphics-2" class="slide level2">
+<h2>The Grammar of Graphics</h2>
+<p>Let’s break down what we did with the <code>ggplot</code> code. The code for our previous bar chart looked like:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> us_state_populations, <span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> population)) +
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="kw">aes</span>(<span class="dt">fill =</span> state), <span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>) +
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;U.S. Historical State Populations&quot;</span>) +
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position=</span><span class="st">&quot;none&quot;</span>) +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Population&quot;</span>)</code></pre></div>
+</section>
+<section id="the-grammar-of-graphics-3" class="slide level2">
+<h2>The Grammar of Graphics</h2>
+<p>Let’s break down what we did with the <code>ggplot</code> code. The code for our previous bar chart looked like:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> us_state_populations, <span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> population)) +
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="kw">aes</span>(<span class="dt">fill =</span> state), <span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>)</code></pre></div>
+</section>
+<section id="the-grammar-of-graphics-4" class="slide level2">
+<h2>The Grammar of Graphics</h2>
+<p>Let’s break down what we did with the <code>ggplot</code> code. The code for our previous bar chart looked like:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> us_state_populations, <span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> population)) +
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="kw">aes</span>(<span class="dt">fill =</span> state), <span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>)</code></pre></div>
+<p><code>ggplot</code> needs:</p>
+<ol type="1">
+<li class="fragment next">mapping of <strong>data</strong></li>
+<li class="fragment next">to <strong>aesthetic attributes</strong></li>
+<li class="fragment next">using <strong>geometric objects</strong></li>
+<li class="fragment next">with data <strong>statistically transformed</strong></li>
+<li class="fragment next">and, if needed, mapped onto a <strong>facet</strong> or <strong>coordinate system</strong></li>
+</ol>
+</section>
+<section id="the-grammar-of-graphics-5" class="slide level2">
+<h2>The Grammar of Graphics</h2>
+<p><strong>data</strong>: data as an R data frame</p>
+<p><strong>coordinate system</strong>: describe 2D space data is projected onto, such as Cartesian coordinates, polar coordinates, and map projections.</p>
+<p><strong>geoms</strong>: describe the geometric objects that represent data, such as points, lines, and polygons.</p>
+<p><strong>aesthetics</strong>: describe visual characteristics that represent data, such as position, size, color, and shape. <strong>scales</strong>: for each aesthetic, describe how visual characteristic is converted to display values, such as log scales, color scales, size scales, and shape scales.</p>
+<p><strong>stats</strong>: describe statistical transformations such as counts, means, medians, or regression lines.</p>
+<p><strong>facets</strong>: describe how data is split into small multiples.</p>
+</section>
+<section id="the-grammar-of-graphics-6" class="slide level2">
+<h2>The Grammar of Graphics</h2>
+<p>Let’s break down what we did with the <code>ggplot</code> code. The code for our previous bar chart looked like:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> us_state_populations, <span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> population)) +
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="kw">aes</span>(<span class="dt">fill =</span> state), <span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>)</code></pre></div>
+<h3 id="mapping-of-data">Mapping of <strong>data</strong>:</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data =<span class="st"> </span>us_state_populations</code></pre></div>
+<h3 id="to-aesthetic-attributes">to <strong>aesthetic attributes</strong>:</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> population)</code></pre></div>
+</section>
+<section id="the-grammar-of-graphics-7" class="slide level2">
+<h2>The Grammar of Graphics</h2>
+<p>Let’s break down what we did with the <code>ggplot</code> code. The code for our previous bar chart looked like:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> us_state_populations, <span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> population)) +
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="kw">aes</span>(<span class="dt">fill =</span> state), <span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>)</code></pre></div>
+<h3 id="using-geometric-objects">using <strong>geometric objects</strong>:</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">geom_bar</span>(<span class="kw">aes</span>(<span class="dt">fill =</span> state), <span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>)</code></pre></div>
+<p><span id="smaller"> See the <a href="http://docs.ggplot2.org/current/geom_bar.html">geom_bar documentation</a> for the differences in the <code>stat</code> flag. By default, <code>geom_bar</code> uses <code>stat='count'</code> which sets the height of the bar proportion to the number of cases in each group. Since we want the height of the bars to represent values in the data, we use <code>stat='identity'</code> to map a variable to the <code>y</code> aesthetic. </span></p>
+</section>
+<section id="the-grammar-of-graphics-8" class="slide level2">
+<h2>The Grammar of Graphics</h2>
+<h3 id="with-data-statistically-transformed">with data <strong>statistically transformed</strong></h3>
+<table style="width:107%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: right;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">bin</td>
+<td style="text-align: right;">Divide continuous range into bins, and count number of points in each</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">boxplot</td>
+<td style="text-align: right;">Compute statistics necessary for boxplot</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">contour</td>
+<td style="text-align: right;">Calculate contour lines</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">density</td>
+<td style="text-align: right;">Compute 1d density estimate</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">identity</td>
+<td style="text-align: right;">Identity transformation, f (x) = x</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">jitter</td>
+<td style="text-align: right;">Jitter values by adding small random value</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">qq</td>
+<td style="text-align: right;">Calculate values for quantile-quantile plot</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">quantile</td>
+<td style="text-align: right;">Quantile regression</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">smooth</td>
+<td style="text-align: right;">Smoothed conditional mean of y given x</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">summary</td>
+<td style="text-align: right;">Aggregate values of y for given x</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">unique</td>
+<td style="text-align: right;">Remove duplicated observations</td>
+</tr>
+</tbody>
+</table>
+<h3 id="and-if-needed-mapped-onto-a-facet-or-coordinate-system">and, if needed, mapped onto a <strong>facet</strong> or <strong>coordinate system</strong></h3>
+</section>
+<section id="simplicity" class="slide level2">
+<h2>Simplicity</h2>
+<p><code>ggplot</code> makes the production of these graphics simple. Note that we were able to create a barchart with two lines of code. If I wanted to reproduce that example in JavaScript using the D3.js library, it would be something like this:</p>
+</section>
+<section id="section" class="slide level2 fullscreen">
+<h2></h2>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> margin <span class="op">=</span> <span class="op">{</span><span class="dt">top</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span> <span class="dt">right</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span> <span class="dt">bottom</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span> <span class="dt">left</span><span class="op">:</span> <span class="dv">40</span><span class="op">},</span>
+    width <span class="op">=</span> <span class="dv">960</span> <span class="op">-</span> <span class="va">margin</span>.<span class="at">left</span> <span class="op">-</span> <span class="va">margin</span>.<span class="at">right</span><span class="op">,</span>
+    height <span class="op">=</span> <span class="dv">500</span> <span class="op">-</span> <span class="va">margin</span>.<span class="at">top</span> <span class="op">-</span> <span class="va">margin</span>.<span class="at">bottom</span><span class="op">;</span>
+
+<span class="kw">var</span> x <span class="op">=</span> <span class="va">d3</span>.<span class="va">scale</span>.<span class="at">ordinal</span>()
+    .<span class="at">rangeRoundBands</span>([<span class="dv">0</span><span class="op">,</span> width]<span class="op">,</span> .<span class="dv">1</span>)<span class="op">;</span>
+
+<span class="kw">var</span> y <span class="op">=</span> <span class="va">d3</span>.<span class="va">scale</span>.<span class="at">linear</span>()
+    .<span class="at">range</span>([height<span class="op">,</span> <span class="dv">0</span>])<span class="op">;</span>
+
+<span class="kw">var</span> xAxis <span class="op">=</span> <span class="va">d3</span>.<span class="va">svg</span>.<span class="at">axis</span>()
+    .<span class="at">scale</span>(x)
+    .<span class="at">orient</span>(<span class="st">&quot;bottom&quot;</span>)<span class="op">;</span>
+
+<span class="kw">var</span> yAxis <span class="op">=</span> <span class="va">d3</span>.<span class="va">svg</span>.<span class="at">axis</span>()
+    .<span class="at">scale</span>(y)
+    .<span class="at">orient</span>(<span class="st">&quot;left&quot;</span>)
+    .<span class="at">ticks</span>(<span class="dv">10</span><span class="op">,</span> <span class="st">&quot;%&quot;</span>)<span class="op">;</span>
+
+<span class="kw">var</span> svg <span class="op">=</span> <span class="va">d3</span>.<span class="at">select</span>(<span class="st">&quot;body&quot;</span>).<span class="at">append</span>(<span class="st">&quot;svg&quot;</span>)
+    .<span class="at">attr</span>(<span class="st">&quot;width&quot;</span><span class="op">,</span> width <span class="op">+</span> <span class="va">margin</span>.<span class="at">left</span> <span class="op">+</span> <span class="va">margin</span>.<span class="at">right</span>)
+    .<span class="at">attr</span>(<span class="st">&quot;height&quot;</span><span class="op">,</span> height <span class="op">+</span> <span class="va">margin</span>.<span class="at">top</span> <span class="op">+</span> <span class="va">margin</span>.<span class="at">bottom</span>)
+  .<span class="at">append</span>(<span class="st">&quot;g&quot;</span>)
+    .<span class="at">attr</span>(<span class="st">&quot;transform&quot;</span><span class="op">,</span> <span class="st">&quot;translate(&quot;</span> <span class="op">+</span> <span class="va">margin</span>.<span class="at">left</span> <span class="op">+</span> <span class="st">&quot;,&quot;</span> <span class="op">+</span> <span class="va">margin</span>.<span class="at">top</span> <span class="op">+</span> <span class="st">&quot;)&quot;</span>)<span class="op">;</span>
+
+<span class="va">d3</span>.<span class="at">tsv</span>(<span class="st">&quot;data.tsv&quot;</span><span class="op">,</span> type<span class="op">,</span> <span class="kw">function</span>(error<span class="op">,</span> data) <span class="op">{</span>
+  <span class="cf">if</span> (error) <span class="cf">throw</span> error<span class="op">;</span>
+
+  <span class="va">x</span>.<span class="at">domain</span>(<span class="va">data</span>.<span class="at">map</span>(<span class="kw">function</span>(d) <span class="op">{</span> <span class="cf">return</span> <span class="va">d</span>.<span class="at">letter</span><span class="op">;</span> <span class="op">}</span>))<span class="op">;</span>
+  <span class="va">y</span>.<span class="at">domain</span>([<span class="dv">0</span><span class="op">,</span> <span class="va">d3</span>.<span class="at">max</span>(data<span class="op">,</span> <span class="kw">function</span>(d) <span class="op">{</span> <span class="cf">return</span> <span class="va">d</span>.<span class="at">frequency</span><span class="op">;</span> <span class="op">}</span>)])<span class="op">;</span>
+
+  <span class="va">svg</span>.<span class="at">append</span>(<span class="st">&quot;g&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;class&quot;</span><span class="op">,</span> <span class="st">&quot;x axis&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;transform&quot;</span><span class="op">,</span> <span class="st">&quot;translate(0,&quot;</span> <span class="op">+</span> height <span class="op">+</span> <span class="st">&quot;)&quot;</span>)
+      .<span class="at">call</span>(xAxis)<span class="op">;</span>
+
+  <span class="va">svg</span>.<span class="at">append</span>(<span class="st">&quot;g&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;class&quot;</span><span class="op">,</span> <span class="st">&quot;y axis&quot;</span>)
+      .<span class="at">call</span>(yAxis)
+    .<span class="at">append</span>(<span class="st">&quot;text&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;transform&quot;</span><span class="op">,</span> <span class="st">&quot;rotate(-90)&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;y&quot;</span><span class="op">,</span> <span class="dv">6</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;dy&quot;</span><span class="op">,</span> <span class="st">&quot;.71em&quot;</span>)
+      .<span class="at">style</span>(<span class="st">&quot;text-anchor&quot;</span><span class="op">,</span> <span class="st">&quot;end&quot;</span>)
+      .<span class="at">text</span>(<span class="st">&quot;Frequency&quot;</span>)<span class="op">;</span>
+
+  <span class="va">svg</span>.<span class="at">selectAll</span>(<span class="st">&quot;.bar&quot;</span>)
+      .<span class="at">data</span>(data)
+    .<span class="at">enter</span>().<span class="at">append</span>(<span class="st">&quot;rect&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;class&quot;</span><span class="op">,</span> <span class="st">&quot;bar&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;x&quot;</span><span class="op">,</span> <span class="kw">function</span>(d) <span class="op">{</span> <span class="cf">return</span> <span class="at">x</span>(<span class="va">d</span>.<span class="at">letter</span>)<span class="op">;</span> <span class="op">}</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;width&quot;</span><span class="op">,</span> <span class="va">x</span>.<span class="at">rangeBand</span>())
+      .<span class="at">attr</span>(<span class="st">&quot;y&quot;</span><span class="op">,</span> <span class="kw">function</span>(d) <span class="op">{</span> <span class="cf">return</span> <span class="at">y</span>(<span class="va">d</span>.<span class="at">frequency</span>)<span class="op">;</span> <span class="op">}</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;height&quot;</span><span class="op">,</span> <span class="kw">function</span>(d) <span class="op">{</span> <span class="cf">return</span> height <span class="op">-</span> <span class="at">y</span>(<span class="va">d</span>.<span class="at">frequency</span>)<span class="op">;</span> <span class="op">}</span>)<span class="op">;</span>
+<span class="op">}</span>)<span class="op">;</span>
+
+<span class="kw">function</span> <span class="at">type</span>(d) <span class="op">{</span>
+  <span class="va">d</span>.<span class="at">frequency</span> <span class="op">=</span> <span class="op">+</span><span class="va">d</span>.<span class="at">frequency</span><span class="op">;</span>
+  <span class="cf">return</span> d<span class="op">;</span>
+<span class="op">}</span></code></pre></div>
+</section>
+<section id="section-1" class="slide level2 fullscreen">
+<h2></h2>
+<center>
+Let’s look at another ridiculous example.
+</center>
+</section>
+<section id="scatterplot-of-population" class="slide level2">
+<h2>Scatterplot of Population</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> us_state_populations, <span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> population)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>()</code></pre></div>
+<p><img src="01-intro-to-ggplot_files/figure-revealjs/unnamed-chunk-13-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="scatterplot-of-population---size" class="slide level2">
+<h2>Scatterplot of Population - Size</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> us_state_populations, 
+                      <span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> population, 
+                          <span class="dt">size=</span>population, <span class="dt">alpha=</span>population)) +
+<span class="st">  </span><span class="kw">geom_point</span>()</code></pre></div>
+<p><img src="01-intro-to-ggplot_files/figure-revealjs/unnamed-chunk-14-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="scatterplot-of-population---smooth" class="slide level2">
+<h2>Scatterplot of Population - Smooth</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">populations +<span class="st"> </span><span class="kw">geom_point</span>() +<span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">color=</span><span class="st">&quot;red&quot;</span>)</code></pre></div>
+<p><img src="01-intro-to-ggplot_files/figure-revealjs/unnamed-chunk-15-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="scatterplot-of-population---jitter" class="slide level2">
+<h2>Scatterplot of Population - Jitter</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">populations +<span class="st"> </span><span class="kw">geom_jitter</span>(<span class="dt">alpha =</span> <span class="fl">0.4</span>)</code></pre></div>
+<p><img src="01-intro-to-ggplot_files/figure-revealjs/unnamed-chunk-16-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="scatterplot-of-population---text-labels" class="slide level2">
+<h2>Scatterplot of Population - Text Labels</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">populations +<span class="st"> </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">label=</span>state), <span class="dt">size =</span> <span class="dv">3</span>)</code></pre></div>
+<p><img src="01-intro-to-ggplot_files/figure-revealjs/unnamed-chunk-17-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="using-facets" class="slide level2">
+<h2>Using Facets</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">population_subset &lt;-<span class="st"> </span><span class="kw">subset</span>(us_state_populations, 
+                        state %in%<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;New Mexico&quot;</span>, <span class="st">&quot;Arizona&quot;</span>, <span class="st">&quot;Utah&quot;</span>, <span class="st">&quot;Colorado&quot;</span>)) 
+<span class="kw">ggplot</span>(population_subset, <span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> population)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) +
+<span class="st">  </span><span class="kw">facet_grid</span>(state ~<span class="st"> </span>.)</code></pre></div>
+<p><img src="01-intro-to-ggplot_files/figure-revealjs/unnamed-chunk-18-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="line-graph---too-many-variables" class="slide level2">
+<h2>Line Graph - Too Many Variables</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(us_state_populations, <span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> population))
+p +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">color =</span> state))</code></pre></div>
+<p><img src="01-intro-to-ggplot_files/figure-revealjs/unnamed-chunk-19-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="facets-to-the-rescue" class="slide level2">
+<h2>Facets to the Rescue!</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p +<span class="st"> </span><span class="kw">geom_line</span>() +
+<span class="st">  </span><span class="kw">facet_wrap</span>(~state, <span class="dt">ncol =</span> <span class="dv">12</span>) +
+<span class="st">  </span><span class="kw">theme_linedraw</span>()</code></pre></div>
+<p><img src="01-intro-to-ggplot_files/figure-revealjs/unnamed-chunk-20-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="scales" class="slide level2">
+<h2>Scales</h2>
+<p>Controlling scales means we can <strong>control the mapping of data</strong> (domain) to <strong>aesthetics</strong> (range).</p>
+<p>Scales depend on the variable type: <strong>discrete</strong> (factor, logical, or character) or <strong>continuous</strong> (numeric).</p>
+<p>Scale specifications have the form of <code>scale_&lt;aesthetic&gt;_&lt;scalename&gt;()</code>:</p>
+<ul>
+<li><em>aesthetic</em>: x, y, color, size, or shape</li>
+<li><em>scalename</em>: grey, gradient, hue, manual, or continuous</li>
+</ul>
+</section>
+<section id="scales-1" class="slide level2">
+<h2>Scales</h2>
+<p>Let’s start with what we know and look at population growth in the western U.S.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">western_subset &lt;-<span class="st"> </span><span class="kw">subset</span>(us_state_populations, 
+                        state %in%<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Arizona&quot;</span>, <span class="st">&quot;California&quot;</span>, <span class="st">&quot;Colorado&quot;</span>, <span class="st">&quot;Idaho&quot;</span>,
+                                     <span class="st">&quot;Montana&quot;</span>, <span class="st">&quot;Nevada&quot;</span>, <span class="st">&quot;New Mexico&quot;</span>, <span class="st">&quot;Oregon&quot;</span>,
+                                     <span class="st">&quot;Utah&quot;</span>, <span class="st">&quot;Washington&quot;</span>,  <span class="st">&quot;Wyoming&quot;</span>)) 
+<span class="kw">ggplot</span>(<span class="dt">data =</span> western_subset, <span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> population, <span class="dt">fill=</span>state)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>)</code></pre></div>
+<p><img src="01-intro-to-ggplot_files/figure-revealjs/unnamed-chunk-21-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="scales---grey" class="slide level2">
+<h2>Scales - Grey</h2>
+<p>Setting a grey scale, for example:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(western_subset, <span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> population, <span class="dt">fill =</span> state)) +
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>) +
+<span class="st">  </span><span class="kw">scale_fill_grey</span>()</code></pre></div>
+<p><img src="01-intro-to-ggplot_files/figure-revealjs/unnamed-chunk-22-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="scales---discrete" class="slide level2">
+<h2>Scales - Discrete</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(western_subset, <span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> population, <span class="dt">fill =</span> state)) +
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>) +
+<span class="st">  </span><span class="kw">scale_fill_discrete</span>(<span class="dt">name =</span> <span class="st">&quot;State&quot;</span>, <span class="dt">label =</span> <span class="kw">c</span>(<span class="st">&quot;AZ&quot;</span>, <span class="st">&quot;CA&quot;</span>, <span class="st">&quot;CO&quot;</span>, <span class="st">&quot;ID&quot;</span>,
+                                                <span class="st">&quot;MT&quot;</span>, <span class="st">&quot;NV&quot;</span>, <span class="st">&quot;NM&quot;</span>, <span class="st">&quot;OR&quot;</span>, 
+                                                <span class="st">&quot;UT&quot;</span>, <span class="st">&quot;WA&quot;</span>, <span class="st">&quot;WY&quot;</span>)) </code></pre></div>
+<p><img src="01-intro-to-ggplot_files/figure-revealjs/unnamed-chunk-23-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="scales---changing-fill-scale" class="slide level2">
+<h2>Scales - Changing Fill Scale</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(western_subset, <span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> population, <span class="dt">fill =</span> state)) +
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;dodge&quot;</span>, <span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) +
+<span class="st">  </span><span class="kw">scale_fill_brewer</span>(<span class="dt">palette =</span> <span class="st">&quot;Paired&quot;</span>) +
+<span class="st">  </span><span class="kw">theme_minimal</span>()</code></pre></div>
+<p><img src="01-intro-to-ggplot_files/figure-revealjs/unnamed-chunk-24-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="scales---y-reversed" class="slide level2">
+<h2>Scales - Y-Reversed</h2>
+<p>Let’s look at a new set of data.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(paulist_missions)
+paulist_missions %&gt;%<span class="st"> </span><span class="kw">head</span>(<span class="dv">5</span>)</code></pre></div>
+<pre><code>## Source: local data frame [5 x 17]
+## 
+##   mission_number                        church          city state
+##            (int)                         (chr)         (chr) (chr)
+## 1              1           St. Joseph&#39;s Church      New York    NY
+## 2              2          St. Michael&#39;s Church       Loretto    PA
+## 3              3             St. Mary&#39;s Church Hollidaysburg    PA
+## 4              4 Church of St. John Evangelist     Johnstown    PA
+## 5              5            St. Peter&#39;s Church      New York    NY
+## Variables not shown: date_start (date), date_end (date), year (dbl),
+##   decade (chr), duration_days (int), duration_weeks (fctr), confessions
+##   (int), converts (int), order (chr), lat (dbl), long (dbl), volume (int),
+##   page (int)</code></pre>
+</section>
+<section id="scales---y-reversed-1" class="slide level2">
+<h2>Scales - Y-Reversed</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(paulist_missions, <span class="kw">aes</span>(<span class="dt">x =</span> confessions, <span class="dt">y =</span> converts)) +
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">alpha =</span> <span class="fl">0.5</span>, <span class="dt">shape =</span> <span class="dv">1</span>) +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;Paulist Missions&quot;</span>,
+       <span class="dt">x =</span> <span class="st">&quot;Confessions&quot;</span>,
+       <span class="dt">y =</span> <span class="st">&quot;Converts&quot;</span>) </code></pre></div>
+<p><img src="01-intro-to-ggplot_files/figure-revealjs/unnamed-chunk-26-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="scales---y-reversed-2" class="slide level2">
+<h2>Scales - Y-Reversed</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(paulist_missions, <span class="kw">aes</span>(<span class="dt">x =</span> confessions, <span class="dt">y =</span> converts)) +
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">alpha =</span> <span class="fl">0.5</span>, <span class="dt">shape =</span> <span class="dv">1</span>) +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;Paulist Missions&quot;</span>,
+       <span class="dt">x =</span> <span class="st">&quot;Confessions&quot;</span>,
+       <span class="dt">y =</span> <span class="st">&quot;Converts&quot;</span>) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">scale_y_reverse</span>()</code></pre></div>
+<p><img src="01-intro-to-ggplot_files/figure-revealjs/unnamed-chunk-27-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="same-data-plotted-differently" class="slide level2">
+<h2>Same Data, Plotted Differently</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(paulist_missions,
+       <span class="kw">aes</span>(<span class="dt">x =</span> state, <span class="dt">y =</span> confessions, <span class="dt">size =</span> converts)) +
+<span class="st">  </span><span class="kw">geom_jitter</span>(<span class="dt">position =</span> <span class="kw">position_jitter</span>(<span class="dt">w=</span>.<span class="dv">2</span>, <span class="dt">h=</span>.<span class="dv">1</span>), <span class="dt">shape =</span> <span class="dv">21</span>) +
+<span class="st">  </span><span class="kw">scale_size_area</span>(<span class="dt">max_size =</span> <span class="dv">10</span>) +
+<span class="st">  </span><span class="kw">theme</span>(
+    <span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">90</span>, <span class="dt">hjust =</span> <span class="dv">1</span>) 
+  )</code></pre></div>
+<p><img src="01-intro-to-ggplot_files/figure-revealjs/unnamed-chunk-28-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="worksheet-1-introduction-to-ggplot" class="slide level2">
+<h2>Worksheet #1: Introduction to ggplot</h2>
+</section>
+
+  <!--
+  To hide progress bar from entire presentation
+  just remove “progress” element.
+  -->
+  <!-- <div class="progress"></div> -->
+  <script src="01-intro-to-ggplot_files/rmdshower/node_modules/shower/node_modules/shower-core/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+
+    <script>renderMathInElement(document.body);</script>
+  
+  
+</body>
+</html>

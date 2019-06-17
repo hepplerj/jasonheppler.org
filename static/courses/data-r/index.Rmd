@@ -1,0 +1,260 @@
+---
+title: "Collect & Prep Your Data for Visualization and Analysis with R"
+subtitle: "University of Nebraska at Omaha Libraries"
+author: "Jason Heppler, PhD<br>@jaheppler"
+date: "February 25, 2019br><br>Slides and code on GitHub: **github.com/unolibraries/workshops/**"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["default", "metropolis", "metropolis-fonts", "hepp.css"]
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: "%current%"
+editor_options: 
+  chunk_output_type: console
+---
+
+class: fullscreen, inverse, bottom, left, text-white
+background-image: url("images/me-speaking.jpg")
+
+.font150[**Hi, I'm Jason. <br>I like to gesture at screens.**]
+
+**Digital Engagement Librarian**, University of Nebraska at Omaha<br>Mentor, **Mozilla Open Leaders**<br>Researcher,  **Humanities+Design**, Stanford University
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.width=4.25, fig.height=3.5, fig.retina=3,
+                      message=FALSE, warning=FALSE, cache = TRUE, 
+                      autodep = TRUE, hiline=TRUE)
+knitr::opts_hooks$set(fig.callout = function(options) {
+  if (options$fig.callout) {
+    options$echo <- FALSE
+    options$out.height <- "99%"
+    options$fig.width <- 16
+    options$fig.height <- 8
+  }
+  options
+})
+hook_source <- knitr::knit_hooks$get('source')
+knitr::knit_hooks$set(source = function(x, options) {
+  if (!is.null(options$hiline) && options$hiline) {
+    x <- stringr::str_replace(x, "^ ?(.+)\\s?#<<", "*\\1")
+  }
+  hook_source(x, options)
+})
+options(htmltools.dir.version = FALSE, width = 90)
+as_table <- function(...) knitr::kable(..., format='html', digits = 3)
+```
+
+---
+layout: true
+# Why *tidyverse*?
+---
+
+.left-column[
+![](images/hadley.jpg)
+__Hadley Wickham__
+]
+
+.right-column[.font150[
+Formerly known as the **hadleyverse**
+
+A highly-functional data manipulation and analysis package that makes the weird parts of R much easier.]
+]
+
+
+---
+
+## My personal reasons
+
+- .hl[Functional] data analysis and manipulation
+
+- Easy to .hl[iterate]
+
+- Easy to be .hl[consistent]
+
+- Easy to .hl[reproduce] your research methods
+
+- Easy to .hl[reason] about how data drives visualization
+
+---
+layout: false
+
+# What are we getting into?
+
+<br>
+`tidyverse` is a huge package: philosophy + functions
+<br>...but it's very well organized
+
+--
+
+<br><br>
+Going to throw a lot at you
+<br>...but you'll know *where* and *what* to look for
+
+--
+
+.img-right[![](images/poppins-bag.gif)]
+
+---
+layout: true
+# Let's get started!
+---
+
+**Easy**: install the [tidyverse](http://tidyverse.org)
+
+```r
+install.packages('tidyverse')
+```
+
+**Expert**: install from GitHub
+
+```r
+devtools::install_github('tidyverse/ggplot2')
+```
+
+---
+
+## Load the tidyverse
+
+```{r library-tidyverse, echo=TRUE, message=TRUE, warning=TRUE}
+library(tidyverse)
+```
+
+---
+layout: true
+# Welcome to the tidyverse
+
+.left-column[
+### Tidy Data
+
+]
+
+---
+
+.right-column[
+
+1. Each variable forms a .hl[column]
+
+2. Each observation forms a .hl[row]
+
+3. Each observational unit forms a table
+
+<br><br>The following example draws from
+
+```r
+data(population, package = "tidyr")
+```
+
+]
+
+---
+
+.right-column[
+```{r tidy-messy1, results='asis', echo=FALSE}
+pop_simple <- population %>% 
+  filter(
+    country %in% c("United States of America", "Canada", "China"),
+    year %in% seq(1995, 2010, 5)
+  ) %>% 
+  mutate(
+    country = ifelse(country == "United States of America",
+                     "USA", country)
+  )
+messy1 <- pop_simple %>% mutate(population = population/10^6) %>% spread(year, population)
+messy2 <- pop_simple %>% mutate(population = population/10^6) %>% spread(country, population)
+knitr::kable(messy1, format = 'html')
+cat('\n<br>\n')
+knitr::kable(messy2, format = 'html')
+```
+]
+
+---
+
+.right-column[
+```{r tidy-tidy1, result='asis', echo=-2}
+tidy1 <- gather(messy1, 'year', 'population', -country)
+as_table(tidy1)
+```
+]
+
+---
+
+.right-column[
+The `tidyverse` is a collection of several packages useful for data manipulation, tidying, and visualization.
+
+- `ggplot2`, for data visualization
+- `dplyr`, for data manipulation
+- `tidyr`, for data tidying
+- `readr`, for data import
+- `purrr`, for functional programming
+- `tibble`, a re-imagining of data frames
+]
+
+---
+
+layout: true
+# The grammar of data manipulation
+
+.left-column[
+### dplyr + tidyr
+
+]
+
+---
+
+.right-column[
+`tidyr` and `dplyr` are great for making data tidy, and for manipulating tidy data.
+
+- `select()`: pick columns/variables
+- `filter()`: pick rows/observations
+- `arrange()`: sort by a column or set of columns
+- `mutate()`: compute a new column from existing columns
+- `left_join()`: connect two datasets with a common variable
+- `group_by()` and `summarize()`: aggregate data into groups
+- `gather()` and `spread()`: switch between wide and long data
+]
+
+---
+
+.right-column[
+The grammar of the `tidyverse` makes running and writing code much easier and cleaner. Let's compare. 
+
+Base R:
+
+`crime.ny.2005[, c("Type.of.Crime", "Count")]`
+
+dplyr:
+
+`crime.ny.2005 %>% 
+  select(Type.of.Crime, Count)`
+]
+
+---
+
+layout: false
+class: inverse, center, middle
+
+.font150[
+Open the file <https://bit.ly/2Qi32P7>. Copy and paste into RStudio and follow along to practice the grammar of data manipulation.
+]
+
+---
+layout: true
+### Review
+
+
+---
+layout: false
+class: inverse, center, middle
+
+# Thanks!
+
+.font150.text-white[
+@jaheppler <br>
+github.com/hepplerj <br>
+Jason Heppler, PhD
+]

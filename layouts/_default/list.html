@@ -1,0 +1,17 @@
+{{ partial "head.html" . }}
+
+{{if not .IsHome }}
+<h1>{{ .Title }}</h1>
+{{ end }}
+
+{{ .Content }}
+
+<ul class="page-list">
+  {{ range where .Pages ".Params.hidden" "!=" "true" }}
+  <li>
+    <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ul>
+
+{{ partial "foot.html" . }}

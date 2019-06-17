@@ -1,0 +1,465 @@
+---
+author       : "Introduction to ggplot: Visualization in the Humanities"
+title      : Jason A. Heppler
+maketitle: true
+output:
+  rmdshower::shower_presentation:
+    self_contained: false
+    katex: true
+    theme: material
+---
+
+## Why computer programming at all?
+
+> 1. You understand more deeply what computers do to your data. By understanding the workings of an algorithm, you can better justify your scholarly claims as well as understand the ways algorithms may distort.
+> 2. The work of data analysis becomes transparent. Since we're writing code, we can trace the steps we made to make something.
+> 3. We start to correct for the problem of tools shaping research questions. In other words, we build the tool to fit our questions.
+
+## Why R?
+
+> 1. The range of libraries is quite large.
+> 2. The language is designed for data analysis.
+> 3. R has a set of tools available that makes writing code easier.
+> 4. There are several humanities scholars using R.
+> 5. Reproducable research.
+
+## Visualization Design
+
+Edward Tufte suggests that graphical excellence is defined by "that which gives the viewer the **greatest number of ideas**, in the **shortest time**, with the **least ink**, the **smallest space**, and which **tells the truth about data**."
+
+<span id="smaller">
+Edward Tufte, *The Visual Display of Quantitative Information* (Graphics Press, 1983).
+</span>
+
+## Visualization Design
+
+<center>
+<span id="bigger">
+**truth**
+</span>
+
+<span id="bigger">
+**data**
+</span>
+</center>
+
+## Visualization Design
+
+Edward Tufte suggests that graphical excellence is defined by "that which gives the viewer the **greatest number of ideas**, in the **shortest time**, with the **least ink**, the **smallest space**, and which **tells the truth about data**."
+
+<span id="smaller">
+Edward Tufte, *The Visual Display of Quantitative Information* (Graphics Press, 1983).
+</span>
+
+## Visualization Deception
+
+![Bad visualization design.](assets/img/foxnews.jpeg)
+
+## Visualization Design
+
+Edward Tufte suggests that graphical excellence is defined by "that which gives the viewer the **greatest number of ideas**, in the **shortest time**, with the **least ink**, the **smallest space**, and which **tells the truth about data**."
+
+<span id="smaller">
+Edward Tufte, *The Visual Display of Quantitative Information* (Graphics Press, 1983).
+</span>
+
+## Installing Packages
+
+```{r, eval=F}
+# First, download from CRAN:
+install.packages("devtools")
+install.packages('ggplot2')
+
+# Then, from Github:
+devtools::install_github("lmullen/historydata")
+```
+
+## Population Data
+
+```{r, message=F, warning=F}
+library(historydata)
+data(us_state_populations)
+
+# Let's look at the first five rows
+us_state_populations
+```
+
+## Plotting Population Data
+
+A ridiculous example.
+
+```{r fig.align='center', echo=FALSE, message=F, warning=F}
+library(ggplot2)
+ggplot(data = us_state_populations, aes(x = year, y = population, fill = state)) +
+  geom_bar(stat="identity") +
+  ggtitle("U.S. Historical State Populations") +
+  theme(legend.position="none") +
+  labs(x = "Year", y = "Population")
+```
+
+## The Grammar of Graphics
+
+A visualization concept created by Leland Wilkinson (1999) to **define** the elements of statistical graphics:
+
+> . . . describes the meaning of what we do when we construct statistical graphics . . . More than a taxonomy . . . Computational system based on the underlying mathematics of representing statistical functions of data.
+
+## The Grammar of Graphics
+
+Adapted by the creator of `ggplot`, Hadley Wickham, in 2009. `ggplot` offers a:
+
+> 1. **consistent and simple syntax** for 
+> 2. **describing statistical graphics**, and is
+> 3. **highly modular** to break graphs into 
+> 4. **semantic components**. 
+
+<span id="smaller">
+*See* Hadley Wickham, "A Layered Grammar of Graphics," *Journal of Computational and Graphical Statistics* vol. 19 no. 1 (2010): 3--28 <http://vita.had.co.nz/papers/layered-grammar.pdf>.
+</span>
+
+## The Grammar of Graphics
+
+Let's break down what we did with the `ggplot` code. The code for our previous bar chart looked like:
+
+```{r eval=F}
+ggplot(data = us_state_populations, aes(x = year, y = population)) +
+  geom_bar(aes(fill = state), stat="identity") +
+  ggtitle("U.S. Historical State Populations") +
+  theme(legend.position="none") +
+  labs(x = "Year", y = "Population")
+```
+
+---
+
+## The Grammar of Graphics
+
+Let's break down what we did with the `ggplot` code. The code for our previous bar chart looked like:
+
+```{r eval=F}
+ggplot(data = us_state_populations, aes(x = year, y = population)) +
+  geom_bar(aes(fill = state), stat="identity")
+```
+
+## The Grammar of Graphics
+
+Let's break down what we did with the `ggplot` code. The code for our previous bar chart looked like:
+
+```{r eval=F}
+ggplot(data = us_state_populations, aes(x = year, y = population)) +
+  geom_bar(aes(fill = state), stat="identity")
+```
+
+`ggplot` needs:
+
+> 1. mapping of **data**
+> 2. to **aesthetic attributes**
+> 3. using **geometric objects**
+> 4. with data **statistically transformed**
+> 5. and, if needed, mapped onto a **facet** or **coordinate system**
+
+## The Grammar of Graphics
+
+**data**: data as an R data frame 
+
+**coordinate system**: describe 2D space data is projected onto, such as Cartesian coordinates, polar coordinates, and map projections.
+
+**geoms**: describe the geometric objects that represent data, such as points, lines, and polygons.
+
+**aesthetics**: describe visual characteristics that represent data, such as position, size, color, and shape. 
+**scales**: for each aesthetic, describe how visual characteristic is converted to display values, such as log scales, color scales, size scales, and shape scales.
+
+**stats**: describe statistical transformations such as counts, means, medians, or regression lines.
+
+**facets**: describe how data is split into small multiples.
+
+## The Grammar of Graphics
+
+Let's break down what we did with the `ggplot` code. The code for our previous bar chart looked like:
+
+```{r eval=F}
+ggplot(data = us_state_populations, aes(x = year, y = population)) +
+  geom_bar(aes(fill = state), stat="identity")
+```
+
+### Mapping of **data**:
+
+```{r eval=FALSE}
+data = us_state_populations
+```
+
+### to **aesthetic attributes**:
+
+```{r eval=FALSE}
+aes(x = year, y = population)
+```
+
+## The Grammar of Graphics
+
+Let's break down what we did with the `ggplot` code. The code for our previous bar chart looked like:
+
+```{r eval=F}
+ggplot(data = us_state_populations, aes(x = year, y = population)) +
+  geom_bar(aes(fill = state), stat="identity")
+```
+
+### using **geometric objects**:
+
+```{r eval=FALSE}
+geom_bar(aes(fill = state), stat="identity")
+```
+
+<span id="smaller">
+See the [geom_bar documentation](http://docs.ggplot2.org/current/geom_bar.html) for the differences in the `stat` flag. By default, `geom_bar` uses `stat='count'` which sets the height of the bar proportion to the number of cases in each group. Since we want the height of the bars to represent values in the data, we use `stat='identity'` to map a variable to the `y` aesthetic.
+</span>
+
+---
+
+## The Grammar of Graphics
+
+### with data **statistically transformed**
+
+Name      | Description 
+:---      | ----------------------------------------------------------------------:
+bin       | Divide continuous range into bins, and count number of points in each
+boxplot   | Compute statistics necessary for boxplot
+contour   | Calculate contour lines
+density   | Compute 1d density estimate
+identity  | Identity transformation, f (x) = x
+jitter    | Jitter values by adding small random value
+qq        | Calculate values for quantile-quantile plot
+quantile  | Quantile regression
+smooth    | Smoothed conditional mean of y given x
+summary   | Aggregate values of y for given x
+unique    | Remove duplicated observations
+
+### and, if needed, mapped onto a **facet** or **coordinate system**
+
+## Simplicity
+
+`ggplot` makes the production of these graphics simple. Note that we were able to create a barchart with two lines of code. If I wanted to reproduce that example in JavaScript using the D3.js library, it would be something like this:
+
+## {.fullscreen}
+
+```{javascript}
+var margin = {top: 20, right: 20, bottom: 30, left: 40},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    .ticks(10, "%");
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.tsv("data.tsv", type, function(error, data) {
+  if (error) throw error;
+
+  x.domain(data.map(function(d) { return d.letter; }));
+  y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Frequency");
+
+  svg.selectAll(".bar")
+      .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return x(d.letter); })
+      .attr("width", x.rangeBand())
+      .attr("y", function(d) { return y(d.frequency); })
+      .attr("height", function(d) { return height - y(d.frequency); });
+});
+
+function type(d) {
+  d.frequency = +d.frequency;
+  return d;
+}
+```
+
+## {.fullscreen}
+
+<center>
+Let's look at another ridiculous example.
+</center>
+
+## Scatterplot of Population
+
+```{r fig.align='center', message=F, warning=F}
+ggplot(data = us_state_populations, aes(x = year, y = population)) + 
+  geom_point()
+```
+
+## Scatterplot of Population - Size
+
+```{r fig.align='center', fig.height = 4, message=F, warning=F}
+ggplot(data = us_state_populations, 
+                      aes(x = year, y = population, 
+                          size=population, alpha=population)) +
+  geom_point()
+```
+
+## Scatterplot of Population - Smooth
+
+```{r, fig.align='center', message=F, warning=F}
+populations + geom_point() + geom_smooth(color="red")
+```
+
+## Scatterplot of Population - Jitter
+
+```{r, fig.align='center', message=F, warning=F}
+populations + geom_jitter(alpha = 0.4)
+```
+
+## Scatterplot of Population - Text Labels
+
+```{r, fig.align='center', message=F, warning=F}
+populations + geom_text(aes(label=state), size = 3)
+```
+
+## Using Facets
+
+```{r, fig.align='center', fig.height=5, message=F, warning=F}
+population_subset <- subset(us_state_populations, 
+                        state %in% c("New Mexico", "Arizona", "Utah", "Colorado")) 
+ggplot(population_subset, aes(x = year, y = population)) + 
+  geom_bar(stat = "identity") +
+  facet_grid(state ~ .)
+```
+
+## Line Graph - Too Many Variables
+
+```{r, fig.align='center', message=F, warning=F}
+p <- ggplot(us_state_populations, aes(x = year, y = population))
+p + geom_line(aes(color = state))
+```
+
+## Facets to the Rescue!
+
+```{r, fig.align='center', fig.height=6, message=F, warning=F}
+p + geom_line() +
+  facet_wrap(~state, ncol = 12) +
+  theme_linedraw()
+```
+
+## Scales
+
+Controlling scales means we can **control the mapping of data** (domain) to **aesthetics** (range).
+
+Scales depend on the variable type: **discrete** (factor, logical, or character) or **continuous** (numeric).
+
+Scale specifications have the form of `scale_<aesthetic>_<scalename>()`:
+
+- *aesthetic*: x, y, color, size, or shape
+- *scalename*: grey, gradient, hue, manual, or continuous
+
+## Scales
+
+Let's start with what we know and look at population growth in the western U.S.
+
+```{r, fig.align='center', fig.height=3, message=F, warning=F}
+western_subset <- subset(us_state_populations, 
+                        state %in% c("Arizona", "California", "Colorado", "Idaho",
+                                     "Montana", "Nevada", "New Mexico", "Oregon",
+                                     "Utah", "Washington",  "Wyoming")) 
+ggplot(data = western_subset, aes(x = year, y = population, fill=state)) + 
+  geom_bar(stat="identity")
+```
+
+## Scales - Grey
+
+Setting a grey scale, for example:
+
+```{r, fig.align='center', fig.height=4,message=F, warning=F}
+ggplot(western_subset, aes(x = year, y = population, fill = state)) +
+  geom_bar(stat="identity") +
+  scale_fill_grey()
+```
+
+## Scales - Discrete
+
+```{r, fig.align='center', fig.height=4, message=F, warning=F}
+ggplot(western_subset, aes(x = year, y = population, fill = state)) +
+  geom_bar(stat="identity") +
+  scale_fill_discrete(name = "State", label = c("AZ", "CA", "CO", "ID",
+                                                "MT", "NV", "NM", "OR", 
+                                                "UT", "WA", "WY")) 
+```
+
+## Scales - Changing Fill Scale
+
+```{r, fig.align='center', fig.height=4, message=F, warning=F}
+ggplot(western_subset, aes(x = year, y = population, fill = state)) +
+  geom_bar(position = "dodge", stat = "identity") +
+  scale_fill_brewer(palette = "Paired") +
+  theme_minimal()
+```
+
+## Scales - Y-Reversed
+
+Let's look at a new set of data.
+
+```{r, message=F, warning=F}
+data(paulist_missions)
+paulist_missions %>% head(5)
+```
+
+## Scales - Y-Reversed
+  
+```{r, fig.height=4.5, fig.align='center', message=F, warning=F}
+ggplot(paulist_missions, aes(x = confessions, y = converts)) +
+  geom_point(alpha = 0.5, shape = 1) +
+  labs(title = "Paulist Missions",
+       x = "Confessions",
+       y = "Converts") 
+```
+
+## Scales - Y-Reversed
+  
+```{r, fig.height=5, fig.align='center', message=F, warning=F}
+ggplot(paulist_missions, aes(x = confessions, y = converts)) +
+  geom_point(alpha = 0.5, shape = 1) +
+  labs(title = "Paulist Missions",
+       x = "Confessions",
+       y = "Converts") + 
+  scale_y_reverse()
+```
+
+## Same Data, Plotted Differently
+
+```{r, fig.height=4.5, fig.align='center', message=F, warning=F}
+ggplot(paulist_missions,
+       aes(x = state, y = confessions, size = converts)) +
+  geom_jitter(position = position_jitter(w=.2, h=.1), shape = 21) +
+  scale_size_area(max_size = 10) +
+  theme(
+    axis.text.x = element_text(angle = 90, hjust = 1) 
+  )
+```
+
+## Worksheet #1: Introduction to ggplot

@@ -1,0 +1,18 @@
+---
+date: 2012-02-29T13:36:59Z
+external: https://plus.google.com/u/1/105076678694475690385/posts/3zhRzzSAs8b
+categories:
+- internet
+title: The Internet is Not Broken
+url: /2012/02/29/the_internet_is_not_broken/
+---
+
+[Jeff Jarvis asks why there are so many attempts to regulate the internet](https://plus.google.com/u/1/105076678694475690385/posts/3zhRzzSAs8b), and speculates that the reason is because the internet disrupts power held by corporations and governments:
+
+> The internet's not broken.
+> 
+> So then why are there so many attempts to regulate it? Under the guises of piracy, privacy, pornography, predators, indecency, and security, not to mention censorship, tyranny, and civilization, governments from the U.S. to France to Germany to China to Iran to Canada — as well as the European Union and the United Nations — are trying to exert control over the internet.
+> 
+> Why? Is it not working? Is it presenting some new danger to society? Is it fundamentally operating any differently today than it was five or ten years ago? No, no, and no.
+> 
+> So why are governments so eager to claim authority over it? Why would legacy corporations, industries, and institutions egg them on? Because the net is working better than ever. Because they finally recognize how powerful it is and how disruptive it is to their power.

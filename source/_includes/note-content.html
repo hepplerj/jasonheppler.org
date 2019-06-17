@@ -1,5 +1,0 @@
-<p class="e-content{% if include.bookmark_url == "" %} p-name{% endif %}">
-{% if include.bookmark_url != "" %}
-  <a href="{{ include.bookmark_url }}" class="p-name u-bookmark-of"><span class="icon">🔖</span>{{ include.bookmark_name | default: include.bookmark_url }}</a>{% if include.note_content_size != "0" %}:{% endif %}{% endif %}
-{{ include.note_content | remove: "<p>" | remove: "</p>" }}
-</p>

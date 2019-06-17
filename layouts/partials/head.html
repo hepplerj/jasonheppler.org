@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="keywords" lang="us=en" content="jason heppler, jason, heppler, design, digital humanities, digital history, tools, visualization, stanford, nebraska, spatial history"/>
+  
+    {{ if .IsHome }}
+    <title>{{ .Site.Title }} | Historian of American environmentalism</title>
+    {{ else }}
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    {{ end}}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ if .Description }}
+    <meta name="description" content="{{ .Description }}">
+    {{ else if .IsPage }}
+    <meta name="description" content="{{ .Summary | plainify }}">
+    {{ end }}
+
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="description" content="Jason Heppler offical website. Data Visualization, Maps, Networks, Digital History."/>
+    <meta name="author" content="Jason A. Heppler"/>
+    <meta name="copyright" content="&copy; Copyright 2008 to Present"/>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, minimum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta property="twitter:account_id" content="16240799"/>
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="x-dns-prefetch-control" content="off">
+    <link rel="canonical" href="https://jasonheppler.org/" />
+
+    <link href="https://micro.blog/jaheppler" rel="me" />
+    <link href="https://weblog.jasonheppler.org" rel="me" />
+    <link href="https://hcommons.org/members/hepplerj/" rel="me">
+    <link href="https://orcid.org/0000-0003-4158-6186" rel="me">
+    <link href="https://github.com/hepplerj/" rel="me">
+    <link href="https://www.unomaha.edu/criss-library/about-us/staff-directory/jason-heppler.php" rel="me">
+    <link href="https://scholar.google.com/citations?user=X2hGnS4AAAAJ" rel="me">
+    <link href="https://www.zotero.org/hepplerj/" rel="me">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="Jason Heppler's blog." />
+    <link rel="alternate" type="application/rss+xml" href="https://weblog.jasonheppler.org/feed.xml" title="{{ .Site.Params.blogFeedTitle }}" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="" />
+    <meta property="dc:creator" content="Jason A. Heppler" />
+    <meta property="dc:date" content="{{ .Site.LastChange }}" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/" />
+    <meta property="dc:rights" content="CC BY-NC-SA 3.0" />
+    <meta property="dc:source" content="Jason Heppler weblog" />
+    <meta property="dc:subject" content="History" />
+    <meta property="dc:type" content="website" />
+  
+    <!-- RDFa Metadata (in OpenGraph) -->
+    <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+    <meta property="og:author" content="Jason A. Heppler" />
+    <meta property="og:site_name" content="Jason Heppler weblog" />
+    <meta property="og:url" content="https://jasonheppler.org" />
+    <meta property="og:type" content="website" />
+  
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_author" content="Jason A. Heppler"/>
+    <meta name="citation_date" content="{{ .Site.LastChange }}"/>
+    <meta name="citation_title" content=""/>
+    <meta name="citation_journal_title" content="Jason Heppler weblog"/>
+  
+    <!-- Twitter cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@jaheppler">
+    <meta name="twitter:creator" content="@jaheppler">
+    <meta name="twitter:url" content="https://jasonheppler.org">
+    <meta name="twitter:title" content="History, Technology, and Design">
+    <meta name="twitter:description" content="A blog on history and technology by Jason A. Heppler.">
+      
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="https://use.typekit.net/dgm8yuv.css">
+    <link rel="stylesheet" href="/assets/stylesheets/normalize.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/syntax.css">
+    <link rel="stylesheet" href="/assets/stylesheets/main.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+
+    <!-- scripts -->
+    <script src="/js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+  </head>
+  <body class="pad2y">
+
+    <header class="no-print">
+      {{ partial "nav.html" . }}
+    </header>
+
+    <main>

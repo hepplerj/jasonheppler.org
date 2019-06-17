@@ -1,0 +1,113 @@
+library-tidyverse	library	tidyverse
+library-extra	library	lubridate	reshape2	babynames
+tidy-messy1	pop_simple	population	%>%	filter	country	%in%	c	year	seq	mutate	ifelse	messy1	spread	messy2	kable	cat
+tidy-tidy1	tidy1	gather	messy1	country	as_table
+tidy-tidy2	tidy2	gather	messy2	year	as_table
+ggplot2-geom-names	old_width	options	lsf.str	%>%	grep	.	width
+first-plot1a	ggplot	tidy1
+first-plot1a-out	ggplot	tidy1
+first-plot1b	ggplot	tidy1	aes	year	population
+first-plot1b-out	ggplot	tidy1	aes	year	population
+first-plot1c	ggplot	tidy1	aes	year	population	geom_point
+first-plot1c-out	ggplot	tidy1	aes	year	population	geom_point
+first-plot1	ggplot	tidy1	aes	year	population	country	geom_point
+first-plot1-out	ggplot	tidy1	aes	year	population	country	geom_point
+first-plot2-fake	ggplot	tidy1	aes	year	population	country	geom_point	geom_line
+first-plot2-fake-out	ggplot	tidy1	aes	year	population	country	geom_point	geom_line
+first-plot2	ggplot	tidy1	aes	year	population	country	geom_point	geom_line
+first-plot2-out	ggplot	tidy1	aes	year	population	country	geom_point	geom_line
+stat-prep	sw_chars	starwars	%>%	mutate	map_int	films	length	ifelse	gender	%in%	c	select	name	n_movies
+stat-prep-table	as_table	sw_chars
+stat-example	ggplot	sw_chars	aes	n_movies	geom_bar
+stat-example-out	ggplot	sw_chars	aes	n_movies	geom_bar
+stat-example2	ggplot	sw_chars	aes	n_movies	gender	geom_bar
+stat-example2-out	ggplot	sw_chars	aes	n_movies	gender	geom_bar
+stat-prep-identity	sw_chars_id	sw_chars	%>%	group_by	n_movies	gender	tally
+stat-prep-identity-table	as_table	sw_chars_id
+stat-example4	ggplot	sw_chars_id	aes	n_movies	n	gender	geom_bar
+stat-example4-out	ggplot	sw_chars_id	aes	n_movies	n	gender	geom_bar
+stat-example5	ggplot	sw_chars_id	aes	n_movies	n	gender	geom_col
+stat-example5-out	ggplot	sw_chars_id	aes	n_movies	n	gender	geom_col
+stat-example3	ggplot	sw_chars_id	aes	n_movies	n	gender	geom_col
+stat-example3-out	ggplot	sw_chars_id	aes	n_movies	n	gender	geom_col
+unnamed-chunk-1	lsf.str	%>%	grep	.
+unnamed-chunk-2	lsf.str	%>%	grep	.
+facet_example_setup	sw_chars	starwars	%>%	mutate	map_int	films	length	ifelse	gender	%in%	c	case_when	str_detect	hair_color
+facet_wrap_example	g	ggplot	sw_chars	aes	n_movies	gender	geom_bar
+unnamed-chunk-3	g	facet_wrap	gender
+unnamed-chunk-4	g	facet_grid	gender	hair_color
+unnamed-chunk-5	g	facet_grid	gender	hair_color
+unnamed-chunk-6	g	labs
+unnamed-chunk-7	g
+unnamed-chunk-8	g	scale_fill_brewer
+unnamed-chunk-9	g
+unnamed-chunk-10	g	theme_bw
+unnamed-chunk-11	g	theme_minimal	theme	element_text
+theme_set	my_theme	theme_bw	theme	element_text	element_rect	element_blank	theme_set
+unnamed-chunk-12	g
+unnamed-chunk-13	g	theme
+unnamed-chunk-14	data	tips
+unnamed-chunk-15	as_table	head	tips
+tips-plot1	ggplot	tips	aes	tip	geom_histogram
+tips-plot1-out	ggplot	tips	aes	tip	geom_histogram
+tips-plot-density1	ggplot	tips	aes	tip	geom_density	day
+tips-plot-density1-out	ggplot	tips	aes	tip	geom_density	day
+tips-plot-density2	ggplot	tips	aes	tip	geom_density	day
+tips-plot-density2-out	ggplot	tips	aes	tip	geom_density	day
+tips-plot-density3	ggplot	tips	aes	tip	total_bill	geom_density	day	facet_wrap
+tips-plot-density3-out	ggplot	tips	aes	tip	total_bill	geom_density	day	facet_wrap
+tips-plot-total1	ggplot	tips	aes	total_bill	tip	geom_point
+tips-plot-total1-out	ggplot	tips	aes	total_bill	tip	geom_point
+tips-plot-total2	ggplot	tips	aes	total_bill	tip	geom_point	geom_smooth
+tips-plot-total2-out	ggplot	tips	aes	total_bill	tip	geom_point	geom_smooth
+tips-plot-total3	ggplot	tips	aes	total_bill	tip	geom_point	geom_smooth	geom_abline	c
+tips-plot-total3-out	ggplot	tips	aes	total_bill	tip	geom_point	geom_smooth	geom_abline	c
+tips-plot-total4	ggplot	tips	aes	total_bill	tip	geom_point	geom_hline	c
+tips-plot-total4-out	ggplot	tips	aes	total_bill	tip	geom_point	geom_hline	c
+tips-plot-total5	tips	percent	tip	total_bill	ggplot	aes	size	smoker	geom_point
+tips-plot-total5-out	tips	percent	tip	total_bill	ggplot	aes	size	smoker	geom_point
+tips-plot-total5b	tips	percent	tip	total_bill	ggplot	aes	size	smoker	geom_jitter
+tips-plot-total5b-out	tips	percent	tip	total_bill	ggplot	aes	size	smoker	geom_jitter
+tips-plot-total6	ggplot	tips	aes	day	percent	sex	geom_jitter	facet_grid	time	smoker
+tips-plot-total6-out	ggplot	tips	aes	day	percent	sex	geom_jitter	facet_grid	time	smoker
+tips-plot-total62	tips	mutate	factor	time	c	day	ggplot	aes	percent	sex	geom_jitter	facet_grid	smoker
+tips-plot-total62-out	tips	mutate	factor	time	c	day	ggplot	aes	percent	sex	geom_jitter	facet_grid	smoker
+tips-plot-total7	ggplot	tips	aes	day	percent	time	geom_boxplot	facet_grid	.	smoker
+tips-plot-total7-out	ggplot	tips	aes	day	percent	time	geom_boxplot	facet_grid	.	smoker
+tips-plot-total8	ggplot	tips	aes	day	percent	smoker	geom_violin	facet_wrap
+tips-plot-total8-out	ggplot	tips	aes	day	percent	smoker	geom_violin	facet_wrap
+tips-plot-total9	g	ggplot	tips	aes	day	percent	smoker	geom_violin	geom_jitter	facet_wrap
+tips-plot-total9-out	g	ggplot	tips	aes	day	percent	smoker	geom_violin	geom_jitter	facet_wrap
+tips-plot-total10	g	guides	labs	scale_y_continuous	percent
+tips-plot-total10-out	g	guides	labs	scale_y_continuous	percent
+unnamed-chunk-16	data	babynames
+unnamed-chunk-17	babynames	%>%	sample_n	as_table
+babynames_pop2015	babynames_pop2015	babynames	%>%	filter	year	mutate	n	case_when	sex	group_by	top_n
+unnamed-chunk-18	babynames_pop2015	%>%	slice	as_table
+babynames-popular-base-a	g_babynames	ggplot	babynames_pop2015	aes	n	name	geom_col
+unnamed-chunk-19	g_babynames
+babynames-popular-base-b	g_babynames	ggplot	babynames_pop2015	aes	n	name	geom_col	coord_flip
+unnamed-chunk-20	g_babynames
+babynames-popular-base-c	g_babynames	ggplot	babynames_pop2015	aes	n	fct_reorder	name	geom_col	coord_flip
+unnamed-chunk-21	g_babynames
+babynames-popular-base-d	g_babynames	ggplot	babynames_pop2015	aes	n	fct_reorder	name	sex	geom_col	coord_flip
+unnamed-chunk-22	g_babynames
+babynames-popular-base-e	g_babynames	ggplot	babynames_pop2015	aes	n	fct_reorder	name	sex	geom_col	coord_flip	facet_wrap
+unnamed-chunk-23	g_babynames
+unnamed-chunk-24	g_babynames	ggplot	babynames_pop2015	aes	n	fct_reorder	name	sex	geom_col	geom_text	format	coord_flip	facet_wrap
+babynames-popular	g_babynames	labs	guides	scale_fill_manual	c	theme	element_text	element_blank
+babynames-popular-out-callout	g_babynames	labs	guides	scale_fill_manual	c	theme	element_text	element_blank
+babynames-popular-out	g_babynames	labs	guides	scale_fill_manual	c	theme	element_text	element_blank
+unnamed-chunk-25	source	cat	paste	names_m2f	names_f2m
+unnamed-chunk-26	sel_change_babynames	%>%	select	year	name	prop	prop_group	sample_n	arrange	filter	abs	kable
+genben-plot1	ggplot	sel_change_babynames	aes	year	prop
+genben-plot1-out	ggplot	sel_change_babynames	aes	year	prop
+genben-plot2	ggplot	sel_change_babynames	aes	year	prop	geom_line	name
+genben-plot2-out	ggplot	sel_change_babynames	aes	year	prop	geom_line	name
+genben-plot3	ggplot	sel_change_babynames	aes	year	prop	geom_area	prop_group	geom_line	name	facet_wrap
+genben-plot3-out	ggplot	sel_change_babynames	aes	year	prop	geom_area	prop_group	geom_line	name	facet_wrap
+genben-plot4	g_bnc	ggplot	sel_change_babynames	aes	year	prop	geom_area	prop_group	geom_line	name	facet_wrap	scale_fill_manual	c	guides	labs
+genben-plot4-out	g_bnc	ggplot	sel_change_babynames	aes	year	prop	geom_area	prop_group	geom_line	name	facet_wrap	scale_fill_manual	c	guides	labs
+genben-plot5	g_bnc	theme_minimal	theme	element_blank	element_text	element_line
+genben-plot5-out	g_bnc
+genben-plot-out	g_bnc
