@@ -24,7 +24,7 @@ Thanks!
 - **Gulp**: install `gulp-cli`: `npm install gulp-cli -g`
 
 1. Install Node.js, then run `npm install`
-2. To start, run `gulp`. A development version of the site will generate and open at `http://localhost:1313
+2. To start, run `gulp`. A development version of the site will generate and open at `http://localhost:1313`
 
 ## Usage
 
