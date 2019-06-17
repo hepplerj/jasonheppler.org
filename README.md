@@ -28,11 +28,11 @@ Thanks!
 
 ## Usage
 
-### `gulp
+### `gulp`
 
 The default command and the one used most often. The command builds assets and site with development settings, including sourcemaps and drafts. Any changes made to posts, pages, and assets will be updated automatically and update in the browser via BrowserSync.
 
-### `gulp build
+### `gulp build`
 
 Build a production version of the site in `public/`.
 
