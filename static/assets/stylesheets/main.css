@@ -1,8 +1,9 @@
 html {
   color: #000000;
-  font-size: 1.1em;
+  font-size: .9375rem /*1.1em*/;
   line-height: 1.4;
   font-family: 'europa','Avenir Next', 'Avenir', 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* font-family: 'Maitree', Georgia, serif; */
   text-rendering: optimizeLegibility;
 }
 
@@ -54,7 +55,7 @@ Author's custom styles
 ========================================================================== */
 
 body {
-  background: #f6f2ef;
+  /*background: #f6f2ef;*/
   font-size: 16.8px;
   max-width: 750px;
   margin: 0rem auto;
