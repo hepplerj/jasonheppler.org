@@ -1,62 +1,66 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
-        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
-        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-    
-        <style>
-            body {text-align: center;}
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
 
-            section {
-                padding: 4.5rem .5rem 2.5rem .5rem;
-            }
+<link href="https://fonts.googleapis.com/css?family=Oxygen&amp;display=swap" rel="stylesheet">
 
-            footer {display: block; }
+<title>Geolocator</title>
 
-            .section-footer {
-                color: #bcc3ce;
-                padding: 1.8rem .75rem 1rem;
-                position: relative;
-                z-index: 200;
-            }
-        </style>
-    
-    </head>
+<style>
+    body {font-family: 'Oxygen', sans-serif; text-align: center;}
+
+    p#latlon {font-family: monospace; }
+
+    .section-footer {
+        color: #bcc3ce;
+        padding: 1.8rem .75rem 1rem;
+        position: relative;
+        z-index: 200;
+    }
+
+    .column { padding-top: 40px;}
+</style>
+
+</head>
 <body>
 
-    <div class="container">
-
-        <div class="section">
-        <h1>Geolocation</h1>
+<div class="container">
+<div class="columns">
+    <div class="column col-12">
+        <h2>Geolocation</h2>
         
             <p>Click the button to get your coordinates.</p>
             
-            <button class="btn btn-primary" onclick="getLocation()">Find Me</button>
-            
-            <p id="demo"></p>
-        </div>
-        <footer class="section section-footer">
+            <button class="btn btn-lg btn-primary" onclick="getLocation()"><i class="icon icon-location"></i> Find Me</button>
+    </div>
+    <div class="column col-12">
+            <p id="latlon"></p>
+    </div>
+
+        <footer class="column col-12 section-footer">
             Made by <a href="https://jasonheppler.org">Jason A. Heppler</a>
         </footer>
+    </div>
+</div>
 
-        <script>
-        var x = document.getElementById("demo");
-        
-        function getLocation() {
-          if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-          } else { 
-            x.innerHTML = "Geolocation is not supported by this browser.";
-          }
-        }
-        
-        function showPosition(position) {
-          x.innerHTML = "Latitude: " + position.coords.latitude + 
-          "<br>Longitude: " + position.coords.longitude;
-        }
-        </script>
-    </div> 
-        
-</body>
-</html>
+<script>
+var geo = document.getElementById("latlon");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    geo.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  geo.innerHTML = parseFloat(position.coords.latitude.toFixed(4)) + ", " + 
+  parseFloat(position.coords.longitude.toFixed(4));
+}
+</script>
+
+</body></html>

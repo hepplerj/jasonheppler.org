@@ -1,6 +1,5 @@
 html {
-  color: #000000;
-  font-size: .9375rem /*1.1em*/;
+  color: #1D253C;
   line-height: 1.4;
   font-family: 'europa','Avenir Next', 'Avenir', 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   /* font-family: 'Maitree', Georgia, serif; */
@@ -25,7 +24,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 2px solid #D34E23;
   margin: 1em 0;
   padding: 0;
   clear: both;
@@ -56,7 +55,7 @@ Author's custom styles
 
 body {
   /*background: #f6f2ef;*/
-  font-size: 16.8px;
+  font-size: 18px;
   max-width: 750px;
   margin: 0rem auto;
   padding: 2rem;
@@ -84,7 +83,7 @@ nav a {
 
 a,
 a:visited {
-  color: #1352a2;
+  color: #004D80;
   outline: none !important;
   /* text-decoration: none; */
   /* border-bottom: 1px solid #333; */
@@ -93,7 +92,7 @@ a:visited {
 }
 
 a:hover {
-  color: #888;
+  color: #85B6C5;
 }
 
 ul {
@@ -167,14 +166,14 @@ td {
 }
 
 h1 {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   font-weight: 600;
   margin-top: 1rem;
   margin-bottom: 0.25rem;
 }
 
 h2 {
-  font-size: 1.25rem; 
+  /* font-size: 1.25rem;  */
   font-weight: 600;
   margin-top: 1rem;
   margin-bottom: 0.25rem;
@@ -185,10 +184,14 @@ h2 {
 }
 
 h3 {
-  font-size: 1rem;
+  /* font-size: 1rem; */
   font-weight: 600;
   margin-top: 1rem;
   margin-bottom: 0.25rem;
+}
+
+h1, h2 {
+  color: #F2BA42;
 }
 
 h1 + p, h2 + p, h3 + p {
@@ -224,6 +227,7 @@ figure {
 
 figure figcaption {
   display: inline-block;
+  font-size: .8rem;
 }
 
 figure figcaption p {
@@ -262,7 +266,7 @@ article p,
 .blog-nav {
   margin: 2rem 0 2rem 0;
   padding: 1.0rem 0.5rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #EEF4F8;
 }
 
 .subscribe {
@@ -275,7 +279,7 @@ article p,
 }
 
 aside {
-  background: rgba(0, 0, 0, 0.1);
+  background: #EEF4F8;
   padding: 15px;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -283,7 +287,7 @@ aside {
 }
 
 aside.warn {
-  background:rgba(0, 0, 0, 0.05);
+  background: #F2E4D6;
 }
 
 .post-categories,
@@ -333,7 +337,7 @@ a.footnote-return {
 
 .post-separator {
   margin-top: 4rem;
-  border-bottom: 1.25px dashed #049013;
+  border-bottom: 1.25px dashed #653727;
   margin-bottom: 4rem;
 }
 
@@ -605,7 +609,10 @@ article.syllabus nav#TableOfContents ul li {
 }
 
 blockquote {
-  margin: 0 4rem 0 2rem;
+  margin: 0 4rem 0 0;
+  font-size: 1rem;
+  border-left: 5px solid #004D80;
+  padding-left: 15px;
 }
 
 /* ==========================================================================

@@ -77,7 +77,7 @@ gulp.task('submit:sitemap', function(cb) {
 });
 
 // deploy and submit sitemap 
-gulp.task('deploy', gulp.series('upload', 'submit:sitemap'));
+gulp.task('deploy', gulp.series('build', 'upload', 'submit:sitemap'));
 
 // default task -- preview server
 gulp.task('default', gulp.series('preview'));
