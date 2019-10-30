@@ -47,3 +47,7 @@ I take your privacy seriously. I have installed a local analytics package called
 If you email me something I keep that anonymous, especially when sent encrypted. If I decide I would like to quote something from your email, I will ask you first. If you've emailed me about something I got wrong, I may use your name to credit the correction but I won't if it's not public information. [Here's my public key](https://jasonheppler.org/jasonheppler.asc). I'm also `jaheppler` on Keybase.
 
 Please [email me](mailto:jason@jasonheppler.org) if you have any questions.
+
+## Colophon
+
+This website is built with Hugo. This site is ad-free and doesn't use trackers. If you'd like to support my writing, I'd love it if you could [buy me a coffee](https://ko-fi.com/jasonheppler).

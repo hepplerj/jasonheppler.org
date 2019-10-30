@@ -1,20 +1,25 @@
 {{ partial "head.html" . }}
 
+<h1>{{ .Title }}</h1>
+
 {{ .Content }}
 
-{{ partial "blog-nav" }}
-
-{{ range first 10 .Pages }}
-<article id='{{ urlize .Title }}' class="h-entry post">
-  <header>
-    <h2 class="post-title"><a href='{{ .Permalink }}' class='p-name'>{{ .Title }}</a></h2>
-    <a href='{{ .Permalink }}' class='u-url u-uid permalink'><time class='dt-published' datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "January 2, 2006" }}</time></a>
-  </header>
-  <div class='post-body e-content'>
-    {{ .Content }}
-  </div>
-</article>
-<div class="post-separator"></div>
+{{ range (where .Site.RegularPages "Section" "blog").GroupByDate "2006" }}
+<h2>{{ .Key }}</h2>
+<table id='blog-archive' class='date-list-table'>
+    <colgroup>
+      <col style="width:6rem;">
+      <col>
+    </colgroup>  
+    <tbody>
+    {{ range .Pages }}
+    <tr>
+      <td><time class="date" datetime="2006-01-02">{{ .Date.Format "Jan 2" }}</time></td>
+      <td><a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a></td>
+    </tr>
+    {{ end }}
+    </tbody>
+</table>
 {{ end }}
-{{ partial "blog-nav" }}
+
 {{ partial "foot.html" . }}
