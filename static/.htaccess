@@ -3,6 +3,7 @@ Redirect 301 /posts.atom.xml https://jasonheppler.org/feed.xml
 Redirect 301 /atom.xml https://jasonheppler.org/feed.xml
 Redirect 302 /cv/index.html https://jasonheppler.org/files/jah-vita.pdf
 Redirect 302 /cv/ https://jasonheppler.org/files/jah-vita.pdf
+Redirect 302 dissertation.jasonheppler.org https://jasonheppler.org
 
 ErrorDocument 404 /404.html
 
