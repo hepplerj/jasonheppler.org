@@ -2,6 +2,7 @@ wiki/
 software/
 projects/
 files/
+matomo/
 cgi-bin/
 .DS_Store
 .well-known/
