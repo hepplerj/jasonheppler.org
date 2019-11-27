@@ -56,7 +56,7 @@ gulp.task('upload', () => {
       hostname: credentials.hostname,
       username: credentials.username,
       destination: credentials.destination,
-      incremental: true,
+      incremental: false,
       recursive: true,
       compress: true,
       clean: false,
