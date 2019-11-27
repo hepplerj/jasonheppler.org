@@ -1,8 +1,5 @@
 ---
 date: 2014-09-21T21:11:38Z
-image:
-  feature: null
-  thumb: null
 post_type: Shorts
 categories:
 - digital history

@@ -2,8 +2,6 @@
 title: 'Alan Brinkley, RIP'
 date: 2019-06-17T09:52:00-05:00
 slug: 'alan-brinkley'
-series:
-subjects:
 draft: false
 ---
 

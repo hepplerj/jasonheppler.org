@@ -1,8 +1,5 @@
 ---
 date: 2014-07-17T15:22:41Z
-image:
-  feature: null
-  thumb: null
 post_type: Shorts
 categories:
 - Western History Association

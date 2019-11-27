@@ -1,9 +1,6 @@
 ---
 date: 2012-01-04T12:50:14Z
 description: My proposal for THATCamp AHA in Chicago.
-image:
-  feature: null
-  thumb: null
 categories:
 - THATCamp
 - Chicago
