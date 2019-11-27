@@ -25,20 +25,24 @@ var barchartSvg = d3.select("#barchart").append("svg")
   .append("g")
     .attr("transform", "translate(" + barchart_margin.left + "," + barchart_margin.top + ")");
 
+var parseDate = d3.timeParse("%m %d, %Y");
+
 d3.json("data.json", function(error, data) {
   if (error) throw error;
 
-  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "id" && key !== "Article" && key !== "Shooter" && key !== "Location" && key !== "Date"; }));
+  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "Incident Date" && key !== "State" && key !== "City Or County" && key !== "Address" && key !== "Operations"; }));
 
   data.forEach(function(d) {
     var y0 = 0;
     d.shootings = color.domain().map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
     d.total = d.shootings[d.shootings.length - 1].y1;
+    d.date = d["Incident Date"];
   });
+  console.log("data", data);
 
   // data.sort(function(a, b) { return b.Date - a.Date; });
 
-  x.domain(data.map(function(d) { return d.Date; }));
+  x.domain(data.map(function(d) { return d.date; }));
   y.domain([0, d3.max(data, function(d) { return d.total; })]);
 
   barchartSvg.append("g")
@@ -66,7 +70,7 @@ d3.json("data.json", function(error, data) {
       .data(data)
     .enter().append("g")
       .attr("class", "g")
-      .attr("transform", function(d) { return "translate(" + x(d.Date) + ",0)"; });
+      .attr("transform", function(d) { return "translate(" + x(d.date) + ",0)"; });
 
   state.selectAll("rect")
       .data(function(d) { return d.shootings; })
