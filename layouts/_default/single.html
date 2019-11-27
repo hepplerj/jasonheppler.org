@@ -2,7 +2,7 @@
 
 <article id="{{ urlize .Title }}">
   <header>
-    <h1 class="title">{{ .Title }}</h1>
+    <h1 class="title"><strong>{{ .Title }}</strong></h1>
     {{ partial "article-meta.html" . }}
   </header>
   {{ if .Params.toc }}
