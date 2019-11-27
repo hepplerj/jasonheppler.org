@@ -116,7 +116,7 @@ Few places symbolize the twentieth century like Silicon Valley. Stretching from 
 
 -------------------------------------------------------------------
 
-{{% book title="Digital Community Engagement: Partnering Communities with the Academy" year="in progress" publisher="University of Cincinnati Press" %}}
+{{% book title="Digital Community Engagement: Partnering Communities with the Academy" image="dice.jpeg" year="2020" publisher="University of Cincinnati Press" %}}
 
 Edited with Rebecca Wingo and Paul Schadewald, our edited volume brings together cutting-edge campus-community partnerships with a focus on digital projects. Through a series of case studies authored by academics and their community partners, we explore models for digital community engagement that leverages new media through reciprocal partnerships. The contributions to the volume stand at the crossroads of digital humanities, public history, and community engagement, drawing ideas, methods, and practices from various disciplines to inform our public partnerships. By highlighting these projects we hope to provide other institutions, cultural heritage organizations, universities, and communities models for successful engagement.
 

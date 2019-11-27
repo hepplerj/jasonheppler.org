@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-us"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jason A. Heppler">
+    <meta name="description" content="Learn why and how to work with and visualize data">
+
+    <meta name="twitter:card" value="summary_large_image">
+    <meta name="twitter:site" content="@jaheppler">
+    <meta name="twitter:title" content="Reference | : Bootcampr: An Introduction to R">
+    <meta name="twitter:creator" content="@jaheppler">
+    <meta name="twitter:image" content="https://jasonheppler.org/images/unor_hex.png">
+    <meta name="twitter:description" content="Learn why and how to work with and visualize data" />
+
+    <meta property="og:site_name" content=": Bootcampr: An Introduction to R"/>
+    <meta property="og:title" content="Reference | : Bootcampr: An Introduction to R">
+    <meta property="og:type" content="article" />
+    <meta property="article:author" content="" />
+    <meta property="og:url" content="https://jasonheppler.org/courses/bootcampr.2020/" />
+    <meta property="og:image" content="https://jasonheppler.org/images/unor_hex.png">
+    <meta property="og:description" content="Learn why and how to work with and visualize data" />
+
+    <meta name="generator" content="Hugo 0.59.1" />    
+
+    <title>Reference | : Bootcampr: An Introduction to R</title>
+    <link rel="canonical" href="https://jasonheppler.org/courses/bootcampr.2020/reference/">
+    <link href="/theme/css/tufte.css" rel="stylesheet">
+    <link href="/theme/css/latex.css" rel="stylesheet">
+    <link href="/theme/css/custom.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+        .wrap a, .wrap a:visited {
+            color: #DA5B69;
+        }
+
+        .wrap a:hover {
+            color: #F9983E;
+        }
+
+        .wrap p > a {
+            color: #DA5B69;
+        }
+
+        article .sidenote-number:after, article .sidenote:before {
+            color: #DA5B69;
+        }
+
+        article .sidenote:before {
+            color: #DA5B69;
+        }
+
+        @media (max-width: 760px) {
+            label.margin-toggle:not(.sidenote-number) {
+                color: #DA5B69;
+            }
+        }
+
+        .contrast a, .contrast a:visited {
+            color: #DA5B69; 
+        }
+
+        header > nav a {
+            color: #DA5B69;
+        }
+
+        .credits a {
+            color: #DA5B69;
+        }
+
+        .wrap .tag {
+            background: #DA5B69;
+        }
+    </style>
+
+    <link rel="shortcut icon" href="https://jasonheppler.org/courses/bootcampr.2020/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="https://jasonheppler.org/courses/bootcampr.2020/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://jasonheppler.org/courses/bootcampr.2020/images/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content=": Bootcampr: An Introduction to R"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="https://jasonheppler.org/courses/bootcampr.2020/images/mstile-144x144.png" />
+
+    
+    <script src="https://use.typekit.net/ajy6rnl.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+<div class="wrap">
+    <header>
+        <nav class="group logo-wrap">
+          <a href="/" class="logo"><img src="https://jasonheppler.org/images/unor_hex.png" alt="Visualizing Society"></a>
+          <h1 class="websitetitle"><a href="https://jasonheppler.org/courses/bootcampr.2020/"></a></h1>
+          <h1 class="websitetitle"><a href="https://jasonheppler.org/courses/bootcampr.2020/">Bootcampr: An Introduction to R</a></h1>
+        </nav>
+        <nav class="bottom-group">
+            
+            <a href="/courses/bootcampr.2020/syllabus/">Syllabus</a>
+            
+            <a href="/courses/bootcampr.2020/schedule/">Schedule</a>
+            
+            <a href="/courses/bootcampr.2020/reference/">Reference</a>
+            
+        </nav>
+    </header>
+
+
+    <article class="group">
+    <h1>Reference</h1>
+
+    
+<!-- BLOGDOWN-HEAD -->
+<!-- /BLOGDOWN-HEAD -->
+
+<h2>Contents</h2>
+<div id="TOC">
+<ul>
+<li><a href="#general-motivation">General Motivation</a></li>
+<li><a href="#get-everything-installed-properly">Get Everything Installed Properly</a></li>
+<li><a href="#about-markdown-and-rmarkdown">About Markdown and RMarkdown</a></li>
+<li><a href="#the-tools-were-using">The Tools we’re Using</a></li>
+<li><a href="#extra-resources">Extra Resources</a></li>
+<li><a href="#readings">Readings</a></li>
+</ul>
+</div>
+
+<h2 id="general-motivation">General Motivation</h2>
+<ul>
+<li><a href="http://plain-text.co/">The Plain Person’s Guide to Plain Text Social Science</a>: An overview of why you should write data-based reports using plain-text tools.</li>
+</ul>
+<h2 id="get-everything-installed-properly">Get Everything Installed Properly</h2>
+<ul>
+<li><a href="https://happygitwithr.com">Happy Git with R</a>. Read this impeccably detailed and sensible guide and do everything it says up to <em>at least</em> the end of Chapter 19. (Don’t worry, the chapters are short and very clear.)</li>
+<li><a href="https://style.tidyverse.org">R Style Guide</a>. Write readable code.</li>
+</ul>
+<h2 id="about-markdown-and-rmarkdown">About Markdown and RMarkdown</h2>
+<ul>
+<li><a href="https://www.markdowntutorial.com/">Markdown tutorial</a>: An interactive tutorial to practice using Markdown.</li>
+<li><a href="http://packetlife.net/media/library/16/Markdown.pdf">Markdown cheatsheet</a>: Useful one-page reminder of Markdown syntax.</li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">RMarkdown Cheatsheet</a> An overview of Markdown and RMarkdown conventions.</li>
+<li><a href="https://rstudio.com/resources/cheatsheets/">RStudio Cheatsheets</a> Other quick guides, including a more comprehensive RMarkdown reference and a information about using RStudio’s IDE, and some of the main tools in R.</li>
+</ul>
+<h2 id="the-tools-were-using">The Tools we’re Using</h2>
+<ul>
+<li><a href="http://r-project.org">R</a>. A platform for statistical computing.</li>
+<li><a href="http://rstudio.com">RStudio</a>. An IDE for R. The most straightforward way to use R and RMarkdown.</li>
+<li><a href="http://git-scm.org">Git</a>. A version control system for your work.</li>
+<li><a href="http://github.com">GitHub</a>. Host public Git repositories for free. Pay to host private ones. Educational plans available for free. Also a source for publicly available code (e.g. R packages and utilities) written by other people.</li>
+</ul>
+<h2 id="extra-resources">Extra Resources</h2>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLzH6n4zXuckpfMu_4Ff8E7Z1behQks5ba">Data Analysis with Dr Mike Pound</a>. A Computerphile YouTube series on doing data analysis with R.</li>
+</ul>
+<h2 id="readings">Readings</h2>
+<ul>
+<li><span class="citation">Whitney Battle-Baptiste and Britt Rusert, <em>W. E. B. Du Bois’s Data Portraits: Visualizing Black America</em> (New York: Princeton Architectural Press, 2018).</span></li>
+<li><span class="citation">John Berger, <em>Ways of Seeing</em> (London: BBC Books / Penguin, 1972).</span></li>
+<li><span class="citation">Scott Berinato, <em>Good Charts: The HBR Guide to Making Smarter, More Persuasive Data Visualizations</em> (Cambridge, MA: Harvard Business Review Press, 2016).</span></li>
+<li><span class="citation">Jacques Bertin, <em>Semiology of Graphics</em> (Redlands, CA: ESRI Press, 2010).</span></li>
+<li><span class="citation">Alberto Cairo, <em>The Truthful Art: Data, Charts, and Maps for Communication</em> (Berkeley, California: New Riders, 2016).</span></li>
+<li><span class="citation">William S. Cleveland, <em>Visualizing Data</em> (Hobart Press, 1994).</span></li>
+<li><span class="citation">Kenneth Field, <em>Cartography</em> (Redlands, CA: ESRI Press, 2018).</span></li>
+<li><span class="citation">Stephen Few, <em>Now You See It: Simple Visualization Techniques for Quantitative Analysis</em> (Oakland, CA: Analytics Press, 2009).</span></li>
+<li><span class="citation">Manuel Lima, <em>The Book of Trees</em> (New York: Princeton Architectural Press, 2014).</span></li>
+<li><span class="citation">Ellen Lupton, <em>Thinking with Type: A Critical Guide for Designers, Writers, Editors, &amp; Students</em>, Second. (New York: Princeton Architectural Press, 2010).</span></li>
+<li><span class="citation">Tamara Munzer, <em>Visualization Analysis and Design</em>, AK Peters Visualization Series (Boca Raton, FL: CRC Press, 2014).</span></li>
+<li><span class="citation">Edward R. Tufte, <em>The Visual Display of Quantitative Information</em> (Cheshire, CT: Graphics Press, 1983).</span></li>
+<li><span class="citation">Colin Ware, <em>Visual Thinking for Design</em> (Waltham, MA: Morgan Kaufman, 2008).</span></li>
+<li><span class="citation">Nathan Yau, <em>Visualize This: The Flowingdata Guide to Design, Visualization, and Statistics</em> (New York: Wiley, 2011).</span></li>
+<li><span class="citation">Hadley Wickham and Garrett Grolemund, <em>R for Data Science: Import, Tidy, Transform, Visualize, and Model Data</em> (Sebastopol, California: O’Reilly Media, 2017), <a href="http://r4ds.had.co.nz/">http://r4ds.had.co.nz/</a>.</span></li>
+</ul>
+
+
+    </article>
+
+    <footer>
+        <hr class="slender">
+
+        <div class="course-info">
+        <span class="course-name">
+            Bootcampr: An Introduction to R (Spring 2020)
+        </span><br>
+        <span>
+            <a href="https://www.unomaha.edu">University of Nebraska at Omaha</a> | 
+            <a href="https://library.unomaha.edu">UNO Libraries</a>
+        </span>
+        </div>
+
+        <ul class="footer-links">
+            <li>
+            <a href="https://jasonheppler.org"><i class="fas fa-user"></i> Jason A. Heppler</a>
+            </li>
+
+            <li>
+            <a href="mailto:jheppler@unomaha.edu"><i class="fas fa-envelope"></i> jheppler@unomaha.edu</a>
+            </li>
+
+            <li>
+            <i class="far fa-calendar-alt"></i> Wed
+            </li>
+
+            <li>
+            <i class="far fa-clock"></i> 1:30pm-3:00pm
+            </li>
+
+            <li>
+            <i class="fas fa-university"></i> Criss 249
+            </li>
+
+            <li>
+            <a href="https://twitter.com/jaheppler"><i class="fab fa-twitter"></i></a>
+            </li>
+
+            <li>
+            <a href="https://github.com/hepplerj/bootcampr"><i class="fab fa-github"></i></a>
+            </li>
+        </ul>
+
+        <div class="credits">
+
+        <span class="credit">Theme adapted from <a  href="https://github.com/andrewheiss/ath-tufte-hugo_18-19">ath-tufte-hugo</a>. Made with <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> and <a href="https://gohugo.io/">Hugo</a>.</span>
+        </div>
+    </footer>
+
+    
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en-us"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jason A. Heppler">
+    <meta name="description" content="Learn why and how to work with and visualize data">
+
+    <meta name="twitter:card" value="summary_large_image">
+    <meta name="twitter:site" content="@jaheppler">
+    <meta name="twitter:title" content="Problem set 3: Dog Names and People Names | : Bootcampr: An Introduction to R">
+    <meta name="twitter:creator" content="@jaheppler">
+    <meta name="twitter:image" content="https://jasonheppler.org/images/unor_hex.png">
+    <meta name="twitter:description" content="Learn why and how to work with and visualize data" />
+
+    <meta property="og:site_name" content=": Bootcampr: An Introduction to R"/>
+    <meta property="og:title" content="Problem set 3: Dog Names and People Names | : Bootcampr: An Introduction to R">
+    <meta property="og:type" content="article" />
+    <meta property="article:author" content="" />
+    <meta property="og:url" content="https://jasonheppler.org/courses/bootcampr.2020/" />
+    <meta property="og:image" content="https://jasonheppler.org/images/unor_hex.png">
+    <meta property="og:description" content="Learn why and how to work with and visualize data" />
+
+    <meta name="generator" content="Hugo 0.59.1" />    
+
+    <title>Problem set 3: Dog Names and People Names | : Bootcampr: An Introduction to R</title>
+    <link rel="canonical" href="https://jasonheppler.org/courses/bootcampr.2020/assignment/03-problem-set/">
+    <link href="/theme/css/tufte.css" rel="stylesheet">
+    <link href="/theme/css/latex.css" rel="stylesheet">
+    <link href="/theme/css/custom.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+        .wrap a, .wrap a:visited {
+            color: #DA5B69;
+        }
+
+        .wrap a:hover {
+            color: #F9983E;
+        }
+
+        .wrap p > a {
+            color: #DA5B69;
+        }
+
+        article .sidenote-number:after, article .sidenote:before {
+            color: #DA5B69;
+        }
+
+        article .sidenote:before {
+            color: #DA5B69;
+        }
+
+        @media (max-width: 760px) {
+            label.margin-toggle:not(.sidenote-number) {
+                color: #DA5B69;
+            }
+        }
+
+        .contrast a, .contrast a:visited {
+            color: #DA5B69; 
+        }
+
+        header > nav a {
+            color: #DA5B69;
+        }
+
+        .credits a {
+            color: #DA5B69;
+        }
+
+        .wrap .tag {
+            background: #DA5B69;
+        }
+    </style>
+
+    <link rel="shortcut icon" href="https://jasonheppler.org/courses/bootcampr.2020/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="https://jasonheppler.org/courses/bootcampr.2020/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://jasonheppler.org/courses/bootcampr.2020/images/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content=": Bootcampr: An Introduction to R"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="https://jasonheppler.org/courses/bootcampr.2020/images/mstile-144x144.png" />
+
+    
+    <script src="https://use.typekit.net/ajy6rnl.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+<div class="wrap">
+    <header>
+        <nav class="group logo-wrap">
+          <a href="/" class="logo"><img src="https://jasonheppler.org/images/unor_hex.png" alt="Visualizing Society"></a>
+          <h1 class="websitetitle"><a href="https://jasonheppler.org/courses/bootcampr.2020/"></a></h1>
+          <h1 class="websitetitle"><a href="https://jasonheppler.org/courses/bootcampr.2020/">Bootcampr: An Introduction to R</a></h1>
+        </nav>
+        <nav class="bottom-group">
+            
+            <a href="/courses/bootcampr.2020/syllabus/">Syllabus</a>
+            
+            <a href="/courses/bootcampr.2020/schedule/">Schedule</a>
+            
+            <a href="/courses/bootcampr.2020/reference/">Reference</a>
+            
+        </nav>
+    </header>
+
+
+    <article class="group">
+    <h1>Problem set 3: Dog Names and People Names</h1>
+
+    
+    <p class="page-date">Due by <strong>6:00 PM</strong> on Friday, October 18, 2019</p>
+    
+    
+    
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #ffffff;
+    color: #a0a0a0;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
+div.sourceCode
+  { color: #1f1c1b; background-color: #ffffff; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span. { color: #1f1c1b; } /* Normal */
+code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+code span.an { color: #ca60ca; } /* Annotation */
+code span.at { color: #0057ae; } /* Attribute */
+code span.bn { color: #b08000; } /* BaseN */
+code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #924c9d; } /* Char */
+code span.cn { color: #aa5500; } /* Constant */
+code span.co { color: #898887; } /* Comment */
+code span.cv { color: #0095ff; } /* CommentVar */
+code span.do { color: #607880; } /* Documentation */
+code span.dt { color: #0057ae; } /* DataType */
+code span.dv { color: #b08000; } /* DecVal */
+code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #644a9b; } /* Function */
+code span.im { color: #ff5500; } /* Import */
+code span.in { color: #b08000; } /* Information */
+code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code span.op { color: #1f1c1b; } /* Operator */
+code span.ot { color: #006e28; } /* Other */
+code span.pp { color: #006e28; } /* Preprocessor */
+code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #ff5500; } /* SpecialString */
+code span.st { color: #bf0303; } /* String */
+code span.va { color: #0057ae; } /* Variable */
+code span.vs { color: #bf0303; } /* VerbatimString */
+code span.wa { color: #bf0303; } /* Warning */
+</style>
+
+
+<h3 id="in-this-problem-set-well-be-looking-at-the-names-of-new-york-dogs-and-american-humans">In this Problem Set, we’ll be looking at the Names of New York Dogs and American Humans</h3>
+<h3 id="if-you-havent-done-so-already-download-the-skeleton-project-that-contains-the-nyc-dogs-data">If you haven’t done so already, download the skeleton project that contains the NYC dogs data</h3>
+<p>You can clone it in GitHub if you’re familiar with that process: <a href="https://github.com/kjhealy/nyc_tmp" class="uri">https://github.com/kjhealy/nyc_tmp</a></p>
+<p>Alternatively, download a zip file of the project: <a href="https://github.com/kjhealy/nyc_tmp/archive/master.zip" class="uri">https://github.com/kjhealy/nyc_tmp/archive/master.zip</a></p>
+<p>When you download this file, <em>make sure you unzip it</em> rather than just looking inside it with your file manager.</p>
+<h3 id="open-the-project-in-r-studio-by-double-clicking-the-nyc_tmp.rproj-file.-verify-in-r-studios-file-viewer-pane-that-your-project-folder-is-structured-like-this">Open the project in R Studio by double-clicking the <code>nyc_tmp.Rproj</code> file. <strong>Verify</strong> (in R Studio’s file viewer pane) that your project folder is structured like this:</h3>
+<pre><code>```
+nyc_tmp/
+  data/
+    nyc_bites.rda
+    nyc_license.rda
+    nyc_zips.rda
+  .gitignore
+  .here
+  dogs.Rmd
+  nyc_tmp.Rproj
+    
+```</code></pre>
+<h3 id="open-the-dogs.rmd-file-and-do-the-analysis-in-that.">Open the <code>dogs.Rmd</code> file and do the analysis in that.</h3>
+<h3 id="load-the-required-libraries">Load the required libraries</h3>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ──────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+<pre><code>## ✔ ggplot2 3.2.0     ✔ purrr   0.3.3
+## ✔ tibble  2.1.3     ✔ dplyr   0.8.1
+## ✔ tidyr   0.8.3     ✔ stringr 1.4.0
+## ✔ readr   1.3.1     ✔ forcats 0.4.0</code></pre>
+<pre><code>## ── Conflicts ─────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(stringr)
+<span class="kw">library</span>(socviz)
+<span class="kw">library</span>(babynames)
+<span class="kw">library</span>(sf)</code></pre>
+<pre><code>## Linking to GEOS 3.6.1, GDAL 2.1.3, PROJ 4.9.3</code></pre>
+<h3 id="load-the-dogs-data">Load the dogs data</h3>
+<p>If you copy this code chunk into your working file, remove <code>eval = FALSE</code> from them, otherwise it won’t run.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">load</span>(<span class="st">&quot;data/nyc_license.rda&quot;</span>)
+<span class="kw">load</span>(<span class="st">&quot;data/nyc_zips.rda&quot;</span>)
+<span class="kw">load</span>(<span class="st">&quot;data/nyc_bites.rda&quot;</span>)</code></pre>
+<h3 id="take-a-look-at-the-babynames-data">Take a look at the babynames data</h3>
+<pre class="r{}"><code>
+babynames
+</code></pre>
+<h3 id="remember-how-weve-been-working-with-the-nyc-dogs-data">Remember how we’ve been working with the NYC dogs data</h3>
+<p>Reproduce the code below in your own analysis.</p>
+<pre class="sourceCode r"><code class="sourceCode r">boro_names &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Manhattan&quot;</span>, <span class="st">&quot;Queens&quot;</span>, 
+                <span class="st">&quot;Brooklyn&quot;</span>, <span class="st">&quot;Bronx&quot;</span>, 
+                <span class="st">&quot;Staten Island&quot;</span>)
+no_name &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Unknown&quot;</span>, <span class="st">&quot;Name Not Provided&quot;</span>)
+
+top_names &lt;-<span class="st"> </span>nyc_license <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(borough <span class="op">%in%</span><span class="st"> </span>boro_names, 
+         animal_name <span class="op">%nin%</span><span class="st"> </span>no_name) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(borough, animal_name) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">tally</span>() <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">freq =</span> n <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(n), 
+         <span class="dt">pct =</span> freq <span class="op">*</span><span class="st"> </span><span class="dv">100</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">top_n</span>(<span class="dv">5</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(pct)) 
+  
+p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> top_names,
+            <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">reorder</span>(animal_name, pct), 
+                          <span class="dt">y =</span> pct))
+
+p <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">coord_flip</span>() <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span><span class="kw">reorder</span>(borough, <span class="op">-</span>pct), 
+             <span class="dt">scales =</span> <span class="st">&quot;free_y&quot;</span>, <span class="dt">ncol =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="ot">NULL</span>, 
+       <span class="dt">y =</span> <span class="st">&quot;Percent&quot;</span>, 
+       <span class="dt">title =</span> <span class="st">&quot;Most Popular Dog Names&quot;</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">theme_minimal</span>()</code></pre>
+<h3 id="questions-to-answer">Questions to answer</h3>
+<ol style="list-style-type: decimal">
+<li>Briefly explain in your own words what the sequence of operations from <code>nyc_license %&gt;%</code> to <code>arrange(desc(pct))</code> are doing to the data in the code chunk listed above.</li>
+<li>Produce a table and accompanying figure that shows the five most popular names for male and female dogs, instead of for each borough.</li>
+<li>Produce a table and accompanying figure that shows the five most popular names for male and female dogs, <em>within</em> each borough.</li>
+<li>Produce a map showing where dogs named Max are most commonly found in New York City.</li>
+<li>Now look at the <code>babynames</code> dataset. What were the five most popular names for girls in 1900? What where they in 2000?</li>
+<li>Make a figure tracing the popularity of any two of the following names: Shirley, Linda, Bittany, Emma, Ella, Mark, Oliver, Brayden, Michael. (Remember to filter the data by sex before trying to draw any plots.)</li>
+<li>Place the two names on the same plot.</li>
+<li>Can you think of a way to get a sense of the relative heterogeneity of boy vs girl names over time?</li>
+</ol>
+<h2 id="finish">Finish</h2>
+<p>Knit the completed R Markdown file as a Word or PDF document (use the “Knit” button at the top of the script editor window). Save it with a name of the form <code>lastname_firstname_ps02</code> and upload it to the Sakai dropbox.</p>
+
+
+    </article>
+
+    <footer>
+        <hr class="slender">
+
+        <div class="course-info">
+        <span class="course-name">
+            Bootcampr: An Introduction to R (Spring 2020)
+        </span><br>
+        <span>
+            <a href="https://www.unomaha.edu">University of Nebraska at Omaha</a> | 
+            <a href="https://library.unomaha.edu">UNO Libraries</a>
+        </span>
+        </div>
+
+        <ul class="footer-links">
+            <li>
+            <a href="https://jasonheppler.org"><i class="fas fa-user"></i> Jason A. Heppler</a>
+            </li>
+
+            <li>
+            <a href="mailto:jheppler@unomaha.edu"><i class="fas fa-envelope"></i> jheppler@unomaha.edu</a>
+            </li>
+
+            <li>
+            <i class="far fa-calendar-alt"></i> Wed
+            </li>
+
+            <li>
+            <i class="far fa-clock"></i> 1:30pm-3:00pm
+            </li>
+
+            <li>
+            <i class="fas fa-university"></i> Criss 249
+            </li>
+
+            <li>
+            <a href="https://twitter.com/jaheppler"><i class="fab fa-twitter"></i></a>
+            </li>
+
+            <li>
+            <a href="https://github.com/hepplerj/bootcampr"><i class="fab fa-github"></i></a>
+            </li>
+        </ul>
+
+        <div class="credits">
+
+        <span class="credit">Theme adapted from <a  href="https://github.com/andrewheiss/ath-tufte-hugo_18-19">ath-tufte-hugo</a>. Made with <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> and <a href="https://gohugo.io/">Hugo</a>.</span>
+        </div>
+    </footer>
+
+    
+
+</div>
+</body>
+</html>
+

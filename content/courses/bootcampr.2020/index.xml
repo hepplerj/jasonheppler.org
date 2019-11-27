@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bootcampr: An Introduction to R</title>
+    <link>https://jasonheppler.org/courses/bootcampr.2020/</link>
+    <description>Recent content on Bootcampr: An Introduction to R</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jasonheppler.org/courses/bootcampr.2020/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Problem set 4: California Vaccination Exemptions</title>
+      <link>https://jasonheppler.org/courses/bootcampr.2020/assignment/04-problem-set/</link>
+      <pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jasonheppler.org/courses/bootcampr.2020/assignment/04-problem-set/</guid>
+      <description>a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.sourceCode { white-space: pre-wrap; } a.sourceLine { text-indent: -1em; padding-left: 1em; } } pre.</description>
+    </item>
+    
+    <item>
+      <title>Problem set 3: Dog Names and People Names</title>
+      <link>https://jasonheppler.org/courses/bootcampr.2020/assignment/03-problem-set/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jasonheppler.org/courses/bootcampr.2020/assignment/03-problem-set/</guid>
+      <description>a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.sourceCode { white-space: pre-wrap; } a.sourceLine { text-indent: -1em; padding-left: 1em; } } pre.</description>
+    </item>
+    
+    <item>
+      <title>Problem set 2: MacArthur Award Data</title>
+      <link>https://jasonheppler.org/courses/bootcampr.2020/assignment/02-problem-set/</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jasonheppler.org/courses/bootcampr.2020/assignment/02-problem-set/</guid>
+      <description>a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.sourceCode { white-space: pre-wrap; } a.sourceLine { text-indent: -1em; padding-left: 1em; } } pre.</description>
+    </item>
+    
+    <item>
+      <title>Problem set 1: Plotting Gapminder Data</title>
+      <link>https://jasonheppler.org/courses/bootcampr.2020/assignment/01-problem-set/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jasonheppler.org/courses/bootcampr.2020/assignment/01-problem-set/</guid>
+      <description>a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.sourceCode { white-space: pre-wrap; } a.sourceLine { text-indent: -1em; padding-left: 1em; } } pre.</description>
+    </item>
+    
+    <item>
+      <title>Truth, Beauty, and Data</title>
+      <link>https://jasonheppler.org/courses/bootcampr.2020/reading/01-reading/</link>
+      <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jasonheppler.org/courses/bootcampr.2020/reading/01-reading/</guid>
+      <description> Required   Chapter 1 in Kieran Healy, Data VisualizationKieran Healy, Data Visualization: A Practical Introduction (Princeton: Princeton University Press, 2019), http://socviz.co/.   Chapters 2 and 3 in Alberto Cairo, The Truthful ArtAlberto Cairo, The Truthful Art: Data, Charts, and Maps for Communication (Berkeley, California: New Riders, 2016).  (skim the introduction and chapter 1)  Study: Charts change hearts and minds better than words do  </description>
+    </item>
+    
+    <item>
+      <title>Assignments</title>
+      <link>https://jasonheppler.org/courses/bootcampr.2020/assignments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jasonheppler.org/courses/bootcampr.2020/assignments/</guid>
+      <description> Weekly memos Problem sets Projects </description>
+    </item>
+    
+    <item>
+      <title>Final projects</title>
+      <link>https://jasonheppler.org/courses/bootcampr.2020/final-projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jasonheppler.org/courses/bootcampr.2020/final-projects/</guid>
+      <description>Contents  Natalia Brown: Analysis of travel runs in Yellowstone Dan Sisco: Firefighter fatalities, 2000–2015 Whitney Royal: European hotel reviews Jordan Hunter: Severe workplace injuries in the United States, 2015–2017 James Sinkovic: Assassinations on the rise? Christopher Law: European hotel reviews Jacob Fullmer: Chase Bank nationwide deposit trends, 2010–2016 Stephanie Dossena: Trends in terrorism, 1970–2010 Victor Obiri: Breaking down terrorism in the US   For their final projects, students had to use R and Illustrator to take a huge dataset, explore it, tinker with it, and tell a nuanced story about it using at least three graphs.</description>
+    </item>
+    
+    <item>
+      <title>Midterm Prjoect</title>
+      <link>https://jasonheppler.org/courses/bootcampr.2020/assignment/01-project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jasonheppler.org/courses/bootcampr.2020/assignment/01-project/</guid>
+      <description> Task </description>
+    </item>
+    
+    <item>
+      <title>Reference</title>
+      <link>https://jasonheppler.org/courses/bootcampr.2020/reference/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jasonheppler.org/courses/bootcampr.2020/reference/</guid>
+      <description>Contents  General Motivation Get Everything Installed Properly About Markdown and RMarkdown The Tools we’re Using Extra Resources Readings   General Motivation  The Plain Person’s Guide to Plain Text Social Science: An overview of why you should write data-based reports using plain-text tools.  Get Everything Installed Properly  Happy Git with R. Read this impeccably detailed and sensible guide and do everything it says up to at least the end of Chapter 19.</description>
+    </item>
+    
+    <item>
+      <title>Syllabus</title>
+      <link>https://jasonheppler.org/courses/bootcampr.2020/syllabus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jasonheppler.org/courses/bootcampr.2020/syllabus/</guid>
+      <description>a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.sourceCode { white-space: pre-wrap; } a.sourceLine { text-indent: -1em; padding-left: 1em; } } pre.</description>
+    </item>
+    
+    <item>
+      <title>Tentative Schedule</title>
+      <link>https://jasonheppler.org/courses/bootcampr.2020/schedule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jasonheppler.org/courses/bootcampr.2020/schedule/</guid>
+      <description>The schedule covers eight sessions between February and April. The sessions are designed to be modular, so if you don’t prefer to attend the orientation and setup session, for example, you can skip it and still keep on track with the other sessions.
+Almost all of the sessions come with readings, interactive worksheets, and extra exercises. The readings should be completed before the session they’re assigned to. I will be making assumptions about prior knowledge based on the readings, so please try to complete them ahead of time.</description>
+    </item>
+    
+  </channel>
+</rss>

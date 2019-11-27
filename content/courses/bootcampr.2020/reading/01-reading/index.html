@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-us"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jason A. Heppler">
+    <meta name="description" content="Learn why and how to work with and visualize data">
+
+    <meta name="twitter:card" value="summary_large_image">
+    <meta name="twitter:site" content="@jaheppler">
+    <meta name="twitter:title" content="Truth, Beauty, and Data | : Bootcampr: An Introduction to R">
+    <meta name="twitter:creator" content="@jaheppler">
+    <meta name="twitter:image" content="https://jasonheppler.org/images/unor_hex.png">
+    <meta name="twitter:description" content="Learn why and how to work with and visualize data" />
+
+    <meta property="og:site_name" content=": Bootcampr: An Introduction to R"/>
+    <meta property="og:title" content="Truth, Beauty, and Data | : Bootcampr: An Introduction to R">
+    <meta property="og:type" content="article" />
+    <meta property="article:author" content="" />
+    <meta property="og:url" content="https://jasonheppler.org/courses/bootcampr.2020/" />
+    <meta property="og:image" content="https://jasonheppler.org/images/unor_hex.png">
+    <meta property="og:description" content="Learn why and how to work with and visualize data" />
+
+    <meta name="generator" content="Hugo 0.59.1" />    
+
+    <title>Truth, Beauty, and Data | : Bootcampr: An Introduction to R</title>
+    <link rel="canonical" href="https://jasonheppler.org/courses/bootcampr.2020/reading/01-reading/">
+    <link href="/theme/css/tufte.css" rel="stylesheet">
+    <link href="/theme/css/latex.css" rel="stylesheet">
+    <link href="/theme/css/custom.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+        .wrap a, .wrap a:visited {
+            color: #DA5B69;
+        }
+
+        .wrap a:hover {
+            color: #F9983E;
+        }
+
+        .wrap p > a {
+            color: #DA5B69;
+        }
+
+        article .sidenote-number:after, article .sidenote:before {
+            color: #DA5B69;
+        }
+
+        article .sidenote:before {
+            color: #DA5B69;
+        }
+
+        @media (max-width: 760px) {
+            label.margin-toggle:not(.sidenote-number) {
+                color: #DA5B69;
+            }
+        }
+
+        .contrast a, .contrast a:visited {
+            color: #DA5B69; 
+        }
+
+        header > nav a {
+            color: #DA5B69;
+        }
+
+        .credits a {
+            color: #DA5B69;
+        }
+
+        .wrap .tag {
+            background: #DA5B69;
+        }
+    </style>
+
+    <link rel="shortcut icon" href="https://jasonheppler.org/courses/bootcampr.2020/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://jasonheppler.org/courses/bootcampr.2020/images/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="https://jasonheppler.org/courses/bootcampr.2020/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://jasonheppler.org/courses/bootcampr.2020/images/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content=": Bootcampr: An Introduction to R"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="https://jasonheppler.org/courses/bootcampr.2020/images/mstile-144x144.png" />
+
+    
+    <script src="https://use.typekit.net/ajy6rnl.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+<div class="wrap">
+    <header>
+        <nav class="group logo-wrap">
+          <a href="/" class="logo"><img src="https://jasonheppler.org/images/unor_hex.png" alt="Visualizing Society"></a>
+          <h1 class="websitetitle"><a href="https://jasonheppler.org/courses/bootcampr.2020/"></a></h1>
+          <h1 class="websitetitle"><a href="https://jasonheppler.org/courses/bootcampr.2020/">Bootcampr: An Introduction to R</a></h1>
+        </nav>
+        <nav class="bottom-group">
+            
+            <a href="/courses/bootcampr.2020/syllabus/">Syllabus</a>
+            
+            <a href="/courses/bootcampr.2020/schedule/">Schedule</a>
+            
+            <a href="/courses/bootcampr.2020/reference/">Reference</a>
+            
+        </nav>
+    </header>
+
+
+    <article class="group">
+    <h1>Truth, Beauty, and Data</h1>
+
+    <p class="page-date">Readings due before class on Tuesday, September 4, 2018</p>
+    
+    
+
+
+<h2 id="required">Required</h2>
+<ul>
+<li><i class="fas fa-book"></i> <a href="http://socviz.co/lookatdata.html">Chapter 1</a> in Kieran Healy, <em>Data Visualization</em><span class="citation"><span><label for="sn-1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-1" class="margin-toggle"/><span class="sidenote">Kieran Healy, <em>Data Visualization: A Practical Introduction</em> (Princeton: Princeton University Press, 2019), <a href="http://socviz.co/">http://socviz.co/</a>. <br />
+<br />
+</span></span></span></li>
+<li><i class="fas fa-book"></i> Chapters 2 and 3 in Alberto Cairo, <em>The Truthful Art</em><span class="citation"><span><label for="sn-2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-2" class="margin-toggle"/><span class="sidenote">Alberto Cairo, <em>The Truthful Art: Data, Charts, and Maps for Communication</em> (Berkeley, California: New Riders, 2016). <br />
+<br />
+</span></span></span> (<em>skim the introduction and chapter 1</em>)</li>
+<li><i class="fas fa-external-link-square-alt"></i> <a href="https://www.washingtonpost.com/news/wonk/wp/2018/06/15/study-charts-change-hearts-and-minds-better-than-words-do/?utm_term=.4474599c0d5e">Study: Charts change hearts and minds better than words do</a></li>
+</ul>
+
+
+    </article>
+
+    <footer>
+        <hr class="slender">
+
+        <div class="course-info">
+        <span class="course-name">
+            Bootcampr: An Introduction to R (Spring 2020)
+        </span><br>
+        <span>
+            <a href="https://www.unomaha.edu">University of Nebraska at Omaha</a> | 
+            <a href="https://library.unomaha.edu">UNO Libraries</a>
+        </span>
+        </div>
+
+        <ul class="footer-links">
+            <li>
+            <a href="https://jasonheppler.org"><i class="fas fa-user"></i> Jason A. Heppler</a>
+            </li>
+
+            <li>
+            <a href="mailto:jheppler@unomaha.edu"><i class="fas fa-envelope"></i> jheppler@unomaha.edu</a>
+            </li>
+
+            <li>
+            <i class="far fa-calendar-alt"></i> Wed
+            </li>
+
+            <li>
+            <i class="far fa-clock"></i> 1:30pm-3:00pm
+            </li>
+
+            <li>
+            <i class="fas fa-university"></i> Criss 249
+            </li>
+
+            <li>
+            <a href="https://twitter.com/jaheppler"><i class="fab fa-twitter"></i></a>
+            </li>
+
+            <li>
+            <a href="https://github.com/hepplerj/bootcampr"><i class="fab fa-github"></i></a>
+            </li>
+        </ul>
+
+        <div class="credits">
+
+        <span class="credit">Theme adapted from <a  href="https://github.com/andrewheiss/ath-tufte-hugo_18-19">ath-tufte-hugo</a>. Made with <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> and <a href="https://gohugo.io/">Hugo</a>.</span>
+        </div>
+    </footer>
+
+    
+
+</div>
+</body>
+</html>
+

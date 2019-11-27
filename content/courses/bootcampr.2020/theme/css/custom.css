@@ -1,0 +1,172 @@
+article .sidenote, article .marginnote {
+    margin-bottom: 0.3rem;
+}
+
+article .marginnote code, article .sidenote code {
+    font-size: inherit;
+}
+
+article li {
+    width: 100%;
+}
+
+article li .sidenote, article li .marginnote {
+    margin-right: -55.5%;
+}
+
+article ol ol, article ol ul,
+article ul ul, article ul ol {
+    width: 100%;
+}
+
+article ul li ul {
+    text-indent: inherit;
+}
+
+/* oh hi firefox */
+article figure {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+a > code {
+    color: inherit;
+}
+
+#TOC li {
+    margin-top: 0;
+}
+
+.wrap li {
+    line-height: inherit;
+}
+
+.wrap h1 {
+    font-size: 2rem;
+}
+
+.wrap h2 {
+    margin-top: 3rem;
+    font-size: 1.75rem;
+}
+
+.wrap h3 {
+    font-size: 1.35rem;
+}
+
+.wrap .table th {
+    padding-left: 0.5em;
+}
+
+.wrap .table td {
+    line-height: 1.2rem;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+footer {
+    font-family: "source-sans-pro", sans-serif;
+}
+
+.course-info {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.course-name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.credits {
+    font-size: 1rem;
+}
+
+.credit {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+}
+
+ul.footer-links {
+    margin-bottom: 1.25rem;
+}
+
+.fake-header {
+    font-family: "source-sans-pro", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.fake-header-table {
+    font-family: "source-sans-pro", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    display: block;
+    padding-top: 1rem;
+    border-bottom: 1px solid #909090;
+    padding: 1em 0 0.25em;
+}
+
+td.mid-table-header {
+    text-align: center;
+    vertical-align: bottom !important;
+    font-family: "source-sans-pro", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+table.schedule {
+    border-top: none;
+    border-bottom: none;
+}
+
+.fake-li {
+    font-size: 1rem;
+}
+
+.page-date {
+    font-style: italic;
+    margin-bottom: 2.5rem;
+}
+
+img.img50 {max-width: 50%}
+img.img75 {max-width: 75%}
+
+@media screen and (max-width: 760px) {
+    h1.websitetitle {
+        text-align: center;
+        line-height: 2.2rem;
+    }
+
+    header > nav h1 a {
+        padding-right: 0;
+        float: inherit;
+    }
+
+    header > nav.logo-wrap {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    header > nav.bottom-group {
+        text-align: center;
+    }
+
+    header > nav.bottom-group a {
+        float: inherit;
+    }
+
+    header > nav a.logo {
+        float: inherit;
+        padding-right: 0;
+        padding-top: 0; 
+    }
+
+    header > nav a img {
+        top: 0;
+    }
+}
