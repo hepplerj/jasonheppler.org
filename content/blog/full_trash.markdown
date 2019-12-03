@@ -6,7 +6,7 @@ title: Full Trash
 url: /2012/03/03/full_trash/
 ---
 
-![Trashcan](http://www.jasonheppler.org/images/trash.png "Trashcan")
+![Trashcan](/assets/images/trash.png "Trashcan")
 
 I'm bad about taking out the trash. 
 

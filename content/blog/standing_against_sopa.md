@@ -9,11 +9,11 @@ url: /2012/01/18/standing_against_sopa/
 
 If you visited [in the last twenty-four hours](http://jasonheppler.org/sopa.html), you would've seen that the site was, like many others, silenced to protest SOPA.
 
-![Protesting SOPA](http://jasonheppler.org/images/jh_sopa.png "Jason Heppler protest of SOPA")
+![Protesting SOPA](http://jasonheppler.org/assets/images/jh_sopa.png "Jason Heppler protest of SOPA")
 
 Not everyone agreed with the blackout strategy. Merlin Mann, someone I respect a lot for a variety of reasons and whose opinions I value, tweeted that he didn't see the point.
 
-<div class="bbpBox" id="t159516314640191489"><blockquote><span class="twContent">Listen, gang. Enjoy your protest.<br /><br />But, if willfully obscuring your own words is your best case for freedom, I'm fine declining your "help."</span><span class="twMeta"><br /><span class="twDecoration">&nbsp;&nbsp;&mdash; </span><span class="twRealName">Merlin Mann</span><span class="twDecoration"> (</span><a href="http://twitter.com/hotdogsladies"><span class="twScreenName">@hotdogsladies</span></a><span class="twDecoration">) </span><a href="https://twitter.com/hotdogsladies/status/159516314640191489"><span class="twTimeStamp">Wed Jan 18 2012 12:03 AM CST</span></a><span class="twDecoration"></span></span></blockquote></div>
+![Merlin Mann.](https://jasonheppler.org/assets/images/merlin_sopa.png)
 
 I think I understand Merlin's position -- that, as a content creator on the web, it is silly to censor yourself to protest censorship. It's a fair criticism, but my own motivation was to make a point and raise awareness. Did I accomplish that? Maybe. I get nowhere near the sort of traffic that Merlin probably sees, but I know that in some of my circles -- online and off -- people noticed it. I reached a few people by my action, and for me, that's all I hoped to achieve. The stance taken by Reddit, Wikipedia, and others [made an impact](http://arstechnica.com/tech-policy/news/2012/01/pipa-support-collapses-with-13-new-opponents-in-senate.ars) and [stirred discussions](https://twitter.com/#!/search/%23stopsopa). 
 

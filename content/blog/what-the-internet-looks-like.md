@@ -7,7 +7,7 @@ title: What the Internet Looks Like
 url: /2012/07/16/what-the-internet-looks-like/
 ---
 
-![Internet](http://jasonheppler.org/images/netmap2.jpg "Internet")
+![Internet](/assets/images/netmap2.jpeg "Internet")
 
 [The Atlantic](http://www.theatlantic.com/technology/archive/2012/07/what-the-internet-actually-looks-like/259815/):
 
