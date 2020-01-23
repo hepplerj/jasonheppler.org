@@ -1,7 +1,7 @@
 title: "Jason A. Heppler"
-description: "Jason Heppler is a historian of American environmentalism and the twentieth-century United States."
+description: "Jason Heppler is a historian of the American environment and the twentieth-century United States."
 baseURL: "https://jasonheppler.org/"
-copyright: "2008-2019"
+copyright: "2008-2020"
 languageCode: "en-us"
 
 permalinks:
@@ -9,8 +9,12 @@ permalinks:
   archive: "/:slug/"
   page: "/:section/:slug/"
 
-blackfriday:
-  fractions: false
+markup: 
+  defaultMarkdownHandler: blackFriday
+  blackfriday:
+    fractions: false
+  highlight:
+    style: vs
 
 pygmentsCodefences: true
 pygmentsUseClasses: true
@@ -19,6 +23,8 @@ params:
   blogFeedTitle: "Jason Heppler's blog"
 
 taxonomies: false
+
+assetDir: "static"
 
 author:
   name: "Jason Heppler"
