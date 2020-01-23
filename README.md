@@ -11,36 +11,26 @@ that *content* (anything inside `content` or `pages`, etc) is removed before you
 launch your site. If you don't understand it or didn't write it, remove it. 
 Test everything locally before uploading your site.
 
-Thanks!
-
-[Jason A. Heppler](http://jasonheppler.org)
-
 # Getting Started
 
 ## Dependences
 
 - **Hugo**: >0.55.6
-- **Node**: >4.2 and Yo >1.7.0
-- **Gulp**: install `gulp-cli`: `npm install gulp-cli -g`
+- **Make**: >3.8
 
-1. Install Node.js, then run `npm install`
-2. To start, run `gulp`. A development version of the site will generate and open at `http://localhost:1313`
+To start, run `make preview`. A development version of the site will generate and open at `http://localhost:1313`
 
 ## Usage
 
-### `gulp`
+### `make preview`
 
 The default command and the one used most often. The command builds assets and site with development settings, including sourcemaps and drafts. Any changes made to posts, pages, and assets will be updated automatically and update in the browser via BrowserSync.
 
-### `gulp build`
+### `make build`
 
 Build a production version of the site in `public/`.
 
-### `gulp clean`
-
-Deletes assets from the `public` directory.
-
-### `gulp deploy`
+### `make deploy`
 
 When development is done and the site has been built with either `gulp site:build` or `gulp build` you can deploy with rsync. Sitemap is submitted to Google and Bing.
 
