@@ -11,9 +11,29 @@ For a complete list of my scholarship, please see my [CV](https://jasonheppler.o
 
 ## Digital history and projects
 
-Most of my work sits at the intersection of digital humanities, history, data science, and design. Below are a select few. Find lots more on [GitHub](http://github.com/hepplerj), [bl.ocks](https://bl.ocks.org/hepplerj), and [Observable](https://beta.observablehq.com/@hepplerj).
+Most of my work sits at the intersection of digital humanities, history, data science, and design. Below are a select few. Find lots more on [GitHub](http://github.com/hepplerj), [Observable](https://beta.observablehq.com/@hepplerj), and [bl.ocks](https://bl.ocks.org/hepplerj).
 
 <div class="project-box">
+
+  <a class="project" href="https://omahahistorical.org">
+    <img src="/assets/images/portfolio_omahistorical.png" alt="Nebraska Historical" />
+    <p class="small"><strong>Nebraska Historical</strong> Curating histories of Nebraska and the Northern Plains.</p>
+  </a>
+
+  <a class="project" href="https://jasonheppler.org/projects/western-lands/">
+    <img src="/assets/images/portfolio_westernlands.png" alt="Western Federal Lands" />
+    <p class="small"><strong>U.S. Federal Lands</strong> Mapping the federal lands of the U.S.</p>
+  </a>
+
+  <a class="project" href="https://jasonheppler.org/2019/06/23/omaha-zoning/">
+    <img src="/assets/images/portfolio_omazoning.png" alt="Omaha Zoning" />
+    <p class="small"><strong>Omaha Zoning</strong> Visualizing single-family and multifamily zoning.</p>
+  </a>
+
+  <a class="project" href="https://twitter.com/everylotoma">
+    <img src="/assets/images/portfolio_omalotbot.png" alt="Omaha Lot Bot" />
+    <p class="small"><strong>Every Lot Omaha</strong> Every property parcel in Omaha, one tweet at a time.</p>
+  </a>
 
   <a class="project" href="https://jheppler.shinyapps.io/deletefacebook/">
     <img src="/assets/images/portfolio_deletefacebook.png" alt="#deletefacebook" />
@@ -32,7 +52,7 @@ Most of my work sits at the intersection of digital humanities, history, data sc
 
   <a class="project" href="http://aidhp.com">
     <img src="/assets/images/portfolio_aidhp.png" alt="American Indian Digital History Project" />
-    <p class="small"><strong>American Indian Digital History Project</strong> Digitizing Indigenous newspapers, photographs, and archival materials from Native North America.</p>
+    <p class="small"><strong>American Indian Digital History Project</strong> Digitizing Indigenous newspapers, photographs, and archival materials across Native North America.</p>
   </a>
 
   <a class="project" href="https://jheppler.shinyapps.io/omaha-bikes/">
