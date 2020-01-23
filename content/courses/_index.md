@@ -1,12 +1,16 @@
 ---
-title: "Teaching"
+title: "Teaching & Workshops"
 aliases:
 - "/teaching/"
 ---
 
 <div class="writing">
   <div>
-    <div><a href="https://github.com">Workshop: Network Analysis for the Humanities</a></div>
+    <div>BootcampR: An Introduction to R</div>
+    <div>Spring 2020</div>
+  </div>
+  <div>
+    <div>Workshop: Network Analysis for the Humanities</div>
     <div>Fall 2019</div>
   </div>
   <div>
@@ -22,7 +26,7 @@ aliases:
     <div>Fall 2018</div>
   </div>
   <div>
-    <div><a href="/courses/unodh.2018/">Directed Readings in Digital History</a></div>
+    <div><a href="https://jasonheppler.org/courses/unodh.2018/">Directed Readings in Digital History</a></div>
     <div>Spring 2018</div>
   </div>
   <div>
