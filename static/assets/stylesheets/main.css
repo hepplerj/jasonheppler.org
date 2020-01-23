@@ -1,5 +1,7 @@
 html {
   color: #1D253C;
+  font-weight: 400;
+  letter-spacing: -.022em;
   line-height: 1.6;
   font-family: -apple-system,BlinkMacSystemFont,'avenir next',avenir,helvetica,'helvetica neue',ubuntu,roboto,noto,'segoe ui',arial,sans-serif;
   text-rendering: optimizeLegibility;
@@ -15,7 +17,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 2px solid #D34E23;
+  border-top: 2px solid #f7f1ec;
   margin: 1em 0;
   padding: 0;
   clear: both;
@@ -48,15 +50,11 @@ body {
   max-width: 750px;
   margin: 0rem auto;
   padding: 2rem;
-  /* font-weight: 400; */
-  /* overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-word; */
 }
 
 nav {
   padding-bottom: 2em;
-  font-family: futura-pt,'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+  font-family: 'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
 }
 
 nav a {
@@ -72,13 +70,14 @@ nav a {
 
 a,
 a:visited {
-  color: #444;
+  color: #0070c9;
   text-decoration: none;
-  border-bottom: #bfbfbf solid 1px;
+  /* border-bottom: #bfbfbf solid 1px; */
 }
 
 a:hover {
   color: #337bf6;
+  text-decoration: underline;
 }
 
 ul {
@@ -103,7 +102,7 @@ ul {
 .size-2x {
   font-size: 28px;
   line-height: 1.4;
-  font-family: futura-pt,'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+  font-family: 'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
 }
 
 .small {
@@ -151,13 +150,15 @@ td {
   color: black!important;
 }
 
+.site-title:hover {text-decoration: none;}
+
 .rss-feed {
   width: auto;
   height: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: futura-pt,'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+  font-family: 'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
 }
 
 h1 {
@@ -185,7 +186,7 @@ h3 {
 }
 
 h2 {
-  color: #F2BA42;
+  color: #049013;
 }
 
 h1 + p, h2 + p, h3 + p {
@@ -204,8 +205,11 @@ h1 + p, h2 + p, h3 + p {
 
 .u-lead {
   margin-top: .8rem;
-  font-size: 28px;
-  line-height: 1.3em;
+  font-size: 1.6rem;
+  line-height: 1.333em;
+  font-weight: 400;
+  letter-spacing: .009em;
+  font-family: "SF Pro Display", "SF Pro Icons",-apple-system,BlinkMacSystemFont,'avenir next',avenir,helvetica,'helvetica neue',ubuntu,roboto,noto,'segoe ui',arial,sans-serif;
 }
 
 hr.nav {
