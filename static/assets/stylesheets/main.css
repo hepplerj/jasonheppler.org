@@ -205,6 +205,7 @@ h1 + p, h2 + p, h3 + p {
 
 .u-lead {
   margin-top: .8rem;
+  padding-top: 4rem;
   font-size: 1.6rem;
   line-height: 1.333em;
   font-weight: 400;
