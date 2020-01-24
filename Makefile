@@ -9,4 +9,4 @@ deploy : build
 	rsync --omit-dir-times --exclude-from=rsync-excludes \
 		--checksum -avz \
 		--itemize-changes \
-		public/ reclaim:~/public_html/jasonheppler.org/ | egrep -v '^\.'
+		public/ reclaim:~/public_html/ | egrep -v '^\.'
