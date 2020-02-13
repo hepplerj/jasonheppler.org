@@ -6,7 +6,7 @@ aliases:
 
 <div class="writing">
   <div>
-    <div>BootcampR: An Introduction to R</div>
+    <div><a href="https://jasonheppler.org/courses/bootcampr.2020/">BootcampR: An Introduction to R</a></div>
     <div>Spring 2020</div>
   </div>
   <div>
