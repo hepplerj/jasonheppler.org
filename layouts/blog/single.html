@@ -2,7 +2,7 @@
 
 <article id='{{ urlize .Title }}' class="h-entry post">
   <header>
-    <h2 class="post-title"><a href='{{ .Permalink }}' class='p-name'><strong>{{ .Title }}</strong></a> <time class='dt-published' datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "2006" }}</time></h2>
+    <h2 class="post-title"><a href='{{ .Permalink }}' class='p-name'><strong>{{ .Title }}</strong></a> <span class="categories">{{ range .Params.categories }}{{ . }}{{ end }}</span></h2>
   </header>
 
   {{ with .Params.image }}
