@@ -9,3 +9,4 @@ cgi-bin/
 .ftpquota
 node_modules/
 rsync-credentials.json
+static/assets/video
