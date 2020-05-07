@@ -1,7 +1,8 @@
 ---
 date: 2016-12-31T16:02:22-06:00
 title: "Digital History at the AHA: Workshops, Roundtables, Sessions" 
-categories: [digital history, conferences]
+categories:
+- conferences
 ---
 
 Next Thursday I'll be teaching a workshop on network analysis for historians. You can find the schedule and material for the workshop [online](http://jasonheppler.org/projects/aha-workshop/). In addition to the workshop, I'll be part of the Digital History Table Talks lunch plenary and the digital drop-in session that afternoon. 

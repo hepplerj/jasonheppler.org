@@ -2,10 +2,7 @@
 author: Jason Heppler
 date: 2011-12-31
 categories:
-- productivity
-- time
-- attention
-- personal
+- tech life
 title: New Year
 url: /2011/12/31/new-year/
 ---

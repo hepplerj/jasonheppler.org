@@ -2,7 +2,6 @@
 date: 2012-06-06T09:26:20Z
 categories:
 - personal
-- technology
 title: Popup Footnotes
 url: /2012/06/06/popup-footnotes/
 ---

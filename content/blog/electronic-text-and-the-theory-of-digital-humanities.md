@@ -1,8 +1,7 @@
 ---
 date: 2011-09-14T14:01:49Z
 categories:
-- digital history
-- research
+- digital humanities
 title: Electronic Text and the Digital Humanities
 url: /2011/09/14/electronic-text-and-the-theory-of-digital-humanities/
 ---

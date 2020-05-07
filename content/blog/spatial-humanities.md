@@ -3,9 +3,7 @@ categories:
 - research
 date: 2011-09-28T10:10:25Z
 categories:
-- spatial humanities
 - data visualization
-- narrative
 title: Spatial Humanities and Visual Narratives
 url: /2011/09/28/spatial-humanities/
 ---

@@ -1,9 +1,7 @@
 ---
 date: 2011-09-22T09:23:33Z
 categories:
-- information
-- data
-- research
+- academia
 title: Information and Data in the Digital Age
 url: /2011/09/22/information-in-the-digital-age/
 ---

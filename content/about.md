@@ -9,18 +9,20 @@ slug: '/about/'
         <figcaption>Photo by Carlos Seligo</figcaption>
     </figure>
 </div>
+        
+<p class="u-lead"><strong>Hi, I'm Jason!</strong> I'm the digital engagement librarian and assistant professor of history at the <a href="http://library.unomaha.edu/">University of Nebraska at Omaha</a>, where I lead initiatives in digital humanities, data services, and data visualization.</p>
 
-<p class="u-lead"><strong>Hi. I'm Jason Heppler</strong>. I'm the digital engagement librarian and assistant professor of history at the <a href="http://library.unomaha.edu/">University of Nebraska at Omaha</a>, where I lead initiatives in digital humanities, data services, and data visualization.</p>
+🌽 I live in [Omaha, Nebraska](https://jasonheppler.org/2016/09/22/homecoming/), with my wife, two kids, and two dogs. (We dream of settling in Colorado.)
 
-Before joining the University of Nebraska at Omaha, I was an Academic Technology Specialist with the [Center for Interdisciplinary Digital Research](http://cidr.stanford.edu) at Stanford University Libraries and a member of the research staff at the [Center for Spatial and Textual Analysis](http://cesta.stanford.edu) at Stanford University. Prior to Stanford, I was a project manager on the [William F. Cody Archive](http://codyarchive.org) at the University of Nebraska-Lincoln's [Center for Digital Research in the Humanities](http://cdrh.unl.edu). I remain a research affiliate with the [Spatial History Project](http://spatialhistory.stanford.edu) and [Humanities + Design](http://hdlab.stanford.edu/) at Stanford University.
+💻 I work at the University of Nebraska at Omaha, where I lead initiatives in digital humanities and data science for UNO Libraries. In the [past](https://linkedin.com/in/jasonheppler/), I've worked at the University of Nebraska-Lincoln and Stanford University.
 
-To keep updated on my work, follow my [research](/research/), follow me on [Twitter](http://twitter.com/jaheppler) or [Github](http://github.com/hepplerj), connect with me at [LinkedIn](https://www.linkedin.com/in/jasonheppler/), or subscribe to [RSS](https://jasonheppler.org/feed.xml) or [JSON](https://jasonheppler.org/feed.json). Feel free to email me at `jason@jasonheppler.org`. If it's a sensitive email, you can [grab my public key](https://jasonheppler.org/jasonheppler.asc) for that address.
+🏞 I volunteer with the [ Citizens' Climate Lobby](https://citizensclimatelobby.org/), [Mode Shift Omaha](https://modeshiftomaha.org), [Mozilla Foundation](https://www.mozilla.org/), and the Environmental History Action Collaborative with the [Environmental Data and Governance Initiative](https://envirodatagov.org).
 
-## Current Writing
+🎓 I earned a PhD and MA in History at the University of Nebraska-Lincoln, and a degree in History and Economics from South Dakota State University.
 
-I am currently completing my book *Suburban by Nature: Silicon Valley and the Transformation of American Environmental Politics*, under contract with the University of Oklahoma Press as part of their new Environment in Modern North America series. Few places symbolize the twentieth century like Silicon Valley. Stretching from the communities of San Jose to Palo Alto, the dense suburban region is home to nation's high tech industrial corridor. 
+☀️ I grew up in Mitchell, South Dakota.
 
-In my book, I re-imagine the Silicon Valley's history not just as symbol of post-industrialism, but as an illustrative of the consequences of the post-war period's uneven suburban growth in shaping 20th century environmental politics, concerns over social justice, and ideas of sustainability. I complicate the now familiar story of suburbanization's rapid transformation of post-war American cities by explaining how local activists linked social and environmental issues in creating a new form of politics. In doing so, I help place current debates over sustainability into a deeper historical context and problematize the post-war environmental movement as at once a movement of the white middle class, which gave rise to environmental and social justice movements of the latter half of the 20th century.
+([Need a full bio?](/bio/))
 
 ## Open Data Advocacy
 
@@ -30,7 +32,7 @@ I am an open project lead and founding member of [Endangered Data Week](http://e
 
 ## Cycling Advocacy and Urban Sustainability
 
-I'm an urban planning and transportation nerd. I work on bicycle advocacy projects both on campus and in the Omaha community with amazing partners like [Omaha Bikes](https://omahabikes.org/), the [Omaha Bike Network](http://livewellomaha.org/), and [Mode Shift Omaha](https://modeshiftomaha.org/). My work on sustainability at the University of Nebraska at Omaha includes chairing the Triple Bottom Line Committee for UNO Libraries, where we are focused on building a community that is economically sound, environmentally responsible, and socially just, and serving as a member of the Sustainability Curriculum Committee. I'm also a member of the Environmental History Action Committee with the Environmental Data and Governance Initiative, where we seek to bring historical perspective to present-day environmental debates.
+I'm an urban planning and transportation nerd. I work on bicycle advocacy projects both on campus and in the Omaha community with amazing partners like [Omaha Bikes](https://omahabikes.org/), the [Omaha Bike Network](http://livewellomaha.org/), and [Mode Shift Omaha](https://modeshiftomaha.org/). My work on sustainability at the University of Nebraska at Omaha includes chairing the Triple Bottom Line Committee for UNO Libraries, where we are focused on building a community that is economically sound, environmentally responsible, and socially just, and serving as a member of the Sustainability Curriculum Committee. I'm also a member of the Environmental History Action Collaborative with the Environmental Data and Governance Initiative, where we seek to bring historical perspective to present-day environmental debates.
 
 ## Can we meet for coffee?
 
@@ -51,5 +53,3 @@ Please [email me](mailto:jason@jasonheppler.org) if you have any questions.
 ## Colophon
 
 This website is built with Hugo. This site is ad-free and doesn't use trackers. If you'd like to support my writing, I'd love it if you could [buy me a coffee](https://ko-fi.com/jasonheppler).
-
-I live in Omaha, Nebraska, with my wife, two kids, and our two dogs, but we dream of settling down in Colorado.

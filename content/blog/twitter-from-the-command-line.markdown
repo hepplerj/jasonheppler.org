@@ -1,8 +1,7 @@
 ---
 date: 2011-07-09T22:22:14Z
 categories:
-- Twitter
-- terminal
+- programming
 title: Twitter from the Command Line
 url: /2011/07/09/twitter-from-the-command-line/
 ---

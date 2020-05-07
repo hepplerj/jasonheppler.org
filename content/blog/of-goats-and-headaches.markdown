@@ -2,7 +2,6 @@
 date: 2011-05-27T10:51:53Z
 external: http://www.economist.com/node/18744177
 categories:
-- publishing
 - libraries
 title: Of Goats and Headaches
 url: /2011/05/27/of-goats-and-headaches/

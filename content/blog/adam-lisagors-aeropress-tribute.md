@@ -1,6 +1,4 @@
 ---
-categories:
-- Link
 date: 2012-04-25T21:44:48Z
 categories:
 - coffee

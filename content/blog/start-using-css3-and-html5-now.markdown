@@ -3,7 +3,6 @@ date: 2010-12-11T10:01:26Z
 external: http://www.smashingmagazine.com/2010/12/10/why-we-should-start-using-css3-and-html5-today/
 categories:
 - design
-- internet
 title: Start Using CSS3 and HTML5 Now
 url: /2010/12/11/start-using-css3-and-html5-now/
 wordpress_id: 1303

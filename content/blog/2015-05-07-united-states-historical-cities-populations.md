@@ -3,8 +3,6 @@ title: "United States Historical Cities Populations"
 date: 2015-05-07
 external: https://github.com/cestastanford/historical-us-city-populations
 categories:
-- mapping
-- census
 - data
 ---
 

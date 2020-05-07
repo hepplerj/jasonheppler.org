@@ -1,8 +1,7 @@
 ---
 date: 2011-06-29T21:53:14Z
 categories:
-- Apple
-- productivity
+- tech life
 title: Grown Up Computing
 url: /2011/06/29/grown-up-computing/
 ---

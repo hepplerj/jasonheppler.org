@@ -1,8 +1,7 @@
 ---
 date: 2011-10-05T19:11:35Z
 categories:
-- Apple
-- history
+- apple
 title: Remembering Steve Jobs
 url: /2011/10/05/remembering-steve-jobs/
 ---

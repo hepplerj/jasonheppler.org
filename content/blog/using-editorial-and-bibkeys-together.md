@@ -2,8 +2,7 @@
 date: 2013-08-21T10:43:15Z
 description: Using Editorial with Bibkeys for citation management.
 categories:
-- Editorial
-- iPad
+- review
 title: Using Editorial and Bibkeys Together
 url: /2013/08/21/using-editorial-and-bibkeys-together/
 ---

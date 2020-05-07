@@ -2,7 +2,6 @@
 author: Jason Heppler
 date: 2012-02-02T09:20:33Z
 categories:
-- paleo
 - personal
 title: The Paleo Diet
 url: /2012/02/02/the-paleo-diet/

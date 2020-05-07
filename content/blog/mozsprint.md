@@ -3,10 +3,7 @@ title: "mozsprint"
 date: 2017-05-23
 image: mozsprint.jpeg
 categories: 
-- Mozilla 
-- data
-- civic engagement
-- open data
+- advocacy
 ---
 
 Next week, June 1 and 2, I am a site host and project leader for [Mozilla's Global Sprint](https://mozilla.github.io/global-sprint/), a fast-paced, two-day event to hack and build projects for a healthy Internet. Our site will be at the Community Engagement Center on the campus of the University of Nebraska at Omaha, and focusing on two projects. 

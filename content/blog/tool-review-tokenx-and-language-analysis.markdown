@@ -2,7 +2,6 @@
 date: 2009-10-25T13:56:27Z
 categories:
 - review
-- text analysis
 title: 'Tool Review: TokenX and Language Analysis'
 url: /2009/10/25/tool-review-tokenx-and-language-analysis/
 ---

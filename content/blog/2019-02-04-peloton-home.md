@@ -1,7 +1,8 @@
 ---
 title: "Making my Budget Peloton"
 date: 2019-02-08
-categories: ["biking"]
+categories: 
+- biking
 ---
 
 If you're a podcast listener or [friend of the pod](https://store.crooked.com/collections/friend-of-the-pod), you've likely heard the advertisements for Peloton -- the high-end, at-home bike trainer designed to give you a spinning class experience from your home. But at $2,000 for their bikes, it's a high ask to get the equipment needed for the full Peloton experience. 

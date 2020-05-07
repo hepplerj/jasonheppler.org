@@ -1,9 +1,7 @@
 ---
 date: 2011-07-22T22:53:44Z
 categories:
-- workflow
-- productivity
-- nvAlt
+- tech life
 title: Using Notational Velocity
 url: /2011/07/22/using-notational-velocity/
 ---

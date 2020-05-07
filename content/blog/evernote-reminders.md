@@ -3,8 +3,7 @@ date: 2013-07-31T22:11:55Z
 description: null
 external: http://blog.evernote.com/blog/2013/05/23/evernote-reminders-are-here-on-mac-ios-and-web-2/
 categories:
-- Evernote
-- technology
+- tech life
 title: Evernote Reminders
 url: /2013/07/31/evernote-reminders/
 ---

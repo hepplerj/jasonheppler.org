@@ -1,7 +1,6 @@
 ---
 date: 2010-10-08T22:05:22Z
 categories:
-- open access
 - digital humanities
 title: Open Access Scholarship and Computers in the Humanities
 url: /2010/10/08/open-access-scholarship-and-computers-in-the-humanities/

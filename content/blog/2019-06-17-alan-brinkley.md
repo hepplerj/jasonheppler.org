@@ -2,7 +2,8 @@
 title: 'Alan Brinkley, RIP'
 date: 2019-06-17T09:52:00-05:00
 slug: 'alan-brinkley'
-draft: false
+categories:
+- academia
 ---
 
 > What most clearly characterized the intellectual landscape of the first years of the New Deal was an exceptionally wide range of approaches to reform. Some were rooted in the progressive philosophies of the first decades of the 20th century, others in the experience of World War I, still others in the generally unsuccessful reform initiatives of the 1920s. . . . In fact, the early New Deal was awash in ideas---ideas of significant range and diversity (at least by American standards), but ones that somehow managed for a time to coexist.

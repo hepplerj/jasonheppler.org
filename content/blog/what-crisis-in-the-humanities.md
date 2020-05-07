@@ -2,8 +2,7 @@
 date: 2013-11-02T09:34:02Z
 description: null
 categories:
-- humanities
-- education
+- academia
 title: What Crisis in the Humanities?
 url: /2013/11/02/what-crisis-in-the-humanities/
 ---

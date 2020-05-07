@@ -2,8 +2,7 @@
 date: 2012-08-28T09:58:01Z
 external: http://tightwind.net/2012/08/one-giant-leap/
 categories:
-- space
-- Neil Armstrong
+- personal
 title: One Giant Leap
 url: /2012/08/28/one-giant-leap/
 ---

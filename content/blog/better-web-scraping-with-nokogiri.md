@@ -2,7 +2,6 @@
 date: 2012-10-12T14:17:15Z
 categories:
 - programming
-- ruby
 title: Better Web Scraping with Nokogiri
 url: /2012/10/12/better-web-scraping-with-nokogiri/
 ---

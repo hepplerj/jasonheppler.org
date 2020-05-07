@@ -1,7 +1,6 @@
 ---
 date: 2011-07-14T11:00:40Z
 categories:
-- identity
 - internet
 title: Own Your Identity
 url: /2011/07/14/own-your-identity/

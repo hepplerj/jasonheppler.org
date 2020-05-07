@@ -2,8 +2,6 @@
 date: 2011-05-03T17:44:58Z
 categories:
 - writing
-- internet
-- research
 title: Longform Writing on the Web
 url: /2011/05/03/longform-writing-on-the-web/
 ---

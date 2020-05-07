@@ -2,8 +2,7 @@
 author: Jason Heppler
 date: 2011-12-17T15:43:45Z
 categories:
-- research
-- productivity
+- academia
 title: Legacy Research
 url: /2011/12/17/legacy-research/
 ---

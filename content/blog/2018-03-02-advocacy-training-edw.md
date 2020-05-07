@@ -2,7 +2,7 @@
 title: "Advocacy, training, and awareness through Endangered Data Week"
 date: 2018-03-02
 categories:
-    - open web
+    - advocacy
 ---
 
 <aside>

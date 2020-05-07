@@ -1,9 +1,7 @@
 ---
 date: 2013-10-02T09:52:27Z
 categories:
-- alt-ac
-- career
-- work
+- academia
 title: My Alt-Ac Life
 url: /2013/10/02/my-alt-ac-life/
 ---

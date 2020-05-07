@@ -1,7 +1,7 @@
 ---
 date: 2012-11-20T09:06:45Z
 categories:
-- markdown
+- tech life
 title: Using Markdown Like an Academic
 url: /2012/11/20/using-markdown-like-an-academic/
 ---

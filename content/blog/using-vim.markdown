@@ -2,8 +2,6 @@
 date: 2011-02-14T23:50:38Z
 external: http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 categories:
-- vim
-- productivity
 - writing
 title: Using Vim
 url: /2011/02/14/using-vim/

@@ -2,7 +2,6 @@
 date: 2011-01-07T14:16:47Z
 categories:
 - programming
-- ruby
 series: "Rubyist Historian"
 title: 'The Rubyist Historian: Working With Advanced Data'
 url: /2011/01/07/the-rubyist-historian-working-with-advanced-data/

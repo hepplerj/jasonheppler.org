@@ -1,8 +1,7 @@
 ---
 date: 2013-11-17T21:14:44Z
 categories:
-- bash
-- Omeka
+- programming
 title: Using Omekadd and Bash Together
 url: /2013/11/17/omekadd/
 ---

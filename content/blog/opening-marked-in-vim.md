@@ -1,8 +1,7 @@
 ---
 date: 2012-10-16T17:01:51Z
 categories:
-- vim
-- Marked
+- tech life
 title: Opening Marked in Vim
 url: /2012/10/16/opening-marked-in-vim/
 ---

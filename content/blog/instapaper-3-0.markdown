@@ -2,7 +2,7 @@
 date: 2011-03-12T16:48:11Z
 external: http://blog.instapaper.com/post/3772087268
 categories:
-- Instapaper
+- tech life
 title: Instapaper 3.0
 url: /2011/03/12/instapaper-3-0/
 ---

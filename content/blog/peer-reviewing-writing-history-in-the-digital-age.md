@@ -2,9 +2,7 @@
 author: Jason Heppler
 date: 2011-10-27T09:51:58Z
 categories:
-- peer review
-- open access
-- research
+- review
 title: Peer Reviewing Writing History in the Digital Age
 url: /2011/10/27/peer-reviewing-writing-history-in-the-digital-age/
 ---

@@ -2,7 +2,6 @@
 date: 2010-12-31T07:30:51Z
 categories:
 - programming
-- ruby
 series: "Rubyist Historian"
 title: 'The Rubyist Historian: Methods and Classes'
 url: /2010/12/31/the-rubyist-historian-more-basics-methods/

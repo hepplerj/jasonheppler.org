@@ -2,7 +2,7 @@
 date: 2013-12-23T21:47:57Z
 external: http://dh.stanford.edu/topotime/
 categories:
-- topotime
+- data visualization
 title: Topotime
 url: /2013/12/23/topotime/
 ---

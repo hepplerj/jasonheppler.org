@@ -6,8 +6,6 @@ image:
   thumb: null
 post_type: Essay
 categories:
-- Editorial
-- iOS
 - review
 title: Editorial is a Powerful, Flexible iOS App for Text Editing
 url: /2014/06/30/editorial-for-ios-text-editing/

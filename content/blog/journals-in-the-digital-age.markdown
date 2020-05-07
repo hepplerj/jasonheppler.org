@@ -1,8 +1,7 @@
 ---
 date: 2012-02-05T09:00:46Z
 categories:
-- history
-- publishing
+- academia
 title: Journals in the Digital Age
 url: /2012/02/05/journals-in-the-digital-age/
 ---

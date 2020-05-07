@@ -3,9 +3,6 @@ author: Jason Heppler
 categories:
 - research
 date: 2011-11-03T10:22:11Z
-categories:
-- law
-- digital history
 title: The Architecture of Humanities Cyberspace
 url: /2011/11/03/the-architecture-of-humanities-cyberspace/
 ---

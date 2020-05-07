@@ -1,8 +1,7 @@
 ---
 date: 2012-10-10T23:43:21Z
 categories:
-- productivity
-- digital history
+- tech life
 title: Building Your Own Memex
 url: /2012/10/10/building-your-own-memex/
 ---

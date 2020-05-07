@@ -2,7 +2,6 @@
 date: 2012-07-23T17:04:50Z
 external: http://arstechnica.com/tech-policy/2012/07/wsj-mangles-history-to-argue-government-didnt-launch-the-internet/
 categories:
-- history
 - internet
 title: Mangling the Origins of the Early Internet
 url: /2012/07/23/mangling-the-origins-of-the-early-internet/

@@ -2,7 +2,7 @@
 date: 2012-11-01T09:59:43Z
 external: http://dvice.com/archives/2012/10/ethiopian-kids.php
 categories:
-- computers
+- tech life
 title: Ethiopian Kids Hack OLPCs
 url: /2012/11/01/ethiopian-kids-hack-olpcs/
 ---

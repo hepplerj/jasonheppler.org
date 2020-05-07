@@ -6,9 +6,7 @@ image:
   thumb: null
 post_type: Essay
 categories:
-- Ruby
-- D3js
-- JSON
+- programming
 title: Simple Parsing CSV to JSON
 url: /2014/07/12/parsing-csv-to-json/
 ---

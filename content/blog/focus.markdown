@@ -2,7 +2,6 @@
 date: 2011-01-23T00:14:37Z
 external: http://twit.tv/mbw214
 categories:
-- workflow
 - productivity
 title: Focus
 url: /2011/01/23/focus/

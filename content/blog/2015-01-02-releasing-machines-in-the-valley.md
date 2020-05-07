@@ -2,7 +2,6 @@
 title: "The Machines in the Valley Digital History Project"
 date: 2015-01-02
 categories:
-- dissertation
 - research
 comments: true
 ---

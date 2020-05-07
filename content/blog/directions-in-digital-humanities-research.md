@@ -2,10 +2,7 @@
 author: Jason Heppler
 date: 2011-12-07T20:56:37Z
 categories:
-- history
-- digital history
-- research
-- scholarship
+- digital humanities
 title: Directions in Digital Humanities Research
 url: /2011/12/07/directions-in-digital-humanities-research/
 ---

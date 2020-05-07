@@ -1,8 +1,7 @@
 ---
 date: 2011-03-02T14:18:55Z
 categories:
-- Apple
-- iPad
+- apple
 title: Apple iPad 2
 url: /2011/03/02/apple-ipad-2/
 wordpress_id: 1322

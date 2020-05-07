@@ -1,12 +1,7 @@
 ---
 date: 2013-10-30T21:43:53Z
-description: null
 categories:
-- pandoc
-- PDF
-- bash
-- plain text
-- dissertation
+- programming
 title: Converting Plain Text to PDF with Bash
 url: /2013/10/30/converting-plain-text-to-pdf-with-rake/
 ---

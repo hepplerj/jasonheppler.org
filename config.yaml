@@ -16,6 +16,8 @@ markup:
   highlight:
     style: vs
 
+FootnoteReturnLinkContents: "↑"
+
 pygmentsCodefences: true
 pygmentsUseClasses: true
 

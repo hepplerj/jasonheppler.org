@@ -2,12 +2,7 @@
 date: 2012-09-19T15:14:30Z
 external: http://www.wired.com/threatlevel/2012/03/ff_nsadatacenter/all/1
 categories:
-- American West
-- NSA
-- spying
-- privacy
-- dissertation
-- research
+- internet
 title: The NSA Data Center in the West
 url: /2012/09/19/the-nsa-data-center-in-the-west/
 ---

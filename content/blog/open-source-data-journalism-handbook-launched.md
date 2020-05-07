@@ -2,9 +2,7 @@
 date: 2012-05-08T07:46:29Z
 external: http://datajournalismhandbook.org/1.0/en/index.html
 categories:
-- data mining
-- journalism
-- tools
+- academia
 title: Open Source Data Journalism Handbook Launched
 url: /2012/05/08/open-source-data-journalism-handbook-launched/
 ---

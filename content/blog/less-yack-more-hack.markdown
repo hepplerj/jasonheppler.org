@@ -3,7 +3,6 @@ date: 2011-02-02T12:03:40Z
 external: http://chronicle.com/blogs/profhacker/more-hackety-hack-less-yackety-yack-ruby-for-humanists/30175
 categories:
 - programming
-- ruby
 title: Less Yack, More Hack
 url: /2011/02/02/less-yack-more-hack/
 wordpress_id: 1065

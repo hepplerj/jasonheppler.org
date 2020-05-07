@@ -1,7 +1,7 @@
 ---
 date: 2012-11-17T18:24:38Z
 categories:
-- Sublime Text
+- programming
 title: Lorem Ipsum Block in Sublime Text
 url: /2012/11/17/lorem-ipsum-block-in-sublime-text/
 ---

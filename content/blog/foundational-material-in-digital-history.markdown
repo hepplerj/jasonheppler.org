@@ -1,7 +1,6 @@
 ---
 date: 2009-04-20T20:58:02Z
 categories:
-- reading
 - digital humanities
 title: Foundational Material in Digital History
 url: /2009/04/20/foundational-material-in-digital-history/

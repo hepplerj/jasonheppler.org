@@ -1,8 +1,7 @@
 ---
 date: 2013-04-05T22:43:46Z
 categories:
-- History Harvest
-- Nebraska
+- digital humanities
 title: History Harvest Blitz Week
 url: /2013/04/05/history-harvest-blitz-week/
 ---

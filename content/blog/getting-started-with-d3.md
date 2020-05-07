@@ -2,8 +2,6 @@
 date: 2013-08-06T22:14:20Z
 description: Some resources for getting started with D3.js.
 categories:
-- Javascript
-- D3
 - programming
 title: Getting Started with D3
 url: /2013/08/06/getting-started-with-d3/

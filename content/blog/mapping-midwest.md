@@ -2,8 +2,7 @@
 title: "Mapping Midwest"
 date: 2017-06-06
 categories: 
-- mapping 
-- Midwest
+- digital humanities 
 ---
 
 <aside class="post">

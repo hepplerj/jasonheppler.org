@@ -3,7 +3,6 @@ date: 2011-03-01T15:24:13Z
 external: http://www.dancohen.org/2011/03/01/what-scholars-want-from-the-digital-public-library-of-america/
 categories:
 - digital humanities
-- libraries
 title: What Scholars Want from the Digital Public Library of America
 url: /2011/03/01/what-scholars-want-from-the-digital-public-library-of-america/
 wordpress_id: 1254

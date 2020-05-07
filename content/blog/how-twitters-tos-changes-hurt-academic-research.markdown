@@ -2,7 +2,6 @@
 date: 2011-03-03T23:49:58Z
 external: http://www.readwriteweb.com/archives/how_recent_changes_to_twitters_terms_of_service_mi.php
 categories:
-- Twitter
 - research
 title: How Twitter's TOS Changes Hurt Academic Research
 url: /2011/03/03/how-twitters-tos-changes-hurt-academic-research/

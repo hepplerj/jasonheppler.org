@@ -6,7 +6,6 @@ image:
   thumb: null
 categories:
 - digital humanities
-- collaboration
 title: 'Day of DH: The Collaborative Historian'
 url: /2014/04/08/day-of-dh-the-collaborative-historian/
 ---

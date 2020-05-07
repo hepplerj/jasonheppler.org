@@ -3,7 +3,6 @@ date: 2011-03-03T12:31:15Z
 external: http://www.historians.org/Perspectives/issues/2011/1103/1103pre1.cfm
 categories:
 - research
-- history
 title: Digital Historical Research
 url: /2011/03/03/digital-historical-research/
 ---

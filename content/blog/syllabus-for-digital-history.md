@@ -2,7 +2,6 @@
 date: 2014-09-21T21:11:38Z
 post_type: Shorts
 categories:
-- digital history
 - teaching
 title: Syllabus for Digital History
 url: /2014/09/21/syllabus-for-digital-history/

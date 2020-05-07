@@ -2,7 +2,6 @@
 date: 2010-12-10T07:40:53Z
 categories:
 - programming
-- ruby
 series: "Rubyist Historian"
 title: 'The Rubyist Historian: The Series'
 url: /2010/12/10/the-rubyist-historian-the-series/

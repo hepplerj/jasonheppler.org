@@ -2,8 +2,7 @@
 date: 2011-01-26T00:12:29Z
 external: http://www.inc.com/magazine/20101201/how-to-kill-a-bad-idea.html
 categories:
-- workflow
-- productivity
+- leadership
 title: The Importance of No
 url: /2011/01/26/the-importance-of-no/
 wordpress_id: 1280

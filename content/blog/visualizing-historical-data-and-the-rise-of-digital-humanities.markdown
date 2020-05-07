@@ -2,7 +2,6 @@
 date: 2011-06-09T10:46:51Z
 external: http://www.fastcompany.com/1758538/the-rise-of-digital-humanities
 categories:
-- digital history
 - data visualization
 title: Visualizing Historical Data and the Rise of Digital Humanities
 url: /2011/06/09/visualizing-historical-data-and-the-rise-of-digital-humanities/

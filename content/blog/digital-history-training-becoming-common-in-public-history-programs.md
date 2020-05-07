@@ -2,9 +2,7 @@
 date: 2012-07-10T16:25:38Z
 external: http://publichistorycommons.org/the-future-is-here-public-history-education-and-the-rise-of-digital-history/
 categories:
-- digital history
-- teaching
-- public history
+- digital humanities
 title: Digital History Training Becoming Common in Public History Programs
 url: /2012/07/10/digital-history-training-becoming-common-in-public-history-programs/
 ---

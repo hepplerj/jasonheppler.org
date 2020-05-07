@@ -5,6 +5,18 @@ url: /now/
 
 This page briefly describes what I am currently working on, or at least, the main things that I am trying to focus my attention on over the short term.
 
+**March 2020**
+
+- **Reading**: Daniel Immerwahr's *How to Hide an Empire*
+- **Watching**: Diving back into *Star Wars: The Clone Wars* with my daughter.
+- **Working**: Paddling furiously towards spring break. 
+
+**February 2020**
+
+- **Reading**: *[A Planet to Win](https://www.versobooks.com/books/3107-a-planet-to-win)*
+- **Watching**: Re-runs of *The Office*
+- **Working**: Lot's of effort going into [BootcampR](/courses/bootcampr.2020/). Heavy teaching semester.
+
 **January 2020**
 
 - **Reading**: Finn Arne Jørgensen's *Recycling*

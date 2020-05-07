@@ -2,8 +2,7 @@
 title: "Humanistic Approaches to Data Visualization"
 date: 2015-01-18
 categories:
-- visualization
-- digital history
+- data visualization
 ---
 
 <aside class="post">

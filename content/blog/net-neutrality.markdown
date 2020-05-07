@@ -2,7 +2,7 @@
 date: 2010-12-23T09:55:48Z
 external: http://www.economist.com/blogs/babbage/2010/12/net_neutrality
 categories:
-- law
+- internet
 title: Net Neutrality
 url: /2010/12/23/net-neutrality/
 wordpress_id: 1294

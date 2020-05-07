@@ -3,7 +3,6 @@ date: 2012-05-15T22:49:09Z
 post-type: full
 categories:
 - programming
-- code
 title: It's About the Problem
 url: /2012/05/15/its-about-the-problem/
 ---

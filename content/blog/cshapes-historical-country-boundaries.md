@@ -1,7 +1,6 @@
 ---
 categories:
-- mapping
-- data
+- digital humanities
 date: 2014-09-21T21:30:34Z
 external: http://nils.weidmann.ws/projects/cshapes/
 tags: []

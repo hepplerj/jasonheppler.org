@@ -2,9 +2,7 @@
 date: 2013-05-20T23:58:29Z
 image: spencer.jpg
 categories:
-- weather
-- tornadoes
-- Midwest
+- personal
 title: On Tornadoes
 url: /2013/05/20/tornado/
 ---

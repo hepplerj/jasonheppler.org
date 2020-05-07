@@ -2,8 +2,6 @@
 date: 2014-06-23T21:24:34Z
 post_type: Essay
 categories: 
-- Copy
-- backup
 - review
 title: Use Copy for Cloud Storage Backup and File Sharing
 url: /2014/06/23/use-copy-for-cloud-storage-backup-and-file-sharing/

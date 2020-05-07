@@ -2,7 +2,7 @@
 date: 2011-01-25T00:17:09Z
 external: http://www.computedstyle.com/2010/12/hiring-front-end-engineers.html
 categories:
-- workflow
+- tech life
 title: Hiring Front-End Engineers
 url: /2011/01/25/hiring-front-end-engineers/
 wordpress_id: 1284

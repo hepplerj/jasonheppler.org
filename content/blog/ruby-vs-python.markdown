@@ -3,8 +3,6 @@ date: 2010-11-28T10:31:57Z
 external: http://allthingsprogress.com/posts/ruby-is-beautiful-but-im-moving-to-python
 categories:
 - programming
-- ruby
-- python
 title: Ruby vs. Python
 url: /2010/11/28/ruby-vs-python/
 wordpress_id: 1310

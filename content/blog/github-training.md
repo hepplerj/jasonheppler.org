@@ -2,7 +2,7 @@
 date: 2012-10-08T16:48:14Z
 external: http://training.github.com/
 categories:
-- code
+- programming
 title: Github Training
 url: /2012/10/08/github-training/
 ---

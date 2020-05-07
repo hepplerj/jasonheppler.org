@@ -2,8 +2,6 @@
 date: 2012-03-28T15:19:36Z
 external: http://www.unl.edu/plains/seminars/2012_Symposium/home.shtml
 categories:
-- history
-- research
 - conference
 title: 1862 Great Plains Symposium
 url: /2012/03/28/1862_great_plains_symposium/

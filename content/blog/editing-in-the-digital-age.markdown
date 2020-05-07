@@ -2,9 +2,7 @@
 date: 2011-03-03T09:39:45Z
 external: http://theaporetic.com/?p=1679
 categories:
-- publishing
-- peer review
-- editing
+- academia
 title: Editing in the Digital Age
 url: /2011/03/03/editing-in-the-digital-age/
 ---

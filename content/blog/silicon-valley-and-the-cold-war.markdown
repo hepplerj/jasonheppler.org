@@ -1,8 +1,7 @@
 ---
 date: 2011-06-29T21:13:22Z
 categories:
-- history
-- dissertation
+- research
 title: Silicon Valley and the Cold War
 url: /2011/06/29/silicon-valley-and-the-cold-war/
 ---

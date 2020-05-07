@@ -1,7 +1,6 @@
 ---
 date: 2012-12-05T22:48:56Z
 categories:
-- vim
 - writing
 title: Word Processor Mode in Vim
 url: /2012/12/05/word-processor-mode-in-vim/

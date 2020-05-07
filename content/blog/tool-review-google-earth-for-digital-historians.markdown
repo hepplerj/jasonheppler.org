@@ -2,8 +2,6 @@
 date: 2009-09-07T07:43:59Z
 categories:
 - review
-- spatial humanities
-- Google
 title: 'Tool Review: Google Earth for Digital Historians'
 url: /2009/09/07/tool-review-google-earth-for-digital-historians/
 wordpress_id: 59

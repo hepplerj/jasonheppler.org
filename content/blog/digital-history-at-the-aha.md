@@ -3,7 +3,6 @@ author: Jason Heppler
 date: 2012-01-05T10:12:16Z
 categories:
 - conference
-- digital history
 title: Digital History at the AHA
 url: /2012/01/05/digital-history-at-the-aha/
 ---

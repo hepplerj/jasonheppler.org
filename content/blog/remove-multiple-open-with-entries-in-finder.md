@@ -2,7 +2,7 @@
 date: 2012-11-26T21:55:10Z
 external: http://simplicitybliss.com/blog/2012/11/multiple-open-with-entries-in-mac-os-x-finder
 categories:
-- productivity
+- tech life
 title: Remove Multiple Open With Entries in Finder
 url: /2012/11/26/remove-multiple-open-with-entries-in-finder/
 ---

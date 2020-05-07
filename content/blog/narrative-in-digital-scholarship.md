@@ -2,9 +2,7 @@
 author: Jason Heppler
 date: 2011-10-12T17:03:39Z
 categories:
-- scholarship
 - writing
-- research
 title: Models for Narrative in Digital Humanities
 url: /2011/10/12/narrative-in-digital-scholarship/
 ---

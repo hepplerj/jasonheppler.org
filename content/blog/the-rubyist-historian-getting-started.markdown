@@ -2,7 +2,6 @@
 date: 2010-12-29T07:30:49Z
 categories:
 - programming
-- ruby
 series: "Rubyist Historian"
 title: 'The Rubyist Historian: Getting Started'
 url: /2010/12/29/the-rubyist-historian-getting-started/

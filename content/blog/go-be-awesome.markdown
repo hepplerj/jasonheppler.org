@@ -3,7 +3,6 @@ date: 2011-03-13T23:05:55Z
 external: https://www.youtube.com/watch?v=UF8uR6Z6KLc
 categories:
 - apple
-- productivity
 title: Go Be Awesome
 url: /2011/03/13/go-be-awesome/
 ---

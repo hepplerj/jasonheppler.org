@@ -2,9 +2,7 @@
 date: 2013-12-25T09:52:15Z
 external: http://dsl.richmond.edu/historicalatlas/
 categories:
-- historical geography
-- spatial history
-- linkblog
+- academia
 title: Atlas of Historical Geography of the United States
 url: /2013/12/25/atlas-of-historical-geography-of-the-united-states/
 ---

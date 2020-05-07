@@ -3,8 +3,7 @@ date: 2013-09-03T16:05:32Z
 description: null
 external: http://bits.blogs.nytimes.com/2013/09/03/amazon-couples-print-digital-books-with-new-program/?_r=0
 categories:
-- Amazon
-- publishing
+- tech life
 title: Amazon Pairs Print and Digital Books
 url: /2013/09/03/amazon-pairs-print-and-digital-books/
 ---

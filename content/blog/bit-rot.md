@@ -2,8 +2,7 @@
 date: 2012-09-29T08:52:12Z
 external: http://www.economist.com/node/21553445
 categories:
-- internet
-- history
+- tech life
 title: Bit Rot
 url: /2012/09/29/bit-rot/
 ---

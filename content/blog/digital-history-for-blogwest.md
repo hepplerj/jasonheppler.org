@@ -1,10 +1,7 @@
 ---
 date: 2013-12-17T19:45:10Z
-description: null
 categories:
 - digital history
-- BlogWest
-- western history
 title: Digital History Interview with BlogWest
 url: /2013/12/17/digital-history-for-blogwest/
 ---

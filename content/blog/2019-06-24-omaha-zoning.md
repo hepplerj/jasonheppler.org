@@ -2,7 +2,8 @@
 title: 'Omaha Zoning'
 date: 2019-06-23T19:35:46-05:00
 slug: 'omaha-zoning'
-categories: ["data visualization"]
+categories: 
+- data visualization
 ---
 
 A few days ago [the *New York Times* Upshot ran a piece](https://www.nytimes.com/interactive/2019/06/18/upshot/cities-across-america-question-single-family-zoning.html) on single-family zoning and the emergence of political energy that is seeking to curtail the prevalence of single-family zoning. We see this happening in [Oregon](https://www.wweek.com/news/state/2018/12/14/could-oregon-become-the-first-state-to-ban-single-family-zoning/), [California](https://www.latimes.com/opinion/livable-city/la-ol-sb50-single-family-20190424-story.html), and [Minneapolis](https://www.nytimes.com/2018/12/13/us/minneapolis-single-family-zoning.html) in particular as cities try to confront affordability, climate change, and inequality. 

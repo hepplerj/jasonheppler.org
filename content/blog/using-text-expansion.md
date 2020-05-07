@@ -1,7 +1,7 @@
 ---
 date: 2012-12-07T08:00:00Z
 categories:
-- TextExpander
+- tech life
 title: Using Text Expansion in My Research Workflow
 url: /2012/12/07/using-text-expansion/
 ---

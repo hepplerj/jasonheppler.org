@@ -2,7 +2,7 @@
 date: 2011-06-26T20:09:09Z
 external: http://techcrunch.com/2011/06/24/dropbox-breach-fewer-than-100-accounts-affected-but-one-person-actively-exploited-it/
 categories:
-- dropbox
+- tech life
 title: Dropbox Breach Affects Fewer Than 100 Accounts
 url: /2011/06/26/dropbox-breach-affects-fewer-than-100-accounts/
 ---

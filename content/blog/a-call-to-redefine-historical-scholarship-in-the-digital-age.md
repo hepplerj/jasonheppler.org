@@ -2,9 +2,6 @@
 author: Jason Heppler
 categories:
 - research
-- history
-- scholarship
-- career
 date: 2012-01-13T13:31:08Z
 title: A Call to Redefine Historical Scholarship in the Digital Age
 url: /2012/01/13/a-call-to-redefine-historical-scholarship-in-the-digital-age/

@@ -1,10 +1,6 @@
 ---
 categories:
 - research
-- California
-- drought
-- water
-- American West
 date: 2014-02-22T21:16:26Z
 description: A historical perspective on the California drought and what it can teach us about western history and sustainability.
 image: sj_ponds.jpg

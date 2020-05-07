@@ -1,9 +1,7 @@
 ---
 date: 2012-11-24T09:19:18Z
 categories:
-- productivity
-- Skim
-- Applescript
+- programming
 title: Using AppleScript to Automate Notetaking
 url: /2012/11/24/using-applescript-to-automate-notetaking/
 ---

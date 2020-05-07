@@ -2,7 +2,6 @@
 date: 2011-01-08T14:50:41Z
 categories:
 - programming
-- ruby
 series: "Rubyist Historian"
 title: 'The Rubyist Historian: Randomness'
 url: /2011/01/08/the-rubyist-historian-iteration-recursion-and-other-randomness/

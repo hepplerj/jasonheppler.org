@@ -2,11 +2,7 @@
 date: 2012-06-16T00:21:35Z
 external: http://dotfiles.github.com/
 categories:
-- github
-- dotfiles
-- vim
-- bash
-- zsh
+- tech life
 title: Dotfiles on Github
 url: /2012/06/16/dotfiles-on-github/
 ---

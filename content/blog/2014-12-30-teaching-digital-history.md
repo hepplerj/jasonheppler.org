@@ -3,7 +3,6 @@ title: "Teaching Digital History"
 date: 2014-12-30
 categories:
 - teaching
-- education
 comments: false
 ---
 

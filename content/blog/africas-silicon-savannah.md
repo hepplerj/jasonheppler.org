@@ -1,10 +1,8 @@
 ---
-categories:
-- Link
 date: 2012-11-01T10:02:32Z
 external: http://www.guardian.co.uk/world/2012/oct/30/kenya-silicon-savannah-digital-technology?CMP=twt_gu
 categories:
-- computers
+- tech life
 title: Africa's Silicon Savannah
 url: /2012/11/01/africas-silicon-savannah/
 ---

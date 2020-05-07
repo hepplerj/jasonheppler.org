@@ -1,7 +1,7 @@
 ---
 date: 2011-08-04T14:35:58Z
 categories:
-- career
+- tech life
 title: Constructing a Digital Humanists' C.V.
 url: /2011/08/04/constructing-a-digital-humanists-cv/
 ---

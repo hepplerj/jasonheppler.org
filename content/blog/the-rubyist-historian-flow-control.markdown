@@ -2,7 +2,6 @@
 date: 2011-01-02T07:30:33Z
 categories:
 - programming
-- ruby
 series: "Rubyist Historian"
 title: 'The Rubyist Historian: Loops and Control Structures'
 url: /2011/01/02/the-rubyist-historian-flow-control/

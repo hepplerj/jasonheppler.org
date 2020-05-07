@@ -1,7 +1,6 @@
 ---
 date: 2012-05-21T21:21:30Z
 categories:
-- ruby
 - programming
 title: Forking the Rubyist Historian
 url: /2012/05/21/open-publishing-the-rubyist-historian/

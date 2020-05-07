@@ -2,9 +2,7 @@
 title: "The View from New York"
 date: 2014-12-31
 categories:
-- research
 - conferences
-- american historical association
 ---
 
 This weekend I'll be in New York for the American Historical

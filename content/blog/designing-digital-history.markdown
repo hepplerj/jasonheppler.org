@@ -1,9 +1,7 @@
 ---
 date: 2011-05-10T11:25:19Z
 tags:
-- digital humanities
 - design
-- teaching
 title: Designing Digital History
 url: /2011/05/10/designing-digital-history/
 ---

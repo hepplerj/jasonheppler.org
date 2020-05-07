@@ -2,7 +2,7 @@
 date: 2012-05-16T21:24:24Z
 external: http://ruby.bastardsbook.com/
 categories:
-- ruby
+- programming
 title: The Bastards Book of Ruby
 url: /2012/05/16/the-bastards-book-of-ruby/
 ---

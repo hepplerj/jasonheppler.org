@@ -2,7 +2,6 @@
 date: 2008-12-18T19:31:02Z
 categories:
 - research
-- thesis
 title: 'Framing Red Power: Newspapers and the Trail of Broken Treaties'
 url: /2008/12/18/framing-red-power/
 wordpress_id: 10

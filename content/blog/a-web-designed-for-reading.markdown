@@ -1,13 +1,8 @@
 ---
-categories:
-- Link
 date: 2011-03-04T23:44:37Z
 external: http://blog.readability.com/2011/02/a-web-designed-for-reading/
 categories:
-- writing
-- reading
-- internet
-- publishing
+- tech life
 title: A Web Designed for Reading
 url: /2011/03/04/a-web-designed-for-reading/
 ---

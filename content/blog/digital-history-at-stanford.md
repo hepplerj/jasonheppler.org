@@ -1,8 +1,7 @@
 ---
 date: 2013-10-18T12:26:32Z
 categories:
-- digital history
-- Stanford
+- digital humanities
 title: Digital History at Stanford
 url: /2013/10/18/digital-history-at-stanford/
 ---

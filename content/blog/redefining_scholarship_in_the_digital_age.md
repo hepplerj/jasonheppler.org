@@ -1,9 +1,7 @@
 ---
 date: 2012-01-22T13:01:44Z
 categories:
-- history
-- publishing
-- scholarship
+- academia
 title: Redefining Scholarship in the Digital Age
 url: /2012/01/22/redefining_scholarship_in_the_digital_age/
 ---

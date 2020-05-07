@@ -3,9 +3,6 @@ title: "Federal Policy, Western Lands, and Malheur"
 date: 2016-01-06
 categories: 
 - research
-- public lands
-- politics
-- American West
 series: Living West
 ---
 

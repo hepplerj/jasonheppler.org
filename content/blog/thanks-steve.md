@@ -1,8 +1,7 @@
 ---
 date: 2011-10-06T07:56:58Z
 categories:
-- history
-- Apple
+- apple
 title: Thanks, Steve
 url: /2011/10/06/thanks-steve/
 ---

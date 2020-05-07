@@ -1,9 +1,7 @@
 ---
 date: 2008-11-08T15:36:35Z
 categories:
-- open access
 - digital humanities
-- open source
 title: Open Source Scholarship, and Why History Should Be Open Source
 url: /2008/11/08/open-source-scholarship-and-why-history-should-be-open-source/
 wordpress_id: 51

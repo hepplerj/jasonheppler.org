@@ -2,8 +2,7 @@
 date: 2012-11-27T13:14:37Z
 external: http://www.digibarn.com/collections/newsletters/homebrew/
 categories:
-- history
-- computers
+- technology
 subject: link
 title: 1970s Homebrew Computer Club Newsletters
 url: /2012/11/27/1970s-homebrew-computer-club-newsletters/

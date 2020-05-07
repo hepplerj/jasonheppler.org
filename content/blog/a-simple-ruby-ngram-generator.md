@@ -1,11 +1,7 @@
 ---
-categories:
-- research
 date: 2012-04-24T15:45:43Z
 categories:
-- ruby
-- scripting
-- terminal
+- programming
 title: A Simple Ruby NGram Generator
 url: /2012/04/24/a-simple-ruby-ngram-generator/
 ---

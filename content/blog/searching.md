@@ -3,8 +3,7 @@ categories:
 - hacks
 date: 2012-11-14T22:09:43Z
 categories:
-- TextExpander
-- blogging
+- tech life
 title: Searching My Brain
 url: /2012/11/14/searching/
 ---

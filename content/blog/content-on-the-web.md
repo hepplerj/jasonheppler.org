@@ -2,7 +2,7 @@
 date: 2012-05-24T14:01:10Z
 external: https://twitter.com/dancohen/status/205670836693250048
 categories:
-- web
+- internet
 title: Content on the Web
 url: /2012/05/24/content-on-the-web/
 ---

@@ -1,7 +1,8 @@
 ---
 date: 2016-09-22
 title: "Homecoming"
-categories: [Nebraska, career]
+categories:
+- career
 ---
 
 Before 2013, I hadn't spent much time in California, aside from a few trips to Los Angeles. Truth be told, there wasn't much I liked about Los Angeles. One of my strongest memories---probably of no shock to LA natives---is sitting in traffic trying to drive just five miles that took a half hour to complete. Who would *ever* want to live around this kind of traffic?[^1] But California beckoned. I was offered a job. Very quickly, I had to make a decision and move to the San Francisco Bay Area for [a job at Stanford University](http://jasonheppler.org/2012/12/03/new-job-joining-stanford/). I never imagined I'd be in California, let alone at Stanford. And to this day, just short of four years later, I still sometimes can't believe I landed here.

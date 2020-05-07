@@ -1,7 +1,6 @@
 ---
 date: 2012-12-03T11:46:53Z
 tags:
-- personal
 - career
 title: New Job, Joining Stanford
 url: /2012/12/03/new-job-joining-stanford/

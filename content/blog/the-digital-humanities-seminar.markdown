@@ -1,6 +1,4 @@
 ---
-categories:
-- research
 date: 2011-08-29T12:55:34Z
 categories:
 - digital humanities

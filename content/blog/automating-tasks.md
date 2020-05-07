@@ -1,9 +1,7 @@
 ---
 date: 2012-06-07T19:18:08Z
 categories:
-- scripts
-- bash
-- research
+- programming
 title: A Few New Scripts
 url: /2012/06/07/automating-tasks/
 ---

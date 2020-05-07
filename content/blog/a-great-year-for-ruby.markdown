@@ -5,7 +5,6 @@ date: 2010-12-14T09:59:34Z
 external: http://www.rubyinside.com/ruby-in-2010-a-retrospective-4059.html
 categories:
 - programming
-- ruby
 title: A Great Year for Ruby
 url: /2010/12/14/a-great-year-for-ruby/
 wordpress_id: 1301
