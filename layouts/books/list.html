@@ -1,0 +1,19 @@
+{{ partial "head.html" . }}
+
+<h1>{{ .Title }}</h1>
+
+{{ .Content }}
+
+<p>I've tracked previous readings on <a href="https://www.goodreads.com/jaheppler">Goodreads</a> and <a href="https://www.librarything.com/profile/hepplerj">LibraryThing</a>, but as of 2020 started logging that information myself here. Links are added as I get notes, thoughts, and reviews typed up.</p>
+
+<div class="books">  
+{{ range (where .Site.RegularPages "Section" "books") }}
+    <div itemprop = "mainEntity" itemscope itemtype="http://schema.org/Book">
+      <div itemprop="title">{{ if and (in .Params.categories "unread") }} <em>{{ .Params.Shorttitle }}</em> {{else}} <a href="{{ .Permalink }}" class="post-link"><em>{{ .Params.Shorttitle }}</em></a> {{ end}}</div>
+      <div itemprop="author">{{ .Params.Author }}</div>
+      <div itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</div>
+    </div>
+{{ end }}
+</div>
+
+{{ partial "foot.html" . }}

@@ -1,0 +1,26 @@
+{{ partial "head.html" . }}
+
+<article id='{{ urlize .Title }}' class="h-entry post">
+  <header>
+    <h2 class="post-title"><a href='{{ .Permalink }}' class='p-name'><em>{{ .Params.Shorttitle }}</em></a> by {{ .Params.Author }}</h2>
+    <p><em>{{ .Params.Preview }}</em></p>
+  </header>
+
+  <div class='post-body e-content'>
+    {{ .Content }}
+  
+  <h3>Details</h3>
+  <ul>
+    <li><em>{{ .Title }}</em> by {{ .Params.Author }}</li>
+    <li>ISBN: {{ .Params.Isbn }} (look up with <a href="https://worldcat.org/isbn/{{ .Params.Isbn }}">WorldCat</a> or <a href="https://openlibrary.org/isbn/{{ .Params.Isbn }}">Open Library</a>)</li>
+    <li>Published: {{ .Params.Year }}</li>
+    <li>Publisher: {{ .Params.Publisher }}</li>
+  </ul>
+  
+  </div>
+
+</article>
+
+{{ partial "blog-comments" . }}
+{{ partial "blog-nav" . }}
+{{ partial "foot" . }}
