@@ -4,7 +4,7 @@ aliases:
 - "/teaching/"
 ---
 
-<div class="writing">
+<div class="teaching">
   <div>
     <div><a href="https://jasonheppler.org/courses/bootcampr.2020/">BootcampR: An Introduction to R</a></div>
     <div>Spring 2020</div>
@@ -26,7 +26,7 @@ aliases:
     <div>Fall 2018</div>
   </div>
   <div>
-    <div><a href="https://jasonheppler.org/courses/unodh.2018/">Directed Readings in Digital History</a></div>
+    <div><a href="https://hcommons.org/deposits/item/hc:17867/">Directed Readings in Digital History</a></div>
     <div>Spring 2018</div>
   </div>
   <div>

@@ -15,6 +15,11 @@ Most of my work sits at the intersection of digital humanities, history, data sc
 
 <div class="project-box">
 
+  <a class="project" href="https://littlefires.github.io">
+    <img src="/assets/images/portfolio_fires.png" alt="a thousand little fires" />
+    <p class="small"><strong>a thousand little fires</strong> Share what we create while reconciling with self-isolation.</p>
+  </a>
+
   <a class="project" href="https://omahahistorical.org">
     <img src="/assets/images/portfolio_omahistorical.png" alt="Nebraska Historical" />
     <p class="small"><strong>Nebraska Historical</strong> Curating histories of Nebraska and the Northern Plains.</p>

@@ -3,16 +3,11 @@ title: "About me"
 slug: '/about/'
 ---
 
-<div class="about-intro">
-    <figure>
-        <img src="/assets/images/atxpo_2016-3703_1024.jpg"/>
-        <figcaption>Photo by Carlos Seligo</figcaption>
-    </figure>
-</div>
+{{< figure src="/assets/images/atxpo_2016-3703_1024.jpg" alt="Jason A. Heppler" caption="Photo by [Carlos Seligo](https://www.linkedin.com/in/carlosseligo/)" >}}
         
 <p class="u-lead"><strong>Hi, I'm Jason!</strong> I'm the digital engagement librarian and assistant professor of history at the <a href="http://library.unomaha.edu/">University of Nebraska at Omaha</a>, where I lead initiatives in digital humanities, data services, and data visualization.</p>
 
-🌽 I live in [Omaha, Nebraska](https://jasonheppler.org/2016/09/22/homecoming/), with my wife, two kids, and two dogs. (We dream of settling in Colorado.)
+🌽 I live in [Omaha, Nebraska](https://jasonheppler.org/2016/09/22/homecoming/), with my wife, two kids, and two dogs.
 
 💻 I work at the University of Nebraska at Omaha, where I lead initiatives in digital humanities and data science for UNO Libraries. In the [past](https://linkedin.com/in/jasonheppler/), I've worked at the University of Nebraska-Lincoln and Stanford University.
 

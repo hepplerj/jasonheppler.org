@@ -1,5 +1,17 @@
 ---
-description: "Jason Heppler is a historian of American environmentalism and the twentieth-century United States."
+description: "Jason Heppler is a historian, technologist, and designer in Omaha, Nebr."
 ---
 
-<p class="u-lead">I am an assistant professor at the <a href="https://unomaha.edu">University of Nebraska</a>, where I research and teach urban sustainability, environmentalism, and digital history.<br/><br/>I currently lead initiatives in digital humanities and digital community engagement for UNO Libraries.</p>
+<h1>
+<span id="typed"></span>
+<div id="typed-strings">
+    <p><span class="highlighted">Historian.</span></p>
+    <p><span class="highlighted">Speaker.</span></p>
+    <p><span class="highlighted">Writer.</span></p>
+    <p><span class="highlighted">Climate activist.</span></p>
+    <p><span class="highlighted">Leader.</span></p>
+    <p><span class="highlighted">Open advocate.</span></p>
+</div>
+</h1>
+
+<p class="u-lead">Hi! Nice to meet you. My name is <a href="/about/">Jason</a>. I'm a historian, software developer, and designer in Omaha, Nebr. I lead digital humanities, data science, and digital community engagement initiatives for the <a class="u-uno" href="https://unomaha.edu">University of Nebraska at Omaha Libraries</a>. I am the co-founder of <a class="u-edw" href="https://endangereddataweek.org/">Endangered Data Week</a> and also a mentor with <a class="u-mozilla" href="https://foundation.mozilla.org/en/initiatives/mozilla-open-leaders/">Mozilla Open Leaders</a>.</p>
