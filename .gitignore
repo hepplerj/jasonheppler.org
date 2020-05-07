@@ -11,6 +11,7 @@ static/assets/video/
 .history/
 .vscode
 .Rhistory
+.RData
 
 # Packages #
 # it's better to unpack these files and commit the raw source
