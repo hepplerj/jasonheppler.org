@@ -7,13 +7,15 @@ slug: '/about/'
         
 <p class="u-lead"><strong>Hi, I'm Jason!</strong> I'm the digital engagement librarian and assistant professor of history at the <a href="http://library.unomaha.edu/">University of Nebraska at Omaha</a>, where I lead initiatives in digital humanities, data services, and data visualization.</p>
 
-🌽 I live in [Omaha, Nebraska](https://jasonheppler.org/2016/09/22/homecoming/), with my wife, two kids, and two dogs.
+🌽 I live in Omaha, Nebraska, with my wife, two kids, and two dogs.
 
 💻 I work at the University of Nebraska at Omaha, where I lead initiatives in digital humanities and data science for UNO Libraries. In the [past](https://linkedin.com/in/jasonheppler/), I've worked at the University of Nebraska-Lincoln and Stanford University.
 
 🏞 I volunteer with the [ Citizens' Climate Lobby](https://citizensclimatelobby.org/), [Mode Shift Omaha](https://modeshiftomaha.org), [Mozilla Foundation](https://www.mozilla.org/), and the Environmental History Action Collaborative with the [Environmental Data and Governance Initiative](https://envirodatagov.org).
 
-🎓 I earned a PhD and MA in History at the University of Nebraska-Lincoln, and a degree in History and Economics from South Dakota State University.
+🎓 I earned a PhD and MA in History at the University of Nebraska-Lincoln, and a BA in History and Economics from South Dakota State University.
+
+🗣 I am learning 🇳🇴Norwegian and 🇸🇪Swedish.
 
 ☀️ I grew up in Mitchell, South Dakota.
 
