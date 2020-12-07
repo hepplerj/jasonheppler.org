@@ -12,6 +12,8 @@ static/assets/video/
 .vscode
 .Rhistory
 .RData
+.linkrot.json
+jasonheppler.code-workspace
 
 # Packages #
 # it's better to unpack these files and commit the raw source
