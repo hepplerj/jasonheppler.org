@@ -5,6 +5,12 @@ url: /now/
 
 This page briefly describes what I am currently working on, or at least, the main things that I am trying to focus my attention on over the short term.
 
+**January 2021**
+
+- **Reading**: Lizabeth Cohen's *Saving America's Cities*
+- **Watching**: *Ted Lasso* is some excellent television.
+- **Working**: Spinning up for the 2021 semester which, like last semester, is remote.
+
 **March 2020**
 
 - **Reading**: Daniel Immerwahr's *How to Hide an Empire*
@@ -28,4 +34,4 @@ This page briefly describes what I am currently working on, or at least, the mai
 - Jumping back into D3.js and catching back up on modern JavaScript, which I'm doing through [Observable notebooks](https://observablehq.com/@hepplerj).
 - Wrapping up (🤞) book edits and <del>sending it off to the press for review</del>. Sent off on December 9, 2019.
 
-Last updated: 2020-03-06. 
+Last updated: 2021-01-16. 

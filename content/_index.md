@@ -2,9 +2,9 @@
 description: "Jason Heppler is a historian, technologist, and designer in Omaha, Nebr."
 ---
 
-<p class="u-lead">Welcome! I am a historian of urban and environmental history and the twentieth century United States studying urban design, land use planning, sustainability, and environmentalism, often with digital and computational tools. I am an <a href="https://www.unomaha.edu/criss-library/about-us/staff-directory/jason-heppler.php">assistant professor</a> leading digital humanities, data science, and digital community engagement initiatives for the <a class="u-uno" href="https://unomaha.edu">University of Nebraska at Omaha Libraries</a>. I co-founded of <a class="u-edw" href="https://endangereddataweek.org/">Endangered Data Week</a> and volunteer as a mentor with <a class="u-mozilla" href="https://foundation.mozilla.org/en/initiatives/mozilla-open-leaders/">Mozilla Open Leaders</a>.</p>
+<p>Welcome! I am a historian of modern America studying the environment, cities, the technology industry, American politics, and the areas where they all intersect, often using digital and computational tools. I am an <a href="https://www.unomaha.edu/criss-library/about-us/staff-directory/jason-heppler.php">assistant professor</a> leading digital humanities, data science, and digital community engagement initiatives for the <a class="u-uno" href="https://unomaha.edu">University of Nebraska at Omaha Libraries</a>. I co-founded of <a class="u-edw" href="https://endangereddataweek.org/">Endangered Data Week</a> and volunteer as a mentor with <a class="u-mozilla" href="https://foundation.mozilla.org/en/initiatives/mozilla-open-leaders/">Mozilla Open Leaders</a>.</p>
 
-<h2><i class="fas fa-book"></i> Scholarship</h2>
+<h3><i class="fas fa-book"></i> Scholarship</h3>
 
 <p>You can find much more <a href="/research/">on my scholarship page</a>. Here are a few things I'm currently working on:</p>
 
@@ -13,11 +13,11 @@ description: "Jason Heppler is a historian, technologist, and designer in Omaha,
   <li>I am currently completing a book tentatively titled <em>Suburban by Nature: Silicon Valley and the Transformation of American Environmental Politics</em> for the University of Oklahoma Press.</li>
 </ul>
 
-<h2><i class="fas fa-chalkboard"></i> Teaching</h2>
+<h3><i class="fas fa-chalkboard"></i> Teaching</h3>
 
 <p>I teach classes on data science, design, visualization, and digital history. You can find my most recent syllabi and workshops on <a href="/teaching/">my teaching page</a>.</p>
 
-<h2><i class="fas fa-laptop"></i> Get in touch</h2>
+<h3><i class="fas fa-laptop"></i> Get in touch</h3>
 
 <p>If you're looking to get in touch, take note:</p>
 
