@@ -13,6 +13,7 @@
   <ul>
     <li><em>{{ .Title }}</em> by {{ .Params.Author }}</li>
     <li>ISBN: {{ .Params.Isbn }} (look up with <a href="https://worldcat.org/isbn/{{ .Params.Isbn }}">WorldCat</a> or <a href="https://openlibrary.org/isbn/{{ .Params.Isbn }}">Open Library</a>)</li>
+    <li>Buy from <a href="https://bookshop.org/a/{{ .Params.Affiliate }}">Bookshop</a></li>
     <li>Published: {{ .Params.Year }}</li>
     <li>Publisher: {{ .Params.Publisher }}</li>
   </ul>

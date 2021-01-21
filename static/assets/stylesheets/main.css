@@ -2,6 +2,7 @@
   --color-white: #fff;
   --color-black: #222;
   --color-yellow: #f5d652;
+  --color-yellow2: #ffc700;
   --color-blue: #5522FA;
   --color-purple: #7700a2;
   --color-pink: #AF4D9C;
@@ -14,7 +15,7 @@
   --color-liberty-green: #b7e4cf;
   --color-ew-blue: #232444;
   --color-french-grey: #edeae6;
-  --color-code-block: #f8f8f8;
+  --color-code-block: #f5f2f0;
   --color-text: var(--color-black);
   --color-background: var(--color-french-grey);
   --color-sheet: var(--color-white);
@@ -32,8 +33,9 @@
   --space-navbar: var(--space-triple);
   --space-mobile: 85%;
   --font-serif: 'Source Serif Variable', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-  --font-sans: 'Source Sans Variable', 'Helvetica Neue', helvetica, 'Apple Color Emoji', arial, sans-serif;
-  --font-mono: monospace;
+  /*--font-sans: 'Source Sans Variable', 'Helvetica Neue', helvetica, 'Apple Color Emoji', arial, sans-serif; */
+  --font-sans: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+  --font-mono: San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   --type-base: calc(1.6em + 0.5vw);
   --type-xxx-small: 55%;
   --type-xx-small: 65%;
@@ -88,7 +90,7 @@
 
 html {
   font-size: 10px; }
-
+  
 body {
   font-family: var(--font-sans);
   font-size: var(--type-base);
@@ -96,7 +98,10 @@ body {
   background-color: var(--color-sheet);
   overflow-x: hidden;
   margin: 0;
-  padding: 0; }
+  padding: 0; 
+  --webkit-font-smoothing: antialiased; 
+  text-rendering: optimizeLegibility; 
+  line-height: 1.6;}
 
 @media (prefers-color-scheme: dark) {
   img {
@@ -149,7 +154,7 @@ h6 {
   font-weight: 700;
   line-height: 1.25; }
 
-h1 {
+/* h1 {
   margin: var(--space-x-small) 0 var(--space-x-small) 0;
   font-size: var(--type-xx-large); }
 
@@ -163,7 +168,7 @@ h4,
 h5,
 h6 {
   font-size: var(--type-medium);
-  line-height: 1.25; }
+  line-height: 1.25; } */
 
 p,
 ul,
@@ -225,7 +230,7 @@ hr {
   grid-template-rows: [nav] minmax(8em, 30vmin) [main] 1fr [foot] 15em; }
   @media (min-width: 48em) {
     .layout {
-      grid-template-columns: 1fr [main] 76ch 1fr; } }
+      grid-template-columns: 1fr [main] 65ch 1fr; } }
 
 .content {
   grid-column: main;
@@ -409,7 +414,7 @@ td {
 h1 + p, h2 + p, h3 + p {
   margin-top: 0.5rem;
 }
-
+/* 
 .u-h1-decorate {
   font-size: 2.75rem;
 }
@@ -423,7 +428,7 @@ h1 + p, h2 + p, h3 + p {
 .u-lead {
   font-size: var(--type-large);
   font-weight: 500;
-}
+} */
 
 .typed-cursor {
   opacity: 1;
@@ -517,23 +522,39 @@ article figure img {
   max-width: 100%;
   height: auto;
 }
+/* 
+.writing { 
+  display: grid; 
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  grid-template-columns: 1fr min-content;
+} */
 
-.books>div,.writing>div,.teaching>div {display:grid;grid-column-gap:5px;padding-top:5px}
+.books>div,.writing>div,.teaching>div {
+  display:grid;
+  grid-column-gap:5px;
+  grid-row-gap: 5px;
+  grid-template-columns: 1fr min-content; }
 
-.writing>div,.teaching>div{grid-template-columns:1fr min-content}
+/* .writing>div,.teaching>div{grid-template-columns:1fr min-content; } */
 
-.books>div{grid-template-columns:1fr .75fr min-content 70px}
+.books>div{grid-template-columns:1fr .75fr min-content 70px; }
 
-.books a,.writing a,.teaching a{font-weight:500;letter-spacing:-.015em}
+.books a,.writing a,.teaching a{font-weight:500;letter-spacing:-.015em; }
 
-.books>div div,.writing>div div,.teaching>div div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.books>div div,.writing>div div,.teaching>div div{
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
 
-.books>div div:nth-child(3),.writing>div div:last-child,.teaching>div div:last-child{padding-right:.25em;font-variant-numeric:tabular-nums;letter-spacing:-.012em}
+.books > div div:nth-child(3),.writing>div div:last-child,.teaching>div div:last-child {
+  padding-right:.25em;font-variant-numeric:tabular-nums;letter-spacing:-.012em; }
 
 @media screen and (max-width:640px){
-    .limiter{width:auto}
-    .books>div{grid-template-columns:1fr .75fr 70px}
+    .books>div { grid-template-columns:1fr .75fr 70px }
     .books>div div:nth-child(3){display:none}
+    .writing {
+      grid-template-columns: 1fr;
+      grid-row-gap: 0;
+    }
 }
 
 #publications-and-projects p {
@@ -881,13 +902,23 @@ table-horizontal tbody > tr:last-child > td {
 /* Syllabus specific */
 article.syllabus header {
   /* background: rgb(243, 243, 243); */
-  border: 1.25px solid #2770e6;
+  border: 1.25px solid var(--color-yellow);
   padding: 0.20rem 1.0rem;
+}
+
+article.syllabus hr {
+  border: 0;
+  padding: 0;
+  clear: both;
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+  background: linear-gradient(to right, var(--color-yellow2) 0%, var(--color-purple) 100%);
 }
 
 /* Make h1s on a syllabus the same as h2s elsewhere */
 article.syllabus h1 {
-  font-size: 1.25rem; 
+  font-size: 4rem; 
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.25rem;
@@ -895,7 +926,7 @@ article.syllabus h1 {
 
 /* but not the title */
 article.syllabus h1.syllabus-title {
-  font-size: 1.5rem;
+  font-size: 5rem;
   font-weight: 600;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
@@ -903,6 +934,12 @@ article.syllabus h1.syllabus-title {
 
 article.syllabus h3 {
   margin-top: 1.5rem;
+}
+
+article.syllabus nav a {
+  text-decoration: underline;
+  text-decoration-thickness: 0.1em;
+  text-decoration-width: 0.1em; 
 }
 
 article.syllabus nav#TableOfContents {
@@ -914,9 +951,9 @@ article.syllabus nav#TableOfContents ul li ul {
 }
 
 article.syllabus nav#TableOfContents ul {
-  columns: 3;
-  -webkit-columns: 3;
-  -moz-columns: 3;
+  columns: 4;
+  -webkit-columns: 4;
+  -moz-columns: 4;
   padding: 0;
   margin-top: 4px;
 }

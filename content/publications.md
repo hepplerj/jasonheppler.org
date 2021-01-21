@@ -145,6 +145,8 @@ Few places symbolize the twentieth century like Silicon Valley. Stretching from 
 
 Edited with Rebecca Wingo and Paul Schadewald, our edited volume brings together cutting-edge campus-community partnerships with a focus on digital projects. Through a series of case studies authored by academics and their community partners, we explore models for digital community engagement that leverages new media through reciprocal partnerships. The contributions to the volume stand at the crossroads of digital humanities, public history, and community engagement, drawing ideas, methods, and practices from various disciplines to inform our public partnerships. By highlighting these projects we hope to provide other institutions, cultural heritage organizations, universities, and communities models for successful engagement.
 
+[University of Cincinnati Press](https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement) (open access) | [Amazon.com](https://www.amazon.com/Digital-Community-Engagement-Partnering-Communities/dp/1947602519/ref=sr_1_1?dchild=1&keywords=digital+community+engagement&qid=1607369554&sr=8-1)
+
 {{% /book %}}
 
 -------------------------------------------------------------------

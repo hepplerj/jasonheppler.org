@@ -2,15 +2,15 @@
 
 <article class="syllabus" id="{{ urlize .Title }}">
   <h1 class="syllabus-title">{{ .Title }} ({{ .Params.semester }} {{ .Params.year }})</h1>
-  <header>
-    <p><strong class="print-only">This syllabus comes from {{ .Permalink }}. Only the online version of this syllabus is authoritative, and it may be updated as necessary.</strong></p>
+  <hr>
     <p>
-      <strong>Course:</strong> <a href="{{ .Params.courseurl }}">{{ .Params.coursenum }}</a>. {{ .Params.semester}} {{ .Params.year }}. {{ .Params.department}}, {{ .Params.university }}. {{ .Params.credits }} credits. Meets {{ .Params.meets }} in {{ .Params.room }}.
+      <strong>Course:</strong> <em>{{ .Title }}</em>. {{ .Params.semester}} {{ .Params.year }}. {{ .Params.department}}, {{ .Params.university }}. 
+      <!--{{ .Params.credits }} credits. Meets {{ .Params.meets }} in {{ .Params.room }}.-->
     </p>
     <p>
-      <strong>Instructor:</strong> <a href=" {{ .Params.instructorurl }}">{{ .Params.instructor }}</a> &lt;<a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>&gt;. Office: {{ .Params.office }}. Office hours: {{ .Params.officehours }}. <span>How to <a href="/page/office-hours/">book an appointment</a>.</span>
+      <strong>Instructor:</strong> <a href=" {{ .Params.instructorurl }}">{{ .Params.instructor }}</a> &lt;<a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>&gt;. Office: {{ .Params.office }}. Office hours: {{ .Params.officehours }}. <span>How to <a href="/office-hours/">book an appointment</a>.</span>
     </p>
-  </header>
+  <hr>
   {{ if .Params.toc }}<div class="no-print">{{ .TableOfContents }}</div>{{ end }}
   {{ .Content }}
 </article>
