@@ -1,0 +1,82 @@
+title = "Jason A. Heppler"
+description = "Jason Heppler is a historian of the American environment and the twentieth-century United States."
+baseURL = "https://jasonheppler.org/"
+copyright = "2008-2021"
+languageCode = "en-us"
+
+[permalinks]
+  blog = "/:year/:month/:day/:slug/"
+  archive = "/:slug/"
+  page = "/:section/:slug/"
+
+FootnoteReturnLinkContents = "↑"
+
+pygmentsOptions = "linenos=table"
+pygmentsCodefences = true
+pygmentsUseClasses = true
+pygmentsCodefencesGuessSyntax = true
+
+disableKinds = "taxonomyTerm"
+
+assetDir = "static"
+contentDir = "content"
+layoutDir = "layouts"
+publishDir = "public"
+
+[author]
+  name = "Jason Heppler"
+  email = "jason@jasonheppler.org"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediatype = "application/rss"
+    baseName = "feed"
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[services.rss]
+  limit = 20
+
+[menu]
+
+  [[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 2.0
+
+  [[menu.main]]
+  name = "Shelf"
+  url = "/books/"
+  weight = 3.0
+
+  [[menu.main]]
+  name = "Publications"
+  url = "/publications/"
+  weight = 4.0
+
+  [[menu.main]]
+  name = "Digital History"
+  url = "/research/"
+  weight = 5.0
+
+  [[menu.main]]
+  name = "Teaching"
+  url = "/courses/"
+  weight = 6.0
+
+  [[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 7.0

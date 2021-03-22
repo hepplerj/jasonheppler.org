@@ -1,10 +1,10 @@
 <nav class="main-nav">
-  <a href="/" class="site-title">{{ .Site.Title }}</a>
-  <a href="/blog/">Writing</a>
-  <a href="https://social.jasonheppler.org">Microblog</a>
-  <a href="/books/">Reading</a>
-  <a href="/research/">Projects</a>
-  <a href="/courses/">Teaching</a>
-  <a href="/about/">About</a>
-  <a href="https://jasonheppler.org/files/jah-cv.pdf">CV</a>
+  <ul id="menu" class="menu">
+      <li class="menu-item"><a href="/" class="site-title">{{ .Site.Title }}</a></li>
+    {{ range .Site.Menus.main -}}
+      <li class="menu-item">
+        <a class="menu-item-link" href="{{ .URL | safeURL }}">{{ .Name }}</a>
+      </li>
+    {{- end }}
+  </ul>
 </nav>

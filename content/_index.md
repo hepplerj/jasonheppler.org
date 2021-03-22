@@ -2,33 +2,6 @@
 description: "Jason Heppler is a historian, technologist, and designer in Omaha, Nebr."
 ---
 
-<p>Welcome! I am a historian of modern America studying the environment, cities, the technology industry, American politics, and the areas where they all intersect, often using digital and computational tools. I am an <a href="https://www.unomaha.edu/criss-library/about-us/staff-directory/jason-heppler.php">assistant professor</a> leading digital humanities, data science, and digital community engagement initiatives for the <a class="u-uno" href="https://unomaha.edu">University of Nebraska at Omaha Libraries</a>. I co-founded of <a class="u-edw" href="https://endangereddataweek.org/">Endangered Data Week</a> and volunteer as a mentor with <a class="u-mozilla" href="https://foundation.mozilla.org/en/initiatives/mozilla-open-leaders/">Mozilla Open Leaders</a>.</p>
+Welcome! I am a historian of modern America studying the environment, cities, the technology industry, American politics, and the areas where they all intersect, often using digital and computational tools. I am an [assistant professor](https://www.unomaha.edu/criss-library/about-us/staff-directory/jason-heppler.php) leading digital humanities, data science, and digital community engagement initiatives for the [University of Nebraska at Omaha Libraries](https://unomaha.edu). I co-founded [Endangered Data Week](https://endangereddataweek.org/) and volunteer as a mentor with [Mozilla Open Leaders](https://foundation.mozilla.org/en/initiatives/mozilla-open-leaders/).
 
-<h3><i class="fas fa-book"></i> Scholarship</h3>
 
-<p>You can find much more <a href="/research/">on my scholarship page</a>. Here are a few things I'm currently working on:</p>
-
-<ul>
-  <li>Rebecca Wingo, Paul Schadewald, and I co-edited <em><a href="https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement">Digital Community Engagement: Partnering Communities with the Academy</a></em> (University of Cincinnati Press, 2020).</li>
-  <li>I am currently completing a book tentatively titled <em>Suburban by Nature: Silicon Valley and the Transformation of American Environmental Politics</em> for the University of Oklahoma Press.</li>
-</ul>
-
-<h3><i class="fas fa-chalkboard"></i> Teaching</h3>
-
-<p>I teach classes on data science, design, visualization, and digital history. You can find my most recent syllabi and workshops on <a href="/teaching/">my teaching page</a>.</p>
-
-<h3><i class="fas fa-laptop"></i> Get in touch</h3>
-
-<p>If you're looking to get in touch, take note:</p>
-
-<ul>
-<li>You can email me by <a href="/about/">finding my contact information here</a>.</li>
-<li>You can <a href="/office-hours/">make an appointment with me</a> for office hours.</li>
-<li>Occasionally, you can also find me on <a href="https://twitter.com/jaheppler">Twitter</a> or <a href="https://micro.blog/jaheppler">Micro.blog</a>.</li>
-</ul>
-
-<hr/>
-
-<p class="small">Jason lives and works on lands represented by Native Nations whose sovereignty, governance, and treaty lands existed long before the state of Nebraska. These Nations include the Omaha, Ponca, Santee, Ho-Chunk or Winnebago, Lakota, Pawnee, Cheyenne, Arapahoe, Otoe-Missouria, Ioway, Kaw, Sac and Fox or Mesquakie, Kickapoo, and Delaware Nations.</p>
-
-<hr/>

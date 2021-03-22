@@ -3,50 +3,66 @@ title: "About me"
 slug: '/about/'
 ---
 
-{{< figure src="/assets/images/atxpo_2016-3703_1024.jpg" alt="Jason A. Heppler" caption="Photo by [Carlos Seligo](https://www.linkedin.com/in/carlosseligo/)" >}}
-        
-<p class="u-lead"><strong>Hi, I'm Jason!</strong> I'm the digital engagement librarian and assistant professor of history at the <a href="http://library.unomaha.edu/">University of Nebraska at Omaha</a>, where I lead initiatives in digital humanities, data services, and data visualization.</p>
+{{< figure src="/assets/images/atxpo_2016-3703_1024.jpg" alt="Jason A. Heppler" caption="↳ Photo by [Carlos Seligo](https://www.linkedin.com/in/carlosseligo/)" >}}
 
-🌽 I live in Omaha, Nebraska, with my wife, two kids, and two dogs.
+<section class="bio-project">
+<div class="bio-project-left">
+  <p class="u-lead"><strong>Hi I'm Jason</strong>, a developer, historian, librarian, and educator working at the intersection of the digital library and digital scholarship in the design and development of practical research and data services. I work across data visualization and information design, environmental history, digital humanities, and public history. Currently, I'm the digital engagement librarian and assistant professor of history at the <a href="http://library.unomaha.edu/">University of Nebraska at Omaha</a>, where I lead initiatives in digital humanities, data services, and data visualization.</p>
 
-💻 I work at the University of Nebraska at Omaha, where I lead initiatives in digital humanities and data science for UNO Libraries. In the [past](https://linkedin.com/in/jasonheppler/), I've worked at the University of Nebraska-Lincoln and Stanford University.
+  <p><a href="https://jasonheppler.org/files/jah-cv.pdf">You can find my full CV here</a>.</p>
 
-🏞 I volunteer with the [ Citizens' Climate Lobby](https://citizensclimatelobby.org/), [Mode Shift Omaha](https://modeshiftomaha.org), [Mozilla Foundation](https://www.mozilla.org/), and the Environmental History Action Collaborative with the [Environmental Data and Governance Initiative](https://envirodatagov.org).
+  (<a href="/bio/">Need a full bio?</a>)
 
-🎓 I earned a PhD and MA in History at the University of Nebraska-Lincoln, and a BA in History and Economics from South Dakota State University.
+  <p>I am the co-founder of <a href="http://endangereddataweek.org">Endangered Data Week</a>, an annual event to promote a culture of data consciousness by creating training materials, guidelines, and resources to advocate for open data and promote awareness around threats to publicly available data. I'm active in communities advancing open research including the <a href="https://mozilla.github.io/leadership-training/">Mozilla Foundation</a>.</p>
 
-🗣 I am learning 🇳🇴Norwegian and 🇸🇪Swedish.
 
-☀️ I grew up in Mitchell, South Dakota.
+  <h3>Can we meet for coffee?</h3>
 
-([Need a full bio?](/bio/))
+  <p>I'll make an effort to meet with anyone who reaches out, but in advance: I won't tweet about your project, you can't use me in your marketing, and I'm not investing in anything. All I have on offer is to listen to your story and offer advice if I have any to give.</p> 
 
-## Open Data Advocacy
+  <p>You can write great emails by following <a href="http://humbledmba.com/how-to-email-busy-people">this advice from Jason Freedman</a>:</p>
 
-I am committed to open data advocacy to improve transparency and access to information, from promoting open research practices to open government data. I'm active in communities advancing open research including [Mozilla Open Leadership](https://mozilla.github.io/leadership-training/) and [Data for Democracy](ttp://datafordemocracy.org).
+  <blockquote>
+  If you want a meeting, ask for a meeting. Provide some time options and ask for a specified length. If you want an introduction, ask for an introduction. If you're looking for funding, tell him you're currently fundraising and ask to meet to show him your pitch. Don't be sly. Don't hint. Make the process ridiculously easy by just asking for what you want.
+  </blockquote>
+</div>
 
-I am an open project lead and founding member of [Endangered Data Week](http://endangereddataweek.org), an annual event to promote a culture of data consciousness by creating training materials, guidelines, and resources to advocate for open data and promote awareness around threats to publicly available data. If you'd like to get involved, [let us know](http://github.com/endangereddataweek/resources/)!
+<div class="bio-project-right">
+  <p>Please feel free to contact me:</p>
 
-## Cycling Advocacy and Urban Sustainability
+  <p><a href="mailto:jason@jasonheppler.org">jason@jasonheppler.org</a></p>
 
-I'm an urban planning and transportation nerd. I work on bicycle advocacy projects both on campus and in the Omaha community with amazing partners like [Omaha Bikes](https://omahabikes.org/), the [Omaha Bike Network](http://livewellomaha.org/), and [Mode Shift Omaha](https://modeshiftomaha.org/). My work on sustainability at the University of Nebraska at Omaha includes chairing the Triple Bottom Line Committee for UNO Libraries, where we are focused on building a community that is economically sound, environmentally responsible, and socially just, and serving as a member of the Sustainability Curriculum Committee. I'm also a member of the Environmental History Action Collaborative with the Environmental Data and Governance Initiative, where we seek to bring historical perspective to present-day environmental debates.
+  <p>Twitter ➝ <a href="">@jaheppler</a><br>
+  Micro.blog ➝ <a href="">@jaheppler</a><br>
+  Observable ➝ <a href="">@hepplerj</a><br>
+  GitHub ➝ <a href="">@hepplerj</a></p>
 
-## Can we meet for coffee?
+  <p><a href="https://jasonheppler.substack.com/subscribe">Subscribe to Breve</a>, my occasional newsletter on design, creativity, and human knowledge.</p>
 
-I'll make an effort to meet with anyone who reaches out, but in advance: I won't tweet about your project, you can't use me in your marketing, and I'm not investing in anything. All I have on offer is to listen to your story and offer advice if I have any to give. 
+  <h4>Privacy</h4>
 
-You can write great emails by following [this advice from Jason Freedman](http://humbledmba.com/how-to-email-busy-people):
+<p class="noted">I take your privacy seriously. I have installed a local analytics package called <a href="https://matomo.org/">Matomo</a>, which interprets information your browser already sends (like IP address, screen resolution, browser, and operating system.) This information is regularly flushed, kept anonymous, and password-protected. I take precautions to ensure no one else sees this information, either. If you're running Do Not Track on your browser, Matomo won't track you.</p>
 
-> If you want a meeting, ask for a meeting. Provide some time options and ask for a specified length. If you want an introduction, ask for an introduction. If you're looking for funding, tell him you're currently fundraising and ask to meet to show him your pitch. Don't be sly. Don't hint. Make the process ridiculously easy by just asking for what you want.
+<p class="noted">If you email me something I keep that anonymous, especially when sent encrypted. If I decide I would like to quote something from your email, I will ask you first. If you've emailed me about something I got wrong, I may use your name to credit the correction but I won't if it's not public information. <a href="https://jasonheppler.org/jasonheppler.asc">Here's my public key</a>. I'm also <code>jaheppler</code> on Keybase.</p>
 
-## Privacy
+<h4>Colophon</h4>
 
-I take your privacy seriously. I have installed a local analytics package called [Matomo](https://matomo.org/), which interprets information your browser already sends (like IP address, screen resolution, browser, and operating system.) This information is regularly flushed, kept anonymous, and password-protected. I take precautions to ensure no one else sees this information, either. If you're running Do Not Track on your browser, Matomo won't track you. 
+<p class="noted">This website is built with Hugo. This site is ad-free and doesn't use trackers. If you'd like to support my writing, I'd love it if you could <a href="https://ko-fi.com/jasonheppler">buy me a coffee</a>.</p>
+</div>
+</section> 
 
-If you email me something I keep that anonymous, especially when sent encrypted. If I decide I would like to quote something from your email, I will ask you first. If you've emailed me about something I got wrong, I may use your name to credit the correction but I won't if it's not public information. [Here's my public key](https://jasonheppler.org/jasonheppler.asc). I'm also `jaheppler` on Keybase.
+<h3>Organizations I work with</h3>
+<section class="bio-wide">
+<p>Environmental Data and Governance Initiative</p>
+<p>Mozilla Foundation</p>
+<p>American Historical Association</p>
+<p>Western History Association</p>
+<p>Humanities+Design, Stanford University</p>
+<p>Spatial History Project, Stanford University</p>
+<p>Mode Shift Omaha</p>
+<p>Endangered Data Week</p>
+<p>Data Visualization Society</p>
+<p>Center for Digital Research in the Humanities</p>
+<p>University of Nebraska Consortium of Libraries</p>
 
-Please [email me](mailto:jason@jasonheppler.org) if you have any questions.
-
-## Colophon
-
-This website is built with Hugo. This site is ad-free and doesn't use trackers. If you'd like to support my writing, I'd love it if you could [buy me a coffee](https://ko-fi.com/jasonheppler).
+</section>
