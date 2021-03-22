@@ -32,10 +32,10 @@ slug: '/about/'
 
   <p><a href="mailto:jason@jasonheppler.org">jason@jasonheppler.org</a></p>
 
-  <p>Twitter ➝ <a href="">@jaheppler</a><br>
-  Micro.blog ➝ <a href="">@jaheppler</a><br>
-  Observable ➝ <a href="">@hepplerj</a><br>
-  GitHub ➝ <a href="">@hepplerj</a></p>
+  <p>Twitter ➝ <a href="https://twitter.com/jaheppler">@jaheppler</a><br>
+  Micro.blog ➝ <a href="https://micro.blog/jaheppler">@jaheppler</a><br>
+  Observable ➝ <a href="https://observablehq.com/@hepplerj">@hepplerj</a><br>
+  GitHub ➝ <a href="http://github.com/hepplerj">@hepplerj</a></p>
 
   <p><a href="https://jasonheppler.substack.com/subscribe">Subscribe to Breve</a>, my occasional newsletter on design, creativity, and human knowledge.</p>
 
