@@ -11,7 +11,7 @@ slug: '/about/'
 
   <p><a href="https://jasonheppler.org/files/jah-cv.pdf">You can find my full CV here</a>.</p>
 
-  (<a href="/bio/">Need a full bio?</a>)
+  <p>(<a href="/bio/">Need a full bio?</a>)</p>
 
   <p>I am the co-founder of <a href="http://endangereddataweek.org">Endangered Data Week</a>, an annual event to promote a culture of data consciousness by creating training materials, guidelines, and resources to advocate for open data and promote awareness around threats to publicly available data. I'm active in communities advancing open research including the <a href="https://mozilla.github.io/leadership-training/">Mozilla Foundation</a>.</p>
 
