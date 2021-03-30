@@ -6,7 +6,7 @@ categories:
 series: Living West
 ---
 
-<aside class="post">
+<aside class="posted">
 This post also appears at <a href="http://blogwest.org/2016/01/07/federal-policy-western-lands-and-malheur/">BlogWest</a>.
 </aside>
 

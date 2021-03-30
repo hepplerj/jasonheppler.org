@@ -5,7 +5,7 @@ categories:
 - digital humanities
 ---
 
-<aside class="post">
+<aside class="posted">
 This is the piece I wrote for the Roy Rosenzweig Center for History and New Media's <a href="https://rrchnm.org/news/arguing-with-digital-history-workshop-to-address-a-central-problem-in-digital-history/">Arguing with Digital History workshop</a>, being held September 15-16, 2017. A draft of this talk is versioned on <a href="https://github.com/hepplerj/arguing-digital-history">Github</a>, which will also likely include the most up-to-date version of this essay.
 </aside>
 

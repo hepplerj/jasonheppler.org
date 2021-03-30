@@ -5,7 +5,7 @@ categories:
 - digital humanities 
 ---
 
-<aside class="post">
+<aside class="posted">
 The slides for my talk at the Midwestern History Association conference are <a href="http://jasonheppler.org/presentations/keynote_mha/">now online</a>.
 </aside>
 
