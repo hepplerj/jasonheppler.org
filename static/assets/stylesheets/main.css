@@ -555,6 +555,13 @@ nav i {
   color: var(--color-text);
 }
 
+/* @media (min-width: 48em) { 
+  .footnotes { width: 80vw; }
+} */
+
+@media screen and (max-width: 768px) {
+  .footnotes { width: 80vw; } }
+
 .footnotes hr {
   margin-bottom: 1em;
 }
