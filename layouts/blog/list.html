@@ -9,8 +9,7 @@
 <h2>{{ .Key }}</h2>
     {{ range .Pages }}
     <div>
-      <div><a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a></div>
-      <div>{{ .Date.Format "January 2" }}</div>
+      <div><a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a> <span class="date">{{ .Date.Format "1/2" }}</span></div>
     </div>
     {{ end }}
 {{ end }}
