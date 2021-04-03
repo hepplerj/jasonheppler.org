@@ -46,7 +46,7 @@ const setAttributeValue = (selector, attribute, value) => {
  * @param {String} title - Title for screen readers.
  * @param {String} returnText - 'Back to content' text.
  */
-export default function({
+export default function accessibleFootnotes({
   selector = '.footnotes',
   title = 'Footnotes',
   returnText = 'Back to content'
