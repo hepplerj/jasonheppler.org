@@ -12,9 +12,12 @@
   --color-salmon: #ec8580;
   --color-peach: #fee5da;
   --color-tan: #fbf7f0;
+  --color-off-white: #fffaec;
   --color-teal: #5fddc5;
   --color-mint: #b3f4e0;
   --color-red: #E10001;
+  --color-green: #00D959;
+  --color-dark-green: #285346;
   --color-liberty-green: #b7e4cf;
   --color-ew-blue: #232444;
   --color-french-grey: #edeae6;
@@ -110,20 +113,7 @@
   font-stretch: normal;
   src: url(/assets/fonts/Inter-italic.var.woff2);
 }
-/* @font-face {
-  font-family: 'Interdisplay bold';
-  font-weight: 200 900;
-  font-style: bold;
-  font-stretch: normal;
-  src: url(/assets/fonts/Inter-Bold.woff);
-}
-@font-face {
-  font-family: 'Interdisplay italic';
-  font-weight: 200 900;
-  font-style: normal;
-  font-stretch: italic;
-  src: url(/assets/fonts/Inter-Italic.woff);
-} */
+
 *,
 *::before,
 *::after {
@@ -209,35 +199,6 @@ h6 {
     font-weight: 400;
     line-height: 1.25; }
   }
-
-
-  /* margin-top: 64px;
-margin-bottom: 12px;
-padding-top: 42px;
-font-family: Interdisplay, sans-serif;
-color: #000;
-font-size: 28px;
-line-height: 1.3;
-font-weight: 400;
-letter-spacing: 0.015em; */
-
-
-
-/* h1 {
-  margin: var(--space-x-small) 0 var(--space-x-small) 0;
-  font-size: var(--type-xx-large); }
-
-h2 {
-  font-size: var(--type-x-large); }
-
-h3 {
-  font-size: var(--type-large); }
-
-h4,
-h5,
-h6 {
-  font-size: var(--type-medium);
-  line-height: 1.25; } */
 
 p,
 ul,
@@ -350,8 +311,6 @@ hr {
   margin: 1em 0 1.5em 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em,1fr));
-  /* grid-gap: 1em; */
-  /* align-items: center; */
 }
 
 .bio-wide p {
@@ -409,10 +368,6 @@ textarea {
 div {
   display: block;
 }
-
-/* ==========================================================================
-Author's custom styles
-========================================================================== */
 
 nav {
   padding-bottom: 2em;
@@ -474,38 +429,19 @@ nav i {
    border-radius: 20px;
  }
 
-/* #description {
-  position: relative;
-} */
-
-/* ul {
-  list-style-type: square;
-} */
-
-/* .feed-icon {
-  height: 20px;
-  width: auto;
-  margin-top: -1px;
-} */
-
-/* #description ul a {
-  text-decoration: none;
-} */
-/* 
-.pad2y {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.manifesto {
+  font-family: var(--font-mono);
+  -webkit-text-stroke: 1px var(--color-green);
+  -webkit-text-fill-color: var(--color-green);
 }
 
-.size-2x {
-  font-size: 28px;
-  line-height: 1.4;
-} */
+.manifesto span {
+  -webkit-text-fill-color: transparent
+}
 
-/* .small {
-  font-size: 0.8em;
-  line-height: 1.2;
-} */
+.impact strong {
+  color: var(--color-green);
+}
 
 .book {
   margin: 0 0 1rem 0;
@@ -555,10 +491,6 @@ nav i {
   color: var(--color-text);
 }
 
-/* @media (min-width: 48em) { 
-  .footnotes { width: 80vw; }
-} */
-
 @media screen and (max-width: 768px) {
   .footnotes { width: 80vw; } }
 
@@ -599,46 +531,10 @@ nav i {
 .floating-footnotes li[role=doc-endnote] p:last-child {
   margin-bottom: 0;
 }
-/* .footnotes {
-  display: inline;
-  float: right;
-  position: relative;
-  width: 20vw;
-  margin-right: -24vw;
-  font-size: 16px;
-  color:red; }
-   
-@media (max-width: 768px) {
-  .footnotes {
-  display: block;
-  float: none;
-  margin: 5% 10% 5% 10%;
-  width: 80%;
-  font-size: 15px;
-  color:red;
-  }
-} */
-
-/* #code h4 {
-  margin-top: 2rem;
-  margin-bottom: 0.0rem;
-} */
-/* 
-.semester {
-  min-width: 140px;
-  display: inline-block;
-} */
 
 td {
   padding: 8px 4px;
 }
-
-/* .short-description {
-  margin-top: 0em;
-  font-style: italic;
-} */
-
-
 
 .rss-feed {
   width: auto;
@@ -652,39 +548,11 @@ td {
 h1 + p, h2 + p, h3 + p {
   margin-top: 0.5rem;
 }
-/* 
-.u-h1-decorate {
-  font-size: 2.75rem;
-}
-
-.u-h1-decorate::after {
-  content: '\2009\00AC';
-  display: inline-block;
-  color: #ccc;
-}
-
-.u-lead {
-  font-size: var(--type-large);
-  font-weight: 500;
-} */
-
-.typed-cursor {
-  opacity: 1;
-  -webkit-animation: blink .7s infinite;
-  animation: blink .7s infinite;
-}
-
-#typed-strings {
-  display: none;
-}
 
 .highlight {
-  /* background: var(--color-code-block); */
   display: inline-block;
   padding: 10px;
   margin: 10px 0 10px 0;
-  /* border-radius: 5; */
-  /* box-shadow: 1px 1px 2px rgba(0,0,0,.125); */
   width: 100%;
 }
 
@@ -760,21 +628,12 @@ article figure img {
   max-width: 100%;
   height: auto;
 }
-/* 
-.writing { 
-  display: grid; 
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
-  grid-template-columns: 1fr min-content;
-} */
 
 .books>div,.writing>div,.teaching>div {
   display:grid;
   grid-column-gap:5px;
   grid-row-gap: 5px;
   grid-template-columns: 1fr min-content; }
-
-/* .writing>div,.teaching>div{grid-template-columns:1fr min-content; } */
 
 .books>div{grid-template-columns:1fr .75fr min-content 70px; }
 
@@ -880,11 +739,6 @@ aside.newsletter {
   text-align: left;
 }
 
-/* .floating-footnotes {
-  grid-column: 2;
-  grid-row: 1;
-} */
-
 .post-left {
   grid-column: 1;
   grid-row: 1;
@@ -897,6 +751,43 @@ aside.newsletter {
   }
 
   .post-left {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+.metrics_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: var(--type-small);
+  text-align: center;
+}
+
+.metrics-left {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: var(--color-green);
+  color: var(--color-sheet);
+}
+
+.metrics-left p {
+  text-align: center;
+}
+
+.metrics_container_item {
+  margin: 20px auto;
+}
+
+@media screen and (max-width: 768px) {
+  .metrics_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .metrics-left {
     grid-column: auto;
     grid-row: auto;
   }
@@ -923,29 +814,6 @@ a.permalink, a.permalink:visited {
   font-size: var(--type-xxx-small);
   text-transform: uppercase;
 }
-/* 
-.footnotes hr {
-  width: 20%;
-  margin: 1.5rem 0;
-}
-
-.footnotes ol {
-  font-family: var(--font-sans);
-  font-size: var(--type-xx-small);
-  color: var(--color-text);
-  line-height: 1.7;
-} */
-/* 
-.footnote-ref a, .footnote-return {
-  text-decoration: none;
-  border: none;
-  padding: 1px 3px;
-  background: var(--color-french-grey);
-  text-shadow: none;
-  border-radius: 4px;
-  color: var(--color-grey);
-  font-weight: 600;
-} */
 
 .footnote-ref a, .footnote-return {
   display: inline;
@@ -1159,8 +1027,6 @@ table th {
     padding: 0.5em 1em; /* cell padding */
 }
 
-/* Consider removing this next declaration block, as it causes problems when
-there's a rowspan on the first cell. Case added to the tests. issue#432 */
 table td:first-child,
 table th:first-child {
     border-left-width: 0;

@@ -2,7 +2,10 @@
 
 <article id="{{ urlize .Title }}">
   <header>
+    {{ if .Params.page_type }}
+    {{ else }}
     <h1 class="title"><strong>{{ .Title }}</strong></h1>
+    {{ end }}
     {{ partial "article-meta.html" . }}
   </header>
   {{ if .Params.toc }}
