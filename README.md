@@ -1,5 +1,8 @@
 # JasonHeppler.org  Site Source
 
+[![Build Status](https://img.shields.io/static/v1.svg?label=CSL&message=software%20against%20climate%20change&color=green?style=flat&logo=github)](https://img.shields.io/static/v1.svg?label=CSL&message=software%20against%20climate%20change&color=green?style=flat&logo=github)
+
+
 This repository contains the source for my personal site at 
 [http://jasonheppler.org](http://jasonheppler.org). The site runs on 
 [Hugo](https://gohugo.io). 
@@ -36,4 +39,4 @@ When development is done, running `make deploy` will rebuild the site with `make
 
 # Licensing
 
-All the content (files and folders in `content`) along with the HTML files and index are under the [Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/) license (in short, my work is my contribution to free culture.) Feel free to use the HTML and CSS as you please. If you do use them, I would appreciate a link back to [http://github.com/hepplerj/jasonheppler.org](http://github.com/hepplerj/jasonheppler.org). 
+All the content (files and folders in `content`) along with the HTML files and index are under the [Climate Strike License](https://github.com/climate-strike/license) (in short, my work is my contribution to free culture.) Feel free to use the HTML and CSS as you please unless you're an industry or individual working in fossil fuels. If you do use them, I would appreciate a link back to [http://github.com/hepplerj/jasonheppler.org](http://github.com/hepplerj/jasonheppler.org). 
