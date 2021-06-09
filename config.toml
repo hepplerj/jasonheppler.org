@@ -68,7 +68,7 @@ publishDir = "public"
   weight = 4.0
 
   [[menu.main]]
-  name = "Digital History"
+  name = '<i class="fas fa-briefcase"></i> Work'
   url = "/research/"
   weight = 5.0
 

@@ -1,10 +1,10 @@
 <nav class="main-nav">
   <ul id="menu" class="menu">
       <li class="menu-item"><a href="/" class="site-title">{{ .Site.Title }}</a></li>
-    {{ range .Site.Menus.main -}}
-      <li class="menu-item">
-        <a class="menu-item-link" href="{{ .URL | safeURL }}">{{ .Name }}</a>
-      </li>
-    {{- end }}
+      <li class="menu-item"><a class="menu-item-link link" href="/blog/"><i class="fas fa-archive"></i> Blog</a></li>
+        <li class="menu-item"><a class="menu-item-link link" href="/publications/"><i class="fas fa-book"></i> Publications</a></li>
+        <li class="menu-item"><a class="menu-item-link link" href="/research/"><i class="fas fa-briefcase"></i> Work</a></li>
+        <li class="menu-item"><a class="menu-item-link link" href="/courses/"><i class="fas fa-graduation-cap"></i> Teaching</a></li>
+        <li class="menu-item"><a class="menu-item-link link" href="/about/"><i class="fas fa-user"></i> About</a></li>
   </ul>
 </nav>

@@ -8,6 +8,10 @@ Studying history gives you [a lifetime of critical skills](http://www.nytimes.co
 
 <div class="teaching">
   <div>
+    <div>Digital Methods for Military History</div>
+    <div>June 2021</div>
+  </div>
+  <div>
     <div><a href="/courses/bootcampr.2021/">BootcampR: An Introduction to R</a></div>
     <div>Spring 2021</div>
   </div>
@@ -16,16 +20,16 @@ Studying history gives you [a lifetime of critical skills](http://www.nytimes.co
     <div>Spring 2020</div>
   </div>
   <div>
-    <div>Workshop: Network Analysis for the Humanities</div>
-    <div>Fall 2019</div>
-  </div>
-  <div>
     <div><a href="https://github.com/endangereddataweek/resources/tree/master/workshop-r-data-manipulation">Workshop: Data Wrangling with R</a></div>
-    <div>2018-2019</div>
+    <div>2018-2021</div>
   </div>
   <div>
     <div><a href="https://github.com/endangereddataweek/resources/tree/master/workshop-r-data-visualization">Workshop: Data Visualization with R</a></div>
-    <div>2018-2019</div>
+    <div>2018-2021</div>
+  </div>
+  <div>
+    <div>Workshop: Network Analysis for the Humanities</div>
+    <div>Fall 2019</div>
   </div>
   <div>
     <div>Workshop: Dynamic Digital Methods for Integrating Local History <br/> into Public History Institutions and the K-16 Classroom</div>
@@ -33,10 +37,6 @@ Studying history gives you [a lifetime of critical skills](http://www.nytimes.co
   </div>
   <div>
     <div><a href="https://hcommons.org/deposits/item/hc:17867/">Directed Readings in Digital History</a></div>
-    <div>Spring 2018</div>
-  </div>
-  <div>
-    <div><a href="https://jasonheppler.org/courses/aha-workshop-2018/">Workshop: Introduction to Network Analysis</a></div>
     <div>Spring 2018</div>
   </div>
   <div>

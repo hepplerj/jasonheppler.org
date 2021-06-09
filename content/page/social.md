@@ -1,5 +1,5 @@
 ---
-title: "Social media"
+title: "Finding me on social media"
 url: /social-media/
 ---
 

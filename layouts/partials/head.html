@@ -3,7 +3,7 @@
   <head>
     <link href="http://gmpg.org/xfn/11" rel="profile">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="keywords" lang="us=en" content="jason heppler, jason, heppler, design, digital humanities, digital history, tools, visualization, stanford, nebraska, spatial history"/>
+    <meta name="keywords" lang="us=en" content="jason heppler, jason, heppler, design, digital humanities, digital history, tools, visualization, george mason, virginia, chnm, roy rosenzweig, center for history and new media, nebraska, spatial history"/>
   
     {{ if .IsHome }}
     <title>{{ .Site.Title }} | Hello! Nice to meet you. I'm Jason.</title>
@@ -18,7 +18,7 @@
     {{ end }}
 
     <!-- Enable responsiveness on mobile devices-->
-    <meta name="description" content="Jason Heppler offical website. Data Visualization, Maps, Networks, Digital History."/>
+    <meta name="description" content="Jason Heppler's offical website. Data Visualization, Maps, Networks, Digital History."/>
     <meta name="author" content="Jason A. Heppler"/>
     <meta name="copyright" content="&copy; Copyright 2008 to Present"/>
     <meta name="HandheldFriendly" content="True">
@@ -32,15 +32,12 @@
     <link rel="canonical" href="https://jasonheppler.org/" />
 
     <link href="https://micro.blog/jaheppler" rel="me" />
-    <link href="https://weblog.jasonheppler.org" rel="me" />
     <link href="https://hcommons.org/members/hepplerj/" rel="me">
     <link href="https://orcid.org/0000-0003-4158-6186" rel="me">
     <link href="https://github.com/hepplerj/" rel="me">
-    <link href="https://www.unomaha.edu/criss-library/about-us/staff-directory/jason-heppler.php" rel="me">
     <link href="https://scholar.google.com/citations?user=X2hGnS4AAAAJ" rel="me">
     <link href="https://www.zotero.org/hepplerj/" rel="me">
     <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="Jason Heppler's blog." />
-    <link rel="alternate" type="application/rss+xml" href="https://weblog.jasonheppler.org/feed.xml" title="{{ .Site.Params.blogFeedTitle }}" />
 
     <!-- RDFa Metadata (in DublinCore) -->
     <meta property="dc:title" content="" />
@@ -76,24 +73,27 @@
     <meta name="twitter:description" content="A blog on history and technology by Jason A. Heppler.">
       
     <!-- stylesheets -->
-    <link rel="stylesheet" href="/assets/stylesheets/normalize.min.css">
-    <link rel="stylesheet" href="/assets/stylesheets/syntax.css">
+    <!-- <link rel="stylesheet" href="/assets/stylesheets/normalize.min.css"> -->
     <link rel="stylesheet" href="/assets/stylesheets/main.css">
+    <link rel="stylesheet" href="/assets/stylesheets/syntax.css">
+    <link rel="stylesheet" href="/assets/stylesheets/bigfoot.css">
     <link rel="shortcut icon" href="/assets/images/favicon.png">
 
     <!-- javascripts -->
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://kit.fontawesome.com/6a45ee0aa7.js" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script> -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> -->
-    <!-- <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> -->
     <script type="module" src="/assets/javascripts/hepp.js"></script>
-    <script src="/assets/javascripts/lazyload.js"></script>
-    <!-- <script type="module" src="/assets/javascripts/marginalia.js"></script> -->
+    <script src="https://kit.fontawesome.com/713a5e52fa.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/assets/javascripts/bigfoot.min.js"></script>
+    <script type="text/javascript">
+        $.bigfoot();
+    </script>
 
   </head>
   <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
     <div class="layout">
+      <div id="progress-bar"></div>
+
       {{ partial "nav.html" . }}
 
     <main id="content" class="content">

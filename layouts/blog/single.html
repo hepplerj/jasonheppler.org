@@ -1,9 +1,8 @@
 {{ partial "head.html" . }}
 
 <article id='{{ urlize .Title }}' class="h-entry post">
-  <section class="post-left">
   <header>
-    <h2 class="post-title"><a href='{{ .Permalink }}' class='p-name'><strong>{{ .Title }}</strong></a> <span class="categories">{{ range .Params.categories }}{{ . }}{{ end }}</span></h2>
+    <h2 class="post-title"><a href='{{ .Permalink }}' class='p-name'><strong>{{ .Title }}</strong></a></h2>
   </header>
 
   {{ with .Params.image }}
@@ -17,7 +16,6 @@
   {{ if isset .Params "external" }}
   <p class="link-post-out">Linked: <a href="{{ index .Params "external" }}">{{ index .Params "title" }} →</a></p>
   {{ end }}
-  </section>
 </article>
 
 {{ partial "blog-comments" . }}

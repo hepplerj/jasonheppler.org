@@ -1,7 +1,16 @@
 <div class="blog-nav">
-<p>Jason Heppler is a digital humanities developer living in Omaha. <a href="/about/">More »</a></p>
+<p>Jason Heppler is a digital history developer living in Omaha. <a href="/about/">More »</a></p>
 
 <p><strong>Do you want to discuss this?</strong> Try mentioning @jaheppler on <a href="https://twitter.com/jaheppler">Twitter</a> or <a href='https://micro.blog/jaheppler'>Micro.blog</a>, or <a href="mailto:jason@jasonheppler.org">email me</a>.</p>
 
-<p class="impact">This page uses ~<strong>3.8kb</strong> of data. You've generated around <strong>0.31g</strong> of CO2 by visiting. <a href="https://jasonheppler.org/low-impact/">Curious</a>?</p>
+<p class="impact">This page uses ~<strong><span id="carbon"></span>kb</strong> of data. You've generated around <strong><span id="page_carbon"></span>g</strong> of CO2 by visiting. <a href="https://jasonheppler.org/low-impact/">Curious</a>?</p>
 </div>
+
+
+<script>
+page_data = (document.documentElement.outerHTML.length/1024).toFixed(2);
+document.getElementById('carbon').innerHTML = page_data;
+
+page_carbon = (page_data/12).toFixed(2); // the average webpage generates 4.61 grams CO2 for every page view
+document.getElementById('page_carbon').innerHTML = page_carbon;
+</script>

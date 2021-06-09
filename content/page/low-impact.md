@@ -28,7 +28,7 @@ My goal here is to create a light-weight website that reduces data transfer. To 
     <p>This page uses ~<strong>3.8kb</strong> of data. You've generated around <strong>0.31g</strong> of CO2 by visiting.</p>
   </div>
   <div class="metrics-right">
-    <p>If this website received 10,000 visitors per month (far, far less than I usually get even in a year) that'd be the equivalent of 37.06kg of CO2. That's about as much CO2 as boiling 5,022 cups of coffee. Put another way, this webpage emits the amount of carbon that two trees absorb in a year.</p>
+    <p>If this website received 10,000 visitors per month (far, far less than I usually get even in a year) that'd be the equivalent of 37.06kg of CO2. That's about as much CO2 as boiling 5,022 cups of coffee. Put another way, this website emits the amount of carbon that a single tree absorbs in a year.</p>
   </div>
 </div>
 
