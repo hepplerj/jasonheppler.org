@@ -23,16 +23,16 @@
   --color-ew-blue: #232444;
   --color-french-grey: #edeae6;
   --color-code-block: #f5f2f0;
-  --color--accent-primary: #1d78bd; /*hsl(22, 75.6%, 41.8%);*/
-  --color--accent-primary-fuller: #173061;/*hsl(14, 97.2%, 42.4%);*/
+  --color--accent-primary: #1F702B; /* #1d78bd;*/ /*hsl(22, 75.6%, 41.8%);*/
+  --color--accent-primary-fuller: #113D18; /* #173061;*/ /*hsl(14, 97.2%, 42.4%);*/
   --color--accent-primary-faded: #388dce;/*hsl(30, 40%, 41.2%);*/
   --color-text: var(--color-black);
   --color-text-alt: hsl(0, 0%, 40%);
   --color-background: var(--color-french-grey);
-  --color-sheet: var(--color-white);
+  --color-sheet: #F8FFF4;
   --color-neutral: var(--color-grey);
   --color-link: var(--color-blue);
-  --color-aside: #f9f9f9;
+  --color-aside: #FFFEFA;
   --space-base: 1em;
   --space-x-small: calc(var(--space-base) / 4);
   --space-small: calc(var(--space-base) / 2);
@@ -44,10 +44,11 @@
   --space-navbar: var(--space-triple);
   --space-mobile: 85%;
   --grid--gutter: 1.25rem;
-  --font-serif: 'Interdisplay', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-  --font-sans: 'Source Sans Variable', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+  /* --font-writer: iawriter, hiragino sans, ヒラギノ角ゴ pro w4, ヒラギノ角ゴ pro w3, hiragino kaku gothic pro, Osaka, メイリオ, Meiryo, ＭＳ Ｐゴシック, ms pgothic, -system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, apple color emoji, segoe ui emoji, segoe ui symbol, sans-serif; */
+  --font-serif: lora, TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+  --font-sans: 'Interdisplay', /*'Source Sans Variable',*/ -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
   --font-mono: San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
-  --type-base: calc(1.6em + 0.5vw);
+  --type-base: calc(1.5em + 0.5vw);
   --type-xxx-small: 55%;
   --type-xx-small: 65%;
   --type-x-small: 75%;
@@ -113,6 +114,69 @@
   src: url(/assets/fonts/Inter-italic.var.woff2);
 } 
 
+@font-face {
+  font-family: iawriter;
+  src: url(/assets/fonts/iAWriterDuospace-Regular.woff2) format("woff2");
+  font-style: normal;
+  font-weight:400
+}
+
+@font-face {
+  font-family: iawriter;
+  src: url(/assets/fonts/iAWriterDuospace-Italic.woff2) format("woff2");
+  font-style: italic;
+  font-weight:400
+}
+
+@font-face {
+  font-family: iawriter;
+  src: url(/assets/fonts/iAWriterDuospace-Bold.woff2) format("woff2");
+  font-style: normal;
+  font-weight:700
+}
+
+@font-face {
+  font-family: iawriter;
+  src: url(/assets/fonts/iAWriterDuospace-BoldItalic.woff2) format("woff2");
+  font-style: italic;
+  font-weight:700
+}
+
+
+
+
+@font-face {
+  font-family: lora;
+  src: url(/assets/fonts/Lora-Regular.ttf);
+  font-style: normal;
+  font-weight:400
+}
+
+@font-face {
+  font-family: lora;
+  src: url(/assets/fonts/Lora-Italic.ttf);
+  font-style: italic;
+  font-weight:400
+}
+
+@font-face {
+  font-family: lora;
+  src: url(/assets/fonts/Lora-Bold.ttf);
+  font-style: normal;
+  font-weight:700
+}
+
+@font-face {
+  font-family: lora;
+  src: url(/assets/fonts/Lora-BoldItalic.ttf);
+  font-style: italic;
+  font-weight:700
+}
+
+
+
+
+
 *,
 *::before,
 *::after {
@@ -123,8 +187,10 @@ html {
 }
   
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-size: var(--type-base);
+  font-weight: 400;
+  font-style: normal;
   color: var(--color-text);
   background-color: var(--color-sheet);
   overflow-x: hidden;
@@ -132,7 +198,9 @@ body {
   padding: 0; 
   --webkit-font-smoothing: antialiased; 
   text-rendering: optimizeLegibility; 
-  line-height: 1.6;}
+  line-height: 1.6;
+}
+
 
 body {
   /* background: linear-gradient(to top, rgb( 250, 250, 250 ) 70%, rgba( 250, 250, 250, 0.8 ) 120%), url( "/assets/images/relief.svg" ) */
@@ -226,8 +294,8 @@ small,
   line-height: 1.5; }
 
 .larger {
-  font-size: 1.33em!important;
-  color: var(--color-light-grey);
+  font-size: 160%;
+  color: var(--color-text);
   font-weight: 400;
   margin-bottom: .5em!important;
   line-height: 1.5;
@@ -280,7 +348,7 @@ hr {
   grid-template-rows: [nav] minmax(8em, 30vmin) [main] 1fr [foot] 15em; }
   @media (min-width: 48em) {
     .layout {
-      grid-template-columns: 1fr [main] 78ch 1fr; } }
+      grid-template-columns: 1fr [main] 65ch 1fr; } }
 
 .content {
   grid-column: main;
@@ -417,7 +485,6 @@ nav {
 
 nav a,
 nav a:visited {
-  /* padding-right: 1.5rem; */
   white-space: nowrap;
   text-decoration: none;
 }
@@ -440,6 +507,54 @@ nav i {
 .site-navbar {
   float: right; }
 
+/* button testing */
+
+.header-primary .toggler {
+  width: 28px;
+  height: 16px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  border: 0;
+  background-color: transparent;
+  outline: 0;
+  padding: 0;
+}
+
+.header-primary .toggled__top {
+  top: 0;
+}
+
+.header-primary .toggled__bottom {
+  bottom: 0;
+}
+
+.header-primary .toggled {
+  display: block;
+  background: #222;
+  width: 100%;
+  height: 3px;
+  border-radius: .5px;
+  position: absolute;
+  transition: transform .1096s cubic-bezier(.52, .16, .52, .84)
+}
+
+.header-primary nav {
+  margin-top: 3.5em;
+  width: 100%;
+  transition: all .46s cubic-bezier(.52, .16, .24, 1);
+  height: 0;
+  opacity: 0;
+}
+
+.nav__group {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* end button testing */
+
   .menu {
     display: inline-block;
     position: relative;
@@ -450,14 +565,14 @@ nav i {
     .menu-item {
       display: inline-block; 
       font-family: var(--font-sans);
-      padding-right: 2rem;
+      /* padding-right: 2rem; */
     }
   
       a.site-title {
         font-weight: 600;
         text-decoration: none;
         color: var(--color-text);
-        font-family: "Interdisplay"
+        font-family: var(--font-sans);
       }
 
       .menu-item-link {
@@ -500,7 +615,7 @@ nav i {
     }
     
     .menu-item-link {
-        font-size:18px
+        /* font-size:18px */
     }
 
 @include max-screen() {
@@ -551,7 +666,7 @@ nav i {
   width: 20vw;
   margin-right: -24vw;
   font-family: var(--font-sans);
-  font-size: var(--type-xx-small);
+  /* font-size: var(--type-xx-small); */
   color: var(--color-text);
 }
 
@@ -763,6 +878,7 @@ article figure img {
 article p,
 #publications-and-projects .book p {
   text-align: left;
+  font-size: var(--type-medium);
 }
 
 .migration-warning {
@@ -773,8 +889,8 @@ article p,
 }
 
 .lede {
-  line-height: 1.8em;
-  font-weight: 400;
+  font-size: var(--type-large);
+  line-height: 1.6071428571;
 }
 
 .blog-nav {
@@ -783,9 +899,12 @@ article p,
   width: 100%;
   text-align: left;
   background: var(--color-aside);
-  font-family: var(--font-sans);
-  font-size: var(--type-x-small);
   border-radius: .5rem;
+}
+
+.blog-nav p {
+  font-size: var(--type-xx-small);
+  font-family: var(--font-sans);
 }
 
 .blog-nav img {
@@ -808,7 +927,7 @@ article p,
 aside {
   background: var(--color-aside);
   font-family: var(--font-sans);
-  font-size: var(--type-x-small);
+  font-size: var(--type-small);
   padding: 15px;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -824,9 +943,9 @@ aside.warn {
 aside.newsletter {
   background: var(--color-aside);
   padding: 15px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  font-size: var(--type-medium);
+  margin: 0 auto;
+  /* width: 70%; */
+  font-size: var(--type-small);
   text-align: center;
 }
 
@@ -857,6 +976,26 @@ aside.newsletter {
     grid-row: auto;
   }
 }
+
+/* .home-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.scholarship {
+  grid-row: 1;
+}
+
+.teaching {
+  grid-row: 1;
+}
+
+.contact {
+  grid-row: 1;
+} */
 
 .metrics_container {
   display: grid;
