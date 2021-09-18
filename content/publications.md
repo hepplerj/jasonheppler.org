@@ -13,7 +13,7 @@ For a complete list of my scholarship, please see my [CV](https://jasonheppler.o
 
 {{% book title="Suburban by Nature: Silicon Valley and the Transformation of American Environmental Politics" year="2022" publisher="University of Oklahoma Press" %}}
 
-Few places symbolize the twentieth century like Silicon Valley. Stretching from the communities of San Jose to Palo Alto, the dense suburban region is home to nation’s high tech industrial corridor. In my book, I re-imagine the Silicon Valley’s history not just as symbol of post-industrialism, but as an illustrative of the consequences of the post-war period’s uneven suburban growth in shaping 20th century environmental politics, concerns over social justice, and ideas of sustainability. I complicate the now familiar story of suburbanization’s rapid transformation of post-war American cities by explaining how local activists linked social and environmental issues in creating a new form of politics. In doing so, I help place current debates over sustainability into a deeper historical context and problematize the post-war environmental movement as at once a movement of the white middle class, which gave rise to environmental and social justice movements of the latter half of the 20th century.
+**Forthcoming**. Few places symbolize the twentieth century like Silicon Valley. Stretching from the communities of San Jose to Palo Alto, the dense suburban region is home to nation’s high tech industrial corridor. In my book, I re-imagine the Silicon Valley’s history not just as symbol of post-industrialism, but as an illustrative of the consequences of the post-war period’s uneven suburban growth in shaping 20th century environmental politics, concerns over social justice, and ideas of sustainability. I complicate the now familiar story of suburbanization’s rapid transformation of post-war American cities by explaining how local activists linked social and environmental issues in creating a new form of politics. In doing so, I help place current debates over sustainability into a deeper historical context and problematize the post-war environmental movement as at once a movement of the white middle class, which gave rise to environmental and social justice movements of the latter half of the 20th century.
 
 {{% /book %}}
 
@@ -21,11 +21,15 @@ Few places symbolize the twentieth century like Silicon Valley. Stretching from 
 
 {{% book title="Digital Community Engagement: Partnering Communities with the Academy" image="dice.jpeg" year="2020" publisher="University of Cincinnati Press" url="https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement" %}}
 
-Edited with Rebecca Wingo and Paul Schadewald, our edited volume brings together cutting-edge campus-community partnerships with a focus on digital projects. Through a series of case studies authored by academics and their community partners, we explore models for digital community engagement that leverages new media through reciprocal partnerships. The contributions to the volume stand at the crossroads of digital humanities, public history, and community engagement, drawing ideas, methods, and practices from various disciplines to inform our public partnerships. By highlighting these projects we hope to provide other institutions, cultural heritage organizations, universities, and communities models for successful engagement.
+Edited with Rebecca Wingo and Paul Schadewald, our volume brings together cutting-edge campus-community partnerships with a focus on digital projects. Through a series of case studies authored by academics and their community partners, we explore models for digital community engagement that leverages new media through reciprocal partnerships. The contributions to the volume stand at the crossroads of digital humanities, public history, and community engagement, drawing ideas, methods, and practices from various disciplines to inform our public partnerships. By highlighting these projects we hope to provide other institutions, cultural heritage organizations, universities, and communities models for successful engagement.
 
-Awards: 
+**Winner of the [2021 National Council on Public History (NCPH) Book Award](https://ncph.org/about/awards/book-award/)**.
 
-- National Council on Public History (NCPH) Book Award, 2021
+Reviews: 
+
+- Ann-Marie Foster, *[Public History Review](https://epress.lib.uts.edu.au/journals/index.php/phrj/article/view/7427/7564)*
+- Megan Smeznik, *[Reviews in Digital Humanities](https://reviewsindh.pubpub.org/pub/digital-community-engagement/release/2)*
+- Christopher D. Cantwell, *[The Public Historian](https://online.ucpress.edu/tph/article-abstract/43/3/125/118047/Review-Digital-Community-Engagement-Partnering?redirectedFrom=fulltext)*
 
 [University of Cincinnati Press](https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement) (open access) | [Amazon.com](https://www.amazon.com/Digital-Community-Engagement-Partnering-Communities/dp/1947602519/ref=sr_1_1?dchild=1&keywords=digital+community+engagement&qid=1607369554&sr=8-1)
 

@@ -3,19 +3,12 @@ description = "Jason Heppler is a historian of the American environment and the 
 baseURL = "https://jasonheppler.org/"
 copyright = "2008-2021"
 languageCode = "en-us"
-footnoteReturnLinkContents = "↳"
+footnoteReturnLinkContents = "&#8593;"
 
 [permalinks]
   blog = "/:year/:month/:day/:slug/"
   archive = "/:slug/"
   page = "/:section/:slug/"
-
-FootnoteReturnLinkContents = "↑"
-
-pygmentsOptions = "linenos=table"
-pygmentsCodefences = true
-pygmentsUseClasses = true
-pygmentsCodefencesGuessSyntax = true
 
 disableKinds = "taxonomyTerm"
 
@@ -35,7 +28,10 @@ publishDir = "public"
   term = ["HTML", "RSS"]
 
 [markup]
-  defaultMarkdownHandler = "blackfriday"
+  defaultMarkdownHandler = "blackFriday"
+  [markup.highlight]
+    guessSyntax = true
+    style = 'vc'
 
 [outputFormats]
   [outputFormats.RSS]
@@ -49,35 +45,3 @@ publishDir = "public"
 
 [services.rss]
   limit = 20
-
-[menu]
-
-  [[menu.main]]
-  name = "Blog"
-  url = "/blog/"
-  weight = 2.0
-
-  [[menu.main]]
-  name = "Shelf"
-  url = "/books/"
-  weight = 3.0
-
-  [[menu.main]]
-  name = "Publications"
-  url = "/publications/"
-  weight = 4.0
-
-  [[menu.main]]
-  name = '<i class="fas fa-briefcase"></i> Work'
-  url = "/research/"
-  weight = 5.0
-
-  [[menu.main]]
-  name = "Teaching"
-  url = "/courses/"
-  weight = 6.0
-
-  [[menu.main]]
-  name = "About"
-  url = "/about/"
-  weight = 7.0

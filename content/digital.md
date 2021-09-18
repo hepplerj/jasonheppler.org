@@ -9,7 +9,12 @@ I've been designing, developing, and teaching digital and public history for ten
 
 <div class="project-box">
 
-  <a class="project" href="https://www.ladalecwinling.com/work#/interstates/">
+  <a class="project" href="https://religiousecologies.org">
+    <img src="/assets/images/portfolio_ecologies.png" alt="Religious Ecologies" />
+    <p class="small"><span class="project-title">Religious Ecologies</span> Creating new datasets from historical sources and new ways of visualizing them so that we can better understand the history of American religion.</p>
+  </a>
+
+  <a class="project" href="https://www.neh.gov/blog/announcing-new-odh-awards-july-2020">
     <img src="/assets/images/portfolio_interstate.png" alt="Connecting the Interstates" />
     <p class="small"><span class="project-title">Connecting the Interstates</span> An NEH planning grant to envision a project visualizing and critically examining the development of the US interstate highway system.</p>
   </a>
@@ -74,7 +79,7 @@ I've been designing, developing, and teaching digital and public history for ten
     <p class="small"><span class="project-title">Western Federal Lands</span> Visualizing the federal government's holdings of Western land.</p>
   </a>
 
-  <a class="project" href="http://digitalhistory.stanford.edu/projects/mtpoleskey/zscore2/">
+  <a class="project" href="https://koenigsbergfood.weebly.com">
     <img src="/assets/images/portfolio_prussia.png" alt="Prussian Foodstuffs" />
     <p class="small"><span class="project-title">Prussian Foodstuffs</span> Exploring changes in taste among food items at the palace in Königsberg, Prussia during the reign of Friedrich Wilhelm. Collaboration with Molly Taylor-Poleskey.</p>
   </a>

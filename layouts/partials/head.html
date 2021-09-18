@@ -6,7 +6,7 @@
     <meta name="keywords" lang="us=en" content="jason heppler, jason, heppler, design, digital humanities, digital history, tools, visualization, george mason, virginia, chnm, roy rosenzweig, center for history and new media, nebraska, spatial history"/>
   
     {{ if .IsHome }}
-    <title>{{ .Site.Title }} | Hello! Nice to meet you. I'm Jason.</title>
+    <title>{{ .Site.Title }} | Historian of the North American environment</title>
     {{ else }}
     <title>{{ .Title }} | {{ .Site.Title }}</title>
     {{ end}}
@@ -73,21 +73,24 @@
     <meta name="twitter:description" content="A blog on history and technology by Jason A. Heppler.">
       
     <!-- stylesheets -->
-    <!-- <link rel="stylesheet" href="/assets/stylesheets/normalize.min.css"> -->
-    <link rel="stylesheet" href="/assets/stylesheets/main.css">
-    <link rel="stylesheet" href="/assets/stylesheets/syntax.css">
-    <link rel="stylesheet" href="/assets/stylesheets/bigfoot.css">
+    {{ if eq hugo.Environment "development" }}
+    {{ $devCSS := resources.Get "stylesheets/main.css" }}
+    <link rel="stylesheet" href="{{ $devCSS.Permalink }}">
+    {{ else }}
+    {{ $mainCSS := resources.Get "stylesheets/main.css" | resources.Minify | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" href="{{ $mainCSS.Permalink }}">
+    {{ end }}
     <link rel="shortcut icon" href="/assets/images/favicon.png">
 
     <!-- javascripts -->
-    <script type="module" src="/assets/javascripts/hepp.js"></script>
-    <script src="https://kit.fontawesome.com/713a5e52fa.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/assets/javascripts/bigfoot.min.js"></script>
-    <script type="text/javascript">
-        $.bigfoot();
-    </script>
+    {{ if eq hugo.Environment "development" }}
+    {{ $devJS := resources.Get "javascripts/hepp.js" | js.Build }}
+    <script type="module" src="{{ $devJS.Permalink }}"></script>
+    {{ else }}
+    {{ $js := resources.Get "javascripts/hepp.js" | js.Build | resources.Minify }}
+    {{ $secureJS := $js | resources.Fingerprint "sha512" }}
+    <script type="module" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+    {{ end }}
 
   </head>
   <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
