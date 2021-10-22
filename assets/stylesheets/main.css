@@ -71,7 +71,7 @@
 @media (min-width: 90em) {
   :root {
     --type-base: 2.2em; } }
-@font-face {
+/* @font-face {
   font-family: 'Source Sans Variable';
   font-weight: 200 900;
   font-style: normal;
@@ -84,7 +84,7 @@
   font-style: italic;
   font-stretch: normal;
   src: url(/assets/fonts/SourceSansVariable-Italic.ttf.woff2);
-}
+} */
 /* @font-face {
   font-family: 'Newsreader';
   font-weight: 200 700 900;
@@ -114,7 +114,7 @@
   src: url(/assets/fonts/Inter-italic.var.woff2);
 } 
 
-@font-face {
+/* @font-face {
   font-family: iawriter;
   src: url(/assets/fonts/iAWriterDuospace-Regular.woff2) format("woff2");
   font-style: normal;
@@ -140,10 +140,7 @@
   src: url(/assets/fonts/iAWriterDuospace-BoldItalic.woff2) format("woff2");
   font-style: italic;
   font-weight:700
-}
-
-
-
+} */
 
 @font-face {
   font-family: lora;
@@ -172,10 +169,6 @@
   font-style: italic;
   font-weight:700
 }
-
-
-
-
 
 *,
 *::before,
