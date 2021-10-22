@@ -2,11 +2,13 @@
 
 <h1>404 Not Found</h1>
 <p>
-Sorry, that page isn't available. Try the <a href="/">home page</a> or the list of <a href="/archive/">blog posts by date</a>. Or you can try searching this site below. 
+Sorry, that page isn't available. Try the <a href="/">home page</a> or <a href="/archive/">the archive</a>. Or you can try searching this site below. 
 </p>
 <form role="search" class="searchform" action="https://duckduckgo.com/">
   <input type="text" name="q" placeholder="Search" />
   <input type="hidden" name="sites" value="jasonheppler.org" />
 </form>
+
+<script>plausible("404", { props: { path: document.location.pathname } });</script>
 
 {{ partial "foot.html" . }}
