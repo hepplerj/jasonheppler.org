@@ -44,9 +44,9 @@
   --space-navbar: var(--space-triple);
   --space-mobile: 85%;
   --grid--gutter: 1.25rem;
-  /* --font-writer: iawriter, hiragino sans, ヒラギノ角ゴ pro w4, ヒラギノ角ゴ pro w3, hiragino kaku gothic pro, Osaka, メイリオ, Meiryo, ＭＳ Ｐゴシック, ms pgothic, -system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, apple color emoji, segoe ui emoji, segoe ui symbol, sans-serif; */
+  --font-writer: iawriter, hiragino sans, ヒラギノ角ゴ pro w4, ヒラギノ角ゴ pro w3, hiragino kaku gothic pro, Osaka, メイリオ, Meiryo, ＭＳ Ｐゴシック, ms pgothic, -system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, apple color emoji, segoe ui emoji, segoe ui symbol, sans-serif;
   --font-serif: lora, TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-  --font-sans: 'Interdisplay', /*'Source Sans Variable',*/ -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+  --font-sans: 'Interdisplay', 'Source Sans Variable', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
   --font-mono: San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   --type-base: calc(1.5em + 0.5vw);
   --type-xxx-small: 55%;
@@ -114,33 +114,33 @@
   src: url(/assets/fonts/Inter-italic.var.woff2);
 } 
 
-/* @font-face {
+@font-face {
   font-family: iawriter;
-  src: url(/assets/fonts/iAWriterDuospace-Regular.woff2) format("woff2");
+  src: url(/assets/fonts/iAWriterQuattroS-Regular.woff2) format("woff2");
   font-style: normal;
   font-weight:400
 }
 
 @font-face {
   font-family: iawriter;
-  src: url(/assets/fonts/iAWriterDuospace-Italic.woff2) format("woff2");
+  src: url(/assets/fonts/iAWriterQuattroS-Italic.woff2) format("woff2");
   font-style: italic;
   font-weight:400
 }
 
 @font-face {
   font-family: iawriter;
-  src: url(/assets/fonts/iAWriterDuospace-Bold.woff2) format("woff2");
+  src: url(/assets/fonts/iAWriterQuattroS-Bold.woff2) format("woff2");
   font-style: normal;
   font-weight:700
 }
 
 @font-face {
   font-family: iawriter;
-  src: url(/assets/fonts/iAWriterDuospace-BoldItalic.woff2) format("woff2");
+  src: url(/assets/fonts/iAWriterQuattroS-BoldItalic.woff2) format("woff2");
   font-style: italic;
   font-weight:700
-} */
+}
 
 @font-face {
   font-family: lora;
@@ -704,7 +704,7 @@ nav i {
 
 .footnotes {
   margin-top: 4em;
-  width: 40vw;
+  /* width: 40vw; */
   /* margin-right: -24vw; */
   font-family: var(--font-sans);
   font-size: var(--type-xx-small);
@@ -909,7 +909,6 @@ article p,
 
 .blog-comments {
   font-size: var(--type-x-small);
-  font-style: italic;
 }
 
 aside {
@@ -939,6 +938,33 @@ aside.newsletter {
 
 .post-title {
   margin-bottom: 1.2em;
+}
+
+.toc {
+  margin: 0 2px 40px;
+  border: 1px solid var(--color-french-grey);
+  background: var(--color-aside);
+  border-radius: .5rem;
+  padding: .4em;
+}
+
+.toc .details {
+  display: inline;
+  font-weight: 500;
+}
+
+.toc details summary {
+  cursor: zoom-in;
+  margin-inline-start: 20px;
+}
+
+.toc details[open] summary {
+  cursor: zoom-out;
+}
+
+.toc .inner {
+  margin: 0 20px;
+  padding: 10px 20px;
 }
 
 .home {
@@ -1107,9 +1133,9 @@ a.footnote-return {
 
 /* Align the post titles in the blog list */
 
-.date {
+time {
   color: var(--color-grey);
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--type-x-small);
 }
 
