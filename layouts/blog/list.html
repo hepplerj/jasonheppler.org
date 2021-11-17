@@ -9,7 +9,7 @@
 <h2>{{ .Key }}</h2>
     {{ range .Pages }}
     <div class="preview-post">
-      <div><a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a> <em>&mdash; <span class="date">{{ .Date.Format "2 January 2006" }}</span></em></div>
+      <div><a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a> &mdash; <time>{{ .Date.Format "2 January 2006" }}</time></div>
     </div>
     {{ end }}
 {{ end }}
