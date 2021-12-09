@@ -37,7 +37,7 @@ slug: '/about/'
   Observable ➝ <a href="https://observablehq.com/@hepplerj">@hepplerj</a><br>
   GitHub ➝ <a href="http://github.com/hepplerj">@hepplerj</a></p>
 
-  <p><a href="https://jasonheppler.substack.com/subscribe">Subscribe to Breve</a>, my occasional newsletter on design, creativity, and human knowledge.</p>
+  <p><a href="https://buttondown.email/jheppler">Subscribe to Breve</a>, my occasional newsletter on design, creativity, and human knowledge.</p>
 
   <h4>Privacy</h4>
 
