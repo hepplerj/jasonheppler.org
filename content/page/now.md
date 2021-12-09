@@ -5,6 +5,13 @@ url: /now/
 
 This page briefly describes what I am currently working on, or at least, the main things that I am trying to focus my attention on over the short term.
 
+**December 2021**
+
+- **Reading**: Daniel Quinn's *Ishmael*
+- **Watching**: Nothing much lately.
+- **Playing**: Variously, Cities Skylines, AC: Valhalla, and Snowrunner 
+- **Working**: Religious Ecologies and the Bills of Mortality projects. And book writing.
+
 **January 2021**
 
 - **Reading**: Lizabeth Cohen's *Saving America's Cities*
