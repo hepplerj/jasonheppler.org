@@ -23,6 +23,7 @@
   --color-ew-blue: #232444;
   --color-french-grey: #edeae6;
   --color-code-block: #f5f2f0;
+  --color-accent: #1F702B;
   --color--accent-primary: #1F702B; /* #1d78bd;*/ /*hsl(22, 75.6%, 41.8%);*/
   --color--accent-primary-fuller: #113D18; /* #173061;*/ /*hsl(14, 97.2%, 42.4%);*/
   --color--accent-primary-faded: #388dce;/*hsl(30, 40%, 41.2%);*/
@@ -32,7 +33,7 @@
   --color-sheet: #F8FFF4;
   --color-neutral: var(--color-grey);
   --color-link: var(--color-blue);
-  --color-aside: #FFFEFA;
+  --color-aside: #edeae6; /*#FFFEFA;*/
   --space-base: 1em;
   --space-x-small: calc(var(--space-base) / 4);
   --space-small: calc(var(--space-base) / 2);
@@ -44,9 +45,10 @@
   --space-navbar: var(--space-triple);
   --space-mobile: 85%;
   --grid--gutter: 1.25rem;
-  --font-writer: iawriter, hiragino sans, ヒラギノ角ゴ pro w4, ヒラギノ角ゴ pro w3, hiragino kaku gothic pro, Osaka, メイリオ, Meiryo, ＭＳ Ｐゴシック, ms pgothic, -system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, apple color emoji, segoe ui emoji, segoe ui symbol, sans-serif;
+  /* --font-writer: iawriter, hiragino sans, ヒラギノ角ゴ pro w4, ヒラギノ角ゴ pro w3, hiragino kaku gothic pro, Osaka, メイリオ, Meiryo, ＭＳ Ｐゴシック, ms pgothic, -system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, apple color emoji, segoe ui emoji, segoe ui symbol, sans-serif; */
   --font-serif: lora, TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-  --font-sans: 'Interdisplay', 'Source Sans Variable', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+  /* --font-sans: 'Interdisplay', 'Source Sans Variable', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;   */
   --font-mono: San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   --type-base: calc(1.5em + 0.5vw);
   --type-xxx-small: 55%;
@@ -180,7 +182,7 @@ html {
 }
   
 body {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--type-base);
   font-weight: 400;
   font-style: normal;
@@ -267,7 +269,12 @@ h6 {
     line-height: 1.25; }
   }
 
-p,
+
+/* p {
+  font-size: 18px;
+  line-height: 24px;
+} */
+
 ul,
 ol {
   margin: 0 0 var(--space-medium) 0;
@@ -282,7 +289,7 @@ small,
   line-height: 1.5; }
 
 .larger {
-  font-size: 160%;
+  font-size: 120%;
   color: var(--color-text);
   font-weight: 400;
   margin-bottom: .5em!important;
@@ -336,7 +343,7 @@ hr {
   grid-template-rows: [nav] minmax(8em, 30vmin) [main] 1fr [foot] 15em; }
   @media (min-width: 48em) {
     .layout {
-      grid-template-columns: 1fr [main] 65ch 1fr; } }
+      grid-template-columns: 1fr [main] 54ch 1fr; } }
 
 .content {
   grid-column: main;
@@ -840,7 +847,7 @@ article figure img {
   grid-row-gap: 5px;
   grid-template-columns: 1fr min-content; }
 
-.books>div{grid-template-columns:1fr .75fr min-content 70px; }
+.books>div{grid-template-columns:1fr .5fr min-content 70px; }
 
 .books a,.writing a,.teaching a{font-weight:500;letter-spacing:-.015em; }
 
@@ -851,7 +858,7 @@ article figure img {
   padding-right:.25em;font-variant-numeric:tabular-nums;letter-spacing:-.012em; }
 
 @media screen and (max-width:640px){
-    .books>div { grid-template-columns:1fr .75fr 70px }
+    .books>div { grid-template-columns:1fr .5fr 70px }
     .books>div div:nth-child(3){display:none}
     .writing {
       grid-template-columns: 1fr;
@@ -877,8 +884,8 @@ article p,
 }
 
 .lede {
-  font-size: var(--type-large);
-  line-height: 1.6071428571;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .blog-nav {
@@ -940,6 +947,67 @@ aside.newsletter {
   margin-bottom: 1.2em;
 }
 
+.notice {
+  background-color: var(--color-aside);
+  padding: 1em;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-bottom: 2em;
+  margin-top: 1em;
+  display: flex;
+  width: calc(100% - 2em);
+}
+
+.notice > div {
+  flex: 1;
+}
+
+.todo-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.todo {
+  display: flex;
+}
+
+.todo input {
+  margin-right: 5px;
+}
+
+.subscription-input {
+  display: flex;
+}
+
+.subscription-input input {
+  border: 1px solid var(--color-base);
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1.4em;
+  margin-right: 10px;
+}
+
+.subscription-input input[type="submit"] {
+  -webkit-appearance: none;
+  display: block;
+  width: 150px;
+  background: var(--color-accent);
+  border: 0;
+  color: var(--color-white);
+  outline: 0;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 0;
+}
+
 .toc {
   margin: 0 2px 40px;
   border: 1px solid var(--color-french-grey);
@@ -978,6 +1046,14 @@ aside.newsletter {
   grid-column: 1;
   grid-row: 1;
 } 
+
+.wave {
+  animation: hello 12s linear;
+  animation-delay: 1.8s;
+  transform-origin: 70% 70%;
+  animation-iteration-count: infinite;
+  display: inline-block;
+}
 
 @media screen and (max-width: 768px) {
   .home {
@@ -1647,3 +1723,5 @@ Media Queries
     transform: rotate(2deg); }
   100% {
     transform: rotate(0deg); } }
+
+@keyframes hello{0%{transform:rotate(0)}1%{transform:rotate(14deg)}2%{transform:rotate(-8deg)}3%{transform:rotate(14deg)}4%{transform:rotate(-4deg)}5%{transform:rotate(10deg)}6%{transform:rotate(0)}10%{transform:rotate(0)}}
