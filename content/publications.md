@@ -11,7 +11,7 @@ For a complete list of my scholarship, please see my [CV](https://jasonheppler.o
 
 ## Books
 
-{{% book title="Suburban by Nature: Silicon Valley and the Transformation of American Environmental Politics" year="2022" publisher="University of Oklahoma Press" %}}
+{{% book title="The Nature of the Valley: Silicon Valley and the Transformation of American Environmental Politics" year="2022" publisher="University of Oklahoma Press" %}}
 
 **Forthcoming**. Few places symbolize the twentieth century like Silicon Valley. Stretching from the communities of San Jose to Palo Alto, the dense suburban region is home to nation’s high tech industrial corridor. In my book, I re-imagine the Silicon Valley’s history not just as symbol of post-industrialism, but as an illustrative of the consequences of the post-war period’s uneven suburban growth in shaping 20th century environmental politics, concerns over social justice, and ideas of sustainability. I complicate the now familiar story of suburbanization’s rapid transformation of post-war American cities by explaining how local activists linked social and environmental issues in creating a new form of politics. In doing so, I help place current debates over sustainability into a deeper historical context and problematize the post-war environmental movement as at once a movement of the white middle class, which gave rise to environmental and social justice movements of the latter half of the 20th century.
 

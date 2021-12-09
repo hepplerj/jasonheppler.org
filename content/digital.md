@@ -3,11 +3,16 @@ title: "Digital & public history"
 slug: '/research/'
 ---
 
-<p class="larger">I am the senior web developer at the <a href="https://chnm.gmu.edu">Center for History and New Media</a> at George Mason University, where I'm crafting history for the web.</p>
+<p class="larger">I am the senior web developer at the <a href="https://chnm.gmu.edu">Roy Rosenzweig Center for History and New Media</a> at George Mason University, where I'm crafting history for the web.</p>
 
-I've been designing, developing, and teaching digital and public history for ten years. Most of my work sits at the intersection of digital history, data science, and design. Below are a select few. Find lots more on [GitHub](http://github.com/hepplerj), [Observable](https://beta.observablehq.com/@hepplerj), and [bl.ocks](https://bl.ocks.org/hepplerj). For a complete list of my scholarship, please see my [CV](https://jasonheppler.org/files/jah-cv.pdf).
+I've been designing, developing, and teaching digital and public history for ten years. Most of my work sits at the intersection of digital history, data science, and design. Below are a select few. Find lots more on [GitHub](http://github.com/hepplerj) and [Observable](https://observablehq.com/@hepplerj). For a complete list of my scholarship, please see my [full CV](https://jasonheppler.org/files/jah-cv.pdf).
 
 <div class="project-box">
+
+  <a class="project" href="https://deathbynumbers.org">
+    <img src="/assets/images/portfolio_bom.png" alt="Death by Numbers" />
+    <p class="small"><span class="project-title">Death by Numbers</span> Transcribing and publishing the London Bills of Mortality in a dataset suitable for computational analysis.</p>
+  </a>
 
   <a class="project" href="https://religiousecologies.org">
     <img src="/assets/images/portfolio_ecologies.png" alt="Religious Ecologies" />
