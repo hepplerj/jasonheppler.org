@@ -5,8 +5,19 @@
   {{ .Content }}
 
   <aside class="newsletter">
-    Consider subscribing to "<a href="https://jasonheppler.substack.com">Breve</a>," an occasional newsletter on digital history, design, creativity, and human knowledge.
-    </aside>
+    Consider subscribing to "<a href="https://buttondown.email/jheppler">Breve</a>," an occasional newsletter on digital history, design, creativity, and human knowledge.
+    <form
+      action="https://buttondown.email/api/emails/embed-subscribe/jheppler"
+      method="post"
+      target="popupwindow"
+      onsubmit="window.open('https://buttondown.email/jheppler', 'popupwindow')"
+      class="subscription-input"
+    >
+      <input name="email" type="email" placeholder="your@email.me" aria-label="Email address input" />
+
+      <input type="submit" value="Subscribe" />
+    </form>
+  </aside>
 
   <div class="home-wrapper">
 

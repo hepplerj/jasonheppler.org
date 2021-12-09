@@ -8,10 +8,9 @@
     {{ end }}
     {{ partial "article-meta.html" . }}
   </header>
-  {{ if .Params.toc }}
-  <strong>Table of contents:</strong>
-  {{ .TableOfContents }}
-  {{ end }}
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
 {{ .Content }}
 </article>
 
