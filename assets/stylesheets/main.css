@@ -33,7 +33,7 @@
   --color-sheet: #F8FFF4;
   --color-neutral: var(--color-grey);
   --color-link: var(--color-blue);
-  --color-aside: #edeae6; /*#FFFEFA;*/
+  --color-aside: #FFFEFA; /*#FFFEFA;*/
   --space-base: 1em;
   --space-x-small: calc(var(--space-base) / 4);
   --space-small: calc(var(--space-base) / 2);
@@ -999,7 +999,7 @@ article p,
 aside {
   background: var(--color-aside);
   font-family: var(--font-sans);
-  font-size: var(--type-small);
+  font-size: var(--type-xxx-small);
   padding: 15px;
   margin-top: 8px;
   margin-bottom: 8px;
