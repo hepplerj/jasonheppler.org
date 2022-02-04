@@ -58,3 +58,4 @@ package-lock.json
 source/_drafts
 .Rproj.user
 content/blog/.Ulysses-Group.plist
+.hugo_build.lock
