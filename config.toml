@@ -3,7 +3,7 @@ description = "Jason Heppler is the senior web developer at the Roy Rosenzweig C
 baseURL = "https://jasonheppler.org/"
 copyright = "2008-2021"
 languageCode = "en-us"
-footnoteReturnLinkContents = "&#8593;"
+footnoteReturnLinkContents = " "
 
 [permalinks]
   blog = "/:year/:month/:day/:slug/"
