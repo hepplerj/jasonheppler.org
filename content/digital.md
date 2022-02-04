@@ -9,6 +9,11 @@ I've been designing, developing, and teaching digital and public history for ten
 
 <div class="project-box">
 
+  <a class="project" href="https://rrchnm.org/mapping-the-university/">
+    <img src="/assets/images/portfolio_mtu.png" alt="Mapping the University" />
+    <p class="small"><span class="project-title">Mapping the University</span> Examining Virginia campus histories of slavery, exclusion, segregation, and bias left on the physical structures of the campus.</p>
+  </a>
+
   <a class="project" href="https://deathbynumbers.org">
     <img src="/assets/images/portfolio_bom.png" alt="Death by Numbers" />
     <p class="small"><span class="project-title">Death by Numbers</span> Transcribing and publishing the London Bills of Mortality in a dataset suitable for computational analysis.</p>

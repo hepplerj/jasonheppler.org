@@ -64,5 +64,7 @@ slug: '/about/'
 <p>Data Visualization Society</p>
 <p>Center for Digital Research in the Humanities</p>
 <p>University of Nebraska Consortium of Libraries</p>
+<p>NMAAHC, Smithsonian Institute</p>
+<p>Winterthur Museum, Garden, and Library</p>
 
 </section>
