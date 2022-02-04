@@ -81,6 +81,6 @@ So, as of January 2022, here is where my daily tools stand. Simple yet powerful,
 
 [^1]:	I also spent part of the Christmas break fiddling with emacs, in case anyone is worried I'm losing my technical chops.
 
-[^2]:	I very close second is iaWriter, which I also adore as a writing environment. But I'd decided to go all-in on one piece of writing software, and Ulysses won out mainly because other writers I respect are also huge fans of Ulysses. Who knows, maybe I'll jump back to iaWriter some day (or even vim) -- that's the beauty of Markdown, it's easily transferrable to other text editors.
+[^2]:	A very close second is iaWriter, which I also adore as a writing environment. But I'd decided to go all-in on one piece of writing software, and Ulysses won out mainly because other writers I respect are also huge fans of Ulysses. Who knows, maybe I'll jump back to iaWriter some day (or even vim) -- that's the beauty of Markdown, it's easily transferrable to other text editors.
 
 [^3]:	Have I told you about [Tropy](https://tropy.org)? I'm not all-in on Tropy, basically using it to store and organize my primary sources after abandoning DEVONthink. But I don't use it for taking notes. I have a different system in place within Obsidian that, for me, works effectively and I don't wish to upset that.
