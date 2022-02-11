@@ -282,6 +282,7 @@ ol {
   line-height: 1.5; }
 
 li {
+  font-size: var(--type-small);
   margin: 0 0 var(--space-x-small) 0; }
 
 small,
@@ -754,7 +755,7 @@ Animations
   width: 40vw;
   margin-right: -24vw;
   font-family: var(--font-sans);
-  font-size: var(--type-xxx-small);
+  font-size: var(--type-xx-small);
   color: var(--color-text);
 }
 
@@ -819,7 +820,7 @@ h1 + p, h2 + p, h3 + p {
   display: inline-block;
   padding: 10px;
   margin: 10px 0 10px 0;
-  width: 100%;
+  width: 115%;
 }
 
 .highlighter {
@@ -1772,7 +1773,11 @@ blockquote.larger {
 
 pre {
   padding: 18px;
-  font-size: var(--type-small);
+  font-size: var(--type-xxx-small);
+}
+
+p code {
+  font-size: var(--type-x-small);
 }
 
 /* ==========================================================================
