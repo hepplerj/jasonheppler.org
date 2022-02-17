@@ -1,10 +1,9 @@
 ---
 title: 'Developer Notes: Converting Filenames to Metadata'
-date: 2022-02-11T13:36:35-06:00
+date: 2022-02-11T09:36:35-06:00
 slug: 'filenames-as-metadata'
 series:
 - developer-notes
-draft: true
 ---
 
 <aside>
