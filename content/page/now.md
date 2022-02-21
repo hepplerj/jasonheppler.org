@@ -5,6 +5,13 @@ url: /now/
 
 This page briefly describes what I am currently working on, or at least, the main things that I am trying to focus my attention on over the short term.
 
+**February 2022**
+
+- **Reading**: Revisitng a lot of stuff on place/space. Right next to me is Hayden's *The Power of Place*.
+- **Watching**: *The Gilded Age*. And rewatching that other great show about the Gilded Age, *Deadwood*.
+- **Playing**: Not much.
+- **Working**: Various things with data APIs, maps, learning vue. Book writing.
+
 **December 2021**
 
 - **Reading**: Daniel Quinn's *Ishmael*
