@@ -1,5 +1,7 @@
 {{ partial "head.html" . }}
 
+<div class='pad2y limiter content'>
+  <div class="body"> 
 <article id='{{ urlize .Title }}' class="h-entry post">
   <section class="post-left">
   <header>
@@ -21,7 +23,9 @@
   {{ end }}
   </section>
 </article>
+</div>
 
-{{ partial "blog-comments" . }}
 {{ partial "blog-nav" . }}
 {{ partial "foot" . }}
+
+</div>

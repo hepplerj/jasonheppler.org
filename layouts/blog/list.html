@@ -1,5 +1,7 @@
 {{ partial "head.html" . }}
 
+<div class='pad2y limiter content'>
+  <div class="body"> 
 <h1>{{ .Title }}</h1>
 
 {{ .Content }}
@@ -14,5 +16,7 @@
     {{ end }}
 {{ end }}
 </div>
+</div>
 
 {{ partial "foot.html" . }}
+</div>

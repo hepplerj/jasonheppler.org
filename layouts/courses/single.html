@@ -1,5 +1,7 @@
 {{ partial "head.html" . }}
 
+<div class='pad2y limiter content'>
+  <div class="body"> 
 <article class="syllabus" id="{{ urlize .Title }}">
   <h1 class="syllabus-title">{{ .Title }} ({{ .Params.semester }} {{ .Params.year }})</h1>
   <hr>
@@ -14,5 +16,7 @@
   {{ if .Params.toc }}<div class="no-print">{{ .TableOfContents }}</div>{{ end }}
   {{ .Content }}
 </article>
+</div>
 
 {{ partial "foot.html" . }}
+</div>

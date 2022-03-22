@@ -1,11 +1,12 @@
 {{ partial "head.html" . }}
 
-<article>
+<div class='pad2y limiter content'>
+  <div class="body"> 
   <header>
     <h1 class="title"><strong>{{ .Title }}</strong></h1>
   </header>
 {{ .Content }}
-</article>
+</div>
 
 {{ partial "foot.html" . }}
-
+</div>

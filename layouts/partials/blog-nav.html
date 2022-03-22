@@ -1,8 +1,7 @@
+<hr/>
+
 <div class="blog-nav">
-<p>Jason Heppler is a digital history developer living in Omaha. <a href="/about/">More »</a></p>
-
-<p><strong>Do you want to discuss this?</strong> Try mentioning @jaheppler on <a href="https://twitter.com/jaheppler">Twitter</a> or <a href='https://micro.blog/jaheppler'>Micro.blog</a>, or <a href="mailto:jason@jasonheppler.org">email me</a>.</p>
-
+<p class="reading-time">{{ .ReadingTime }} min read &middot; {{ .WordCount }} words &middot; Published <a href='{{ .Permalink }}' class='u-url u-uid permalink'><time datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "January 2, 2006" }}</time></a> &middot; <a href="/feed.xml">Subscribe</a> &middot; <a href="https://twitter.com/intent/tweet?text=I%20enjoyed%20this%20post:%20&quot;{{ .Title }}&quot;&amp;url={{ .Permalink }}&amp;via=jaheppler" target="_blank">Share</a></p>
 <p class="impact">This page loaded in <strong><span id="page_load"></span></strong> seconds and used ~<strong><span id="carbon"></span>kb</strong> of data. You've generated around <strong><span id="page_carbon"></span>g</strong> of CO2 by visiting. <a href="https://jasonheppler.org/low-impact/">Curious</a>?</p>
 </div>
 

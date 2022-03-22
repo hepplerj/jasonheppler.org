@@ -1,62 +1,12 @@
 {{ partial "head.html" . }}
 
-<div id='home'>
+<div class='pad2y limiter content'>
+  <div class="body">
 
   {{ .Content }}
-
-  <aside class="newsletter">
-    Consider subscribing to "<a href="https://buttondown.email/jheppler">Breve</a>," an occasional newsletter on digital history, design, creativity, and human knowledge.
-    <form
-      action="https://buttondown.email/api/emails/embed-subscribe/jheppler"
-      method="post"
-      target="popupwindow"
-      onsubmit="window.open('https://buttondown.email/jheppler', 'popupwindow')"
-      class="subscription-input"
-    >
-      <input name="email" type="email" placeholder="your@email.me" aria-label="Email address input" />
-
-      <input type="submit" value="Subscribe" />
-    </form>
-  </aside>
-
-  <div class="home-wrapper">
-
-    <div class="scholarship">
-      <h3>Scholarship</h3>
-
-      <p>My most recent book is <em><a href="https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement">Digital Community Engagement: Partnering Communities with the Academy</a></em> (University of Cincinnati Press, 2020), which I co-edited with Rebecca Wingo and Paul Schadewald.</p>
-
-      <p>I am currently completing a book tentatively titled <em>The Nature of the Valley: Silicon Valley and the Transformation of American Environmental Politics</em> for the University of Oklahoma Press, which I hope to have released in mid-2022.</p>
-
-      <p>I have my hands in lots of projects around RRCHNM, but the ones that are most top-of-mind right now are <a href="https://religiousecologies.org">American Religious Ecologies</a> and the <a href="https://deathbynumbers.org">Bills of Mortality</a>.</p>
-
-      <p>You can find much more on my <a href="/publications/">publications page</a> and <a href="/research/">digital history page</a>.</p>
-    </div>
-    
-    <div class="teaching">
-      <h3>Teaching</h3>
-      
-      <p>I teach classes on digital history, data science, design, visualization, and spatial history. You can find my most recent syllabi and workshops on <a href="/teaching/">my teaching page</a>.</p>
-    </div>
-
-    <div class="contact">
-      <h3>Get in touch</h3>
-      
-      <p>If you're looking to get in touch, take note:</p>
-      
-      <ul>
-        <li>You can email me by <a href="/about/">finding my contact information here</a>.</li>
-        <li>You can sometimes <a href="/social-media/">find me on social media</a>.</li>
-      </ul>
-    </div>
-
-  </div>
-
-<hr/>
-
-<p class="small">Jason lives and works on lands represented by Native Nations whose sovereignty, governance, and treaty lands existed long before the state of Nebraska and Virginia. These Nations include the Očhéthi Šakówiŋ, Umoⁿhoⁿ, and Manahoac Nations.</p>
 
 </div>
 
 {{ partial "foot.html" . }}
 
+</div>
