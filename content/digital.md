@@ -3,11 +3,21 @@ title: "Digital & public history"
 slug: '/research/'
 ---
 
-<p class="larger">I am the senior web developer at the <a href="https://chnm.gmu.edu">Roy Rosenzweig Center for History and New Media</a> at George Mason University, where I'm crafting history for the web.</p>
+### I am the senior web developer at the [Roy Rosenzweig Center for History and New Media](https://rrchnm.org) at George Mason University, where I'm crafting history for the web.
 
 I've been designing, developing, and teaching digital and public history for ten years. Most of my work sits at the intersection of digital history, data science, and design. Below are a select few. Find lots more on [GitHub](http://github.com/hepplerj) and [Observable](https://observablehq.com/@hepplerj). For a complete list of my scholarship, please see my [full CV](https://jasonheppler.org/files/jah-cv.pdf).
 
 <div class="project-box">
+
+  <a class="project" href="https://github.com/chnm/dataapi">
+    <img src="/assets/images/portfolio_api.png" alt="Apiary Data API" />
+    <p class="small"><span class="project-title">Apiary</span> A data API for data-driven research at RRCHNM.</p>
+  </a>
+
+  <a class="project" href="https://religiousecologies.org">
+    <img src="/assets/images/portfolio_ecologies.png" alt="Religious Ecologies" />
+    <p class="small"><span class="project-title">Religious Ecologies</span> Creating new datasets and visualizations so that we can better understand the history of American religion.</p>
+  </a>
 
   <a class="project" href="https://rrchnm.org/mapping-the-university/">
     <img src="/assets/images/portfolio_mtu.png" alt="Mapping the University" />
@@ -19,14 +29,20 @@ I've been designing, developing, and teaching digital and public history for ten
     <p class="small"><span class="project-title">Death by Numbers</span> Transcribing and publishing the London Bills of Mortality in a dataset suitable for computational analysis.</p>
   </a>
 
-  <a class="project" href="https://religiousecologies.org">
-    <img src="/assets/images/portfolio_ecologies.png" alt="Religious Ecologies" />
-    <p class="small"><span class="project-title">Religious Ecologies</span> Creating new datasets from historical sources and new ways of visualizing them so that we can better understand the history of American religion.</p>
+  <a class="project" href="https://pandemicreligion.org/">
+    <img src="/assets/images/portfolio_pr.png" alt="Pandemic Religion" />
+    <p class="small"><span class="project-title">Pandemic Religion</span>
+    Documenting American religion in a time of pandemic.</p>
+  </a>
+
+<a class="project" href="https://collectingthesetimes.org">
+    <img src="/assets/images/portfolio_ctt.png" alt="Collecting These Times" />
+    <p class="small"><span class="project-title">Collecting These Times</span> Documenting how American Jews are responding to the coronavirus pandemic. </p>
   </a>
 
   <a class="project" href="https://www.neh.gov/blog/announcing-new-odh-awards-july-2020">
     <img src="/assets/images/portfolio_interstate.png" alt="Connecting the Interstates" />
-    <p class="small"><span class="project-title">Connecting the Interstates</span> An NEH planning grant to envision a project visualizing and critically examining the development of the US interstate highway system.</p>
+    <p class="small"><span class="project-title">Connecting the Interstates</span> Visualizing and critically examining the development of the U.S. interstate highway system.</p>
   </a>
 
   <a class="project" href="https://unolibraries.shinyapps.io/mappingidentity/">
