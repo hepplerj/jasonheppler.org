@@ -5,6 +5,13 @@ url: /now/
 
 This page briefly describes what I am currently working on, or at least, the main things that I am trying to focus my attention on over the short term.
 
+**March 2022**
+
+- **Reading**: Kicking off my first read of le Carré's George Smiley series.
+- **Watching**: On a bit of a movie kick right now: *The Green Knight*; *Belfast*; *Power of the Dog*; *Don't Look Up*.
+- **Playing**: Elden Ring. 
+- **Working**: Lot's of focus right now on Mapping the University and Bills of Mortality. Book writing, as usual.
+
 **February 2022**
 
 - **Reading**: Revisitng a lot of stuff on place/space. Right next to me is Hayden's *The Power of Place*.
