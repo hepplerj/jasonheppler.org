@@ -41,6 +41,8 @@ Reviews:
 
 ## Articles and book chapters
 
+Farooq, Omer, Jason A. Heppler, and Kate M. Ehrig-Page, "Creating Capacity for Research Data Services at Regional Universities: A Case Study," in *Teaching Research Data Management* (ALA Editions, 2022) <https://www.alastore.ala.org/trdm>.
+
 Blackburn, Heidi and Jason A. Heppler, "Who Is Writing About Women in STEM in Higher Education in the United States? A Citation Analysis of Gendered Authorship," *Frontiers in Psychology* 10 (January 2020) <https://doi.org/10.3389/fpsyg.2019.02979>.
 
 Blackburn, Heidi and Jason A. Heppler, "Women in STEM in Higher Education: A Citation Analysis of the Current Literature," *Science & Technology Libraries* 38 (3) (Summer 2019), <https://doi.org/10.1080/0194262X.2019.1645080>.

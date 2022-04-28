@@ -6,15 +6,13 @@ slug: '/about/'
 <section class="bio-project">
 <div class="bio-project-left">
   {{< figure src="/assets/images/atxpo_2016-3703_1024.jpg" alt="Jason A. Heppler" caption="↳ Photo by [Carlos Seligo](https://www.linkedin.com/in/carlosseligo/)" >}}
-  <p class="u-lead"><strong>Hi I'm Jason</strong>, a software developer, historian, and educator at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> at <a href="https://historyarthistory.gmu.edu">George Mason University</a>. I collaborate with faculty and graduate students on the innovative application of technology in teaching and research, largely across interactive data visualization, design, and public and digital history.</p>
+  <p class="u-lead"><strong>Hi! I'm Jason</strong>, a web developer by trade and a historian by vocation at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> at <a href="https://historyarthistory.gmu.edu">George Mason University</a>. I collaborate with faculty and graduate students on the innovative application of technology in teaching and research across interactive data visualization, design, and public and digital history.</p>
 
   <p><a href="https://jasonheppler.org/files/jah-cv.pdf">You can find my full CV here</a>.</p>
 
   <p>(<a href="/bio/">Need a full bio and headshot?</a>)</p>
 
   <p>I am the co-founder of <a href="http://endangereddataweek.org">Endangered Data Week</a>, an annual event to promote a culture of data consciousness by creating training materials, guidelines, and resources to advocate for open data and promote awareness around threats to publicly available data. I'm active in communities advancing open research including the <a href="https://mozilla.github.io/leadership-training/">Mozilla Foundation</a>.</p>
-
-  <p>I started this website while in graduate school in 2008 to share my writings, ideas, and passions for technology, design, and history. Everything here is designed by myself, generated through the static site generator Hugo. I don't publish too often here&mdash;typically, I write here when I want to share a deep dive into a topic that interests me.</p>
 
   <h3>Can we meet for coffee?</h3>
 
