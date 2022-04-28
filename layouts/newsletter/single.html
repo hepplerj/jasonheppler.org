@@ -1,0 +1,31 @@
+{{ partial "head.html" . }}
+
+<div class='pad2y limiter content'>
+  <div class="body"> 
+<article id='{{ urlize .Title }}' class="h-entry post">
+  <section class="post-left">
+  <header>
+    <h2 class="post-title"><a href='{{ .Permalink }}' class='p-name'><strong>{{ .Title }}</strong></a></h2>
+  </header>
+
+  {{ with .Params.image }}
+  <img src="/assets/images/{{ . }}" />
+  {{ end }}
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
+  <div class='post-body e-content'>
+    {{ .Content }}
+  </div>
+
+  {{ if isset .Params "external" }}
+  <p class="link-post-out">Linked: <a href="{{ index .Params "external" }}">{{ index .Params "title" }} →</a></p>
+  {{ end }}
+  </section>
+</article>
+</div>
+
+{{ partial "blog-nav" . }}
+{{ partial "foot" . }}
+
+</div>

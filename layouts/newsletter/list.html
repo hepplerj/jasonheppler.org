@@ -1,0 +1,42 @@
+{{ partial "head.html" . }}
+
+<div class='pad2y limiter content'>
+  <div class="body"> 
+<h1>{{ .Title }}</h1>
+
+<p><em>Breve</em> is a way for me to share things that I'm finding interesting on technology and human knowledge — I want to highlight how technology can be a force of good rather than pain. The topics here will be varied, ranging from the digital humanities, cities, data, design, libraries, climate, data visualization, art, the environment, and a host of other things where I find the intersections of tech and human creativity fascinating and hopeful.</p>
+
+<p>As the name implies these will generally be brief and, for the time being, somewhat irregular. The general structure as I'm thinking of it now is to highlight two to four case studies per newsletter, in addition to noting things I'm reading or consuming that may be of related interest.</p>
+
+<p>I hope you'll <a href="https://buttondown.email/jheppler">consider subscribing</a>. Below you can find the entire archive of newsletters, either on Buttondown or reproduced here.</p>
+
+  <form
+    action="https://buttondown.email/api/emails/embed-subscribe/jheppler"
+    method="post"
+    target="popupwindow"
+    onsubmit="window.open('https://buttondown.email/jheppler', 'popupwindow')"
+    class="subscription-input"
+  >
+    <input name="email" type="email" placeholder="your@email.me" aria-label="Email address input" />
+    <input type="submit" value="Subscribe" />
+  </form>
+
+  <hr/>
+
+{{ .Content }}
+
+<div class="writing">  
+{{ range (where .Site.RegularPages "Section" "newsletter").GroupByDate "2006" }}
+
+<h2>{{ .Key }}</h2>
+    {{ range .Pages }}
+    <div class="preview-post">
+      <div><a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a> &mdash; <time>{{ .Date.Format "2 January 2006" }}</time></div>
+    </div>
+    {{ end }}
+{{ end }}
+</div>
+</div>
+
+{{ partial "foot.html" . }}
+</div>
