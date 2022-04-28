@@ -23,7 +23,7 @@ My goal here is to create a light-weight website that reduces data transfer. To 
 <div class="metrics_container">
   <div class="metrics-left">
     <div class="metrics_container_item">
-      <img src="/assets/images/bolt.svg" alt="Saved energy while browsing on this website">
+      <img class="metrics__img" src="/assets/images/bolt.svg" alt="Saved energy while browsing on this website">
     </div>
     <p>This page uses ~<strong>3.8kb</strong> of data. You've generated around <strong>0.31g</strong> of CO2 by visiting.</p>
   </div>
