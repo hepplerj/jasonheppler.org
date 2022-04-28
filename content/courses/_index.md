@@ -8,6 +8,10 @@ Studying history gives you [a lifetime of critical skills](http://www.nytimes.co
 
 <div class="teaching">
   <div>
+    <div>SpaceCamp</div>
+    <div>April 2022</div>
+  </div>
+  <div>
     <div>Digital Methods for Military History</div>
     <div>June 2021</div>
   </div>
