@@ -60,10 +60,10 @@ publishDir = "public"
     url = '/courses/'
     weight = 3
   [[menu.nav]]
-    name = 'About'
-    url = '/about/'
-    weight = 4
-  [[menu.nav]]
     name = 'Blog'
     url = '/blog/'
+    weight = 4
+  [[menu.nav]]
+    name = 'About'
+    url = '/about/'
     weight = 5
