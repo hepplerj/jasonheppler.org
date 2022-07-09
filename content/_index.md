@@ -2,7 +2,20 @@
 description: "Jason Heppler is a historian, technologist, and software developer at the Roy Rosenzweig Center for History and New Media."
 ---
 
-**Hi, I'm [Jason Heppler](/about/)**, a historian of modern America studying the environment, cities, and politics. I am a developer-scholar at the [Roy Rosenzweig Center for History and New Media](https://rrchnm.org/) and a member of the [Department of History and Art History](https://historyarthistory.gmu.edu) at George Mason University. I am also a proud member of the [Environmental Data & Governance Initiative](https://envirodatagov.org).
+<section class="book-preview">
+  <div class="book-preview-left">
+    <p>Edited with Rebecca Wingo and Paul Schadewald, our volume brings together cutting-edge campus-community partnerships with a focus on digital projects. Through a series of case studies authored by academics and their community partners, we explore models for digital community engagement that leverages new media through reciprocal partnerships. The contributions to the volume stand at the crossroads of digital humanities, public history, and community engagement, drawing ideas, methods, and practices from various disciplines to inform our public partnerships. By highlighting these projects we hope to provide other institutions, cultural heritage organizations, universities, and communities models for successful engagement.</p>
+  </div>
+  <div class="book-preview-right">
+    <a href="https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement"><img src="/assets/images/dice.jpeg" alt="Book cover for Digital Community Engagement"/></a>
+  </div>
+</section>
+
+<div class="lede" style="font-size: 1.3rem; padding-top: 30px; padding-bottom: 30px;">
+<p>I am a historian of the environment and capitalism in the twentieth century. I use and develop computational and digital tools in the study of history and in my engagement with the public and communities. My historical work ranges across modern North America, cities, climate, environmentalism, infrastructure, and political history.</p>
+
+<p>I am the senior developer-scholar at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> and a member of the <a href="https://historyarthistory.gmu.edu">Department of History and Art History</a> at George Mason University. I am also a proud member of the <a href="https://envirodatagov.org">Environmental Data & Governance Initiative</a>'s Environmental History Action Collaborative and Historian Rebellion. <a href="/about">Read more</a>.</p>
+</div>
 
 <aside class="newsletter">
   Consider subscribing to "<a href="https://buttondown.email/jheppler">Breve</a>," an occasional newsletter on digital history, design, creativity, and human knowledge.
@@ -18,28 +31,7 @@ description: "Jason Heppler is a historian, technologist, and software developer
   </form>
 </aside>
 
-## Writing
-
-### Scholarship
-
-I am currently completing a book tentatively titled *The Nature of the Valley: Silicon Valley and the Transformation of American Environmental Politics* for the University of Oklahoma Press.
-
-My most recent book is *[Digital Community Engagement: Partnering Communities with the Academy](https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement)* (University of Cincinnati Press, 2020), which I co-edited with Rebecca Wingo and Paul Schadewald.
-
-I have my hands in lots of projects around RRCHNM, but the ones that are most top-of-mind right now are [American Religious Ecologies](https://religiousecologies.org), [Death By Numbers](https://deathbynumbers.org), and [Mapping the University](https://rrchnm.org/mapping-the-university/).
-
-### Essays
-
-- [How Silicon Valley provides the blueprint for cleaning up our drinking water](https://www.washingtonpost.com/outlook/2019/04/26/how-silicon-valley-provides-blueprint-cleaning-up-our-drinking-water/) (The Washington Post)
-- [Advocacy, Training, and Awareness Through Endangered Data Week](http://parameters.ssrc.org/2018/03/advocacy-training-and-awareness-through-endangered-data-week/) (Parameters)
-- [How Silicon Valley Industry Polluted the Sylvan California Dream](https://theconversation.com/how-silicon-valley-industry-polluted-the-sylvan-california-dream-85810) (The Conversation)
-- [Crowdsourcing Public Digital History](http://tah.oah.org/content/crowdsourcing-digital-public-history/) (Teaching American History)
-
-You can find much more on my [publications page](/publications/), [digital history page](/research/), and [full CV](https://jasonheppler.org/files/jah-cv.pdf).
-
-## Teaching
-    
-I teach classes on digital history, data science, design, visualization, and spatial history. You can find my most recent syllabi and workshops on [my teaching page](/courses/).
+<hr />
 
 ## Get in touch
 
