@@ -1,6 +1,23 @@
 {
+  "name": "jasonheppler.org",
+  "version": "1.0.0",
+  "description": "[jasonheppler.org](jasonheppler.org)",
+  "type": "module",
+  "engines": {
+    "node": ">=13.2.0"
+  },
   "dependencies": {
     "@observablehq/plot": "^0.4.0",
-    "d3": "^7.3.0"
-  }
+    "cheerio": "^1.0.0-rc.11",
+    "d3": "^7.3.0",
+    "highlight.js": "^11.5.1",
+    "marked": "^4.0.17",
+    "psl": "^1.8.0",
+    "website-carbon-calculator": "^1.2.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonheppler/jasonheppler.org.git"
+  },
+  "author": "Jason Heppler"
 }
