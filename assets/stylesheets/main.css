@@ -52,6 +52,7 @@
   /* --font-sans: 'Interdisplay', 'Source Sans Variable', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;   */
   /* --mono-font: San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace; */
   --font-sans: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+  /* --font-sans: 'Alegreya', sans-serif; */
   --font-mono: "iA Writer Duospace", San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   --type-base: calc(1.5em + 0.5vw);
   --type-xxx-small: 55%;
@@ -110,6 +111,27 @@
   font-weight: normal;
   font-style: italic;
   src: url("/assets/fonts/iAWriterQuattroS-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Alegreya";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/Alegreya.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alegreya";
+  font-weight: normal;
+  font-style: italic;
+  src: url("/assets/fonts/Alegreya-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Tenali Ramakrishna";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/TenaliRamakrishna-Regular.ttf") format("truetype");
 }
 
 body {
@@ -245,17 +267,25 @@ figcaption {
 @media screen and (max-width: 1024px) {
   .header-wrap {
       border-bottom: 1px solid #000;
-      padding-bottom:20px
+      padding-bottom:20px;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .header {
-      position: absolute;
-      top: 40px;
-      right: 50%;
-      margin-right: 340px !important;
-      letter-spacing:-.009em
+      /* position: absolute; */
+      /* top: 40px; */
+      /* right: 50%; */
+      /* margin-right: 340px !important; */
+      letter-spacing:-.009em;
+      margin-bottom: var(--space-large);
+  }
+
+  .header ul li {
+    display: inline-block;
+  }
+  .header ul li {
+    padding-right: .6rem;
   }
 
   .content h1:first-child {
@@ -333,20 +363,47 @@ aside.newsletter {
     .bio-project-right {
       grid-column: 2;
       grid-row: 1;
+      font-size: .8rem;
     }
   
     .bio-project-left {
       grid-column: 1;
       grid-row: 1;
     }
+
+    .book-preview {
+      background: var(--color-aside);
+      font-size: var(--type-small);
+      padding: 15px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      border: 1px solid var(--color--aside-faded);
+    }
+
+    .book-preview {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2em;
+      text-align: left;
+    }
+    
+    .book-preview-left {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .book-preview-right {
+      grid-column: 2;
+      grid-row: 1;
+    }
   
     @media screen and (max-width: 768px) {
-      .bio-project {
+      .bio-project, .book-preview {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
       }
   
-      .bio-project-left, .bio-project-right {
+      .bio-project-left, .bio-project-right, .book-preview-left, .book-preview-right {
         grid-column: auto;
         grid-row: auto;
       }
@@ -411,6 +468,15 @@ aside.newsletter {
       grid-template-columns: 1fr;
       grid-row-gap: 0;
     }
+}
+
+.writing time {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.writing small {
+  font-size: 0.8rem;
+  float: right;
 }
 
 .toc {
