@@ -4,14 +4,6 @@
   <div class="body">
 
   {{ .Content }}
-  
-  <h2>The Latest</h2>
-
-  <ul>
-    {{ range ( where .Site.RegularPages "Type" "blog" | first 5 ) }}
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a> ({{ .Date.Format "2 January 2006" }})</li>
-  {{end}}
-  </ul>
 
 </div>
 
