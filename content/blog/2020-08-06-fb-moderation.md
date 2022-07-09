@@ -1,5 +1,5 @@
 ---
-title: 'Twitter and Facebook moderating Trump campaign accounts on Covid-19 misinformation'
+title: 'Twitter and Facebook moderating Trump campaign on misinformation'
 date: 2020-08-06T10:34:37-06:00
 slug: 'fb-moderation'
 ---
