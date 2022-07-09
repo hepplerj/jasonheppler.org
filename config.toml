@@ -45,3 +45,25 @@ publishDir = "public"
 
 [services.rss]
   limit = 20
+
+[menu]
+  [[menu.nav]]
+    name = 'Publications'
+    url = '/publications/'
+    weight = 1
+  [[menu.nav]]
+    name = 'Digital History'
+    url = '/research/'
+    weight = 2
+  [[menu.nav]]
+    name = 'Teaching'
+    url = '/courses/'
+    weight = 3
+  [[menu.nav]]
+    name = 'About'
+    url = '/about/'
+    weight = 4
+  [[menu.nav]]
+    name = 'Blog'
+    url = '/blog/'
+    weight = 5
