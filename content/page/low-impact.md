@@ -6,7 +6,7 @@ page_type: manifesto
 
 <h1 class="manifesto">Low <span>Impact</span> Website</h1>
 
-This is a low-impact website. The internet is dirty: it requires electricity, which in turn generates carbon emissions contributing to climate change. The Internet is responsible for [3.7% of the world's carbon emissions](https://www.theguardian.com/environment/2010/aug/12/carbon-footprint-internet) due to the amount of electricity required to run data transfer centers around the world.
+This is a low-impact website. The internet is dirty: it requires electricity, which in turn generates carbon emissions contributing to climate change. The Internet is responsible for [3.7% of the world's carbon emissions](https://www.theguardian.com/environment/2010/aug/12/carbon-footprint-internet) due to the amount of electricity required to run data transfer centers around the world. Read more about [the challenges of deriving these caluclations and why it matters](https://sustainablewebdesign.org/calculating-digital-emissions/).
 
 My goal here is to create a light-weight website that reduces data transfer. To achieve this, it follows the following principles: 
 
