@@ -67,6 +67,17 @@ The Norskprøven is the standard Norwegian proficiency test usually included in 
 
 ## Grammar study 
 
+| Subject English | Subject Norwegian | Object English | Object Norwegian |
+| --- | --- | --- | --- |
+| I | Jeg | Me | Meg |
+| You | Du | You | Deg |
+| He | Han | Him | Han/ham |
+| She | Hun | Her | Henne |
+| It | Det | |It | Det |
+| We | Vi | Us | Oss |
+| You (both/all) | Dere | You (both/all) | Dere |
+| They | De | Them | Dem |
+
 ## Reading practice 
 
 ## Writing practice 
@@ -86,3 +97,10 @@ The Norskprøven is the standard Norwegian proficiency test usually included in 
 ### Short Stories
 
 ### Podcasts
+
+- norskpodden 
+- Hele Historien 
+- Aftenpodden
+- Aftenpodden USA 
+- Forklart
+- Kant ut med Tiril og Ingrid
