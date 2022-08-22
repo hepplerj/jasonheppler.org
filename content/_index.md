@@ -12,7 +12,7 @@ description: "Jason Heppler is a historian, technologist, and software developer
 </section>
 
 <div class="lede" style="font-size: 1.3rem; padding-top: 30px; padding-bottom: 30px;">
-<p>I am a historian of the environment and capitalism in the twentieth century. I use and develop computational and digital tools in the study of history and in my engagement with the public and communities. My historical work ranges across modern North America, cities, climate, environmentalism, infrastructure, and political history.</p>
+<p>I am a historian of the environment and capitalism in the twentieth century. I use and develop computational and digital tools in the study of history and in my engagement with the public, which ranges across modern North America, cities, climate, environmentalism, infrastructure, and political history.</p>
 
 <p>I am the senior developer-scholar at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> and a member of the <a href="https://historyarthistory.gmu.edu">Department of History and Art History</a> at George Mason University. I am also a proud member of the <a href="https://envirodatagov.org">Environmental Data & Governance Initiative</a>'s Environmental History Action Collaborative and Historian Rebellion. <a href="/about">Read more</a>.</p>
 </div>
