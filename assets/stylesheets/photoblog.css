@@ -25,7 +25,7 @@
     }
 }
 
-@media (max-height: 480px;) {
+@media (max-height: 480px) {
     #photoblog li {
         height: 80vh;
     }
