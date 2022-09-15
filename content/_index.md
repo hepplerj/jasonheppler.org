@@ -2,15 +2,6 @@
 description: "Jason Heppler is a historian, technologist, and software developer at the Roy Rosenzweig Center for History and New Media."
 ---
 
-<section class="book-preview">
-  <div class="book-preview-left">
-    <p>Edited with Rebecca Wingo and Paul Schadewald, our volume brings together cutting-edge campus-community partnerships with a focus on digital projects. Through a series of case studies authored by academics and their community partners, we explore models for digital community engagement that leverages new media through reciprocal partnerships. The contributions to the volume stand at the crossroads of digital humanities, public history, and community engagement, drawing ideas, methods, and practices from various disciplines to inform our public partnerships. By highlighting these projects we hope to provide other institutions, cultural heritage organizations, universities, and communities models for successful engagement.</p>
-  </div>
-  <div class="book-preview-right">
-    <a href="https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement"><img src="/assets/images/dice.jpeg" alt="Book cover for Digital Community Engagement"/></a>
-  </div>
-</section>
-
 <div class="lede" style="font-size: 1.3rem; padding-top: 30px; padding-bottom: 30px;">
 <p>I am a historian of the environment and capitalism in the twentieth century. I use and develop computational and digital tools in the study of history and in my engagement with the public, which ranges across modern North America, cities, climate, environmentalism, infrastructure, and political history.</p>
 
@@ -30,6 +21,17 @@ description: "Jason Heppler is a historian, technologist, and software developer
     <input type="submit" value="Subscribe" />
   </form>
 </aside>
+
+<hr />
+
+<section class="book-preview">
+  <div class="book-preview-left">
+    <p>Edited with Rebecca Wingo and Paul Schadewald, our volume brings together cutting-edge campus-community partnerships with a focus on digital projects. Through a series of case studies authored by academics and their community partners, we explore models for digital community engagement that leverages new media through reciprocal partnerships. The contributions to the volume stand at the crossroads of digital humanities, public history, and community engagement, drawing ideas, methods, and practices from various disciplines to inform our public partnerships. By highlighting these projects we hope to provide other institutions, cultural heritage organizations, universities, and communities models for successful engagement.</p>
+  </div>
+  <div class="book-preview-right">
+    <a href="https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement"><img src="/assets/images/dice.jpeg" alt="Book cover for Digital Community Engagement"/></a>
+  </div>
+</section>
 
 <hr />
 
