@@ -51,7 +51,7 @@
   /* --font-sans: 'Interdisplay', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif; */
   /* --font-sans: 'Interdisplay', 'Source Sans Variable', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;   */
   /* --mono-font: San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace; */
-  --font-sans: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+  --font-sans: "Lupino", -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
   /* --font-sans: 'Alegreya', sans-serif; */
   --font-mono: "iA Writer Duospace", San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   --type-base: calc(1.5em + 0.5vw);
@@ -98,6 +98,13 @@
   font-style: italic;
   font-weight:700
 } */
+
+@font-face {
+  font-family: "Lupino";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/Lupino_v0.2_Serif_Variable.woff2") format("woff2");
+}
 
 @font-face {
   font-family: "iA Writer Duospace";
