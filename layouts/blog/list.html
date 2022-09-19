@@ -6,22 +6,11 @@
 
 {{ .Content }}
 
-<ul style="margin: 0 auto; text-align: left;">
-    {{ range .Pages.GroupByDate "2006" }}
-    <li style="display: inline-block; vertical-align: top;">
-      <strong><a href="#{{ .Key }}">{{ .Key }}</a></strong> ({{ len .Pages }}) &middot;
-    </li>
-    {{ end }}
-</ul>
-
 <div class="writing">  
-{{ range (where .Site.RegularPages "Section" "blog").GroupByDate "2006" }}
-<h2 id="{{ .Key }}">{{ .Key }} ({{ len .Pages }})</h2>
-    {{ range .Pages }}
+{{ range .Pages }}
     <div class="preview-post">
-      <div><a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a> <small><time>{{ .Date.Format "01-02" }}</time></small></div>
+      <div><a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a> <time>{{ .Date.Format "2006-01-01" }}</time></div>
     </div>
-    {{ end }}
 {{ end }}
 </div>
 </div>

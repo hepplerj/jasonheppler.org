@@ -51,7 +51,7 @@
   /* --font-sans: 'Interdisplay', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif; */
   /* --font-sans: 'Interdisplay', 'Source Sans Variable', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;   */
   /* --mono-font: San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace; */
-  --font-sans: "Lupino", -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
   /* --font-sans: 'Alegreya', sans-serif; */
   --font-mono: "iA Writer Duospace", San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   --type-base: calc(1.5em + 0.5vw);
@@ -512,7 +512,7 @@ aside.newsletter {
 .books a,.writing a,.teaching a{font-weight:500;letter-spacing:-.015em; }
 
 .books>div div,.writing>div div,.teaching>div div{
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis; padding-bottom:4px; }
 
 .books > div div:nth-child(3),.writing>div div:last-child,.teaching>div div:last-child {
   padding-right:.25em;font-variant-numeric:tabular-nums;letter-spacing:-.012em; }
@@ -529,6 +529,8 @@ aside.newsletter {
 .writing time {
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
+  float:right;
+  font-size: var(--type-x-small);
 }
 .writing small {
   font-size: 0.8rem;
