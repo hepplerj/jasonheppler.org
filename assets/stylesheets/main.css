@@ -581,7 +581,10 @@ aside.newsletter {
 
 code {
   font-family: var(--font-mono);
-  font-size: var(--type-small);
+}
+
+.highlight {
+  overflow-x: auto;
 }
 
 .notice {

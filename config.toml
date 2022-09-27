@@ -31,7 +31,10 @@ publishDir = "public"
   defaultMarkdownHandler = "blackFriday"
   [markup.highlight]
     guessSyntax = true
-    style = 'vc'
+    style = 'github'
+    lineNos = true
+    tabWidth = 4
+    codeFences = true
 
 [outputFormats]
   [outputFormats.RSS]
