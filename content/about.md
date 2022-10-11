@@ -16,7 +16,7 @@ slug: '/about/'
 
   <h3>Can we meet for coffee?</h3>
 
-  <p>I'll make an effort to meet with anyone who reaches out, but in advance: I won't tweet about your project, you can't use me in your marketing, and I'm not investing in anything. All I have on offer is to listen to your story and offer advice if I have any to give.</p> 
+  <p>In Covidtide this is a bit harder, but I'll make an effort to meet with anyone who reaches out. But in advance: I won't tweet about your project, you can't use me in your marketing, and I'm not investing in anything. All I have on offer is to listen to your story and offer advice if I have any to give.</p> 
 
   <p>You can write great emails by following <a href="http://humbledmba.com/how-to-email-busy-people">this advice from Jason Freedman</a>:</p>
 
@@ -30,39 +30,33 @@ slug: '/about/'
 
   <p><a href="mailto:jason@jasonheppler.org">jason@jasonheppler.org</a></p>
 
-  <p>Twitter ➝ <a href="https://twitter.com/jaheppler">@jaheppler</a><br>
-  Micro.blog ➝ <a href="https://micro.blog/jaheppler">@jaheppler</a><br>
-  Observable ➝ <a href="https://observablehq.com/@hepplerj">@hepplerj</a><br>
-  GitHub ➝ <a href="http://github.com/hepplerj">@hepplerj</a></p>
-
   <p><a href="/newsletter">Subscribe to Breve</a>, my occasional newsletter on design, creativity, and human knowledge.</p>
 
   <h4>Privacy</h4>
 
-<p class="noted">I take your privacy seriously. I have installed a local analytics package called <a href="https://matomo.org/">Matomo</a>, which interprets information your browser already sends (like IP address, screen resolution, browser, and operating system.) This information is regularly flushed, kept anonymous, and password-protected. I take precautions to ensure no one else sees this information, either. If you're running Do Not Track on your browser, Matomo won't track you.</p>
+<p class="noted">I take your privacy seriously. I use a lightweight and privacy-centric tracker called <a href="https://plausible.io">Plausible</a>, which interprets information your browser already sends (like IP address, screen resolution, browser, and operating system.) If you're running Do Not Track on your browser, Plausible won't track you.</p>
 
 <p class="noted">If you email me something I keep that anonymous, especially when sent encrypted. If I decide I would like to quote something from your email, I will ask you first. If you've emailed me about something I got wrong, I may use your name to credit the correction but I won't if it's not public information. <a href="https://jasonheppler.org/jasonheppler.asc">Here's my public key</a>.</p>
 
 <h4>Colophon</h4>
 
-<p class="noted">This website is built with Hugo. This site is ad-free and doesn't use trackers. If you'd like to support my writing, I'd love it if you could <a href="https://ko-fi.com/jasonheppler">buy me a coffee</a>.</p>
-</div>
-</section> 
+<p class="noted">This website is built with <a href="https://gohugo.io">Hugo</a>.</p>
 
-<h3>Organizations I've worked with</h3>
-<section class="bio-wide">
-<p>Environmental Data and Governance Initiative</p>
-<p>Mozilla Foundation</p>
-<p>American Historical Association</p>
-<p>Western History Association</p>
-<p>Humanities+Design, Stanford University</p>
-<p>Spatial History Project, Stanford University</p>
-<p>Mode Shift Omaha</p>
-<p>Endangered Data Week</p>
-<p>Data Visualization Society</p>
-<p>Center for Digital Research in the Humanities</p>
-<p>University of Nebraska Consortium of Libraries</p>
-<p>NMAAHC, Smithsonian Institute</p>
-<p>Winterthur Museum, Garden, and Library</p>
+<h4>Support</h4>
 
+<p>If you'd like to support my writing here and elsewhere, I'd love it if you could <a href="https://www.buymeacoffee.com/jasonheppler">buy me a coffee</a>.</p>
+
+<h4 class="homepage-header">Elsewhere on the internet</h4>
+	<ul class="list-unstyled">
+		<li><a href="https://social.jasonheppler.org/">Micro.blog</a>
+		<li><a href="https://github.com/hepplerj">GitHub</a></li>
+		<li><a href="https://observablehq.com/@hepplerj?tab=profile">Observable</a>
+		<li><a href="https://orcid.org/0000-0003-4158-6186">ORCID</a>
+		<li><a href="https://scholar.google.com/citations?user=X2hGnS4AAAAJ">Google Scholar</a>
+		</li>
+		<li><a href="https://historyarthistory.gmu.edu/people/jheppler">GMU homepage</a></li>
+		<li><a href="https://hcommons.org/members/hepplerj/">Humanities Commons</a></li>
+		<li><a href="https://www.zotero.org/hepplerj">Zotero</a></li>
+	</ul>
+  </div>
 </section>

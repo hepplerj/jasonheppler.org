@@ -53,7 +53,7 @@
   /* --mono-font: San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace; */
   --font-sans: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
   /* --font-sans: 'Alegreya', sans-serif; */
-  --font-mono: "iA Writer Duospace", San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+  --font-mono: San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   --type-base: calc(1.5em + 0.5vw);
   --type-xxx-small: 55%;
   --type-xx-small: 65%;
@@ -71,74 +71,18 @@
   --nested-photoset-margin-responsive: 2rem;
 }
 
-/* @font-face {
-  font-family: iawriter;
-  src: url(/assets/fonts/iAWriterQuattroS-Regular.woff2) format("woff2");
-  font-style: normal;
-  font-weight:400
-}
-
 @font-face {
-  font-family: iawriter;
-  src: url(/assets/fonts/iAWriterQuattroS-Italic.woff2) format("woff2");
-  font-style: italic;
-  font-weight:400
-}
-
-@font-face {
-  font-family: iawriter;
-  src: url(/assets/fonts/iAWriterQuattroS-Bold.woff2) format("woff2");
-  font-style: normal;
-  font-weight:700
-}
-
-@font-face {
-  font-family: iawriter;
-  src: url(/assets/fonts/iAWriterQuattroS-BoldItalic.woff2) format("woff2");
-  font-style: italic;
-  font-weight:700
-} */
-
-@font-face {
-  font-family: "Lupino";
+  font-family: "Clearface";
   font-weight: normal;
   font-style: normal;
-  src: url("/assets/fonts/Lupino_v0.2_Serif_Variable.woff2") format("woff2");
+  src: url("/assets/fonts/ClearfaceStd-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: "iA Writer Duospace";
-  font-weight: normal;
-  font-style: normal;
-  src: url("/assets/fonts/iAWriterQuattroS-Regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "iA Writer Duospace";
+  font-family: "Clearface";
   font-weight: normal;
   font-style: italic;
-  src: url("/assets/fonts/iAWriterQuattroS-Italic.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Alegreya";
-  font-weight: normal;
-  font-style: normal;
-  src: url("/assets/fonts/Alegreya.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Alegreya";
-  font-weight: normal;
-  font-style: italic;
-  src: url("/assets/fonts/Alegreya-Italic.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Tenali Ramakrishna";
-  font-weight: normal;
-  font-style: normal;
-  src: url("/assets/fonts/TenaliRamakrishna-Regular.ttf") format("truetype");
+  src: url("/assets/fonts/ClearfaceStd-Italic.woff") format("woff");
 }
 
 body {
@@ -178,6 +122,11 @@ ul ul {
   margin:0
 }
 
+.list-unstyled {
+  list-style:none;
+  padding:0
+}
+
 iframe {
   border:0
 }
@@ -193,7 +142,8 @@ body, h1 a {
 h1, h2, h3 {
   margin-bottom: .5rem;
   line-height: 1.25;
-  font-weight:600
+  font-weight:600;
+  font-family: "Clearface", sans-serif;
 }
 
 h1 {
@@ -211,7 +161,7 @@ h3 {
 }
 
 .limiter {
-  max-width: 640px;
+  max-width: 800px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
@@ -292,7 +242,7 @@ figcaption {
     display: inline-block;
   }
   .header ul li {
-    padding-right: .6rem;
+    padding-right: 1rem;
   }
 
   .content h1:first-child {
@@ -429,7 +379,7 @@ aside.newsletter {
 
     .book-preview {
       background: var(--color-aside);
-      font-size: var(--type-small);
+      font-size: var(--type-medium);
       padding: 15px;
       margin-top: 8px;
       margin-bottom: 8px;
