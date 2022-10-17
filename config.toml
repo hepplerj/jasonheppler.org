@@ -28,7 +28,9 @@ publishDir = "public"
   term = ["HTML", "RSS"]
 
 [markup]
-  defaultMarkdownHandler = "blackFriday"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
   [markup.highlight]
     guessSyntax = true
     style = 'github'
