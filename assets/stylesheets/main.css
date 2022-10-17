@@ -640,14 +640,14 @@ img.metrics__img {
 }
 
 /* Notes */ 
-#footnotes-label {
+/* #footnotes-label {
   padding-top: 180px;
 }
 
 .u-hidden-visually {
   display: none;
-}
-
+} */
+/* 
 .footnotes {
   margin-top: 4em;
   width: 40vw;
@@ -664,9 +664,9 @@ img.metrics__img {
 
 .footnotes li {
   margin: 0 0 12px;
-}
+} */
 
-.footnotes ol {
+/* .footnotes ol {
   counter-reset: cupcake;
   padding-left: 32px;
   list-style: none;
@@ -684,7 +684,7 @@ img.metrics__img {
   margin-top: 0;
   position: absolute;
   top: 0;
-  left: 74vw;
+  left: 77vw;
 }
 
 .floating-footnotes hr {
@@ -693,6 +693,12 @@ img.metrics__img {
 
 .floating-footnotes li[role=doc-endnote] p:last-child {
   margin-bottom: 0;
+} */
+
+a.footnote-ref {
+  color: #e86a50;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* Syllabus specific */
