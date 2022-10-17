@@ -148,9 +148,19 @@ I've been designing, developing, and teaching digital and public history for ten
     <p class="small"><span class="project-title">William F. Cody Archive</span> Digitizing the papers of William F. Cody.</p>
   </a>
 
+  <a class="project" href="http://buffalobillproject.unl.edu/research/showindians/">
+    <img src="/assets/images/portfolio_showindian.png" alt="William F. Cody and the Progressive Wild West" loading="lazy" />
+    <p class="small"><span class="project-title">William F. Cody and the Progressive Wild West</span> Exploring debates over what I called Reformist Progressives and Enabling Progressives.</p>
+  </a>
+
   <a class="project" href="http://whatisdigitalhumanities.com">
     <img src="/assets/images/portfolio_widh.png" alt="What is Digital Humanities?" loading="lazy" />
     <p class="small"><span class="project-title">What is Digital Humanities?</span> Perpetual answers to the perpetual question.</p>
+  </a>
+
+  <a class="project" href="http://framingredpower.org">
+    <img src="/assets/images/portfolio_frp.png" alt="Framing Red Power" loading="lazy" />
+    <p class="small"><span class="project-title">Framing Red Power</span> Exploring how the media covered the Trail of Broken Treaties.</p>
   </a>
 
 </div>
