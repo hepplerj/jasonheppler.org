@@ -39,40 +39,38 @@ Reviews:
 
 <a name="articles"></a>
 
-## Articles and book chapters
+## Selected articles and book chapters
 
-Farooq, Omer, Jason A. Heppler, and Kate M. Ehrig-Page, "Creating Capacity for Research Data Services at Regional Universities: A Case Study," in *Teaching Research Data Management* (ALA Editions, 2022) <https://www.alastore.ala.org/trdm>.
+1. Farooq, Omer, Jason A. Heppler, and Kate M. Ehrig-Page, "Creating Capacity for Research Data Services at Regional Universities: A Case Study," in *Teaching Research Data Management* (ALA Editions, 2022) <https://www.alastore.ala.org/trdm>.
 
-Blackburn, Heidi and Jason A. Heppler, "Who Is Writing About Women in STEM in Higher Education in the United States? A Citation Analysis of Gendered Authorship," *Frontiers in Psychology* 10 (January 2020) <https://doi.org/10.3389/fpsyg.2019.02979>.
+2. Blackburn, Heidi and Jason A. Heppler, "Who Is Writing About Women in STEM in Higher Education in the United States? A Citation Analysis of Gendered Authorship," *Frontiers in Psychology* 10 (January 2020) <https://doi.org/10.3389/fpsyg.2019.02979>.
 
-Blackburn, Heidi and Jason A. Heppler, "Women in STEM in Higher Education: A Citation Analysis of the Current Literature," *Science & Technology Libraries* 38 (3) (Summer 2019), <https://doi.org/10.1080/0194262X.2019.1645080>.
+3. Blackburn, Heidi and Jason A. Heppler, "Women in STEM in Higher Education: A Citation Analysis of the Current Literature," *Science & Technology Libraries* 38 (3) (Summer 2019), <https://doi.org/10.1080/0194262X.2019.1645080>.
 
-Locke, Brandon and Jason A. Heppler, "Teaching Data Literacy for Civic Engagement: Resources for Data Capture and Organization," *KULA: Knowledge Creation, Dissemination, and Preservation Studies* 2 (1) (Fall 2018), <http://doi.org/10.5334/kula.23>.
+4. Locke, Brandon and Jason A. Heppler, "Teaching Data Literacy for Civic Engagement: Resources for Data Capture and Organization," *KULA: Knowledge Creation, Dissemination, and Preservation Studies* 2 (1) (Fall 2018), <http://doi.org/10.5334/kula.23>.
 
-Arguing with Digital History working group, "Digital History and Argument," white paper, Roy Rosenzweig Center for History and New Media, George Mason University (November 13, 2017): <https://rrchnm.org/argument-white-paper/>. (primary authors Lincoln Mullen and Stephen Robertson)
+5. Arguing with Digital History working group, "Digital History and Argument," white paper, Roy Rosenzweig Center for History and New Media, George Mason University (November 13, 2017): <https://rrchnm.org/argument-white-paper/>. (primary authors Lincoln Mullen and Stephen Robertson)
 
-"Green Dreams, Toxic Legacies: Toward a Digital Political Ecology of Silicon Valley," *International Journal of Humanities and Arts Computing*, vol. 11, no. 1 (March 2017), <https://doi.org/10.3366/ijhac.2017.0179>. [published version](https://www.euppublishing.com/doi/full/10.3366/ijhac.2017.0179)
+6. "Green Dreams, Toxic Legacies: Toward a Digital Political Ecology of Silicon Valley," *International Journal of Humanities and Arts Computing*, vol. 11, no. 1 (March 2017), <https://doi.org/10.3366/ijhac.2017.0179>. [published version](https://www.euppublishing.com/doi/full/10.3366/ijhac.2017.0179)
 
-"Capturing the Past through Visualization," in *The Companion to Digital History*, edited by David Staley (Wiley: Wiley and Sons, forthcoming).
+7. "Machines in the Valley: Community, Urban Change, and Environmental Politics in Silicon Valley, 1945-1990." Ph.D. dissertation, University of Nebraska-Lincoln (May 2016). [Digital Commons version](http://digitalcommons.unl.edu/historydiss/86/)
 
-"Machines in the Valley: Community, Urban Change, and Environmental Politics in Silicon Valley, 1945-1990." Ph.D. dissertation, University of Nebraska-Lincoln (May 2016). [Digital Commons version](http://digitalcommons.unl.edu/historydiss/86/)
+8. Heppler, Jason A. and Douglas Seefeldt, "A National Monument," *The Companion to Custer and the Little Big Horn* (Hoboken: Wiley and Sons) (2015). [published version](https://www.academia.edu/15865723/A_National_Monument)
 
-Heppler, Jason A. and Douglas Seefeldt, "A National Monument," *The Companion to Custer and the Little Big Horn* (Hoboken: Wiley and Sons) (2015). [published version](https://www.academia.edu/15865723/A_National_Monument)
+9. Heppler, Jason A. and Gabriel K. Wolfenstein, "Crowdsourcing Public Digital History," *The American Historian* (2015). [published version](http://tah.oah.org/content/crowdsourcing-digital-public-history/)
 
-Heppler, Jason A. and Gabriel K. Wolfenstein, "Crowdsourcing Public Digital History," *The American Historian* (2015). [published version](http://tah.oah.org/content/crowdsourcing-digital-public-history/)
+10. Heppler, Jason A., Alex Galarza, and Douglas Seefeldt, "A Call to Redefine Historical Scholarship in the Digital Turn," *The Journal of Digital Humanities* vol. 1, no. 4 (2012). [published version](http://journalofdigitalhumanities.org/1-4/a-call-to-redefine-historical-scholarship-in-the-digital-turn/)
 
-Heppler, Jason A., Alex Galarza, and Douglas Seefeldt, "A Call to Redefine Historical Scholarship in the Digital Turn," *The Journal of Digital Humanities* vol. 1, no. 4 (2012). [published version](http://journalofdigitalhumanities.org/1-4/a-call-to-redefine-historical-scholarship-in-the-digital-turn/)
+11. "The American Indian Movement and South Dakota Politics," in *The Plains Political Tradition*, edited by Jon Lauck, John E. Miller, and Donald Simmons (Pierre: South Dakota State Historical Society Press, 2011).
 
-"The American Indian Movement and South Dakota Politics," in *The Plains Political Tradition*, edited by Jon Lauck, John E. Miller, and Donald Simmons (Pierre: South Dakota State Historical Society Press, 2011).
-
-*The Rubyist Historian: Ruby Fundamentals for Humanities Scholars* (2010), <https://doi.org/10.5281/zendo.9987>.
+12. *The Rubyist Historian: Ruby Fundamentals for Humanities Scholars* (2010), <https://doi.org/10.5281/zendo.9987>.
 
 <a name="essays"></a>
 
 ## Essays
 
-"How Silicon Valley provides the blueprint for cleaning up our drinking water," *The Washington Post* (April 26, 2019). [published version](https://www.washingtonpost.com/outlook/2019/04/26/how-silicon-valley-provides-blueprint-cleaning-up-our-drinking-water/)
+1. "How Silicon Valley provides the blueprint for cleaning up our drinking water," *The Washington Post* (April 26, 2019). [published version](https://www.washingtonpost.com/outlook/2019/04/26/how-silicon-valley-provides-blueprint-cleaning-up-our-drinking-water/)
 
-Heppler, Jason A., Sarah Melton, Rachel Mattson, and Brandon Locke, "Advocacy, Training, and Awareness Through Endangered Data Week," *Parameters* (February 26, 2018). [published version](http://parameters.ssrc.org/2018/03/advocacy-training-and-awareness-through-endangered-data-week/)
+2. Heppler, Jason A., Sarah Melton, Rachel Mattson, and Brandon Locke, "Advocacy, Training, and Awareness Through Endangered Data Week," *Parameters* (February 26, 2018). [published version](http://parameters.ssrc.org/2018/03/advocacy-training-and-awareness-through-endangered-data-week/)
 
-"How Silicon Valley Industry Polluted the Sylvan California Dream," *The Conversation* (November 13, 2017). [published version](https://theconversation.com/how-silicon-valley-industry-polluted-the-sylvan-california-dream-85810)
+3. "How Silicon Valley Industry Polluted the Sylvan California Dream," *The Conversation* (November 13, 2017). [published version](https://theconversation.com/how-silicon-valley-industry-polluted-the-sylvan-california-dream-85810)
