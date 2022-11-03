@@ -22,7 +22,7 @@ MultiMarkdown gives writers a greater range of tools for writing more complex ma
 
 <code>[^1]: This is the citation.</code>
 
-When the document is converted into PDF, HTML, Word document, or other format, the footnote will appear as expected. If things start getting a little messy, Dr. Drang has a [Python script that will clean up Markdown reference links](http://www.leancrew.com/all-this/2012/09/tidying-markdown-reference-links/). In addition, if you are using Pandoc for transforming text, you can use its flavor of Markdown to do inline footnoting.^[Which looks something like this.]
+When the document is converted into PDF, HTML, Word document, or other format, the footnote will appear as expected. If things start getting a little messy, Dr. Drang has a [Python script that will clean up Markdown reference links](http://www.leancrew.com/all-this/2012/09/tidying-markdown-reference-links/). In addition, if you are using Pandoc for transforming text, you can use its flavor of Markdown to do inline footnoting.`^[Which looks something like this.]`
 
 MultiMarkdown also handles tables, styled like this:
 
