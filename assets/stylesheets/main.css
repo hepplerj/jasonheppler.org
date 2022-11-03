@@ -214,6 +214,11 @@ h2.post-title a {
   text-decoration: none;
 }
 
+.post-body p img {
+  margin: 0 auto;
+  display: block;
+}
+
 /* a:visited {
   color:#333
 } */
