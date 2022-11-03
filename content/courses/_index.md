@@ -6,10 +6,12 @@ aliases:
 
 Studying history gives you [a lifetime of critical skills](http://www.nytimes.com/2013/06/23/opinion/sunday/the-decline-and-fall-of-the-english-major.html?_r=0) for life, career, and citizenship. By understanding the past and how historians do their work, you achieve skills that allow you to place current events into context, distinguish fact from fake, and think strategically about the future. Even the [tech industry agrees](http://www.washingtonpost.com/national/on-innovations/why-you-should-quit-your-tech-job-and-study-the-humanities/2012/05/16/gIQAvibbUU_story.html) that studying the humanities is essential. 
 
+---
+
 <div class="teaching">
   <div>
     <div>SpaceCamp</div>
-    <div>April 2022</div>
+    <div>April 2022, November 2022</div>
   </div>
   <div>
     <div>Digital Methods for Military History</div>
