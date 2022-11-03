@@ -7,7 +7,9 @@ categories:
 
 If you're a podcast listener or [friend of the pod](https://store.crooked.com/collections/friend-of-the-pod), you've likely heard the advertisements for Peloton -- the high-end, at-home bike trainer designed to give you a spinning class experience from your home. But at $2,000 for their bikes, it's a high ask to get the equipment needed for the full Peloton experience. 
 
-So I went in search of a budget-friendlier route. Here's some notes about my setup.^[Of course, the budget-friendliness of this setup also means I already have the additional equipment needed. In this case: an iPhone, an iPad, and an Apple Watch. Don't follow this guide if you need to buy Apple devices to make it work; just go buy the Peloton.]
+So I went in search of a budget-friendlier route. Here's some notes about my setup.[^1]
+
+[^1]: Of course, the budget-friendliness of this setup also means I already have the additional equipment needed. In this case: an iPhone, an iPad, and an Apple Watch. Don't follow this guide if you need to buy Apple devices to make it work; just go buy the Peloton.
 
 I love bicycling, and have racked up plenty of miles with my Trek. But
 Nebraska winters can be brutal (have I mentioned lately I miss California?)
