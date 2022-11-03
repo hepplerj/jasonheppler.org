@@ -88,6 +88,8 @@
     {{ $mainCSS := resources.Get "stylesheets/main.css" | resources.Minify | resources.Fingerprint "sha512" }}
     <link rel="stylesheet" href="{{ $mainCSS.Permalink }}">
     {{ end }}
+    {{ $littlefoot := resources.Get "stylesheets/littlefoot.css" | resources.Minify | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" href="{{ $littlefoot.Permalink }}">
 
     <link rel="shortcut icon" href="/assets/images/favicon.png">
 
@@ -107,7 +109,6 @@
     <link rel="canonical" href="{{ .Permalink }}" />
     <link rel="home" href="https://jasonheppler.org" />
     <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="Jason Heppler's blog." />
-
   </head>
   <body>
     <div class="pad2y" style="position:relative">
