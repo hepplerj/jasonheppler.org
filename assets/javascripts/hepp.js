@@ -4,4 +4,6 @@ const { littlefoot } = require('littlefoot')
 
 // accessibleFootnotes();
 // enableFloatingFootnotes();
-// littlefoot();
+littlefoot({
+    anchorPattern: /fn:/,
+});
