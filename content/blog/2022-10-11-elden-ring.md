@@ -14,7 +14,7 @@ And, of course, the combat itself. Most of the enemies you meet in the world are
 
 Your first entry into the Lands Between is greeted with a [huge enemy on a horse](https://eldenring.wiki.fextralife.com/Tree+Sentinel). Don't try and fight him, even though this thing called Grace is pointing you that direction.
 
-In fact, at this point, you're not learning much at all about the game or the world. The options, as you quickly discovery, appear endless. And as you encounter enemies, you begin to quickly see they have attributes and movesets that you simply don't understand. You don't know the tells. You don't have the muscle memory. You're underleveled. You will die. A lot. Figuring out the game takes work. Figuring out the plot takes work.
+In fact, at this point, you're not learning much at all about the game or the world. The options, as you quickly discover, appear endless. And as you encounter enemies, you begin to quickly see they have attributes and movesets that you simply don't understand. You don't know the tells. You don't have the muscle memory. You're underleveled. You will die. A lot. Figuring out the game takes work. Figuring out the plot takes work.
 
 Welcome to Elden Ring. 
 
