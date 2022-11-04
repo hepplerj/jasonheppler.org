@@ -170,7 +170,7 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: 24px;
   -webkit-tap-highlight-color:rgba(38, 27, 35, 0);
-  border-top: 17px solid #D30001;
+  border-top: 17px solid var(--color--accent-primary);
   padding: 0;
   margin: 0;
 }
@@ -185,7 +185,7 @@ body {
 }
 
 a {
-  color: #D30001;
+  color: var(--color--accent-primary); /* #D30001; */
   text-decoration: none;
   transition:color 0.25s cubic-bezier(0.33, 1, 0.68, 1);
   text-decoration: underline;
@@ -193,12 +193,8 @@ a {
 }
 
 a:hover {
-  color: #261B23;
+  color: var(--color--accent-primary-fuller);
 }
-
-/* body, h1 a {
-  color: #111111;
-} */
 
 nav a {
   color: #111111;
