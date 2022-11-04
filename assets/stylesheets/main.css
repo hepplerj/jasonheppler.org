@@ -343,6 +343,7 @@ h6 {
 .lede p {
   font-size: var(--type-x-large);
   font-weight: 500;
+  line-height: 35px;
 }
 
 .limiter {
