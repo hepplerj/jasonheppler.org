@@ -1,9 +1,5 @@
 ---
 date: 2014-07-12T08:09:46Z
-description: null
-image:
-  feature: null
-  thumb: null
 post_type: Essay
 categories:
 - programming
