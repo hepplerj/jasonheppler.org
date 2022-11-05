@@ -10,7 +10,7 @@ ShowToc: true
     </div>
 </div>
 
-**Note**: This is a work in progress. I last updated this page on 2021-11-18.
+**Note**: This is a work in progress. I last updated this page on 2022-11-04.
 
 ## Introduction
 
@@ -35,7 +35,7 @@ Finally: I'm not a langauge instructor, so your experiences will likely differ f
 
 ## Boostrapping
 
-It all started with, and continues in, Duolingo. As of this writing, I'm approaching my two year daily practice streak. While the application has changed a lot in the past year, there are some things were it is weak: I don't find it particularly good at explaining Norwegian grammar (and to be fair, I'm mostly using the iOS version not the web app) and often find I don't always know when to use *i*, *på*, *til*, and *for*. But it is fantastic at teaching you themed vocabulary, and the gamification elements of the application---at least for me---serve as a good motivator without getting in the way of actually learning.
+It all started with, and continues in, Duolingo. As of this writing, I'm approaching my two year daily practice streak. While the application has changed a lot in the past year, there are some things where it is weak: I don't find it particularly good at explaining Norwegian grammar (and to be fair, I'm mostly using the iOS version not the web app) and often find I don't always know when to use *i*, *på*, *til*, and *for*. But it is fantastic at teaching you themed vocabulary, and the gamification elements of the application---at least for me---serve as a good motivator without getting in the way of actually learning.
 
 To further augment my language learning, I started to follow Norwegian speakers on Twitter, read *Aftenposten*, and listen to Norwegian langauge podcasts. More on this in the resources below.
 
@@ -47,10 +47,8 @@ To further augment my language learning, I started to follow Norwegian speakers 
 
 I have found these decks by other Anki users to be particularly helpful. 
 
-- Duolingo vocabulary 
+- [Duolingo vocabulary](https://ankiweb.net/shared/info/923795004) 
 - All common vocabulary words
-- General phrases for travel
-- Norwegian slang
 
 ### Specialized vocabulary 
 
@@ -61,7 +59,7 @@ These are decks I've built for particular areas of focus I'm interested in.
 
 ### Norskprøven vocabulary 
 
-The Norskprøven is the standard Norwegian proficiency test usually included in immigration, citizenship, and job requirements. 
+Norskprøven is the standard Norwegian proficiency test usually included in immigration, citizenship, and job requirements. 
 
 ## Vocabulary study 
 
@@ -93,6 +91,18 @@ The Norskprøven is the standard Norwegian proficiency test usually included in 
 ### Textbooks
 
 ### Music
+
+- Wardruna
+- Hkeem
+- Astrid S
+- Eva Weel Skram
+- Heiða
+
+I also have a few Apple Music playlists I've built to hear the language: 
+
+- [Scandinavian Folk music](https://music.apple.com/us/playlist/scandiavian-folk/pl.u-02PAtAp25X) -- Not only Norwegian, but includes music across the lands of the north.
+- [Norsk](https://music.apple.com/us/playlist/norsk/pl.u-pprECEoGkY) -- A mix of Norwegian pop, mostly.
+- [Scandinavian Christmas](https://music.apple.com/us/playlist/scandinavian-christmas/pl.u-rKbYcr5d09)
 
 ### Short Stories
 
