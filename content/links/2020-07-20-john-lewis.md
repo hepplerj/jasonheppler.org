@@ -2,6 +2,7 @@
 title: 'John Lewis Dies at 80'
 date: 2020-07-17T10:12:30-05:00
 slug: 'john-lewis'
+external: 'https://www.ajc.com/news/john-lewis-civil-rights-hero-georgia-congressman-dies-at-80/OPPO3SWLXBDGTFPSU3ICE6LOBQ/'
 ---
 
 [Tamar Hallerman](https://www.ajc.com/news/john-lewis-civil-rights-hero-georgia-congressman-dies-at-80/OPPO3SWLXBDGTFPSU3ICE6LOBQ/) in the *Atlanta Journal-Constitution*:

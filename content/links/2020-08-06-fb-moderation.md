@@ -2,6 +2,7 @@
 title: 'Twitter and Facebook moderating Trump campaign on misinformation'
 date: 2020-08-06T10:34:37-06:00
 slug: 'fb-moderation'
+external: 'https://www.washingtonpost.com/technology/2020/08/05/trump-post-removed-facebook/'
 ---
 
 [Heather Kelly](https://www.washingtonpost.com/technology/2020/08/05/trump-post-removed-facebook/) in the *Washington Post*:

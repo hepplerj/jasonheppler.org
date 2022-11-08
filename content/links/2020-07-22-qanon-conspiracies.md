@@ -2,6 +2,7 @@
 title: 'Twitter Begins Limiting the Spread of QAnon Conspiracy Theories'
 date: 2020-07-22T10:28:31-06:00
 slug: 'qanon-conspiracies'
+external: 'https://www.nbcnews.com/tech/tech-news/twitter-bans-7-000-qanon-accounts-limits-150-000-others-n1234541'
 ---
 
 [Ben Collins and Brandy Zadrozny](https://www.nbcnews.com/tech/tech-news/twitter-bans-7-000-qanon-accounts-limits-150-000-others-n1234541):
