@@ -215,6 +215,51 @@ h2.post-title a {
   display: block;
 }
 
+.link-post-date a {
+  color: var(--color-black);
+  font-size: var(--type-small);
+  text-decoration: none;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  border-radius: .25rem;
+  margin: 20px 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: .75rem 1rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: var(--color--accent-primary);
+  border: 1px solid var(--color--accent-primary-fuller);
+}
+
+.homepage .page-link,
+.listing .page-link {
+  background-color: #fff;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  cursor: auto;
+  background-color: #fff;
+  border-color: #dee2e6;
+}
+
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: var(--color--accent-primary);
+  border-color: var(--color--accent-primary-fuller);
+}
+
 /* a:visited {
   color:#333
 } */
