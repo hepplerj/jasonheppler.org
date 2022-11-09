@@ -1,0 +1,5 @@
+---
+date: '{{ .Date }}'
+external: 
+title: ''
+---

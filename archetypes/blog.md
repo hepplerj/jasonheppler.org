@@ -1,10 +1,10 @@
 ---
-title: '{{ slicestr .Name 11 | humanize }}'
-date: {{ .Date }}
-slug: '{{ slicestr .Name 11 }}'
-series:
-categories:
-external:
-image:
+title: "{{ getenv "BLOG_TITLE" }}"
+date: "{{ .Date  }}"
+slug: "{{ slicestr .Name 11  }}"
 draft: true
+# newsletter: true
+# tags:
+# - 
+# external: ""
 ---
