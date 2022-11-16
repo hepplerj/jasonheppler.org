@@ -1,4 +1,6 @@
 {{ partial "head.html" . }}
+<div class='pad2y limiter content'>
+  <div class="body"> 
 
 {{if not .IsHome }}
 <h1><strong>{{ .Title }}</strong></h1>
@@ -13,5 +15,6 @@
   </li>
   {{ end }}
 </ul>
+</div>
 
 {{ partial "foot.html" . }}
