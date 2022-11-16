@@ -10,7 +10,9 @@ footnoteReturnLinkContents = " "
   archive = "/:slug/"
   page = "/:section/:slug/"
 
-disableKinds = "taxonomyTerm"
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
 
 assetDir = "static"
 contentDir = "content"
