@@ -6,7 +6,7 @@ categories:
 - web
 ---
 
-Tonight I wrote a small Go script to delete all of my tweets. There isn't much to stay about this except that Twitter has always been an ephemeral presence for me --- I've had a somewhat long-standing practice of deleting everything older than three years back (and of syncing tweets to a Google spreadsheet so I still have a copy of everything). 
+Tonight I wrote a small Go script to delete all of my tweets. There isn't much to say about this except that Twitter has always been an ephemeral presence for me --- I've had a somewhat long-standing practice of deleting everything older than three years back (and of syncing tweets to a Google spreadsheet so I still have a copy of everything). 
 
 But the truth is what I write here on my website is the historical record.
 
