@@ -1,5 +1,6 @@
 {{ partial "head.html" . }}
-
+<div class='pad2y limiter content'>
+  <div class="body"> 
 <article id='{{ urlize .Title }}' class="h-entry book">
   <header>
     <h2 class="post-title"><a href='{{ .Permalink }}' class='p-name'><em>{{ .Params.Shorttitle }}</em></a> by {{ .Params.Author }}</h2>
@@ -13,7 +14,7 @@
   <ul>
     <li><em>{{ .Title }}</em> by {{ .Params.Author }}</li>
     <li>ISBN: {{ .Params.Isbn }} (look up with <a href="https://worldcat.org/isbn/{{ .Params.Isbn }}">WorldCat</a> or <a href="https://openlibrary.org/isbn/{{ .Params.Isbn }}">Open Library</a>)</li>
-    <li>Buy from <a href="https://bookshop.org/a/{{ .Params.Affiliate }}">Bookshop</a></li>
+    <li>Buy from <a href="https://bookshop.org/books?keywords={{ .Params.Isbn }}">Bookshop</a></li>
     <li>Published: {{ .Params.Year }}</li>
     <li>Publisher: {{ .Params.Publisher }}</li>
   </ul>
@@ -24,3 +25,5 @@
 
 {{ partial "blog-nav" . }}
 {{ partial "foot" . }}
+
+</div>

@@ -8,16 +8,26 @@
 
 {{ .Content }}
 
-<p>I've tracked previous readings on <a href="https://www.goodreads.com/jaheppler">Goodreads</a> and <a href="https://www.librarything.com/profile/hepplerj">LibraryThing</a>, but as of 2020 started logging that information myself here. Links are added as I get notes, thoughts, and reviews typed up. Some day I'll export everything from Goodreads and get it listed here instead.</p>
+<p>I've tracked previous readings on <a href="https://www.goodreads.com/jaheppler">Goodreads</a> and <a href="https://www.librarything.com/profile/hepplerj">LibraryThing</a>, but as of 2020 started logging that information myself here. Some day I'll export everything from Goodreads and have everything listed here instead.</p>
 
-<p>You can find all of these books <a href="https://bookshop.org/shop/jasonheppler">on my Bookshop page</a>.</p>
+<p>This is a fairly selective list, and you can find another version of it <a href="https://social.jasonheppler.org/bookshelf/">on micro.blog</a>. This list won't typically include ratings since I don't read books that way <a href="https://www.lifehack.org/articles/featured/advice-for-students-how-to-read-like-a-scholar.html">as an academic</a>. You can find all of these books <a href="https://bookshop.org/shop/jasonheppler">on my Bookshop page</a>.</p>
 
 <div class="books">  
 {{ range (where .Site.RegularPages "Section" "books").GroupByDate "2006" }}
 <h2>{{ .Key }}</h2>
     {{ range .Pages }}
     <div itemprop = "mainEntity" itemscope itemtype="http://schema.org/Book">
-      <div itemprop="title">{{ if and (in .Params.categories "unread") }} <em>{{ .Params.Shorttitle }}</em> {{else}} <a href="{{ .Permalink }}" class="post-link"><em>{{ .Params.Shorttitle }}</em></a> {{ end}}</div>
+      <div>
+      <details>
+        <summary>{{ if and (in .Params.categories "unread") }} <em>{{ .Params.Shorttitle }}</em> {{else}} <a href="{{ .Permalink }}" class="post-link"><em>{{ .Params.Shorttitle }}</em></a> {{ end}}</summary>
+        <span class="smaller">
+          ISBN: {{ .Params.Isbn }} (look up with <a href="https://worldcat.org/isbn/{{ .Params.Isbn }}">WorldCat</a> or <a href="https://openlibrary.org/isbn/{{ .Params.Isbn }}">Open Library</a>) <br />
+          Buy from <a href="https://bookshop.org/books?keywords={{ .Params.Isbn }}">Bookshop</a> <br />
+          Published: {{ .Params.Year }} <br />
+          Publisher: {{ .Params.Publisher }} <br />
+        </span>
+      </details>
+      </div>
       <div itemprop="author">{{ .Params.Author }}</div>
     </div>
     {{ end }}
