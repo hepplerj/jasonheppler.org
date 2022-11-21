@@ -70,20 +70,6 @@
   --nested-photoset-margin: 3.25rem;
   --nested-photoset-margin-responsive: 2rem;
 }
-/* 
-@font-face {
-  font-family: "Clearface";
-  font-weight: normal;
-  font-style: normal;
-  src: url("/assets/fonts/ClearfaceStd-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Clearface";
-  font-weight: normal;
-  font-style: italic;
-  src: url("/assets/fonts/ClearfaceStd-Italic.woff") format("woff");
-} */
 
 @font-face {
   font-family: 'Calibre';
@@ -178,6 +164,10 @@ body {
 body.stand-with-ukraine {
   padding-block-start: var(--space-medium);
   box-shadow: inset 0 .25em #0059b8,inset 0 .5em #ffd900;
+}
+
+.smaller {
+  font-size: var(--type-x-small);
 }
 
 .only-print {
