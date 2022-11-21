@@ -15,10 +15,6 @@ permalinks:
 taxonomies:
   category: categories
   tag: tags
-  assetDir: static
-  contentDir: content
-  layoutDir: layouts
-  publishDir: public
 
 author:
   name: Jason Heppler
@@ -44,9 +40,9 @@ markup:
   highlight:
     guessSyntax: true
     style: github
-    lineNos: true
+    lineNos: false
     tabWidth: 4
-    codeFences: true
+    codeFences: false
 
 outputFormats:
   RSS:
