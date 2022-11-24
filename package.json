@@ -13,6 +13,7 @@
     "highlight.js": "^11.5.1",
     "littlefoot": "^3.4.1",
     "marked": "^4.0.17",
+    "node-fetch": "^3.3.0",
     "psl": "^1.8.0"
   },
   "repository": {
