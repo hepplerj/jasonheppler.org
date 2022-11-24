@@ -170,6 +170,14 @@ body.stand-with-ukraine {
   font-size: var(--type-x-small);
 }
 
+.even-smaller {
+  font-size: var(--type-xx-small);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
 .only-print {
   display:none
 }
@@ -699,6 +707,16 @@ aside.littlefoot-footnote {
 
 .books > div div:nth-child(3),.writing>div div:last-child,.teaching>div div:last-child {
   padding-right:.25em;font-variant-numeric:tabular-nums;letter-spacing:-.012em; }
+
+.books details>summary {
+  list-style-type: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.books details>summary::-webkit-details-marker {
+  display: none;
+}
 
 @media screen and (max-width:640px){
     .books>div { grid-template-columns:1fr .5fr 70px }

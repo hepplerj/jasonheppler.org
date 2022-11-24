@@ -12,6 +12,8 @@
 
 <p>This is a fairly selective list, and you can find another version of it <a href="https://social.jasonheppler.org/bookshelf/">on micro.blog</a>. This list won't typically include ratings since I don't read books that way <a href="https://www.lifehack.org/articles/featured/advice-for-students-how-to-read-like-a-scholar.html">as an academic</a>. You can find all of these books <a href="https://bookshop.org/shop/jasonheppler">on my Bookshop page</a>.</p>
 
+<p>Click on a title to see more details about the book.</p>
+
 <div class="books">  
 {{ range (where .Site.RegularPages "Section" "books").GroupByDate "2006" }}
 <h2>{{ .Key }}</h2>
@@ -20,8 +22,8 @@
       <div>
       <details>
         <summary>{{ if and (in .Params.categories "unread") }} <em>{{ .Params.Shorttitle }}</em> {{else}} <a href="{{ .Permalink }}" class="post-link"><em>{{ .Params.Shorttitle }}</em></a> {{ end}}</summary>
-        <span class="smaller">
-          ISBN: {{ .Params.Isbn }} (look up with <a href="https://worldcat.org/isbn/{{ .Params.Isbn }}">WorldCat</a> or <a href="https://openlibrary.org/isbn/{{ .Params.Isbn }}">Open Library</a>) <br />
+        <span class="even-smaller mono">
+          ISBN: {{ .Params.Isbn }} (find on <a href="https://worldcat.org/isbn/{{ .Params.Isbn }}">WorldCat</a> or <a href="https://openlibrary.org/isbn/{{ .Params.Isbn }}">Open Library</a>) <br />
           Buy from <a href="https://bookshop.org/books?keywords={{ .Params.Isbn }}">Bookshop</a> <br />
           Published: {{ .Params.Year }} <br />
           Publisher: {{ .Params.Publisher }} <br />
