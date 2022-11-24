@@ -50,18 +50,18 @@ const writeBookData = (data) => {
     const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
     
     const book = `---
-        title: "${data.title}"
-        shorttitle: '${data.title}'
-        author: '${data.author}'
-        date: ${date}
-        isbn: "${data.isbn}"
-        pub_year: "${data.date}"
-        publisher: "${data.publisher}"
-        categories:
-        - books
-        - unread
-        ---
-    `;
+title: "${data.title}"
+shorttitle: '${data.title}'
+author: '${data.author}'
+date: ${date}
+isbn: "${data.isbn}"
+pub_year: "${data.date}"
+publisher: "${data.publisher}"
+categories:
+- books
+- unread
+---
+`;
 
     const urltitle = data.title.replace(/ /g, '-').toLowerCase();
     fs.writeFile(`./content/books/${date}-${urltitle}.md`, book, (err) => {
