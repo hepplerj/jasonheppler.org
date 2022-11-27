@@ -37,6 +37,7 @@
     <link href="https://scholar.google.com/citations?user=X2hGnS4AAAAJ" rel="me">
     <link href="https://www.zotero.org/hepplerj/" rel="me">
     <link href="https://www.linkedin.com/in/jasonheppler/" rel="me">
+    <link href="https://indieweb.org/User:Jasonheppler.org" rel="me">
 
     <!-- RDFa Metadata (in DublinCore) -->
     <meta property="dc:title" content="" />
@@ -96,11 +97,11 @@
     <!-- JavaScripts -->
     {{ if eq hugo.Environment "development" }}
     {{ $devJS := resources.Get "javascripts/hepp.js" | js.Build }}
-    <script type="module" src="{{ $devJS.Permalink }}"></script>
+    <script type="module" src="{{ $devJS.Permalink }}" async></script>
     {{ else }}
     {{ $js := resources.Get "javascripts/hepp.js" | js.Build | resources.Minify }}
     {{ $secureJS := $js | resources.Fingerprint "sha512" }}
-    <script type="module" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+    <script type="module" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}" async></script>
     {{ end }}
 
     <!-- Plausible -->
