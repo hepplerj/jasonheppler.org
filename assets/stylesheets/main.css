@@ -134,16 +134,6 @@
   src: url("/assets/fonts/IBMPlexMono-MediumItalic.woff2") format("woff2")
 }
 
-/* body {
-  margin: 0 auto;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  line-height: 1.6;
-  font-size: 1rem;
-  font-family:var(--font-sans);
-  background: var(--color-sheet);
-} */
-
 body {
   font-family: 'Calibre', sans-serif;
   font-style: normal;
@@ -185,6 +175,14 @@ body.stand-with-ukraine {
 .body img {
   width: 100%;
   max-width:640px
+}
+
+.body details p {
+  font-family: var(--font-mono);
+  font-size: var(--type-x-small);
+  font-weight: 500;
+  color: var(--color-black);
+  cursor: pointer;
 }
 
 a {
