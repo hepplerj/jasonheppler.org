@@ -11,11 +11,13 @@
     <header class="link-post-header">
       <p><time class='link-post-date post-date' datetime='{{ .Date.Format "2006-01-02" }}'>
         <a href="{{ .Permalink }}" class="permalink" title="Local permalink">{{ .Date.Format "January 2, 2006" }}</a>
-      </time> &middot; <span class="commonplace__tag smaller">{{ partial "tags.html" .}}</span>  &middot; <a href="{{ index .Params "external" }}">{{ index .Params "title" }} →</a></p>
+      </time> &middot; <a href="{{ index .Params "external" }}">{{ index .Params "title" }} →</a></p>
     </header>
     <article>
 
       {{ .Content }}
+
+      Tags: <span class="commonplace__tag">{{ partial "tags.html" .}}</span>  
 
     </article>
     <hr />

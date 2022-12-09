@@ -3,7 +3,7 @@
   <channel>
     <title>{{ .Site.Params.blogFeedTitle }}</title>
     <link>{{ .Permalink | absURL }}</link>
-    <description>Recent blog post by {{ .Site.Author.name }}</description>
+    <description>Recent reading log by {{ .Site.Author.name }}</description>
     <generator>Hugo -- gohugo.io</generator>
     {{ with .Site.LanguageCode }}
     <language>{{.}}</language>
@@ -16,23 +16,13 @@
     {{ with .OutputFormats.Get "RSS" }}
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
-    {{ range first 25 (where .Site.RegularPages "Section" "in" (slice "blog" "links" "newsletter")) }}
+    {{ range first 25 (where .Site.RegularPages "Section" "books") }}
     <item>
-      {{ if .Params.External }}
-      <title>Link post: {{ .Content | markdownify | plainify | htmlUnescape | truncate 75 | safeHTML }}</title>
-      <link>{{ .Permalink | absURL | htmlEscape }}</link>
-      {{ else }}
       <title>{{ .Title | markdownify | plainify | htmlUnescape | safeHTML }}</title>
       <link>{{ .Permalink | absURL | htmlEscape }}</link>
-      {{ end }}
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
-      {{ if .Params.External }}
-      <guid>{{ .Params.External | absURL }}</guid>
-      {{ else }}
       <guid isPermaLink="true">{{ .Permalink | absURL }}</guid>
-      <description>{{ .Content | html }}</description>
-      {{ end }}
     </item>
     {{ end }}
   </channel>
