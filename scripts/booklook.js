@@ -52,7 +52,7 @@ const writeBookData = (data) => {
     
     const book = `---
 title: "${data.title}"
-shorttitle: '${data.title}'
+shorttitle: "${data.title}"
 author: '${data.author}'
 date: ${date}
 isbn: "${data.isbn}"
