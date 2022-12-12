@@ -5,8 +5,9 @@
 //
 // If you're after something specific, your best bet is the ISBN.
 //
-// Usage: node booklook.js "9780007215027"
-// Usage: node booklook.js "The Hobbit"
+// Must be run from the root of the project:
+// Usage: node scripts/booklook.js "9780007215027"
+// Usage: node scripts/booklook.js "The Hobbit"
 //
 
 import fetch from 'node-fetch';
@@ -62,9 +63,11 @@ categories:
 - unread
 ---
 `;
-
+    // replace spaces with hyphens and make lowercase
     const urltitle = data.title.replace(/ /g, '-').toLowerCase();
-    fs.writeFile(`./content/books/${date}-${urltitle}.md`, book, (err) => {
+    // remove any punctuation from the urltitle
+    const urltitle_clean = urltitle.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+    fs.writeFile(`./content/books/${date}-${urltitle_clean}.md`, book, (err) => {
         if (err) throw err;
         console.log('The file has been saved!');
     });
