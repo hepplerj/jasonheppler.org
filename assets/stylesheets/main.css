@@ -51,7 +51,7 @@
   /* --font-sans: 'Interdisplay', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif; */
   /* --font-sans: 'Interdisplay', 'Source Sans Variable', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;   */
   /* --mono-font: San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace; */
-  --font-sans: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+  --font-sans: 'Trade Gothic Next', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
   /* --font-sans: 'Alegreya', sans-serif; */
   --font-mono: "IBM Plex Mono", San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   --type-base: calc(1.5em + 0.5vw);
@@ -134,8 +134,33 @@
   src: url("/assets/fonts/IBMPlexMono-MediumItalic.woff2") format("woff2")
 }
 
+@font-face {
+  font-family: 'Trade Gothic Next';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/trade-gothic-next-regular.woff2") format("woff2")
+}
+
+@font-face {
+  font-family: 'Trade Gothic Next';
+  font-style: italic;
+  font-weight: 400;
+  src: url("/assets/fonts/trade-gothic-next-italic.woff2") format("woff2")
+}
+
+@font-face {
+  font-family: 'Trade Gothic Next';
+  font-style: bold;
+  font-weight: 600;
+  src: url("/assets/fonts/trade-gothic-next-bold.woff2") format("woff2")
+}
+
+*, *:before {
+  text-rendering: optimizeLegibility;
+}
+
 body {
-  font-family: 'Calibre', sans-serif;
+  font-family: var(--font-sans);
   font-style: normal;
   font-weight: 400;
   background: #fff;
@@ -152,8 +177,23 @@ body {
 }
 
 body.stand-with-ukraine {
-  padding-block-start: var(--space-medium);
-  box-shadow: inset 0 .25em #0059b8,inset 0 .5em #ffd900;
+  padding-block-start: var(--space-large);
+  box-shadow: inset 0 .5em #0059b8,inset 0 1em #ffd900;
+}
+
+.caps {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .065em;
+}
+
+.drop {
+  display: block;
+  float: left;
+  font-size: 112px;
+  margin: -19px 6px -20px 3px;
+  line-height: 1;
+  font-weight: normal;
 }
 
 .smaller {
@@ -199,6 +239,12 @@ a:hover {
 
 nav a {
   color: #111111;
+  font-family: var(--font-mono);
+  font-size: var(--type-x-small);
+}
+
+nav .site-title {
+  text-transform: uppercase;
 }
 
 footer a {
@@ -267,7 +313,7 @@ h1.post-title a {
 
 p, ul, ol {
   font-size: 21px;
-  line-height: 26px;
+  line-height: 2rem;
   margin: 1rem 0
 }
 
