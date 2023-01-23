@@ -26,34 +26,34 @@ slug: '/about/'
 </div>
 
 <div class="bio-project-right">
-  <p>Please feel free to contact me:</p>
+  <p class="noted">Please feel free to contact me:</p>
 
-  <p><a href="mailto:jason@jasonheppler.org">jason@jasonheppler.org</a></p>
+  <p class="noted"><a href="mailto:jason@jasonheppler.org">jason@jasonheppler.org</a></p>
 
-  <p><a href="/newsletter">Subscribe to Breve</a>, my occasional newsletter on design, creativity, and human knowledge.</p>
+  <p class="noted"><a href="/newsletter">Subscribe to Breve</a>, my occasional newsletter on design, creativity, and human knowledge.</p>
 
-  <h4>Privacy</h4>
+<h2>Privacy</h2>
 
 <p class="noted">I take your privacy seriously. I use a lightweight and privacy-centric tracker called <a href="https://plausible.io">Plausible</a>, which interprets information your browser already sends (like IP address, screen resolution, browser, and operating system.) If you're running Do Not Track on your browser, Plausible won't track you.</p>
 
 <p class="noted">If you email me something I keep that anonymous, especially when sent encrypted. If I decide I would like to quote something from your email, I will ask you first. If you've emailed me about something I got wrong, I may use your name to credit the correction but I won't if it's not public information. <a href="https://jasonheppler.org/jasonheppler.asc">Here's my public key</a>.</p>
 
-<h4>Colophon</h4>
+<h2>Colophon</h2>
 
 <p class="noted">This website is built with <a href="https://gohugo.io">Hugo</a>.</p>
 
-<h4>Support</h4>
+<h2>Support</h2>
 
-<p>If you'd like to support my writing here and elsewhere, I'd love it if you could <a href="https://www.buymeacoffee.com/jasonheppler">buy me a coffee</a>.</p>
+<p class="noted">If you'd like to support my writing here and elsewhere, I'd love it if you could <a href="https://www.buymeacoffee.com/jasonheppler">buy me a coffee</a>.</p>
 
-<h4 class="homepage-header">Elsewhere on the internet</h4>
+<h2>Elsewhere on the internet</h2>
 	<ul class="list-unstyled">
-		<li><a href="https://social.jasonheppler.org/">Micro.blog</a>
+		<li><a href="https://social.jasonheppler.org/">Micro.blog</a></li>
+    <li><a href="https://historians.social/@jaheppler">Mastodon</a></li>
 		<li><a href="https://github.com/hepplerj">GitHub</a></li>
 		<li><a href="https://observablehq.com/@hepplerj?tab=profile">Observable</a>
 		<li><a href="https://orcid.org/0000-0003-4158-6186">ORCID</a>
-		<li><a href="https://scholar.google.com/citations?user=X2hGnS4AAAAJ">Google Scholar</a>
-		</li>
+		<li><a href="https://scholar.google.com/citations?user=X2hGnS4AAAAJ">Google Scholar</a></li>
 		<li><a href="https://historyarthistory.gmu.edu/people/jheppler">GMU homepage</a></li>
 		<li><a href="https://hcommons.org/members/hepplerj/">Humanities Commons</a></li>
 		<li><a href="https://www.zotero.org/hepplerj">Zotero</a></li>
