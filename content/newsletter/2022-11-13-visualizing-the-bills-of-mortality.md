@@ -1,5 +1,6 @@
 ---
-title: 'Breve: Visualizing the Bills of Mortality'
+title: 'Breve No. 5: Visualizing the Bills of Mortality'
+issue: 5
 date: 2022-11-13T08:16:47-07:00
 slug: 'breve-visualizing-bills'
 series: breve
@@ -11,7 +12,7 @@ This past weekend I attended the Southern History Association conference in Balt
 
 ---
 
-The plague bills were compilations of burials, christenings, foodstuffs, and causes of deaths across (primarily) London’s parishes as early as 1592 until the middle of the nineteenth century (although our project ends in 1740). For each of the parishes, the bills counted causes of death that were generally printed as weekly broadsides, general notices posted in public spaces, or sold as handbills.
+The plague bills were compilations of burials, christenings, foodstuffs, and causes of deaths across (primarily) London's parishes as early as 1592 until the middle of the nineteenth century (although our project ends in 1740). For each of the parishes, the bills counted causes of death that were generally printed as weekly broadsides, general notices posted in public spaces, or sold as handbills.
 
 ![](https://buttondown.s3.us-west-2.amazonaws.com/images/a9d7269a-b63f-4999-9ba4-502a425dcce9.jpg)[*1679 Weekly Bill of Mortality. Call Number 265428. Used by permission of the Folger Shakespeare Library.*](https://luna.folger.edu/luna/servlet/view/search?search=SUBMIT&cat=0&q=265428&dateRangeStart=&dateRangeEnd=&QuickSearchA=QuickSearchA)
 

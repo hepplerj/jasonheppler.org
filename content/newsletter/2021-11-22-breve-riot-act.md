@@ -1,5 +1,6 @@
 ---
 title: 'Breve: Reading the Riot Act'
+issue: 2
 date: 2021-09-09T21:29:38-07:00
 slug: 'breve-riot-act'
 series: breve
@@ -8,7 +9,7 @@ categories:
 ---
 
 <aside>
-This is <em>Breve</em> &mdash; the newsletter from Jason A. Heppler. If you want more like it in your inbox, <a href="https://buttondown.email/jheppler">consider subscribing</a>. 
+This is <em>Breve</em> &mdash; the newsletter from Jason A. Heppler. If you want more like it in your inbox, <a href="https://buttondown.email/jheppler">consider subscribing</a>. 
 </aside>
 
 Recently, I learned of [Riot Acts](https://www.riotacts.org/index.html) by Patrick Hoehne, a PhD candidate at the University of Nebraska-Lincoln.
