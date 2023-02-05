@@ -25,17 +25,18 @@
 
 {{ .Content }}
 
-<div class="writing">  
+<div class="newsletters">  
 {{ range (where .Site.RegularPages "Section" "newsletter").GroupByDate "2006" }}
 
 <h2>{{ .Key }}</h2>
     {{ range .Pages }}
-    <div class="preview-post">
-      <div><a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a> &mdash; <time>{{ .Date.Format "2 January 2006" }}</time></div>
+    <div class="newsletter-preview">
+      <div class="issue">{{ .Params.issue }} <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a> <time>{{ .Date.Format "2 January 2006" }}</time></div>
     </div>
     {{ end }}
 {{ end }}
-</div>
+
+  </div>
 </div>
 
 {{ partial "foot.html" . }}

@@ -1,4 +1,14 @@
-<nav class="header-wrap" role="navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+<nav id="header-container" role="navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+  <header class="header-primary">
+  <a href="https://jasonheppler.org" class="me"><b>Jason Heppler</b></a>
+
+  {{ range .Site.Menus.nav }}
+        <a class="menu menu-item-link link" href="{{ .URL | absLangURL | safeURL }}">{{ .Name }}</a>
+    {{ end }}
+  </header>
+</nav>
+
+<!-- <nav class="header-wrap" role="navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope>
   <div class="header nu limiter no-print">
     <ul id="menu" class="menu" style="list-style: none; padding: 0; margin: 0;">
         <li class="menu-item"><a href="/" class="site-title" style="font-weight: bold;">{{ .Site.Title }}</a></li>
@@ -8,4 +18,4 @@
         <li class="menu-item"><a class="menu-item-link link" href="https://jasonheppler.org/files/jah-cv.pdf"> Vitae</a></li>
     </ul>
   </div>
-</nav>
+</nav> -->

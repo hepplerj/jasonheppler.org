@@ -1,5 +1,6 @@
 ---
 title: 'Breve: A Network of Knowledge'
+issue: 1
 date: 2021-03-10T21:16:47-07:00
 slug: 'breve-network-knowledge'
 series: breve

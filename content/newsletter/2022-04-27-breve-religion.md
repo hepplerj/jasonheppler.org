@@ -1,5 +1,6 @@
 ---
 title: 'Breve: Mapping American Religion'
+issue: 4
 date: 2022-04-27T20:16:47-07:00
 slug: 'breve-mapping-religion'
 series: breve
