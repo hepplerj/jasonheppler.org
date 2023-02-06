@@ -1,7 +1,11 @@
 <nav id="header-container" role="navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope>
   <header class="header-primary">
   <a href="https://jasonheppler.org" class="me"><b>Jason Heppler</b></a>
-
+  <button class="hamburger hamburger--collapse" type="button">
+    <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+    </span>
+  </button>
   {{ range .Site.Menus.nav }}
         <a class="menu menu-item-link link" href="{{ .URL | absLangURL | safeURL }}">{{ .Name }}</a>
     {{ end }}
