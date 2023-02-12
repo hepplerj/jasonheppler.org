@@ -5,12 +5,12 @@ slug: '/about/'
 
 <section class="bio-project">
 <div class="bio-project-left">
-  {{< figure src="/assets/images/atxpo_2016-3703_1024.jpg" alt="Jason A. Heppler" caption="↳ Photo by [Carlos Seligo](https://www.linkedin.com/in/carlosseligo/)" >}}
+  {{< figure src="/assets/images/head.jpeg" alt="Jason A. Heppler" >}}
   <p class="u-lead"><strong>Hi! I'm Jason</strong>, a web developer by trade and a historian by vocation at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> (RRCHNM) at <a href="https://historyarthistory.gmu.edu">George Mason University</a>. I collaborate with faculty and graduate students on the innovative application of technology in teaching and research across interactive data visualization, design, and public and digital history.</p>
 
   <p><a href="https://jasonheppler.org/files/jah-cv.pdf">You can find my full CV here</a>.</p>
 
-  <p>(<a href="/bio/">Need a full bio and headshot?</a>)</p>
+  <p>(<a href="/bio/">Need a full bio?</a>)</p>
 
   <p>Because we live in an era of climate emergency, most of my work is concerned with land, water, and energy, and the history tied up within these: who controlled access to these things; how were these things owned and used; what stories do we tell about places and how does that shape what happened; how the landscape is a record of history and power; how state institutions shape thinking about landscape, nature, and health. In addition to my work in environmental history, I'm also a scholar with expertise in digital mapping, spatial history, statistics, and big-data / machine reading methods for historical research. I was formerly an assistant professor at the University of Nebraska at Omaha, but elected to leave the tenure track for the creative energy and cutting-edge research around RRCHNM. I volunteer my time with the Environmental Data & Governance Initiative's <a href="https://envirodatagov.org/environmental-historians-action-collaborative/">Environmental Historians Action Collaborative</a> and History Rebellion.</p>
 
@@ -40,7 +40,7 @@ slug: '/about/'
 
 <h2>Colophon</h2>
 
-<p class="noted">This website is built with <a href="https://gohugo.io">Hugo</a>.</p>
+<p class="noted">This website is built with the static site generator <a href="https://gohugo.io">Hugo</a> and typeset with the lovely <a href="https://www.linotype.com/414550/trade-gothic-next-family.html">Trade Gothic Next</a>.</p>
 
 <h2>Support</h2>
 

@@ -3,7 +3,7 @@ title: "Digital & public history"
 slug: '/research/'
 ---
 
-I've been designing, developing, and teaching digital and public history for ten years. Most of my work sits at the intersection of digital history, data science, and design. Below are a select few. Find lots more on [GitHub](http://github.com/hepplerj) and [Observable](https://observablehq.com/@hepplerj). For a complete list of my scholarship, please see my [full CV](https://jasonheppler.org/files/jah-cv.pdf).
+I've been designing, developing, and teaching digital and public history for ten years. Most of this work sits at the intersection of digital history, computational research, community-engaged and public-facing work, and design. Find more on [GitHub](http://github.com/hepplerj) and [Observable](https://observablehq.com/@hepplerj). For a complete list of my scholarship, please see my [full CV](https://jasonheppler.org/files/jah-cv.pdf).
 
 <div class="project-box">
 

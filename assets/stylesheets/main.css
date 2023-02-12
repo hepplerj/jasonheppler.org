@@ -729,24 +729,24 @@ header {
   color:#222
 }
 
-.bread {
-  display: block;
-  background: #222;
-  width: 100%;
-  height: 3px;
-  border-radius: .5px;
-  position: absolute;
-  transition:transform .1096s cubic-bezier(.52, .16, .52, .84)
+h2.midline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 30px auto 30px auto;
 }
-
-.bread__top {
-  top:0
+h2.midline span {
+  background: #f7f7f7;
+  margin: 0 15px;
 }
-
-.bread__bottom {
-  bottom:0
+h2.midline:before,
+h2.midline:after {
+  background: black;
+  height: 2px;
+  flex: 1;
+  content: '';
 }
-
 
 /* Default Table Style */
 table {
