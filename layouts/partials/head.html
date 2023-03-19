@@ -95,16 +95,6 @@
 
     <link rel="shortcut icon" href="/assets/images/favicon.png">
 
-    <!-- JavaScripts -->
-    {{ if eq hugo.Environment "development" }}
-    {{ $devJS := resources.Get "javascripts/hepp.js" | js.Build }}
-    <script type="module" src="{{ $devJS.Permalink }}" async></script>
-    {{ else }}
-    {{ $js := resources.Get "javascripts/hepp.js" | js.Build | resources.Minify }}
-    {{ $secureJS := $js | resources.Fingerprint "sha512" }}
-    <script type="module" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}" async></script>
-    {{ end }}
-
     <!-- Plausible -->
     <script defer data-domain="jasonheppler.org" src="https://plausible.io/js/plausible.js"></script>
 
