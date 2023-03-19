@@ -69,7 +69,7 @@ menu:
     - name: Teaching
       url: /courses/
       weight: 3
-    - name: Blog
+    - name: Posts
       url: /blog/
       weight: 4
     - name: About
