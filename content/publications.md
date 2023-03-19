@@ -11,7 +11,7 @@ For a complete list of my scholarship, please see my [CV](https://jasonheppler.o
 
 ## Books
 
-{{% book title="The Nature of the Valley: Silicon Valley and the Transformation of American Environmental Politics" year="2022" publisher="University of Oklahoma Press" %}}
+{{% book title="The Nature of the Valley: Silicon Valley and the Transformation of American Environmental Politics" year="2024" publisher="University of Oklahoma Press" %}}
 
 **Forthcoming**. Few places symbolize the twentieth century like Silicon Valley. Stretching from the communities of San Jose to Palo Alto, the dense suburban region is home to nation’s high tech industrial corridor. In my book, I re-imagine the Silicon Valley’s history not just as symbol of post-industrialism, but as an illustrative of the consequences of the post-war period’s uneven suburban growth in shaping 20th century environmental politics, concerns over social justice, and ideas of sustainability. I complicate the now familiar story of suburbanization’s rapid transformation of post-war American cities by explaining how local activists linked social and environmental issues in creating a new form of politics. In doing so, I help place current debates over sustainability into a deeper historical context and problematize the post-war environmental movement as at once a movement of the white middle class, which gave rise to environmental and social justice movements of the latter half of the 20th century.
 
@@ -37,6 +37,14 @@ Reviews:
 
 -------------------------------------------------------------------
 
+{{% book title="A Companion to Custer and the Little Bighorn Campaign" image="companion_custer.jpg" year="2015" publisher="Wiley" url="https://www.wiley.com/en-us/A+Companion+to+Custer+and+the+Little+Bighorn+Campaign-p-9781444351095" %}}
+
+Chapter, "The National Monument." This volume provides an accessible and authoritative overview of the scholarship that has shaped our understanding of one of the most iconic battles in the history of the American West. A chapter I contributed, co-authored with [Douglas Seefeldt](https://dougseefeldt.net/about-2/), examines the history of the National Monument. We examine the competing interpretations of Custer and the Battle of Little Bighorn among Native peoples, Custer enthusiasts, and the National Park Service. Over time, individuals and groups remember the past in different ways and compete with one another to shape the dominant public memory of an event or a place. Often these disparate interpretations become entangled with conversations about identity and society. The Little Bighorn Battlefield National Monument has long been the focus of passionate debates and roundly criticized for its one‐sided storytelling, encapsulated in its former name the *Custer Battlefield National Monument*. The constructed past at Little Bighorn has changed frequently since Little Bighorn. This essay examines the tangled process of making memory, landscape, and identity at the site of the Little Bighorn battlefield.
+
+{{% /book %}}
+
+-------------------------------------------------------------------
+
 <a name="articles"></a>
 
 ## Selected articles and book chapters
@@ -55,15 +63,15 @@ Reviews:
 
 7. "Machines in the Valley: Community, Urban Change, and Environmental Politics in Silicon Valley, 1945-1990." Ph.D. dissertation, University of Nebraska-Lincoln (May 2016). [Digital Commons version](http://digitalcommons.unl.edu/historydiss/86/)
 
-8. Heppler, Jason A. and Douglas Seefeldt, "A National Monument," *The Companion to Custer and the Little Big Horn* (Hoboken: Wiley and Sons) (2015). [published version](https://www.academia.edu/15865723/A_National_Monument)
+8. Heppler, Jason A. and Gabriel K. Wolfenstein, "Crowdsourcing Public Digital History," *The American Historian* (2015). [published version](http://tah.oah.org/content/crowdsourcing-digital-public-history/)
 
-9. Heppler, Jason A. and Gabriel K. Wolfenstein, "Crowdsourcing Public Digital History," *The American Historian* (2015). [published version](http://tah.oah.org/content/crowdsourcing-digital-public-history/)
+9.  Heppler, Jason A., Alex Galarza, and Douglas Seefeldt, "A Call to Redefine Historical Scholarship in the Digital Turn," *The Journal of Digital Humanities* vol. 1, no. 4 (2012). [published version](http://journalofdigitalhumanities.org/1-4/a-call-to-redefine-historical-scholarship-in-the-digital-turn/)
 
-10. Heppler, Jason A., Alex Galarza, and Douglas Seefeldt, "A Call to Redefine Historical Scholarship in the Digital Turn," *The Journal of Digital Humanities* vol. 1, no. 4 (2012). [published version](http://journalofdigitalhumanities.org/1-4/a-call-to-redefine-historical-scholarship-in-the-digital-turn/)
+10. "The American Indian Movement and South Dakota Politics," in *The Plains Political Tradition*, edited by Jon Lauck, John E. Miller, and Donald Simmons (Pierre: South Dakota State Historical Society Press, 2011).
 
-11. "The American Indian Movement and South Dakota Politics," in *The Plains Political Tradition*, edited by Jon Lauck, John E. Miller, and Donald Simmons (Pierre: South Dakota State Historical Society Press, 2011).
+11. *The Rubyist Historian: Ruby Fundamentals for Humanities Scholars* (2010), <https://doi.org/10.5281/zendo.9987>.
 
-12. *The Rubyist Historian: Ruby Fundamentals for Humanities Scholars* (2010), <https://doi.org/10.5281/zendo.9987>.
+-------------------------------------------------------------------
 
 <a name="essays"></a>
 

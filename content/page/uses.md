@@ -33,14 +33,12 @@ A page detailing my personal computing environment, inspired by [usesthis.com](h
 ## Hardware
 
 - Computers: 
-    - Personal: 13" MacBook Air (2020) 
-    - Work: 21" iMac, green (2020)
+    - 💻 Personal: 13" MacBook Air (2020) 
+    - 🖥️ Work: 21" iMac, green (2020) with Keychron Q2 keyboard and stock Magic Mouse
     - iPad Air (2019)
-- Apple Watch Series 4
-- iPhone 14 Pro
-
-I sometimes think it would be easier to move to China than extricate myself
-from the Apple eco-system. This is probably not a great thing.
+- ⌚️ Apple Watch Series 4
+- 📱 iPhone 14 Pro
+- 📷 [Nikon D50](https://www.nikonusa.com/en/nikon-products/product-archive/dslr-cameras/d50.html)
 
 ## Software
 

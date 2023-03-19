@@ -16,9 +16,8 @@ My goal here is to create a light-weight website that reduces data transfer. To 
 4. Does not make use of videos.
 5. Stores data locally on the user’s device to minimize data transfer.
 6. Compresses all data to the greatest extent possible.
-7. Loads only the most crucial programming scripts, frameworks and cookies.
-8. Limits the amount of light emitted by the screen.
-9. Optimizes and limits the use of custom fonts. 
+7. Limits the amount of light emitted by the screen.
+8. Optimizes and limits the use of custom fonts. 
 
 <div class="metrics_container">
   <div class="metrics-left">

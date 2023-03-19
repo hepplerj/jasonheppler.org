@@ -3,9 +3,7 @@ description: "Jason Heppler is a historian, technologist, and software developer
 ---
 
 <div class="lede">
-<p>I am a historian of the environment and capitalism in the twentieth century North American West and Great Plains.</p>
-
-<p>I am the senior developer-scholar at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> and a member of the <a href="https://historyarthistory.gmu.edu">Department of History and Art History</a> at George Mason University. I am also a proud member of the <a href="https://envirodatagov.org">Environmental Data & Governance Initiative</a>'s <a href="https://envirodatagov.org/environmental-historians-action-collaborative/">Environmental History Action Collaborative</a>. <a href="/about">Read more</a>.</p>
+<p>Hi, I'm <a href="/about">Jason</a>. I am a historian of the environment and capitalism in the twentieth century North American West and Great Plains. I am the senior developer-scholar at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> and a member of the <a href="https://historyarthistory.gmu.edu">Department of History and Art History</a> at George Mason University and a member of the <a href="http://envirohistact.org">Environmental History Action Collaborative</a>.</p>
 </div>
 
 <aside class="newsletter">
@@ -22,29 +20,27 @@ description: "Jason Heppler is a historian, technologist, and software developer
   </form>
 </aside>
 
-<h2 class="midline"><span>Books</span></h2>
+<hr/>
 
-Find more of my work on my [scholarship](/publications/) page.
+<h2>Latest Book</h2>
 
-<section class="project-box">
+Find more of my work on my [scholarship](/publications/) page or my <a href="https://jasonheppler.org/files/jah-cv.pdf">CV</a>.
 
-  <a class="project" href="https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement">
-    <img src="/assets/images/dice.jpeg" alt="Digital Community Engagement" loading="lazy" />
-    <p class="small">Edited with Rebecca Wingo and Paul Schadewald, our volume brings together cutting-edge campus-community partnerships with a focus on digital projects.</p>
-  </a>
+<section class="latest-books">
+{{% book title="Digital Community Engagement: Partnering Communities with the Academy" image="dice.jpeg" year="2020" publisher="University of Cincinnati Press" url="https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement" %}}
 
-  <a class="project" href="https://www.alastore.ala.org/trdm">
-    <img src="/assets/images/Bauder_Research_Data_1200.jpg" alt="Teaching Research Data Management" loading="lazy" />
-    <p class="small">This collection gathers practitioners from a broad range of academic libraries to describe their services and instruction around research data.</p>
-  </a>
+Edited with Rebecca Wingo and Paul Schadewald, our volume brings together cutting-edge campus-community partnerships with a focus on digital projects. Through a series of case studies authored by academics and their community partners, we explore models for digital community engagement that leverages new media through reciprocal partnerships. The contributions to the volume stand at the crossroads of digital humanities, public history, and community engagement, drawing ideas, methods, and practices from various disciplines to inform our public partnerships. By highlighting these projects we hope to provide other institutions, cultural heritage organizations, universities, and communities models for successful engagement.
 
-  <a class="project" href="https://www.sdhspress.com/books/plains-political-tradition-essays-on-south-dakota-political-culture">
-    <img src="/assets/images/plainsbook.jpeg" alt="The Plains Political Tradition" loading="lazy" />
-    <p class="small">Drawing together twelve essays on disparate topics in order to consider the state's underlying political culture.</p>
-  </a>
+**Winner of the [2021 National Council on Public History (NCPH) Book Award](https://ncph.org/about/awards/book-award/)**.
+
+[University of Cincinnati Press](https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement) (open access) | [Bookshop](https://bookshop.org/p/books/digital-community-engagement-partnering-communities-with-the-academy-rebecca-wingo/13200548?ean=9781947602519) | [Amazon](https://www.amazon.com/Digital-Community-Engagement-Partnering-Communities/dp/1947602519/ref=sr_1_1?dchild=1&keywords=digital+community+engagement&qid=1607369554&sr=8-1)
+
+{{% /book %}}
 </section>
 
-<h2 class="midline"><span>Digital Scholarship</span></h2>
+<hr/>
+
+<h2>Digital Scholarship</h2>
 
 Find more of my work on my [digital and public history](/research/) page.
 
@@ -66,7 +62,9 @@ Find more of my work on my [digital and public history](/research/) page.
   </a>
 </section>
 
-<h2 class="midline"><span>Public History</span></h2>
+<hr/>
+
+<h2>Public History</h2>
 
 Find more of my work on my [digital and public history](/research/) page.
 
@@ -78,10 +76,10 @@ Find more of my work on my [digital and public history](/research/) page.
       Documenting American religion in a time of pandemic.</p>
     </a>
 
-  <a class="project" href="https://collectingthesetimes.org">
-      <img src="/assets/images/portfolio_ctt.png" alt="Collecting These Times" loading="lazy" />
-      <p class="small"><span class="project-title">Collecting These Times</span> Documenting how American Jews are responding to the coronavirus pandemic. </p>
-    </a>
+  <a class="project" href="http://aidhp.com">
+    <img src="/assets/images/portfolio_aidhp.png" alt="American Indian Digital History Project" loading="lazy" />
+    <p class="small"><span class="project-title">American Indian Digital History Project</span> Digitizing Indigenous newspapers, photographs, and archival materials across Native North America.</p>
+  </a>
 
   <a class="project" href="https://omahahistorical.org">
       <img src="/assets/images/portfolio_omahistorical.png" alt="Nebraska Historical" loading="lazy" />
@@ -89,7 +87,9 @@ Find more of my work on my [digital and public history](/research/) page.
     </a>
 </section>
 
-<h2 class="midline"><span>Get in touch</span></h2>
+<hr/>
+
+<h2>Get in touch</h2>
 
 If you're looking to get in touch, take note:
 

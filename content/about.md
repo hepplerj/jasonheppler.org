@@ -6,7 +6,7 @@ slug: '/about/'
 <section class="bio-project">
 <div class="bio-project-left">
   {{< figure src="/assets/images/head.jpeg" alt="Jason A. Heppler" >}}
-  <p class="u-lead"><strong>Hi! I'm Jason</strong>, a web developer by trade and a historian by vocation at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> (RRCHNM) at <a href="https://historyarthistory.gmu.edu">George Mason University</a>. I collaborate with faculty and graduate students on the innovative application of technology in teaching and research across interactive data visualization, design, and public and digital history.</p>
+  <p class="u-lead"><strong>Hi! I'm Jason</strong>, a web developer by trade and a historian by vocation at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> (RRCHNM) at <a href="https://historyarthistory.gmu.edu">George Mason University</a>. I collaborate with faculty and graduate students on the innovative application of technology in teaching and research across interactive data visualization, design, and public and digital history. I hold a Ph.D. from the University of Nebraska-Lincoln and currently split my time between Omaha and Fairfax.</p>
 
   <p><a href="https://jasonheppler.org/files/jah-cv.pdf">You can find my full CV here</a>.</p>
 
@@ -38,16 +38,20 @@ slug: '/about/'
 
 <p class="noted">If you email me something I keep that anonymous, especially when sent encrypted. If I decide I would like to quote something from your email, I will ask you first. If you've emailed me about something I got wrong, I may use your name to credit the correction but I won't if it's not public information. <a href="https://jasonheppler.org/jasonheppler.asc">Here's my public key</a>.</p>
 
+<h2>Sustainability</h2>
+
+<p class="noted">This is a <a href="/low-impact/">low impact website</a>.</p>
+
 <h2>Colophon</h2>
 
-<p class="noted">This website is built with the static site generator <a href="https://gohugo.io">Hugo</a> and typeset with the lovely <a href="https://www.linotype.com/414550/trade-gothic-next-family.html">Trade Gothic Next</a>.</p>
+<p class="noted">This website is built with the static site generator <a href="https://gohugo.io">Hugo</a> and typeset with the lovely <a href="https://lineto.com/typefaces/circular/">Circular</a>.</p>
 
 <h2>Support</h2>
 
 <p class="noted">If you'd like to support my writing here and elsewhere, I'd love it if you could <a href="https://www.buymeacoffee.com/jasonheppler">buy me a coffee</a>.</p>
 
 <h2>Elsewhere on the internet</h2>
-	<ul class="list-unstyled">
+	<ul class="list-unstyled noted">
 		<li><a href="https://social.jasonheppler.org/">Micro.blog</a></li>
     <li><a href="https://historians.social/@jaheppler">Mastodon</a></li>
 		<li><a href="https://github.com/hepplerj">GitHub</a></li>
