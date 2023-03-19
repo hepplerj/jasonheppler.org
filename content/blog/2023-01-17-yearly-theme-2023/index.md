@@ -2,7 +2,8 @@
 title: "The Year of Work"
 date: "2023-01-26T22:17:11-06:00"
 slug: "yearly-theme-2023"
-tags: focus
+tags: [focus]
+lede: Defining my yearly theme for 2023.
 ---
 
 For the last couple years, I've created a [yearly theme](https://www.themesystem.com) instead of New Years resolutions (which [rarely work out](https://www.youtube.com/watch?v=NVGuFdX5guE&embeds_euri=https%3A%2F%2Fwww.themesystem.com%2F&embeds_origin=https%3A%2F%2Fwww.themesystem.com&feature=emb_imp_woyt)). Last year I declared it my Year of Lagom -- a Swedish word meaning "just enough." This year I've declared this the Year of Work.

@@ -5,10 +5,10 @@ image:
   feature: null
   thumb: null
 post_type: Essay
-categories:
-- review
+tags: [review]
 title: Editorial is a Powerful, Flexible iOS App for Text Editing
 url: /2014/06/30/editorial-for-ios-text-editing/
+lede: "Editorial is a great tool for iOS-based text editing."
 ---
 
 *[This post originally appeared at [ProfHacker](http://chronicle.com/blogs/profhacker/editorial-ios-text-editing/57431) on 2014-06-30.]*

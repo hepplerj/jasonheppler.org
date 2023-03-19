@@ -1,9 +1,9 @@
 ---
 date: 2012-12-07T08:00:00Z
-categories:
-- tech life
+tags: [tech life]
 title: Using Text Expansion in My Research Workflow
 url: /2012/12/07/using-text-expansion/
+lede: "Using TextExpander to work with markdown efficiently."
 ---
 
 *[This post originally appeared at [GradHacker](http://www.gradhacker.org/2012/12/07/using-text-expansion-software-in-your-workflow/) on 2012-12-06]*

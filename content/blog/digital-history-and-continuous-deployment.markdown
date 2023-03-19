@@ -1,14 +1,16 @@
 ---
 date: 2011-03-02T07:45:53Z
-categories:
-- digital humanities
+tags: [digital history]
 title: Digital History and Continuous Deployment
 url: /2011/03/02/digital-history-and-continuous-deployment/
+lede: "Digital history is an ongoing process of refinement, narrative, and archiving."
 ---
 
 The other night on <a href="http://www.reddit.com/r/programming/">Proggit</a> I came across a <a href="http://fragile.org.uk/2011/02/in-praise-of-continuous-deployment/">blog post</a> praising continuous deployment. Continuous deployment is the process of code written for applications are immediately deployed which <a href="http://radar.oreilly.com/2009/03/continuous-deployment-5-eas.html">lowers cycle time and opens up individual initiative</a>.  As I was reading the post and doing a bit of my own Googling I began to wonder if continuous deployment worked as a metaphor for digital scholarship. These are my quick thoughts.
 
-I don't mean continuous deployment in the sense that developers mean continuous deployment. After all, digital history projects are not necessarily in the business of testing and debugging for consumers.[1. Though there is certainly a place for that in terms of user interfaces and visualizations.] Rather, I mean continuous deployment in digital history to be the continual refinement of narrative and analysis, the ongoing growth of digital archives, and the implementation of current and future visualizations.
+I don't mean continuous deployment in the sense that developers mean continuous deployment. After all, digital history projects are not necessarily in the business of testing and debugging for consumers.[^1] Rather, I mean continuous deployment in digital history to be the continual refinement of narrative and analysis, the ongoing growth of digital archives, and the implementation of current and future visualizations.
+
+[^1]: Though there is certainly a place for that in terms of user interfaces and visualizations.
 
 At conferences and in discussions with people unfamiliar with digital history, I often talk about the iterative process of digital history -- that the finality of a journal article, dissertation, or book could seemingly never exist for digital projects given the nearly unlimited space for data, information, and space that our modern servers and hard drives provide (unlike the analog limitations of ink, paper, and costs). More than one conversation has wandered into whether this sort of scholarship was good for history. After all, if the content of a digital project is continually changing, can a project be reliable for its posterity? The skeptics raise an important point. Indeed, if continual research leads a scholar to draw new or different conclusions than originally posited on a project, should there be some way to archive &quot;old&quot; narratives and analysis for posterity's sake? I'm sympathetic to this view, especially since one of our goals with digital scholarship should be citable material. We need some sort of stability, though I don't know exactly what version-controlled digital scholarship looks like yet.
 

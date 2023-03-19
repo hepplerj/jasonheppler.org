@@ -1,9 +1,9 @@
 ---
 date: 2013-10-30T21:43:53Z
-categories:
-- programming
+tags: [programming, bash, latex, pandoc]
 title: Converting Plain Text to PDF with Bash
 url: /2013/10/30/converting-plain-text-to-pdf-with-rake/
+lede: "Create great-looking PDFs from Markdown with Pandoc and LaTeX."
 ---
 
 I've written in the past about [my love for Markdown](http://jasonheppler.org/2012/11/20/using-markdown-like-an-academic.html), especially in its relation to scholarly work. Some people have [written whole books with plain text](http://wcm1.web.rice.edu/my-academic-book-in-plain-text.html), and my dissertation is being written entirely in Markdown. But I often need the plain text converted to, well, a more commonly-used file format. My system ties together Markdown and Pandoc for converting plain text into PDF or .docx for distribution.

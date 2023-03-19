@@ -1,8 +1,8 @@
 ---
 title: "My Open History Notebook"
 date: 2016-02-09
-categories: 
-- tech life
+tags: [tech life, digital history]
+lede: "I made an open notebook with Jekyll."
 ---
 
 I've long advocated [open history](http://www.jasonheppler.org/2008/11/08/open-source-scholarship-and-why-history-should-be-open-source/) as something we should pursue as historians. Along those ends, I've been inspired by [Caleb McDaniel](http://wiki.wcaleb.rice.edu), [Lincoln Mullen](http://notebook.lincolnmullen.com), and [Shawn Graham](http://electricarchaeology.ca/2015/10/06/an-elegant-open-notebook/) and their use of open notebooks. Caleb, in particular, led me to try out [Gitit](http://gitit.net), a git-backed wiki platform written in Haskell and tightly integrated with my favorite command line tool, [pandoc](http://pandoc.org).

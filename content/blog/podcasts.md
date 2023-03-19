@@ -1,10 +1,9 @@
 ---
 date: 2012-09-01T06:15:05Z
-post-type: full
-categories:
-- podcasts
+tags: [podcasts]
 title: On Podcasts
 url: /2012/09/01/podcasts/
+lede: "Here's some of my favorite podcasts."
 ---
 
 *[This post originally appeared at [Gradhacker](http://www.gradhacker.org/2012/09/02/digital-distractions-podcasts/) on 2012-09-03]*

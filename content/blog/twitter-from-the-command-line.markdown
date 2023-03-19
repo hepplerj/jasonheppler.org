@@ -1,12 +1,12 @@
 ---
 date: 2011-07-09T22:22:14Z
-categories:
-- programming
+tags: [programming]
 title: Twitter from the Command Line
 url: /2011/07/09/twitter-from-the-command-line/
+lede: "I spend a lot of time at the CLI. Might as well tweet from it."
 ---
 
-I'm trying to incorporate Twitter into my workflow for [Jekyll](http://www.jasonheppler.org/migrating-to-jekyll.html) by allowing any new posts to the site to subsequently update Twitter. The script I've hacked together so far is very basic, and doesn't yet do the job, but I thought I'd share what I have thus far. 
+I'm trying to incorporate Twitter into my workflow for [Jekyll](https://www.jasonheppler.org/migrating-to-jekyll.html) by allowing any new posts to the site to subsequently update Twitter. The script I've hacked together so far is very basic, and doesn't yet do the job, but I thought I'd share what I have thus far. 
 
 Pretty easy to get this working. The script requires a couple of simple includes:
 

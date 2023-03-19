@@ -4,10 +4,10 @@ description: null
 image:
   feature: null
   thumb: null
-categories:
-- digital humanities
+tags: [digital humanities]
 title: 'Day of DH: The Historian'
 url: /2014/04/08/day-of-dh-the-historian/
+lede: "My Day of DH 2014."
 ---
 
 *[This post originally appeared at [Day of DH](http://dayofdh2014.matrix.msu.edu/jasonheppler/2014/04/08/the-historian/) on 2014-04-08]*

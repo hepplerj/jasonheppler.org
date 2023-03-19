@@ -1,9 +1,8 @@
 ---
 title: "Podcasts Redux"
 date: 2015-06-06
-categories:
-- podcasts
-comments: true
+tags: [podcasts]
+lede: "An update on some podcasts I'm currently listening to."
 ---
 
 A couple of years ago I wrote about some of [my favorite podcasts](http://jasonheppler.org/2012/09/03/podcasts/), and I thought it would be good to update the list. Some of those podcasts have ended, others still keep on, and I've added new ones to my [podcatcher of choice](https://overcast.fm/).

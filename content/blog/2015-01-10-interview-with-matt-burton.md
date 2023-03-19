@@ -1,9 +1,8 @@
 ---
 title: "Interview with Matt Burton"
 date: 2015-01-10
-categories:
-- digital humanities
-comments: true
+tags: [digital humanities, interview, career]
+lede: "My interview with Matt Burton."
 ---
 
 **When did you start your blog (career wise: as a grad student, 

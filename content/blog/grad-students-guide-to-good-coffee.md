@@ -1,9 +1,9 @@
 ---
 date: 2012-09-24T20:27:38Z
-categories:
-- coffee
+tags: [coffee]
 title: Grad Students Guide to Good Coffee
 url: /2012/09/24/grad-students-guide-to-good-coffee/
+lede: "How to make a great cup of coffee."
 ---
 
 *[This post originally appeared at [Gradhacker](http://www.gradhacker.org/2012/09/24/grad-students-guide-to-good-coffee/) on 2012-09-24]*

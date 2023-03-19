@@ -1,9 +1,9 @@
 ---
 date: 2012-10-12T14:17:15Z
-categories:
-- programming
+tags: [programming, web scraping, ruby]
 title: Better Web Scraping with Nokogiri
 url: /2012/10/12/better-web-scraping-with-nokogiri/
+lede: "An improved Ruby-based web scraper."
 ---
 
 When I wrote [The Rubyist Historian](http://hepplerj.github.com/rubyist-historian/) a year ago, I was still getting familiar with the ins and outs of Ruby (and, truth be told, I am still doing so -- it will [take a long time before](http://norvig.com/21-days.html) I, if ever, call myself a programmer). Looking back on the word count program I wrote at the end, I've realized a big error: I used regular expressions to parse a webpage.

@@ -1,9 +1,9 @@
 ---
-categories:
-- teaching
+tags: [teaching, interview]
 date: 2013-03-17T09:13:37Z
 title: Interview for Digital History@Rice
 url: /2013/03/17/rice-masterclass-questions/
+lede: "My interview with Caleb McDaniel."
 ---
 
 *[This post originally appeared at [Digital History@Rice](http://digitalhistory.blogs.rice.edu/2013/03/27/interview-with-jason-heppler/). Thanks to Caleb McDaniel for his invitation to participate in the course!]*

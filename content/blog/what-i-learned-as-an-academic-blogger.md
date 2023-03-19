@@ -1,9 +1,9 @@
 ---
 date: 2012-07-11T15:20:15Z
-categories:
-- writing
+tags: [writing]
 title: What I've Learned as an Academic Blogger
 url: /2012/07/11/what-i-learned-as-an-academic-blogger/
+lede: "Blogging has taught me a lot."
 ---
 
 In 2008, a year after I graduated college and a year into my Masters program, I started JasonHeppler.org.[^fn-precise] My writing here started out slowly, as a visit to the [archives](http://jasonheppler.org/archives.html) can attest. Even so, I never wanted the site to become overwhelming either for myself to maintain or readers that find enjoyment in the things I write about or link to. 

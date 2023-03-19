@@ -1,9 +1,9 @@
 ---
 date: 2011-08-04T14:35:58Z
-categories:
-- tech life
+tags: [tech life, digital humanities, career]
 title: Constructing a Digital Humanists' C.V.
 url: /2011/08/04/constructing-a-digital-humanists-cv/
+lede: "Building a CV for the digital humanities."
 ---
 
 I've been thinking a lot lately about the best ways to represent or illustrate technical skill in the digital humanities. In developing my [C.V.](http://cv.jasonheppler.org), for example, I wanted something more illustrative than just a list of programming languages that I've had experience with our touched in some way. Just because I have some rudimentary knowledge of Python I picked up two years ago, that doesn't mean I'd feel comfortable getting hired as a Python expert (of course, I would hope the interview process would weed me out). Then again, there's truth to the claim that once you know one language it's fairly easy to pick up additional ones. So simply *having* knowledge of *some* sort of language will serve you well anyways. Plus, I get the sense that DH administrators expect a certain level of on-the-job training and are happy if you have demonstrated experience with a language because they know you'll likely pick up the skills as you need them. (If you're anything like me, you'll stay up half the night reading up on how to do such and such or lurking on Stack Overflow for a solution).

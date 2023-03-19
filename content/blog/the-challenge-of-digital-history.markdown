@@ -1,11 +1,11 @@
 ---
 date: 2008-04-23T16:28:29Z
-categories:
-- digital humanities
+tags: [web, digital history]
 title: The Challenge of Digital History
 url: /2008/04/23/the-challenge-of-digital-history/
 wordpress_id: 38
 wordpress_url: http://www.jasonheppler.org/?p=38
+lede: "Historians have to play a role in defining good history on the web."
 ---
 
 Over at his blog, Dan Cohen  writes about “<a href="http://www.dancohen.org/2008/04/22/the-pirate-problem/">The  Pirate Problem</a>” in digital history. He says that “the digital  humanities represent a scary, rule-breaking, swashbuckling movement for  many historians and other scholars. We must remember that these scholars  have had—for generations and still in today’s graduate schools—a very  clear path for how they do their work, publish, and get rewarded.” It is  a somber look at what digital humanitarians have to face when  explaining what digital history means the profession.

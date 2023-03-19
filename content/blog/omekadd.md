@@ -1,9 +1,9 @@
 ---
 date: 2013-11-17T21:14:44Z
-categories:
-- programming
+tags: [programming, omeka, bash]
 title: Using Omekadd and Bash Together
 url: /2013/11/17/omekadd/
+lede: "Using Bash to automate adding content to Omeka."
 ---
 
 I found some time this weekend to play around with [Caleb McDaniel's](http://wcm1.web.rice.edu) Python script [Omekadd](https://github.com/wcaleb/omekadd), which uses the Omeka API to change properly formatted YAML documents into JSON strings to post as Omeka items. In the short amount of time I've used it, I've already found Omekadd to be a big time-saver for me. It's faster for me to jump into vim or Sublime, hit my TextExpander snippet to autofill some of the basic YAML information, add the details, description, and transcription if necessary, and finally jump back to the command line to run the script and send everything to the server. 

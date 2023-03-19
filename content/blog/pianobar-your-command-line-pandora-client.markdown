@@ -1,11 +1,11 @@
 ---
 date: 2010-11-24T17:30:08Z
-categories:
-- tech life
+tags: [tech life]
 title: Pianobar, Your Command Line Pandora Client
 url: /2010/11/24/pianobar-your-command-line-pandora-client/
 wordpress_id: 421
 wordpress_url: http://www.jasonheppler.org/?p=421
+lede: "Run Pandora from the command line."
 ---
 
 I'm an avid music listener.  Since I spend a lot of time either programming, designing, writing, or reading, I like to have background noise that usually takes the form of music.  But I'm also not a major consumer of music.  I don't buy much music to add to my iTunes library; instead, I spend most of my time using online music services that allow me to listen to great music and discover new things.  Most of my time is spent with <a href="http://www.pandora.com">Pandora</a>, though I often turn to <a href="http://www.hypem.com">The Hype Machine</a> for a different flavor of music. <!--more-->

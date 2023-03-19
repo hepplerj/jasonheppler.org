@@ -1,9 +1,9 @@
 ---
 date: 2012-02-05T09:00:46Z
-categories:
-- academia
+tags: [academia]
 title: Journals in the Digital Age
 url: /2012/02/05/journals-in-the-digital-age/
+lede: "Some thoughts on the role of academic journals in the digital age."
 ---
 
 > "We should not be committed to the existence of institutions, but to the ends those institutions were created to enable." -[Abby Rumsey](http://twitter.com/#!/dancohen/status/91216381663653888)

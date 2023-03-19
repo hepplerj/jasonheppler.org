@@ -1,11 +1,9 @@
 ---
-categories:
-- research
+tags: [research, spatial history, data visualization]
 date: 2011-09-28T10:10:25Z
-categories:
-- data visualization
 title: Spatial Humanities and Visual Narratives
 url: /2011/09/28/spatial-humanities/
+lede: "A reading reflection on spatial history for HIST946."
 ---
 
 *[This is a reading reflection written for HIST946: Digital Humanities with

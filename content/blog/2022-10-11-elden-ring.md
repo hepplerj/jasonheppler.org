@@ -2,6 +2,8 @@
 title: 'Elden Ring'
 date: 2022-10-11T10:01:25-05:00
 slug: 'elden-ring'
+tags: [gaming, Elden Ring]
+lede: "Welcome to The Lands Between."
 ---
 
 I finally did it. I beat [Elden Ring](https://en.bandainamcoent.eu/elden-ring/elden-ring).

@@ -2,7 +2,8 @@
 title: 'Superfund Package'
 date: 2020-05-07T10:22:23-05:00
 slug: 'superfund-data'
-categories: [Data]
+tags: [data, environment, superfund]
+lede: "I'm releasing my in-progress dataset on Superfunds as an R package."
 ---
 
 Mainly based on some of my own research, but also as a resource for teaching, I pulled together a small data package for R a little while ago called [SuperfundR](https://github.com/hepplerj/superfundr). It contains Superfund site data for the United States that pulls data from the Environmental Protection Agency, and does some normalization to keep things tidy. I plan to keep things up-to-date for a while, and if I have a chance maybe I'll write up a walkthrough on creating R data packages. 

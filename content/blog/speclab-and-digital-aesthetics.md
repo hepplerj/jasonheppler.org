@@ -1,11 +1,9 @@
 ---
-categories:
-- research
+tags: [research, digital humanities, digital history]
 date: 2011-10-06T10:53:20Z
-categories:
-- digital humanities
 title: SpecLab and Digital Aesthetics
 url: /2011/10/06/speclab-and-digital-aesthetics/
+lede: "A few examples of what I think are great design in digital humanities."
 ---
 
 *[In lieu of a reading reflection this week for HIST946: Digital Humanities, we were tasked to find three examples of great design after reading Johanna Drucker's *[SpecLab: Digital Aesthetics and Projects in Speculative Computing](http://www.amazon.com/SpecLab-Aesthetics-Projects-Speculative-Computing/dp/0226165086/ref=sr_1_1?ie=UTF8&qid=1317916507&sr=8-1)*. You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html).]*

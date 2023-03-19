@@ -4,6 +4,8 @@ date: 2022-02-11T09:36:35-06:00
 slug: 'filenames-as-metadata'
 series:
 - developer-notes
+tags: [bash, programming, development]
+lede: "Using Bash to quickly convert filenames into metadata."
 ---
 
 <aside>

@@ -1,10 +1,10 @@
 ---
 author: Jason Heppler
 date: 2011-10-27T09:51:58Z
-categories:
-- review
+tags: [review, digital history, peer review]
 title: Peer Reviewing Writing History in the Digital Age
 url: /2011/10/27/peer-reviewing-writing-history-in-the-digital-age/
+lede: "My peer review of 'The Hermeneutics of Data and Historical Writing' by Fred Gibbs and Trevor Owens."
 ---
 
 *[In lieu of a reading reflection this week for HIST946: Digital Humanities, we were tasked with reading an essay or two from [Writing History in the Digital Age](http://writinghistory.trincoll.edu/) that is currently open for public peer review. I read Frederick W. Gibbs and Trevor Owens, "[The Hermeneutics of Data and Historical Writing](http://writinghistory.trincoll.edu/data/hermeneutics-of-data-and-historical-writing-gibbs-owens/). You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html)."]*

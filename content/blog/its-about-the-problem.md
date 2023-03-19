@@ -1,10 +1,10 @@
 ---
 date: 2012-05-15T22:49:09Z
 post-type: full
-categories:
-- programming
+tags: [programming]
 title: It's About the Problem
 url: /2012/05/15/its-about-the-problem/
+lede: "Programming is about solving problems."
 ---
 
 There have been a lot of discussions today about developer Jeff Atwood's post pleading people to [not learn to code](http://www.codinghorror.com/blog/2012/05/please-dont-learn-to-code.html). Atwood is responding to the "everyone should code" and new features like Code Academy that promises to introduce people to the ins and outs of programming.

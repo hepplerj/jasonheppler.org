@@ -1,13 +1,13 @@
 ---
 date: 2014-07-17T15:22:41Z
 post_type: Shorts
-categories:
-- conference
+tags: [conference, Western History Association]
 title: Environmental History at the 2014 Western History Association Conference
 url: /2014/07/17/environmental-history-at-the-2014-western-history-association-conference/
+lede: "Here's the panels about environmental history at the WHA this year."
 ---
 
-I'm stealing an idea from my friend and fellow Husker Brenden Rensink. Brenden [just wrote a post](http://www.bwrensink.org/2014/07/15/borderlands-and-transnational-history-at-the-2014-western-history-association-conference/) summarizing borderlands and transnational history panels -- his area of study -- at the Western History Association Conference this year. I thought I'd do similar with environmental history.
+I'm stealing an idea from my friend and fellow Husker Brenden Rensink. Brenden [just wrote a post](http://www.bwrensink.org/2014/07/15/borderlands-and-transnational-history-at-the-2014-western-history-association-conference/) summarizing borderlands and transnational history panels---his area of study---at the Western History Association Conference this year. I thought I'd do similar with environmental history.
 
 To reiterate from Brenden's post, the Western History Association is [meeting in Newport Beach, California](http://westernhistoryassociation.wildapricot.org/event-697688), between October 15 to October 18 with the theme "The West & the World." Like Brenden, I'm listing any panel that includes some theme on environmental history even if that only includes a single paper. If I've missed a panel or paper, let me know on [Twitter](http://twitter.com/jaheppler). 
 

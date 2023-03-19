@@ -1,9 +1,9 @@
 ---
 date: 2013-10-18T12:26:32Z
-categories:
-- digital humanities
+tags: [digital history]
 title: Digital History at Stanford
 url: /2013/10/18/digital-history-at-stanford/
+lede: "Launching Stanford's initiatives in digital history."
 ---
 
 *[This post originally appeared at [Digital Humanities at Stanford](http://digitalhumanities.stanford.edu) on 2013-10-21]*

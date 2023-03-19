@@ -1,9 +1,9 @@
 ---
 date: 2011-09-04T09:14:54Z
-categories:
-- digital humanities
+tags: [digital humanities, digital history]
 title: The Medium of Digital Humanities
 url: /2011/09/04/the-medium-of-digital-humanities/
+lede: "A thought piece on Marshall McLuhan for HIST946."
 ---
 
 *[This is a thought piece written for HIST946: Digital Humanities with Professor William Thomas during the Fall 2011 semester. This week's reading was Marshall McLuhan, *The Medium is the Massage: An Inventory of Effects*. You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html).]*

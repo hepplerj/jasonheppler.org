@@ -1,9 +1,8 @@
 ---
 title: "Teaching Digital History"
 date: 2014-12-30
-categories:
-- teaching
-comments: false
+tags: [teaching]
+lede: "During the fall quarter, I taught a digital history course at Stanford. Here's how it went."
 ---
 
 In the fall quarter I taught, for the first time, [a digital history

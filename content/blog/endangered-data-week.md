@@ -1,8 +1,8 @@
 ---
 title: "Introducing Endangered Data Week"
 date: 2017-04-24
-categories: 
-- advocacy
+tags: [advocacy, Endangered Data Week]
+lede: "How you can get involved with Endangered Data Week."
 ---
 
 Last week, April 17-21, was the first annual [Endangered Data Week](http://endangereddataweek.org). With the generous support of the [Digital Library Federation](https://diglib.org/), [CLIR](https://www.clir.org/), the [Mozilla Science Lab](https://science.mozilla.org/), and [Data Refuge](https://www.datarefuge.org/), [we](http://endangereddataweek.org/about/) launched this international effort to help raise awareness around the creation, retention, and sustainability of data and data collection efforts.

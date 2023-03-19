@@ -1,8 +1,7 @@
 ---
 date: 2011-06-26T20:17:15Z
 external: http://mattrichman.tumblr.com/post/6844151919/a-consequence-of-losing-the-pc-wars
-tags:
-- apple
+tags: [apple]
 title: Why Macs Cost More Than PCs
 url: /2011/06/26/why-macs-cost-more-than-pcs/
 ---

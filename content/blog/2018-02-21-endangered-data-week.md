@@ -1,8 +1,8 @@
 ---
 title: "Endangered Data Week"
 date: 2018-02-21
-categories:
-    - advocacy
+tags: [advocacy, Endangered Data Week, libraries]
+lede: "Announcing the founding of Endangered Data Week."
 ---
 
 In 2017, [Brandon Locke](http://brandontlocke.com/) [voiced an idea on Twitter](https://twitter.com/brandontlocke/status/826939862368518144): we needed an event to raise awareness, like Banned Books Week, to threats to publicly available data. Those threats were [widespread and various](https://jasonheppler.org/2017/04/24/endangered-data-week/): from outright censorship to benign neglect. We were inspired by the work of others, namely DataRefuge, the Environmental Data and Governance Initiative, and the work they were doing to secure environmental and climate data from an incoming presidential administration that [does not believe in climate change](https://twitter.com/realdonaldtrump/status/265895292191248385?lang=en). Joining with the [Digital Library Federation](https://diglib.org/), volunteers from around the world helped make EDW more successful that I could have imagined. With the support of our other partners --- the [Mozilla Science Lab](https://science.mozilla.org/), [CLIR](https://www.clir.org/), [DataRefuge](https://www.datarefuge.org/) --- we helped showcase events all around the world focused on threats to public data.

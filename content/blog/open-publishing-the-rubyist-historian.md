@@ -1,9 +1,9 @@
 ---
 date: 2012-05-21T21:21:30Z
-categories:
-- programming
+tags: [ruby, digital history, programming]
 title: Forking the Rubyist Historian
 url: /2012/05/21/open-publishing-the-rubyist-historian/
+lede: "My open access book on Ruby programming for historians."
 ---
 
 In early 2011 I wrote a [series of blog posts](http://www.jasonheppler.org/2010/12/29/the-rubyist-historian-getting-started.html) based off of [Steve Ramsay's](http://lenz.unl.edu/) course on electronic text and Ruby programming, where part of our goal was to think about ways we could apply programming to humanistic data. The course became something of a pivot point for me. Although I've long been a computer geek, programming was something I never deeply used and hadn't touched any computer language since high school (and even then, it was BASIC and Visual Basic). But Ramsay's course made me realize the power that programming can offer researchers. The digitization of our cultural heritage means we have a growing abudance of material being released electronically by libraries, museums, archives, and digital centers, leaving us with a vast array of material that can be manipulated, queried, browsed, and visualized through computational methods. When the course was finished, I decided to write a series of blog posts for others who might be interested in applying Ruby to humanistic inquery. The result was The Rubyist Historian.[^rubyfork]

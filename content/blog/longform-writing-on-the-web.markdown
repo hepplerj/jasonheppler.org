@@ -1,9 +1,9 @@
 ---
 date: 2011-05-03T17:44:58Z
-categories:
-- writing
+tags: [writing]
 title: Longform Writing on the Web
 url: /2011/05/03/longform-writing-on-the-web/
+lede: "Can we replicate longform writing on the web?"
 ---
 
 Lately I've been thinking a lot about writing and wondering about my aversion to crafting long-form digital content. I'm not *too* terrible about long-form writing on the web, and long accepted the idea of chunking text or "info-snacking" as a style of writing online. I've done that job fairly well, I think. My longest post on this site, for example, is only 2,904 words (see [Digital History methodology](http://www.jasonheppler.org/digital-history-methodology.html)). Of course, if you include the series on The Rubyist Historian, I'm guilty: Rubyist tops out at 9253 words.

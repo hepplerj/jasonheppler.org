@@ -2,8 +2,8 @@
 title: "0 Tweets"
 date: "2022-11-19T21:26:33-06:00"
 slug: "0-tweets"
-categories:
-- web
+tags: [web, indie web]
+lede: "It's time to leave Twitter."
 ---
 
 Tonight I wrote a small Go script to delete all of my tweets. There isn't much to say about this except that Twitter has always been an ephemeral presence for me --- I've had a somewhat long-standing practice of deleting everything older than three years back (and of syncing tweets to a Google spreadsheet so I still have a copy of everything). 

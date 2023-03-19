@@ -1,9 +1,9 @@
 ---
 date: 2012-10-10T23:43:21Z
-categories:
-- tech life
+tags: [tech life]
 title: Building Your Own Memex
 url: /2012/10/10/building-your-own-memex/
+lede: "How I manage information."
 ---
 
 *[This post originally appeared at [Gradhacker](http://www.gradhacker.org/2012/10/10/building-your-own-memex/) on 2012-10-10]*

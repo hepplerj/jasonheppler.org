@@ -1,9 +1,9 @@
 ---
 date: 2013-04-28T12:50:35Z
-categories:
-- digital humanities
+tags: [digital humanities, dpla]
 title: The Digital Public Library of America
 url: /2013/04/28/the-digital-public-library-of-america/
+lede: "Using the DPLA for research, teaching, and creating."
 ---
 
 *[This post originally appeared at [Hive Talkin'](https://www.stanford.edu/group/ats/cgi-bin/hivetalkin/?p=3331) on 2013-04-18.]*

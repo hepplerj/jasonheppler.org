@@ -1,10 +1,10 @@
 ---
 date: 2014-07-12T08:09:46Z
 post_type: Essay
-categories:
-- programming
+tags: [programming, ruby]
 title: Simple Parsing CSV to JSON
 url: /2014/07/12/parsing-csv-to-json/
+lede: "A simple Ruby script for parsing a CSV into JSON."
 ---
 
 I took a moment yesterday morning to start work on a Ruby script to convert CSV files to JSON. My main motivation for writing the script was to get data into a format that more easily works with [D3.js](http://d3js.org). 

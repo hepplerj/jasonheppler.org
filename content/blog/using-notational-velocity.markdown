@@ -1,9 +1,9 @@
 ---
 date: 2011-07-22T22:53:44Z
-categories:
-- tech life
+tags: [tech life]
 title: Using Notational Velocity
 url: /2011/07/22/using-notational-velocity/
+lede: "The perfect piece of software."
 ---
 
 One of my favorite Mac programs is [Notational Velocity](http://notational.net/). I do a lot of writing with it -- everything from meeting notes, to jotting down ideas, to creating reference files and running lists, even occasionally to write up longer-form content like blog posts or research (though I tend to use TextMate for most long-form writing). 

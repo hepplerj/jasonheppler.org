@@ -1,9 +1,9 @@
 ---
 date: 2011-07-11T08:30:00Z
-categories:
-- writing
+tags: [writing]
 title: On Writing and Notebooks
 url: /2011/07/11/on-writing-and-notebooks/
+lede: "My current favorite notebook and pen."
 ---
 
 [Episode 23 of Back to Work](http://5by5.tv/b2w/23) is officially my favorite episode so far. There are a lot of great messages in the entire episode, but I was interested in Merlin Mann's discussion of notebooks and writing.

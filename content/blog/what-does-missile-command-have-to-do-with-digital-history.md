@@ -2,14 +2,14 @@
 date: 2014-06-04T06:46:47Z
 description: null
 image: dhsi2014_game.jpg
-categories:
-- conference
+tags: [conference, dhsi]
 title: What does Missile Command have to do with Digital History?
 url: /2014/06/04/what-does-missile-command-have-to-do-with-digital-history/
+lede: "What can an old arcade game tell us about history in the digital age?"
 ---
 
 I am spending the week at the University of Victoria for this year's [Digital
-Humanities Summer Institute]() (DHSI). I was here last year and had the chance to 
+Humanities Summer Institute](https://dhsi.org) (DHSI). I was here last year and had the chance to 
 make a lot of new friends -- indeed, I think one of the most powerful 
 experiences of attending DHSI is the engagement with the people and the 
 community. The people here are *awesome*.

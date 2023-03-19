@@ -1,11 +1,11 @@
 ---
 date: 2010-10-08T21:41:06Z
-categories:
-- personal
+tags: [personal, design]
 title: Back to Blog (Basics)
 url: /2010/10/08/back-to-blog/
 wordpress_id: 313
 wordpress_url: http://www.jasonheppler.org/?p=313
+lede: "Some redesigning of the site."
 ---
 
 I'm considering going back to a blog format rather than launch page format for the site.  I'll be toying around with this minimalist theme (<a href="http://shaheeilyas.com/barecity/">barecity</a>) for a while and see if I like it.  Watch for the pages to return soon once I reformat them to fit the new theme.

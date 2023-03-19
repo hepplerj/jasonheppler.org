@@ -1,10 +1,10 @@
 ---
 author: Jason Heppler
 date: 2011-11-17T10:43:15Z
-categories:
-- internet
+tags: [web]
 title: Who Controls the Master Switch
 url: /2011/11/17/who-controls-the-master-switch/
+lede: "A reading reflection of Tim Wu for HIST946."
 ---
 
 *[This is a reading reflection for HIST946: Digital Humanities for Prof. William G. Thomas during the Fall 2011 semester. This week's readings was Tim Wu, *[The Master Switch: The Rise and Fall of Information Empires](http://www.amazon.com/Master-Switch-Information-Empires-Vintage/dp/0307390993/ref=sr_1_1?s=books&ie=UTF8&qid=1322756473&sr=1-1)*. You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html).]*

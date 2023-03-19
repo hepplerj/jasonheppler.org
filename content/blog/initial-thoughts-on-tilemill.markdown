@@ -1,9 +1,9 @@
 ---
 date: 2011-03-15T08:00:11Z
-categories:
-- review
+tags: [review, maps, spatial history]
 title: Initial Thoughts on TileMill
 url: /2011/03/15/initial-thoughts-on-tilemill/
+lede: "A quick review of TileMill by Mapbox."
 ---
 
 <a href="http://mapbox.com/">MapBox</a> has recently announced the release of their open source mapping studio called <a href="http://tilemill.com/">TileMill</a>. TileMill allows users to easily create maps through the open-source rendering library Mapnik, the same software used by <a href="http://www.openstreetmap.org/">OpenStreetMap</a> and <a href="http://www.mapquest.com">MapQuest</a>. Maps can be created with TileMill and displayed using the Google Maps API, OpenLayers, and many other projects. TileMill can also be exported through SQLite MBTiles.

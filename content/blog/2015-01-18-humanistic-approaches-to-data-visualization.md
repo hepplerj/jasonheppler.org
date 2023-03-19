@@ -1,8 +1,8 @@
 ---
 title: "Humanistic Approaches to Data Visualization"
 date: 2015-01-18
-categories:
-- data visualization
+tags: [data visualization, presentation]
+lede: "My presentation at the d3.digitalhumanities() meetup in San Francisco."
 ---
 
 <aside class="posted">

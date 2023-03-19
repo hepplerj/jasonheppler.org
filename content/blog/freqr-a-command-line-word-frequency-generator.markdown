@@ -1,11 +1,11 @@
 ---
 date: 2010-11-28T10:05:47Z
-categories:
-- programming
+tags: [programming, ruby, text analysis]
 title: FREQr, a Command Line Word Frequency Generator
 url: /2010/11/28/freqr-a-command-line-word-frequency-generator/
 wordpress_id: 498
 wordpress_url: http://www.jasonheppler.org/?p=498
+lede: "A simple word tokenizer written in Ruby."
 ---
 
 I wrote this simple Ruby program while enrolled in Prof. Steve Ramsay's Electronic Text course.  I'm releasing it into the wild for anyone that might find it useful.  You'll need to have Ruby installed on your machine to run the program.  Simply pass the program a file name and it will output to the screen a numerically-sorted list of word frequencies.

@@ -1,9 +1,9 @@
 ---
 date: 2012-11-17T18:24:38Z
-categories:
-- programming
+tags: [programming]
 title: Lorem Ipsum Block in Sublime Text
 url: /2012/11/17/lorem-ipsum-block-in-sublime-text/
+lede: "Sublime Text supports lorem ipsum by default."
 ---
 
 Awesome little feature in Sublime Text:

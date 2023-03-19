@@ -1,10 +1,10 @@
 ---
 author: Jason Heppler
 date: 2011-12-31
-categories:
-- tech life
+tags: [tech life]
 title: New Year
 url: /2011/12/31/new-year/
+lede: "It's time to re-center my attention."
 ---
 
 > What worries me are the consequences of a diet comprised mostly of fake-connectedness, makebelieve insight, and unedited first drafts of everything. I think it’s making us small. I know that whenever I become aware of it, I realize how small it can make me. So, I’ve come to despise it.

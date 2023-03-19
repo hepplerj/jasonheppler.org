@@ -1,10 +1,9 @@
 ---
 date: 2014-09-21T21:11:38Z
-post_type: Shorts
-categories:
-- teaching
+tags: [teaching, digital history]
 title: Syllabus for Digital History
 url: /2014/09/21/syllabus-for-digital-history/
+lede: "My syllabus for my digital history class I'm teaching at Stanford."
 ---
 
 This fall I am teaching an undergraduate/graduate colloquium called "Digital History," joining the lineup of the History Department's stellar [Visualizing Evidence](https://visualizing-evidence.stanford.edu/), [Spatial History](https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&page=0&catalog=&q=HISTORY+401A%3A+Spatial+History%3A+Concepts%2C+Methods%2C+Problems&collapse=), and [The Digital Historian's Toolkit](http://www.cameronblevins.org/teaching/dhtk2012/). My aim is to get students familiar with various approaches to digital history -- data mining, spatial history, visualization, and so on -- and how to apply these approaches to historical questions. 

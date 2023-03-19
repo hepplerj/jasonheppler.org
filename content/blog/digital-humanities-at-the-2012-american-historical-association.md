@@ -1,9 +1,9 @@
 ---
 date: 2011-09-26T20:49:20Z
-categories:
-- conference
+tags: [conference, American Historical Association]
 title: Digital Humanities at the 2012 American Historical Association
 url: /2011/09/26/digital-humanities-at-the-2012-american-historical-association/
+lede: "Digital history has a real showing at AHA 2012."
 ---
 
 Today's announcement from the American Historical Association regarding their

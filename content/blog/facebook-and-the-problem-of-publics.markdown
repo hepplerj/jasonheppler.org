@@ -1,9 +1,9 @@
 ---
 date: 2011-01-16T21:42:00Z
-categories:
-- internet
+tags: [web]
 title: Facebook and the Problem of Publics
 url: /2011/01/16/facebook-and-the-problem-of-publics/
+lede: "There's a distinction to make between _a_ public and _the_ public."
 ---
 
 <a href="http://www.forbes.com/2010/04/05/google-facebook-twitter-technology-security-10-privacy.html">Bruce Schneier</a> on privacy:

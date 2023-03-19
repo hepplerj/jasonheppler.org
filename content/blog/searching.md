@@ -1,11 +1,9 @@
 ---
-categories:
-- hacks
 date: 2012-11-14T22:09:43Z
-categories:
-- tech life
+tags: [tech life]
 title: Searching My Brain
 url: /2012/11/14/searching/
+lede: "Using TextExpander to search my writing."
 ---
 
 I've long thought of my blog as a public place where I can share thoughts, tricks, and tips. Most of the things here are likely more useful for me than anyone else, but I share things because I assume the things that I find interesting are interesting to others as well. Not to mention that the places where I learn the most are free blog posts and web resources, and my blog is a way of paying it forward. 

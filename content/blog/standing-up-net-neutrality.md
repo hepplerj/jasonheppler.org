@@ -1,8 +1,8 @@
 ---
 title: "Standing up for Net Neutrality"
 date: 2017-07-05 
-categories: 
-- internet 
+tags:  [web, net neutrality]
+lede: "The dismantling of net neutrality is bad for the web." 
 ---
 
 In 2012, [I took my site down](http://jasonheppler.org/2012/01/18/standing_against_sopa/) in protest of the Stop Online Piracy Act (SOPA). 

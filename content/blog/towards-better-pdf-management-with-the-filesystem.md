@@ -1,10 +1,10 @@
 ---
 date: 2012-08-13T08:30:09Z
 post-type: full
-categories:
-- productivity
+tags: [productivity, pdf]
 title: Towards Better PDF Management with the Filesystem
 url: /2012/08/13/towards-better-pdf-management-with-the-filesystem/
+lede: "Using the filesystem to manage your journal PDFs."
 ---
 
 *[This post originally appeared at [Gradhacker](http://www.gradhacker.org/2012/08/13/towards-better-pdf-management-with-the-filesystem/) on 2012-08-13]*

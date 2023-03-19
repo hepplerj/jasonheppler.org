@@ -1,12 +1,12 @@
 ---
 date: 2011-01-04T07:30:52Z
-categories:
-- programming
+tags: [programming, ruby]
 series: "Rubyist Historian"
 title: 'The Rubyist Historian: Arrays and Hashes'
 url: /2011/01/04/the-rubyist-historian-arrays-hashes-and-more-io/
 wordpress_id: 715
 wordpress_url: http://www.jasonheppler.org/?p=715
+lede: "The Rubyist Historian: Introduction to arrays and hashes."
 ---
 
 To review, we've learned how to create functions, call upon methods, create classes, and generate basic programs in Ruby.  We'll now be moving into creating arrays and hashes. <!--more-->

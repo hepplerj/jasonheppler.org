@@ -1,8 +1,8 @@
 ---
-title: "Advocacy, training, and awareness through Endangered Data Week"
+title: "Advocacy, Training, and Awareness Through Endangered Data Week"
 date: 2018-03-02
-categories:
-    - advocacy
+tags: [advocacy, Endangered Data Week, data, open data, web, libraries]
+lede: "An essay I co-authored with Brandon Locke, Sarah Melton, and Rachel Mattson."
 ShowToc: true
 ---
 

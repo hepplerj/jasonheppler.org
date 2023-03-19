@@ -1,10 +1,9 @@
 ---
 date: 2013-08-21T10:43:15Z
-description: Using Editorial with Bibkeys for citation management.
-categories:
-- review
+tags: [review, bibtex]
 title: Using Editorial and Bibkeys Together
 url: /2013/08/21/using-editorial-and-bibkeys-together/
+lede: "Using Editorial with Bibkeys for citation management."
 ---
 
 A few days go, [Editorial](http://omz-software.com/editorial/) for iPad was released. Created by [Pythonista](http://omz-software.com/pythonista/) developer Ole Zorn, Editorial is the latest markdown editor for the iPad and, quite frankly, is the best one available right now. There's been some excellent reviews of Editorial, notably from [Federico Viticci](http://www.macstories.net/stories/editorial-for-ipad-review/) and [Gabe Weatherhead](http://www.macdrifter.com/2013/08/editorial-for-ipad-a-landmark-in-ios-text-editors.html) that are well worth reading.

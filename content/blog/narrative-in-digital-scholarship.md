@@ -1,10 +1,10 @@
 ---
 author: Jason Heppler
 date: 2011-10-12T17:03:39Z
-categories:
-- writing
+tags: [narrative, digital history]
 title: Models for Narrative in Digital Humanities
 url: /2011/10/12/narrative-in-digital-scholarship/
+lede: "A reading reflection on Franco Moretti for HIST946."
 ---
 
 *[This is a reading reflection for HIST946: Digital Humanities with Professor William

@@ -1,9 +1,9 @@
 ---
 date: 2012-01-18T21:05:00Z
-categories:
-- internet
+tags: [web, sopa]
 title: Standing Against SOPA
 url: /2012/01/18/standing_against_sopa/
+lede: "The Stop Online Piracy Act is bad legislation, and bad for the web."
 ---
 
 If you visited [in the last twenty-four hours](http://jasonheppler.org/sopa.html), you would've seen that the site was, like many others, silenced to protest SOPA.

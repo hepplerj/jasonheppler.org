@@ -1,9 +1,9 @@
 ---
 date: 2012-01-22T13:01:44Z
-categories:
-- academia
+tags: [academia]
 title: Redefining Scholarship in the Digital Age
 url: /2012/01/22/redefining_scholarship_in_the_digital_age/
+lede: "Please consider endorsing our call for the AHA to evaluate the role of digital scholarship in peer review, tenure, and promotion."
 ---
 
 At THATCamp AHA, one of the sessions confronted the issue of training, tenure, and promotion in digital history. Attended by graduate students, tenured and non-tenured faculty, and librarians, the session discussed the problems of doing digital work while such labor was not recognized as rigorous scholarly production. Professional peer review of digital work is stagnant because evaluators are unable or unwilling to assess digital scholarship on its merits. In the spirit of THATCamp the session attendees adopted a "less yack, more hack" attitude and co-authored "[A Call to Redefine Historical Scholarship in the Digital Turn](https://docs.google.com/document/d/13D5HjjcnnAHoNaUIjwFHET83_r7kYtM0CPTYGhcMrjM/edit)." We are asking for endorsements and feedback before sending the letter to the AHA's Research Division in hopes that we can kickstart a conversation.

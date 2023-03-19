@@ -1,9 +1,9 @@
 ---
 date: 2012-10-16T17:01:51Z
-categories:
-    - tech life
+tags: [tech life]
 title: Opening Marked in Vim
 url: /2012/10/16/opening-marked-in-vim/
+lede: "A simple way to open Marked via vim."
 ---
 
 I am a big fan of [Brett Terpstra's Marked.app](http://markedapp.com/) for previewing Markdown documents. I wanted a way to launch Marked from within vim so I can preview what I'm writing as I am working. The task is easy. In your <code>.vimrc</code> file, add the line:

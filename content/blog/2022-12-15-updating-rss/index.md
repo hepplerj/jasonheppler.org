@@ -2,6 +2,7 @@
 title: "Updating My RSS"
 date: "2022-12-15T10:01:13-06:00"
 slug: "updating-rss"
+lede: "The demise of Twitter seems to lead to RSS's resurgence."
 tags: [meta]
 ---
 

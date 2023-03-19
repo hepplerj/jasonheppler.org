@@ -2,8 +2,8 @@
 title: 'New Role: Developer at RRCHNM'
 date: 2021-05-17T19:27:58-05:00
 slug: 'new-role-chmn'
-categories:
-- academia
+tags: [academia, career, RRCHNM]
+lede: "I am thrilled to announce I'm joining RRCHNM!"
 ---
 
 Some news: Towards the end of June, I'll be joining the [Roy Rosenzweig Center for History and New Media](http://chnm.gmu.edu) as a developer working on digital and public history projects!

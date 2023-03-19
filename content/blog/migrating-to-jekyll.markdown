@@ -1,9 +1,9 @@
 ---
 date: 2011-04-19T11:53:16Z
-categories:
-- tech life
+tags: [tech life]
 title: Migrating to Jekyll
 url: /2011/04/19/migrating-to-jekyll/
+lede: "I've moved from Wordpress to Jekyll. Here's how I did it."
 ---
 
 During some free time over the course of the semester, I began learning about Jekyll, a simple static site generator. I've done away with the CMS format of blogging -- no more admin panel to edit and manage posts, no need to run frequent updates, no need at all for a database. I write in the editor of my choice (vim, TextMate, gEdit, and so on) in a syntax called [markdown](http://daringfireball.net/projects/markdown/). Once things are ready to go, I can run <code>jekyll</code> in the command line and it will create static, flat HTML files. Good bye, MySQL.

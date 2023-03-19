@@ -1,11 +1,11 @@
 ---
 date: 2011-01-12T10:50:41Z
-categories:
-- programming
+tags: [programming, ruby]
 series: "Rubyist Historian"
 title: 'The Rubyist Historian: Our First Program'
 url: /2011/01/12/the-rubyist-historian-our-first-program/
 wordpress_id: 770
+lede: "The Rubyist Historian: Creating our first program!"
 ---
 
 "Okay, Jason," you're asking yourself, "I'm tired of saying hello and counting numbers and doing mathematics. How can Ruby be applied to my work as a humanities scholar?"  I'm thrilled you asked! Because today, we're writing our first full program together.  I'll warn you, this might be a long read and a lot of writing.  But I'm hoping by doing this we experience the process of designing, planning, writing code, optimizing code, debugging, and finally using the program. 

@@ -1,9 +1,9 @@
 ---
 date: 2011-09-14T14:01:49Z
-categories:
-- digital humanities
+tags: [digital humanities, text analysis]
 title: Electronic Text and the Digital Humanities
 url: /2011/09/14/electronic-text-and-the-theory-of-digital-humanities/
+lede: "Reflecting on a collection of readings for HIST946."
 ---
 
 *[This is a thought piece written for HIST946: Digital Humanities with Professor William Thomas during the Fall 2011 semester. This week's reading was Jerome McGann, [Radiant Textuality: Literature after the World Wide Web](http://www.amazon.com/Radiant-Textuality-Literature-after-World/dp/0312293526), Stephen Ramsay, "[Algorithmic Criticism](http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405148641/9781405148641.xml&chunk.id=ss1-6-7)", Matt Kirschenbaum, "[So the Colors Cover the Wires](http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&doc.view=print&chunk.id=ss1-5-4&toc.depth=1&toc.id=0)", and Geoff Rockwell, "[What is Textual Analysis, Really?](http://www.geoffreyrockwell.com/publications.html)". You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html).]*

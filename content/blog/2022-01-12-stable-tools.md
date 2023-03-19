@@ -2,7 +2,8 @@
 title: 'Towards a Stable Set of Tools'
 date: 2022-01-12T21:43:28-06:00
 slug: 'stable-tools'
-categories: personal
+tags: [personal, apple]
+lede: "I find myself using more stock tools."
 ---
 
 I've spent the last couple of months thinking about the tools I use to do my work. 

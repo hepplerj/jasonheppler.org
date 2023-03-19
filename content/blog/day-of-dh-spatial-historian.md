@@ -4,10 +4,10 @@ description: null
 image:
   feature: null
   thumb: null
-categories:
-- digital humanities
+tags: [digital humanities, maps, spatial history]
 title: 'Day of DH: The Spatial Historian'
 url: /2014/04/08/day-of-dh-spatial-historian/
+lede: "My Day of DH 2014."
 ---
 
 *[This post originally appeared at [Day of DH](http://dayofdh2014.matrix.msu.edu/jasonheppler/2014/04/08/the-spatial-historian/) on 2014-04-08]*

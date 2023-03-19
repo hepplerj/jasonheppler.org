@@ -3,7 +3,7 @@ categories:
 - digital humanities
 date: 2014-09-21T21:30:34Z
 external: http://nils.weidmann.ws/projects/cshapes/
-tags: []
+tags: [maps, digital history]
 title: 'CShapes: Historical Country Boundaries'
 url: /2014/09/21/cshapes-historical-country-boundaries/
 ---

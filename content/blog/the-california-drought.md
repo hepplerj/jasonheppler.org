@@ -1,12 +1,11 @@
 ---
-categories:
-- research
+tags: [research]
 date: 2014-02-22T21:16:26Z
-description: A historical perspective on the California drought and what it can teach us about western history and sustainability.
 image: sj_ponds.jpg
 series: "Living West"
 title: Western History and the California Drought
 url: /2014/02/22/the-california-drought/
+lede: "A historical perspective on the California drought and what it can teach us about western history and sustainability."
 ---
 
 Not far from where we live in San Jose are a collection of percolation ponds (such as the one I photographed above) nestled along the Guadalupe Creek. The ponds exist to capture surface water runoff and replenish underground aquifers. I've been walking, running, and mountain biking around these ponds for almost a year now, and have seen them filled to the brim with water. Until these last couple of weeks, where most now contain obvious water rings or, at worse, are nothing but splotches of mud. Visible signs of drought. 

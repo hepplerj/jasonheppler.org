@@ -1,9 +1,9 @@
 ---
 date: 2012-06-07T19:18:08Z
-categories:
-- programming
+tags: [programming, bash]
 title: A Few New Scripts
 url: /2012/06/07/automating-tasks/
+lede: "A few scripts I'm using to automate some tasks."
 ---
 
 Here's a few nerdy bits I've been working on lately in my free time -- just a few scripts that I've been using to take care of things on my Mac automatically.

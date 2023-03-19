@@ -1,12 +1,12 @@
 ---
 date: 2011-01-02T07:30:33Z
-categories:
-- programming
+tags: [programming, ruby]
 series: "Rubyist Historian"
 title: 'The Rubyist Historian: Loops and Control Structures'
 url: /2011/01/02/the-rubyist-historian-flow-control/
 wordpress_id: 651
 wordpress_url: http://www.jasonheppler.org/?p=651
+lede: "The Rubyist Historian: An introduction to loops and controls."
 ---
 
 Our last segment introduced us to Ruby methods and classes.  This section will introduce you to expressions and loops. Loops are, put simply, a test of whether an expression is true or false. This is the basic way that computer's operate: continue following a set of instructions until the expression becomes true, then end or move on to the next set of instructions.<!--more-->

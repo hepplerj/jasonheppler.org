@@ -1,10 +1,10 @@
 ---
 date: 2013-05-20T23:58:29Z
 image: spencer.jpg
-categories:
-- personal
+tags: [personal]
 title: On Tornadoes
 url: /2013/05/20/tornado/
+lede: "In 1998, a tornado practically wiped a city off the map."
 ---
 
 On the evening of May 30, 1998, I was laying in bed listening to the local radio. About an hour and a half or so before, I was driving with my dad on South Dakota Highway 37 north towards Huron, South Dakota. We were heading for the dirt track races, but turned around after the races were canceled due to severe weather in the area. That night, the news on the radio was terrifying: the small town of Spencer, South Dakota, which lay just twenty miles from my hometown, had been destroyed by a tornado. The storm was among the most destructive in South Dakota's history. For the next few weeks I collected every front page story my hometown paper ran about the tornado; I still have those newspapers stored away in a box.

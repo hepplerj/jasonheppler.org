@@ -1,15 +1,15 @@
 ---
 date: 2011-01-07T14:16:47Z
-categories:
-- programming
+tags: [programming, ruby]
 series: "Rubyist Historian"
 title: 'The Rubyist Historian: Working With Advanced Data'
 url: /2011/01/07/the-rubyist-historian-working-with-advanced-data/
 wordpress_id: 1090
 wordpress_url: http://www.jasonheppler.org/?p=1090
+lede: "The Rubyist Historian: Working with inputs and outputs."
 ---
 
-In this section, a whole new world of programing is about to open before your eyes. So far, we've been working with simple data inputs through the use of .gets(), but the method only allows us to call upon a single data entry.  What would be infinitely more useful would be the ability to read files outside the program. We can do this with Ruby's <code>File</code> class.<!--more-->
+In this section, a whole new world of programing is about to open before your eyes. So far, we've been working with simple data inputs through the use of `.gets()`, but the method only allows us to call upon a single data entry.  What would be infinitely more useful would be the ability to read files outside the program. We can do this with Ruby's <code>File</code> class.<!--more-->
 
 <h4>Input/Output</h4>
 

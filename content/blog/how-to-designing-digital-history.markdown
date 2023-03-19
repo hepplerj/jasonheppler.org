@@ -2,7 +2,8 @@
 date: 2008-11-29T12:12:29Z
 title: 'How To: Designing Digital History'
 url: /2008/11/29/how-to-designing-digital-history/
-category: design
+tags: [design, digital history]
+lede: "Thoughts on the role of design and digital history."
 ---
 
 Our digital history seminar is currently in the midst of designing our digital projects and has gotten me thinking about how to design digital scholarship and the tools that are available for helping in the construction of projects. Beginners to digital history are somewhat daunted by the design process. The lingo of web design -- HTML, CSS, Javascript, XML, metadata, hypertext -- seems like an endless alphabet of ambiguous elements in the digital environment. This post means to highlight some tools and resources digital humanists might find useful in constructing their own projects, as well as impart some of my first-hand experience thus far in the design process.

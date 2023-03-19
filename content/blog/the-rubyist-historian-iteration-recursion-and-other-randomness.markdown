@@ -1,12 +1,12 @@
 ---
 date: 2011-01-08T14:50:41Z
-categories:
-- programming
+tags: [programming, ruby]
 series: "Rubyist Historian"
 title: 'The Rubyist Historian: Randomness'
 url: /2011/01/08/the-rubyist-historian-iteration-recursion-and-other-randomness/
 wordpress_id: 859
 wordpress_url: http://www.jasonheppler.org/?p=859
+lede: "The Rubyist Historian: Introduction to recursion and other random things."
 ---
 
 We're entering the final leg of our journey.  We've covered a lot of topics in the last few sections, but I just have a couple of things to touch on before we move on to writing our first full program together.

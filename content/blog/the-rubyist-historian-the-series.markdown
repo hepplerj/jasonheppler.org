@@ -1,12 +1,12 @@
 ---
 date: 2010-12-10T07:40:53Z
-categories:
-- programming
+tags: [programming, ruby]
 series: "Rubyist Historian"
 title: 'The Rubyist Historian: The Series'
 url: /2010/12/10/the-rubyist-historian-the-series/
 wordpress_id: 514
 wordpress_url: http://www.jasonheppler.org/?p=514
+lede: "The Rubyist Historian: An introduction to the series."
 ---
 
 Coming off my recent post on <a href="http://www.jasonheppler.org/2010/12/03/how-i-learned-code.html">How I Learned Code</a>, I've decided to write a series of blog posts that will introduce historians to the basics of Ruby that I will eventually publish as a free <a href="http://anthologize.org/">ebook</a>. My hope is to write an accessible introduction to Ruby and demonstrate not only how to write small programs but also think about ways programming can help scholars in their everyday tasks. Although I'm aiming this at historians, my hope is that anyone interested in humanist computing (or Ruby in general) will find this useful. Watch here, follow me on <a href="http://www.twitter.com/jaheppler">Twitter</a>, or <a href="http://feeds.feedburner.com/JasonHeppler">subscribe</a> to catch updates as I produce them.

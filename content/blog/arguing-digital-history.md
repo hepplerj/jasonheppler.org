@@ -1,9 +1,9 @@
 ---
 title: "Arguing with Digital History"
 date: 2017-08-18
-categories:
-- digital humanities
+tags: [digital history, RRCHNM]
 featured: true
+lede: "My contribution to the working paper on arguing with digital history."
 ---
 
 <aside class="posted">

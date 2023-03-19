@@ -1,11 +1,11 @@
 ---
 date: 2010-12-03T07:24:21Z
-categories:
-- programming
+tags: [programming]
 title: How I Learned Code
 url: /2010/12/03/how-i-learned-code/
 wordpress_id: 405
 wordpress_url: http://www.jasonheppler.org/?p=405
+lede: "Here's how a historian learned to be a programmer."
 ---
 
 Being in Steve Ramsay's Electronic Text class has me thinking quite a bit about humanities scholars programming and knowing code.  In the History Department, digital historians or those interested in digital history/humanities seem eager to embrace the potentials that computing offers historical research, but almost no one seems interested in learning how to write good code.  Those willing to learn code limit their knowledge to HTML and some basic CSS, which, I would argue, is good enough.  But I'm a bit shocked at the number unwilling to learn other languages: Ruby, PHP, or Javascript, for example.  <!--more-->

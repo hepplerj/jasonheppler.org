@@ -2,8 +2,8 @@
 title: 'BootcampR'
 date: 2020-02-19T10:27:12-06:00
 slug: 'bootcampr'
-categories: 
-- programming
+tags: [programming, teaching]
+lede: "My six-week bootcamp on R."
 ---
 
 This semester I am piloting a new six-week workshop series on the R programming language called [BootcampR](https://jasonheppler.org/courses/bootcampr.2020/). 

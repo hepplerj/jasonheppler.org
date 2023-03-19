@@ -1,11 +1,11 @@
 ---
 date: 2008-04-08T17:31:44Z
-categories:
-- digital humanities
+tags: [digital humanities]
 title: Bobley Visits UNL
 url: /2008/04/08/bobley-visits-unl/
 wordpress_id: 32
 wordpress_url: http://www.jasonheppler.org/?p=32
+lede: "Brett Bobley paid us a visit to talk about the new NEH Office of Digital Humanities."
 ---
 
 <a href="http://www.jasonheppler.org/wp-content/uploads/2010/01/odh-blog.jpg"><img class="alignleft size-full wp-image-33" title="odh-blog" src="http://www.jasonheppler.org/wp-content/uploads/2010/01/odh-blog.jpg" alt="" width="195" height="115" /></a>Last Tuesday, Brett Bobley, Chief Information  Officer and Director of the newly-minted <a href="http://www.neh.gov/odh/">Office  of Digital Humanities</a> at the <a href="http://www.neh.gov/">National Endowment for the Humanities</a> (NEH) visited the University of Nebraska-Lincoln to discuss grant  programs, tips and suggestions on what makes a great application, how  the NEH peer review process works, and the future of digital humanities  at NEH.  As somebody just entering the professional study of history and  learning the ropes about grants and funding, Bobley's talk was  illuminating and addressed some of the issues confronting digital  scholarship.

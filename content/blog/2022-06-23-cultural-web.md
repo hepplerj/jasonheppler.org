@@ -2,7 +2,8 @@
 title: 'The URL is a Radical Act'
 date: 2022-06-23T11:57:10-05:00
 slug: 'cultural-web'
-categories: web
+tags: [web]
+lede: "The web enables the act of visiting and revisiting, lowering the barriers of participation."
 ---
 
 [Aaron Straup Cope](https://www.aaronland.info/weblog/2022/06/17/expectations/#usf) writes:

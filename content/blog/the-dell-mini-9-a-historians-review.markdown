@@ -1,11 +1,11 @@
 ---
 date: 2008-11-08T00:06:34Z
-categories:
-- review
+tags: [review]
 title: 'The Dell Mini 9: A Historian''s Review'
 url: /2008/11/08/the-dell-mini-9-a-historians-review/
 wordpress_id: 48
 wordpress_url: http://www.jasonheppler.org/?p=48
+lede: "A review of the new Dell Mini 9."
 ---
 
 The subnotebook - or "<a href="http://en.wikipedia.org/wiki/Netbook" target="_blank">netbook</a>"  - has become a hot gadget in the last year.  With the introduction of  the <a href="http://en.wikipedia.org/wiki/ASUS_Eee_PC" target="_blank">Asus  Eee PC</a> just over a year ago, the market for budget notebooks has  exploded.  The first Asus Eee boasted a two-pound, 7 inch screen  starting at under $300, an attractive price compared to the  "ultra-portable" laptops that often ran above $1,000.  Dell joined the  netbook frenzy in October 2008, releasing the <a href="http://www.dell.com/content/products/productdetails.aspx/laptop-inspiron-9?cs=19&amp;s=dhs&amp;ref=homepg" target="_blank">Dell Mini 9</a> for $349 (Linux) or $399 (Windows XP).

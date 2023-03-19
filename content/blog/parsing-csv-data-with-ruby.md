@@ -1,9 +1,9 @@
 ---
 date: 2013-01-27T20:10:39Z
-categories:
-- programming
+tags: [programming, ruby]
 title: Parsing CSV Data with Ruby
 url: /2013/01/27/parsing-csv-data-with-ruby/
+lede: "A simple script for parsing a CSV with Ruby and counting values."
 ---
 
 Computers offer us a wonderful opportunity to automate and ease some of

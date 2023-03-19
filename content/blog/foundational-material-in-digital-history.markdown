@@ -1,11 +1,11 @@
 ---
 date: 2009-04-20T20:58:02Z
-categories:
-- digital humanities
+tags: [digital history]
 title: Foundational Material in Digital History
 url: /2009/04/20/foundational-material-in-digital-history/
 wordpress_id: 57
 wordpress_url: http://www.jasonheppler.org/?p=57
+lede: "Here's how I would introduce someone to digital history."
 ---
 
 <a href="http://transducer.ontoligent.com/archives/250" target="_blank">This post</a> by Rafael Alvarado has been making the rounds on Twitter and got me thinking about, more specifically, what material would be a useful introduction to digital history (as opposed to digital humanities).  Here's my list in chronological order:

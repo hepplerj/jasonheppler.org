@@ -1,10 +1,10 @@
 ---
 author: Jason Heppler
 date: 2012-01-05T10:12:16Z
-categories:
-- conference
+tags: [conference, American Historical Association]
 title: Digital History at the AHA
 url: /2012/01/05/digital-history-at-the-aha/
+lede: "My inaugural attendance at the American Historical Association conference."
 ---
 
 I'm excited to be attending the American Historical Association meeting in Chicago, not only because it is my first AHA but also because of the great number of sessions on Digital History. Kaci Nash, Leslie Working, and myself will be blogging at [The Digital History Project blog](https://digitalhistory.wordpress.com/) summarizing as many of the sessions as we can at the end of each day. We will also be live tweeting from as many as we can. You can follow tweets about the AHA with [#AHA2012](https://twitter.com/#!/search/%23aha2012).

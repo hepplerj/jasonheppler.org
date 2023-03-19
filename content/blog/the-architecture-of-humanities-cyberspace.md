@@ -1,10 +1,10 @@
 ---
 author: Jason Heppler
-categories:
-- research
+tags: [research]
 date: 2011-11-03T10:22:11Z
 title: The Architecture of Humanities Cyberspace
 url: /2011/11/03/the-architecture-of-humanities-cyberspace/
+lede: "A reading reflection on Lawrence Lessig for HIST946."
 ---
 
 *[This is a reading reflection for HIST946: Digital Humanities for Prof. William G. Thomas during the Fall 2011 semester. This week's reading was Lawrence Lessig, *[Code, and Other Laws of Cyberspace](http://codev2.cc/)*. You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html).]*

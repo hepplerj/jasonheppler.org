@@ -1,9 +1,9 @@
 ---
 date: 2012-03-03T22:33:40Z
-categories:
-- personal
+tags: [personal]
 title: Full Trash
 url: /2012/03/03/full_trash/
+lede: "There's just a few things in the trash."
 ---
 
 ![Trashcan](/assets/images/trash.png "Trashcan")

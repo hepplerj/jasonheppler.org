@@ -1,9 +1,9 @@
 ---
 date: 2011-10-11T14:29:56Z
-categories:
-- review
+tags: [review]
 title: 'The Information: A History, a Theory, a Flood by James Gleick'
 url: /2011/10/11/the-information-james-gleick/
+lede: "A quick review of James Gleick's _The Information_."
 ---
 
 I just finished reading James Gleick's [The Information: A History, a Theory, a

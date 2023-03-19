@@ -1,9 +1,9 @@
 ---
 date: 2010-08-10T20:18:36Z
-categories:
-- academia
+tags: [academia, teaching]
 title: Preparing for Your Semester Teaching Assistantship
 url: /2010/08/10/preparing-for-your-semester-teaching-assistantship/
+lede: "My semester checklist as I prepare for my teaching assistantship."
 ---
 
 The posts over at Prof Hacker on <a href="http://chronicle.com/blogPost/Creating-a-Checklist/26081">creating a checklist for the semester</a> and <a href="http://chronicle.com/blogPost/Organizing-Your-Teaching/25857/">organizing teaching material</a> got me thinking about my process of preparing for the semester, organizing and archiving my material, and keeping my sanity.  So, consider this post a ProfHacker / Lifehacker-esque contribution.

@@ -1,10 +1,10 @@
 ---
 author: Jason Heppler
 date: 2012-02-02T09:20:33Z
-categories:
-- personal
+tags: [personal, health]
 title: The Paleo Diet
 url: /2012/02/02/the-paleo-diet/
+lede: "Adopting the paleo diet has been transformative."
 ---
 
 Over the past few months I took up the Paleo diet. Since then, a lot of people have asked me about it. Paleo isn't so much a diet as a lifestyle change that eliminates glutens, refined sugars, among other things. Paleo isn't all that new, popularized in the 1970s but stretches back further, and differs in some ways from other low carb and slow carb diets.

@@ -2,8 +2,8 @@
 title: 'Democratic Typography'
 date: 2020-02-10T15:22:38-06:00
 slug: 'democratic-typography'
-categories: 
-- design
+tags: [design, politics]
+lede: "The design of Democratic primary candidate logos."
 ---
 
 <a data-fancybox="gallery" href="/assets/images/demlogos.png"><img src="/assets/images/demlogos.png"></a>

@@ -1,9 +1,9 @@
 ---
 date: 2012-04-24T15:45:43Z
-categories:
-- programming
+tags: [programming, ruby, text analysis]
 title: A Simple Ruby NGram Generator
 url: /2012/04/24/a-simple-ruby-ngram-generator/
+lede: "A simple Ruby-based text tokenizer."
 ---
 
 I was playing around with Ruby the other night and wrote a simple n-gram generator. In case anyone is interested, here is the script:

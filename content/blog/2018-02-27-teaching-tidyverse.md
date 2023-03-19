@@ -1,8 +1,8 @@
 ---
 title: "Teaching the tidyverse to R novices"
 date: 2018-02-27
-categories:
-    - programming
+tags: [programming]
+lede: "How I teach R to novices."
 ---
 
 <aside>

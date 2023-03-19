@@ -1,10 +1,10 @@
 ---
 author: Jason Heppler
 date: 2011-12-17T15:43:45Z
-categories:
-- academia
+tags: [academia, plain text]
 title: Legacy Research
 url: /2011/12/17/legacy-research/
+lede: "Plain text ensures longevity."
 ---
 
 I am a young historian -- heck, I barely even qualify for that title when I have no book to my name and don't hold a PhD yet. But as a researcher very early in my career, one thing I think about frequently is the legacy of the digital files that I create. Perhaps it's a residual anxiety that accompanies the idea that physical files will "last" or are more easily preserved that I continue to hold on to.
