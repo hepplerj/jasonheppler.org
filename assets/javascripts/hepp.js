@@ -1,7 +1,7 @@
 // import accessibleFootnotes from "./accessibleFootnotes.js";
 // import enableFloatingFootnotes from "./marginalia.js";
-const { littlefoot } = require("littlefoot");
 import Headroom from "headroom.js";
+const { littlefoot } = require("littlefoot");
 
 // accessibleFootnotes();
 // enableFloatingFootnotes();
