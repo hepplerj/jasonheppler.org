@@ -45,6 +45,30 @@ Edited with Rebecca Wingo and Paul Schadewald, our volume brings together cuttin
 Find more of my work on my [digital and public history](/research/) page.
 
 <section class="project-box">
+  <a class="project" href="http://machinesinthevalley.org">
+    <img src="/assets/images/portfolio_machinesvalley.png" alt="Machines in the Valley: Growth, Conflict, and Environmental Politics in Silicon Valley" loading="lazy" />
+    <p class="small"><span class="project-title">Machines in the Valley: Growth, Conflict, and Environmental Politics in Silicon Valley</span> A spatial history and digital narrative of Silicon Valley.</p>
+  </a>
+
+   <a class="project" href="https://jasonheppler.org/projects/western-lands/">
+    <img src="/assets/images/portfolio_westernlands.png" alt="Western Federal Lands" loading="lazy" />
+    <p class="small"><span class="project-title">U.S. Federal Lands</span> Mapping the federal lands of the U.S.</p>
+  </a>
+
+  <a class="project" href="https://jasonheppler.org/projects/war/">
+    <img src="/assets/images/portfolio_war.png" alt="Wars of the United States" loading="lazy" />
+    <p class="small"><span class="project-title">Wars of the United States</span> Visualizing the wars of the United States.</p>
+  </a>
+</section>
+
+
+<hr/>
+
+<h2>Collaborative Digital History</h2>
+
+Find more of my work on my [digital and public history](/research/) page.
+
+<section class="project-box">
 
   <a class="project" href="https://deathbynumbers.org">
     <img src="/assets/images/portfolio_bom.png" alt="Death by Numbers" loading="lazy" />
