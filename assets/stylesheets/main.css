@@ -40,7 +40,8 @@
   --space-mobile: 85%;
   --grid--gutter: 1.25rem;
   --font-serif: 'Newsreader', lora, TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-  --font-sans: 'Circular', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+  /*--font-sans: 'Circular', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;*/
+  --font-sans: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
   --font-mono: "IBM Plex Mono", San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   --type-base: calc(1.5em + 0.5vw);
   --type-xxx-small: 55%;
@@ -390,9 +391,89 @@ ol li:before {
 }
 
 mark {
-  background: linear-gradient(-100deg, hsla(48,92%,75%,.3), hsla(48,92%,75%,.7) 95%, hsla(48,92%,75%,.1));
-  border-radius: 1em 0;
-  padding: .2rem;
+  margin: 0 -0.4em;
+  padding: 0.1em 0.4em;
+  border-radius: 0.8em 0.3em;
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 225, 0, 0.1),
+    rgba(255, 225, 0, 0.7) 4%,
+    rgba(255, 225, 0, 0.3)
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+#webmentions {
+  margin: 0;
+  position: relative;
+  z-index: 100;
+  line-height: 1.2em;
+}
+
+#webmentions .comments {
+  max-height: 20em;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-size: 80%;
+}
+
+#webmentions h2 {
+  font-size: medium;
+  margin: 0;
+  padding: 2px;
+  background: #ccc;
+}
+
+#webmentions .reacts img {
+  margin: 3px -1ex 1px 0;
+}
+
+#webmentions ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 4px;
+}
+
+#webmentions li {
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+#webmentions a.reaction {
+  position: relative;
+  text-decoration: none;
+  text-shadow: 0px 0px 3px white;
+  margin-right: 0;
+  letter-spacing: -1ex;
+  margin-right: 1ex;
+}
+
+#webmentions a.reaction img {
+  max-height: 1.3em;
+  margin-right: -1ex;
+  border-radius: 25%;
+}
+
+#webmentions a.reaction sub {
+  font-size: 50%;
+}
+
+#webmentions .comments li {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+#webmentions .comments li .text {
+  color: #555;
+  font-style: italic;
+  text-decoration: none;
+}
+
+#webmentions .comments li .name {
+  color: #111;
 }
 
 /* 
@@ -1372,7 +1453,7 @@ a.project {
   }
   a.project p {
     line-height: 1.3;
-    font-weight: 100;
+    font-weight: 300;
   }
 
   /* Merry Christmas */
