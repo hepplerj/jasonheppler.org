@@ -125,7 +125,7 @@ I've been designing, developing, and teaching digital and public history for ten
 
   <a class="project" href="http://bl.ocks.org/hepplerj/e5d3d5787f348cc3b032">
     <img src="/assets/images/portfolio_chinesecomputing.png" alt="Chinese computing" loading="lazy" />
-    <p class="small"><span class="project-title">Chinese computing</span> Visualizing 21st century Chinese writing. Collaboration with Tom Mullaney.</p>
+    <p class="small"><span class="project-title">Chinese Computing</span> Visualizing 21st century Chinese writing. Collaboration with Tom Mullaney.</p>
   </a>
 
   <a class="project" href="http://fiddly.fm">
