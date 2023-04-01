@@ -12,7 +12,7 @@ slug: '/about/'
 
   <p>(<a href="/bio/">Need a full bio?</a>)</p>
 
-  <p>Because we live in an era of climate emergency, most of my work is concerned with land, water, and energy, and the history tied up within these: who controlled access to these things; how were these things owned and used; what stories do we tell about places and how does that shape what happened; how the landscape is a record of history and power; how state institutions shape thinking about landscape, nature, and health. In addition to my work in environmental history, I'm also a scholar with expertise in digital mapping, spatial history, statistics, and big-data / machine reading methods for historical research. I was formerly an assistant professor at the University of Nebraska at Omaha, but elected to leave the tenure track for the creative energy and cutting-edge research around RRCHNM. I volunteer my time with the Environmental Data & Governance Initiative's <a href="https://envirodatagov.org/environmental-historians-action-collaborative/">Environmental Historians Action Collaborative</a> and History Rebellion.</p>
+  <p>Because we live in an era of climate emergency, most of my work is concerned with land, water, and energy, and the history tied up within these: who controlled access to these things; how were these things owned and used; what stories do we tell about places and how does that shape what happened; how the landscape is a record of history and power; how state institutions shape thinking about landscape, nature, and health. In addition to my work in environmental history, I'm also a scholar with expertise in digital mapping, spatial history, statistics, and big-data / machine reading methods for historical research. I was formerly an assistant professor at the University of Nebraska at Omaha, but elected to leave the tenure track for the creative energy and cutting-edge research around RRCHNM. I volunteer my time with the <a href="https://envirodatagov.org/environmental-historians-action-collaborative/">Environmental Historians Action Collaborative</a> and History Rebellion.</p>
 
   <h3>Can we meet for coffee?</h3>
 
@@ -29,6 +29,10 @@ slug: '/about/'
   <p class="noted">Please feel free to contact me:</p>
 
   <p class="noted"><a href="mailto:jason@jasonheppler.org">jason@jasonheppler.org</a></p>
+
+  <p class="noted"><a href="https://ponymessenger.com/invite/7TUWXB">Pony Messenger</a></p>
+
+  <hr/>
 
   <p class="noted"><a href="/newsletter">Subscribe to Breve</a>, my occasional newsletter on design, creativity, and human knowledge.</p>
 
@@ -53,7 +57,7 @@ slug: '/about/'
 <h2>Elsewhere on the internet</h2>
 	<ul class="list-unstyled noted">
 		<li><a href="https://social.jasonheppler.org/">Micro.blog</a></li>
-    <li><a href="https://historians.social/@jaheppler">Mastodon</a></li>
+    <li><a href="https://historians.social/@jaheppler">Fediverse</a></li>
 		<li><a href="https://github.com/hepplerj">GitHub</a></li>
 		<li><a href="https://observablehq.com/@hepplerj?tab=profile">Observable</a>
 		<li><a href="https://orcid.org/0000-0003-4158-6186">ORCID</a>
