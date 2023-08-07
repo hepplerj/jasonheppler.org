@@ -6,7 +6,7 @@ slug: '/about/'
 <section class="bio-project">
 <div class="bio-project-left">
   {{< figure src="/assets/images/head.jpeg" alt="Jason A. Heppler" >}}
-  <p class="u-lead"><strong>Hi! I'm Jason</strong>, a web developer by trade and a historian by vocation at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> (RRCHNM) at <a href="https://historyarthistory.gmu.edu">George Mason University</a>. I collaborate with faculty and graduate students on the innovative application of technology in teaching and research across interactive data visualization, design, and public and digital history. I hold a Ph.D. from the University of Nebraska-Lincoln and currently split my time between Omaha and Fairfax.</p>
+  <p class="u-lead"><strong>Hi! I'm Jason</strong>, a web developer by trade and a historian by vocation at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> (RRCHNM) at <a href="https://historyarthistory.gmu.edu">George Mason University</a>. I collaborate with faculty and graduate students on the innovative application of technology in teaching and research across interactive data visualization, design, and public and digital history. I hold a Ph.D. from the University of Nebraska-Lincoln and currently split my time between Lincoln and Fairfax.</p>
 
   <p><a href="https://jasonheppler.org/files/jah-cv.pdf">You can find my full CV here</a>.</p>
 
@@ -29,8 +29,6 @@ slug: '/about/'
   <p class="noted">Please feel free to contact me:</p>
 
   <p class="noted"><a href="mailto:jason@jasonheppler.org">jason@jasonheppler.org</a></p>
-
-  <p class="noted"><a href="https://ponymessenger.com/invite/7TUWXB">Pony Messenger</a></p>
 
   <hr/>
 

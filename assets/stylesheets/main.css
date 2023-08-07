@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:200,300,400");
 :root {
   --site-theme: "light";
   --color-white: #fff;
@@ -42,7 +43,7 @@
   --font-serif: 'Newsreader', lora, TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   /*--font-sans: 'Circular', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;*/
   --font-sans: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
-  --font-mono: "IBM Plex Mono", San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+  --font-mono: "Roboto Mono", "IBM Plex Mono", San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   --type-base: calc(1.5em + 0.5vw);
   --type-xxx-small: 55%;
   --type-xx-small: 65%;
@@ -136,14 +137,14 @@
 body {
   font-family: var(--font-sans);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   background: var(--theme-background);
   color: var(--theme-text);
-  font-size: 18px;
+  font-size: 20px;
   font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  line-height: 24px;
+  /* line-height: 24px; */
   -webkit-tap-highlight-color:rgba(38, 27, 35, 0);
   padding: 0;
   margin: 0;
@@ -332,8 +333,7 @@ h1.post-title a {
 }
 
 p, ul, ol {
-  font-size: 21px;
-  line-height: 2rem;
+  line-height: 1.5rem;
   margin: 1rem 0
 }
 
@@ -382,6 +382,7 @@ ol {
 }
 
 ol li:before {
+  font-family: var(--font-mono);
   content: counter(decimal-counter, decimal-leading-zero);
   margin-left: -2.1rem;
   counter-increment: decimal-counter;

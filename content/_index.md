@@ -1,5 +1,5 @@
 ---
-description: "Jason Heppler is a historian, technologist, and software developer at the Roy Rosenzweig Center for History and New Media."
+description: "Jason Heppler is a historian and software developer at the Roy Rosenzweig Center for History and New Media."
 ---
 
 <div class="lede">

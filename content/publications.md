@@ -11,7 +11,7 @@ For a complete list of my scholarship, please see my [CV](https://jasonheppler.o
 
 ## Books
 
-{{% book title="The Nature of the Valley: Silicon Valley and the Transformation of American Environmental Politics" year="2024" publisher="University of Oklahoma Press" %}}
+{{% book title="Silicon Valley and the Environmental Inequalities of High-Tech Urbanism" year="2024" publisher="University of Oklahoma Press" %}}
 
 **Forthcoming**. Few places symbolize the twentieth century American West like Silicon Valley. Stretching between the communities of Palo Alto to San Jose, this dense California region is home to the nation's most consequential high-tech industrial corridor. In the four decades following World War II, the region rapidly transformed from an agricultural economy to an industrial one fueled by government funding into defense-related research and development. Boosters of the new industrialization promised a modern, clean, and future-facing economy in the wake of declining steel-age industries and an emerging space-age arms race. New industries drove new populations who flocked to the valley as much for work as they did for its pleasant environment.   
   

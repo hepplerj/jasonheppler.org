@@ -1,45 +1,60 @@
-    <footer class="footer">
-        <p>Written by <a href="https://jasonheppler.org">Jason Heppler</a> &middot; Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://www.ahillofbeans.com">coffee</a>. <a href="https://maggieappleton.com/ai-dark-forest">Nothing here is AI-generated</a>. &middot; Made in <a href="/omaha/">Omaha, Nebr</a>. <br/> Licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA Creative Commons</a>.</p>
-      
-        <div class="user-toggle" aria-labelledby="label-user-toggle">
-          <p><span id="label-user-toggle">Choose a theme:</span></p>
-          <span role="status" class="sr-only mode-status"></span>
-          <ul class="modes-list">
-            <li>
-              <input id="mode-toggle-auto" type="radio" name="theme-chooser" value="auto">
-              <label for="mode-toggle-auto"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 254 254" role="presentation"><path fill="currentColor" fill-rule="evenodd" d="M127 0a127 127 0 110 254 127 127 0 010-254zm-.3 39.7a87 87 0 100 174 87 87 0 000-174zM123 72a9 9 0 019 8.7V126h45.3a9 9 0 010 18H123c-5 0-9-4-9-9V80.7a9 9 0 019-8.7z"></path></svg>
-     <span class="sr-only">Auto</span></label>
-            </li>
-            <li>
-              <input id="mode-toggle-light" type="radio" name="theme-chooser" value="light">
-              <label for="mode-toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 254 254" role="presentation">
-      <g fill="currentColor" fill-rule="evenodd">
-        <circle cx="127" cy="127" r="45"></circle>
-        <path d="M118 209v-.3a9 9 0 0118 .3v36a9 9 0 11-18 0v-36zM118 9v-.3a9 9 0 0118 .3v36a9 9 0 11-18 0V9zM178.6 191.3l-.2-.1a9 9 0 0113-12.6l25.4 25.5a9 9 0 11-12.7 12.7l-25.5-25.5zM37.2 50l-.2-.3a9 9 0 0113-12.5l25.4 25.5a9 9 0 01-12.7 12.7L37.2 49.9zM209 136h-.3a9 9 0 01.3-18h36a9 9 0 110 18h-36zM9 136h-.3a9 9 0 01.3-18h36a9 9 0 110 18H9zM191.3 75.4l-.1.2a9 9 0 01-12.6-13l25.5-25.4a9 9 0 1112.7 12.7l-25.5 25.5zM50 216.8l-.3.2a9 9 0 01-12.5-13l25.5-25.4a9 9 0 1112.7 12.7l-25.5 25.5z"></path>
-      </g>
-    </svg>
-     <span class="sr-only">Light mode</span></label>
-            </li>
-            <li>
-              <input id="mode-toggle-dark" type="radio" name="theme-chooser" value="dark">
-              <label for="mode-toggle-dark">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 244 255" role="presentation"><path fill="currentColor" fill-rule="evenodd" d="M3.6 98.7a127 127 0 01182-84.3 102 102 0 1058.5 163A127 127 0 013.6 98.6z"></path></svg>
-     <span class="sr-only">Dark mode</span></label>
-            </li>
-          </ul>
-        </div>
-      
-      </footer>
+<footer class="footer">
+  <p>Written by <a href="https://jasonheppler.org">Jason Heppler</a> &middot; Powered by <a
+      href="https://gohugo.io">Hugo</a> and <a href="https://www.ahillofbeans.com">coffee</a>. <a
+      href="https://maggieappleton.com/ai-dark-forest">Nothing here is AI-generated</a>. &middot; Made in <a
+      href="https://en.wikipedia.org/wiki/Lincoln,_Nebraska">Lincoln, Nebr</a>. <br /> Licensed under <a
+      href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA Creative Commons</a>.</p>
 
-         <!-- JavaScripts -->
-    {{ if eq hugo.Environment "development" }}
-    {{ $devJS := resources.Get "javascripts/hepp.js" | js.Build }}
-    <script type="module" src="{{ $devJS.Permalink }}" async></script>
-    {{ else }}
-    {{ $js := resources.Get "javascripts/hepp.js" | js.Build | resources.Minify }}
-    {{ $secureJS := $js | resources.Fingerprint "sha512" }}
-    <script type="module" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}" async></script>
-    {{ end }}
-  </body>
+  <div class="user-toggle" aria-labelledby="label-user-toggle">
+    <p><span id="label-user-toggle">Choose a theme:</span></p>
+    <span role="status" class="sr-only mode-status"></span>
+    <ul class="modes-list">
+      <li>
+        <input id="mode-toggle-auto" type="radio" name="theme-chooser" value="auto">
+        <label for="mode-toggle-auto"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+            viewBox="0 0 254 254" role="presentation">
+            <path fill="currentColor" fill-rule="evenodd"
+              d="M127 0a127 127 0 110 254 127 127 0 010-254zm-.3 39.7a87 87 0 100 174 87 87 0 000-174zM123 72a9 9 0 019 8.7V126h45.3a9 9 0 010 18H123c-5 0-9-4-9-9V80.7a9 9 0 019-8.7z">
+            </path>
+          </svg>
+          <span class="sr-only">Auto</span></label>
+      </li>
+      <li>
+        <input id="mode-toggle-light" type="radio" name="theme-chooser" value="light">
+        <label for="mode-toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+            viewBox="0 0 254 254" role="presentation">
+            <g fill="currentColor" fill-rule="evenodd">
+              <circle cx="127" cy="127" r="45"></circle>
+              <path
+                d="M118 209v-.3a9 9 0 0118 .3v36a9 9 0 11-18 0v-36zM118 9v-.3a9 9 0 0118 .3v36a9 9 0 11-18 0V9zM178.6 191.3l-.2-.1a9 9 0 0113-12.6l25.4 25.5a9 9 0 11-12.7 12.7l-25.5-25.5zM37.2 50l-.2-.3a9 9 0 0113-12.5l25.4 25.5a9 9 0 01-12.7 12.7L37.2 49.9zM209 136h-.3a9 9 0 01.3-18h36a9 9 0 110 18h-36zM9 136h-.3a9 9 0 01.3-18h36a9 9 0 110 18H9zM191.3 75.4l-.1.2a9 9 0 01-12.6-13l25.5-25.4a9 9 0 1112.7 12.7l-25.5 25.5zM50 216.8l-.3.2a9 9 0 01-12.5-13l25.5-25.4a9 9 0 1112.7 12.7l-25.5 25.5z">
+              </path>
+            </g>
+          </svg>
+          <span class="sr-only">Light mode</span></label>
+      </li>
+      <li>
+        <input id="mode-toggle-dark" type="radio" name="theme-chooser" value="dark">
+        <label for="mode-toggle-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 244 255" role="presentation">
+            <path fill="currentColor" fill-rule="evenodd"
+              d="M3.6 98.7a127 127 0 01182-84.3 102 102 0 1058.5 163A127 127 0 013.6 98.6z"></path>
+          </svg>
+          <span class="sr-only">Dark mode</span></label>
+      </li>
+    </ul>
+  </div>
+
+</footer>
+
+<!-- JavaScripts -->
+{{ if eq hugo.Environment "development" }}
+{{ $devJS := resources.Get "javascripts/hepp.js" | js.Build }}
+<script type="module" src="{{ $devJS.Permalink }}" async></script>
+{{ else }}
+{{ $js := resources.Get "javascripts/hepp.js" | js.Build | resources.Minify }}
+{{ $secureJS := $js | resources.Fingerprint "sha512" }}
+<script type="module" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}" async></script>
+{{ end }}
+</body>
+
 </html>
-
