@@ -88,31 +88,6 @@ Find more of my work on my [digital and public history](/research/) page.
 
 <hr/>
 
-<h2>Public History</h2>
-
-Find more of my work on my [digital and public history](/research/) page.
-
-<section class="project-box">
-
-  <a class="project" href="https://pandemicreligion.org/">
-      <img src="/assets/images/portfolio_pr.png" alt="Pandemic Religion" loading="lazy" />
-      <p class="small"><span class="project-title">Pandemic Religion</span>
-      Documenting American religion in a time of pandemic.</p>
-    </a>
-
-  <a class="project" href="http://aidhp.com">
-    <img src="/assets/images/portfolio_aidhp.png" alt="American Indian Digital History Project" loading="lazy" />
-    <p class="small"><span class="project-title">American Indian Digital History Project</span> Digitizing Indigenous newspapers, photographs, and archival materials across Native North America.</p>
-  </a>
-
-  <a class="project" href="https://omahahistorical.org">
-      <img src="/assets/images/portfolio_omahistorical.png" alt="Nebraska Historical" loading="lazy" />
-      <p class="small"><span class="project-title">Nebraska Historical</span> Curating histories of Nebraska and the Northern Plains.</p>
-    </a>
-</section>
-
-<hr/>
-
 <h2>Get in touch</h2>
 
 If you're looking to get in touch, take note:
