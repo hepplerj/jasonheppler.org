@@ -7,28 +7,16 @@
 {{ .Content }}
 
 <div class="writing">  
-{{ range .Data.Pages.GroupByDate "2006" "01" }}
-  <h2 id="section-{{.Key| urlize }}">{{ .Key }}</h2>
-  <div class="list-archives">
+{{ range (where .Site.RegularPages "Section" "blog").GroupByDate "2006" }}
+<h2>{{ .Key }}</h2>
     {{ range .Pages }}
-      <div class="item-archive-entry">
-        <article class="archive-entry">
-          <a href="{{ .Permalink }}" class="archive-title">{{ .Title }}</a></li>
-          <span class="sr-only">Posted on </span>
-          <time class="meta-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
-          {{ if .Params.lede }}
-          <p class="teaser">{{ .Params.lede | markdownify }}</p>
-          {{ end }}
-          {{ if .Params.tags }}
-          <p class="article-filed">Filed under: <span class="article-tags">{{ partial "tags.html" .}}</span></p>
-          {{ end }}
-        </article>
-      </div>
-    {{ end }}
+    <div class="preview-post">
+      <div><a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a> &mdash; <time>{{ .Date.Format "2 January 2006" }}</time></div>
     </div>
+    {{ end }}
 {{ end }}
 </div>
-<!-- </div> -->
+</div>
 
 {{ partial "foot.html" . }}
 </div>

@@ -1,5 +1,5 @@
 ---
-title: "Digital & public history"
+title: "Digital & Public History"
 slug: '/research/'
 ---
 

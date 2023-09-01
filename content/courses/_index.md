@@ -9,6 +9,10 @@ Studying history gives you [a lifetime of critical skills](http://www.nytimes.co
 ---
 
 <div class="teaching">
+<div>
+    <div>Digital Public History</div>
+    <div>Spring 2024</div>
+  </div>
   <div>
     <div>SpaceCamp</div>
     <div>April 2022, November 2022</div>

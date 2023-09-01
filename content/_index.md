@@ -3,7 +3,7 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
 ---
 
 <div class="lede">
-<p>Hi, I'm <a href="/about">Jason</a>. I am a historian of the environment and capitalism in the twentieth century North American West and Great Plains. I am the senior developer-scholar at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> and a member of the <a href="https://historyarthistory.gmu.edu">Department of History and Art History</a> at George Mason University and a member of the <a href="http://envirohistact.org">Environmental History Action Collaborative</a>.</p>
+<p>I am a historian of the environment and capitalism in the twentieth century North American West and Great Plains. I am the senior developer-scholar at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> and a member of the <a href="https://historyarthistory.gmu.edu">Department of History and Art History</a> at George Mason University and a member of the <a href="http://envirohistact.org">Environmental History Action Collaborative</a>.</p>
 </div>
 
 <aside class="newsletter">

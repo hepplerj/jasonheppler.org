@@ -1,13 +1,14 @@
-<nav id="header-container" role="navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope>
-  <header class="header-primary">
-  <a href="https://jasonheppler.org" class="me"><b>Jason Heppler</b></a>
-  <button class="hamburger hamburger--collapse" type="button">
-    <span class="hamburger-box">
-    <span class="hamburger-inner"></span>
-    </span>
-  </button>
-  {{ range .Site.Menus.nav }}
-        <a class="menu menu-item-link link" href="{{ .URL | absLangURL | safeURL }}">{{ .Name }}</a>
-    {{ end }}
-  </header>
+<nav class="header-wrap" role="navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+  <div class="header nu limiter no-print">
+    <ul id="menu" class="menu" style="list-style: none; padding: 0; margin: 0;">
+        <li class="menu-item"><a href="/" class="site-title" style="font-weight: bold;">{{ .Site.Title }}</a></li>
+        <li class="menu-item"><a class="menu-item-link link" href="/about/"> About</a></li>
+        <li class="menu-item"><a class="menu-item-link link" href="/publications/"> Publications</a></li>
+        <li class="menu-item"><a class="menu-item-link link" href="/research/"> Work</a></li>
+        <li class="menu-item"><a class="menu-item-link link" href="/courses/"> Teaching</a></li>
+        <li class="menu-item"><a class="menu-item-link link" href="/blog/"> Blog</a></li>
+          <li class="menu-item"><a class="menu-item-link link" href="/newsletter/"> Newsletter</a></li>
+          <li class="menu-item"><a class="menu-item-link link" href="https://social.jasonheppler.org"> micro.blog</a></li>
+    </ul>
+  </div>
 </nav>

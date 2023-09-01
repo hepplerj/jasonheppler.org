@@ -1,14 +1,12 @@
-<!-- Enabling later! -->
-<!-- <aside id="webmentions-container">
-    <h3>Mentions around the web</h3>
-    <div id="webmentions"></div>
-</aside> -->
-
 <aside class="blog-nav">
-<p class="reading-time">{{ .ReadingTime }} min read &middot; {{ .WordCount }} words &middot; Published <a href='{{ .Permalink }}' class='u-url u-uid permalink'><time datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "January 2, 2006" }}</time></a> &middot; <a href="/feed.xml">Subscribe</a> &middot; <a href="https://github.com/hepplerj/jasonheppler.org/commits/main/content/blog/{{ .File.LogicalName }}">This post's version history</a>.</p>
+<p class="reading-time">{{ .ReadingTime }} min read &middot; {{ .WordCount }} words &middot; Published <a href='{{ .Permalink }}' class='u-url u-uid permalink'><time datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "January 2, 2006" }}</time></a> &middot; <a href="/feed.xml">Subscribe</a></p>
 <p class="impact">This page loaded in <strong><span id="page_load"></span></strong> seconds and used ~<strong><span id="carbon"></span>kb</strong> of data. You've generated around <strong><span id="page_carbon"></span>g</strong> of CO2 by visiting. <a href="https://jasonheppler.org/low-impact/">Curious</a>?</p>
 </aside>
 
+<aside id="webmentions-container">
+    <h4>Mentions around the web</h4>
+    <div id="webmentions"></div>
+</aside>
 
 <script>
 page_data = (document.documentElement.outerHTML.length/1024).toFixed(2);

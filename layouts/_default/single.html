@@ -5,7 +5,7 @@
     <header>
     {{ if .Params.page_type }}
     {{ else }}
-    <h1 class="title"><strong>{{ .Title }}</strong></h1>
+    <h1 class="title">{{ .Title }}</h1>
     {{ end }}
     {{ partial "article-meta.html" . }}
   </header>

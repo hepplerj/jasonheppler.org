@@ -40,13 +40,9 @@ slug: '/about/'
 
 <p class="noted">If you email me something I keep that anonymous, especially when sent encrypted. If I decide I would like to quote something from your email, I will ask you first. If you've emailed me about something I got wrong, I may use your name to credit the correction but I won't if it's not public information. <a href="https://jasonheppler.org/jasonheppler.asc">Here's my public key</a>.</p>
 
-<h2>Sustainability</h2>
-
-<p class="noted">This is a <a href="/low-impact/">low impact website</a>.</p>
-
 <h2>Colophon</h2>
 
-<p class="noted">This website is built with the static site generator <a href="https://gohugo.io">Hugo</a> and typeset with the lovely <a href="https://lineto.com/typefaces/circular/">Circular</a>.</p>
+<p class="noted">This website is built with the static site generator <a href="https://gohugo.io">Hugo</a>. This is a <a href="/low-impact/">low impact website</a>.</p>
 
 <h2>Support</h2>
 
