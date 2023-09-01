@@ -16,7 +16,7 @@ const addTitle = (footnotes, title, id) => {
   const text = document.createTextNode(title);
 
   element.appendChild(text);
-  element.classList.add('u-hidden-visually');
+  element.classList.add('sr');
   element.setAttribute('id', id);
 
   footnotes.insertBefore(element, footnotes.firstChild);
