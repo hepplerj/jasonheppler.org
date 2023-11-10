@@ -1,0 +1,161 @@
+{{ partial "head.html" . }}
+
+<div class='pad2y limiter content'>
+  <div class="body">  
+    <header>
+    <h1 class="title">{{ .Title | markdownify }}</h1>
+    </header>
+
+<main class="container">
+  <article class="row justify-content-center">
+    <div class="col-md-8">
+      <p class="fs-2 lead text-muted">Some stats about my site.</p>
+    </div>
+    {{ if .Params.Cover }}
+    <figure class="">
+      <img src="{{ .Params.Cover | absURL }}" alt="{{ .Title }}" />
+      {{ if .Params.CoverCaption }}
+      <figcaption class="">{{ .Params.CoverCaption | markdownify }}</figcaption>
+      {{ end }}
+    </figure>
+    {{ end }}
+    {{ if .Params.toc }}
+    <hr />
+    <aside id="toc">
+      <div class="toc-title">{{ "tableOfContents" }}</div>
+      {{ .TableOfContents }}
+    </aside>
+    <hr />
+    {{ end }}
+    <div class="col-md-8">
+      {{ .Content }}
+      {{ $posts := where site.RegularPages "Type" "blog" }}
+
+      {{ $titlePostsCount := len ( where $posts ".Params.title"  "!=" nil ) }}
+      {{ $microPostsCount := len ( where $posts ".Params.title"  "=" nil ) }}
+
+      {{ $scratch := newScratch }}
+      {{ $scratch.Set "longCount" 0 }}
+      {{ range $posts }}
+      {{ $scratch.Add "wordcount" .WordCount }}
+      {{ if ge .WordCount ($scratch.Get "longCount") }}
+      {{ $scratch.Set "longestPost" . }}
+      {{ $scratch.Set "longCount" .WordCount }}
+      {{ end }}
+      {{ end }}
+
+      {{ $postCount :=  len ($posts) }}
+      {{ $wordCount := $scratch.Get "wordcount" }}
+      {{ $avgPostLength := div $wordCount $postCount }}
+      <table class="table">
+        <tr>
+          <td width="40%">Total Posts Published</td>
+          <td width="60%">{{ $postCount | lang.NumFmt 0 }}</td>
+        </tr>
+        <tr>
+          <td>Total Words Written</td>
+          <td>{{ $wordCount | lang.NumFmt 0 }}{{ if gt $wordCount 40000 }} (that's almost
+            {{ (div $wordCount 40000) | lang.NumFmt 0 }} novellas){{ end }}</td>
+        </tr>
+        <tr>
+          <td>Average Words per Post</td>
+          <td>{{ $avgPostLength | lang.NumFmt 0 }}</td>
+        </tr>
+        <tr>
+          <td>First Post Published</td>
+          <td>
+            {{ range last 1 $posts }}
+            {{ if .Title }}<a href="{{ .Permalink }}">{{ .Title }}</a> published on {{ .Date.Format "2006-01-02" }}
+            {{ else }}<a href="{{ .Permalink }}">Micro Post</a> published on {{ .Date.Format "2006-01-02" }} 
+            {{ end }}
+            {{ end }}
+          </td>
+        </tr>
+        <tr>
+          <td>Longest Post Published</td>
+          <td>
+            {{ with $scratch.Get "longestPost" }}
+            {{ if .Title }}<a href="{{ .Permalink }}">{{ .Title }}</a> with {{ .WordCount }} words
+            {{ else }}<a href="{{ .Permalink }}">Micro Post</a> with {{ .WordCount }} words
+            {{ end }}
+            {{ end }}
+          </td>
+        </tr>
+      </table>
+
+      {{ $grouped := $posts.GroupByDate "2006" }}
+
+      <h2 class="post-stats-hd">Posts Per Year</h2>
+
+      <div style="width: 100%;height: 300px;margin: 30px auto">
+        <canvas id="yearchart"></canvas>
+        <noscript>Sorry, viewing this chart requires JavaScript to be enabled.</noscript>
+      </div>
+
+      <table class="table" style="display: none;">
+        <tr>
+          <th width="30%">Year</td>
+          <th width="70%">Number of Posts</td>
+        </tr>
+        {{ range $grouped.Reverse }}
+        {{ $yearPostCount := len (where .Pages "Type" "blog") }}
+        <tr>
+          <td>{{ .Key }}</td>
+          <td>{{ $yearPostCount | lang.NumFmt 0 }}</td>
+        </tr>
+        {{ $scratch.Add "yearKeys" "'"  }}
+        {{ $scratch.Add "yearKeys" .Key  }}
+        {{ $scratch.Add "yearKeys" "',"  }}
+        {{ $scratch.Add "yearCount" (string $yearPostCount) }}
+        {{ $scratch.Add "yearCount" ","  }}
+        {{ end }}
+      </table>
+
+      {{ $chartPre := "{type: 'bar',data: {labels: [" }}
+      {{ $chartYearKeys := trim ($scratch.Get "yearKeys") ","}}
+      {{ $chartYearCount := trim ($scratch.Get "yearCount") ","}}
+      {{ $chartMid := "],datasets: [{label: 'Posts Published',data: [" }}
+      {{ $chartPost := "],backgroundColor: '#f5d652',borderColor: '#ffc700',borderWidth: 3}]},options: {maintainAspectRatio: false, animation: false, scales: {y: {ticks: {beginAtZero: true}}}}}"
+      }}
+
+
+      {{ $chartData := printf "%s" $chartPost | printf "%s%s" $chartYearCount | printf "%s%s" $chartMid | printf "%s%s" $chartYearKeys | printf "%s%s" $chartPre | printf "%s" }}
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/Chart.min.js" type="text/javascript"></script>
+      <script type="text/javascript">
+
+        const ctx = document.getElementById('yearchart').getContext('2d');
+        const data = {{ $chartData | safeJS }};
+        
+        new Chart(ctx, data);
+      </script>
+
+      <h2>Tags by post count</h2>
+      <div class="categorycloud">
+        {{ if ne (len $.Site.Taxonomies.tags) 0 }}
+        {{ $largestFontSize := 2 }}
+        {{ $smallestFontSize := 1 }}
+        {{ $fontSpread := sub $largestFontSize $smallestFontSize }}
+        {{ $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
+        {{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
+        {{ $spread := sub $max $min }}
+        {{ $fontStep := div $fontSpread $spread }}
+        {{ range $name, $taxonomy := $.Site.Taxonomies.tags.ByCount }}
+        {{ $categoryCount := len $taxonomy.Pages }}
+        {{ $currentFontSize := (add $smallestFontSize (mul (sub $categoryCount $min) $fontStep) ) }}
+        {{ $weight := div (sub (math.Log $categoryCount) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
+        {{ $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weight)) }}
+        <a href="{{ "/tags/" | relURL }}{{ .Page.Title | urlize }}" class="categorycloud-item p-2 text-decoration-none">
+          {{ .Page.Title }}<span class="mono">({{ $categoryCount }})</span>
+        </a>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </article>
+</main>
+</div>
+
+
+{{ partial "foot.html" . }}
+</div>
