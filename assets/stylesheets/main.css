@@ -35,6 +35,7 @@
   --theme-links-hover: var(--color-text);
   --theme-dark-tint: var(--color-grey);
   --theme-light-tint: var(--color-salt);
+  --theme-mark: rgba(235, 94, 40, 0.25);
   --space-base: 1em;
   --space-x-small: calc(var(--space-base) / 4);
   --space-small: calc(var(--space-base) / 2);
@@ -87,6 +88,11 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Dirk";
+  src: url(/assets/fonts/Dirk-Black.woff2) format("woff");
+}
+
 body {
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
@@ -96,10 +102,6 @@ body {
   font-family: var(--font-sans);
   background: var(--theme-background);
   color: var(--theme-text);
-}
-
-body.stand-with-ukraine {
-  box-shadow: inset 0 0.5em #0059b8, inset 0 1em #ffd900;
 }
 
 .caps {
@@ -115,6 +117,10 @@ body.stand-with-ukraine {
   margin: -19px 6px -20px 3px;
   line-height: 1;
   font-weight: normal;
+}
+
+.mono {
+  font-family: var(--font-mono);
 }
 
 .smallish {
@@ -142,6 +148,10 @@ body.stand-with-ukraine {
   max-width: 640px;
 }
 
+.site-title {
+  font-weight: 700;
+}
+
 a {
   transition: color 200ms;
   color: var(--theme-links);
@@ -158,7 +168,7 @@ mark {
 }
 
 mark {
-  background: rgba(235, 94, 40, 0.25);
+  background: var(--theme-mark); 
   font-weight: 330;
   font-style: italic;
 }
@@ -1064,6 +1074,7 @@ table td {
     --theme-links-hover: var(--color-orange);
     --theme-dark-tint: var(--color-yellow-darker);
     --theme-light-tint: var(--color-orange);
+    --theme-mark: var(--theme-links);
   }
 }
 
@@ -1075,4 +1086,5 @@ table td {
   --theme-links-hover: var(--color-orange);
   --theme-dark-tint: var(--color-yellow-darker);
   --theme-light-tint: var(--color-orange);
+  --theme-mark: var(--theme-links);
 }
