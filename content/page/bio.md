@@ -3,7 +3,7 @@ title: "Brief biography"
 url: /bio/
 ---
 
-{{< figure src="/assets/images/head.jpeg" alt="Jason A. Heppler" >}}
+{{< figure src="/assets/images/0C7A1453.jpg" alt="Jason A. Heppler" >}}
 
 Jason Heppler is a fourth-generation settler on the Plains, born and raised in eastern South Dakota on the lands of the Yankton and Očeti Šakówiŋ Peoples and now makes his home in Omaha. He believes the way we make sense of who we are and how we got here helps shape the societies we are striving to build. Heppler is committed to the role that universities and other cultural institutions play as homes of this meaning-making, a commitment forged by experiences and relationships made in academic and civic institutions in Mitchell, Brookings, Lincoln, Palo Alto, San Jose, Omaha, and Fairfax. It is a commitment that underpins Heppler's work as an environmental and urban historian, digital history software developer, and activist.
 
