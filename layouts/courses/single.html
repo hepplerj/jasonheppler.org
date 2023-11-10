@@ -4,7 +4,7 @@
   <div class="body"> 
 <article class="syllabus" id="{{ urlize .Title }}">
   <h1 class="syllabus-title">{{ .Title }} ({{ .Params.semester }} {{ .Params.year }})</h1>
-  <hr>
+    <aside>
     <p>
       <strong>Course:</strong> <em>{{ .Title }}</em>. {{ .Params.semester}} {{ .Params.year }}. {{ .Params.department}}, {{ .Params.university }}. 
       <!--{{ .Params.credits }} credits. Meets {{ .Params.meets }} in {{ .Params.room }}.-->
@@ -12,8 +12,12 @@
     <p>
       <strong>Instructor:</strong> <a href=" {{ .Params.instructorurl }}">{{ .Params.instructor }}</a> &lt;<a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>&gt;. Office: {{ .Params.office }}. Office hours: {{ .Params.officehours }}. <span>How to <a href="/office-hours/">book an appointment</a>.</span>
     </p>
-  <hr>
-  {{ if .Params.toc }}<div class="no-print">{{ .TableOfContents }}</div>{{ end }}
+  </aside>
+
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
+  
   {{ .Content }}
 </article>
 </div>
