@@ -3,7 +3,7 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
 ---
 
 <div class="lede">
-<p>I am a historian of the environment and capitalism in the twentieth century North American West and Great Plains. I am the senior developer-scholar at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> and a member of the <a href="https://historyarthistory.gmu.edu">Department of History and Art History</a> at George Mason University and a member of the <a href="http://envirohistact.org">Environmental History Action Collaborative</a>.</p>
+<p>I am a historian of the environment and capitalism in the twentieth century North American West and Great Plains. I am the senior developer-scholar at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> and a member of the <a href="https://historyarthistory.gmu.edu">Department of History and Art History</a> at George Mason University and Affiliate Fellow at the <a href="https://www.unl.edu/plains/">Center for Great Plains Studies</a> at the <a href="https://www.unl.edu">University of Nebraska-Lincoln</a>.
 </div>
 
 <aside class="newsletter">
@@ -27,15 +27,16 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
 Find more of my work on my [scholarship](/publications/) page or my <a href="https://jasonheppler.org/files/jah-cv.pdf">CV</a>.
 
 <section class="latest-books">
-{{% book title="Digital Community Engagement: Partnering Communities with the Academy" image="dice.jpeg" year="2020" publisher="University of Cincinnati Press" url="https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement" %}}
+{{% book title="Silicon Valley and the Environmental Inequalities of High-Tech Urbanism" image="book_sv.jpg" year="2024" publisher="University of Oklahoma Press" %}}
 
-Edited with Rebecca Wingo and Paul Schadewald, our volume brings together cutting-edge campus-community partnerships with a focus on digital projects. Through a series of case studies authored by academics and their community partners, we explore models for digital community engagement that leverages new media through reciprocal partnerships. The contributions to the volume stand at the crossroads of digital humanities, public history, and community engagement, drawing ideas, methods, and practices from various disciplines to inform our public partnerships. By highlighting these projects we hope to provide other institutions, cultural heritage organizations, universities, and communities models for successful engagement.
+Few places symbolize the twentieth century American West like Silicon Valley. Stretching between the communities of Palo Alto to San Jose, this dense California region is home to the nation's most consequential high-tech industrial corridor. In the four decades following World War II, the region rapidly transformed from an agricultural economy to an industrial one fueled by government funding into defense-related research and development. Boosters of the new industrialization promised a modern, clean, and future-facing economy in the wake of declining steel-age industries and an emerging space-age arms race. New industries drove new populations who flocked to the valley as much for work as they did for its pleasant environment.
 
-**Winner of the [2021 National Council on Public History (NCPH) Book Award](https://ncph.org/about/awards/book-award/)**.
+Between 1950 and 1990, boosters, city councils, and business leaders outlined a vision that melded a bucolic naturalism of fruit orchards, pleasant weather, and green spaces, with metropolitan capitalism--modern industry, defense-related research, and technocratic jobs, that aspired to form an idyllic city. However, competing ideas about forming these idyllic communities led to widespread environmental degradation and social stratification. The pursuit of cities organized around high-tech industries, suburban growth, and urban expansion prompted intensified race and class stratification, strengthened the political power of elites, worsened human health, and introduced widespread pollution. Environmental advocacy attempted to resolve these challenges, but often merely shifted the problems to new places. Suburban capitalism and federal funding deeply transformed this place as new housing, the recruitment or founding of new companies, and urban infrastructure deeply reshaped the landscape.
 
-[University of Cincinnati Press](https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement) (open access) | [Bookshop](https://bookshop.org/p/books/digital-community-engagement-partnering-communities-with-the-academy-rebecca-wingo/13200548?ean=9781947602519) | [Amazon](https://www.amazon.com/Digital-Community-Engagement-Partnering-Communities/dp/1947602519/ref=sr_1_1?dchild=1&keywords=digital+community+engagement&qid=1607369554&sr=8-1)
+[Bookshop](https://bookshop.org/p/books/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism-volume-9-jason-a-heppler/20881494) | [Amazon](https://www.amazon.com/Environmental-Inequalities-High-Tech-Urbanism-Environment/dp/0806193743/)
 
 {{% /book %}}
+
 </section>
 
 <hr/>
@@ -60,7 +61,6 @@ Find more of my work on my [digital and public history](/research/) page.
     <p class="small"><span class="project-title">Wars of the United States</span> Visualizing the wars of the United States.</p>
   </a>
 </section>
-
 
 <hr/>
 
