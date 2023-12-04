@@ -46,7 +46,7 @@
 
 </footer>
 
-<!-- JavaScripts -->
+{{/* minimize js if production; adapted from https://github.com/gohugoio/hugo/issues/9132 */}}
 {{ if eq hugo.Environment "development" }}
 {{ $devJS := resources.Get "javascripts/hepp.js" | js.Build }}
 <script type="module" src="{{ $devJS.Permalink }}" async></script>
@@ -55,6 +55,7 @@
 {{ $secureJS := $js | resources.Fingerprint "sha512" }}
 <script type="module" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}" async></script>
 {{ end }}
+
 </body>
 
 </html>
