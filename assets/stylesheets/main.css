@@ -1166,19 +1166,19 @@ table td {
 
 /* Makes a snowflake fall from -50px to 650px pixels in the y-axis */
 @-webkit-keyframes drop {
-  0%   { -webkit-transform: translate(0px, -50px); }
-  100% { -webkit-transform: translate(0px, 650px); }
+  0%   { -webkit-transform: translate(0px, -50px); transform: translate(0, -50px); }
+  100% { -webkit-transform: translate(0px, 650px); transform: translate(0, 650px); }
 }
 
 /* Rotates a snowflake from -50 to 50 degrees in 2D space */
 @-webkit-keyframes clockwiseSpin {
-  0%   { -webkit-transform: rotate(-50deg); }
-  100% { -webkit-transform: rotate(50deg); }
+  0%   { -webkit-transform: rotate(-50deg); transform: rotate(-50deg); }
+  100% { -webkit-transform: rotate(50deg); transform: rotate(50deg); }
 }
 
 
 /* Rotates it from 50 to -50 degrees in 2D space */
 @-webkit-keyframes counterclockwiseSpin  {
-  0%   { -webkit-transform: rotate(50deg); }
-  100% { -webkit-transform: rotate(-50deg); }
+  0%   { -webkit-transform: rotate(50deg); transform: rotate(50deg); }
+  100% { -webkit-transform: rotate(-50deg); transform: rotate(-50deg); }
 }
