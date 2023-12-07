@@ -9,7 +9,11 @@ Studying history gives you [a lifetime of critical skills](http://www.nytimes.co
 ---
 
 <div class="teaching">
-<div>
+  <div>
+    <div>Web Programming for Historians</div>
+    <div>Spring 2025</div>
+  </div>
+  <div>
     <div><a href="/courses/dph.2024/">Digital Public History</a></div>
     <div>Spring 2024</div>
   </div>
@@ -82,7 +86,7 @@ Studying history gives you [a lifetime of critical skills](http://www.nytimes.co
     <div>Summer 2016</div>
   </div>
   <div>
-    <div><a href="https://jasonheppler.org/files/Heppler_Mullen-DHSI.pdf">R, Interactive Graphics, and Data Visualization</a> (with Lincoln Mullen)</div>
+    <div><a href="https://jasonheppler.org/files/Heppler_Mullen-DHSI.pdf">R, Interactive Graphics, and Data Visualization</a> (with Lincoln Mullen) </div>
     <div>Summer 2016</div>
   </div>
   <div>
