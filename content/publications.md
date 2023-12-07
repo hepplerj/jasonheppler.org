@@ -19,7 +19,7 @@ Between 1950 and 1990, boosters, city councils, and business leaders outlined a 
 
 A core argument throughout this book is the role of place: how they are defined, who defines them, and what happens in them. Just as important, the role of "nature" and who defines this illustrates who and what is included while also revealing who gets excluded in the conversation about the environment. Silicon Valley helps unravel this tension within land use regimes, social consequences, and environmental degradation, and American's growing environmental awareness following World War II.
 
-[Bookshop](https://bookshop.org/p/books/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism-volume-9-jason-a-heppler/20881494) | [Amazon](https://www.amazon.com/Environmental-Inequalities-High-Tech-Urbanism-Environment/dp/0806193743/)
+[University of Oklahoma Press](https://www.oupress.com/9780806193748/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism/) | [Bookshop](https://bookshop.org/p/books/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism-volume-9-jason-a-heppler/20881494) | [Amazon](https://www.amazon.com/Environmental-Inequalities-High-Tech-Urbanism-Environment/dp/0806193743/)
 
 {{% /book %}}
 
@@ -37,7 +37,7 @@ Reviews:
 - Megan Smeznik, _[Reviews in Digital Humanities](https://reviewsindh.pubpub.org/pub/digital-community-engagement/release/2)_
 - Christopher D. Cantwell, _[The Public Historian](https://online.ucpress.edu/tph/article-abstract/43/3/125/118047/Review-Digital-Community-Engagement-Partnering?redirectedFrom=fulltext)_
 
-[University of Cincinnati Press](https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement) (open access) | [Amazon.com](https://www.amazon.com/Digital-Community-Engagement-Partnering-Communities/dp/1947602519/ref=sr_1_1?dchild=1&keywords=digital+community+engagement&qid=1607369554&sr=8-1)
+[University of Cincinnati Press](https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement) (open access) | [Bookshop](https://bookshop.org/p/books/digital-community-engagement-partnering-communities-with-the-academy-rebecca-wingo/13200548?ean=9781947602519) | [Amazon](https://www.amazon.com/Digital-Community-Engagement-Partnering-Communities/dp/1947602519/ref=sr_1_1?dchild=1&keywords=digital+community+engagement&qid=1607369554&sr=8-1)
 
 {{% /book %}}
 
@@ -46,6 +46,8 @@ Reviews:
 {{% book title="A Companion to Custer and the Little Bighorn Campaign" image="companion_custer.jpg" year="2015" publisher="Wiley" url="https://www.wiley.com/en-us/A+Companion+to+Custer+and+the+Little+Bighorn+Campaign-p-9781444351095" %}}
 
 Chapter, "The National Monument." This volume provides an accessible and authoritative overview of the scholarship that has shaped our understanding of one of the most iconic battles in the history of the American West. A chapter I contributed, co-authored with [Douglas Seefeldt](https://dougseefeldt.net/about-2/), examines the history of the National Monument. We examine the competing interpretations of Custer and the Battle of Little Bighorn among Native peoples, Custer enthusiasts, and the National Park Service. Over time, individuals and groups remember the past in different ways and compete with one another to shape the dominant public memory of an event or a place. Often these disparate interpretations become entangled with conversations about identity and society. The Little Bighorn Battlefield National Monument has long been the focus of passionate debates and roundly criticized for its one‐sided storytelling, encapsulated in its former name the _Custer Battlefield National Monument_. The constructed past at Little Bighorn has changed frequently since Little Bighorn. This essay examines the tangled process of making memory, landscape, and identity at the site of the Little Bighorn battlefield.
+
+[Wiley](https://www.wiley.com/en-it/A+Companion+to+Custer+and+the+Little+Bighorn+Campaign-p-9781444351095) | [Bookshop](https://bookshop.org/p/books/a-companion-to-custer-and-the-little-bighorn-campaign-brad-d-lookingbill/11738114?ean=9781119129738) | [Amazon](https://www.amazon.com/Companion-Campaign-Blackwell-Companions-American-ebook/dp/B015R9SYHE)
 
 {{% /book %}}
 
@@ -73,7 +75,7 @@ Chapter, "The National Monument." This volume provides an accessible and authori
 
 9. Heppler, Jason A., Alex Galarza, and Douglas Seefeldt, "A Call to Redefine Historical Scholarship in the Digital Turn," _The Journal of Digital Humanities_ vol. 1, no. 4 (2012). [published version](http://journalofdigitalhumanities.org/1-4/a-call-to-redefine-historical-scholarship-in-the-digital-turn/)
 
-10. "The American Indian Movement and South Dakota Politics," in _The Plains Political Tradition_, edited by Jon Lauck, John E. Miller, and Donald Simmons (Pierre: South Dakota State Historical Society Press, 2011).
+10. "The American Indian Movement and South Dakota Politics," in _[The Plains Political Tradition](https://www.amazon.com/Plains-Political-Tradition-Essays-Dakota/dp/0982274920/ref=sr_1_1?crid=12LQPREMVQERE&keywords=plains+political+tradition&qid=1701691183&s=books&sprefix=plains+political+tradition%2Cstripbooks%2C58&sr=1-1)_, edited by Jon Lauck, John E. Miller, and Donald Simmons (Pierre: South Dakota State Historical Society Press, 2011).
 
 11. _The Rubyist Historian: Ruby Fundamentals for Humanities Scholars_ (2010), <https://doi.org/10.5281/zendo.9987>.
 

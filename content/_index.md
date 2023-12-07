@@ -22,20 +22,18 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
 
 <hr/>
 
-<h2>Latest Book</h2>
-
-Find more of my work on my [scholarship](/publications/) page or my <a href="https://jasonheppler.org/files/jah-cv.pdf">CV</a>.
-
 <section class="latest-books">
 {{% book title="Silicon Valley and the Environmental Inequalities of High-Tech Urbanism" image="book_sv.jpg" year="2024" publisher="University of Oklahoma Press" %}}
 
-Few places symbolize the twentieth century American West like Silicon Valley. Stretching between the communities of Palo Alto to San Jose, this dense California region is home to the nation's most consequential high-tech industrial corridor. In the four decades following World War II, the region rapidly transformed from an agricultural economy to an industrial one fueled by government funding into defense-related research and development. Boosters of the new industrialization promised a modern, clean, and future-facing economy in the wake of declining steel-age industries and an emerging space-age arms race. New industries drove new populations who flocked to the valley as much for work as they did for its pleasant environment.
+**Coming in April 2024**: Few places symbolize the twentieth century American West like Silicon Valley. Stretching between the communities of Palo Alto to San Jose, this dense California region is home to the nation's most consequential high-tech industrial corridor. In the four decades following World War II, the region rapidly transformed from an agricultural economy to an industrial one fueled by government funding into defense-related research and development. Boosters of the new industrialization promised a modern, clean, and future-facing economy in the wake of declining steel-age industries and an emerging space-age arms race. New industries drove new populations who flocked to the valley as much for work as they did for its pleasant environment.
 
 Between 1950 and 1990, boosters, city councils, and business leaders outlined a vision that melded a bucolic naturalism of fruit orchards, pleasant weather, and green spaces, with metropolitan capitalism--modern industry, defense-related research, and technocratic jobs, that aspired to form an idyllic city. However, competing ideas about forming these idyllic communities led to widespread environmental degradation and social stratification. The pursuit of cities organized around high-tech industries, suburban growth, and urban expansion prompted intensified race and class stratification, strengthened the political power of elites, worsened human health, and introduced widespread pollution. Environmental advocacy attempted to resolve these challenges, but often merely shifted the problems to new places. Suburban capitalism and federal funding deeply transformed this place as new housing, the recruitment or founding of new companies, and urban infrastructure deeply reshaped the landscape.
 
-[Bookshop](https://bookshop.org/p/books/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism-volume-9-jason-a-heppler/20881494) | [Amazon](https://www.amazon.com/Environmental-Inequalities-High-Tech-Urbanism-Environment/dp/0806193743/)
+[University of Oklahoma Press](https://www.oupress.com/9780806193748/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism/) | [Bookshop](https://bookshop.org/p/books/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism-volume-9-jason-a-heppler/20881494) | [Amazon](https://www.amazon.com/Environmental-Inequalities-High-Tech-Urbanism-Environment/dp/0806193743/)
 
 {{% /book %}}
+
+Find more of my work on my [scholarship](/publications/) page or my <a href="https://jasonheppler.org/files/jah-cv.pdf">CV</a>.
 
 </section>
 

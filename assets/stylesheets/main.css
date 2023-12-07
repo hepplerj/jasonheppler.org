@@ -6,6 +6,7 @@
   --color-yellow-darker: #ffc700;
   --color-blue: #5522fa;
   --color-purple: #7700a2;
+  --color-deep-purple: #673AB7;
   --color-light-purple: #7375a4;
   --color-grey: #263340;
   --color-light-grey: #96a1ad;
@@ -26,12 +27,12 @@
   --color-background: var(--color-sheet);
   --color-sheet: #fffcf2;
   --color-neutral: var(--color-grey);
-  --color-link: var(--color-orange);
+  --color-link: var(--color-deep-purple);
   --color-aside: #fffefa;
   --color--aside-faded: #eeeade;
   --theme-background: var(--color-background);
   --theme-text: var(--color-text);
-  --theme-links: var(--color-orange);
+  --theme-links: var(--color-deep-purple);
   --theme-links-hover: var(--color-text);
   --theme-dark-tint: var(--color-grey);
   --theme-light-tint: var(--color-salt);
@@ -1109,6 +1110,9 @@ table td {
   -webkit-animation-iteration-count: infinite, 20;
   -webkit-animation-direction: normal, normal;
   -webkit-animation-timing-function: linear, ease-in;
+  animation-iteration-count: infinite, 20;
+  animation-direction: normal, normal;
+  animation-timing-function: linear, ease-in;
 }
 
 .snowflake span {
@@ -1125,6 +1129,10 @@ table td {
   -webkit-animation-direction: alternate;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-transform-origin: 50% -100%;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  transform-origin: 50% -100%;
 
 }
 
