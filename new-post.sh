@@ -12,12 +12,11 @@ then
   exit 1
 fi
 
-# Title will be provided by VS Code as an argument
 title=$1
 # The slug will be generated from the title
 slug=`echo "$title" | sed -e 's/://g' -e 's/@//g' -e 's/[[:blank:]]/-/g' | tr '[:upper:]' '[:lower:]'`
 date=`date "+%Y-%m-%d"`
 # Use Hugo archetypes to do the heavy lifting in creating the new file
 BLOG_TITLE="$title" hugo new --kind blog blog/$date-$slug
-# Open the resulting file in VS Code
-code "content/blog/$date-$slug/index.md"
+# Open the resulting file
+vim "content/blog/$date-$slug/index.md"
