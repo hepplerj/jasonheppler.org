@@ -1,0 +1,24 @@
+{{ partial "head.html" . }}
+
+<div class="pad2y limiter content">
+  <div class="body">
+    <h1>{{ .Title }}</h1>
+
+    {{ .Content }}
+
+    <div class="writing">
+      {{ range (where .Site.RegularPages "Section" "blog").GroupByDate "2006" }}
+      <h2>{{ .Key }}</h2>
+      {{ range .Pages }}
+      <div class="preview-post">
+        <div>
+          <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a> &mdash;
+          <time>{{ .Date.Format "2 January 2006" }}</time>
+        </div>
+      </div>
+      {{ end }} {{ end }}
+    </div>
+  </div>
+
+  {{ partial "foot.html" . }}
+</div>
