@@ -6,7 +6,7 @@
   --color-yellow-darker: #ffc700;
   --color-blue: #5522fa;
   --color-purple: #7700a2;
-  --color-deep-purple: #673AB7;
+  --color-deep-purple: #673ab7;
   --color-light-purple: #7375a4;
   --color-grey: #263340;
   --color-light-grey: #96a1ad;
@@ -136,6 +136,14 @@ body {
   font-size: var(--type-xx-small);
 }
 
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
 .mono {
   font-family: var(--font-mono);
 }
@@ -169,7 +177,7 @@ mark {
 }
 
 mark {
-  background: var(--theme-mark); 
+  background: var(--theme-mark);
   font-weight: 330;
   font-style: italic;
 }
@@ -241,7 +249,7 @@ h3 {
 }
 
 .limiter {
-  max-width: 700px;
+  max-width: 880px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
@@ -266,6 +274,7 @@ hr {
 
 pre {
   padding: 18px;
+  overflow: scroll;
 }
 
 del {
@@ -316,12 +325,30 @@ figcaption {
 }
 
 @media screen and (min-width: 1025px) {
-  .header {
+  /* .header {
     position: absolute;
     top: 42px;
     right: 50%;
     margin-right: 360px !important;
     letter-spacing: -0.009em;
+  } */
+
+  nav {
+    padding-top: 2rem;
+  }
+  /* display nav links inline */
+  .header ul li {
+    display: inline;
+  }
+  .header ul li a {
+    padding: 0 10px;
+    font-family: var(--font-sans);
+    font-size: var(--type-small);
+  }
+  /* in between each link, add a slash, except the last item */
+  .header ul li:not(:last-child):after {
+    content: "/";
+    padding-left: 10px;
   }
 
   .content h1:first-child {
@@ -456,7 +483,7 @@ footer p {
 }
 
 .books > div,
-.writing > div,
+/* .writing > div, */
 .teaching > div {
   display: grid;
   grid-column-gap: 5px;
@@ -469,14 +496,14 @@ footer p {
 }
 
 .books a,
-.writing a,
+/* .writing a, */
 .teaching a {
   font-weight: 500;
   letter-spacing: -0.015em;
 }
 
 .books > div div,
-.writing > div div,
+/* .writing > div div, */
 .teaching > div div {
   white-space: nowrap;
   overflow: hidden;
@@ -484,7 +511,7 @@ footer p {
 }
 
 .books > div div:nth-child(3),
-.writing > div div:last-child,
+/* .writing > div div:last-child, */
 .teaching > div div:last-child {
   padding-right: 0.25em;
   font-variant-numeric: tabular-nums;
@@ -498,10 +525,55 @@ footer p {
   .books > div div:nth-child(3) {
     display: none;
   }
-  .writing {
+  /* .writing {
     grid-template-columns: 1fr;
     grid-row-gap: 0;
-  }
+  } */
+}
+
+.writing h2 {
+  font-size: var(--type-x-large);
+  margin: 0 0 1rem 0;
+}
+
+.writing .archive-title {
+  font-size: var(--type-large);
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.writing time {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  float:right;
+  font-size: var(--type-x-small);
+  font-family: var(--font-mono);
+}
+.writing small {
+  font-size: 0.8rem;
+  float: right;
+}
+
+.writing .teaser {
+  max-width: 40rem;
+  flex: 1 0 100%;
+  margin: .35rem 0 .5rem;
+}
+
+.writing .article-filed {
+  font-size: var(--type-x-small);
+  margin: 0;
+}
+
+.writing .article-tags a {
+  color: var(--theme-dark-tint);
+}
+
+.archive-entry {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 6rem;
+  border-bottom: 1px solid var(--theme-mark);
 }
 
 .toc {
@@ -535,6 +607,25 @@ footer p {
   font-size: var(--type-small);
 }
 
+/* Tags */
+.categorycloud-item {
+  display: inline-block;
+  background-color: #f0f0f0; /* Set the background color of the rectangle */
+  border: 1px solid #ccc; /* Set the border color */
+  padding: 8px; /* Adjust the padding as needed */
+  margin-right: 10px; /* Add some space between tags */
+}
+
+.categorycloud-item span.mono {
+  border-left: 1px solid #ccc; /* Set the border color for the line separator */
+  padding-left: 8px; /* Adjust the padding as needed for the line separator */
+  margin-left: 8px; /* Add some space between the tag and the count */
+}
+
+.text-decoration-none {
+  text-decoration: none; /* Remove the default underline for the link */
+}
+
 .post-body summary {
   font-weight: bold;
   margin: -0.5em -0.5em 0;
@@ -550,10 +641,40 @@ footer p {
   margin-bottom: 0.5em;
 }
 
+.post-body img {
+  display: block;
+  margin: 0 auto;
+}
+
+.post-container {
+  display: flex;
+  align-items: center;
+}
+
+.post-title,
+.post-date {
+  margin: 0;
+}
+
+.post-year {
+  padding-top: 2rem;
+  text-align: right;
+}
+
+.separator {
+  flex-grow: 1;
+  height: 1px;
+  border: 0;
+  border-bottom: 1px dotted var(--theme-text);
+  background: var(--theme-text);
+  opacity: .25;
+  margin: 0 .5rem;
+}
+
 .pagination {
   display: flex;
   list-style: none;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   margin: 20px 0;
   padding: 0;
   justify-content: center;
@@ -562,7 +683,7 @@ footer p {
 .page-link {
   position: relative;
   display: block;
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   margin-left: -1px;
   line-height: 1.25;
   color: var(--color-orange);
@@ -763,7 +884,7 @@ img.metrics__img {
   margin-top: 0;
   position: absolute;
   top: 0;
-  left: 75%;
+  left: 78%;
 }
 
 .floating-footnotes hr {
@@ -772,6 +893,36 @@ img.metrics__img {
 
 .floating-footnotes li[role="doc-endnote"] p:last-child {
   margin-bottom: 0;
+}
+
+.divider {
+  display: flex;
+  padding-top: var(--space-xx-large);
+  padding-bottom: var(--space-xx-large);
+
+  &:before,
+  &:after {
+    content: "";
+    flex: 1;
+  }
+}
+
+.line {
+  align-items: center;
+  margin: 1em -1em;
+
+  &:before,
+  &:after {
+    height: 1px;
+    margin: 0 1em;
+  }
+}
+
+.one-line {
+  &:before,
+  &:after {
+    background: var(--theme-text);
+  }
 }
 
 /* Syllabus specific */
@@ -1090,8 +1241,6 @@ table td {
   --theme-mark: var(--theme-links);
 }
 
-
-
 /* Merry Christmas */
 .snowflake {
   position: absolute;
@@ -1133,7 +1282,6 @@ table td {
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
   transform-origin: 50% -100%;
-
 }
 
 .snowflake.tiny {
@@ -1159,26 +1307,49 @@ table td {
 /* Hides a snowflake towards the very end of the animation */
 @-webkit-keyframes fade {
   /* Show a snowflake while into or below 85 percent of the animation and hide it, otherwise */
-  0%   { opacity: 1; }
-  85%  { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* Makes a snowflake fall from -50px to 650px pixels in the y-axis */
 @-webkit-keyframes drop {
-  0%   { -webkit-transform: translate(0px, -50px); transform: translate(0, -50px); }
-  100% { -webkit-transform: translate(0px, 650px); transform: translate(0, 650px); }
+  0% {
+    -webkit-transform: translate(0px, -50px);
+    transform: translate(0, -50px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 650px);
+    transform: translate(0, 650px);
+  }
 }
 
 /* Rotates a snowflake from -50 to 50 degrees in 2D space */
 @-webkit-keyframes clockwiseSpin {
-  0%   { -webkit-transform: rotate(-50deg); transform: rotate(-50deg); }
-  100% { -webkit-transform: rotate(50deg); transform: rotate(50deg); }
+  0% {
+    -webkit-transform: rotate(-50deg);
+    transform: rotate(-50deg);
+  }
+  100% {
+    -webkit-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
 }
 
-
 /* Rotates it from 50 to -50 degrees in 2D space */
-@-webkit-keyframes counterclockwiseSpin  {
-  0%   { -webkit-transform: rotate(50deg); transform: rotate(50deg); }
-  100% { -webkit-transform: rotate(-50deg); transform: rotate(-50deg); }
+@-webkit-keyframes counterclockwiseSpin {
+  0% {
+    -webkit-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+  100% {
+    -webkit-transform: rotate(-50deg);
+    transform: rotate(-50deg);
+  }
 }
