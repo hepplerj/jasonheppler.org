@@ -3,7 +3,7 @@ date: 2014-06-04T06:46:47Z
 description: null
 image: dhsi2014_game.jpg
 tags: [conference, dhsi]
-title: What does Missile Command have to do with Digital History?
+title: What Does Missile Command Have to do with Digital History?
 url: /2014/06/04/what-does-missile-command-have-to-do-with-digital-history/
 lede: "What can an old arcade game tell us about history in the digital age?"
 ---
