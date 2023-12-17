@@ -8,6 +8,8 @@ lede: Defining my yearly theme for 2023.
 
 For the last couple years, I've created a [yearly theme](https://www.themesystem.com) instead of New Years resolutions (which [rarely work out](https://www.youtube.com/watch?v=NVGuFdX5guE&embeds_euri=https%3A%2F%2Fwww.themesystem.com%2F&embeds_origin=https%3A%2F%2Fwww.themesystem.com&feature=emb_imp_woyt)). Last year I declared it my Year of Lagom -- a Swedish word meaning "just enough." This year I've declared this the Year of Work.
 
+<!--more-->
+
 The French poet Nicolas Boileau in his _[L'Art poétique](https://www.google.com/books/edition/L_art_poétique_de_Boileau/WoY-AAAAcAAJ?hl=en&gbpv=1&printsec=frontcover)_ (1674) put it this way in his advice to writers: 
 
 > Hâtez-vous lentement, et sans perdre courage,  

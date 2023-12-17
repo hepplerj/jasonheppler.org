@@ -8,6 +8,8 @@ tags: [design, personal]
 
 This afternoon I pushed up a few updates I've been working on for the site. First, the homepage has gotten a slight facelift: more prominent placement of recent written work, recent digital scholarship, and recent collaborations. I should probably just collapse the homepage and the [about page](/about/), but I sort of like the about page's layout and can't bring myself---yet---to let it go.
 
+<!--more-->
+
 I've also added a ⚡️theme switcher⚡️ to the footer of the site. You can now toggle between a light theme, a dark theme, or have your browser automatically toggle between them depending on the time of day (assuming your browser supports this). As part of this process, I took the opportunity to dig through my CSS. I cleaned up a bunch of color codes I was no longer using and implemented some new theme-specific CSS tokens. I've been thinking about breaking the CSS up into more managable components (a file for base settings, another for typography, etc.), but I'll save that for another time. I've also consolidated the site's color palette down to a few shades of greens and off-whites---with a few pops of red---that I'm pretty happy with. This is evident in both the light and dark theme. There's a few things to clean up yet with this shift---my `mark` <mark>highlight</mark> doesn't look great in dark mode---but these small tweaks are always around to fiddle with.
 
 The navigation bar now gets out of the way when you scroll down (and returns when you scroll up), thanks to [headroom.js](https://wicky.nillia.ms/headroom.js/). This lets you focus on text and hides anything you don't need to see all the time. I've also moved footnotes to [littlefoot.js](https://littlefoot.js.org) so they're always just a click-and-popup away.
