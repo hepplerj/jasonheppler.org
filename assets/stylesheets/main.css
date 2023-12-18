@@ -661,6 +661,13 @@ footer p {
   text-align: right;
 }
 
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: var(--theme-background); /* or any color that matches your design */
+  z-index: 1; /* to ensure the sticky element stays on top */
+}
+
 .separator {
   flex-grow: 1;
   height: 1px;

@@ -8,7 +8,7 @@
 
     <div class="writing">  
     {{ range .Data.Pages.GroupByDate "2006" "01" }}
-      <h2 id="section-{{.Key| urlize }}" class="post-year">{{ .Key }}</h2>
+      <h2 id="section-{{.Key| urlize }}" class="post-year sticky">{{ .Key }}</h2>
       <div class="list-archives">
         {{ range .Pages }}
           <div class="item-archive-entry">
@@ -20,7 +20,7 @@
               <p class="teaser">{{ .Params.lede | markdownify }}</p>
               {{ end }}
               {{ if .Params.tags }}
-              <p class="article-filed">Filed under: <span class="article-tags">{{ partial "tags.html" .}}</span></p>
+              <p class="article-filed">Filed: <span class="article-tags">{{ partial "tags.html" .}}</span></p>
               {{ end }}
             </article>
           </div>
