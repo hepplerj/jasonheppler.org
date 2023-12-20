@@ -18,6 +18,8 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
     <input name="email" type="email" placeholder="your@email.me" aria-label="Email address input" />
     <input type="submit" value="Subscribe" />
   </form>
+
+  You may also enjoy [subscribing to my weekly digest](https://social.jasonheppler.org/subscribe/) on micro.blog, which contains pretty much anything I post online.
 </aside>
 
 <hr/>
@@ -34,7 +36,6 @@ Between 1950 and 1990, boosters, city councils, and business leaders outlined a 
 {{% /book %}}
 
 Find more of my work on my [scholarship](/publications/) page or my <a href="https://jasonheppler.org/files/jah-cv.pdf">CV</a>.
-
 </section>
 
 <hr/>
@@ -82,6 +83,20 @@ Find more of my work on my [digital and public history](/research/) page.
     <img src="/assets/images/portfolio_ecologies.png" alt="Religious Ecologies" loading="lazy" />
     <p class="small"><span class="project-title">Religious Ecologies</span> Creating new datasets and visualizations so that we can better understand the history of American religion.</p>
   </a>
+</section>
+
+<hr/>
+
+<h2>Essays</h2>
+
+<section class="essays">
+
+Here are some things I've published in the last few years. More can be found on my [publications](/publications/) page.
+
+- "[Spoiled Fruits: Environmental Inequality in Silicon Valley](https://www.historians.org/research-and-publications/perspectives-on-history/november-2023/spoiled-fruits-environmental-inequality-in-silicon-valley)" for AHA's *Perspectives on History*
+- "[How Silicon Valley provides the blueprint for cleaning up our drinking water](https://www.washingtonpost.com/outlook/2019/04/26/how-silicon-valley-provides-blueprint-cleaning-up-our-drinking-water/)," for *The Washington Post*
+- "[How Silicon Valley Industry Polluted the Sylvan California Dream](https://theconversation.com/how-silicon-valley-industry-polluted-the-sylvan-california-dream-85810)," for *The Conversation*
+
 </section>
 
 <hr/>
