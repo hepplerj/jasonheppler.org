@@ -539,7 +539,7 @@ footer p {
 .writing .archive-title {
   font-size: var(--type-large);
   font-weight: 700;
-  margin: 0 0 0.5rem 0;
+  padding-top: 2rem;
 }
 
 .writing time {
@@ -567,6 +567,11 @@ footer p {
 
 .writing .article-tags a {
   color: var(--theme-dark-tint);
+}
+
+.writing img {
+  display: block;
+  margin: 0 auto;
 }
 
 .archive-entry {
@@ -666,6 +671,7 @@ footer p {
   top: 0;
   background-color: var(--theme-background); /* or any color that matches your design */
   z-index: 1; /* to ensure the sticky element stays on top */
+  padding-bottom: 1.2rem;
 }
 
 .separator {
@@ -891,7 +897,7 @@ img.metrics__img {
   margin-top: 0;
   position: absolute;
   top: 0;
-  left: 78%;
+  left: 79%;
 }
 
 .floating-footnotes hr {
