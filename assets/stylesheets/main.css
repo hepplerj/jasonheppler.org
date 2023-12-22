@@ -525,10 +525,6 @@ footer p {
   .books > div div:nth-child(3) {
     display: none;
   }
-  /* .writing {
-    grid-template-columns: 1fr;
-    grid-row-gap: 0;
-  } */
 }
 
 .writing h2 {
@@ -669,9 +665,18 @@ footer p {
 .sticky {
   position: sticky;
   top: 0;
-  background-color: var(--theme-background); /* or any color that matches your design */
-  z-index: 1; /* to ensure the sticky element stays on top */
-  padding-bottom: 1.2rem;
+  background-color: var(--theme-background); 
+  z-index: 1; 
+}
+
+@media screen and (max-width: 640px) {
+  .sticky {
+    position: static;
+    top: auto;
+    background-color: none;
+    z-index: auto;
+    padding-bottom: 0;
+  }
 }
 
 .separator {
@@ -699,28 +704,28 @@ footer p {
   padding: 0.75rem 1rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: var(--color-orange);
-  border: 1px solid var(--color--aside-faded);
+  color: var(--theme-text);
+  border: 1px solid var(--theme-dark-tint);
 }
 
 .homepage .page-link,
 .listing .page-link {
-  background-color: #fff;
+  background-color: var(--theme-background);
 }
 
 .page-item.disabled .page-link {
-  color: #6c757d;
+  color: var(--theme-text);
   pointer-events: none;
   cursor: auto;
-  background-color: #fff;
-  border-color: #dee2e6;
+  background-color: var(--theme-background);
+  border-color: var(--theme-dark-tint);
 }
 
 .page-item.active .page-link {
   z-index: 1;
-  color: var(--theme-text);
-  background-color: var(--color--aside-faded);
-  border-color: var(--color--aside-faded);
+  color: var(--theme-background);
+  background-color: var(--theme-mark);
+  /* border-color: var(--theme-light-tint); */
 }
 
 .bio-wide {
@@ -820,12 +825,12 @@ code {
   grid-column: 1;
   grid-row: 1;
   background-color: var(--color-green);
-  color: var(--color-aside);
+  color: var(--theme-text);
 }
 
 .metrics-left p {
   text-align: center;
-  color: var(--color-aside);
+  color: var(--color-off-white);
 }
 
 .metrics_container_item {
@@ -867,7 +872,14 @@ img.metrics__img {
 }
 
 .footnotes hr {
-  margin-bottom: 1em;
+  background: var(--theme-text);
+  border: none;
+  clip-path: initial;
+  height: 1px;
+  overflow: visible;
+  position: static;
+  width: 20%;
+  margin: var(--space-x-large) 0;
 }
 
 .footnotes li {
@@ -897,7 +909,7 @@ img.metrics__img {
   margin-top: 0;
   position: absolute;
   top: 0;
-  left: 79%;
+  left: 80%;
 }
 
 .floating-footnotes hr {
