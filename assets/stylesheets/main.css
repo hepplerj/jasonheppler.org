@@ -50,7 +50,7 @@
   --grid--gutter: 1.25rem;
   --font-serif: Sentient, lora, TimesNewRoman, "Times New Roman", Times,
     Baskerville, Georgia, serif;
-  --font-sans: PublicSans, -apple-system, BlinkMacSystemFont, "avenir next",
+  --font-sans: -apple-system, BlinkMacSystemFont, "avenir next",
     avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial,
     sans-serif;
   --font-mono: "iA Writer Duospace", San Francisco Mono, Monaco, "Consolas",
@@ -163,23 +163,27 @@ body {
 
 a {
   transition: color 200ms;
-  color: var(--theme-links);
+  border: 1px solid transparent;
+  color: currentColor;
+  text-decoration-color: var(--theme-links);
+  text-decoration-thickness: 1px;
+  text-underline-offset: .25rem;
 }
 
 a:hover {
-  color: var(--theme-links-hover);
+  color: var(--theme-links);
 }
 
+/*
 a,
 em,
 mark {
   font-family: Sentient;
 }
+*/
 
 mark {
   background: var(--theme-mark);
-  font-weight: 330;
-  font-style: italic;
 }
 
 .menu-item a {
@@ -219,7 +223,7 @@ h2,
 h3 {
   margin-bottom: 0.5rem;
   line-height: 1.25;
-  font-family: var(--font-serif);
+  /*font-family: var(--font-serif);*/
   font-weight: 300;
 }
 
@@ -527,6 +531,11 @@ footer p {
   }
 }
 
+.writing {
+  margin: 0 auto;
+  max-width: 640px;
+}
+
 .writing h2 {
   font-size: var(--type-x-large);
   margin: 0 0 1rem 0;
@@ -538,13 +547,13 @@ footer p {
   padding-top: 2rem;
 }
 
-.writing time {
+/*.writing time {
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
   float:right;
   font-size: var(--type-x-small);
   font-family: var(--font-mono);
-}
+}*/
 .writing small {
   font-size: 0.8rem;
   float: right;
@@ -563,6 +572,11 @@ footer p {
 
 .writing .article-tags a {
   color: var(--theme-dark-tint);
+  text-decoration: none;
+}
+
+.writing .article-tags a:hover {
+  color: var(--theme-links-hover);
 }
 
 .writing img {
@@ -574,7 +588,6 @@ footer p {
   padding-bottom: 2rem;
   margin-bottom: 2rem;
   margin-top: 6rem;
-  border-bottom: 1px solid var(--theme-mark);
 }
 
 .toc {

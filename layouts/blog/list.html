@@ -3,23 +3,25 @@
 <div class="pad2y limiter content">
   <div class="body">
     <h1>{{ .Title }}</h1>
-  
+
     {{ .Content }}
-  
+
     <div class="writing">
       {{ $paginator := .Paginate (.Data.Pages) }}
       {{ range $paginator.Pages.GroupByDate "2006" "01" }}
-      <h2 id="section-{{.Key| urlize }}" class="post-year sticky">{{ .Key }}</h2>
+      <h2 id="section-{{.Key| urlize }}" class="post-year">{{ .Key }}</h2>
       <div class="list-archives">
         {{ range .Pages }}
         <div class="item-archive-entry">
           <article class="archive-entry">
-            <a href="{{ .Permalink }}" class="archive-title sticky">{{ .Title }}</a></li>
             <span class="sr-only">Posted on </span>
-            <time class="meta-date" datetime="{{ .Date.Format " 2006-01-02" }}">{{ .Date.Format "January 2" }}</time>
+            <time class="date" datetime="{{ .Date.Format " 2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+            {{ if .Params.title }}
+            &#8212; <a href="{{ .Permalink }}" class="archive-title">{{ .Title }}</a></li>
+            {{ end }}
             {{ .Content }}
             {{ if .Params.tags }}
-            <p class="article-filed">Filed: <span class="article-tags">{{ partial "tags.html" .}}</span></p>
+            <p class="article-filed"><span class="article-tags">{{ partial "tags.html" .}}</span></p>
             {{ end }}
           </article>
         </div>
