@@ -37,11 +37,12 @@ Because the course happens online rather than face to face, I'll also be asking 
 
 # Important Dates
 
-- January 26 (6:00pm) – All class meeting on Zoom
-- February 15 or 16 (signup online) – Individual meetings with me on Zoom - February 23 (6:00pm) – All class meeting on Zoom
-- March 23 (6:00pm) – All class meeting on Zoom
-- April 12 or 13 – Individual meetings with me on Zoom
-- April 20 (6:00pm) – All class meeting on Zoom
+- January 17 (6:00pm ET) – All class meeting on Zoom
+- February 15 or 16 (signup online) – Individual meetings with me on Zoom
+- February 21 (6:00pm ET) – All class meeting on Zoom
+- March 20 (6:00pm ET) – All class meeting on Zoom
+- April 11 or 12 – Individual meetings with me on Zoom
+- April 24 (6:00pm ET) – All class meeting on Zoom
 
 # Communication
 
