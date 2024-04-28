@@ -1,1 +1,1 @@
-{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}<a href="/tags/{{ $e }}">{{ $e }}</a>{{ end }}
+{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}<a href="/tags/{{ $e | urlize }}">{{ $e }}</a>{{ end }}
