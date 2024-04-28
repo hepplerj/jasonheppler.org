@@ -1,4 +1,7 @@
 <aside class="blog-nav">
+{{ if .Params.tags }}
+<p class="article-filed"><span class="article-tags">{{ partial "tags.html" .}}</span></p>
+{{ end }}
 <p class="reading-time">{{ .ReadingTime }} min read &middot; {{ .WordCount }} words &middot; Published <a href='{{ .Permalink }}' class='u-url u-uid permalink'><time datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "January 2, 2006" }}</time></a> &middot; <a href="/feed.xml">Subscribe</a></p>
 <p class="impact">This page loaded in <strong><span id="page_load"></span></strong> seconds and used ~<strong><span id="carbon"></span>kb</strong> of data. You've generated around <strong><span id="page_carbon"></span>g</strong> of CO2 by visiting. <a href="https://jasonheppler.org/low-impact/">Curious</a>?</p>
 </aside>
