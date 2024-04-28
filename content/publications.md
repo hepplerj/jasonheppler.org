@@ -19,13 +19,17 @@ Between 1950 and 1990, boosters, city councils, and business leaders outlined a 
 
 A core argument throughout this book is the role of place: how they are defined, who defines them, and what happens in them. Just as important, the role of "nature" and who defines this illustrates who and what is included while also revealing who gets excluded in the conversation about the environment. Silicon Valley helps unravel this tension within land use regimes, social consequences, and environmental degradation, and American's growing environmental awareness following World War II.
 
-Endorsements: 
+Endorsements:
 
 > With deep empathy and keen insight, Jason Heppler shows what lies beneath the sparkling high-tech campuses of today's Silicon Valley: a long and tangled history of environmental transformation and trade-offs, mythmaking and moneymaking, conservation and exclusion, and a western landscape remade many times over. This book is an invaluable addition to the literature. --Margaret O’Mara
- 
-> *Silicon Valley and the Environmental Inequalities of High-Tech Urbanism* explains how "land, real estate, segregation, and pollution" became central themes in the history of Silicon Valley and other booming metropolises of the postwar American West. Drawing on discussions sparked by several local controversies from the 1940s through the 1990s, Jason Heppler skillfully dissects people’s shifting perceptions of the places where they lived, worked, played, polluted, and argued about the future. As populations multiplied, as subdivisions and science parks supplanted orchards, as activists challenged the elite’s plans and power, and as the Valley acquired more Superfund sites than any other American county, inhabitants produced a remarkably wide and diverse range of attitudes toward and commitments to "nature." --John M. Findlay
+
+> _Silicon Valley and the Environmental Inequalities of High-Tech Urbanism_ explains how "land, real estate, segregation, and pollution" became central themes in the history of Silicon Valley and other booming metropolises of the postwar American West. Drawing on discussions sparked by several local controversies from the 1940s through the 1990s, Jason Heppler skillfully dissects people’s shifting perceptions of the places where they lived, worked, played, polluted, and argued about the future. As populations multiplied, as subdivisions and science parks supplanted orchards, as activists challenged the elite’s plans and power, and as the Valley acquired more Superfund sites than any other American county, inhabitants produced a remarkably wide and diverse range of attitudes toward and commitments to "nature." --John M. Findlay
 
 [University of Oklahoma Press](https://www.oupress.com/9780806193748/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism/) | [Bookshop](https://bookshop.org/p/books/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism-volume-9-jason-a-heppler/20881494) | [Amazon](https://www.amazon.com/Environmental-Inequalities-High-Tech-Urbanism-Environment/dp/0806193743/)
+
+Reviews: 
+
+- W. Patrick McCray, *[LA Review of Books](https://lareviewofbooks.org/article/dirty-digits-and-pleasant-landscapes-on-jason-a-hepplers-silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism/)*
 
 {{% /book %}}
 
@@ -91,8 +95,10 @@ Chapter, "The National Monument." This volume provides an accessible and authori
 
 ## Essays
 
-1. "How Silicon Valley provides the blueprint for cleaning up our drinking water," _The Washington Post_ (April 26, 2019). [published version](https://www.washingtonpost.com/outlook/2019/04/26/how-silicon-valley-provides-blueprint-cleaning-up-our-drinking-water/)
+1. "Spoiled Fruits: Environmental Inequality in Silicon Valley," AHA _Perspectives_, November 15, 2023. [published version](https://www.historians.org/research-and-publications/perspectives-on-history/november-2023/spoiled-fruits-environmental-inequality-in-silicon-valley)
 
-2. Heppler, Jason A., Sarah Melton, Rachel Mattson, and Brandon Locke, "Advocacy, Training, and Awareness Through Endangered Data Week," _Parameters_ (February 26, 2018). [published version](http://parameters.ssrc.org/2018/03/advocacy-training-and-awareness-through-endangered-data-week/)
+2. "How Silicon Valley provides the blueprint for cleaning up our drinking water," _The Washington Post_ (April 26, 2019). [published version](https://www.washingtonpost.com/outlook/2019/04/26/how-silicon-valley-provides-blueprint-cleaning-up-our-drinking-water/)
 
-3. "How Silicon Valley Industry Polluted the Sylvan California Dream," _The Conversation_ (November 13, 2017). [published version](https://theconversation.com/how-silicon-valley-industry-polluted-the-sylvan-california-dream-85810)
+3. Heppler, Jason A., Sarah Melton, Rachel Mattson, and Brandon Locke, "Advocacy, Training, and Awareness Through Endangered Data Week," _Parameters_ (February 26, 2018). [published version](http://parameters.ssrc.org/2018/03/advocacy-training-and-awareness-through-endangered-data-week/)
+
+4. "How Silicon Valley Industry Polluted the Sylvan California Dream," _The Conversation_ (November 13, 2017). [published version](https://theconversation.com/how-silicon-valley-industry-polluted-the-sylvan-california-dream-85810)
