@@ -3,7 +3,7 @@ description: >-
   Jason Heppler is the senior web developer at the Roy Rosenzweig Center for
   History and New Media at George Mason University.
 baseURL: 'https://jasonheppler.org/'
-copyright: 2008-2022
+copyright: 2008-2024
 languageCode: en-us
 footnoteReturnLinkContents: ' '
 
@@ -39,7 +39,7 @@ markup:
       unsafe: true
   highlight:
     guessSyntax: true
-    style: github
+    style: nord
     lineNos: false
     tabWidth: 4
     codeFences: false
