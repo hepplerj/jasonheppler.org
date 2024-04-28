@@ -48,13 +48,9 @@
   --space-navbar: var(--space-triple);
   --space-mobile: 85%;
   --grid--gutter: 1.25rem;
-  --font-serif: Sentient, lora, TimesNewRoman, "Times New Roman", Times,
-    Baskerville, Georgia, serif;
-  --font-sans: -apple-system, BlinkMacSystemFont, "avenir next",
-    avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial,
-    sans-serif;
-  --font-mono: "iA Writer Duospace", San Francisco Mono, Monaco, "Consolas",
-    "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+  --font-serif: et-book, Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+  --font-mono: "iA Writer Duospace", San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   --type-base: calc(1.5em + 0.5vw);
   --type-xxx-small: 55%;
   --type-xx-small: 65%;
@@ -92,6 +88,23 @@
 @font-face {
   font-family: "Dirk";
   src: url(/assets/fonts/Dirk-Black.woff2) format("woff");
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url(/assets/fonts/et-book-roman-old-style-figures.woff) format("woff");
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url(/assets/fonts/et-book-display-italic-old-style-figures.woff) format("woff");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url(/assets/fonts/et-book-semi-bold-old-style-figures.woff) format("woff");
+  font-weight: bold;
 }
 
 body {
@@ -290,6 +303,7 @@ figure {
   width: 100%;
   text-align: center;
 }
+
 figure a {
   border-bottom: 0;
 }
@@ -306,6 +320,7 @@ figcaption {
   .limiter {
     width: auto;
   }
+
   .header {
     padding-top: 20px;
   }
@@ -340,15 +355,18 @@ figcaption {
   nav {
     padding-top: 2rem;
   }
+
   /* display nav links inline */
   .header ul li {
     display: inline;
   }
+
   .header ul li a {
     padding: 0 10px;
     font-family: var(--font-sans);
     font-size: var(--type-small);
   }
+
   /* in between each link, add a slash, except the last item */
   .header ul li:not(:last-child):after {
     content: "/";
@@ -449,6 +467,7 @@ aside.newsletter {
 footer {
   padding-top: 50px;
 }
+
 footer p {
   font-size: var(--type-x-small);
 }
@@ -486,59 +505,57 @@ footer p {
   padding: 3px;
 }
 
-.books > div,
-/* .writing > div, */
-.teaching > div {
+.books>div,
+.teaching>div {
   display: grid;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   grid-template-columns: 1fr min-content;
 }
 
-.books > div {
+.books>div {
   grid-template-columns: 1fr 0.5fr min-content 70px;
 }
 
 .books a,
-/* .writing a, */
 .teaching a {
   font-weight: 500;
   letter-spacing: -0.015em;
 }
 
-.books > div div,
-/* .writing > div div, */
-.teaching > div div {
+.books>div div,
+.teaching>div div {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.books > div div:nth-child(3),
+.books>div div:nth-child(3),
 /* .writing > div div:last-child, */
-.teaching > div div:last-child {
+.teaching>div div:last-child {
   padding-right: 0.25em;
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.012em;
 }
 
 @media screen and (max-width: 640px) {
-  .books > div {
+  .books>div {
     grid-template-columns: 1fr 0.5fr 70px;
   }
-  .books > div div:nth-child(3) {
+
+  .books>div div:nth-child(3) {
     display: none;
   }
 }
 
 .writing {
   margin: 0 auto;
-  max-width: 640px;
+  /*max-width: 640px;*/
 }
 
 .writing h2 {
   font-size: var(--type-x-large);
-  margin: 0 0 1rem 0;
+  margin: 1rem 0 1rem 0;
 }
 
 .writing .archive-title {
@@ -584,11 +601,18 @@ footer p {
   margin: 0 auto;
 }
 
+.archive {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* adjust this to change the space distribution */
+  gap: 1rem; /* adjust this to change the spacing */
+}
+
 .archive-entry {
   padding-bottom: 2rem;
   margin-bottom: 2rem;
   margin-top: 6rem;
 }
+
 
 .toc {
   margin: 0 2px 40px;
@@ -624,20 +648,33 @@ footer p {
 /* Tags */
 .categorycloud-item {
   display: inline-block;
-  background-color: #f0f0f0; /* Set the background color of the rectangle */
-  border: 1px solid #ccc; /* Set the border color */
-  padding: 8px; /* Adjust the padding as needed */
-  margin-right: 10px; /* Add some space between tags */
+  background-color: #f0f0f0;
+  /* Set the background color of the rectangle */
+  border: 1px solid #ccc;
+  /* Set the border color */
+  padding: 8px;
+  /* Adjust the padding as needed */
+  margin-right: 10px;
+  /* Add some space between tags */
 }
 
 .categorycloud-item span.mono {
-  border-left: 1px solid #ccc; /* Set the border color for the line separator */
-  padding-left: 8px; /* Adjust the padding as needed for the line separator */
-  margin-left: 8px; /* Add some space between the tag and the count */
+  border-left: 1px solid #ccc;
+  /* Set the border color for the line separator */
+  padding-left: 8px;
+  /* Adjust the padding as needed for the line separator */
+  margin-left: 8px;
+  /* Add some space between the tag and the count */
 }
 
 .text-decoration-none {
-  text-decoration: none; /* Remove the default underline for the link */
+  text-decoration: none;
+  /* Remove the default underline for the link */
+}
+
+.writing-body {
+  /*max-width: 640px;*/
+  margin: 0 auto;
 }
 
 .post-body summary {
@@ -658,6 +695,16 @@ footer p {
 .post-body img {
   display: block;
   margin: 0 auto;
+  max-width: 80%;
+}
+
+.post-read-more {
+  text-align: right;
+}
+
+.post-date {
+  font-size: var(--type-small);
+  color: var(--theme-dark-tint);
 }
 
 .post-container {
@@ -670,6 +717,10 @@ footer p {
   margin: 0;
 }
 
+.meta-date {
+  float: right;
+}
+
 .post-year {
   padding-top: 2rem;
   text-align: right;
@@ -678,8 +729,8 @@ footer p {
 .sticky {
   position: sticky;
   top: 0;
-  background-color: var(--theme-background); 
-  z-index: 1; 
+  background-color: var(--theme-background);
+  z-index: 1;
 }
 
 @media screen and (max-width: 640px) {
@@ -768,7 +819,7 @@ code {
   width: calc(100% - 2em);
 }
 
-.notice > div {
+.notice>div {
   flex: 1;
 }
 
@@ -904,9 +955,11 @@ img.metrics__img {
   padding-left: 32px;
   list-style: none;
 }
+
 .footnotes ol li {
   counter-increment: cupcake;
 }
+
 .footnotes ol li:before {
   content: counters(cupcake, ".") " ";
   color: var(--theme-links);
@@ -957,6 +1010,7 @@ img.metrics__img {
 }
 
 .one-line {
+
   &:before,
   &:after {
     background: var(--theme-text);
@@ -977,11 +1031,9 @@ article.syllabus hr {
   display: block;
   width: 100%;
   height: 0.2rem;
-  background: linear-gradient(
-    to right,
-    var(--color-yellow2) 0%,
-    var(--color-purple) 100%
-  );
+  background: linear-gradient(to right,
+      var(--color-yellow2) 0%,
+      var(--color-purple) 100%);
 }
 
 article.syllabus h1 {
@@ -1034,6 +1086,7 @@ article.syllabus nav#TableOfContents ul li {
   .projects .limiter {
     padding: 0 20px;
   }
+
   .project-box {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
@@ -1057,10 +1110,12 @@ a.project {
   text-decoration: none;
   color: var(--theme-text);
 }
+
 a.project:hover {
   color: var(--theme-text);
   text-decoration-color: var(--theme-links);
 }
+
 a.project img {
   display: block;
   margin-bottom: 10px;
@@ -1073,6 +1128,7 @@ a.project img {
   box-shadow: var(--jah-ring-offset-shadow, 0 0 transparent),
     var(--jah-ring-shadow, 0 0 transparent), var(--jah-shadow);
 }
+
 a.project img:hover {
   --jah-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -1210,28 +1266,32 @@ table {
   font-size: 12pt;
   border-collapse: collapse;
 }
+
 table thead th,
 table tfoot th {
   color: #777;
   background: rgba(0, 0, 0, 0.1);
 }
+
 table caption {
   padding: 0.5em;
 }
+
 table th,
 table td {
   padding: 0.5em;
   border: 1px solid lightgrey;
 }
+
 /* Zebra Table Style */
 [data-table-theme*="zebra"] tbody tr:nth-of-type(odd) {
   background: rgba(0, 0, 0, 0.05);
 }
-[data-table-theme*="zebra"][data-table-theme*="dark"]
-  tbody
-  tr:nth-of-type(odd) {
+
+[data-table-theme*="zebra"][data-table-theme*="dark"] tbody tr:nth-of-type(odd) {
   background: rgba(255, 255, 255, 0.05);
 }
+
 /* Dark Style */
 [data-table-theme*="dark"] {
   color: #ddd;
@@ -1239,14 +1299,17 @@ table td {
   font-size: 12pt;
   border-collapse: collapse;
 }
+
 [data-table-theme*="dark"] thead th,
 [data-table-theme*="dark"] tfoot th {
   color: #aaa;
   background: rgba(0255, 255, 255, 0.15);
 }
+
 [data-table-theme*="dark"] caption {
   padding: 0.5em;
 }
+
 [data-table-theme*="dark"] th,
 [data-table-theme*="dark"] td {
   padding: 0.5em;
@@ -1344,13 +1407,16 @@ table td {
 
 /* Hides a snowflake towards the very end of the animation */
 @-webkit-keyframes fade {
+
   /* Show a snowflake while into or below 85 percent of the animation and hide it, otherwise */
   0% {
     opacity: 1;
   }
+
   85% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -1362,6 +1428,7 @@ table td {
     -webkit-transform: translate(0px, -50px);
     transform: translate(0, -50px);
   }
+
   100% {
     -webkit-transform: translate(0px, 650px);
     transform: translate(0, 650px);
@@ -1374,6 +1441,7 @@ table td {
     -webkit-transform: rotate(-50deg);
     transform: rotate(-50deg);
   }
+
   100% {
     -webkit-transform: rotate(50deg);
     transform: rotate(50deg);
@@ -1386,6 +1454,7 @@ table td {
     -webkit-transform: rotate(50deg);
     transform: rotate(50deg);
   }
+
   100% {
     -webkit-transform: rotate(-50deg);
     transform: rotate(-50deg);
