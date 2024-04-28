@@ -52,6 +52,7 @@ slug: "/about/"
 	<ul class="list-unstyled noted">
 		<li><a href="/uses">Uses</a></li>
 		<li><a href="/now">Now</a></li>
+    <li><a href="/stats">Stats</a></li>
     <li><a href="/norwegian">Norwegian learning resources</a></li>
     <li><a href="/office-hours">Office hours resources for students</a></li>
 	</ul>
