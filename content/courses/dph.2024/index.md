@@ -43,6 +43,7 @@ Because the course happens online rather than face to face, I'll also be asking 
 - March 21 (4:30pm ET) – All class meeting on Zoom
 - April 11 or 12 – Individual meetings with me on Zoom
 - April 18 (4:30pm ET) – All class meeting on Zoom
+- May 6 (12:00 ET) - All final projects and assignments due
 
 # Communication
 
