@@ -9,4 +9,4 @@ If you are a student, GRA, or project collaborator at George Mason University, y
 
 **Appointments**: [Book an appointment](https://fantastical.app/7y5vbmv7mf-y3ho/office-hours).
 
-**Zoom**: [My Zoom meeting room](https://gmu.zoom.us/j/98902462694?pwd=TjJKMjZkMVhrZllUWmZ4Sy9tUldJZz09).
+**Zoom**: [My Zoom meeting room](https://gmu.zoom.us/j/98817480399?pwd=d3FINWxaSmQwTlB5NVlhMG1wYUlNZz09).
