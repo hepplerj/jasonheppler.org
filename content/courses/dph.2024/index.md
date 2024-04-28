@@ -37,12 +37,12 @@ Because the course happens online rather than face to face, I'll also be asking 
 
 # Important Dates
 
-- January 17 (6:00pm ET) – All class meeting on Zoom
+- January 18 (4:00pm ET) – All class meeting on Zoom
 - February 15 or 16 (signup online) – Individual meetings with me on Zoom
-- February 21 (6:00pm ET) – All class meeting on Zoom
-- March 20 (6:00pm ET) – All class meeting on Zoom
+- February 28 (4:30pm ET) – All class meeting on Zoom
+- March 21 (4:30pm ET) – All class meeting on Zoom
 - April 11 or 12 – Individual meetings with me on Zoom
-- April 24 (6:00pm ET) – All class meeting on Zoom
+- April 18 (4:30pm ET) – All class meeting on Zoom
 
 # Communication
 
@@ -73,7 +73,7 @@ The 13 modules that are nested under these topics must be completed in order, wi
 
 # Assignments
 
-There are many assignments that you have to complete for this course. The weekly assignments should be completed prior to the all-class meeting in the syllabus that corresponds to that part of the semester. So, for instance, all the assignments through the end of Module 3 should be completed before the February 23 all-class meeting. Major assignments (Appendix A) are due according to the dates listed in the schedule online.
+There are many assignments that you have to complete for this course. The weekly assignments should be completed prior to the all-class meeting in the syllabus that corresponds to that part of the semester. So, for instance, all the assignments through the end of Module 3 should be completed before the February 28 all-class meeting. Major assignments (Appendix A) are due according to the dates listed in the schedule online.
 
 - Readings: You are expected to do all the readings and complete the tasks in the online modules.
 - Writing: You will write a series of blog posts: one introducing yourself to the rest of the class, then four "portfolio posts" that address a particular question related to the readings/activities in the online modules. These are all due on dates listed in the syllabus. You will also write a comparative review of two public history sites (a physical site with a substantial public history presence).
@@ -154,8 +154,7 @@ For your major project for this course, you will design and develop a prototype 
 - A website that offers content and interpretation on an historic person, place, or event
 - A participatory website that offers members of the public the opportunity to contribute,
   describe, or remix historical materials
-- A multi-platform campaign that is tied to an anniversary or memorialization such as the
-  Twitter hashtag campaigns we looked at in Module 9
+- A multi-platform campaign that is tied to an anniversary or memorialization
 - A tool or platform that supports users in doing their own historical work
 - A platform that brings members of a community together to engage with one another about
   the role of history in contemporary issues
