@@ -8,15 +8,16 @@
 
     <div class="writing">
       {{ range (where .Site.RegularPages "Section" "blog").GroupByDate "2006" }}
-      <h2>{{ .Key }}</h2>
-      {{ range .Pages }}
-      <div class="preview-post">
+      <h2 class="sticky">{{ .Key }}</h2>
+      <div class="archive">
+        {{ range .Pages }}
+        <time>{{ .Date.Format "2 January" }}</time>
         <div>
-          <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a> &mdash;
-          <time>{{ .Date.Format "2 January 2006" }}</time>
+          <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a>
         </div>
+        {{ end }}
       </div>
-      {{ end }} {{ end }}
+      {{ end }}
     </div>
   </div>
 

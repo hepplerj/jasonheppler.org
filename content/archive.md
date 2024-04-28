@@ -1,6 +1,7 @@
 ---
-title: "Blog posts by category"
+title: "Posts by Date"
 layout: archive
 type: archive
-slug: "/blog/archive/"
+slug: "/archive/"
 ---
+
