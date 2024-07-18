@@ -13,11 +13,11 @@
     <meta name="robots" content="noindex, nofollow" />
     {{ end }}
 
-    {{ if .IsHome }}
-    <title>{{ .Site.Title }} · Environmental and Digital Historian</title>
-    {{ else }}
+    {{ if .IsPage }}
     <title>{{ .Title }} · {{ .Site.Title }}</title>
-    {{ end}}
+    {{ else }}
+    <title>{{ .Site.Title }} · Environmental and Digital Historian</title>
+    {{ end }}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {{ if .Description }}
     <meta name="description" content="{{ .Description }}" />
