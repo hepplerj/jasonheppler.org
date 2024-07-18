@@ -8,6 +8,10 @@
       lang="us=en"
       content="jason heppler, jason, heppler, design, digital humanities, digital history, data visualization, george mason university, virginia, chnm, roy rosenzweig, center for history and new media, nebraska, spatial history"
     />
+    
+    {{ if eq hugo.Environment "development" }}
+    <meta name="robots" content="noindex, nofollow" />
+    {{ end }}
 
     {{ if .IsHome }}
     <title>{{ .Site.Title }} · Environmental and Digital Historian</title>
