@@ -2,7 +2,6 @@
 title: "How I Use Obsidian"
 date: "2024-07-15T12:22:49-05:00"
 slug: "how-i-use-obsidian"
-draft: true
 lede: "Creating my research and note-taking environment"
 tags: [obsidian, research]
 ---
