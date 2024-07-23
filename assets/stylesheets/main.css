@@ -848,10 +848,11 @@ blockquote {
   margin: 0;
 }
 
-code {
+p>code {
   font-family: var(--font-mono);
   font-size: var(--type-small);
   background: var(--theme-mark);
+  color: var(--theme-background);
 }
 
 .notice {

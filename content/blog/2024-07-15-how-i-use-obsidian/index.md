@@ -6,6 +6,10 @@ lede: "Creating my research and note-taking environment"
 tags: [obsidian, research]
 ---
 
+<aside>
+<p><strong>2024-07-22</strong>: Thanks to the <a href="https://news.ycombinator.com/item?id=41034567">kind folks at Hacker News</a>, I've fixed a couple of CSS conflicts that caused code text to be difficult to read.</p>
+</aside>
+
 I mentioned on [my recent appearance on Drafting the Past](https://draftingthepast.com/podcast-episodes/episode-45-jason-heppler-wants-tools-that-fit-his-questions/) that I have migrated all of my historical research work into Obsidian, which prompted a few folks on Bluesky to ask about some details on how I use it. Here's a run-down of what that's like from the perspective of writing and historical research.
 
 Over the past ten years, my process for organizing research notes has evolved a lot, but one key thing remains consistent: the notes are written in plain text. Much of this started in a Haskell-based wiki system called [Gitit](https://github.com/jgm/gitit), introduced to me by my colleague Caleb McDaniel (who is [still using it](http://wiki.wcaleb.rice.edu)!). But I had some frustrations with Gitit and ended up moving to DEVONthink for a long time. The ability to throw just about anything into the software and organize it with tagging and folders was incredibly helpful for me when it came to tracking themes, topics, ideas, people, and events. But, as I started doing more on mobile devices (both iPhone and iPad) I found DEVONthink's mobile apps, at least in its early days, difficult to use.
@@ -20,7 +24,7 @@ Obsidian also has a rock-solid iPhone app and iPad app. Often if I'm on a flight
 
 ## My Obsidian Setup
 
-I use both folders and tags. My folders in Obsidian mimic my folder setup on my computers which follows the [Johnny Decimal system](https://johnnydecimal.com) for organizing information. The folders are designed as broad areas that can become more narrowly focused for the content that they hold. So, a folder called `40. Work` contains a folder called `40.01 CHNM` for all of my CHNM-related materials, which contains a folder `40.01.01 Meeting Notes` or `40.01.02 Web Dev` or `40.01.03 Projects` for work-related meeting notes, reference files, and project references, respectively. Or, a folder called `60. Writing` contains `60.01 Silicon Valley` (my recent book), or `60.02 Sagebrush` (my current book project) or `60.03 Blog` or `60.04 Microblog` and so forth.[^2] 
+I use both folders and tags. My folders in Obsidian mimic my folder setup on my computers which follows the [Johnny Decimal system](https://johnnydecimal.com) for organizing information. The folders are designed as broad areas that can become more narrowly focused for the content that they hold. So, a folder called `40. Work` contains a folder called `40.01 CHNM` for all of my CHNM-related materials, which contains a folder `40.01.01 Meeting Notes` or `40.01.02 Web Dev` or `40.01.03 Projects` for work-related meeting notes, reference files, and project references, respectively. Or, a folder called `60. Writing` contains `60.01 Silicon Valley` (my recent book), or `60.02 Sagebrush` (my current book project) or `60.03 Blog` or `60.04 Microblog` and so forth.[^2]
 
 All of this keeps my content organized, and since I replicate the same structure on my desktop I know nearly instantly where I'll find it. I also make extensive use of tags. Some are pretty self-explanatory (meeting notes get a tag `meeting` and are wiki-linked to an index note for a project or a person), others I use as part of my research process (more on that below). These become ways for me to easily search or find notes as I need them.
 
@@ -30,10 +34,10 @@ I mentioned on Drafting the Past that I still tend to use Scrivener for writing,
 
 There's a few things I've always liked to have in any of my writing environments for long-form writing:
 
-- Typewriter mode: I've used this in vim, Scrivener, Ulysses, iA Writer, and Obsidian. The idea is that the current line I'm writing is always centered in the middle of my screen when typing or moving up and down in a document. 
+- Typewriter mode: I've used this in vim, Scrivener, Ulysses, iA Writer, and Obsidian. The idea is that the current line I'm writing is always centered in the middle of my screen when typing or moving up and down in a document.
 - Highlight mode: Similarly, I've always liked having the current sentence (or paragraph) I'm writing highlighted for me while the others are faded away.
 - Quick insert footnotes: I tend to cite as I write, so having a way to quickly add a footnote is important; but, more essentially in plain text, I don't want to have to think about the numbering of the footnotes.
-- Zotero integration: This is where Scrivener falls down for me. The integration isn’t quite what I’d like. When I wrote my dissertation, I used BibTeX to handle citations. That remained the case for my book. I am still a heavy user of [Better BibTeX](https://retorque.re/zotero-better-bibtex/) for BibTeX support in Zotero, and still prefer compiling documents using BibTeX. 
+- Zotero integration: This is where Scrivener falls down for me. The integration isn’t quite what I’d like. When I wrote my dissertation, I used BibTeX to handle citations. That remained the case for my book. I am still a heavy user of [Better BibTeX](https://retorque.re/zotero-better-bibtex/) for BibTeX support in Zotero, and still prefer compiling documents using BibTeX.
 
 In Obsidian, several plugins have allowed me to create the writing environment I like:
 
@@ -41,7 +45,7 @@ In Obsidian, several plugins have allowed me to create the writing environment I
 - [Typewriter Scroll](https://github.com/deathau/cm-typewriter-scroll-obsidian): Keep the line of text centered on the screen. I'll likely be replacing both Typewriter Scroll and Stille with [Typewriter Mode](https://github.com/davisriedel/obsidian-typewriter-mode) which includes both typewriter mode and line highlighting, and is more actively updated. I don't keep this on all the time, I only activate it when I'm writing, along with Focus Mode.
 - [Focus Mode](https://github.com/ryanpcmcquen/obsidian-focus-mode): Hides the sidebars to focus on the active pane. I usually send Obsidian into full-screen mode and hit my hotkey for Focus Mode and I'm ready to go.
 - [Zotero Integration](https://github.com/mgmeyers/obsidian-zotero-integration): Useful both for generating book notes with their appropriate metadata, and inserting BibTeX citations.
-- [Pandoc plugin](https://github.com/OliverBalfour/obsidian-pandoc):  For compiling writing into `.docx` or `.pdf` files.
+- [Pandoc plugin](https://github.com/OliverBalfour/obsidian-pandoc): For compiling writing into `.docx` or `.pdf` files.
 - [Longform](https://github.com/kevboh/longform): I like writing in chunks of text (a la Scrivener), and Longform helps replicate that in Obsidian.
 - [Obsidian Footnotes](https://github.com/akaalias/obsidian-footnotes): Easily insert and manage footnotes.
 - [Tidy footnotes](https://github.com/charliecm/obsidian-tidy-footnotes): If I move a paragraph or footnote around and the numbering sequence gets out of order in the document, this plugin sequentially re-numbers everything to keep things in order.
@@ -49,10 +53,10 @@ In Obsidian, several plugins have allowed me to create the writing environment I
 
 <details>
 <summary>My Zotero Integration book note template</summary>
-I use the following template for my book notes. 
+I use the following template for my book notes.
 
-{{< highlight text >}}
----
+## {{< highlight text >}}
+
 type: "{{itemType}}"{% for type, creators in creators | groupby("creatorType") -%}{% if loop.first %}
 {% endif %}{{type | replace("interviewee", "author") | replace("director", "author") | replace("presenter", "author") | replace("podcaster", "author") | replace("programmer", "author") | replace("cartographer", "author") | replace("inventor", "author") | replace("sponsor", "author")  | replace("performer", "author") | replace("artist", "author")}}: "{%- for creator in creators -%}{%- if creator.name %}{{creator.name}}{%- else %}{{creator.lastName}}, {{creator.firstName}}{%- endif %}{% if not loop.last %}; {% endif %}{% endfor %}"{% if not loop.last %}
 {% endif %}{%- endfor %}{% if title %}
@@ -64,7 +68,9 @@ archive-location: "{{archiveLocation}}"{% endif %}
 citekey: {{citekey}}
 tags: #zotero, #source/secondary, {% if tags.length > 0 -%}{% for t in tags -%}#{% if t.tag == "secondary" %}source/secondary{% if not loop.last %}{% endif %}{% elif t.tag == "primary" %}source/primary{% if not loop.last %}{% endif %}{% elif "-project" in t.tag %}project/{{t.tag | lower | replace(" ", "-") | replace("-project", "")}}{% else %}subject/{{t.tag | lower | replace(" ", "-")}}{% endif %}{% if not loop.last %}
 {% endif %}{%- endfor %}{%- endif %}
+
 ---
+
 {{bibliography}}
 [online]({{uri}}) [local]({{desktopURI}}) {%- for attachment in attachments | filterby("path", "endswith", ".pdf") %} [pdf](file://{{attachment.path | replace(" ", "%20")}})
 {%- endfor %}
@@ -77,10 +83,10 @@ page-no:: {% for annotation in annotations %}{% if loop.first %}{{annotation.pag
 
 ### Connections
 
-
 ### Thoughts
 
 ### Note
+
 {% macro calloutHeader(color) -%}
 {%- if color == "#ff6666" -%}
 Important
@@ -99,17 +105,18 @@ Disagreement
 {% persist "annotations" %}
 {% set annotations = annotations | filterby("date", "dateafter", lastImportDate) -%}
 {% if annotations.length > 0 %}
+
 ### Annotations
+
 Imported on {{importDate | format("YYYY-MM-DD h:mm a")}}
 
 {%- for annotation in annotations %}
 {% if annotation.color !== "#ffd400" %}
->[!quote{% if annotation.color %}|{{annotation.color}}{% endif %}] {{calloutHeader(annotation.color)}}
->{%- endif -%}{% if annotation.imageRelativePath %}
-![[{{annotation.imageRelativePath}}]] {% endif %}{% if annotation.annotatedText %}
-{{annotation.annotatedText}} [(p. {{annotation.pageLabel}})](zotero://open-pdf/library/items/{{annotation.attachment.itemKey}}?page={{annotation.pageLabel}}&annotation={{annotation.id}}){%- endif %}{%- if annotation.comment%}
-%%{{annotation.comment}}%%{%- endif %}{%- endfor %}{% endif %} {% endpersist %}
-{{< /highlight >}}
+
+> [!quote{% if annotation.color %}|{{annotation.color}}{% endif %}] {{calloutHeader(annotation.color)}} >{%- endif -%}{% if annotation.imageRelativePath %}
+> ![[{{annotation.imageRelativePath}}]] {% endif %}{% if annotation.annotatedText %} > {{annotation.annotatedText}} [(p. {{annotation.pageLabel}})](zotero://open-pdf/library/items/{{annotation.attachment.itemKey}}?page={{annotation.pageLabel}}&annotation={{annotation.id}}){%- endif %}{%- if annotation.comment%}
+> %%{{annotation.comment}}%%{%- endif %}{%- endfor %}{% endif %} {% endpersist %} > {{< /highlight >}}
+
 </details>
 
 ## Theme and Design
@@ -128,7 +135,7 @@ The lynchpin to this is the plugin DataView. DataView lets you write custom quer
 
 But I can also use DataView to drive complex queries across my notes. I’ve taken my cue here from [Elena Razlogova](http://elenarazlogova.org/), who wrote this great primer on [using Obsidian for historians](https://publish.obsidian.md/history-notes/01+Notetaking+for+Historians). I pair up some JavaScript with DataView to run keyword queries or queries across any of my properties that allows me to pull together collections of notes, sources, transcriptions, and analysis that I’ve written.
 
-For my research notes, I have an overall folder of `30. Reseearch` that contains subfolders on my various research or book projects. Each of those have a `Meta` folder that contain a set of documents designed to search only within those specific research folders. 
+For my research notes, I have an overall folder of `30. Reseearch` that contains subfolders on my various research or book projects. Each of those have a `Meta` folder that contain a set of documents designed to search only within those specific research folders.
 
 {{< figure src="/assets/images/obsidian_research_structure.png" caption="My Obsidian research folder structure." alt="My Obsidian research folder structure." width="400px" >}}
 
@@ -176,6 +183,7 @@ I've come to prefer the index notes instead of tags for things like people, plac
 I can also make an index of the indexes; I find this particularly useful for people and organizations. Using the DataView plugin, I can create something like this:
 
 {{< highlight text >}}
+
 ```dataview
 TABLE without ID
 	file.link AS "name",
@@ -185,6 +193,7 @@ TABLE without ID
 FROM ("30. Research/30.04 Sagebrush" AND #biography)
 SORT file.name asc
 ```
+
 {{< /highlight >}}
 
 This view finds anyone with the tag `#biography` in my research project's folder and generates a table of people, their occupation, their date of death, and how many times a file is linked to a person (hence the field "mentions"). A note page for an individual tends to look like this:
@@ -209,3 +218,4 @@ I have a few other plugins that help make Obsidian an even more powerful tool.
 
 [^1]: This is why I've been exploring writing in Obsidian as well as note-taking: to keep notes and writing documents side-by-side.
 [^2]: I'm really considering how I might use Obsidian for publishing to my blog and microblog. If I end up getting that infrastructure in place, I'll do another write-up.
+
