@@ -266,7 +266,7 @@ h3 {
 }
 
 .limiter {
-  max-width: 780px;
+  max-width: 880px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
@@ -603,10 +603,8 @@ footer p {
 
 .archive {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  /* adjust this to change the space distribution */
-  gap: 1rem;
-  /* adjust this to change the spacing */
+  grid-template-columns: 1fr 3fr; /* adjust this to change the space distribution */
+  gap: 1rem; /* adjust this to change the spacing */
 }
 
 .archive-entry {
@@ -686,7 +684,7 @@ footer p {
 }
 
 .post-body details[open] {
-  /* padding: 0.5em; */
+  padding: 0.5em;
 }
 
 .post-body details[open] summary {
@@ -697,7 +695,7 @@ footer p {
 .post-body img {
   display: block;
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 80%;
 }
 
 .post-read-more {
@@ -705,6 +703,7 @@ footer p {
 }
 
 .post-date {
+  font-size: var(--type-small);
   color: var(--theme-dark-tint);
 }
 
@@ -725,50 +724,6 @@ footer p {
 .post-year {
   padding-top: 2rem;
   text-align: right;
-}
-
-.link-post-header {
-  border-bottom: 2px solid var(--color--aside-faded);
-  padding-bottom: 1rem;
-  display: flex;
-  justify-content: space-between;
-
-}
-
-.link-post-body {
-  border: 2px solid var(--color--aside-faded);
-  padding: 1rem;
-  margin-bottom: 2rem;
-}
-
-blockquote {
-  border-left: 2px solid var(--theme-links);
-  padding-left: 2rem;
-  margin-left: 0;
-}
-
-.pullquote {
-  border: none;
-  font-size: 1.2em;
-  width: 25%;
-  font-family: var(--font-serif);
-  border-top: 1px solid var(--theme-text);
-  border-bottom: 1px solid var(--theme-text);
-  float: left;
-  padding: 1rem;
-  margin: 1rem;
-}
-
-.note {
-  align-self: center;
-  text-align: center;
-}
-
-.note::before {
-  content: "—/ " attr(aria-label) " /—";
-  color: var(--theme-dark-tint);
-  text-transform: uppercase;
-  font-weight: bold;
 }
 
 .sticky {
@@ -848,11 +803,9 @@ blockquote {
   margin: 0;
 }
 
-p>code {
+code {
   font-family: var(--font-mono);
   font-size: var(--type-small);
-  background: var(--theme-mark);
-  color: var(--theme-background);
 }
 
 .notice {
@@ -1010,17 +963,6 @@ img.metrics__img {
 .footnotes ol li:before {
   content: counters(cupcake, ".") " ";
   color: var(--theme-links);
-  font-weight: bold;
-}
-
-.footnote-ref {
-  text-decoration: none;
-  color: var(--theme-links);
-  font-weight: bold;
-}
-
-.footnote-backref {
-  display: none;
 }
 
 /* prevent the footnote p from breaking the line with the footnote number */
@@ -1033,7 +975,7 @@ img.metrics__img {
   margin-top: 0;
   position: absolute;
   top: 0;
-  left: 78%;
+  left: 80%;
 }
 
 .floating-footnotes hr {

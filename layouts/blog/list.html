@@ -21,11 +21,9 @@
           <p class="teaser"><em>{{ .Params.lede | markdownify }}</em></p>
           {{ end }}
           {{ if .Params.tags }}
-          <p class="article-filed">Filed under: <span class="article-tags">{{ partial "tags.html" .}}</span> | Word count: {{ .WordCount }} | Reading time: {{ .ReadingTime }} minute(s)</p>
+          <p class="article-filed">Filed under: <span class="article-tags">{{ partial "tags.html" .}}</span></p>
           {{ end }}
-            {{ .Summary }}
-
-            <a href="{{ .Permalink }}" class="read-more">Read more &rarr;</a>
+            {{ .Content }}
         </article>
       </div>
     {{ end }}

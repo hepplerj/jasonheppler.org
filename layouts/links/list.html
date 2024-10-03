@@ -1,25 +1,26 @@
 {{ partial "head.html" . }}
 
 <div class='pad2y limiter content'>
-  <div class="body">
+  <div class="body"> 
 <h1>{{ .Title }}</h1>
 
 {{ .Content }}
 
-<div class="link-posts">
+<div class="link-posts">  
 {{ range (.Paginate ( first 25 .Pages )).Pages }}
-   <div class="link-post-body">
     <header class="link-post-header">
-      <span><a href="{{ index .Params "external" }}">{{ index .Params "title" }} →</a></span>
-      <time class='link-post-date post-date' datetime='{{ .Date.Format "2006-01-02" }}'><a href="{{ .Permalink }}" class="permalink" title="Local permalink">{{ .Date.Format "January 2, 2006" }}</a></time> 
+      <p><time class='link-post-date post-date' datetime='{{ .Date.Format "2006-01-02" }}'>
+        <a href="{{ .Permalink }}" class="permalink" title="Local permalink">{{ .Date.Format "January 2, 2006" }}</a>
+      </time> &middot; <a href="{{ index .Params "external" }}">{{ index .Params "title" }} →</a></p>
     </header>
     <article>
 
       {{ .Content }}
 
-      Filed: <span class="commonplace__tag">{{ partial "tags.html" .}}</span>
+      Filed: <span class="commonplace__tag">{{ partial "tags.html" .}}</span>  
+
     </article>
-</div>
+    <hr />
 {{ end }}
 
 {{ template "_internal/pagination.html" . }}

@@ -36,35 +36,38 @@ n.utils.hasStorage = function () {
 
 if ("localStorage" in window) {
   document.querySelector(".user-toggle").removeAttribute("hidden");
-  const e = document.querySelectorAll('input[name="theme-chooser"]'),
-    t = Array.from(e),
-    n = document.querySelector(".mode-status"),
-    o = function (e) {
-      let t = e || localStorage.getItem("user-color-scheme");
-      t || "auto" === t
-        ? (document.documentElement.setAttribute("data-site-theme", t), r(t))
-        : r(beep.utils.getCSSCustomProperty("--site-theme"));
+  const inputs = document.querySelectorAll('input[name="theme-chooser"]'),
+    themeInputs = Array.from(inputs),
+    modeStatus = document.querySelector(".mode-status"),
+    applyTheme = function (selectedTheme) {
+      let theme = selectedTheme || localStorage.getItem("user-color-scheme") || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute("data-site-theme", theme);
+      updateThemeStatus(theme);
     },
-    r = function (e) {
-      (document.querySelector(
-        `input[name="theme-chooser"][value=${e}]`
-      ).checked = !0),
-        "auto" === e
-          ? (document.documentElement.removeAttribute("data-site-theme"),
-            (n.innerText = "Color mode is selected automatically."))
-          : (n.innerText = `Color mode is now “${e}.”`);
+    updateThemeStatus = function (theme) {
+      document.querySelector(`input[name="theme-chooser"][value=${theme}]`).checked = true;
+      if (theme === "auto") {
+        document.documentElement.removeAttribute("data-site-theme");
+        modeStatus.innerText = "Color mode is selected automatically.";
+      } else {
+        modeStatus.innerText = `Color mode is now “${theme}.”`;
+      }
     };
-  t.forEach((e) => {
-    e.addEventListener("change", function (e) {
-      e.preventDefault();
-      let t = document.querySelector(
-        'input[name="theme-chooser"]:checked'
-      ).value;
-      localStorage.setItem("user-color-scheme", t), o(t);
+
+  themeInputs.forEach((input) => {
+    input.addEventListener("change", function (event) {
+      event.preventDefault();
+      let selectedTheme = document.querySelector('input[name="theme-chooser"]:checked').value;
+      localStorage.setItem("user-color-scheme", selectedTheme);
+      applyTheme(selectedTheme);
     });
-  }),
-    o(),
-    window.addEventListener("storage", function (e) {
-      "user-color-scheme" === e.key && o();
-    });
+  });
+
+  applyTheme();
+
+  window.addEventListener("storage", function (event) {
+    if (event.key === "user-color-scheme") {
+      applyTheme();
+    }
+  });
 }
