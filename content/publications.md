@@ -27,9 +27,10 @@ Endorsements:
 
 [University of Oklahoma Press](https://www.oupress.com/9780806193748/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism/) | [Bookshop](https://bookshop.org/p/books/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism-volume-9-jason-a-heppler/20881494) | [Amazon](https://www.amazon.com/Environmental-Inequalities-High-Tech-Urbanism-Environment/dp/0806193743/)
 
-Reviews: 
+Reviews:
 
-- W. Patrick McCray, *[LA Review of Books](https://lareviewofbooks.org/article/dirty-digits-and-pleasant-landscapes-on-jason-a-hepplers-silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism/)*
+- W. Patrick McCray, _[LA Review of Books](https://lareviewofbooks.org/article/dirty-digits-and-pleasant-landscapes-on-jason-a-hepplers-silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism/)_
+- Adam Quinn, [H-Net](https://www.h-net.org/reviews/showrev.php?id=60677)
 
 {{% /book %}}
 
