@@ -148,7 +148,7 @@ I've been designing, developing, and teaching digital and public history for ten
     <p class="small"><span class="project-title">William F. Cody Archive</span> Digitizing the papers of William F. Cody.</p>
   </a>
 
-  <a class="project" href="http://buffalobillproject.unl.edu/research/showindians/">
+  <a class="project" href="https://progressivewildwest.org">
     <img src="/assets/images/portfolio_showindian.png" alt="William F. Cody and the Progressive Wild West" loading="lazy" />
     <p class="small"><span class="project-title">William F. Cody and the Progressive Wild West</span> Exploring debates over what I called Reformist Progressives and Enabling Progressives.</p>
   </a>
