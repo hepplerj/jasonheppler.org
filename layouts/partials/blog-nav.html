@@ -1,27 +1,47 @@
 <aside class="blog-nav">
-{{ if .Params.tags }}
-<p class="article-filed"><span class="article-tags">{{ partial "tags.html" .}}</span></p>
-{{ end }}
-<p class="reading-time">{{ .ReadingTime }} min read &middot; {{ .WordCount }} words &middot; Published <a href='{{ .Permalink }}' class='u-url u-uid permalink'><time datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "January 2, 2006" }}</time></a> &middot; <a href="/feed.xml">Subscribe</a></p>
-<p class="impact">This page loaded in <strong><span id="page_load"></span></strong> seconds and used ~<strong><span id="carbon"></span>kb</strong> of data. You've generated around <strong><span id="page_carbon"></span>g</strong> of CO2 by visiting. <a href="https://jasonheppler.org/low-impact/">Curious</a>?</p>
+  {{ if .Params.tags }}
+  <p class="article-filed">
+    Filed under: <span class="article-tags">{{ partial "tags.html" .}}</span>
+  </p>
+  {{ end }}
+  <p class="reading-time">
+    {{ .ReadingTime }} min read &middot; {{ .WordCount }} words &middot;
+    Published
+    <a href="{{ .Permalink }}" class="u-url u-uid permalink"
+      ><time datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'
+        >{{ .Date.Format "January 2, 2006" }}</time
+      ></a
+    >
+    &middot; <a href="/feed.xml">Subscribe</a>
+  </p>
+  <p class="impact">
+    This page loaded in <strong><span id="page_load"></span></strong> seconds
+    and used ~<strong><span id="carbon"></span>kb</strong> of data. You've
+    generated around <strong><span id="page_carbon"></span>g</strong> of CO2 by
+    visiting. <a href="https://jasonheppler.org/low-impact/">Curious</a>?
+  </p>
 </aside>
 
 <aside id="webmentions-container">
-    <details>
-        <summary>Mentions around the web</summary>
-        <div id="webmentions"></div>
-    </details>
+  <details>
+    <summary>Mentions around the web</summary>
+    <div id="webmentions"></div>
+  </details>
 </aside>
 
 <script>
-page_data = (document.documentElement.outerHTML.length/1024).toFixed(2);
-document.getElementById('carbon').innerHTML = page_data;
+  page_data = (document.documentElement.outerHTML.length / 1024).toFixed(2);
+  document.getElementById("carbon").innerHTML = page_data;
 
-page_carbon = (page_data/12).toFixed(2); // the average webpage generates 4.61 grams CO2 for every page view
-document.getElementById('page_carbon').innerHTML = page_carbon;
+  page_carbon = (page_data / 12).toFixed(2); // the average webpage generates 4.61 grams CO2 for every page view
+  document.getElementById("page_carbon").innerHTML = page_carbon;
 
-window.onload = function() {
-    var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
-    document.getElementById('page_load').innerHTML = (loadTime/1000).toFixed(2);
-}
+  window.onload = function () {
+    var loadTime =
+      window.performance.timing.domContentLoadedEventEnd -
+      window.performance.timing.navigationStart;
+    document.getElementById("page_load").innerHTML = (loadTime / 1000).toFixed(
+      2,
+    );
+  };
 </script>
