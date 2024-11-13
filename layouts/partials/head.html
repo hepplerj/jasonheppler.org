@@ -9,11 +9,13 @@
       content="jason heppler, jason, heppler, design, digital humanities, digital history, data visualization, george mason university, virginia, chnm, roy rosenzweig, center for history and new media, nebraska, spatial history"
     />
 
-    {{ if .IsHome }}
-    <title>{{ .Site.Title }} · Environmental and Digital Historian</title>
-    {{ else }}
+    {{ if eq hugo.Environment "development" }}
+    <meta name="robots" content="noindex, nofollow" />
+    {{ end }} {{ if .IsPage }}
     <title>{{ .Title }} · {{ .Site.Title }}</title>
-    {{ end}}
+    {{ else }}
+    <title>{{ .Site.Title }} · Environmental and Digital Historian</title>
+    {{ end }}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {{ if .Description }}
     <meta name="description" content="{{ .Description }}" />
@@ -50,7 +52,7 @@
     <!-- RDFa Metadata (in DublinCore) -->
     <meta property="dc:title" content="" />
     <meta property="dc:creator" content="Jason A. Heppler" />
-    <meta property="dc:date" content="{{ .Site.LastChange }}" />
+    <meta property="dc:date" content="{{ .Site.Lastmod }}" />
     <meta property="dc:format" content="text/html" />
     <meta property="dc:language" content="en" />
     <meta property="dc:identifier" content="/" />
@@ -68,7 +70,7 @@
 
     <!-- Google Scholar Metadata -->
     <meta name="citation_author" content="Jason A. Heppler" />
-    <meta name="citation_date" content="{{ .Site.LastChange }}" />
+    <meta name="citation_date" content="{{ .Site.Lastmod }}" />
     <meta name="citation_title" content="" />
     <meta name="citation_journal_title" content="Jason Heppler weblog" />
 

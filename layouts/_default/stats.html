@@ -50,16 +50,16 @@
       <table class="table">
         <tr>
           <td width="40%">Total Posts Published</td>
-          <td width="60%">{{ $postCount | lang.NumFmt 0 }}</td>
+          <td width="60%">{{ $postCount | lang.FormatNumberCustom 0 }}</td>
         </tr>
         <tr>
           <td>Total Words Written</td>
-          <td>{{ $wordCount | lang.NumFmt 0 }}{{ if gt $wordCount 40000 }} (that's almost
-            {{ (div $wordCount 40000) | lang.NumFmt 0 }} novellas){{ end }}</td>
+          <td>{{ $wordCount | lang.FormatNumberCustom 0 }}{{ if gt $wordCount 40000 }} (that's almost
+            {{ (div $wordCount 40000) | lang.FormatNumberCustom 0 }} novellas){{ end }}</td>
         </tr>
         <tr>
           <td>Average Words per Post</td>
-          <td>{{ $avgPostLength | lang.NumFmt 0 }}</td>
+          <td>{{ $avgPostLength | lang.FormatNumberCustom 0 }}</td>
         </tr>
         <tr>
           <td>First Post Published</td>
@@ -101,7 +101,7 @@
         {{ $yearPostCount := len (where .Pages "Type" "blog") }}
         <tr>
           <td>{{ .Key }}</td>
-          <td>{{ $yearPostCount | lang.NumFmt 0 }}</td>
+          <td>{{ $yearPostCount | lang.FormatNumberCustom 0 }}</td>
         </tr>
         {{ $scratch.Add "yearKeys" "'"  }}
         {{ $scratch.Add "yearKeys" .Key  }}
