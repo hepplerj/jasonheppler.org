@@ -511,6 +511,7 @@ footer p {
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   grid-template-columns: 1fr min-content;
+  margin-bottom: 0.8em;
 }
 
 .books>div {
@@ -1113,7 +1114,6 @@ article.syllabus h3 {
 article.syllabus nav a {
   text-decoration: underline;
   text-decoration-thickness: 0.1em;
-  text-decoration-width: 0.1em;
 }
 
 article.syllabus nav#TableOfContents {
@@ -1136,6 +1136,22 @@ article.syllabus nav#TableOfContents ul li {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.badge-due {
+  background: var(--theme-mark);
+  color: var(--theme-text);
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.badge-warn {
+  background: var(--theme-mark);
+  color: var(--theme-text);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
 }
 
 /* Media queries */
