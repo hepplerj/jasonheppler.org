@@ -1,0 +1,47 @@
+name: build and deploy jasonheppler.org
+
+# The trigger for the action
+on:
+  push:
+    branches:
+    - main
+
+# Jobs are contains steps
+jobs:
+  build_deploy:
+    name: build and deploy
+    # This job runs on linux
+    runs-on: ubuntu-latest
+    
+    steps:
+    # The first step is provided by GitHub and it checks out 
+    # the master branch on the runner
+    - uses: actions/checkout@main
+      with:
+        submodules: true
+    
+    # This step uses an action created by a user which sets
+    # up Hugo on the runner and runs the hugo command to build
+    # the site
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+          hugo-version: '0.62.2'
+          
+    - name: Build
+      run: hugo --minify
+      
+	  # # The last step deploys the site to my server by running 
+	  # # the deploy script located in the ci directory 
+	  # # within the repo
+   #  - name: deploy
+   #    run: source $GITHUB_WORKSPACE/ci/deploy.sh
+   #    env:
+	  #     # This section sets up the environment used by the 
+	  #     # deploy script. These values are injected from 
+	  #     # the repo's secret store
+   #      ACTIONS_DEPLOY_KEY: ${{ secrets.BDEPLOY_KEY }}
+   #      SSH_USERNAME: ${{ secrets.SSH_USER }}
+   #      SERVER_ADDRESS: ${{ secrets.SSH_SERVER }}
+   #      SERVER_DESTINATION: ${{ secrets.DEST_DIR }}
+   #      SSH_PORT: ${{ secrets.SSH_PORT }}
