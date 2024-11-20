@@ -4,7 +4,7 @@ email: "jheppler@gmu.edu"
 instructor: Jason Heppler
 instructorurl: "https://jasonheppler.org"
 office: Remote
-officehours: "By appointment"
+officehours: "By appointment, Tu/Th"
 room: Zoom
 zoomUrl: "https://gmu.zoom.us/j/91417854672"
 semester: Spring
@@ -13,7 +13,7 @@ number: "HIST 694"
 site: "https://historyarthistory.gmu.edu/programs/la-cerg-dph/overview"
 toc: true
 university: George Mason University
-year: 2024
+year: 2025
 ShowToc: true
 ---
 
@@ -51,11 +51,10 @@ Because the course happens online rather than face to face, I'll also be asking 
 
 There are several ways that we will communicate this semester, all listed below. Please note that I take Saturdays off from email/text/etc., and I'm fairly limited on Sundays as well. I should be available any other day of the week, but weekends will be considerably less or not at all.
 
-Slack: The single most important way we'll stay in touch is our class Slack channel (http://dphspring2024.slack.com). I will invite you to the channel just before the semester begins. If you haven't used Slack already, it is an easy to use, intuitive project management platform that I use for teaching and at RRCHNM for project management.
+Slack: The single most important way we'll stay in touch is our class Slack channel (http://dphspring2025.slack.com). I will invite you to the channel just before the semester begins. If you haven't used Slack already, it is an easy to use, intuitive project management platform that I use for teaching and at RRCHNM for project management.
 
 - **Email**: jheppler@gmu.edu.
 - **Zoom**: We'll be using Zoom throughout the semester for both individual meetings and our synchronous group sessions. The address of my Zoom room is [found here](/office-hours/).
-- **Cell**: I will provide my cell phone number via email. You should feel free to text me any time (although the weekend rule also holds for texts). Please be sure to identify yourself, because your phone number won't be in my contact list at first. If you call and aren't yet in my contacts, please text first so I know to answer. My phone screens every call not in my contact list.
 
 # Course Structure
 
@@ -140,13 +139,13 @@ For a good example of how digital project reviews may look, I strongly recommend
 
 Within the course website you will draft and revise two user personas to use with your work on your Major Digital Public History Project. Each persona should include fully articulated descriptions of a composite character's:
 
-- name,
-- demographic data,
-- descriptive title,
-- photograph,
-- quote,
-- a day-in-the-life narrative,
-- end goals (explicit and tacit).
+- name
+- demographic data
+- descriptive title
+- photograph
+- quote
+- a day-in-the-life narrative
+- end goals (explicit and tacit)
 
 The information required under each heading is described in detail in the online module.
 
@@ -173,7 +172,7 @@ Your work on the project will proceed through several development stages, includ
    - Audience engagement and usability
    - Appropriateness of technology
 
-5. A simple video (phones are fine as videocameras) of no more than 3 minutes that introduces a member of the general public to your project. The presentation should address the project's major historical questions and content, the intended audience, and its digital features.
+5. A simple video (phones are fine as video cameras) of no more than 3 minutes that introduces a member of the general public to your project. The presentation should address the project's major historical questions and content, the intended audience, and its digital features.
 6. The final prototype of your project should demonstrate all of the major features of your proposed work with enough depth of content and functionality that a user can get a sense of the ways that a larger implementation would address key historical questions and content, and use digital technologies to share that material with a public audience.
 
 # Credits
@@ -185,41 +184,46 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
 <div class="toc">
 <details>
   <summary>Module 1: Doing Public History</summary>
-  <h3>Welcome!</h3>
+  <p><em>After completing the readings and activities in this module you should: (1) Have a sense of the ways that digital public history work has changed from the advent of web access (mid-1990s) to the present; (2) Have developed a set of criteria for critically analyzing digital public history work.</em></p>
+  <h3>Readings and Activities: Public History</h3>
   <ul>
-  <li>Pre-Survey</li>
-  <li>A little about you and your goals</li>
+  <li>"Who's Public? Whose History? What Is the Goal of a Public Historian?" by Ronald J. Grele</li>
+  <li>"Museums, Monuments, and National Parks: Toward a New Genealogy of Public History," by Denise D. Meringolo</li>
+  <li>"A Picture of Public History," by John Dichtl and Robert B. Townsend</li>
+  <li>"<a href="https://www.oah.org/publications/jah/submit/digital-history-reviews/">Digital History Reviews</a>," The Journal of American History</li>
   </ul>
-  <h3>Setting Up</h3>
+  <h3>Readings and Activities: Digital History</h3>
+    <ul>
+      <li>Item 1</li>
+    </ul>
+  <h3>Assignments Due</h3>
   <ul>
-  <li>What's Next?</li>
+  <li>Pre-survey: A little about you and your goals</li>
   <li>Pre-Module Set Up</li>
   <li>Introductory Blog Post</li>
+  <li><span class="badge badge-due">All-Class Meeting 1/17 4:30pm ET: Introductions and Discussion</span></li>
   </ul>
-  <h3>Readings and Activities</h3>
-  <ul>
-   <li>"Who's Public? Whose History? What Is the Goal of a Public Historian?" by Ronald J. Grele</li>
-   <li>"Museums, Monuments, and National Parks: Toward a New Genealogy of Public History," by Denise D. Meringolo</li>
-   <li>"A Picture of Public History," by John Dichtl and Robert B. Townsend</li>
-  </ul>
-  <h3>Assignments</h3>
-  <ul>
-   <li>All-Class Meeting 1/17 4:30pm ET: Introductions and Discussion</li>
-  </ul>
+  <p><strong><span class="badge badge-warn">Module assignments due date: 1/17</span></strong></p>
 </details>
 </div>
 
 <div class="toc">
 <details>
-  <summary>Module 2: Survey of the Field</summary>
-  <blockquote>After completing the readings and activities in this module you should: (1) Have a sense of the ways that digital public history work has changed from the advent of web access (mid-1990s) to the present; (2) Have developed a set of criteria for critically analyzing digital public history work.</blockquote>
-  <h3>Readings and Activities</h3>
+  <summary>Module 2: Audience, Dialogue, and Co-Creation</summary>
+  <p><em>After completing the readings and activities in this module you should: (1) Gain an understanding of the central role of public engagement and co-creation in the practice of public history; (2) Exercise some user research techniques; (3) Practice developing specific and targeted user personas.</em></p>
+  <h3>Readings and Activities: Audience</h3>
   <ul>
-  <li>What's Next?</li>
-  <li>"Thinking Like a Historian," by Sam Wineburg</li>
-  <li>"<a href="https://www.oah.org/publications/jah/submit/digital-history-reviews/">Digital History Reviews</a>," The Journal of American History</li>
-  <li>"Building Histories of the National Mall: A Guide to Creating a Digital Public History Project," by Sheila Brennan and Sharon Leon with Megan Brett, Jannelle Legg, Michael O'Malley, Spencer Roberts, and Jim Safley</li>
+  <li><strong>Read</strong>: "Thinking Like a Historian," by Sam Wineburg</li>
+  <li><strong>Read</strong>: "Building Histories of the National Mall: A Guide to Creating a Digital Public History Project," by Sheila Brennan and Sharon Leon with Megan Brett, Jannelle Legg, Michael O'Malley, Spencer Roberts, and Jim Safley</li>
   </ul>
+  <h3>Readings and Activities: Shared Authority</h3>
+    <ul>
+  <li><strong>Read</strong>: "Creating a Dialogic Museum: The Chinatown History Museum Experiment," by John Kuo Wei Tchen</li>
+  <li><strong>Read</strong>: "Shared Inquiry in the Archives," Hillel Arnold and Laura Miller</li>
+  <li><strong>Read</strong>: "Sharing Authority in Online Collaborative Public History Practices," by Serge Noiret</li>
+  <li><strong>Read</strong>: "A Shared Inquiry into Shared Inquiry," by Katharine T. Corbett and Howard S. Miller</li>
+  <li><strong>Activity</strong>: Articulating Primary and Secondary Audiences</li>
+</ul>
   <h3>Assignments</h3>
   <ul>
    <li>Revising Review Guidelines</li>
@@ -227,13 +231,14 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
    <li>Comparative Review of Digital Public History Projects</li>
    <li>Major Assignment: Physical / Digital Site Comparative Review</li>
   </ul>
+  <p><strong><span class="badge badge-warn">Module assignments due date: 1/17</span></strong></p>
 </details>
 </div>
 
 <div class="toc">
 <details>
   <summary>Module 3: Audience, Dialogue, and Co-Creation</summary>
-  <blockquote>After completing the readings and activities in this module you should: (1) Gain an understanding of the central role of public engagement and co-creation in the practice of public history; (2) Exercise some user research techniques; (3) Practice developing specific and targeted user personas.</blockquote>
+  <p><em>After completing the readings and activities in this module you should: (1) Gain an understanding of the central role of public engagement and co-creation in the practice of public history; (2) Exercise some user research techniques; (3) Practice developing specific and targeted user personas.</em></p>
   <p><strong>2/15 or 2/16</strong>: Meet individually with Instructor</p>
   <h3>Readings and Activities: Shared Authority</h3>
   <ul>
@@ -269,7 +274,7 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
 <div class="toc">
 <details>
   <summary>Module 4: Collections</summary>
-  <blockquote>After completing the readings and activities in this module you should: (1) Understand what metadata is and why it is important; (2) Understand the ways that digital collections are basic to most other digital public history work; (3) Understand the ways that the public participates in building, improving, and commenting on digital collections.</blockquote>
+  <p><em>After completing the readings and activities in this module you should: (1) Understand what metadata is and why it is important; (2) Understand the ways that digital collections are basic to most other digital public history work; (3) Understand the ways that the public participates in building, improving, and commenting on digital collections.</em></p>
   <p><strong>All-Class Meeting 2/28 4:30pm ET: Check-In</strong></p>
   <h3>Readings and Activities: Digital Collections</h3>
   <ul>
@@ -296,7 +301,7 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
 <div class="toc">
 <details>
   <summary>Module 5: Narrative Interpretation</summary>
-  <blockquote>After completing the readings and activities in this module you should: (1) Understand the possibilities for deliberately planning the content elements of narrative interpretation to highlight principles of historical thinking; (2) Understand the complexities of planning for non-linear interpretive work; (3) Understand the range of decisions involved in planning the content elements and user experience workflow for a digital exhibit; (4) Understand the process of storyboarding, paper prototyping, and developing a content strategy.</blockquote>
+  <p><em>After completing the readings and activities in this module you should: (1) Understand the possibilities for deliberately planning the content elements of narrative interpretation to highlight principles of historical thinking; (2) Understand the complexities of planning for non-linear interpretive work; (3) Understand the range of decisions involved in planning the content elements and user experience workflow for a digital exhibit; (4) Understand the process of storyboarding, paper prototyping, and developing a content strategy.</em></p>
   <strong>All-Class Meeting 3/13 6pm ET: Check-In</strong>
   <h3>Readings and Activities: Narrative</h3>
   <ul>
@@ -327,10 +332,10 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
 <div class="toc">
 <details>
   <summary>Module 6: Local Sites and Community History</summary>
-  <blockquote>After completing the readings and activities in this module you should: (1) Understand some of the ways that local historians can make use of digital tools to gather and share their stories and materials; (2) Understand some of the ways that dispersed individuals make use of digital tools to forge and strengthen communities.
+  <p><em>After completing the readings and activities in this module you should: (1) Understand some of the ways that local historians can make use of digital tools to gather and share their stories and materials; (2) Understand some of the ways that dispersed individuals make use of digital tools to forge and strengthen communities.</em></p>
   
-  Remember, this is a flex week, so you can complete it at any time before April 1, 2024. But, each week you will need to write a blog post offering an update on your progress on your project.
-  </blockquote>
+  <p><em>Remember, this is a flex week, so you can complete it at any time before April 1, 2024. But, each week you will need to write a blog post offering an update on your progress on your project.
+  </em></p>
   <h3>Readings and Activities</h3>
   <ul>
    <li>"Community Exhibition: History, Identity, and Dialogue," by Tammy Gordon</li>
@@ -349,9 +354,9 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
 <div class="toc">
 <details>
   <summary>Module 7: Oral History</summary>
-  <blockquote>After completing the readings and activities in this module you should: (1) Be conversant with the latest practices in digital oral history work; (2) Have a familiarity with the digital tools that can support this work.
+  <p><em>After completing the readings and activities in this module you should: (1) Be conversant with the latest practices in digital oral history work; (2) Have a familiarity with the digital tools that can support this work.</em></p>
   
-  Remember, this is a flex week, so you can complete it at any time before April 1, 2024. But, each week you will need to write a blog post offering an update on your progress on your project.</blockquote>
+  <p><em>Remember, this is a flex week, so you can complete it at any time before April 1, 2024. But, each week you will need to write a blog post offering an update on your progress on your project.</em></p>
   <h3>Readings and Activities</h3>
   <ul>
   <li>"OHMS: Enhancing Access to Oral History for Free," by Doug Boyd</li>
@@ -369,9 +374,9 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
 <div class="toc">
 <details>
   <summary>Module 8: Landscape, Mobile</summary>
-  <blockquote>After completing the readings and activities in this module you should: (1) Understand the ways that doing digital history in place shapes the experience; (2) Understand the ways that creating public history materials for use with mobile computing devices differs from developing materials for desktop computing devices.
+  <p><em>After completing the readings and activities in this module you should: (1) Understand the ways that doing digital history in place shapes the experience; (2) Understand the ways that creating public history materials for use with mobile computing devices differs from developing materials for desktop computing devices.</em></p>
   
-  Remember, this is a flex week, so you can complete it at any time before April 1, 2024. But, each week you will need to write a blog post offering an update on your progress on your project.</blockquote>
+  <p><em>Remember, this is a flex week, so you can complete it at any time before April 1, 2024. But, each week you will need to write a blog post offering an update on your progress on your project.</em></p>
   <h3>Readings and Activities</h3>
   <ul>
    <li>"Virtual Reality is a big trend in museums, but what are the best examples of museums using VR?" by Charlotte Coates</li>
@@ -391,9 +396,9 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
 <div class="toc">
 <details>
   <summary>Module 9: Podcasting</summary>
-  <blockquote>After completing the readings and activities in this module you should: (1) Understand the ways that podcasting can be used to communicate historical content; (2) Understand the ways that podcasting can help to build a community around a public history project.
+  <p><em>After completing the readings and activities in this module you should: (1) Understand the ways that podcasting can be used to communicate historical content; (2) Understand the ways that podcasting can help to build a community around a public history project.</em></p>
   
-  Remember, this is a flex week, so you can complete it at any time before April 1, 2024. But, each week you will need to write a blog post offering an update on your progress on your project.</blockquote>
+  <p><em>Remember, this is a flex week, so you can complete it at any time before April 1, 2024. But, each week you will need to write a blog post offering an update on your progress on your project.</em></p>
   <h3>Readings and Activities</h3>
   <ul>
   <li>"Podcasts and public history," by Jim McGrath</li>
@@ -414,7 +419,7 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
 <div class="toc">
 <details>
   <summary>Module 10: Drafts</summary>
-  <blockquote>This week offers you the opportunity to share your almost-complete project work. In module 12, you will benefit from the feedback of your peers as you move forward to refine your project over the next several weeks.</blockquote>
+  <p><em>This week offers you the opportunity to share your almost-complete project work. In module 12, you will benefit from the feedback of your peers as you move forward to refine your project over the next several weeks.</em></p>
   <ul>
   <li>Submission of Materials</li>
   </ul>
@@ -424,7 +429,7 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
 <div class="toc">
 <details>
   <summary>Module 11: Evaluation</summary>
-  <blockquote>After completing the readings and activities in this module you should: (1) Understand the value of planning evaluation as a digital public history project develops; (2) Understand the ways that ongoing evaluation can offer a path to making mid-course corrections; (3) Understand the process of designing and implementing an evaluation plan.</blockquote>
+  <p><em>After completing the readings and activities in this module you should: (1) Understand the value of planning evaluation as a digital public history project develops; (2) Understand the ways that ongoing evaluation can offer a path to making mid-course corrections; (3) Understand the process of designing and implementing an evaluation plan.</em></p>
   <p><strong>4/11 or 4/12: Meet individually with Instructor</strong></p>
   <h3>Readings and Activities</h3>
   <ul>
@@ -446,7 +451,7 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
 <div class="toc">
 <details>
   <summary>Module 12: Penultimate Project Presentations</summary>
-  <blockquote>In this module, you will review a fellow classmate's project and receive feedback. You will also have a chance to pitch your project to a general audience by creating an overview video that would draw the interest of a range of stakeholders.</blockquote>
+  <p><em>In this module, you will review a fellow classmate's project and receive feedback. You will also have a chance to pitch your project to a general audience by creating an overview video that would draw the interest of a range of stakeholders.</em></p>
   <p><strong>All-Class Meeting 4/18 6pm ET: Check-In</strong></p>
   <h3>Readings and Activities</h3>
   <ul>
@@ -463,7 +468,7 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
 <div class="toc">
 <details>
   <summary>Module 13: Final Materials</summary>
-  <blockquote>This is the final week of the course. Share your work and reflect upon the process and the course!</blockquote>
+  <p><em>This is the final week of the course. Share your work and reflect upon the process and the course!</em></p>
   <ul>
    <li>Submit Final Project Materials</li>
    <li>Blog Post on Process</li>

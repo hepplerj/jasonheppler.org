@@ -10,7 +10,7 @@ Studying history gives you [a lifetime of critical skills](http://www.nytimes.co
 
 <div class="teaching">
   <div>
-    <div>Web Programming for Historians</div>
+    <div><a href="/courses/dph.2025/">Digital Public History</a></div>
     <div>Spring 2025</div>
   </div>
   <div>
