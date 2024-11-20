@@ -1,26 +1,35 @@
 {{ partial "head.html" . }}
 
-<div class='pad2y limiter content'>
-  <div class="body"> 
-<article class="syllabus" id="{{ urlize .Title }}">
-  <h1 class="syllabus-title">{{ .Title }} ({{ .Params.semester }} {{ .Params.year }})</h1>
-    <aside>
-    <p>
-      <strong>Course:</strong> <em>{{ .Title }}</em>. {{ .Params.semester}} {{ .Params.year }}. {{ .Params.department}}, {{ .Params.university }}. 
-      <!--{{ .Params.credits }} credits. Meets {{ .Params.meets }} in {{ .Params.room }}.-->
-    </p>
-    <p>
-      <strong>Instructor:</strong> <a href=" {{ .Params.instructorurl }}">{{ .Params.instructor }}</a> &lt;<a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>&gt;. Office: {{ .Params.office }}. Office hours: {{ .Params.officehours }}. <span>How to <a href="/office-hours/">book an appointment</a>.</span>
-    </p>
-  </aside>
+<div class="pad2y limiter content">
+  <div class="body">
+    <article class="syllabus" id="{{ urlize .Title }}">
+      <h1 class="syllabus-title">
+        {{ .Title }} ({{ .Params.semester }} {{ .Params.year }})
+      </h1>
+      <aside>
+        <p>
+          <strong>Course:</strong> 
+          {{ with .Params.site }}
+            <a href="{{ . }}">{{ $.Params.number }}</a>
+          {{ else }}
+            {{ $.Title }}
+          {{ end }}. {{ .Params.semester }} {{ .Params.year }}. {{ .Params.department}}, {{
+          .Params.university }}.
+        </p>
+        <p>
+          <strong>Instructor:</strong>
+          <a href=" {{ .Params.instructorurl }}">{{ .Params.instructor }}</a>
+          &lt;<a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>&gt;.
+          Office: {{ .Params.office }}. Office hours: {{ .Params.officehours }}.
+          <span>How to <a href="/office-hours/">book an appointment</a>.</span>
+        </p>
+      </aside>
 
-  {{- if (.Param "ShowToc") }}
-  {{- partial "toc.html" . }}
-  {{- end }}
-  
-  {{ .Content }}
-</article>
+      {{- if (.Param "ShowToc") }} {{- partial "toc.html" . }} {{- end }} {{
+      .Content }}
+    </article>
+  </div>
+
+  {{ partial "foot.html" . }}
 </div>
 
-{{ partial "foot.html" . }}
-</div>
