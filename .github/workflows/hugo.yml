@@ -22,14 +22,17 @@ jobs:
       run: hugo --minify
     - name: Create Archive
       run: tar -czf site.tar.gz public/
+    - name: Get current time
+      id: time
+      run: echo "timestamp=$(date +'%Y-%m-%d-%H-%M-%S')" >> $GITHUB_OUTPUT
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: release-${{ github.sha }}
-        release_name: Release ${{ github.sha }}
+        tag_name: release-${{ steps.time.outputs.timestamp }}
+        release_name: Release ${{ steps.time.outputs.timestamp }}
         draft: false
         prerelease: false
     - name: Upload Release Asset
