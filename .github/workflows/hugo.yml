@@ -30,18 +30,3 @@ jobs:
           
     - name: Build
       run: hugo --minify
-      
-	  # # The last step deploys the site to my server by running 
-	  # # the deploy script located in the ci directory 
-	  # # within the repo
-   #  - name: deploy
-   #    run: source $GITHUB_WORKSPACE/ci/deploy.sh
-   #    env:
-	  #     # This section sets up the environment used by the 
-	  #     # deploy script. These values are injected from 
-	  #     # the repo's secret store
-   #      ACTIONS_DEPLOY_KEY: ${{ secrets.BDEPLOY_KEY }}
-   #      SSH_USERNAME: ${{ secrets.SSH_USER }}
-   #      SERVER_ADDRESS: ${{ secrets.SSH_SERVER }}
-   #      SERVER_DESTINATION: ${{ secrets.DEST_DIR }}
-   #      SSH_PORT: ${{ secrets.SSH_PORT }}
