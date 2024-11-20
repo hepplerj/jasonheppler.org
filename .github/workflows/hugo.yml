@@ -1,32 +1,43 @@
 name: build and deploy jasonheppler.org
 
-# The trigger for the action
 on:
   push:
     branches:
     - main
 
-# Jobs are contains steps
 jobs:
   build_deploy:
     name: build and deploy
-    # This job runs on linux
     runs-on: ubuntu-latest
     
     steps:
-    # The first step is provided by GitHub and it checks out 
-    # the master branch on the runner
     - uses: actions/checkout@main
       with:
         submodules: true
-    
-    # This step uses an action created by a user which sets
-    # up Hugo on the runner and runs the hugo command to build
-    # the site
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
           hugo-version: '0.135.0'
-          
     - name: Build
       run: hugo --minify
+    - name: Create Archive
+      run: tar -czf site.tar.gz public/
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: release-${{ github.sha }}
+        release_name: Release ${{ github.sha }}
+        draft: false
+        prerelease: false
+    - name: Upload Release Asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./site.tar.gz
+        asset_name: site.tar.gz
+        asset_content_type: application/gzip
