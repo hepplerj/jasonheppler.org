@@ -53,24 +53,24 @@ jobs:
         asset_content_type: application/gzip
       
     - name: Setup SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
-          echo "Host ${{ secrets.SERVER_HOST }}
-            HostName ${{ secrets.SERVER_HOST }}
-            User ${{ secrets.SERVER_USER }}
-            IdentityFile ~/.ssh/deploy_key
-            IdentitiesOnly yes
-            StrictHostKeyChecking no" > ~/.ssh/config
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+        chmod 600 ~/.ssh/deploy_key
+        echo "Host ${{ secrets.SERVER_HOST }}
+          HostName ${{ secrets.SERVER_HOST }}
+          User ${{ secrets.SERVER_USER }}
+          IdentityFile ~/.ssh/deploy_key
+          IdentitiesOnly yes
+          StrictHostKeyChecking no" > ~/.ssh/config
 
-      - name: Deploy with rsync
-        run: |
-          rsync --omit-dir-times --checksum -avz --itemize-changes \
-          public/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:~/public_html/ | egrep -v '^\.'
+    - name: Deploy with rsync
+      run: |
+        rsync -avz --omit-dir-times --checksum --itemize-changes --delete \
+        public/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:~/public_html/ | egrep -v '^\.'
 
-      - name: Show changed files
-        run: |
-          ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} \
-          "find ~/public_html -type f -mtime -1 -ls | egrep -v '^\\.'"
+    - name: Show changed files
+      run: |
+        ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} \
+        "find ~/public_html -type f -mtime -1 -ls | egrep -v '^\\.'"
 
