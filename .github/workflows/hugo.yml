@@ -55,7 +55,7 @@ jobs:
     - name: Deploy to server
       uses: burnett01/rsync-deployments@6.0.0
       with:
-        switches: --omit-dir-times --exclude-from=rsync-excludes --checksum -avz --itemize-changes
+        switches: -avz --delete --exclude-from=rsync-excludes --omit-dir-times --checksum --itemize-changes
         path: public/
         remote_path: ~/public_html/
         remote_host: ${{ secrets.SERVER_HOST }}
