@@ -52,12 +52,25 @@ jobs:
         asset_name: site.tar.gz
         asset_content_type: application/gzip
       
-    - name: Deploy to server
-      uses: burnett01/rsync-deployments@6.0.0
-      with:
-        switches: -avz --delete --exclude-from=rsync-excludes --omit-dir-times --checksum --itemize-changes
-        path: public/
-        remote_path: ~/public_html/
-        remote_host: ${{ secrets.SERVER_HOST }}
-        remote_user: ${{ secrets.SERVER_USER }}
-        remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+    - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          echo "Host ${{ secrets.SERVER_HOST }}
+            HostName ${{ secrets.SERVER_HOST }}
+            User ${{ secrets.SERVER_USER }}
+            IdentityFile ~/.ssh/deploy_key
+            IdentitiesOnly yes
+            StrictHostKeyChecking no" > ~/.ssh/config
+
+      - name: Deploy with rsync
+        run: |
+          rsync --omit-dir-times --checksum -avz --itemize-changes \
+          public/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:~/public_html/ | egrep -v '^\.'
+
+      - name: Show changed files
+        run: |
+          ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} \
+          "find ~/public_html -type f -mtime -1 -ls | egrep -v '^\\.'"
+
