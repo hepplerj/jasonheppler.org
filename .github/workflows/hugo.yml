@@ -51,14 +51,11 @@ jobs:
         asset_path: ./site.tar.gz
         asset_name: site.tar.gz
         asset_content_type: application/gzip
-        
-    - name: Copy exclude file
-      run: cp rsync-excludes /tmp/rsync-excludes
       
     - name: Deploy to server
       uses: burnett01/rsync-deployments@6.0.0
       with:
-        switches: --omit-dir-times --exclude-from=/tmp/rsync-excludes --checksum -avz --itemize-changes
+        switches: --omit-dir-times --exclude-from=rsync-excludes --checksum -avz --itemize-changes
         path: public/
         remote_path: ~/public_html/
         remote_host: ${{ secrets.SERVER_HOST }}
