@@ -11,20 +11,26 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    
     - uses: actions/checkout@main
       with:
         submodules: true
+        
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
           hugo-version: '0.135.0'
+          
     - name: Build
       run: hugo --minify
+      
     - name: Create Archive
       run: tar -czf site.tar.gz public/
+      
     - name: Get current time
       id: time
       run: echo "timestamp=$(date +'%Y-%m-%d-%H-%M-%S')" >> $GITHUB_OUTPUT
+      
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -35,6 +41,7 @@ jobs:
         release_name: Release ${{ steps.time.outputs.timestamp }}
         draft: false
         prerelease: false
+        
     - name: Upload Release Asset
       uses: actions/upload-release-asset@v1
       env:
@@ -44,3 +51,16 @@ jobs:
         asset_path: ./site.tar.gz
         asset_name: site.tar.gz
         asset_content_type: application/gzip
+        
+    - name: Copy exclude file
+      run: cp rsync-excludes /tmp/rsync-excludes
+      
+    - name: Deploy to server
+      uses: burnett01/rsync-deployments@6.0.0
+      with:
+        switches: --omit-dir-times --exclude-from=/tmp/rsync-excludes --checksum -avz --itemize-changes
+        path: public/
+        remote_path: ~/public_html/
+        remote_host: ${{ secrets.SERVER_HOST }}
+        remote_user: ${{ secrets.SERVER_USER }}
+        remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
