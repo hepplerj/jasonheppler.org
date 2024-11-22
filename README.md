@@ -18,7 +18,7 @@ Test everything locally before uploading your site.
 
 ## Dependences
 
-- **Hugo**: >0.55.6
+- **Hugo**: >0.135.0
 - **Make**: >3.8
 
 To start, run `make` or `make preview`. A development version of the site will generate and open at `http://localhost:1313`
