@@ -187,14 +187,16 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
   <p><em>After completing the readings and activities in this module you should: (1) Have a sense of the ways that digital public history work has changed from the advent of web access (mid-1990s) to the present; (2) Have developed a set of criteria for critically analyzing digital public history work.</em></p>
   <h3>Readings and Activities: Public History</h3>
   <ul>
-  <li>"Who's Public? Whose History? What Is the Goal of a Public Historian?" by Ronald J. Grele</li>
-  <li>"Museums, Monuments, and National Parks: Toward a New Genealogy of Public History," by Denise D. Meringolo</li>
-  <li>"A Picture of Public History," by John Dichtl and Robert B. Townsend</li>
-  <li>"<a href="https://www.oah.org/publications/jah/submit/digital-history-reviews/">Digital History Reviews</a>," The Journal of American History</li>
+  <li><strong>Read</strong>: Ronald J. Grele, "<a href="https://www.jstor.org/stable/3377160">Who's Public? Whose History? What Is the Goal of a Public Historian?</a>," <em>The Public Historian</em>, vol. 3, no. 1 (Winter, 1981), pp. 40-48.</li>
+  <li><strong>Read</strong>: "Museums, Monuments, and National Parks: Toward a New Genealogy of Public History," by Denise D. Meringolo</li>
+  <li><strong>Read</strong>: John Dichtl and Robert B. Townsend, "<a href="https://www.historians.org/perspectives-article/a-picture-of-public-history-preliminary-results-from-the-2008-survey-of-public-history-professionals-september-2009/">A Picture of Public History</a>," <em>Perspectives on History</em>, September 1, 2009.</li>
+  <li><strong>Read</strong>: Robert Weible, "<a href="https://www.historians.org/publications-and-directories/perspectives-on-history/march-2008/defining-public-history-is-it-possible-is-it-necessary">Defining Public History: Is it Possible? Is it Necessary?</a>," <em>Perspectives on History</em>, March 1, 2008.</li>
   </ul>
   <h3>Readings and Activities: Digital History</h3>
     <ul>
-      <li>Item 1</li>
+      <li><strong>Read</strong>: Douglas Seefeldt and William G. Thomas, "<a href="https://www.historians.org/perspectives-article/what-is-digital-history-may-2009/">What is Digital History? A Look at Some Exemplar Projects</a>," <em>Perspectives on History</em>, May 1, 2009.</li>
+      <li><strong>Read</strong>: Dan Cohen and Roy Rosenzweig, "<a href="https://chnm.gmu.edu/digitalhistory/introduction/index.html">Introduction: Promises and Perils of Digital History</a>" and "<a href="https://chnm.gmu.edu/digitalhistory/starting/index.html">Getting Started</a>," in <em>Digital History</em>.</li>
+      <li><strong>Read</strong>: Miriam Posner, "<a href="http://miriamposner.com/blog/how-did-they-make-that/">How Did They Make That?</a>," August 29, 2013.</li>
     </ul>
   <h3>Assignments Due</h3>
   <ul>
@@ -224,6 +226,24 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
   <li><strong>Read</strong>: "A Shared Inquiry into Shared Inquiry," by Katharine T. Corbett and Howard S. Miller</li>
   <li><strong>Activity</strong>: Articulating Primary and Secondary Audiences</li>
 </ul>
+  <h3>Readings and Activities: Users</h3>
+  <ul>
+  <li>"Interviewing Humans," by Erika Hall</li>
+  <li><strong>Activity:</strong> Research Protocol</li>
+  <li><strong>Activity:</strong> End User Interview</li>
+  </ul>
+  <h3>Readings and Activities: Personas</h3>
+  <ul>
+  <li>"WOSP Personas," Te Papa: Digital Language System (July 2015)</li>
+  <li>A Closer Look at Personas, Pt 1.</li>
+  <li>A Closer Look at Personas, Pt. 2</li>
+  <li>"Three Technology Revolutions," Pew Research Center</li>
+  </ul>
+  <h3>Assignments</h3>
+  <ul>
+   <li>Portfolio blog post 1</li>
+  </ul>
+
   <h3>Assignments</h3>
   <ul>
    <li>Revising Review Guidelines</li>
@@ -237,19 +257,15 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
 
 <div class="toc">
 <details>
-  <summary>Module 3: Audience, Dialogue, and Co-Creation</summary>
+  <summary>Module 3: Museums</summary>
   <p><em>After completing the readings and activities in this module you should: (1) Gain an understanding of the central role of public engagement and co-creation in the practice of public history; (2) Exercise some user research techniques; (3) Practice developing specific and targeted user personas.</em></p>
   <p><strong>2/15 or 2/16</strong>: Meet individually with Instructor</p>
   <h3>Readings and Activities: Shared Authority</h3>
   <ul>
-  <li>What's Next?</li>
   <li>"Creating a Dialogic Museum: The Chinatown History Museum Experiment," by John Kuo Wei Tchen</li>
-  <li>"Shared Inquiry in the Archives," Hillel Arnold and Laura Miller</li>
-  <li>"Sharing Authority in Online Collaborative Public History Practices," by Serge Noiret</li>
-  <li>"A Shared Inquiry into Shared Inquiry," by Katharine T. Corbett and Howard S. Miller</li>
   <li><strong>Activity:</strong> Articulating Primary and Secondary Audiences</li>
   </ul>
-    <h3>Readings and Activities: Users</h3>
+  <!--
   <ul>
   <li>"Interviewing Humans," by Erika Hall</li>
   <li><strong>Activity:</strong> Research Protocol</li>
@@ -263,6 +279,7 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
   <li>"Three Technology Revolutions," Pew Research Center</li>
   <li><strong>Activity:</strong> User Research Findings</li>
   </ul>
+  -->
   <h3>Assignments</h3>
   <ul>
    <li>Major Assignment: Persona Construction</li>
@@ -273,7 +290,7 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
 
 <div class="toc">
 <details>
-  <summary>Module 4: Collections</summary>
+  <summary>Module 4: Collections and Archives</summary>
   <p><em>After completing the readings and activities in this module you should: (1) Understand what metadata is and why it is important; (2) Understand the ways that digital collections are basic to most other digital public history work; (3) Understand the ways that the public participates in building, improving, and commenting on digital collections.</em></p>
   <p><strong>All-Class Meeting 2/28 4:30pm ET: Check-In</strong></p>
   <h3>Readings and Activities: Digital Collections</h3>
@@ -282,7 +299,7 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
    <li>Describing metadata</li>
    <li>"Why Collecting History Online is Web 1.5," by Sheila A. Brennan and T. Mills Kelly</li>
    <li>"Smithsonian Team Flickr: A Library, Archives, and Museums Collaboration in Web 2.0 Space," by Martin R. Kalfatovic, Effle Kapsalis, Katherine P. Spiess, Anne Van Camp, and Michael Edson</li>
-   <li><strong>Activity:</strong> Explore Sites (Pick 2 not all 4)</li>
+   <li><strong>Activity:</strong> Explore Sites (pick 2, not all 4)</li>
   </ul>
   <h3>Readings and Activities: Omeka</h3>
   <ul>
@@ -434,6 +451,8 @@ This course heavily borrows from [Mills Kelly](https://millskelly.net).
   <h3>Readings and Activities</h3>
   <ul>
    <li>Digital History Project Reviews and Review Essays, NCPH</li>
+
+  <li>"<a href="https://www.oah.org/publications/jah/submit/digital-history-reviews/">Digital History Reviews</a>," The Journal of American History</li>
    <li>"Assessing the user experience (UX) of online museum collections: Perspectives from design and museum professionals," by Craig MacDonald</li>
    <li>"Following Through with Post-Launch Strategy," by Aaron Mentele</li>
    <li><a href="http://www.6floors.org/bracket/2018/04/14/reviewing-is-an-act-of-leadership/#more-736">Reviewing is an Act of Leadership</a>, by Sharon Leon</li>
