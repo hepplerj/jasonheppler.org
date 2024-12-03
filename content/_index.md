@@ -7,7 +7,7 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
 </div>
 
 <aside class="newsletter">
-  Consider subscribing to "<a href="https://buttondown.email/jheppler">Breve</a>," an occasional newsletter on digital history, design, creativity, and human knowledge.
+  Consider subscribing to "<a href="https://buttondown.email/jheppler">Breve</a>," an occasional newsletter on digital history, design, creativity, and computing.
   <form
     action="https://buttondown.email/api/emails/embed-subscribe/jheppler"
     method="post"
@@ -18,9 +18,23 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
     <input name="email" type="email" placeholder="your@email.me" aria-label="Email address input" />
     <input type="submit" value="Subscribe" />
   </form>
+</aside>
 
-You may also enjoy [subscribing to my weekly digest](https://social.jasonheppler.org/subscribe/) on micro.blog, which contains pretty much anything I post online.
+<hr/>
 
+<aside class="newsletter">
+<p>I also publish a newsletter on my current research called "<a href="https://ink.jasonheppler.org/subscribe">Tack &amp; Ink</a>," focused on the American West, agricultural history, and political culture.</p>
+
+<form
+    action="https://micro.blog/users/subscribe/179021"
+    method="post"
+    class="subscription-input"
+  >
+    <input name="email" type="email" placeholder="your@email.me" aria-label="Email address input" />
+    <input type="submit" value="Subscribe" />
+  </form>
+
+<p>You may also enjoy <a href="https://social.jasonheppler.org/subscribe/">subscribing to my weekly digest</a> on micro.blog, which contains pretty much anything I post online. (Curious what micro.blog is? <a href="https://blog.ayjay.org/the-three-paths-of-micro-blog/">Here's a good summary</a>.)</p>
 </aside>
 
 <hr/>
