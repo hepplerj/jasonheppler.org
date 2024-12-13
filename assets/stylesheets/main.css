@@ -413,10 +413,23 @@ aside.warn {
   background: none;
 }
 
+.newsletter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .newsletter-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 aside.newsletter {
   background: var(--color-aside);
   padding: 15px;
   margin: 0 auto;
+  margin-top: 8px;
   width: 78%;
   font-size: var(--type-small);
   text-align: center;

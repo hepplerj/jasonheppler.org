@@ -50,6 +50,7 @@ slug: "/about/"
 
 <h2>Other pages on this site</h2>
 	<ul class="list-unstyled noted">
+    <li><a href="/newsletter">Newsletter</a></li>
 		<li><a href="/uses">Uses</a></li>
 		<li><a href="/now">Now</a></li>
     <li><a href="/stats">Stats</a></li>

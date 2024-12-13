@@ -6,8 +6,9 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
 <p>I am a historian of the environment and capitalism in the twentieth century North American West and Great Plains. I am the senior developer-scholar at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> and a member of the <a href="https://historyarthistory.gmu.edu">Department of History and Art History</a> at George Mason University and Affiliate Fellow at the <a href="https://www.unl.edu/plains/">Center for Great Plains Studies</a> at the <a href="https://www.unl.edu">University of Nebraska-Lincoln</a>.
 </div>
 
+<div class="newsletter-grid">
 <aside class="newsletter">
-  Consider subscribing to "<a href="https://buttondown.email/jheppler">Breve</a>," an occasional newsletter on digital history, design, creativity, and computing.
+  <p>Consider subscribing to "<a href="https://buttondown.email/jheppler">Breve</a>," an occasional newsletter on digital history, design, creativity, computing, and things I'm working on.</p>
   <form
     action="https://buttondown.email/api/emails/embed-subscribe/jheppler"
     method="post"
@@ -19,8 +20,6 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
     <input type="submit" value="Subscribe" />
   </form>
 </aside>
-
-<hr/>
 
 <aside class="newsletter">
 <p>I also publish a newsletter on my current research called "<a href="https://ink.jasonheppler.org/subscribe">Tack &amp; Ink</a>," focused on the American West, agricultural history, and political culture.</p>
@@ -34,7 +33,11 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
     <input type="submit" value="Subscribe" />
   </form>
 
-<p>You may also enjoy <a href="https://social.jasonheppler.org/subscribe/">subscribing to my weekly digest</a> on micro.blog, which contains pretty much anything I post online. (Curious what micro.blog is? <a href="https://blog.ayjay.org/the-three-paths-of-micro-blog/">Here's a good summary</a>.)</p>
+</aside>
+</div>
+
+<aside class="newsletter">
+<p style="text-align: center;">You may also enjoy <a href="https://social.jasonheppler.org/subscribe/">subscribing to my weekly digest</a> on micro.blog, which contains pretty much anything I post online. (Curious what micro.blog is? <a href="https://blog.ayjay.org/the-three-paths-of-micro-blog/">Here's a good summary</a>.)</p>
 </aside>
 
 <hr/>
