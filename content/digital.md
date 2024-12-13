@@ -3,9 +3,20 @@ title: "Digital & Public History"
 slug: '/research/'
 ---
 
-I've been designing, developing, and teaching digital and public history for ten years. Most of this work sits at the intersection of digital history, computational research, community-engaged and public-facing work, and design. Find more on [GitHub](http://github.com/hepplerj) and [Observable](https://observablehq.com/@hepplerj). For a complete list of my scholarship, please see my [full CV](https://jasonheppler.org/files/jah-cv.pdf).
+I've been designing, developing, and teaching digital and public history for ten years. Most of this work sits at the intersection of digital history, computational research, community-engaged and public-facing work, and design. The following are a combination of solo projects and collaborative digital history. Find more on [GitHub](http://github.com/hepplerj) and [Observable](https://observablehq.com/@hepplerj). For a complete list of my scholarship, please see my [full CV](https://jasonheppler.org/files/jah-cv.pdf).
 
 <div class="project-box">
+
+  <a class="project" href="https://connectingthreads.co.uk/">
+    <img src="/assets/images/portfolio_ct.jpg" alt="Connecting Threads" loading="lazy" />
+    <p class="small"><span class="project-title">Connecting Threads</span> Amplifying the contributions of Indian weavers and African Caribbean consumers to global histories of dress.</p>
+  </a>
+
+  
+  <a class="project" href="https://denigmanuscript.org">
+    <img src="/assets/images/portfolio_denig.png" alt="Denig Manuscript" loading="lazy" />
+    <p class="small"><span class="project-title">The Denig Manuscript</span> An eighteenth-century Pennsylvania merchant's manuscript and watercolor.</p>
+  </a>
 
   <a class="project" href="https://datascribe.tech">
     <img src="/assets/images/portfolio_datascribe.png" alt="DataScribe" loading="lazy" />
