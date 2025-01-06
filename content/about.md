@@ -30,10 +30,6 @@ slug: "/about/"
 
   <p class="noted"><a href="mailto:jason@jasonheppler.org">jason@jasonheppler.org</a></p>
 
-  <hr/>
-
-  <p class="noted"><a href="/newsletter">Subscribe to Breve</a>, my occasional newsletter on design, creativity, and human knowledge.</p>
-
 <h2>Privacy</h2>
 
 <p class="noted">I take your privacy seriously. I use a lightweight and privacy-centric tracker called <a href="https://plausible.io">Plausible</a>, which interprets information your browser already sends (like IP address, screen resolution, browser, and operating system.) If you're running Do Not Track on your browser, Plausible won't track you.</p>
@@ -42,7 +38,7 @@ slug: "/about/"
 
 <h2>Colophon</h2>
 
-<p class="noted">This website is built with the static site generator <a href="https://gohugo.io">Hugo</a>. This is a <a href="/low-impact/">low impact website</a>.</p>
+<p class="noted">This website is built with the static site generator <a href="https://gohugo.io">Hugo</a>. The blog is powered by <a href="https://micro.blog">micro.blog</a>. This is a <a href="/low-impact/">low impact website</a>.</p>
 
 <h2>Support</h2>
 
@@ -53,22 +49,8 @@ slug: "/about/"
     <li><a href="/newsletter">Newsletter</a></li>
 		<li><a href="/uses">Uses</a></li>
 		<li><a href="/now">Now</a></li>
-    <li><a href="/stats">Stats</a></li>
     <li><a href="/norwegian">Norwegian learning resources</a></li>
     <li><a href="/office-hours">Office hours resources for students</a></li>
 	</ul>
-
-<h2>Elsewhere on the internet</h2>
-	<ul class="list-unstyled noted">
-		<li><a href="https://social.jasonheppler.org/">Micro.blog</a></li>
-    <li><a href="https://historians.social/@jaheppler">Fediverse</a></li>
-		<li><a href="https://github.com/hepplerj">GitHub</a></li>
-		<li><a href="https://observablehq.com/@hepplerj?tab=profile">Observable</a>
-		<li><a href="https://orcid.org/0000-0003-4158-6186">ORCID</a>
-		<li><a href="https://scholar.google.com/citations?user=X2hGnS4AAAAJ">Google Scholar</a></li>
-		<li><a href="https://historyarthistory.gmu.edu/people/jheppler">GMU homepage</a></li>
-		<li><a href="https://hcommons.org/members/hepplerj/">Humanities Commons</a></li>
-		<li><a href="https://www.zotero.org/hepplerj">Zotero</a></li>
-	</ul>
-  </div>
+</div>
 </section>
