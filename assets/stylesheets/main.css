@@ -259,6 +259,7 @@ h3 {
   font-size: 1.35rem;
   font-weight: 500;
   line-height: 1.4;
+  text-align: justify;
 }
 
 .noted {
@@ -693,7 +694,143 @@ footer p {
   margin: 0 auto;
 }
 
-/* Masonry */
+/* Homepage: two col layout */
+.two-column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.column {
+  min-width: 0;
+}
+
+.column ul,
+.column ol {
+  margin: 0 0 1rem 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+}
+
+.column li+li {
+  margin-top: 0.5rem;
+}
+
+.column li {
+  padding-left: 0;
+  text-indent: -1rem;
+}
+
+.column h3 {
+  margin-top: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: var(--text-xxx-small);
+  color: var(--theme-links);
+}
+
+.column p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.column ul,
+.column ol {
+  margin: 0 0 1rem 1.5rem;
+  line-height: 1.6;
+}
+
+.column li+li {
+  margin-top: 0.5rem;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
+
+/* Homepage: book grid */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.book-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  min-height: 400px;
+}
+
+.cover-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.book-cover {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.book-links {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 200px;
+  align-self: end;
+}
+
+.book-links a {
+  background: var(--theme-links);
+  color: var(--color-aside);
+  border: 1px solid var(--color-base);
+  border-radius: 5px;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.book-links a:hover {
+  background: var(--theme-links-hover);
+  color: var(--color-aside);
+  transition: background 0.3s ease-in-out;
+}
+
+/* Posts: Masonry */
 .masonry-grid {
   display: grid;
   gap: 1rem;
