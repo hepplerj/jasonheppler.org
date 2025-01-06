@@ -1,5 +1,5 @@
 ---
-title: "Now; or, what I'm currently working on"
+title: "Now"
 url: /now/
 ---
 
