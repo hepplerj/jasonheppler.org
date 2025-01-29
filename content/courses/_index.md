@@ -8,6 +8,8 @@ Studying history gives you [a lifetime of critical skills](http://www.nytimes.co
 
 ---
 
+### Courses
+
 <div class="teaching">
   <div>
     <div><a href="/courses/dph.2025/">Digital Public History</a></div>
@@ -25,6 +27,25 @@ Studying history gives you [a lifetime of critical skills](http://www.nytimes.co
     <div>Digital Methods for Military History</div>
     <div>June 2021</div>
   </div>
+  <div>
+    <div><a href="https://hcommons.org/deposits/item/hc:17867/">Directed Readings in Digital History</a></div>
+    <div>Spring 2018</div>
+  </div>
+<div>
+    <div><a href="https://jasonheppler.org/files/Heppler_Mullen-DHSI.pdf">R, Interactive Graphics, and Data Visualization</a> (with Lincoln Mullen) </div>
+    <div>Summer 2016</div>
+  </div>
+
+  <div>
+    <div><a href="https://jasonheppler.org/teaching/hist205f.2014/">Digital History: Sources, Methods, Problems</a></div>
+    <div>Fall 2014</div>
+  </div>
+
+</div>
+
+<h3 style="padding-top: 2rem;">Workshops</h3>
+
+<div class="teaching">
   <div>
     <div><a href="/courses/bootcampr.2021/">BootcampR: An Introduction to R</a></div>
     <div>Spring 2021</div>
@@ -48,10 +69,6 @@ Studying history gives you [a lifetime of critical skills](http://www.nytimes.co
   <div>
     <div>Workshop: Dynamic Digital Methods for Integrating Local History <br/> into Public History Institutions and the K-16 Classroom</div>
     <div>Fall 2018</div>
-  </div>
-  <div>
-    <div><a href="https://hcommons.org/deposits/item/hc:17867/">Directed Readings in Digital History</a></div>
-    <div>Spring 2018</div>
   </div>
   <div>
     <div><a href="https://jasonheppler.org/courses/aha-workshop-2018/">Workshop: Introduction to Network Analysis</a></div>
@@ -85,20 +102,12 @@ Studying history gives you [a lifetime of critical skills](http://www.nytimes.co
     <div><a href="https://jasonheppler.org/courses/csu-workshop/">Workshop: Maps and Networks in the Classroom</a></div>
     <div>Summer 2016</div>
   </div>
-  <div>
-    <div><a href="https://jasonheppler.org/files/Heppler_Mullen-DHSI.pdf">R, Interactive Graphics, and Data Visualization</a> (with Lincoln Mullen) </div>
-    <div>Summer 2016</div>
-  </div>
-  <div>
+    <div>
     <div>Workshop: Data Preparation and Data Uncertainty</div>
     <div>Spring 2016</div>
   </div>
   <div>
     <div><a href="https://docs.google.com/document/d/11Efu9HDXd2ASVCDIGUtJxQE-JOlOCSw1G5V26TTOuNU/edit">Workshop: Teaching Digital History</a></div>
     <div>Spring 2015</div>
-  </div>
-  <div>
-    <div><a href="https://jasonheppler.org/teaching/hist205f.2014/">Digital History: Sources, Methods, Problems</a></div>
-    <div>Fall 2014</div>
   </div>
 </div>

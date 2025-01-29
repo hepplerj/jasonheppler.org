@@ -29,7 +29,7 @@
   --color-neutral: var(--color-grey);
   --color-link: var(--color-deep-purple);
   --color-aside: #fffefa;
-  --color--aside-faded: #eeeade;
+  --color-aside-faded: #eeeade;
   --theme-background: var(--color-background);
   --theme-text: var(--color-text);
   --theme-links: var(--color-deep-purple);
@@ -48,7 +48,7 @@
   --space-navbar: var(--space-triple);
   --space-mobile: 85%;
   --grid--gutter: 1.25rem;
-  --font-serif: et-book, Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;
+  --font-serif: charter, et-book, Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;
   --font-sans: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
   --font-mono: "iA Writer Duospace", San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   --type-base: calc(1.5em + 0.5vw);
@@ -69,25 +69,41 @@
 }
 
 @font-face {
-  font-family: "Sentient";
-  src: url(/assets/fonts/Sentient-VariableItalic.woff2) format("woff");
-  font-style: italic;
+  font-family: charter;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  src: url('/assets/fonts/charter_regular.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: "Sentient";
-  src: url(/assets/fonts/Sentient-Variable.woff2) format("woff");
+  font-family: charter;
+  font-style: italic;
+  font-weight: normal;
+  font-stretch: normal;
+  src: url('/assets/fonts/charter_italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: charter;
+  font-style: normal;
+  font-weight: bold;
+  font-stretch: normal;
+  src: url('/assets/fonts/charter_bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: charter;
+  font-style: italic;
+  font-weight: bold;
+  font-stretch: normal;
+  src: url('/assets/fonts/charter_bold_italic.woff2') format('woff2');
 }
 
 @font-face {
   font-family: "PublicSans";
   src: url(/assets/fonts/PublicSans-Regular.woff2) format("woff");
   font-weight: 400;
-}
-
-@font-face {
-  font-family: "Dirk";
-  src: url(/assets/fonts/Dirk-Black.woff2) format("woff");
 }
 
 @font-face {
@@ -112,8 +128,8 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   line-height: 1.6;
-  font-size: 1rem;
-  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  font-family: var(--font-serif);
   background: var(--theme-background);
   color: var(--theme-text);
 }
@@ -236,8 +252,6 @@ h2,
 h3 {
   margin-bottom: 0.5rem;
   line-height: 1.25;
-  /*font-family: var(--font-serif);*/
-  font-weight: 300;
 }
 
 h1 {
@@ -256,10 +270,16 @@ h3 {
 }
 
 .lede p {
-  font-size: 1.35rem;
-  font-weight: 500;
-  line-height: 1.4;
-  text-align: justify;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  text-align: left;
+  padding: var(--spacing-xxx-large)
+}
+
+.lede> :first-child {
+  margin-top: 30vh;
+  margin-bottom: var(--spacing-xxx-large);
+  min-height: 25vh;
 }
 
 .noted {
@@ -267,7 +287,7 @@ h3 {
 }
 
 .limiter {
-  max-width: 780px;
+  max-width: 770px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
@@ -405,7 +425,7 @@ aside {
   padding: 15px;
   margin-top: 8px;
   margin-bottom: 8px;
-  border: 1px solid var(--color--aside-faded);
+  border: 1px solid var(--color-aside-faded);
 }
 
 aside.warn {
@@ -784,7 +804,6 @@ footer p {
   display: grid;
   grid-template-rows: auto 1fr;
   justify-items: center;
-  min-height: 400px;
 }
 
 .cover-container {
@@ -883,12 +902,31 @@ footer p {
   padding: 0.5em;
 }
 
-.post-body details[open] {
-  /* padding: 0.5em; */
+.book-buy {
+  padding-top: .5rem;
+  font-size: var(--type-small);
+}
+
+.book-grid details {
+  border: 1px solid var(--color-aside-faded);
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+.book-grid details[open] summary {
+  border-bottom: 1px solid var(--color-aside-faded);
+  margin-bottom: 0.5em;
+}
+
+.book-grid summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 .post-body details[open] summary {
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid var(--color-aside-faded);
   margin-bottom: 0.5em;
 }
 
@@ -926,7 +964,7 @@ footer p {
 }
 
 .link-post-header {
-  border-bottom: 2px solid var(--color--aside-faded);
+  border-bottom: 2px solid var(--color-aside-faded);
   padding-bottom: 1rem;
   display: flex;
   justify-content: space-between;
@@ -934,7 +972,7 @@ footer p {
 }
 
 .link-post-body {
-  border: 2px solid var(--color--aside-faded);
+  border: 2px solid var(--color-aside-faded);
   padding: 1rem;
   margin-bottom: 2rem;
 }
@@ -1081,43 +1119,56 @@ p>code {
   margin-right: 5px;
 }
 
-.subscription-input {
+.subscribe-container,
+.subscribe-container form {
   display: flex;
+  width: 100%
 }
 
-.subscription-input input {
-  border: 1px solid var(--color-base);
-  border-radius: 5px;
-  padding: 10px;
-  width: 100%;
+.subscribe-container input[type=email],
+.subscribe-container input[type=submit] {
+  background: var(--color-aside);
+  border: 1px solid var(--color-aside-faded);
   box-sizing: border-box;
-  font-size: 14px;
-  line-height: 1.4em;
-  margin-right: 10px;
+  font-size: var(--type-small);
+  margin: 0;
+  padding: 0.5em 0.75em;
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -ms-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out
 }
 
-.subscription-input input[type="submit"] {
-  -webkit-appearance: none;
-  display: block;
-  width: 150px;
+.subscribe-container input[type=email] {
+  border-right: 0;
+  border-radius: 4px 0 0 4px;
+  width: 100%
+}
+
+.subscribe-container input[type=email]:hover,
+.subscribe-container input[type=email]:active,
+.subscribe-container input[type=email]:focus {
+  border: 1px solid var(--theme-dark-tint);
+  border-right: 0
+}
+
+.subscribe-container input[type=submit] {
   background: var(--theme-links);
   border: 0;
-  color: var(--color-aside);
-  outline: 0;
-  padding: 10px;
-  font-size: 14px;
-  font-weight: 800;
-  text-transform: uppercase;
-  box-sizing: border-box;
-  cursor: pointer;
-  text-align: center;
-  margin-right: 0;
+  border-radius: 0 4px 4px 0;
+  color: var(--theme-background);
+  font-family: var(--font-monospace);
+  padding: 0.5em 1em
 }
 
-.subscription-input input[type="submit"]:hover {
+.subscribe-container input[type=submit]:hover {
   background: var(--theme-links-hover);
-  color: var(--color-aside);
-  transition: background 0.3s ease-in-out;
+  cursor: pointer
+}
+
+input::placeholder {
+  color: var(--theme-text)
 }
 
 .metrics_container {
