@@ -388,9 +388,9 @@ figcaption {
     font-size: var(--type-small);
   }
 
-  /* in between each link, add a slash, except the last item */
+  /* in between each link, add an element, except the last item */
   .header ul li:not(:last-child):after {
-    content: "/";
+    content: "·";
     padding-left: 10px;
   }
 
