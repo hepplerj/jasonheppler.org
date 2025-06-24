@@ -11,34 +11,10 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
 <hr/>
 
 <aside class="newsletter">
-  <p>Consider subscribing to "<a href="https://buttondown.email/jheppler">Breve</a>," an occasional newsletter on digital history, design, creativity, computing, and things I'm working on.</p>
+  <p>Consider subscribing to "<a href="https://tack-and-ink.ghost.io/">Tack &amp; Ink</a>," a newsletter focused on the American West, agricultural history, and political culture.</p>
   <div class="subscribe-container">
-  <form
-      action="https://buttondown.email/api/emails/embed-subscribe/jheppler"
-      method="post"
-      target="popupwindow"
-      onsubmit="window.open('https://buttondown.email/jheppler', 'popupwindow')"
-      class="buttondown-input"
-    >
-    <input type="email" name="email" id="bd-email" placeholder="your@email.me" data-keeper-lock-id="k-rbb5q51qw">
-    <input type="hidden" value="1" name="embed">
-    <input type="submit" value="→" alt="Submit">
-  </div>
-</aside>
-
-<aside class="newsletter">
-  <p>I also publish a newsletter on my current research called "<a href="https://ink.jasonheppler.org/subscribe">Tack &amp; Ink</a>," focused on the American West, agricultural history, and political culture.</p>
-  <div class="subscribe-container">
-  <form
-      action="https://micro.blog/users/subscribe/179021"
-      method="post"
-      class="buttondown-input"
-    >
-    <input type="email" name="email" id="mb-email" placeholder="your@email.me" data-keeper-lock-id="k-rbb5q51qw">
-    <input type="hidden" value="1" name="embed">
-    <input type="submit" value="→" alt="Submit">
-  </div>
-</aside>
+    <div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.2/umd/signup-form.min.js" data-button-color="#1b7021" data-button-text-color="#FFFFFF" data-site="https://tack-and-ink.ghost.io/" data-locale="en" async></script></div>
+  </aside>
 
 <aside class="newsletter">
 <p style="text-align: center;">You may also enjoy <a href="https://writing.jasonheppler.org/subscribe/">subscribing to my weekly digest</a> on micro.blog, which contains pretty much anything I post online. (Curious what micro.blog is? <a href="https://blog.ayjay.org/the-three-paths-of-micro-blog/">Here's a good summary</a>.)</p>
