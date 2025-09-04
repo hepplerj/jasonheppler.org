@@ -1,0 +1,30 @@
+{{ $rssUrl := "https://www.tackandink.org/rss" }}
+{{ $apiUrl := printf "https://api.rss2json.com/v1/api.json?rss_url=%s" $rssUrl }}
+{{ $resource := resources.GetRemote $apiUrl }}
+{{ $rssData := $resource | transform.Unmarshal }}
+
+<section class="newsletter-posts">
+  <h2>Recent newsletter posts &mdash;</h2>
+  
+  {{ if $rssData.items }}
+  <div class="post-list">
+    {{ range first 5 $rssData.items }}
+    <div class="post-item">
+      <p class="post-title">
+        <a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>
+      </p>
+      <div class="post-date">
+        {{ $date := .pubDate | dateFormat "January 2, 2006" }}
+        {{ $date }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ else }}
+  <p>Unable to load recent newsletter posts.</p>
+  {{ end }}
+  
+  <p class="more-posts">
+    <a href="https://www.tackandink.org" target="_blank" rel="noopener">View all newsletter posts →</a>
+  </p>
+</section>
