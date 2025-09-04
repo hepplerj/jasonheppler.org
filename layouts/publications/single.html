@@ -1,0 +1,74 @@
+{{ partial "head.html" . }}
+
+<div class='pad2y content'>
+  <div class="body limiter">
+
+    <article class="publication-page">
+      <div class="publication-layout">
+        <div class="publication-content">
+          <header class="publication-header">
+            <h1 class="publication-title">{{ .Title }}</h1>
+            {{ with .Params.author }}<p class="publication-author">by {{ . }}</p>{{ end }}
+            {{ with .Params.year }}<p class="publication-year">{{ . }}</p>{{ end }}
+            {{ with .Params.publisher }}<p class="publication-publisher">{{ . }}</p>{{ end }}
+          </header>
+
+          <div class="publication-description">
+            {{ .Content }}
+          </div>
+
+          {{ if .Params.purchase_links }}
+          <aside class="publication-purchase">
+            <p>The paperback or hardcover is available for purchase globally wherever books are sold, including these retailers.</p>
+            <p><strong>BUY THE BOOK:</strong></p> 
+            {{- $len := len .Params.purchase_links -}}
+            {{- range $index, $link := .Params.purchase_links -}}
+              <a href="{{ .url }}" target="_blank">{{ .name }}</a>
+              {{- if lt (add $index 1) $len }} · {{ end -}}
+            {{- end -}}
+
+            {{ if or .Params.isbn_paperback .Params.isbn_hardcover }}
+            <div class="isbn-info">
+                <p><strong>Paperback ISBN</strong>: {{ with .Params.isbn_paperback }}{{ . }}{{ end }}</p>
+                <p><strong>Hardcover ISBN</strong>: {{ with .Params.isbn_hardcover }}{{ . }}{{ end }}</p>
+            </div>
+            {{ end }}
+            
+            {{ if .Params.ebook_links }}
+            <hr/>
+            <p><strong>BUY THE EBOOK:</strong></p> 
+            {{- $len := len .Params.ebook_links -}}
+            {{- range $index, $link := .Params.ebook_links -}}
+              <a href="{{ .url }}" target="_blank">{{ .name }}</a>
+              {{- if lt (add $index 1) $len }} · {{ end -}}
+            {{- end -}}
+            </p>
+            {{ end }}
+
+            {{ if or .Params.isbn_ebook }}
+            <div class="isbn-info">
+                <p><strong>Ebook ISBN</strong>: {{ with .Params.isbn_paperback }}{{ . }}{{ end }}</p>
+            </div>
+            {{ end }}
+            
+            {{ with .Params.library_link }}
+            <div class="library-info">
+              <p>Or <a href="{{ .url }}" target="_blank">find a copy in a library near you</a></p>
+            </div>
+            {{ end }}
+          </aside>
+          {{ end }}
+      </div>
+
+        <div class="publication-cover">
+          {{ with .Params.image }}
+          <img src="/assets/images/{{ . }}" alt="{{ $.Title }}" class="book-cover-large">
+          {{ end }}
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  {{ partial "foot.html" . }}
+</div>

@@ -2,93 +2,115 @@
 description: "Jason Heppler is a historian and software developer at the Roy Rosenzweig Center for History and New Media."
 ---
 
-<div class="lede">
-<p><em>Welcome to the website of</em> <strong>Jason A. Heppler</strong><em>, environmental historian of the twentieth century North American West, Great Plains, and Canadian Prairies</em>.</p>
+<div class="limiter">
 
-<p>I am the senior developer-scholar at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a>, adjunct faculty in the <a href="https://historyarthistory.gmu.edu">Department of History and Art History</a> at George Mason University, and an Affiliate Fellow at the <a href="https://www.unl.edu/plains/">Center for Great Plains Studies</a> at the <a href="https://www.unl.edu">University of Nebraska-Lincoln</a>.
-</div>
+<div class="intro-section">
+  <div class="intro-content">
+    <div class="lede">
+      <p><em>Welcome to the website of</em> <strong>Jason A. Heppler</strong><em>, environmental historian of the twentieth century North American West, Great Plains, and Canadian Prairies</em>.</p>
 
-<hr/>
-
-<aside class="newsletter">
-  <p>Consider subscribing to "<a href="https://tack-and-ink.ghost.io/">Tack &amp; Ink</a>," a newsletter focused on the American West, agricultural history, and political culture.</p>
-  <div class="subscribe-container">
-    <div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.2/umd/signup-form.min.js" data-button-color="#1b7021" data-button-text-color="#FFFFFF" data-site="https://tack-and-ink.ghost.io/" data-locale="en" async></script></div>
+   <p>I am the senior developer-scholar at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a>, adjunct faculty in the <a href="https://historyarthistory.gmu.edu">Department of History and Art History</a> at George Mason University, and an Affiliate Fellow at the <a href="https://www.unl.edu/plains/">Center for Great Plains Studies</a> at the <a href="https://www.unl.edu">University of Nebraska-Lincoln</a>.</p>
+    </div>
+    
+  <aside class="newsletter">
+    <p>Consider subscribing to "<a href="https://tack-and-ink.ghost.io/">Tack &amp; Ink</a>," a newsletter focused on the American West, agricultural history, and political culture.</p>
+    <div class="subscribe-container">
+      <div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.2/umd/signup-form.min.js" data-button-color="#1b7021" data-button-text-color="#FFFFFF" data-site="https://tack-and-ink.ghost.io/" data-locale="en" async></script></div>
   </aside>
 
-<aside class="newsletter">
-<p style="text-align: center;">You may also enjoy <a href="https://writing.jasonheppler.org/subscribe/">subscribing to my weekly digest</a> on micro.blog, which contains pretty much anything I post online. (Curious what micro.blog is? <a href="https://blog.ayjay.org/the-three-paths-of-micro-blog/">Here's a good summary</a>.)</p>
-</aside>
+  <aside class="newsletter">
+  <p style="text-align: center;">You may also enjoy <a href="https://writing.jasonheppler.org/subscribe/">subscribing to my weekly digest</a> on micro.blog, which contains pretty much anything I post online. (Curious what micro.blog is? <a href="https://blog.ayjay.org/the-three-paths-of-micro-blog/">Here's a good summary</a>.)</p>
+  </aside>
+  </div>
+  <div class="intro-photo">
+    <img src="/assets/images/0C7A1451.jpg" alt="Jason Heppler" class="author-photo">
+  </div>
+</div>
 
 <hr/>
 
 <section class="latest-books">
-
-<div class="book-grid">
-  <div class="book-card">
-      <div class="cover-container">
-      <img src="/assets/images/book_sv.jpg" alt="Silicon Valley and the Environmental Inequalities of High Tech Urbanism" class="book-cover">
-      </div>
-      <div class="book-buy">
-        <details>
-        <summary>Buy or borrow:</summary>
-          <a href="https://bookshop.org/p/books/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism-volume-9-jason-a-heppler/20881494">Bookshop</a>
-          <a href="https://openlibrary.org/works/OL37616306W/Silicon_Valley_and_the_Environmental_Inequalities_of_High-Tech_Urbanism?edition=key%3A/books/OL50730977M">OpenLibrary</a>
-          <a href="https://www.oupress.com/9780806193748/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism/">Publisher</a>
-        </details>
-      </div>
-  </div>
-
-  <div class="book-card">
-      <div class="cover-container">
-      <img src="/assets/images/dice.jpeg" alt="Digital Community Engagement" class="book-cover">
-      </div>
-      <div class="book-buy">
-        <details>
-        <summary>Buy or borrow:</summary>
-<a href="https://bookshop.org/p/books/digital-community-engagement-partnering-communities-with-the-academy-rebecca-wingo/13200548?ean=9781947602519">Bookshop</a>
-          <a href="https://openlibrary.org/works/OL20736586W/Digital_Community_Engagement?edition=key%3A/books/OL49261538M">OpenLibrary</a>
-          <a href="https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement">Publisher</a>
-        </details>
-      </div>
-  </div>
-
-  <div class="book-card">
-      <div class="cover-container">
-      <img src="/assets/images/companion_custer.png" alt="Companion to Custer and the Little Big Horn" class="book-cover">
-      </div>
-      <div class="book-buy">
-        <details>
-        <summary>Buy or borrow:</summary>
-<a href="https://bookshop.org/p/books/a-companion-to-custer-and-the-little-bighorn-campaign-brad-d-lookingbill/11738114?ean=9781119129738">Bookshop</a>
-          <a href="https://openlibrary.org/books/OL30394576M/A_companion_to_Custer_and_the_Little_Bighorn_Campaign">OpenLibrary</a>
-          <a href="https://www.wiley.com/en-it/A+Companion+to+Custer+and+the+Little+Bighorn+Campaign-p-9781444351095">Publisher</a>
-        </details>
-      </div>
-  </div>
-
-  <div class="book-card">
-      <div class="cover-container">
-      <img src="/assets/images/book_sd_polculture.jpeg" alt="South Dakota Political Culture" class="book-cover">
-      </div>
-      <div class="book-buy">
-        <details>
-        <summary>Buy or borrow:</summary>
-<a href="https://bookshop.org/p/books/the-plains-political-tradition-essays-on-south-dakota-political-tradition-jon-k-lauck/10339663?ean=9780982274927">Bookshop</a>
-          <a href="https://openlibrary.org/works/OL16517982W/The_Plains_political_tradition?edition=key%3A/books/OL25211220M">OpenLibrary</a>
-          <a href="https://www.sdhspress.com/books/plains-political-tradition-essays-on-south-dakota-political-culture">Publisher</a>
-        </details>
-      </div>
-  </div>
-</div>
+<h1>My latest books &mdash;</h1>
 
 Find more of my work on my [scholarship](/publications/) page or my <a href="https://jasonheppler.org/files/jah-cv.pdf">CV</a>.
 
+<div class="book-grid">
+  <div class="book-grid-item">
+    <a class="book-grid-thumb" href="/publications/silicon-valley/">
+      <img src="/assets/images/book_sv.jpg" alt="Silicon Valley and the Environmental Inequalities of High Tech Urbanism book cover" loading="lazy">
+    </a>
+    <div class="book-grid-info">
+      <h3 class="book-grid-title">Silicon Valley and the Environmental Inequalities of High-Tech Urbanism</h3>
+      <div class="book-grid-desc">The environmental inequalities of Silicon Valley's post-World War II development.</div>
+      <p class="book-grid-more"><a href="">More about this book</a></p>
+    </div>
+  </div>
+
+  <div class="book-grid-item">
+    <a class="book-grid-thumb" href="/publications/digital-community-engagement/">
+      <img src="/assets/images/dice.jpeg" alt="Digital Community Engagement book cover" loading="lazy">
+    </a>
+    <div class="book-grid-info">
+      <h3 class="book-grid-title">Digital Community Engagement</h3>
+      <div class="book-grid-desc">Case studies on campus-community partnerships and the creation of digital humanities projects.</div>
+      <p class="book-grid-more"><a href="/publications/digital-community-engagement/">More about this book</a></p>
+    </div>
+  </div>
+
+  <div class="book-grid-item">
+    <a class="book-grid-thumb" href="/publications/custer-companion/">
+      <img src="/assets/images/companion_custer.jpg" alt="Companion to Custer and the Little Bighorn Campaign book cover" loading="lazy">
+    </a>
+    <div class="book-grid-info">
+      <h3 class="book-grid-title">Companion to Custer and the Little Bighorn Campaign</h3>
+      <div class="book-grid-desc">A chapter examining the competing interpretations of by Native peoples, Custer enthusiasts, and the National Park Service.</div>
+      <p class="book-grid-more"><a href="/publications/custer-companion/">More about this book</a></p>
+    </div>
+  </div>
+  </div>
+
 </section>
 
-<hr/>
+</div>
 
-<h2>Digital Scholarship</h2>
+<div class="section-divider"></div>
+
+<div class="dark-green-section">
+
+<div class="limiter">
+
+<h2>Select recent essays &mdash;</h2>
+<section class="essay-grid">
+    <div class="essay-grid-item">
+      <h3>Made by Me</h3>
+      <a class="essay-grid-more" href="https://writing.jasonheppler.org/2024/05/23/made-by-me/">Read</a>
+    </div>
+    <div class="essay-grid-item">
+      <h3>Spoiled Fruits: Environmental Inequality in Silicon Valley</h3>
+      <p class="essay-source">AHA Perspectives</p>
+      <a class="essay-grid-more" href="https://www.historians.org/research-and-publications/perspectives-on-history/november-2023/spoiled-fruits-environmental-inequality-in-silicon-valley">Read</a>
+    </div>
+    <div class="essay-grid-item">
+      <h3>How Silicon Valley provides the blueprint for cleaning up our drinking water</h3>
+      <p class="essay-source">Washington Post</p>
+      <a class="essay-grid-more" href="https://www.washingtonpost.com/outlook/2019/04/26/how-silicon-valley-provides-blueprint-cleaning-up-our-drinking-water/">Read</a>
+    </div>
+    <div class="essay-grid-item">
+      <h3>How Silicon Valley Industry Polluted the Sylvan California Dream</h3>
+      <p class="essay-source">The Conversation</p>
+      <a class="essay-grid-more" href="https://theconversation.com/how-silicon-valley-industry-polluted-the-sylvan-california-dream-85810">Read</a>
+    </div>
+    <div class="essay-grid-item">
+      <h3>Federal Policy, Western Lands, and Malheur</h3>
+      <p class="essay-source">BlogWest</p>
+      <a class="essay-grid-more" href="https://writing.jasonheppler.org/2016/01/05/federal-policy-western-lands-and/">Read</a>
+    </div>
+
+</section>
+
+<hr/> 
+
+<h2>Some recent digital scholarship &mdash;</h2>
 
 Find more of my work on my [digital and public history](/research/) page.
 
@@ -111,7 +133,7 @@ Find more of my work on my [digital and public history](/research/) page.
 
 <hr/>
 
-<h2>Collaborative Digital History</h2>
+<h2>The latest collaborative digital history &mdash;</h2>
 
 Find more of my work on my [digital and public history](/research/) page.
 
@@ -132,6 +154,12 @@ Find more of my work on my [digital and public history](/research/) page.
     <p class="small"><span class="project-title">Religious Ecologies</span> Creating new datasets and visualizations so that we can better understand the history of American religion.</p>
   </a>
 </section>
+
+<hr/>
+<section class="microblog-posts">
+{{< microblog-posts >}}
+</section>
+
 
 <hr/>
 
@@ -182,3 +210,7 @@ Find more of my work on my [digital and public history](/research/) page.
 
 </div>
 </section>
+
+</div>
+
+</div>

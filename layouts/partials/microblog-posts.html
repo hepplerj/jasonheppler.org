@@ -1,0 +1,30 @@
+{{ $rssUrl := "https://writing.jasonheppler.org/categories/longform/feed.xml" }}
+{{ $apiUrl := printf "https://api.rss2json.com/v1/api.json?rss_url=%s" $rssUrl }}
+{{ $resource := resources.GetRemote $apiUrl }}
+{{ $rssData := $resource | transform.Unmarshal }}
+
+<section class="microblog-posts">
+  <h1>Recent posts from my blog &mdash;</h1>
+  
+  {{ if $rssData.items }}
+  <ul class="post-list">
+    {{ range first 20 $rssData.items }}
+    <li class="post-item">
+      <div class="post-meta">
+        {{ $date := .pubDate | dateFormat "January 2, 2006" }}
+        <span class="post-date">{{ $date }}</span>
+      </div>
+      <p class="post-title">
+        <a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>
+      </p>
+    </li>
+    {{ end }}
+  </ul>
+  {{ else }}
+  <p>Unable to load recent posts.</p>
+  {{ end }}
+  
+  <p class="more-posts">
+    <a href="https://writing.jasonheppler.org" target="_blank" rel="noopener">View all posts →</a>
+  </p>
+</section>

@@ -32,11 +32,13 @@
   --color-aside-faded: #eeeade;
   --theme-background: var(--color-background);
   --theme-text: var(--color-text);
-  --theme-links: var(--color-deep-purple);
-  --theme-links-hover: var(--color-text);
+  --theme-links: var(--color-green-darker);
+  --theme-links-hover: var(--color-green);
   --theme-dark-tint: var(--color-grey);
   --theme-light-tint: var(--color-salt);
   --theme-mark: rgba(235, 94, 40, 0.25);
+  --theme-section-bg: var(--color-green-darker);
+  --theme-section-text: var(--color-off-white);
   --space-base: 1em;
   --space-x-small: calc(var(--space-base) / 4);
   --space-small: calc(var(--space-base) / 2);
@@ -277,9 +279,9 @@ h3 {
 }
 
 .lede> :first-child {
-  margin-top: 30vh;
+  /*margin-top: 30vh;*/
   margin-bottom: var(--spacing-xxx-large);
-  min-height: 25vh;
+  /* min-height: 25vh; */
 }
 
 .noted {
@@ -287,7 +289,15 @@ h3 {
 }
 
 .limiter {
-  max-width: 770px;
+  max-width: 1270px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.limiter-blog {
+  max-width: 800px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
@@ -296,7 +306,6 @@ h3 {
 
 .pad2y {
   padding-top: 40px;
-  padding-bottom: 40px;
 }
 
 hr {
@@ -714,6 +723,46 @@ footer p {
   margin: 0 auto;
 }
 
+/* Homepage: intro section with photo */
+.intro-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.intro-content {
+  min-width: 0;
+  /* Allows text to wrap properly */
+}
+
+.intro-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.author-photo {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for intro section */
+@media (max-width: 768px) {
+  .intro-section {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .intro-photo {
+    display: none;
+  }
+}
+
 /* Homepage: two col layout */
 .two-column {
   display: grid;
@@ -777,16 +826,116 @@ footer p {
   }
 }
 
+.essay-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  align-items: stretch;
+}
+
+.essay-grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  max-width: 30em;
+  padding: 0.6rem;
+  border: 1px solid var(--theme-section-text);
+}
+
+.essay-grid-item h3 {
+  font-size: var(--type-medium);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.essay-source {
+  font-style: italic;
+  font-size: var(--type-x-small);
+  margin: 0;
+}
+
+.essay-grid-more {
+  font-size: 0.9rem;
+  margin: 0;
+  margin-top: auto;
+}
+
+.essay-grid-more:after {
+  content: " ↗";
+}
+
+/* Responsive layout for essay grid */
+@media (max-width: 768px) {
+  .essay-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+
 /* Homepage: book grid */
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
   align-items: start;
 }
+
+.book-grid-item {
+  display: flex;
+  gap: .75em;
+  max-width: 30em;
+  align-items: stretch;
+}
+
+.book-grid-thumb {
+  color: inherit;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.book-grid img {
+  display: block;
+  max-width: 125px;
+  width: 125px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-grid-info {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+
+.book-grid-title {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.3;
+  text-wrap: balance;
+  align-content: end;
+  flex: 1.5;
+  margin: 0;
+}
+
+.book-grid-desc {
+  flex: 2.5;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.book-grid-more {
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
 
 @media (max-width: 1024px) {
   .book-grid {
@@ -1638,6 +1787,194 @@ table td {
   border: 1px solid grey;
 }
 
+/* Section divider and dark green section */
+.section-divider {
+  height: 100vh;
+  background: linear-gradient(180deg, var(--theme-background), var(--theme-section-bg));
+  width: 100%;
+}
+
+.dark-green-section {
+  background-color: var(--theme-section-bg);
+  padding: 2rem 0;
+  width: 100%;
+  color: var(--theme-section-text);
+}
+
+.dark-green-section h2,
+.dark-green-section h3 {
+  color: var(--theme-section-text);
+}
+
+.dark-green-section a {
+  color: var(--color-yellow);
+  text-decoration-color: var(--color-yellow);
+}
+
+.dark-green-section a:hover {
+  color: var(--color-yellow-darker);
+}
+
+/* Publication page layout */
+.publication-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.publication-content {
+  min-width: 0;
+  /* Allows text to wrap properly */
+}
+
+.publication-header {
+  margin-bottom: 2rem;
+}
+
+.publication-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.publication-author {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: var(--theme-dark-tint);
+}
+
+.publication-year,
+.publication-publisher {
+  margin: 0.25rem 0;
+  font-size: 1rem;
+  color: var(--theme-dark-tint);
+}
+
+.publication-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+aside.publication-purchase {
+  background: var(--color-aside);
+  border: 1px solid var(--color-aside-faded);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  font-size: var(--type-small);
+}
+
+aside.publication-purchase p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+aside.publication-purchase p:first-child {
+  color: var(--theme-text);
+}
+
+aside.publication-purchase a:first-of-type {
+  margin-left: 0;
+}
+
+aside.publication-purchase hr {
+  margin: 1.5rem 0;
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--color-aside-faded);
+}
+
+.isbn-info {
+  margin-top: 1.5rem;
+}
+
+.isbn-info p {
+  margin-bottom: 0.5rem;
+}
+
+.isbn-info ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.isbn-info li {
+  margin-bottom: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.library-info {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-aside-faded);
+}
+
+.library-info p {
+  margin: 0;
+  font-style: italic;
+  color: var(--theme-dark-tint);
+}
+
+.publication-reviews h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--theme-text);
+}
+
+.review-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.publication-cover {
+  position: sticky;
+  top: 2rem;
+}
+
+.book-cover-large {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+/* Mobile responsive - maintain side-by-side even on mobile but adjust proportions */
+@media (max-width: 768px) {
+  .publication-layout {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .publication-title {
+    font-size: 1.8rem;
+  }
+
+  .book-cover-large {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .publication-layout {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 1rem;
+  }
+
+  .publication-title {
+    font-size: 1.5rem;
+  }
+
+  .book-cover-large {
+    max-width: 200px;
+  }
+}
+
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
@@ -1650,6 +1987,8 @@ table td {
     --theme-dark-tint: var(--color-yellow-darker);
     --theme-light-tint: var(--color-orange);
     --theme-mark: var(--color-blue);
+    --theme-section-bg: var(--color-grey);
+    --theme-section-text: var(--color-salt);
   }
 }
 
@@ -1662,6 +2001,18 @@ table td {
   --theme-dark-tint: var(--color-yellow-darker);
   --theme-light-tint: var(--color-orange);
   --theme-mark: var(--color-blue);
+  --theme-section-bg: #171e26;
+  --theme-section-text: var(--color-salt);
+}
+
+/* Dark mode image effects */
+[data-site-theme="dark"] img {
+  filter: brightness(0.8) contrast(1.1);
+  transition: filter 0.3s ease;
+}
+
+[data-site-theme="dark"] img:hover {
+  filter: brightness(1) contrast(1);
 }
 
 /* Merry Christmas */
@@ -1781,4 +2132,91 @@ table td {
     -webkit-transform: rotate(-50deg);
     transform: rotate(-50deg);
   }
+}
+
+/* Microblog Posts Styles */
+.microblog-posts .post-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-small);
+}
+
+.microblog-posts .post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.microblog-posts .post-title {
+  margin: 0;
+  flex: 1;
+}
+
+.microblog-posts .post-title a {
+  color: var(--theme-links);
+}
+
+.microblog-posts .post-title a:hover {
+  color: var(--theme-links-hover);
+}
+
+.microblog-posts .post-date {
+  color: var(--theme-section-text);
+  font-size: 0.9em;
+  white-space: nowrap;
+  margin-left: var(--space-small);
+}
+
+/* Microblog posts in dark green section */
+.dark-green-section .microblog-posts .post-title a {
+  color: var(--color-yellow);
+}
+
+.dark-green-section .microblog-posts .post-title a:hover {
+  color: var(--color-yellow-darker);
+}
+
+.dark-green-section .microblog-posts .more-posts a {
+  color: var(--color-yellow);
+}
+
+.dark-green-section .microblog-posts .more-posts a:hover {
+  color: var(--color-yellow-darker);
+}
+
+/* HR elements in dark sections */
+.dark-green-section hr {
+  border-color: var(--color-salt);
+  opacity: 0.3;
+}
+
+/* Footer section - only on homepage */
+.homepage .footer-section {
+  background-color: var(--theme-section-bg);
+  color: var(--theme-section-text);
+}
+
+/* Footer links in dark mode - only on homepage */
+[data-site-theme="dark"] .homepage .footer-section a {
+  color: var(--color-yellow);
+  text-decoration: underline;
+  text-decoration-color: var(--color-yellow);
+}
+
+[data-site-theme="dark"] .homepage .footer-section a:hover {
+  color: var(--color-yellow-darker);
+  text-decoration-color: var(--color-yellow-darker);
+}
+
+/* Footer links in light mode - only on homepage */
+[data-site-theme="light"] .homepage .footer-section a {
+  color: var(--color-yellow);
+  text-decoration: underline;
+  text-decoration-color: var(--color-yellow);
+}
+
+[data-site-theme="light"] .homepage .footer-section a:hover {
+  color: var(--color-yellow-darker);
+  text-decoration-color: var(--color-yellow-darker);
 }
