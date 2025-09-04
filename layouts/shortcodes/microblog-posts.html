@@ -10,9 +10,9 @@
   <div class="post-list">
     {{ range first 5 $rssData.items }}
     <div class="post-item">
-      <h3 class="post-title">
+      <p class="post-title">
         <a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>
-      </h3>
+      </p>
       <div class="post-date">
         {{ $date := .pubDate | dateFormat "January 2, 2006" }}
         {{ $date }}

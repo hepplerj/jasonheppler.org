@@ -7,13 +7,13 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
 <div class="intro-section">
   <div class="intro-content">
     <div class="lede">
-      <p><em>Welcome to the website of</em> <strong>Jason A. Heppler</strong><em>, environmental historian of the twentieth century North American West, Great Plains, and Canadian Prairies</em>.</p>
+      <p><em>Welcome to the website of </em><strong>Jason A. Heppler</strong><em>, environmental historian of the twentieth century North American West, Great Plains, and Canadian Prairies</em>.</p>
 
    <p>I am the senior developer-scholar at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a>, adjunct faculty in the <a href="https://historyarthistory.gmu.edu">Department of History and Art History</a> at George Mason University, and an Affiliate Fellow at the <a href="https://www.unl.edu/plains/">Center for Great Plains Studies</a> at the <a href="https://www.unl.edu">University of Nebraska-Lincoln</a>.</p>
     </div>
     
   <aside class="newsletter">
-    <p>Consider subscribing to "<a href="https://tack-and-ink.ghost.io/">Tack &amp; Ink</a>," a newsletter focused on the American West, agricultural history, and political culture.</p>
+    <p>Consider subscribing to "<a href="https://www.tackandink.org/">Tack &amp; Ink</a>," a newsletter focused on the American West, agricultural history, and political culture.</p>
     <div class="subscribe-container">
       <div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.2/umd/signup-form.min.js" data-button-color="#1b7021" data-button-text-color="#FFFFFF" data-site="https://tack-and-ink.ghost.io/" data-locale="en" async></script></div>
   </aside>
@@ -42,7 +42,7 @@ Find more of my work on my [scholarship](/publications/) page or my <a href="htt
     <div class="book-grid-info">
       <h3 class="book-grid-title">Silicon Valley and the Environmental Inequalities of High-Tech Urbanism</h3>
       <div class="book-grid-desc">The environmental inequalities of Silicon Valley's post-World War II development.</div>
-      <p class="book-grid-more"><a href="">More about this book</a></p>
+      <p class="book-grid-more"><a href="/publications/silicon-valley/">More about this book</a></p>
     </div>
   </div>
 
@@ -82,10 +82,6 @@ Find more of my work on my [scholarship](/publications/) page or my <a href="htt
 <h2>Select recent essays &mdash;</h2>
 <section class="essay-grid">
     <div class="essay-grid-item">
-      <h3>Made by Me</h3>
-      <a class="essay-grid-more" href="https://writing.jasonheppler.org/2024/05/23/made-by-me/">Read</a>
-    </div>
-    <div class="essay-grid-item">
       <h3>Spoiled Fruits: Environmental Inequality in Silicon Valley</h3>
       <p class="essay-source">AHA Perspectives</p>
       <a class="essay-grid-more" href="https://www.historians.org/research-and-publications/perspectives-on-history/november-2023/spoiled-fruits-environmental-inequality-in-silicon-valley">Read</a>
@@ -105,7 +101,6 @@ Find more of my work on my [scholarship](/publications/) page or my <a href="htt
       <p class="essay-source">BlogWest</p>
       <a class="essay-grid-more" href="https://writing.jasonheppler.org/2016/01/05/federal-policy-western-lands-and/">Read</a>
     </div>
-
 </section>
 
 <hr/> 
@@ -114,21 +109,36 @@ Find more of my work on my [scholarship](/publications/) page or my <a href="htt
 
 Find more of my work on my [digital and public history](/research/) page.
 
-<section class="project-box">
-  <a class="project" href="http://machinesinthevalley.org">
-    <img src="/assets/images/portfolio_machinesvalley.png" alt="Machines in the Valley: Growth, Conflict, and Environmental Politics in Silicon Valley" loading="lazy" />
-    <p class="small"><span class="project-title">Machines in the Valley: Growth, Conflict, and Environmental Politics in Silicon Valley</span> A spatial history and digital narrative of Silicon Valley.</p>
+<section class="project-grid">
+  <a class="project-grid-item" href="http://machinesinthevalley.org">
+    <div class="project-grid-thumb">
+      <img src="/assets/images/portfolio_machinesvalley.png" alt="Machines in the Valley: Growth, Conflict, and Environmental Politics in Silicon Valley" loading="lazy" />
+    </div>
+    <div class="project-grid-info">
+      <h3 class="project-grid-title">Machines in the Valley: Growth, Conflict, and Environmental Politics in Silicon Valley</h3>
+      <p class="project-grid-desc">A spatial history and digital narrative of Silicon Valley.</p>
+    </div>
   </a>
 
-   <a class="project" href="https://jasonheppler.org/projects/western-lands/">
-    <img src="/assets/images/portfolio_westernlands.png" alt="Western Federal Lands" loading="lazy" />
-    <p class="small"><span class="project-title">U.S. Federal Lands</span> Mapping the federal lands of the U.S.</p>
-  </a>
-<a class="project" href="https://progressivewildwest.org">
-    <img src="/assets/images/portfolio_showindian.png" alt="William F. Cody and the Progressive Wild West" loading="lazy" />
-    <p class="small"><span class="project-title">William F. Cody and the Progressive Wild West</span> Exploring debates over what I called Reformist Progressives and Enabling Progressives.</p>
+  <a class="project-grid-item" href="https://jasonheppler.org/projects/western-lands/">
+    <div class="project-grid-thumb">
+      <img src="/assets/images/portfolio_westernlands.png" alt="Western Federal Lands" loading="lazy" />
+    </div>
+    <div class="project-grid-info">
+      <h3 class="project-grid-title">U.S. Federal Lands</h3>
+      <p class="project-grid-desc">Mapping the federal lands of the U.S.</p>
+    </div>
   </a>
 
+  <a class="project-grid-item" href="https://progressivewildwest.org">
+    <div class="project-grid-thumb">
+      <img src="/assets/images/portfolio_showindian.png" alt="William F. Cody and the Progressive Wild West" loading="lazy" />
+    </div>
+    <div class="project-grid-info">
+      <h3 class="project-grid-title">William F. Cody and the Progressive Wild West</h3>
+      <p class="project-grid-desc">Exploring debates over what I called Reformist Progressives and Enabling Progressives.</p>
+    </div>
+  </a>
 </section>
 
 <hr/>
@@ -137,29 +147,49 @@ Find more of my work on my [digital and public history](/research/) page.
 
 Find more of my work on my [digital and public history](/research/) page.
 
-<section class="project-box">
-
-  <a class="project" href="https://deathbynumbers.org">
-    <img src="/assets/images/portfolio_bom.png" alt="Death by Numbers" loading="lazy" />
-    <p class="small"><span class="project-title">Death by Numbers</span> Transcribing and publishing the London Bills of Mortality in a dataset suitable for computational analysis.</p>
+<section class="project-grid">
+  <a class="project-grid-item" href="https://deathbynumbers.org">
+    <div class="project-grid-thumb">
+      <img src="/assets/images/portfolio_bom.png" alt="Death by Numbers" loading="lazy" />
+    </div>
+    <div class="project-grid-info">
+      <h3 class="project-grid-title">Death by Numbers</h3>
+      <p class="project-grid-desc">Transcribing and publishing the London Bills of Mortality in a dataset suitable for computational analysis.</p>
+    </div>
   </a>
 
-  <a class="project" href="https://github.com/chnm/dataapi">
-    <img src="/assets/images/portfolio_api.png" alt="Apiary Data API" loading="lazy" />
-    <p class="small"><span class="project-title">Apiary</span> A data API for data-driven research at RRCHNM.</p>
+  <a class="project-grid-item" href="https://denigmanuscript.org/">
+    <div class="project-grid-thumb">
+      <img src="https://jasonheppler.org/assets/images/portfolio_denig.png" alt="The Denig Manuscript Project" loading="lazy" />
+    </div>
+    <div class="project-grid-info">
+      <h3 class="project-grid-title">The Denig Manuscript</h3>
+      <p class="project-grid-desc">An eighteenth-century Pennsylvania merchant's manuscript and watercolor.</p>
+    </div>
   </a>
 
-  <a class="project" href="https://religiousecologies.org">
-    <img src="/assets/images/portfolio_ecologies.png" alt="Religious Ecologies" loading="lazy" />
-    <p class="small"><span class="project-title">Religious Ecologies</span> Creating new datasets and visualizations so that we can better understand the history of American religion.</p>
+  <a class="project-grid-item" href="https://religiousecologies.org">
+    <div class="project-grid-thumb">
+      <img src="/assets/images/portfolio_ecologies.png" alt="Religious Ecologies" loading="lazy" />
+    </div>
+    <div class="project-grid-info">
+      <h3 class="project-grid-title">Religious Ecologies</h3>
+      <p class="project-grid-desc">Creating new datasets and visualizations so that we can better understand the history of American religion.</p>
+    </div>
   </a>
 </section>
 
 <hr/>
+
 <section class="microblog-posts">
 {{< microblog-posts >}}
 </section>
 
+<hr/>
+
+<section class="microblog-posts">
+{{< newsletter-posts >}}
+</section>
 
 <hr/>
 
@@ -180,23 +210,15 @@ Find more of my work on my [digital and public history](/research/) page.
                     <li><a href="/uses/">What I'm using now</a></li>
                     <li><a href="/office-hours/">Students, my office hours</a></li>
                 </ul>
+                                <p>If you'd like to support my writing here and elsewhere, I'd love it if you could <a href="https://www.buymeacoffee.com/jasonheppler">buy me a coffee</a>.</p>
+            </div>
+            <div class="column">
                 <h3>Newsletters</h3>
                 <ul>
                     <li><a href="https://buttondown.email/jheppler">Breve</a></li>
-                    <li><a href="https://ink.jasonheppler.org">Tack &amp; Ink</a></li>
+                    <li><a href="https://www.tackandink.org/">Tack &amp; Ink</a></li>
                 </ul>
-                <p>If you'd like to support my writing here and elsewhere, I'd love it if you could <a href="https://www.buymeacoffee.com/jasonheppler">buy me a coffee</a>.</p>
-            </div>
-            <div class="column">
-                <h3>Essays</h3>
-                <ul>
-                    <li><a href="https://writing.jasonheppler.org/2024/05/23/made-by-me/">Made by Me</a></li>
-                    <li><a href="https://www.historians.org/research-and-publications/perspectives-on-history/november-2023/spoiled-fruits-environmental-inequality-in-silicon-valley">Spoiled Fruits: Environmental Inequality in Silicon Valley</a> (<em>Perspectives</em>)</li>
-                    <li><a href="https://www.washingtonpost.com/outlook/2019/04/26/how-silicon-valley-provides-blueprint-cleaning-up-our-drinking-water/">How Silicon Valley provides the blueprint for cleaning up our drinking water</a> (<em>Washington Post</em>)</li>
-                    <li><a href="https://theconversation.com/how-silicon-valley-industry-polluted-the-sylvan-california-dream-85810">How Silicon Valley Industry Polluted the Sylvan California Dream</a> (<em>The Conversation</em>)</li>
-                    <li><a href="https://writing.jasonheppler.org/2016/01/05/federal-policy-western-lands-and/">Federal Policy, Western Lands, and Malheur</a></li>
-                </ul>
-<h3>Elsewhere Online</h3>
+                <h3>Elsewhere Online</h3>
                 <ul>
                 <li><a href="https://writing.jasonheppler.org/">Micro.blog</a></li>
                     <li><a href="https://historians.social/@jaheppler">Fediverse</a></li>
