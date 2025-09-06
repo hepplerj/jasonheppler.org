@@ -84,22 +84,22 @@ Find more of my work on my [scholarship](/publications/) page or my <a href="htt
     <div class="essay-grid-item">
       <h3>Spoiled Fruits: Environmental Inequality in Silicon Valley</h3>
       <p class="essay-source">AHA Perspectives</p>
-      <a class="essay-grid-more" href="https://www.historians.org/research-and-publications/perspectives-on-history/november-2023/spoiled-fruits-environmental-inequality-in-silicon-valley">Read</a>
+      <a class="essay-grid-more" href="https://www.historians.org/research-and-publications/perspectives-on-history/november-2023/spoiled-fruits-environmental-inequality-in-silicon-valley">Read the essay</a>
     </div>
     <div class="essay-grid-item">
       <h3>How Silicon Valley provides the blueprint for cleaning up our drinking water</h3>
       <p class="essay-source">Washington Post</p>
-      <a class="essay-grid-more" href="https://www.washingtonpost.com/outlook/2019/04/26/how-silicon-valley-provides-blueprint-cleaning-up-our-drinking-water/">Read</a>
+      <a class="essay-grid-more" href="https://www.washingtonpost.com/outlook/2019/04/26/how-silicon-valley-provides-blueprint-cleaning-up-our-drinking-water/">Read the essay</a>
     </div>
     <div class="essay-grid-item">
       <h3>How Silicon Valley Industry Polluted the Sylvan California Dream</h3>
       <p class="essay-source">The Conversation</p>
-      <a class="essay-grid-more" href="https://theconversation.com/how-silicon-valley-industry-polluted-the-sylvan-california-dream-85810">Read</a>
+      <a class="essay-grid-more" href="https://theconversation.com/how-silicon-valley-industry-polluted-the-sylvan-california-dream-85810">Read the essay</a>
     </div>
     <div class="essay-grid-item">
       <h3>Federal Policy, Western Lands, and Malheur</h3>
       <p class="essay-source">BlogWest</p>
-      <a class="essay-grid-more" href="https://writing.jasonheppler.org/2016/01/05/federal-policy-western-lands-and/">Read</a>
+      <a class="essay-grid-more" href="https://writing.jasonheppler.org/2016/01/05/federal-policy-western-lands-and/">Read the essay</a>
     </div>
 </section>
 

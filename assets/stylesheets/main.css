@@ -863,10 +863,6 @@ footer p {
   margin-top: auto;
 }
 
-.essay-grid-more:after {
-  content: " ↗";
-}
-
 /* Responsive layout for essay grid */
 @media (max-width: 768px) {
   .essay-grid {
