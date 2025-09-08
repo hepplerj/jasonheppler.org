@@ -548,6 +548,15 @@ footer p {
   padding: 3px;
 }
 
+@media (max-width: 768px) {
+  .book img {
+    float: none;
+    display: block;
+    margin: 0 auto 1em auto;
+    max-width: 150px;
+  }
+}
+
 .books>div,
 .teaching>div {
   display: grid;
@@ -2052,8 +2061,13 @@ aside.publication-purchase hr {
 /* Mobile responsive - maintain side-by-side even on mobile but adjust proportions */
 @media (max-width: 768px) {
   .publication-layout {
-    grid-template-columns: 1.5fr 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .publication-cover {
+    order: -1;
+    text-align: center;
   }
 
   .publication-title {
@@ -2061,14 +2075,19 @@ aside.publication-purchase hr {
   }
 
   .book-cover-large {
-    max-width: 250px;
+    max-width: 200px;
   }
 }
 
 @media (max-width: 480px) {
   .publication-layout {
-    grid-template-columns: 1.2fr 1fr;
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .publication-cover {
+    order: -1;
+    text-align: center;
   }
 
   .publication-title {
@@ -2076,7 +2095,7 @@ aside.publication-purchase hr {
   }
 
   .book-cover-large {
-    max-width: 200px;
+    max-width: 150px;
   }
 }
 
