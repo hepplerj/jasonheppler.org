@@ -1,30 +1,40 @@
-<nav
-  class="header-wrap"
-  role="navigation"
-  itemtype="https://schema.org/SiteNavigationElement"
-  itemscope
->
-  <div class="header nu limiter no-print">
-    <ul id="menu" class="menu" style="list-style: none; padding: 0; margin: 0">
-      <li class="menu-item">
-        <a href="/" class="site-title">{{ .Site.Title }}</a>
-      </li>
-      <li class="menu-item">
-        <a class="menu-item-link link" href="/about/"> About</a>
-      </li>
-      <li class="menu-item">
-        <a class="menu-item-link link" href="/publications/"> Publications</a>
-      </li>
-      <li class="menu-item">
-        <a class="menu-item-link link" href="/research/"> Digital History</a>
-      </li>
-      <li class="menu-item">
-        <a class="menu-item-link link" href="/courses/"> Teaching</a>
-      </li>
-      <li class="menu-item">
-        <a class="menu-item-link link" href="https://writing.jasonheppler.org"> Blog</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<nav>
+<div class="nav-container">
+            <div class="site-title"><a href="/">Jason A. Heppler</a></div>
+            
+            <div class="nav-right">
+                <span class="about-text"><a href="/about/">About</a></span>
+                
+                <button class="icon-btn theme-btn" id="themeToggle" aria-label="Toggle theme">
+                    <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 244 255" role="presentation">
+                        <path fill="currentColor" fill-rule="evenodd" d="M3.6 98.7a127 127 0 01182-84.3 102 102 0 1058.5 163A127 127 0 013.6 98.6z"></path>
+                    </svg>
+                    <svg id="sunIcon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 254 254" role="presentation">
+                        <g fill="currentColor" fill-rule="evenodd">
+                            <circle cx="127" cy="127" r="45"></circle>
+                            <path d="M118 209v-.3a9 9 0 0118 .3v36a9 9 0 11-18 0v-36zM118 9v-.3a9 9 0 0118 .3v36a9 9 0 11-18 0V9zM178.6 191.3l-.2-.1a9 9 0 0113-12.6l25.4 25.5a9 9 0 11-12.7 12.7l-25.5-25.5zM37.2 50l-.2-.3a9 9 0 0113-12.5l25.4 25.5a9 9 0 01-12.7 12.7L37.2 49.9zM209 136h-.3a9 9 0 01.3-18h36a9 9 0 110 18h-36zM9 136h-.3a9 9 0 01.3-18h36a9 9 0 110 18H9zM191.3 75.4l-.1.2a9 9 0 01-12.6-13l25.5-25.4a9 9 0 1112.7 12.7l-25.5 25.5zM50 216.8l-.3.2a9 9 0 01-12.5-13l25.5-25.4a9 9 0 1112.7 12.7l-25.5 25.5z"></path>
+                        </g>
+                    </svg>
+                </button>
+                
+                <div class="menu-container">
+                    <button class="icon-btn" id="menuToggle" aria-label="Toggle menu">
+                        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="closeIcon" class="hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
 
+                    <div class="dropdown" id="dropdown">
+                        {{ range .Site.Menus.nav }}
+                        <a href="{{ .URL }}">{{ .Name }}</a>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>

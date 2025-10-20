@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/jheppler/Dropbox/70-79 Logistics/01 Web/jasonheppler-microblog-theme/layouts/_default/**)",
+      "Read(//Users/jheppler/Dropbox/70-79 Logistics/01 Web/jasonheppler-microblog-theme/layouts/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

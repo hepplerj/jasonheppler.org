@@ -1,0 +1,10 @@
+<div class="post-list">
+  {{ range (where site.RegularPages "Type" "blog").ByDate.Reverse }}
+    <div class="post-item">
+      <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "2006 Jan" }}
+      </time>
+      <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
+    </div>
+  {{ end }}
+</div>

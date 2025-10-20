@@ -69,12 +69,9 @@ menu:
     - name: Teaching
       url: /courses/
       weight: 3
-    - name: Posts
-      url: /blog/
+    - name: Blog 
+      url: https://writing.jasonheppler.org
       weight: 4
-    - name: About
-      url: /about/
-      weight: 5
 
 enableGitInfo: true
     

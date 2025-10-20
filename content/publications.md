@@ -9,28 +9,13 @@ For a complete list of my scholarship, please see my [CV](https://jasonheppler.o
 
 <a name="books-and-projects"></a>
 
-## Books
+# Books
 
 {{% book title="Silicon Valley and the Environmental Inequalities of High-Tech Urbanism" image="book_sv.jpg" year="2024" publisher="University of Oklahoma Press" %}}
 
 Few places symbolize the twentieth century American West like Silicon Valley. Stretching between the communities of Palo Alto to San Jose, this dense California region is home to the nation's most consequential high-tech industrial corridor. In the four decades following World War II, the region rapidly transformed from an agricultural economy to an industrial one fueled by government funding into defense-related research and development. Boosters of the new industrialization promised a modern, clean, and future-facing economy in the wake of declining steel-age industries and an emerging space-age arms race. New industries drove new populations who flocked to the valley as much for work as they did for its pleasant environment.
 
-Between 1950 and 1990, boosters, city councils, and business leaders outlined a vision that melded a bucolic naturalism of fruit orchards, pleasant weather, and green spaces, with metropolitan capitalism--modern industry, defense-related research, and technocratic jobs, that aspired to form an idyllic city. However, competing ideas about forming these idyllic communities led to widespread environmental degradation and social stratification. The pursuit of cities organized around high-tech industries, suburban growth, and urban expansion prompted intensified race and class stratification, strengthened the political power of elites, worsened human health, and introduced widespread pollution. Environmental advocacy attempted to resolve these challenges, but often merely shifted the problems to new places. Suburban capitalism and federal funding deeply transformed this place as new housing, the recruitment or founding of new companies, and urban infrastructure deeply reshaped the landscape.
-
-A core argument throughout this book is the role of place: how they are defined, who defines them, and what happens in them. Just as important, the role of "nature" and who defines this illustrates who and what is included while also revealing who gets excluded in the conversation about the environment. Silicon Valley helps unravel this tension within land use regimes, social consequences, and environmental degradation, and American's growing environmental awareness following World War II.
-
-Endorsements:
-
-> With deep empathy and keen insight, Jason Heppler shows what lies beneath the sparkling high-tech campuses of today's Silicon Valley: a long and tangled history of environmental transformation and trade-offs, mythmaking and moneymaking, conservation and exclusion, and a western landscape remade many times over. This book is an invaluable addition to the literature. --Margaret O’Mara
-
-> _Silicon Valley and the Environmental Inequalities of High-Tech Urbanism_ explains how "land, real estate, segregation, and pollution" became central themes in the history of Silicon Valley and other booming metropolises of the postwar American West. Drawing on discussions sparked by several local controversies from the 1940s through the 1990s, Jason Heppler skillfully dissects people’s shifting perceptions of the places where they lived, worked, played, polluted, and argued about the future. As populations multiplied, as subdivisions and science parks supplanted orchards, as activists challenged the elite’s plans and power, and as the Valley acquired more Superfund sites than any other American county, inhabitants produced a remarkably wide and diverse range of attitudes toward and commitments to "nature." --John M. Findlay
-
-[University of Oklahoma Press](https://www.oupress.com/9780806193748/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism/) | [Bookshop](https://bookshop.org/p/books/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism-volume-9-jason-a-heppler/20881494) | [Amazon](https://www.amazon.com/Environmental-Inequalities-High-Tech-Urbanism-Environment/dp/0806193743/)
-
-Reviews:
-
-- W. Patrick McCray, _[LA Review of Books](https://lareviewofbooks.org/article/dirty-digits-and-pleasant-landscapes-on-jason-a-hepplers-silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism/)_
-- Adam Quinn, [H-Net](https://www.h-net.org/reviews/showrev.php?id=60677)
+[More about this book &#8594;](/publications/silicon-valley/)
 
 {{% /book %}}
 
@@ -40,15 +25,7 @@ Reviews:
 
 Edited with Rebecca Wingo and Paul Schadewald, our volume brings together cutting-edge campus-community partnerships with a focus on digital projects. Through a series of case studies authored by academics and their community partners, we explore models for digital community engagement that leverages new media through reciprocal partnerships. The contributions to the volume stand at the crossroads of digital humanities, public history, and community engagement, drawing ideas, methods, and practices from various disciplines to inform our public partnerships. By highlighting these projects we hope to provide other institutions, cultural heritage organizations, universities, and communities models for successful engagement.
 
-**Winner of the [2021 National Council on Public History (NCPH) Book Award](https://ncph.org/about/awards/book-award/)**.
-
-Reviews:
-
-- Ann-Marie Foster, _[Public History Review](https://epress.lib.uts.edu.au/journals/index.php/phrj/article/view/7427/7564)_
-- Megan Smeznik, _[Reviews in Digital Humanities](https://reviewsindh.pubpub.org/pub/digital-community-engagement/release/2)_
-- Christopher D. Cantwell, _[The Public Historian](https://online.ucpress.edu/tph/article-abstract/43/3/125/118047/Review-Digital-Community-Engagement-Partnering?redirectedFrom=fulltext)_
-
-[University of Cincinnati Press](https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement) (open access) | [Bookshop](https://bookshop.org/p/books/digital-community-engagement-partnering-communities-with-the-academy-rebecca-wingo/13200548?ean=9781947602519) | [Amazon](https://www.amazon.com/Digital-Community-Engagement-Partnering-Communities/dp/1947602519/ref=sr_1_1?dchild=1&keywords=digital+community+engagement&qid=1607369554&sr=8-1)
+[More about this book &#8594;](/publications/digital-community-engagement/)
 
 {{% /book %}}
 
@@ -66,7 +43,7 @@ Chapter, "The National Monument." This volume provides an accessible and authori
 
 <a name="articles"></a>
 
-## Selected articles and book chapters
+# Selected articles and book chapters
 
 1. Farooq, Omer, Jason A. Heppler, and Kate M. Ehrig-Page, "Creating Capacity for Research Data Services at Regional Universities: A Case Study," in _Teaching Research Data Management_ (ALA Editions, 2022) <https://www.alastore.ala.org/trdm>.
 
@@ -94,7 +71,7 @@ Chapter, "The National Monument." This volume provides an accessible and authori
 
 <a name="essays"></a>
 
-## Essays
+# Essays
 
 1. "Spoiled Fruits: Environmental Inequality in Silicon Valley," AHA _Perspectives_, November 15, 2023. [published version](https://www.historians.org/research-and-publications/perspectives-on-history/november-2023/spoiled-fruits-environmental-inequality-in-silicon-valley)
 

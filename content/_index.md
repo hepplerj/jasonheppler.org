@@ -6,10 +6,8 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
 
 <div class="intro-section">
   <div class="intro-content">
-    <div class="lede">
-      <p><em>Welcome to the website of </em><strong>Jason A. Heppler</strong><em>, environmental historian of the twentieth century North American West, Great Plains, and Canadian Prairies</em>.</p>
-
-   <p>I am the senior developer-scholar at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a>, adjunct faculty in the <a href="https://historyarthistory.gmu.edu">Department of History and Art History</a> at George Mason University, and an Affiliate Fellow at the <a href="https://www.unl.edu/plains/">Center for Great Plains Studies</a> at the <a href="https://www.unl.edu">University of Nebraska-Lincoln</a>.</p>
+    <div>
+      <p><mark>Hi, I'm Jason A. Heppler,</mark> environmental historian of the twentieth century North American West, Great Plains, and Canadian Prairies. I am the senior developer-scholar at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a>, adjunct faculty in the <a href="https://historyarthistory.gmu.edu">Department of History and Art History</a> at George Mason University, and an Affiliate Fellow at the <a href="https://www.unl.edu/plains/">Center for Great Plains Studies</a> at the <a href="https://www.unl.edu">University of Nebraska-Lincoln</a>.</p>
     </div>
     
   <aside class="newsletter">
@@ -32,7 +30,6 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
 <section class="latest-books">
 <h1>My latest books &mdash;</h1>
 
-Find more of my work on my [scholarship](/publications/) page or my <a href="https://jasonheppler.org/files/jah-cv.pdf">CV</a>.
 
 <div class="book-grid">
   <div class="book-grid-item">
@@ -56,58 +53,40 @@ Find more of my work on my [scholarship](/publications/) page or my <a href="htt
       <p class="book-grid-more"><a href="/publications/digital-community-engagement/">More about this book</a></p>
     </div>
   </div>
-
-  <div class="book-grid-item">
-    <a class="book-grid-thumb" href="/publications/custer-companion/">
-      <img src="/assets/images/companion_custer.jpg" alt="Companion to Custer and the Little Bighorn Campaign book cover" loading="lazy">
-    </a>
-    <div class="book-grid-info">
-      <h3 class="book-grid-title">Companion to Custer and the Little Bighorn Campaign</h3>
-      <div class="book-grid-desc">A chapter examining the competing interpretations of by Native peoples, Custer enthusiasts, and the National Park Service.</div>
-      <p class="book-grid-more"><a href="/publications/custer-companion/">More about this book</a></p>
-    </div>
-  </div>
-  </div>
-
+ </div>
 </section>
 
-</div>
+Find more of my work on my [scholarship](/publications/) page or my <a href="https://jasonheppler.org/files/jah-cv.pdf">CV</a>.
 
-<div class="section-divider"></div>
-
-<div class="dark-green-section">
-
-<div class="limiter">
+<hr/>
 
 <h2>Select recent essays &mdash;</h2>
-<section class="essay-grid">
-    <div class="essay-grid-item">
-      <h3>Spoiled Fruits: Environmental Inequality in Silicon Valley</h3>
+<section class="essay-list">
+    <div class="essay-list-item">
+      <div class="essay-date">2023 Nov</div>
+      <div class="essay-title"><a href="https://www.historians.org/research-and-publications/perspectives-on-history/november-2023/spoiled-fruits-environmental-inequality-in-silicon-valley">Spoiled Fruits: Environmental Inequality in Silicon Valley</a></div>
       <p class="essay-source">AHA Perspectives</p>
-      <a class="essay-grid-more" href="https://www.historians.org/research-and-publications/perspectives-on-history/november-2023/spoiled-fruits-environmental-inequality-in-silicon-valley">Read the essay</a>
     </div>
-    <div class="essay-grid-item">
-      <h3>How Silicon Valley provides the blueprint for cleaning up our drinking water</h3>
+    <div class="essay-list-item">
+      <div class="essay-date">2019 Apr</div>
+      <div class="essay-title"><a href="https://www.washingtonpost.com/outlook/2019/04/26/how-silicon-valley-provides-blueprint-cleaning-up-our-drinking-water/">How Silicon Valley provides the blueprint for cleaning up our drinking water</a></div>
       <p class="essay-source">Washington Post</p>
-      <a class="essay-grid-more" href="https://www.washingtonpost.com/outlook/2019/04/26/how-silicon-valley-provides-blueprint-cleaning-up-our-drinking-water/">Read the essay</a>
     </div>
-    <div class="essay-grid-item">
-      <h3>How Silicon Valley Industry Polluted the Sylvan California Dream</h3>
+    <div class="essay-list-item">
+      <div class="essay-date">2017 Nov</div>
+      <div class="essay-title"><a href="https://theconversation.com/how-silicon-valley-industry-polluted-the-sylvan-california-dream-85810">How Silicon Valley Industry Polluted the Sylvan California Dream</a></div>
       <p class="essay-source">The Conversation</p>
-      <a class="essay-grid-more" href="https://theconversation.com/how-silicon-valley-industry-polluted-the-sylvan-california-dream-85810">Read the essay</a>
     </div>
-    <div class="essay-grid-item">
-      <h3>Federal Policy, Western Lands, and Malheur</h3>
+    <div class="essay-list-item">
+      <div class="essay-date">2016 Jan</div>
+      <div class="essay-title"><a href="https://writing.jasonheppler.org/2016/01/05/federal-policy-western-lands-and/">Federal Policy, Western Lands, and Malheur</a></div>
       <p class="essay-source">BlogWest</p>
-      <a class="essay-grid-more" href="https://writing.jasonheppler.org/2016/01/05/federal-policy-western-lands-and/">Read the essay</a>
     </div>
 </section>
 
 <hr/> 
 
-<h2>Some recent digital scholarship &mdash;</h2>
-
-Find more of my work on my [digital and public history](/research/) page.
+<h2>Latest digital scholarship &mdash;</h2>
 
 <section class="project-grid">
   <a class="project-grid-item" href="http://machinesinthevalley.org">
@@ -139,15 +118,36 @@ Find more of my work on my [digital and public history](/research/) page.
       <p class="project-grid-desc">Exploring debates over what I called Reformist Progressives and Enabling Progressives.</p>
     </div>
   </a>
+
+  <a class="project-grid-item" href="http://framingredpower.org/">
+    <div class="project-grid-thumb">
+      <img src="/assets/images/portfolio_frp.png" alt="Framing Red Power" loading="lazy" />
+    </div>
+    <div class="project-grid-info">
+      <h3 class="project-grid-title">Framing Red Power</h3>
+      <p class="project-grid-desc">Exploring how the media covered the Trail of Broken Treaties.</p>
+    </div>
+  </a>
+
 </section>
-
-<hr/>
-
-<h2>The latest collaborative digital history &mdash;</h2>
 
 Find more of my work on my [digital and public history](/research/) page.
 
+<hr/>
+
+<h2>Recent collaborative digital history &mdash;</h2>
+
 <section class="project-grid">
+  <a class="project-grid-item" href="https://connectingthreads.co.uk/">
+    <div class="project-grid-thumb">
+      <img src="/assets/images/portfolio_ct.jpg" alt="Connecting Threads" loading="lazy" />
+    </div>
+    <div class="project-grid-info">
+      <h3 class="project-grid-title">Connecting Threads</h3>
+      <p class="project-grid-desc">Amplifying the contributions of Indian weavers and African Caribbean consumers to global histories of dress.</p>
+    </div>
+  </a>
+
   <a class="project-grid-item" href="https://deathbynumbers.org">
     <div class="project-grid-thumb">
       <img src="/assets/images/portfolio_bom.png" alt="Death by Numbers" loading="lazy" />
@@ -177,6 +177,90 @@ Find more of my work on my [digital and public history](/research/) page.
       <p class="project-grid-desc">Creating new datasets and visualizations so that we can better understand the history of American religion.</p>
     </div>
   </a>
+</section>
+
+Find more of my work on my [digital and public history](/research/) page.
+
+<hr/>
+
+<section class="post-categories">
+    <h2>Topics&mdash;</h2>
+<span>
+  <a href="https://writing.jasonheppler.org/categories/academia/">academia</a>, 
+  <a href="https://writing.jasonheppler.org/categories/advocacy/">advocacy</a>, 
+        <a href="https://writing.jasonheppler.org/categories/american-historical-association/">American Historical Association</a>, 
+        <a href="https://writing.jasonheppler.org/categories/american-life/">american life</a>, 
+        <a href="https://writing.jasonheppler.org/categories/american-society-for-environmental-history/">American Society for Environmental History</a>, 
+        <a href="https://writing.jasonheppler.org/categories/american-west/">American West</a>, 
+        <a href="https://writing.jasonheppler.org/categories/apple/">apple</a>, 
+        <a href="https://writing.jasonheppler.org/categories/artificial-intelligence/">artificial intelligence</a>, 
+        <a href="https://writing.jasonheppler.org/categories/bicycling/">bicycling</a>, 
+        <a href="https://writing.jasonheppler.org/categories/career/">career</a>, 
+        <a href="https://writing.jasonheppler.org/categories/coffee/">coffee</a>, 
+        <a href="https://writing.jasonheppler.org/categories/conference/">conference</a>, 
+        <a href="https://writing.jasonheppler.org/categories/data/">data</a>, 
+        <a href="https://writing.jasonheppler.org/categories/data-visualization/">data visualization</a>, 
+        <a href="https://writing.jasonheppler.org/categories/design/">design</a>, 
+        <a href="https://writing.jasonheppler.org/categories/digital-history/">digital history</a>, 
+        <a href="https://writing.jasonheppler.org/categories/digital-humanities/">digital humanities</a>, 
+        <a href="https://writing.jasonheppler.org/categories/environment/">environment</a>, 
+        <a href="https://writing.jasonheppler.org/categories/gaming/">gaming</a>, 
+        <a href="https://writing.jasonheppler.org/categories/golang/">golang</a>, 
+        <a href="https://writing.jasonheppler.org/categories/health/">health</a>, 
+        <a href="https://writing.jasonheppler.org/categories/indie-web/">indie web</a>, 
+        <a href="https://writing.jasonheppler.org/categories/interview/">interview</a>, 
+        <a href="https://writing.jasonheppler.org/categories/javascript/">javascript</a>, 
+        <a href="https://writing.jasonheppler.org/categories/labor/">labor</a>, 
+        <a href="https://writing.jasonheppler.org/categories/libraries/">libraries</a>, 
+        <a href="https://writing.jasonheppler.org/categories/longform/">Longform</a>, 
+        <a href="https://writing.jasonheppler.org/categories/maps/">maps</a>, 
+        <a href="https://writing.jasonheppler.org/categories/microposts/">Microposts</a>, 
+        <a href="https://writing.jasonheppler.org/categories/midwest/">Midwest</a>, 
+        <a href="https://writing.jasonheppler.org/categories/movies/">movies</a>, 
+        <a href="https://writing.jasonheppler.org/categories/mozilla/">Mozilla</a>, 
+        <a href="https://writing.jasonheppler.org/categories/newsletter/">newsletter</a>, 
+        <a href="https://writing.jasonheppler.org/categories/obsidian/">obsidian</a>, 
+        <a href="https://writing.jasonheppler.org/categories/omaha/">omaha</a>, 
+        <a href="https://writing.jasonheppler.org/categories/open-access/">open access</a>, 
+        <a href="https://writing.jasonheppler.org/categories/personal/">personal</a>, 
+        <a href="https://writing.jasonheppler.org/categories/photo/">photo</a>, 
+        <a href="https://writing.jasonheppler.org/categories/place/">place</a>, 
+        <a href="https://writing.jasonheppler.org/categories/plain-text/">plain text</a>, 
+        <a href="https://writing.jasonheppler.org/categories/podcasts/">podcasts</a>, 
+        <a href="https://writing.jasonheppler.org/categories/poetry/">poetry</a>, 
+        <a href="https://writing.jasonheppler.org/categories/politics/">politics</a>, 
+        <a href="https://writing.jasonheppler.org/categories/productivity/">productivity</a>, 
+        <a href="https://writing.jasonheppler.org/categories/programming/">programming</a>, 
+        <a href="https://writing.jasonheppler.org/categories/public-history/">public history</a>, 
+        <a href="https://writing.jasonheppler.org/categories/public-lands/">public lands</a>, 
+        <a href="https://writing.jasonheppler.org/categories/python/">python</a>, 
+        <a href="https://writing.jasonheppler.org/categories/ranching/">ranching</a>, 
+        <a href="https://writing.jasonheppler.org/categories/re-placing/">re-placing</a>, 
+        <a href="https://writing.jasonheppler.org/categories/reading/">reading</a>, 
+        <a href="https://writing.jasonheppler.org/categories/regionalism/">regionalism</a>, 
+        <a href="https://writing.jasonheppler.org/categories/repair-and-maintain/">repair &amp; maintain</a>, 
+        <a href="https://writing.jasonheppler.org/categories/research/">research</a>, 
+        <a href="https://writing.jasonheppler.org/categories/restoration/">restoration</a>, 
+        <a href="https://writing.jasonheppler.org/categories/review/">review</a>, 
+        <a href="https://writing.jasonheppler.org/categories/rodeo/">rodeo</a>, 
+        <a href="https://writing.jasonheppler.org/categories/ruby/">ruby</a>, 
+        <a href="https://writing.jasonheppler.org/categories/silicon-valley/">silicon valley</a>, 
+        <a href="https://writing.jasonheppler.org/categories/spatial-history/">spatial history</a>, 
+        <a href="https://writing.jasonheppler.org/categories/talks/">talks</a>, 
+        <a href="https://writing.jasonheppler.org/categories/teaching/">teaching</a>, 
+        <a href="https://writing.jasonheppler.org/categories/tech-life/">tech life</a>, 
+        <a href="https://writing.jasonheppler.org/categories/technology/">technology</a>, 
+        <a href="https://writing.jasonheppler.org/categories/text-analysis/">text analysis</a>, 
+        <a href="https://writing.jasonheppler.org/categories/thatcamp/">THATCamp</a>, 
+        <a href="https://writing.jasonheppler.org/categories/theology/">theology</a>, 
+        <a href="https://writing.jasonheppler.org/categories/twoquotes/">twoquotes</a>, 
+        <a href="https://writing.jasonheppler.org/categories/unions/">unions</a>, 
+        <a href="https://writing.jasonheppler.org/categories/vim/">vim</a>, 
+        <a href="https://writing.jasonheppler.org/categories/web/">web</a>, 
+        <a href="https://writing.jasonheppler.org/categories/wendell-berry/">Wendell Berry</a>, 
+        <a href="https://writing.jasonheppler.org/categories/western-history-association/">Western History Association</a>, 
+        <a href="https://writing.jasonheppler.org/categories/writing/">writing</a>
+    </span>
 </section>
 
 <hr/>
@@ -232,7 +316,5 @@ Find more of my work on my [digital and public history](/research/) page.
 
 </div>
 </section>
-
-</div>
 
 </div>

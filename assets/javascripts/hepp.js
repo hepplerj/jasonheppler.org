@@ -4,75 +4,118 @@ import enableFloatingFootnotes from "./marginalia.js";
 accessibleFootnotes();
 enableFloatingFootnotes();
 
-// Theme switcher
-window.beep = {};
-window.beep.utils = {};
-const n = beep;
-n.utils.domReady = function (e) {
-  "interactive" === document.readyState || "complete" === document.readyState
-    ? e()
-    : document.addEventListener("DOMContentLoaded", e);
-};
-n.utils.getCSSCustomProperty = function (e) {
-  let t = window.getComputedStyle(document.documentElement).getPropertyValue(e);
-  return t && t.trim();
-};
-n.utils.hasStorage = function () {
-  let e;
-  try {
-    e = window.localStorage;
-    var t = "__storage_test__";
-    return e.setItem(t, t), e.removeItem(t), !0;
-  } catch (e) {
-    return !1;
-  }
-};
+// Menu toggle functionality
+const menuToggle = document.getElementById('menuToggle');
+const dropdown = document.getElementById('dropdown');
+const overlay = document.getElementById('overlay');
+const menuIcon = document.getElementById('menuIcon');
+const closeIcon = document.getElementById('closeIcon');
 
-if ("localStorage" in window) {
-  document.querySelector(".user-toggle").removeAttribute("hidden");
-  const inputs = document.querySelectorAll('input[name="theme-chooser"]'),
-    themeInputs = Array.from(inputs),
-    modeStatus = document.querySelector(".mode-status"),
-    applyTheme = function (selectedTheme) {
-      let theme =
-        selectedTheme ||
-        localStorage.getItem("user-color-scheme") ||
-        (window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light");
-      document.documentElement.setAttribute("data-site-theme", theme);
-      updateThemeStatus(theme);
-    },
-    updateThemeStatus = function (theme) {
-      document.querySelector(
-        `input[name="theme-chooser"][value=${theme}]`,
-      ).checked = true;
-      if (theme === "auto") {
-        document.documentElement.removeAttribute("data-site-theme");
-        modeStatus.innerText = "Color mode is selected automatically.";
-      } else {
-        modeStatus.innerText = `Color mode is now “${theme}.”`;
-      }
-    };
-
-  themeInputs.forEach((input) => {
-    input.addEventListener("change", function (event) {
-      event.preventDefault();
-      let selectedTheme = document.querySelector(
-        'input[name="theme-chooser"]:checked',
-      ).value;
-      localStorage.setItem("user-color-scheme", selectedTheme);
-      applyTheme(selectedTheme);
+if (menuToggle) {
+    // Menu toggle
+    menuToggle.addEventListener('click', () => {
+        dropdown.classList.toggle('active');
+        overlay.classList.toggle('active');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
     });
-  });
 
-  applyTheme();
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', () => {
+        dropdown.classList.remove('active');
+        overlay.classList.remove('active');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+    });
 
-  window.addEventListener("storage", function (event) {
-    if (event.key === "user-color-scheme") {
-      applyTheme();
+    // Close menu when clicking a link
+    const dropdownLinks = dropdown.querySelectorAll('a');
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            dropdown.classList.remove('active');
+            overlay.classList.remove('active');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        });
+    });
+}
+
+// Theme switcher
+const themeToggle = document.getElementById('themeToggle');
+const moonIcon = document.getElementById('moonIcon');
+const sunIcon = document.getElementById('sunIcon');
+
+// Function to get system preference
+function getSystemTheme() {
+    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+}
+
+// Function to get current effective theme
+function getCurrentTheme() {
+    const userChoice = localStorage.getItem("user-color-scheme");
+    if (userChoice) {
+        return userChoice;
     }
-  });
+    return getSystemTheme();
+}
+
+// Function to apply theme
+function applyTheme(theme) {
+    const userChoice = localStorage.getItem("user-color-scheme");
+
+    // Only set the attribute if user has made an explicit choice
+    if (userChoice) {
+        document.documentElement.setAttribute("data-site-theme", userChoice);
+    } else {
+        // Remove attribute to let system preference apply via media query
+        document.documentElement.removeAttribute("data-site-theme");
+    }
+
+    updateThemeIcons(theme || getCurrentTheme());
+}
+
+// Function to update theme icons
+function updateThemeIcons(theme) {
+    if (!moonIcon || !sunIcon) return;
+
+    if (theme === "dark") {
+        moonIcon.classList.add('hidden');
+        sunIcon.classList.remove('hidden');
+    } else {
+        moonIcon.classList.remove('hidden');
+        sunIcon.classList.add('hidden');
+    }
+}
+
+// Theme toggle button
+if (themeToggle && moonIcon && sunIcon) {
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = getCurrentTheme();
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        localStorage.setItem("user-color-scheme", newTheme);
+        applyTheme(newTheme);
+    });
+}
+
+// Initialize theme on page load
+if ("localStorage" in window) {
+    applyTheme();
+
+    // Listen for changes from other tabs
+    window.addEventListener("storage", function (event) {
+        if (event.key === "user-color-scheme") {
+            applyTheme();
+        }
+    });
+
+    // Listen for system theme changes
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function() {
+        // Only update if user hasn't made an explicit choice
+        if (!localStorage.getItem("user-color-scheme")) {
+            applyTheme();
+        }
+    });
 }
 
