@@ -603,6 +603,7 @@ footer p {
   clear: both;
   position: relative;
   overflow: auto;
+  width: 100%;
 }
 
 .book img {
@@ -2121,6 +2122,7 @@ aside.publication-purchase hr {
   }
 
   .publication-cover {
+    position: static;
     order: -1;
     text-align: center;
   }
@@ -2141,6 +2143,7 @@ aside.publication-purchase hr {
   }
 
   .publication-cover {
+    position: static;
     order: -1;
     text-align: center;
   }

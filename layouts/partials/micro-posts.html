@@ -1,0 +1,9 @@
+<ul>
+{{ range first 5 (where .Site.RegularPages "Section" "links") }}
+  <li>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+  </li>
+{{ end }}
+</ul>
+
