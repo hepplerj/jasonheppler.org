@@ -4,13 +4,11 @@
   <div class="body limiter">
 
     <article class="publication-page">
-      <div class="publication-layout">
         <div class="publication-content">
           <header class="publication-header">
             <h1 class="publication-title">{{ .Title }}</h1>
             {{ with .Params.author }}<p class="publication-author">by {{ . }}</p>{{ end }}
-            {{ with .Params.year }}<p class="publication-year">{{ . }}</p>{{ end }}
-            {{ with .Params.publisher }}<p class="publication-publisher">{{ . }}</p>{{ end }}
+            <p>{{ with .Params.publisher }}{{ . }}, {{end}} {{ with .Params.year}}{{ . }}{{ end }}</p>
           </header>
 
           <div class="publication-description">
@@ -67,8 +65,8 @@
         </div>
       </div>
     </article>
+</div>
 
-  </div>
-
+<div class="limiter">
   {{ partial "foot.html" . }}
 </div>

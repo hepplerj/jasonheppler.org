@@ -15,9 +15,7 @@ This post also appears at <a href="http://blogwest.org/2016/01/07/federal-policy
 > producers undergirded their opposition. But at a deeper level of human
 > response was the degree to which producers' values were offended. They could
 > not accept the notion that what environmentalists thought was useful and
-> valuable was, in fact, so.
->
-> ---Samuel Hays
+> valuable was, in fact, so. ---Samuel Hays
 
 The federal government administers a lot of Western land.
 

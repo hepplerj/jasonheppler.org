@@ -1,7 +1,7 @@
 {{ partial "head.html" . }}
 
 <div class='pad2y limiter content'>
-  <div class="body">  
+  <div class="body">
     <header>
     {{ if .Params.page_type }}
     {{ else }}
@@ -14,6 +14,8 @@
   {{- end }}
 {{ .Content }}
 </div>
+</div>
 
+<div class="limiter">
 {{ partial "foot.html" . }}
 </div>

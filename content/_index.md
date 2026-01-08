@@ -11,9 +11,19 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
     </div>
     
   <aside class="newsletter">
-    <p>Consider subscribing to "<a href="https://www.tackandink.org/">Tack &amp; Ink</a>," a newsletter focused on the American West, agricultural history, and political culture.</p>
+    <p>Consider subscribing to "<a href="https://buttondown.com/plainsink">Tack &amp; Ink</a>," a newsletter focused on the American West, agricultural history, and political culture.</p>
     <div class="subscribe-container">
-      <div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.2/umd/signup-form.min.js" data-button-color="#1b7021" data-button-text-color="#FFFFFF" data-site="https://tack-and-ink.ghost.io/" data-locale="en" async></script></div>
+          <form
+  action="
+          https://buttondown.com/api/emails/embed-subscribe/plainsink
+         "
+  method="post"
+  class="embeddable-buttondown-form"
+>
+  <input type="email" name="email" placeholder="your@email.internet" />
+  <input type="hidden" value="1" name="embed" />
+  <input type="submit" value="Subscribe" />
+</form>
   </aside>
 
   <aside class="newsletter">
@@ -65,22 +75,22 @@ Find more of my work on my [scholarship](/publications/) page or my <a href="htt
     <div class="essay-list-item">
       <div class="essay-date">2023 Nov</div>
       <div class="essay-title"><a href="https://www.historians.org/research-and-publications/perspectives-on-history/november-2023/spoiled-fruits-environmental-inequality-in-silicon-valley">Spoiled Fruits: Environmental Inequality in Silicon Valley</a></div>
-      <p class="essay-source">AHA Perspectives</p>
+      <p class="essay-source">Published in <a href="https://www.historians.org/research-and-publications/perspectives-on-history/november-2023/spoiled-fruits-environmental-inequality-in-silicon-valley">AHA Perspectives</a></p>
     </div>
     <div class="essay-list-item">
       <div class="essay-date">2019 Apr</div>
       <div class="essay-title"><a href="https://www.washingtonpost.com/outlook/2019/04/26/how-silicon-valley-provides-blueprint-cleaning-up-our-drinking-water/">How Silicon Valley provides the blueprint for cleaning up our drinking water</a></div>
-      <p class="essay-source">Washington Post</p>
+      <p class="essay-source">Published in the <a href="https://www.washingtonpost.com/outlook/2019/04/26/how-silicon-valley-provides-blueprint-cleaning-up-our-drinking-water/">Washington Post</a></p>
     </div>
     <div class="essay-list-item">
       <div class="essay-date">2017 Nov</div>
       <div class="essay-title"><a href="https://theconversation.com/how-silicon-valley-industry-polluted-the-sylvan-california-dream-85810">How Silicon Valley Industry Polluted the Sylvan California Dream</a></div>
-      <p class="essay-source">The Conversation</p>
+      <p class="essay-source">Published in <a href="https://theconversation.com/how-silicon-valley-industry-polluted-the-sylvan-california-dream-85810">The Conversation</a></p>
     </div>
     <div class="essay-list-item">
       <div class="essay-date">2016 Jan</div>
-      <div class="essay-title"><a href="https://writing.jasonheppler.org/2016/01/05/federal-policy-western-lands-and/">Federal Policy, Western Lands, and Malheur</a></div>
-      <p class="essay-source">BlogWest</p>
+      <div class="essay-title"><a href="/2016/01/06/federal-policy-western-lands-and-malheur/">Federal Policy, Western Lands, and Malheur</a></div>
+      <p class="essay-source">Published in <a href="/2016/01/06/federal-policy-western-lands-and-malheur/">BlogWest</a></p>
     </div>
 </section>
 
@@ -188,8 +198,7 @@ Find more of my work on my [digital and public history](/research/) page.
             <div class="column">
                 <h3>The Basics</h3>
                 <ul>
-                    <li><a href="/about/">About me</a></li>
-                    <li><a href="/about/">Contact</a></li>
+                    <li><a href="/about/">About me &amp; contact</a></li>
                     <li><a href="https://github.com/hepplerj">GitHub</a></li>
                     <li><a href="https://writing.jasonheppler.org/feed.json">RSS Feed</a></li>
                 </ul>

@@ -70,11 +70,11 @@ menu:
       url: /courses/
       weight: 3
     - name: Blog
-      url: https://writing.jasonheppler.org
+      url: /archive/
       weight: 4
     - name: Newsletter
       weight: 5
-      url: https://tackandink.org
+      url: https://buttondown.com/plainsink
 
 enableGitInfo: true
 

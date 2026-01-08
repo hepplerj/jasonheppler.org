@@ -1,11 +1,14 @@
 {{ partial "head.html" . }}
 
-<div class='pad2y limiter-blog content'>
+<div class='pad2y limiter content'>
   <div class="writing-body"> 
 <article id='{{ urlize .Title }}' class="h-entry post post-body">
   <section class="post-left">
   <header>
-    <h1 class="post-title"><a href='{{ .Permalink }}' class='p-name'><strong>{{ .Title }}</strong></a></h1>
+    <h1 class="post-title">{{ .Title }}</h1>
+  {{ if isset .Params "lede" }}
+    <p class="post-subtitle">{{ index .Params "lede" }}</p>
+    {{ end }}
   </header>
 
   {{ with .Params.image }}

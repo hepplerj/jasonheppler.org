@@ -6,13 +6,9 @@ lede: "Creating my research and note-taking environment"
 tags: [obsidian, research]
 ---
 
-<aside>
-<p><strong>2024-07-22</strong>: Thanks to the <a href="https://news.ycombinator.com/item?id=41034567">kind folks at Hacker News</a>, I've fixed a couple of CSS conflicts that caused code text to be difficult to read.</p>
-</aside>
-
 I mentioned on [my recent appearance on Drafting the Past](https://draftingthepast.com/podcast-episodes/episode-45-jason-heppler-wants-tools-that-fit-his-questions/) that I have migrated all of my historical research work into Obsidian, which prompted a few folks on Bluesky to ask about some details on how I use it. Here's a run-down of what that's like from the perspective of writing and historical research.
 
-Over the past ten years, my process for organizing research notes has evolved a lot, but one key thing remains consistent: the notes are written in plain text. Much of this started in a Haskell-based wiki system called [Gitit](https://github.com/jgm/gitit), introduced to me by my colleague Caleb McDaniel (who is [still using it](http://wiki.wcaleb.rice.edu)!). But I had some frustrations with Gitit and ended up moving to DEVONthink for a long time. The ability to throw just about anything into the software and organize it with tagging and folders was incredibly helpful for me when it came to tracking themes, topics, ideas, people, and events. But, as I started doing more on mobile devices (both iPhone and iPad) I found DEVONthink's mobile apps, at least in its early days, difficult to use.
+Over the past ten years, my process for organizing research notes has evolved a lot, but one key thing remains consistent: the notes are written in plain text. Much of this started in a Haskell-based wiki system called [Gitit](https://github.com/jgm/gitit), introduced to me by my friend Caleb McDaniel (who is [still using it](http://wiki.wcaleb.rice.edu)!). But I had some frustrations with Gitit and ended up moving to DEVONthink for a long time. The ability to throw just about anything into the software and organize it with tagging and folders was incredibly helpful for me when it came to tracking themes, topics, ideas, people, and events. But, as I started doing more on mobile devices (both iPhone and iPad) I found DEVONthink's mobile apps, at least in its early days, difficult to use.
 
 Then along came Obsidian, which I probably first heard about from [Cortex](https://www.relay.fm/cortex) a couple years ago. I won't hesitate to say that Obsidian, along with a few plugins, is the research and note-taking software I always wanted.
 

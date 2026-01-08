@@ -1,24 +1,26 @@
 <aside class="blog-nav">
+    <p class="reading-time">
+    Published <a href="{{ .Permalink }}" class="u-url u-uid permalink"><time datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "January 2, 2006" }}</time></a>, contains {{ .WordCount }} words and should take you about {{ .ReadingTime }} minute(s) to read it. 
+    &middot; <a href="/feed.xml">Subscribe to these essays</a>
+  </p>
   {{ if .Params.tags }}
   <p class="article-filed">
     Filed under: <span class="article-tags">{{ partial "tags.html" .}}</span>
   </p>
   {{ end }}
-  <p class="reading-time">
-    {{ .ReadingTime }} min read &middot; {{ .WordCount }} words &middot;
-    Published
-    <a href="{{ .Permalink }}" class="u-url u-uid permalink"
-      ><time datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'
-        >{{ .Date.Format "January 2, 2006" }}</time
-      ></a
-    >
-    &middot; <a href="/feed.xml">Subscribe</a>
-  </p>
+
   <p class="impact">
     This page loaded in <strong><span id="page_load"></span></strong> seconds
     and used ~<strong><span id="carbon"></span>kb</strong> of data. You've
     generated around <strong><span id="page_carbon"></span>g</strong> of CO2 by
     visiting. <a href="https://jasonheppler.org/low-impact/">Curious</a>?
+  </p>
+
+  <p>
+  <a href="https://jasonhepler.org">Jason Heppler</a> is a historian, farmer, software developer, and writer on the central plains of Nebraska. He is the author of <a href="/publications/">several books</a> and his essays have appeared at the <em>Washington Post</em>, <em>The Conversation</em>, and <em>Perspectives</em>. He writes a <a href="https://buttondown.com/plainsink">newsletter</a> on his research about agricultural history, land use, public lands,  and American politics.
+  </p>
+  <p>
+    You can sometimes find him on <a href="https://bsky.app/profile/jasonheppler.org">Bluesky</a>, <a href="https://www.instagram.com/hepplerj/">Instagram</a>, and <a href="https://writing.jasonheppler.org">micro.blog</a>.
   </p>
 </aside>
 

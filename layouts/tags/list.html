@@ -1,0 +1,28 @@
+{{ partial "head.html" . }}
+
+<div class="pad2y limiter content">
+  <div class="body">
+    <h1>{{ .Title }}</h1>
+
+    <p>{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }} tagged with "{{ .Title }}"</p>
+
+    <!-- Posts List -->
+    <div class="writing">
+      <div class="posts-list">
+        {{ range .Pages }}
+        <div class="post-item">
+          <time class="post-date">{{ .Date.Format "2 January 2006" }}</time>
+          <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a>
+          {{ with .Params.lede }}
+          <p class="post-lede">{{ . }}</p>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="limiter">
+  {{ partial "foot.html" . }}
+</div>

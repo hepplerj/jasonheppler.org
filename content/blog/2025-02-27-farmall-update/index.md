@@ -24,3 +24,17 @@ My first step in the past week has been to drain everything: gasoline, oil, tran
 
 Speaking of which, there are layers of grime, grease, and dirt on this machine that have likely been there for decades. I've just started the work of trying to clean this up. Even shop-quality de-greaser is struggling to cut through the thick of it. A lot of it will come off as I start stripping off old paint, since one of my plans is to repaint the whole tractor. The good news is I suspect most of the work on the whole tractor is largely cosmetic. I intend to dig into the engine a bit just to check everything over, but the tractor runs great otherwise. 
 
+<div class="masonry-grid">
+  <img src="/assets/images/farmall-feb25-1eb7ba065b-2.jpg" alt="A red tractor is parked inside a well-organized garage with various tools and equipment on the walls and workbench.">
+  <img src="/assets/images/farmall-feb25-de77cf9cd6-2.jpg" alt="A red Farmall tractor is parked in front of an old, weathered red barn surrounded by bare trees and patches of snow on the ground.">
+  <img src="/assets/images/farmall-feb25-img-5575-2.jpeg" alt="Three vintage manuals for Farmall tractors, including a parts catalog, operator's manual, and serviceman's guide, are displayed on a leather chair.">
+  <img src="/assets/images/farmall-feb25-img-6140.jpeg" alt="A hammer and a chisel with a yellow handle are placed inside a rusty metal container along with some coiled wires.">
+  <img src="/assets/images/farmall-feb25-img-6143-2.jpeg" alt="Underneath the vehicle, there is a circular metal component attached with supports and surrounded by pipes and tubing, indicating part of an automotive system.">
+  <img src="/assets/images/farmall-feb25-img-6187.jpeg" alt="A partially disassembled mechanical component with exposed gears is shown on a red surface.">
+  <img src="/assets/images/farmall-feb25-img-6145-2.jpeg" alt="An old, worn-out engine with rusted parts and red paint is displayed in a workshop setting.">
+  <img src="/assets/images/farmall-feb25-img-6158-2.jpeg" alt="A vintage red tractor with worn paint is parked inside a corrugated metal shed.">
+  <img src="/assets/images/farmall-feb25-img-6161-2.jpeg" alt="A cat is lounging comfortably on the seat of a red tractor.">
+  <img src="/assets/images/farmall-feb25-img-6185-2.jpeg" alt="A chain is attached to a rusty metal frame above a green container, with cardboard and a white bucket in the background.">
+  <img src="/assets/images/farmall-feb25-img-6190.jpeg" alt="An old, weathered farm tractor is shown in a workshop setting.">
+  <img src="/assets/images/farmall-feb25-img-6192.jpeg" alt="A large tire leans against a white wooden building in bright sunlight.">
+</div>

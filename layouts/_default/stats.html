@@ -131,22 +131,12 @@
       </script>
 
       <h2>Tags by post count</h2>
-      <div class="categorycloud">
+      <div class="category-filters">
         {{ if ne (len $.Site.Taxonomies.tags) 0 }}
-        {{ $largestFontSize := 2 }}
-        {{ $smallestFontSize := 1 }}
-        {{ $fontSpread := sub $largestFontSize $smallestFontSize }}
-        {{ $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
-        {{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
-        {{ $spread := sub $max $min }}
-        {{ $fontStep := div $fontSpread $spread }}
         {{ range $name, $taxonomy := $.Site.Taxonomies.tags.ByCount }}
         {{ $categoryCount := len $taxonomy.Pages }}
-        {{ $currentFontSize := (add $smallestFontSize (mul (sub $categoryCount $min) $fontStep) ) }}
-        {{ $weight := div (sub (math.Log $categoryCount) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
-        {{ $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weight)) }}
-        <a href="{{ "/tags/" | relURL }}{{ .Page.Title | urlize }}" class="categorycloud-item p-2 text-decoration-none">
-          {{ .Page.Title }}<span class="mono">({{ $categoryCount }})</span>
+        <a href="{{ "/tags/" | relURL }}{{ .Page.Title | urlize }}" class="category-pill">
+          {{ .Page.Title }} <span class="mono">({{ $categoryCount }})</span>
         </a>
         {{ end }}
         {{ end }}
@@ -154,8 +144,9 @@
     </div>
   </article>
 </main>
+  </div>
 </div>
 
-
-{{ partial "foot.html" . }}
+<div class="limiter">
+  {{ partial "foot.html" . }}
 </div>
