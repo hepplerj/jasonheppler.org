@@ -1,29 +1,27 @@
 {{ partial "head.html" . }}
+
 <div class='pt-10 site-container content'>
-  <div class="body"> 
-<article id='{{ urlize .Title }}' class="h-entry book">
-  <header>
-    <h2 class="post-title"><a href='{{ .Permalink }}' class='p-name'><em>{{ .Params.Shorttitle }}</em></a> by {{ .Params.Author }}</h2>
-    <p><em>{{ .Params.Preview }}</em></p>
-  </header>
+  <div class="body">
+    <article id='{{ urlize .Title }}' class="h-entry book">
+      <header>
+        <h1 class="post-title"><a href='{{ .Permalink }}' class='p-name'><em>{{ .Params.Shorttitle }}</em></a> by {{ .Params.Author }}</h1>
+        <p><em>{{ .Params.Preview }}</em></p>
+      </header>
 
-  <div class='post-body e-content'>
-    {{ .Content }}
-  
-  <h3>Details</h3>
-  <ul>
-    <li><em>{{ .Title }}</em> by {{ .Params.Author }}</li>
-    <li>ISBN: {{ .Params.Isbn }} (look up with <a href="https://worldcat.org/isbn/{{ .Params.Isbn }}">WorldCat</a> or <a href="https://openlibrary.org/isbn/{{ .Params.Isbn }}">Open Library</a>)</li>
-    <li>Buy from <a href="https://bookshop.org/books?keywords={{ .Params.Isbn }}">Bookshop</a></li>
-    <li>Published: {{ .Params.Year }}</li>
-    <li>Publisher: {{ .Params.Publisher }}</li>
-  </ul>
-  
+      <div class='post-body e-content'>
+        {{ .Content }}
+
+        <h3>Details</h3>
+        <ul>
+          <li><em>{{ .Title }}</em> by {{ .Params.Author }}</li>
+          <li>ISBN: {{ .Params.Isbn }} (look up with <a href="https://worldcat.org/isbn/{{ .Params.Isbn }}">WorldCat</a> or <a href="https://openlibrary.org/isbn/{{ .Params.Isbn }}">Open Library</a>)</li>
+          <li>Buy from <a href="https://bookshop.org/books?keywords={{ .Params.Isbn }}">Bookshop</a></li>
+          <li>Published: {{ .Params.Year }}</li>
+          <li>Publisher: {{ .Params.Publisher }}</li>
+        </ul>
+      </div>
+    </article>
+
+    {{ partial "foot" . }}
   </div>
-
-</article>
-
-{{ partial "blog-nav" . }}
-{{ partial "foot" . }}
-
 </div>

@@ -1,0 +1,10 @@
+{{ if .Params.images }}	
+	{{ with index .Params.images 0 }}
+		<meta property="og:image" content="{{ . }}">
+	{{ end }} 
+{{ else }}
+	{{ with .Params.opengraph }}	
+		<meta property="og:title" content="{{ .title }}">
+		<meta property="og:image" content="{{ .image }}">
+	{{ end }} 
+{{ end }}

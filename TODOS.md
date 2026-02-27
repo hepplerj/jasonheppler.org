@@ -74,10 +74,8 @@ Ready to merge into `main` — all polish items below are incremental improvemen
 
 ## 7. Tailwind Migration — Residual CSS
 
-These classes stay as authored CSS (appear in raw HTML inside markdown content files):
+✓ CSS audit complete. Residual classes that stay as authored CSS (Hugo goldmark or JS-managed):
 
-- `.intro-section`, `.two-column` — used in some content files
-- `.noted` — about page sidebar paragraphs
-- `.footnotes` — Hugo goldmark-generated sidenote layout
+- `.intro-section` — used in `content/_index.md` raw HTML
+- `.footnotes`, `.footnote-ref`, `.footnote-backref` — Hugo goldmark-generated
 - `.category-pill`, `.toc` — stateful/JS-managed
-- `.footnote-ref`, `.footnote-backref` — Hugo goldmark-generated

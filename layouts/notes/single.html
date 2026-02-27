@@ -1,0 +1,20 @@
+{{ partial "head.html" . }}
+
+<div class='pt-10 site-container content'>
+  <div class="body">
+    <article id='{{ urlize .Title }}' class="h-entry post post-body">
+      <section>
+        <header>
+          <h1 class="text-[230%] m-0">{{ .Title }}</h1>
+          <p class="font-mono text-[75%] opacity-50 mt-1">{{ .Date.Format "2 January 2006" }}</p>
+        </header>
+
+        <div class='post-body e-content'>
+          {{ .Content }}
+        </div>
+      </section>
+    </article>
+
+    {{ partial "foot" . }}
+  </div>
+</div>

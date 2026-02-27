@@ -1,0 +1,18 @@
+{{ $link_text := or $.Site.Params.conversation_on_mb_link_text "✴️ Conversation on Micro.blog" }}
+{{ $fallback_url := print "https://micro.blog/" .Site.Author.username }}
+{{ $fallback_url = or $.Site.Params.conversation_on_mb_fallback_url $fallback_url }}
+{{ $fallback_link_text := or $.Site.Params.conversation_on_mb_fallback_link_text "✴️ Also on Micro.blog" }}
+
+<a href="{{ $fallback_url }}" class="conversation-on-mb conversation-on-mb-fallback">{{ $fallback_link_text | safeHTML }}</a>
+<script module>
+  const conversationLink = document.querySelector('.conversation-on-mb');
+  const currentPageURLEncoded = encodeURIComponent('{{ .Permalink }}');
+
+  fetch('https://micro.blog/conversation.js?format=jsonfeed&url=' + currentPageURLEncoded)
+  .then(response => response.json())
+  .then(conversation => {
+    conversationLink.setAttribute('href', conversation.home_page_url);
+    conversationLink.innerHTML = '{{ $link_text | safeHTML }}';
+    conversationLink.classList.remove('conversation-on-mb-fallback');
+  });
+</script>

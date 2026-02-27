@@ -1,0 +1,84 @@
+.microblog_collection {
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 0;
+}
+
+.microblog_collection img {
+	display: inline-block;
+	width: 175px;
+	height: 175px;
+	object-fit: cover;
+	border-radius: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	padding: 0;
+	cursor: pointer;
+}
+
+#microblog_lightbox {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	justify-content: center;
+	align-items: center;
+}
+
+#microblog_lightbox_img {
+	max-width: 90%;
+	max-height: 90%;
+	object-fit: contain;
+}
+
+.microblog_lightbox_nav {
+	position: absolute;
+	top: 50%;
+	width: 40px;
+	height: 40px;
+	transform: translateY(-50%);
+	background-color: rgba(255, 255, 255, 0.2);
+	color: white;
+	border: none;
+	border-radius: 50%;
+	font-size: 1rem;
+	padding-bottom: 4px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.microblog_lightbox_nav:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+#microblog_lightbox_prev_btn {
+	left: 20px;
+}
+
+#microblog_lightbox_next_btn {
+	right: 20px;
+}
+
+#microblog_lightbox_close_btn {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	background: none;
+	color: white;
+	border: none;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+	.microblog_collection img {
+		width: 150px;
+		height: 150px;
+	}            
+}

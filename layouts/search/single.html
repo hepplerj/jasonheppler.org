@@ -1,0 +1,38 @@
+{{ partial "head.html" . }}
+
+<div class="pt-10 site-container content">
+  <div class="body">
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
+
+    {{ if eq hugo.Environment "development" }}
+    <p class="search-dev-notice">
+      Search requires a production build to generate the index.
+      Run <code>make build</code>, then serve the <code>public/</code> directory to use search.
+    </p>
+    {{ else }}
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-ui.js"></script>
+    {{ end }}
+
+    <div id="search"></div>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        if (typeof PagefindUI !== 'undefined') {
+          new PagefindUI({
+            element: "#search",
+            showSubResults: true,
+            showImages: false,
+            excerptLength: 25
+          });
+        }
+      });
+    </script>
+  </div>
+</div>
+
+<div class="site-container">
+{{ partial "foot.html" . }}
+</div>

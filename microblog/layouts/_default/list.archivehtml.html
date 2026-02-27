@@ -1,0 +1,77 @@
+{{ define "main" }}
+
+<div class="pad2y limiter content">
+  <div class="body">
+    <h1>Archive</h1>
+
+    <!-- Category/Tag Filter Pills -->
+    <div class="category-filters">
+      <a href="#" class="category-pill active" data-category="all">All Posts</a>
+      {{ $posts := where .Site.Pages "Type" "post" }}
+      {{ $categories := slice }}
+      {{ range $posts }}
+        {{ range .Params.categories }}
+          {{ $categories = $categories | append . }}
+        {{ end }}
+      {{ end }}
+      {{ range $categories | uniq | sort }}
+      <a href="#" class="category-pill" data-category="{{ . | urlize }}">{{ . }}</a>
+      {{ end }}
+    </div>
+
+    <!-- Posts List -->
+    <div class="h-feed">
+      {{ $posts := where .Site.Pages "Type" "post" }}
+      {{ range $posts }}
+      {{ $urlizedCategories := slice }}
+      {{ range .Params.categories }}
+        {{ $urlizedCategories = $urlizedCategories | append (. | urlize) }}
+      {{ end }}
+      <p class="h-entry" data-tags="{{ delimit $urlizedCategories "," }}">
+        <a href="{{ .Permalink }}" class="u-url"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05-0700" }}">{{ .Date.Format "2 January 2006" }}</time></a>:
+        {{ if .Title }}
+          <span class="p-name"><b>{{ .Title }}</b></span>
+        {{ else }}
+          <span class="p-summary">{{ .Summary | truncate 100 }}</span>
+        {{ end }}
+      </p>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<script>
+// Filter posts by category
+document.addEventListener('DOMContentLoaded', function() {
+  const pills = document.querySelectorAll('.category-pill');
+  const posts = document.querySelectorAll('.h-entry');
+
+  pills.forEach(pill => {
+    pill.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      // Update active pill
+      pills.forEach(p => p.classList.remove('active'));
+      this.classList.add('active');
+
+      const category = this.dataset.category;
+
+      // Filter posts
+      posts.forEach(post => {
+        if (category === 'all') {
+          post.style.display = 'block';
+        } else {
+          const postTags = post.dataset.tags.toLowerCase().split(',');
+          if (postTags.includes(category)) {
+            post.style.display = 'block';
+          } else {
+            post.style.display = 'none';
+          }
+        }
+      });
+    });
+  });
+});
+</script>
+
+{{ end }}

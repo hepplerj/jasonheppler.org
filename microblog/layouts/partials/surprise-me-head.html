@@ -1,0 +1,11 @@
+{{- $path := "surprise-me/redirect.js" -}}
+{{- $serviceWorker := resources.Get $path | resources.ExecuteAsTemplate $path . -}}
+
+<script type="module">
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('{{ $serviceWorker.Permalink }}')
+    .catch((error) => {
+      console.error('Service Worker registration failed:', error);
+    });
+}
+</script>
