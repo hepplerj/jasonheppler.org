@@ -1,6 +1,6 @@
 {{ partial "head.html" . }}
 
-<div class='pad2y limiter content'>
+<div class='pt-10 site-container content'>
   <div class="body"> 
 <h1>{{ .Title }}</h1>
 
@@ -25,13 +25,13 @@
 
 {{ .Content }}
 
-<div class="newsletters">  
+<div>
 {{ range (where .Site.RegularPages "Section" "newsletter").GroupByDate "2006" }}
 
 <h2>{{ .Key }}</h2>
     {{ range .Pages }}
-    <div class="newsletter-preview">
-      <div class="issue">{{ .Params.issue }} <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a> <time>{{ .Date.Format "2 January 2006" }}</time></div>
+    <div>
+      <div>{{ .Params.issue }} <a href="{{ .Permalink }}">{{ .Title }}</a> <time>{{ .Date.Format "2 January 2006" }}</time></div>
     </div>
     {{ end }}
 {{ end }}

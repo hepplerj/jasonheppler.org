@@ -1,9 +1,9 @@
 {{ partial "head.html" . }}
 
-<div class='pad2y limiter content'>
+<div class='pt-10 site-container content'>
   <div class="body"> 
 <article id='{{ urlize .Title }}' class="h-entry post">
-  <section class="post-left">
+  <section>
   <header>
     <h2 class="post-title"><a href='{{ .Permalink }}' class='p-name'><strong>{{ .Title }}</strong></a></h2>
   </header>
@@ -19,7 +19,7 @@
   </div>
 
   {{ if isset .Params "external" }}
-  <p class="link-post-out">Linked: <a href="{{ index .Params "external" }}">{{ index .Params "title" }} →</a></p>
+  <p>Linked: <a href="{{ index .Params "external" }}">{{ index .Params "title" }} →</a></p>
   {{ end }}
   </section>
 </article>

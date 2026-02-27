@@ -1,13 +1,12 @@
 {{ partial "head.html" . }}
 
-<div class='pad2y limiter content'>
-  <div class="writing-body"> 
+<div class='pt-10 site-container content'>
 <article id='{{ urlize .Title }}' class="h-entry post post-body">
-  <section class="post-left">
+  <section>
   <header>
-    <h1 class="post-title">{{ .Title }}</h1>
+    <h1 class="text-[230%] m-0">{{ .Title }}</h1>
   {{ if isset .Params "lede" }}
-    <p class="post-subtitle">{{ index .Params "lede" }}</p>
+    <p class="italic mt-0">{{ index .Params "lede" }}</p>
     {{ end }}
   </header>
 
@@ -22,11 +21,10 @@
   </div>
 
   {{ if isset .Params "external" }}
-  <p class="link-post-out">Linked: <a href="{{ index .Params "external" }}">{{ index .Params "title" }} →</a></p>
+  <p>Linked: <a href="{{ index .Params "external" }}">{{ index .Params "title" }} →</a></p>
   {{ end }}
   </section>
 </article>
-</div>
 
 {{ partial "blog-nav" . }}
 {{ partial "foot" . }}

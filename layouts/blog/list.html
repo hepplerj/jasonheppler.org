@@ -1,33 +1,24 @@
 {{ partial "head.html" . }}
 
-<div class='pad2y limiter content'>
-  <div class="body"> 
+<div class='pt-10 site-container content'>
+  <div class="body">
 <h1>{{ .Title }}</h1>
 
 {{ .Content }}
 
-<div class="writing">  
+<div class="writing">
 {{ $paginator := .Paginate (.Data.Pages) }}
 {{ range $paginator.Pages.GroupByDate "2006" "01" }}
-  <h2 id="section-{{.Key| urlize }}" class="sticky">{{ .Key }}</h2>
-  <div class="list-archives">
+  <h2 id="section-{{.Key| urlize }}" class="sticky top-0 bg-[var(--theme-background)] z-[1] max-sm:static max-sm:top-auto max-sm:z-auto">{{ .Key }}</h2>
+  <div>
     {{ range .Pages }}
-      <div class="item-archive-entry">
-        <article class="archive-entry">
-          <a href="{{ .Permalink }}" class="archive-title">{{ .Title }}</a></li>
-          <span class="sr-only">Posted on </span>
-          <time class="meta-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
-          {{ if .Params.lede }}
-          <p class="teaser"><em>{{ .Params.lede | markdownify }}</em></p>
-          {{ end }}
-          {{ if .Params.tags }}
-          <p class="article-filed">Filed under: <span class="article-tags">{{ partial "tags.html" .}}</span> | Word count: {{ .WordCount }} | Reading time: {{ .ReadingTime }} minute(s)</p>
-          {{ end }}
-            {{ .Summary }}
-
-            <a href="{{ .Permalink }}" class="read-more">Read more &rarr;</a>
-        </article>
-      </div>
+      <article class="mb-4">
+        {{ $url := .Permalink }}{{ if .Params.external }}{{ $url = .Params.external }}{{ end }}
+        <a href="{{ $url }}" class="font-bold text-[115%] block">{{ .Title }}{{ if .Params.source }} <span class="essay-source-tag">{{ .Params.source }}</span>{{ end }}</a>
+        {{ if .Params.lede }}
+        <p class="pl-8 mt-1 italic text-[90%]">{{ index .Params "lede" }}</p>
+        {{ end }}
+      </article>
     {{ end }}
     </div>
 {{ end }}
@@ -38,6 +29,6 @@
   </div>
 </div>
 
-<div class="limiter">
+<div class="site-container">
   {{ partial "foot.html" . }}
 </div>

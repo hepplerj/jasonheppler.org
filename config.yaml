@@ -9,6 +9,7 @@ footnoteReturnLinkContents: " "
 
 permalinks:
   blog: "/:year/:month/:day/:slug/"
+  notes: "/notes/:slug/"
   archive: "/:slug/"
   page: "/:section/:slug/"
 
@@ -70,11 +71,11 @@ menu:
       url: /courses/
       weight: 3
     - name: Blog
-      url: /archive/
+      url: https://writing.jasonheppler.org
       weight: 4
     - name: Newsletter
       weight: 5
-      url: https://buttondown.com/plainsink
+      url: https://www.tackandink.org/
 
 enableGitInfo: true
 

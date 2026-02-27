@@ -1,3 +1,8 @@
+@import "tailwindcss";
+
+@source "../../layouts/**/*.html";
+@source "../../content/**/*.md";
+
 :root {
   --site-theme: "light";
   --color-white: #fff;
@@ -34,8 +39,8 @@
   --color-aside-faded: #eeeade;
   --theme-background: var(--color-background);
   --theme-text: var(--color-text);
-  --theme-links: var(--color-green-bright);
-  --theme-links-hover: var(--color-fern);
+  --theme-links: var(--color-blue-bright);
+  --theme-links-hover: var(--color-blue-bright);
   --theme-dark-tint: var(--color-grey);
   --theme-light-tint: var(--color-salt);
   --theme-mark: rgba(208, 162, 21, 0.2);

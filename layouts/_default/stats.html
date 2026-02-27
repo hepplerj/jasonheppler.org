@@ -1,12 +1,12 @@
 {{ partial "head.html" . }}
 
-<div class='pad2y limiter content'>
+<div class='pt-10 site-container content'>
   <div class="body">  
     <header>
-    <h1 class="title">{{ .Title | markdownify }}</h1>
+    <h1>{{ .Title | markdownify }}</h1>
     </header>
 
-<main class="container">
+<main class="p-4">
   <article class="row justify-content-center">
     <div class="col-md-8">
       <p class="fs-2 lead text-muted">Some stats about my site.</p>
@@ -136,7 +136,7 @@
         {{ range $name, $taxonomy := $.Site.Taxonomies.tags.ByCount }}
         {{ $categoryCount := len $taxonomy.Pages }}
         <a href="{{ "/tags/" | relURL }}{{ .Page.Title | urlize }}" class="category-pill">
-          {{ .Page.Title }} <span class="mono">({{ $categoryCount }})</span>
+          {{ .Page.Title }} <span class="font-mono">({{ $categoryCount }})</span>
         </a>
         {{ end }}
         {{ end }}
@@ -147,6 +147,6 @@
   </div>
 </div>
 
-<div class="limiter">
+<div class="site-container">
   {{ partial "foot.html" . }}
 </div>

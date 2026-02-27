@@ -1,19 +1,21 @@
 {{ partial "head.html" . }}
 
-<div class='pad2y content'>
-  <div class="body limiter">
+<div class='pt-10 content'>
+  <div class="body site-container">
 
-    <article class="publication-page">
-        <div class="publication-content">
-          <header class="publication-header">
-            <h1 class="publication-title">{{ .Title }}</h1>
-            {{ with .Params.author }}<p class="publication-author">by {{ . }}</p>{{ end }}
-            <p>{{ with .Params.publisher }}{{ . }}, {{end}} {{ with .Params.year}}{{ . }}{{ end }}</p>
-          </header>
+    {{ if .Params.image }}
+    {{/* Individual book page with two-column layout */}}
+    <article class="publication-layout">
+      <div class="publication-content">
+        <header class="publication-header">
+          <h1 class="publication-title">{{ .Title }}</h1>
+          {{ with .Params.author }}<p class="publication-author">by {{ . }}</p>{{ end }}
+          <p>{{ with .Params.publisher }}{{ . }}, {{end}} {{ with .Params.year}}{{ . }}{{ end }}</p>
+        </header>
 
-          <div class="publication-description">
-            {{ .Content }}
-          </div>
+        <div class="publication-description">
+          {{ .Content }}
+        </div>
 
           {{ if .Params.purchase_links }}
           <aside class="publication-purchase">
@@ -54,19 +56,26 @@
               <p>Or <a href="{{ .url }}" target="_blank">find a copy in a library near you</a></p>
             </div>
             {{ end }}
-          </aside>
-          {{ end }}
+        </aside>
+        {{ end }}
       </div>
 
-        <div class="publication-cover">
-          {{ with .Params.image }}
-          <img src="/assets/images/{{ . }}" alt="{{ $.Title }}" class="book-cover-large">
-          {{ end }}
-        </div>
+      <div class="publication-cover">
+        {{ with .Params.image }}
+        <img src="/assets/images/{{ . }}" alt="{{ $.Title }}" class="book-cover-large">
+        {{ end }}
       </div>
     </article>
+    {{ else }}
+    {{/* Publications overview page - simple single column */}}
+    <article>
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </article>
+    {{ end }}
+  </div>
 </div>
 
-<div class="limiter">
+<div class="site-container">
   {{ partial "foot.html" . }}
 </div>

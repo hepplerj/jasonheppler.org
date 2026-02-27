@@ -1,6 +1,5 @@
 ---
 title: "Silent Spring Revolution"
-shorttitle: 'Silent Spring Revolution'
 author: 'Douglas Brinkley'
 date: 2022-12-12
 isbn: "978-0063212916"

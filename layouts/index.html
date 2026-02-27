@@ -1,6 +1,6 @@
 {{ partial "head.html" . }}
-{{ partial "christmas.html "}}
-<div class='pad2y content homepage'>
+<!--{{ partial "christmas.html "}}-->
+<div class='pt-10 content homepage'>
   <div class="body">
 
   {{ .Content }}
@@ -8,6 +8,68 @@
   </div>
 </div>
 
-<div class="limiter">
+<!-- Recent Essays -->
+<div class="site-container">
+  <section class="home-section">
+    <h1>Recent Essays &mdash;</h1>
+    {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
+    {{ $url := .RelPermalink }}{{ if .Params.external }}{{ $url = .Params.external }}{{ end }}
+    <article class="home-essay-item">
+      <div class="home-essay-title-row">
+        <a href="{{ $url }}" class="font-bold text-[115%]">{{ .Title }}{{ if .Params.source }} <span class="essay-source-tag">{{ .Params.source }}</span>{{ end }}</a>
+        <span class="home-essay-date">{{ .Date.Format "Jan 2006" }}</span>
+      </div>
+      {{ if .Params.lede }}
+      <p class="pl-8 mt-1 italic text-[90%]">{{ .Params.lede }}</p>
+      {{ end }}
+    </article>
+    {{ end }}
+    <p class="home-section-more"><a href="/blog/">All essays &rarr;</a></p>
+  </section>
+</div>
+
+<div class="site-container">
+  <section class="home-section">
+    <p class="home-tags-line">{{ with .Site.GetPage "/tags" }}{{ range $i, $tag := .Pages.ByTitle }}{{- if $i }}, {{ end -}}<a href="{{ $tag.RelPermalink }}" class="home-tag">{{ lower $tag.Title }}</a>{{ end }}{{ end }}</p>
+  </section>
+</div>
+
+<!-- Recent Notes -->
+<div class="site-container">
+  <section class="home-section">
+    <h1>Recent Notes &mdash;</h1>
+    {{ range first 5 (where .Site.RegularPages "Section" "notes") }}
+    <article class="home-essay-item">
+      <div class="home-essay-title-row">
+        <a href="{{ .RelPermalink }}" class="font-bold text-[115%]">{{ .Title }}</a>
+        <span class="home-essay-date">{{ .Date.Format "Jan 2006" }}</span>
+      </div>
+      {{ if .Params.lede }}
+      <p class="pl-8 mt-1 italic text-[90%]">{{ .Params.lede }}</p>
+      {{ end }}
+    </article>
+    {{ end }}
+    <p class="home-section-more"><a href="/notes/">All notes &rarr;</a></p>
+  </section>
+</div>
+
+<!-- Recent Reading -->
+<div class="site-container">
+  <section class="home-section">
+    <h1>Recent Reading &mdash;</h1>
+    <div class="home-reading-table">
+      {{ range first 5 (where .Site.RegularPages "Section" "books") }}
+      <div class="home-reading-row">
+        <span class="home-reading-title">{{ .Title }}{{ if .Params.reviewed }}{{ $rev := .RelPermalink }}{{ if .Params.review_url }}{{ $rev = .Params.review_url }}{{ end }}<a href="{{ $rev }}" class="review-badge">reviewed</a>{{ end }}</span>
+        <span class="home-reading-author">{{ .Params.author }}</span>
+        <span class="home-reading-year">{{ with .Params.pub_year }}{{ printf "%.4s" . }}{{ else }}{{ .Date.Format "2006" }}{{ end }}</span>
+      </div>
+      {{ end }}
+    </div>
+    <p class="home-section-more"><a href="/books/">All books &rarr;</a></p>
+  </section>
+</div>
+
+<div class="site-container">
   {{ partial "foot.html" . }}
 </div>
