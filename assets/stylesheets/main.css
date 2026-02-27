@@ -978,6 +978,25 @@ figure.about-photo {
     display: block;
   }
 
+  .noscript-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--theme-background);
+    border-bottom: 1px solid rgb(from var(--theme-text) r g b / 0.1);
+    font-size: var(--type-small);
+  }
+  .noscript-nav a {
+    color: var(--theme-links);
+    text-decoration: none;
+  }
+
   @media screen and (min-width: 1025px) {
 
     /* display nav links inline */

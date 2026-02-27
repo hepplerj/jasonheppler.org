@@ -7,13 +7,7 @@
     "node": ">=13.2.0"
   },
   "dependencies": {
-    "@observablehq/plot": "^0.4.0",
-    "chart.js": "^4.4.0",
     "cheerio": "^1.0.0-rc.11",
-    "d3": "^7.3.0",
-    "headroom.js": "^0.12.0",
-    "highlight.js": "^11.5.1",
-    "littlefoot": "^3.4.1",
     "marked": "^4.0.17",
     "node-fetch": "^3.3.0",
     "psl": "^1.8.0"
@@ -25,11 +19,9 @@
   "author": "Jason Heppler",
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.1",
-    "pagefind": "^1.3.0",
-    "fs": "^0.0.1-security",
     "glob": "^8.0.3",
     "markdown": "^0.5.0",
-    "path": "^0.12.7",
+    "pagefind": "^1.3.0",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "tailwindcss": "^4.2.1"

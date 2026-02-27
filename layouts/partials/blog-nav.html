@@ -9,7 +9,7 @@
   </p>
   {{ end }}
 
-  <p>
+  <p id="page-stats" hidden>
     This page loaded in <strong><span id="page_load"></span></strong> seconds
     and used ~<strong><span id="carbon"></span>kb</strong> of data. You've
     generated around <strong><span id="page_carbon"></span>g</strong> of CO2 by
@@ -32,7 +32,8 @@
 </aside>
 
 <script>
-  page_data = (document.documentElement.outerHTML.length / 1024).toFixed(2);
+  document.getElementById("page-stats").removeAttribute("hidden");
+  var page_data = (document.documentElement.outerHTML.length / 1024).toFixed(2);
   document.getElementById("carbon").innerHTML = page_data;
 
   page_carbon = (page_data / 12).toFixed(2); // the average webpage generates 4.61 grams CO2 for every page view
