@@ -62,7 +62,7 @@
 
       <div class="publication-cover">
         {{ with .Params.image }}
-        <img src="/assets/images/{{ . }}" alt="{{ $.Title }}" class="book-cover-large">
+        <img src="/assets/images/{{ . }}" alt="{{ $.Title }}" class="book-cover-large" loading="lazy" decoding="async">
         {{ end }}
       </div>
     </article>

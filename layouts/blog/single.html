@@ -11,7 +11,7 @@
   </header>
 
   {{ with .Params.image }}
-  <img src="/assets/images/{{ . }}" />
+  <img src="/assets/images/{{ . }}" alt="{{ $.Title }}" loading="lazy" decoding="async" />
   {{ end }}
   {{- if (.Param "ShowToc") }}
   {{- partial "toc.html" . }}

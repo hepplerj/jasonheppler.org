@@ -13,7 +13,7 @@
     </div>
     {{ if .Params.Cover }}
     <figure class="">
-      <img src="{{ .Params.Cover | absURL }}" alt="{{ .Title }}" />
+      <img src="{{ .Params.Cover | absURL }}" alt="{{ .Title }}" loading="lazy" decoding="async" />
       {{ if .Params.CoverCaption }}
       <figcaption class="">{{ .Params.CoverCaption | markdownify }}</figcaption>
       {{ end }}

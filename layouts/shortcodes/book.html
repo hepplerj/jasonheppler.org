@@ -4,7 +4,7 @@
 <p class="short-description">{{ .Get "publisher" }}, {{ .Get "year" }}</p>
 
 {{ if (isset .Params "image") }}
-<a href='{{ .Get "url" }}'><img src='/assets/images/{{ .Get "image" }}' alt='{{ .Get "title" }}'></a>
+<a href='{{ .Get "url" }}'><img src='/assets/images/{{ .Get "image" }}' alt='{{ .Get "title" }}' loading="lazy" decoding="async"></a>
 {{ end }}
 
 {{ .Inner }}
