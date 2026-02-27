@@ -1,0 +1,36 @@
+{{ $isReading := in .Params.categories "reading" }}
+{{ $isUnread  := in .Params.categories "unread" }}
+<div class="book-item" itemprop="mainEntity" itemscope itemtype="http://schema.org/Book">
+{{ if .Params.isbn }}
+  <details>
+    <summary class="book-summary">
+      <div class="book-row">
+        <span class="book-title-col">
+          {{ if $isReading }}<span class="book-badge book-badge--reading">reading</span>{{ end -}}
+          {{- if .Params.reviewed }}{{ $rev := .Permalink }}{{ if .Params.review_url }}{{ $rev = .Params.review_url }}{{ end }}<a href="{{ $rev }}" class="review-badge">reviewed</a> {{ end -}}
+          <em>{{ .Title }}</em>
+        </span>
+        <span class="book-author-col" itemprop="author">{{ .Params.author }}</span>
+        <span class="book-pub-year">{{ with .Params.pub_year }}{{ printf "%.4s" . }}{{ end }}</span>
+      </div>
+    </summary>
+    <div class="book-expanded-panel">
+      ISBN {{ .Params.isbn }} &mdash;
+      <a href="https://worldcat.org/isbn/{{ .Params.isbn }}">WorldCat</a> &middot;
+      <a href="https://openlibrary.org/isbn/{{ .Params.isbn }}">Open Library</a> &middot;
+      <a href="https://bookshop.org/books?keywords={{ .Params.isbn }}">Bookshop</a>
+      {{ with .Params.publisher }}&mdash; {{ . }}{{ end }}
+    </div>
+  </details>
+{{ else }}
+  <div class="book-row">
+    <span class="book-title-col">
+      {{ if $isReading }}<span class="book-badge book-badge--reading">reading</span>{{ end -}}
+      {{- if .Params.reviewed }}{{ $rev := .Permalink }}{{ if .Params.review_url }}{{ $rev = .Params.review_url }}{{ end }}<a href="{{ $rev }}" class="review-badge">reviewed</a> {{ end -}}
+        <em>{{ .Title }}</em>
+    </span>
+    <span class="book-author-col" itemprop="author">{{ .Params.author }}</span>
+    <span class="book-pub-year">{{ with .Params.pub_year }}{{ printf "%.4s" . }}{{ end }}</span>
+  </div>
+{{ end }}
+</div>
