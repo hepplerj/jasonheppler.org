@@ -4,55 +4,83 @@ import enableFloatingFootnotes from "./marginalia.js";
 accessibleFootnotes();
 enableFloatingFootnotes();
 
-// Menu toggle functionality
-const menuToggle = document.getElementById('menuToggle');
-const dropdown = document.getElementById('dropdown');
-const overlay = document.getElementById('overlay');
-const menuIcon = document.getElementById('menuIcon');
-const closeIcon = document.getElementById('closeIcon');
+// ─── Settings panel ───────────────────────────────────────────────────────────
 
-if (menuToggle) {
-    // Menu toggle
-    menuToggle.addEventListener('click', () => {
-        dropdown.classList.toggle('active');
-        overlay.classList.toggle('active');
-        menuIcon.classList.toggle('hidden');
-        closeIcon.classList.toggle('hidden');
-    });
+function initPanel() {
+    const panel = document.getElementById('settings-panel');
+    const toggle = document.getElementById('panelToggle');
+    const close = document.getElementById('panelClose');
+    const overlay = document.getElementById('overlay');
 
-    // Close menu when clicking overlay
-    overlay.addEventListener('click', () => {
-        dropdown.classList.remove('active');
+    if (!panel || !toggle || !close || !overlay) return;
+
+    function openPanel() {
+        panel.classList.add('open');
+        panel.setAttribute('aria-hidden', 'false');
+        toggle.setAttribute('aria-expanded', 'true');
+        overlay.classList.add('active');
+        close.focus();
+    }
+
+    function closePanel() {
+        panel.classList.remove('open');
+        panel.setAttribute('aria-hidden', 'true');
+        toggle.setAttribute('aria-expanded', 'false');
         overlay.classList.remove('active');
-        menuIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
-    });
+        toggle.focus();
+    }
 
-    // Close menu when clicking a link
-    const dropdownLinks = dropdown.querySelectorAll('a');
-    dropdownLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            dropdown.classList.remove('active');
-            overlay.classList.remove('active');
-            menuIcon.classList.remove('hidden');
-            closeIcon.classList.add('hidden');
-        });
+    toggle.addEventListener('click', () =>
+        panel.classList.contains('open') ? closePanel() : openPanel()
+    );
+    close.addEventListener('click', closePanel);
+    overlay.addEventListener('click', closePanel);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && panel.classList.contains('open')) closePanel();
     });
 }
 
-// Theme switcher
-const themeToggle = document.getElementById('themeToggle');
-const moonIcon = document.getElementById('moonIcon');
-const sunIcon = document.getElementById('sunIcon');
+initPanel();
 
-// Function to get system preference
+// ─── Font size ────────────────────────────────────────────────────────────────
+
+const FONT_SIZES = [22, 25, 28];
+const DEFAULT_FONT_SIZE_INDEX = 1; // 25px medium
+
+function applyFontSize(idx) {
+    const clamped = Math.max(0, Math.min(FONT_SIZES.length - 1, idx));
+    const size = FONT_SIZES[clamped];
+    document.documentElement.style.setProperty('--reader-font-size', size + 'px');
+    localStorage.setItem('reader-font-size-index', clamped);
+    document.querySelectorAll('.font-size-opt').forEach((btn, i) => {
+        btn.classList.toggle('active', i === clamped);
+    });
+    return clamped;
+}
+
+function initFontSize() {
+    const stored = localStorage.getItem('reader-font-size-index');
+    const idx = stored !== null ? parseInt(stored, 10) : DEFAULT_FONT_SIZE_INDEX;
+    applyFontSize(idx);
+
+    document.querySelectorAll('.font-size-opt').forEach((btn, i) => {
+        btn.addEventListener('click', () => applyFontSize(i));
+    });
+}
+
+initFontSize();
+
+// ─── Theme ────────────────────────────────────────────────────────────────────
+
+const themeToggle = document.getElementById('themeToggle');
+
 function getSystemTheme() {
     return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light";
 }
 
-// Function to get current effective theme
 function getCurrentTheme() {
     const userChoice = localStorage.getItem("user-color-scheme");
     if (userChoice) {
@@ -61,36 +89,18 @@ function getCurrentTheme() {
     return getSystemTheme();
 }
 
-// Function to apply theme
 function applyTheme(theme) {
-    const userChoice = localStorage.getItem("user-color-scheme");
-
-    // Only set the attribute if user has made an explicit choice
-    if (userChoice) {
-        document.documentElement.setAttribute("data-site-theme", userChoice);
-    } else {
-        // Remove attribute to let system preference apply via media query
-        document.documentElement.removeAttribute("data-site-theme");
-    }
-
-    updateThemeIcons(theme || getCurrentTheme());
+    const effectiveTheme = theme || getCurrentTheme();
+    document.documentElement.setAttribute("data-site-theme", effectiveTheme);
+    updateThemeIcons(effectiveTheme);
 }
 
-// Function to update theme icons
 function updateThemeIcons(theme) {
-    if (!moonIcon || !sunIcon) return;
-
-    if (theme === "dark") {
-        moonIcon.classList.add('hidden');
-        sunIcon.classList.remove('hidden');
-    } else {
-        moonIcon.classList.remove('hidden');
-        sunIcon.classList.add('hidden');
-    }
+    if (!themeToggle) return;
+    themeToggle.setAttribute('aria-checked', theme === 'dark' ? 'true' : 'false');
 }
 
-// Theme toggle button
-if (themeToggle && moonIcon && sunIcon) {
+if (themeToggle) {
     themeToggle.addEventListener('click', () => {
         const currentTheme = getCurrentTheme();
         const newTheme = currentTheme === "dark" ? "light" : "dark";
@@ -99,23 +109,81 @@ if (themeToggle && moonIcon && sunIcon) {
     });
 }
 
-// Initialize theme on page load
+// ─── Keyboard shortcuts ───────────────────────────────────────────────────────
+
+function initKeyboardShortcuts() {
+    const navShortcuts = {
+        e: '/blog/',         // Essays
+        j: '/notes/',        // Notes
+        i: '/publications/', // Publications
+        y: '/research/',     // Digital History
+        b: '/books/',        // Bookshelf
+        '/': '/about/',      // About  (⌘/ — bare / opens panel, different code path)
+        k: '/search/',       // Search
+    };
+
+    document.addEventListener('keydown', (e) => {
+        // Don't fire when the user is typing
+        const tag = document.activeElement?.tagName.toLowerCase();
+        if (tag === 'input' || tag === 'textarea' || document.activeElement?.isContentEditable) return;
+
+        // ⌘/Ctrl + letter → navigate
+        if (e.metaKey || e.ctrlKey) {
+            const path = navShortcuts[e.key.toLowerCase()];
+            if (path) {
+                e.preventDefault();
+                window.location.href = path;
+            }
+            return;
+        }
+
+        // / → open nav panel
+        if (e.key === '/') {
+            e.preventDefault();
+            document.getElementById('panelToggle')?.click();
+        }
+    });
+}
+
+initKeyboardShortcuts();
+
+// ─── Photo gallery lightbox ────────────────────────────────────────────────────
+
+function initLightbox() {
+    document.querySelectorAll('.post-body img').forEach(img => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => {
+            const box = document.createElement('div');
+            box.className = 'photo-lightbox';
+            const full = document.createElement('img');
+            full.src = img.dataset.microblogLightbox || img.src;
+            full.alt = img.alt;
+            box.appendChild(full);
+            box.addEventListener('click', () => box.remove());
+            document.addEventListener('keydown', function onKey(e) {
+                if (e.key === 'Escape') { box.remove(); document.removeEventListener('keydown', onKey); }
+            });
+            document.body.appendChild(box);
+        });
+    });
+}
+
+initLightbox();
+
+// ─── Theme ────────────────────────────────────────────────────────────────────
+
 if ("localStorage" in window) {
     applyTheme();
 
-    // Listen for changes from other tabs
     window.addEventListener("storage", function (event) {
         if (event.key === "user-color-scheme") {
             applyTheme();
         }
     });
 
-    // Listen for system theme changes
     window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function() {
-        // Only update if user hasn't made an explicit choice
         if (!localStorage.getItem("user-color-scheme")) {
             applyTheme();
         }
     });
 }
-
