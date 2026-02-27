@@ -1,0 +1,229 @@
+<style>
+	#tweets_form {
+		margin-top: 15px;
+		text-align: center;
+	}
+		
+	#tweets_form select {
+		font-size: 17px;
+		width: 80px;
+	}
+
+	#tweets_form input {
+		font-size: 17px;
+	}
+	
+	.tweet {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.tweet time {
+		color: gray;
+		font-size: 14px;
+	}
+	
+	.tweet .post {
+		margin: 0;
+		font-size: 17px;
+		line-height: 1.7;
+		padding-top: 6px;
+		padding-bottom: 6px;
+	}
+	
+	.tweet .twitter_link {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-right: 5px;
+		text-decoration: none;
+		border-bottom: none;
+	}
+	
+	.tweet .twitter_link svg {
+		color: #26a7de;
+		width: 12px;
+		height: 12px;
+	}
+	
+	#progress_spinner {
+		visibility: hidden;
+		width: 25px;
+		height: 25px;
+		vertical-align: middle;
+		padding: 0;
+	}
+	
+	#footer {
+		visibility: hidden;
+	}
+</style>
+
+<script>
+	function showProgress() {	
+		let progress_img = document.getElementById("progress_spinner");
+		progress_img.style.visibility = "visible";
+	}
+	
+	function hideProgress() {		
+		let progress_img = document.getElementById("progress_spinner");
+		progress_img.style.visibility = "hidden";
+	}
+	
+	function showFooter() {
+		let footer_tags = document.getElementsByTagName("footer");
+		if (footer_tags.length > 0) {
+			let last_tag = footer_tags[elements.length - 1];
+			last_tag.style.visibility = "visible";
+		}
+	}
+
+	function hideFooter() {
+		let footer_tags = document.getElementsByTagName("footer");
+		if (footer_tags.length > 0) {
+			let last_tag = footer_tags[footer_tags.length - 1];
+			last_tag.style.visibility = "hidden";
+		}
+	}
+
+	function showFooter() {
+		let footer_tags = document.getElementsByTagName("footer");
+		for (var tag of footer_tags) {
+			tag.style.visibility = "visible";
+		}
+	}
+	
+	function clearTweets() {
+		let tweets_div = document.getElementById("tweets");
+		tweets_div.innerHTML = "";		
+	}
+	
+	function loadTweets(site_id, path) {		
+		showProgress();
+		hideFooter();
+
+		let tweets_div = document.getElementById("tweets");
+		
+		let url = "https://micro.blog/twitter/archive/" + site_id + "/" + path;
+		fetch(url).then(response => response.json()).then(data => {
+			clearTweets();
+
+			for (var item of data.items) {
+				var post_div = document.createElement("div");
+				post_div.setAttribute("class", "tweet");
+				
+				var content_tag = document.createElement("div");
+				content_tag.setAttribute("class", "post");
+				content_tag.innerHTML = item.content_html;
+				post_div.appendChild(content_tag);
+	
+				var tweet_link = document.createElement("a");
+				tweet_link.setAttribute("href", item._microblog.twitter_url);
+				tweet_link.setAttribute("class", "twitter_link");
+				tweet_link.innerHTML = '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path fill="currentColor" d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>';
+				post_div.appendChild(tweet_link);
+	
+				var d = new Date(item.date_published);
+				const date_options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+	
+				var time_tag = document.createElement("time");
+				time_tag.innerText = d.toLocaleDateString(undefined, date_options);
+				post_div.appendChild(time_tag);
+	
+				tweets_div.appendChild(post_div);
+			}
+
+			hideProgress();
+			showFooter();
+		});
+	}
+	
+	function loadYears(site_id) {
+		const year_tag = document.getElementById("years_select");
+
+		let url = "https://micro.blog/twitter/archive/" + site_id + "/years.json";
+		fetch(url).then(response => response.json()).then(data => {
+			for (var y of data) {
+				var option_tag = document.createElement("option");
+				option_tag.setAttribute("value", y);
+				option_tag.innerText = y;
+				year_tag.appendChild(option_tag);
+			}
+		});
+	}
+
+	let site_id = {{ .Get 0 }};
+	var year = "";
+	var month = "";
+
+	document.addEventListener("DOMContentLoaded", () => {
+		const url = new URL(window.location.href);
+		const params = new URLSearchParams(url.search);
+		const q = params.get("q");
+		if (q && (q.length > 0)) {
+			document.getElementById("search").value = q;
+			loadTweets(site_id, `search.json?q=${q}`)
+		}
+		else {
+			loadTweets(site_id, "recent.json");
+		}
+
+		loadYears(site_id);
+
+		const year_tag = document.getElementById("years_select");
+		year_tag.addEventListener("change", (event) => {
+			year = event.target.value;
+			if ((year.toString().length > 0) && (month.toString().length > 0)) {
+				loadTweets(site_id, `${year}/${month}.json`);
+			}
+		});	
+
+		const months_tag = document.getElementById("months_select");
+		months_tag.addEventListener("change", (event) => {
+			month = event.target.value;
+			if ((year.toString().length > 0) && (month.toString().length > 0)) {
+				loadTweets(site_id, `${year}/${month}.json`)
+			}
+		});
+
+		for (let i = 0; i < 12; i++) {
+			const d = new Date(2000, i, 1);
+			const month_abbreviation = d.toLocaleDateString(navigator.language, { month: "short" });
+			
+			var option_tag = document.createElement("option");
+			option_tag.setAttribute("value", i + 1);
+			option_tag.innerText = month_abbreviation;
+			months_tag.appendChild(option_tag);
+		}
+		
+		const search_tag = document.getElementById("search");
+		search_tag.addEventListener("change", (event) => {
+			let q = event.target.value;
+			loadTweets(site_id, `search.json?q=${q}`)
+
+			const url = new URL(window.location.href);
+			url.searchParams.set("q", q);
+			history.pushState({}, "", url);
+		});
+
+		const form_tag = document.getElementById("tweets_form");
+		form_tag.addEventListener("submit", (event) => {
+			event.preventDefault();
+		});
+	});	
+</script>
+
+<form id="tweets_form">
+	<select id="years_select">
+		<option value="">Year</option>
+	</select>
+	<select id="months_select">
+		<option value="">Month</option>
+	</select>
+	
+	<input type="search" id="search" size="20" placeholder="Search tweets..."> 
+	
+	<img id="progress_spinner" src="/images/progress_spinner.svg" width="25" height="25" alt="Progress spinner">
+</form>
+
+<div id="tweets">
+</div>

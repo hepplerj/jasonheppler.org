@@ -1,0 +1,52 @@
+{{ if ne .Kind "home" }}
+  <link rel="alternate" href="{{ "feed.xml" | absURL }}" type="application/rss+xml" title="{{ $.Site.Title }}">
+  <link rel="alternate" href="{{ "feed.json" | absURL }}" type="application/json" title="{{ $.Site.Title }}">
+{{ end }}
+
+{{ range .AlternativeOutputFormats -}}
+  {{ printf `<link rel="%s" href="%s" type="%s" title="%s">` .Rel .Permalink .MediaType.Type $.Site.Title | safeHTML }}
+{{ end -}}
+
+{{ if .Site.Params.has_podcasts }}
+  <link rel="alternate" href="{{ "podcast.xml" | absURL }}" type="application/rss+xml" title="Podcast">
+  <link rel="alternate" href="{{ "podcast.json" | absURL }}" type="application/json" title="Podcast">
+{{ end }}
+
+<link rel="me" href="https://micro.blog/{{ .Site.Author.username }}">
+
+{{ with .Site.Params.twitter_username }}
+  <link rel="me" href="https://twitter.com/{{ . }}">
+{{ end }}
+
+{{ with .Site.Params.github_username }}
+  <link rel="me" href="https://github.com/{{ . }}">
+{{ end }}
+
+{{ with .Site.Params.instagram_username }}
+  <link rel="me" href="https://instagram.com/{{ . }}">
+{{ end }}
+
+<link rel="shortcut icon" href="https://micro.blog/{{ .Site.Author.username }}/favicon.png" type="image/x-icon">
+<link rel="EditURI" type="application/rsd+xml" href="{{ "rsd.xml" | absURL }}">
+<link rel="authorization_endpoint" href="https://micro.blog/indieauth/auth">
+<link rel="token_endpoint" href="https://micro.blog/indieauth/token">
+<link rel="subscribe" href="https://micro.blog/users/follow">
+<link rel="webmention" href="https://micro.blog/webmention">
+<link rel="micropub" href="https://micro.blog/micropub">
+<link rel="microsub" href="https://micro.blog/microsub">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ "custom.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
+<link rel="stylesheet" href="{{ "main.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
+
+{{ range .Site.Params.plugins_css }}
+  <link rel="stylesheet" href="{{ . }}">
+{{ end }}
+
+{{ range $filename := .Site.Params.plugins_html }}
+  {{ partial $filename $ }}
+{{ end }}

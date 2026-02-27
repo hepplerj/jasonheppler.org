@@ -1,0 +1,26 @@
+{{ partial "head.html" . }}
+
+<div class='pt-10 site-container content'>
+  <div class="body">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+
+    <div class="writing">
+    {{ range .Data.Pages.GroupByDate "2006" "01" }}
+      <h2 id="section-{{ .Key | urlize }}" class="sticky top-0 bg-[var(--theme-background)] z-[1] max-sm:static max-sm:top-auto max-sm:z-auto">{{ .Key }}</h2>
+      <div>
+        {{ range .Pages }}
+        <article class="mb-4">
+          <a href="{{ .Permalink }}" class="font-bold text-[115%] block">{{ .Title }}</a>
+          <p class="pl-8 text-[75%] font-mono opacity-50 mt-0">{{ .Date.Format "2 Jan 2006" }}</p>
+        </article>
+        {{ end }}
+      </div>
+    {{ end }}
+    </div>
+  </div>
+</div>
+
+<div class="site-container">
+  {{ partial "foot.html" . }}
+</div>

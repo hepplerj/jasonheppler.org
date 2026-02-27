@@ -1,0 +1,8 @@
+{{ $posts := where site.RegularPages "Type" "post" }}
+
+{{ $scratch := newScratch }}
+{{ range $posts }}
+    {{ $scratch.Add "wordcount" .WordCount }}
+{{ end }}
+
+{{ $scratch.Get "wordcount" }}

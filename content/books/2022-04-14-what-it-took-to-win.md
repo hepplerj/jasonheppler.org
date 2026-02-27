@@ -1,6 +1,5 @@
 ---
 title: "What It Took to Win: A History of the Democratic Party"
-shorttitle: 'What It Took to Win'
 author: 'Michael Kazin'
 date: 2022-04-14
 isbn: "9780374200237"

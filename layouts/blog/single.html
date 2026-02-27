@@ -1,34 +1,81 @@
 {{ partial "head.html" . }}
 
-<div class='pad2y limiter content'>
-  <div class="writing-body"> 
-<article id='{{ urlize .Title }}' class="h-entry post post-body">
-  <section class="post-left">
-  <header>
-    <h1 class="post-title">{{ .Title }}</h1>
-  {{ if isset .Params "lede" }}
-    <p class="post-subtitle">{{ index .Params "lede" }}</p>
-    {{ end }}
-  </header>
+<div class='pt-10 site-container content'>
+  <div class="body">
+    <article id='{{ urlize .Title }}' class="h-entry post post-body">
+      <section>
+        <header>
+          <h1 class="text-[230%] m-0">{{ .Title }}</h1>
+          {{ if isset .Params "lede" }}
+          <p class="italic mt-0">{{ index .Params "lede" }}</p>
+          {{ end }}
+        </header>
 
-  {{ with .Params.image }}
-  <img src="/assets/images/{{ . }}" />
-  {{ end }}
-  {{- if (.Param "ShowToc") }}
-  {{- partial "toc.html" . }}
-  {{- end }}
-  <div class='post-body e-content'>
-    {{ .Content }}
+        {{ with .Params.image }}
+        <img src="/assets/images/{{ . }}" alt="{{ $.Title }}" loading="lazy" decoding="async" />
+        {{ end }}
+        {{- if (.Param "ShowToc") }}
+        {{- partial "toc.html" . }}
+        {{- end }}
+        <div class='post-body e-content'>
+          {{ .Content }}
+        </div>
+
+        {{ if isset .Params "external" }}
+        <p>Linked: <a href="{{ index .Params "external" }}">{{ index .Params "title" }} →</a></p>
+        {{ end }}
+      </section>
+    </article>
+
+    <aside class="text-[85%]">
+      <p>
+        Published <a href="{{ .Permalink }}" class="u-url u-uid permalink"><time datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "January 2, 2006" }}</time></a>, contains {{ .WordCount }} words and should take you about {{ .ReadingTime }} minute(s) to read it.
+        &middot; <a href="/feed.xml">Subscribe to these essays</a>
+      </p>
+      {{ if .Params.tags }}
+      <p class="text-[75%] m-0">
+        Filed under: <span class="article-tags">{{ partial "tags.html" .}}</span>
+      </p>
+      {{ end }}
+
+      <p id="page-stats" hidden>
+        This page loaded in <strong><span id="page_load"></span></strong> seconds
+        and used ~<strong><span id="carbon"></span>kb</strong> of data. You've
+        generated around <strong><span id="page_carbon"></span>g</strong> of CO2 by
+        visiting. <a href="https://jasonheppler.org/low-impact/">Curious</a>?
+      </p>
+
+      <p>
+        <a href="https://jasonheppler.org">Jason Heppler</a> is a historian, farmer, software developer, and writer on the central plains of Nebraska. He is the author of <a href="/publications/">several books</a> and his essays have appeared at the <em>Washington Post</em>, <em>The Conversation</em>, and <em>Perspectives</em>. He writes a <a href="https://buttondown.com/plainsink">newsletter</a> on his research about agricultural history, land use, public lands, and American politics.
+      </p>
+      <p>
+        You can sometimes find him on <a href="https://bsky.app/profile/jasonheppler.org">Bluesky</a>, <a href="https://www.instagram.com/hepplerj/">Instagram</a>, and <a href="https://micro.blog/jheppler">micro.blog</a>.
+      </p>
+    </aside>
+
+    <aside id="webmentions-container">
+      <details>
+        <summary>Mentions around the web</summary>
+        <div id="webmentions"></div>
+      </details>
+    </aside>
+
+    <script>
+      document.getElementById("page-stats").removeAttribute("hidden");
+      var page_data = (document.documentElement.outerHTML.length / 1024).toFixed(2);
+      document.getElementById("carbon").innerHTML = page_data;
+
+      page_carbon = (page_data / 12).toFixed(2);
+      document.getElementById("page_carbon").innerHTML = page_carbon;
+
+      window.onload = function () {
+        var loadTime =
+          window.performance.timing.domContentLoadedEventEnd -
+          window.performance.timing.navigationStart;
+        document.getElementById("page_load").innerHTML = (loadTime / 1000).toFixed(2);
+      };
+    </script>
+
+    {{ partial "foot" . }}
   </div>
-
-  {{ if isset .Params "external" }}
-  <p class="link-post-out">Linked: <a href="{{ index .Params "external" }}">{{ index .Params "title" }} →</a></p>
-  {{ end }}
-  </section>
-</article>
-</div>
-
-{{ partial "blog-nav" . }}
-{{ partial "foot" . }}
-
 </div>

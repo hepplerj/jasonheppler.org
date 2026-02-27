@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<opml version="2.0">
+  <body>
+    <outline type="collection" text="Currently reading">
+      <outline type="book" text="Bread and Wine" name="Bread and Wine" author="C. S. Lewis" isbn="9780874869262"/>
+      <outline type="book" text="The Mysterious Mrs. Nixon" name="The Mysterious Mrs. Nixon" author="Heath Hardage Lee" isbn="9781250274359"/>
+      <outline type="book" text="Rightful Heritage" name="Rightful Heritage" author="Douglas Brinkley" isbn="9780062089250"/>
+    </outline>
+  </body>
+</opml>

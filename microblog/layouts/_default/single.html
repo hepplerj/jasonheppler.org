@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+<div class="pad2y limiter content">
+  <div class="body">
+    <article class="h-entry">
+      <header>
+        {{ if .Title }}
+        <h1 class="post-title p-name">{{ .Title }}</h1>
+        {{ end }}
+      </header>
+
+      <div class="post-body e-content">
+        {{ .Content }}
+      </div>
+
+      {{ if .Params.categories }}
+      <footer class="post-footer">
+        <p class="article-filed">Filed under:
+          {{ range $index, $category := .Params.categories }}
+            {{ if $index }}, {{ end }}
+            <a href="/categories/{{ $category | urlize }}/">{{ $category }}</a>
+          {{ end }}
+        </p>
+      </footer>
+      {{ end }}
+    </article>
+  </div>
+</div>
+
+{{ end }}

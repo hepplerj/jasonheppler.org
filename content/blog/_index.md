@@ -1,5 +1,5 @@
 ---
-title: "Posts + Essays"
+title: "Essays"
 ---
 
 <aside>

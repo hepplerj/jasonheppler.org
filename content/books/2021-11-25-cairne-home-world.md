@@ -1,16 +1,13 @@
 ---
 title: 'At Home in the World: California Women and the Postwar Environmental Movement'
-shorttitle: 'At Home in the World'
 author: 'Kathleen A. Cairns'
-affiliate: ''
-date: 2021-05-27T22:26:29-06:00 
-preview: ""
-isbn: "1496207475"
-year: "2021"
+date: 2022-01-01
+isbn: "9781496207470"
+pub_year: "2021"
 publisher: "University of Nebraska Press"
-categories: 
+reviewed: true
+review_url: "https://academic.oup.com/whq/article-abstract/53/2/204/6535955?redirectedFrom=fulltext"
+categories:
 - books
-- unread
+- read
 ---
-
-Notes.

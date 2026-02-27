@@ -1,23 +1,23 @@
 {{ partial "head.html" . }}
-<div class='pad2y limiter content'>
+<div class='pt-10 site-container content'>
   <div class="body"> 
 
 {{if not .IsHome }}
-<h1><strong>{{ .Title }}</strong></h1>
+<h1>{{ .Title }}</h1>
 {{ end }}
 
 {{ .Content }}
 
-<ul class="page-list">
+<ul>
   {{ range where .Pages ".Params.hidden" "!=" "true" }}
   <li>
-    <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
   </li>
   {{ end }}
 </ul>
   </div>
 </div>
 
-<div class="limiter">
+<div class="site-container">
   {{ partial "foot.html" . }}
 </div>

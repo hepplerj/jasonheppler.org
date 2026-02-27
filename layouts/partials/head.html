@@ -32,7 +32,6 @@
     <meta name="copyright" content="&copy; Copyright 2008 to Present" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <link href="https://micro.blog/jaheppler" rel="me" />
@@ -50,48 +49,41 @@
     <link href="https://indieweb.org/User:Jasonheppler.org" rel="me" />
 
     <!-- RDFa Metadata (in DublinCore) -->
-    <meta property="dc:title" content="" />
+    <meta property="dc:title" content="{{ .Title }}" />
     <meta property="dc:creator" content="Jason A. Heppler" />
     <meta property="dc:date" content="{{ .Site.Lastmod }}" />
     <meta property="dc:format" content="text/html" />
     <meta property="dc:language" content="en" />
-    <meta property="dc:identifier" content="/" />
+    <meta property="dc:identifier" content="{{ .Permalink }}" />
     <meta property="dc:rights" content="CC BY-NC-SA 3.0" />
     <meta property="dc:source" content="Jason Heppler weblog" />
     <meta property="dc:subject" content="History" />
     <meta property="dc:type" content="website" />
 
-    <!-- RDFa Metadata (in OpenGraph) -->
-    <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
-    <meta property="og:author" content="Jason A. Heppler" />
-    <meta property="og:site_name" content="Jason Heppler weblog" />
-    <meta property="og:url" content="https://jasonheppler.org" />
-    <meta property="og:type" content="website" />
-
     <!-- Google Scholar Metadata -->
     <meta name="citation_author" content="Jason A. Heppler" />
     <meta name="citation_date" content="{{ .Site.Lastmod }}" />
-    <meta name="citation_title" content="" />
+    <meta name="citation_title" content="{{ .Title }}" />
     <meta name="citation_journal_title" content="Jason Heppler weblog" />
 
     <!-- Open Graph Metadata -->
     <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
     <meta property="og:author" content="Jason A. Heppler" />
     <meta property="og:site_name" content="Jason Heppler - Historian" />
-    <meta property="og:url" content="https://jasonheppler.org" />
+    <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="{{ .Description }}" />
+    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
 
     <!-- Twitter Metadata -->
     <meta property="twitter:account_id" content="16240799" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@jaheppler" />
     <meta name="twitter:creator" content="@jaheppler" />
-    <meta name="twitter:url" content="https://jasonheppler.org" />
-    <meta name="twitter:title" content="History, Technology, and Design" />
+    <meta name="twitter:url" content="{{ .Permalink }}" />
+    <meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
     <meta
       name="twitter:description"
-      content="A blog on history and technology by Jason A. Heppler."
+      content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}"
     />
 
     <!-- Webmentions -->
@@ -102,24 +94,19 @@
     <link rel="pingback" href="https://webmention.io/jasonheppler.org/xmlrpc" />
 
     <script
+      defer
       src="/assets/javascripts/webmention.min.js"
       data-id="webmentions"
       data-wordcount="30"
       data-prevent-spoofing="true"
-      data-comments-are-reactions="true"
-    ></script>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+></script>
 
     <!-- Stylesheets -->
     {{ if eq hugo.Environment "development" }} {{ $devCSS := resources.Get
-    "stylesheets/main.css" }}
+    "stylesheets/main.css" | css.PostCSS }}
     <link rel="stylesheet" href="{{ $devCSS.Permalink }}" />
     {{ else }} {{ $mainCSS := resources.Get "stylesheets/main.css" |
-    resources.Minify | resources.Fingerprint "sha512" }}
+    css.PostCSS | resources.Minify | resources.Fingerprint "sha512" }}
     <link rel="stylesheet" href="{{ $mainCSS.Permalink }}" />
     {{ end }} {{ $littlefoot := resources.Get "stylesheets/littlefoot.css" |
     resources.Minify | resources.Fingerprint "sha512" }}

@@ -1,0 +1,27 @@
+{{ $bookshelf := default "currentlyreading" (cond .IsNamedParams (.Get "shelf") (.Get 0) ) }}
+
+{{ $variant := default "list" (.Get "variant") }}
+
+{{ if not (in "grid list" $variant) }}
+  {{ errorf "invalid value for param 'variant', value be 'grid' or 'list': %s" .Position }}
+{{ end }}
+
+
+<ul class="bookshelf bookshelf--variant-{{ $variant }}">
+  {{ range (index .Site.Data.bookshelves $bookshelf) }}
+    <li>
+      <div class="bookshelf__item" title="{{ .title }} by {{ .author }}">
+        <a href="https://micro.blog/books/{{ .isbn }}">
+          <img class="bookshelf__cover" src="{{ .cover_url }}" />
+        </a>
+        <div class="bookshelf__meta">
+          <a href="https://micro.blog/books/{{ .isbn }}">
+            <h3 class="bookshelf__title">{{ .title }}</h3>
+          </a>
+          <span class="bookshelf__by">by</span>
+          <span class="bookshelf__author">{{ .author }}</span>
+        </div>
+      </div>
+    </li>
+  {{ end }}
+</ul>

@@ -1,44 +1,43 @@
 {{ partial "head.html" . }}
 
-<div class='pad2y limiter content'>
-  <div class="body"> 
-    <section class="microblog" style="border: 1px solid #333;">
+<div class='pt-10 site-container content'>
+  <div class="body">
 <h1>{{ .Title }}</h1>
 
 {{ .Content }}
 
-<div class="writing">  
+<div class="writing">
 {{ $paginator := .Paginate (.Data.Pages) }}
 {{ range $paginator.Pages.GroupByDate "2006" "01" }}
-  <h2 id="section-{{.Key| urlize }}" class="sticky">{{ .Key }}</h2>
-  <div class="list-archives">
+  <h2 id="section-{{.Key| urlize }}" class="sticky top-0 bg-[var(--theme-background)] z-[1] max-sm:static max-sm:top-auto max-sm:z-auto">{{ .Key }}</h2>
+  <div>
     {{ range .Pages }}
-      <div class="item-archive-entry">
-        <article class="archive-entry">
-          <a href="{{ .Permalink }}" class="archive-title">{{ .Title }}</a></li>
+      <div>
+        <article class="pb-8 mb-8 mt-24">
+          <a href="{{ .Permalink }}" class="text-[125%] font-bold pt-8 block">{{ .Title }}</a>
           <span class="sr-only">Posted on </span>
-          <time class="meta-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+          <time class="float-right" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
           {{ if .Params.lede }}
-          <p class="teaser"><em>{{ .Params.lede | markdownify }}</em></p>
+          <p class="max-w-[40rem] mt-[.35rem] mb-[.5rem]"><em>{{ .Params.lede | markdownify }}</em></p>
           {{ end }}
           {{ if .Params.tags }}
-          <p class="article-filed">Filed under: <span class="article-tags">{{ partial "tags.html" .}}</span> | Word count: {{ .WordCount }} | Reading time: {{ .ReadingTime }} minute(s)</p>
+          <p class="text-[75%] m-0">Filed under: <span class="article-tags">{{ partial "tags.html" .}}</span> | Word count: {{ .WordCount }} | Reading time: {{ .ReadingTime }} minute(s)</p>
           {{ end }}
             {{ .Summary }}
 
-            <a href="{{ .Permalink }}" class="read-more">Read more &rarr;</a>
+            <a href="{{ .Permalink }}">Read more &rarr;</a>
         </article>
       </div>
     {{ end }}
     </div>
 {{ end }}
 </div>
-</section>
 
       {{ template "_internal/pagination.html" . }}
 
-<!-- </div> -->
-
-{{ partial "foot.html" . }}
+  </div>
 </div>
- </div>
+
+<div class="site-container">
+  {{ partial "foot.html" . }}
+</div>

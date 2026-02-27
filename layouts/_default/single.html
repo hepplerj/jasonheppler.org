@@ -1,11 +1,11 @@
 {{ partial "head.html" . }}
 
-<div class='pad2y limiter content'>
+<div class='pt-10 site-container content'>
   <div class="body">
     <header>
     {{ if .Params.page_type }}
     {{ else }}
-    <h1 class="title">{{ .Title }}</h1>
+    <h1>{{ .Title }}</h1>
     {{ end }}
     {{ partial "article-meta.html" . }}
   </header>
@@ -16,6 +16,6 @@
 </div>
 </div>
 
-<div class="limiter">
+<div class="site-container">
 {{ partial "foot.html" . }}
 </div>

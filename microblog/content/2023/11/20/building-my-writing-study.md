@@ -1,0 +1,26 @@
+---
+layout: post
+title: " Building my Writing Study"
+microblog: false
+guid: http://jaheppler.micro.blog/2023/11/20/building-my-writing-study/
+post_id: 3708083
+custom_summary: false
+summary: ""
+date: 2023-11-20T19:30:12-0600
+lastmod: 2025-01-03T19:08:12-0600
+type: post
+categories:
+- "photo"
+- "personal"
+- "Longform"
+url: "/2023/11/20/building-my-writing-study/"
+---
+I've long tried to keep a separate space for work. As a writer and a software developer who works remotely, having a separate space has always been a high priority for me. At our last house, that meant taking over most of the basement for desk, chairs, and bookshelves. When we moved to our acreage this summer, we actually down-sized --- at least, in living space. We no longer had a finished basement or an extra bedroom. But an outbuilding that once served as a workshop fit the bill for both, and we spent the spring and summer converting it into a new space. 
+
+The outbuilding was once a corn crib turned workshop. We spent the early part of the summer leveling floors, putting up new walls, texturing, painting, hanging doors, installing heat pumps, laying wood flooring, and painting. They were long days and I’m pleased with how it turned out.
+
+My study is, more or less, finished. There are a few things I plan to upgrade down the line (like a new couch, reupholstering the leather chair, possibly a different piece of furniture than the console I have now). But it's functional and fits the style I was after: both a working space with the desk, but also a “community” space with the chairs for reading, conversing, or maybe a nap or two.
+
+What you don’t see here is the guest suite and kitchenette we’d also built, as well as the bathroom (already existing and functional, but still in need of renovation). In the very near future, I actually hope to use the guest space to host writer’s retreats. But more on that later.
+
+<div class="microblog_collection"><img src="https://cdn.uploads.micro.blog/2634/2023/img-7981.jpeg" alt="A red barn with a geometric quilt pattern and outdoor lights is set against a clear blue sky." data-microblog-lightbox="https://cdn.uploads.micro.blog/2634/2023/img-7981.jpeg"><img src="https://cdn.uploads.micro.blog/2634/2023/img-7979.jpeg" alt="An old-fashioned, rusted cultivator is leaning against a red wooden wall with a white door nearby." data-microblog-lightbox="https://cdn.uploads.micro.blog/2634/2023/img-7979.jpeg"><img src="https://cdn.uploads.micro.blog/2634/2023/img-7982.jpeg" alt="A cozy living room features a leather chair, a plush sofa, a wooden floor, a ceiling fan, and sliding glass doors leading to a patio." data-microblog-lightbox="https://cdn.uploads.micro.blog/2634/2023/img-7982.jpeg"><img src="https://cdn.uploads.micro.blog/2634/2023/img-7984.jpeg" alt="A home office features a wooden desk with a computer, a comfortable seating area, and decor such as framed pictures and certificates on the walls." data-microblog-lightbox="https://cdn.uploads.micro.blog/2634/2023/img-7984.jpeg"><img src="https://cdn.uploads.micro.blog/2634/2023/img-7988.jpeg" alt="A cozy living room features a leather chair, a wooden chest as a coffee table, artwork on the walls, and large windows letting in natural light." data-microblog-lightbox="https://cdn.uploads.micro.blog/2634/2023/img-7988.jpeg"><img src="https://cdn.uploads.micro.blog/2634/2023/img-7991.jpeg" alt="A wall clock hangs above two hats and a jacket on hooks beside a window." data-microblog-lightbox="https://cdn.uploads.micro.blog/2634/2023/img-7991.jpeg"><img src="https://cdn.uploads.micro.blog/2634/2023/img-7993.jpeg" alt="A cozy living room features a large bookshelf filled with books, a comfortable gray sofa, a brown leather chair, and a wooden coffee table." data-microblog-lightbox="https://cdn.uploads.micro.blog/2634/2023/img-7993.jpeg"><img src="https://cdn.uploads.micro.blog/2634/2023/img-7996.jpeg" alt="Three framed pictures hang on a green wall, featuring landscapes and a vintage map." data-microblog-lightbox="https://cdn.uploads.micro.blog/2634/2023/img-7996.jpeg"><img src="https://cdn.uploads.micro.blog/2634/2023/img-8001.jpeg" alt="A large bookshelf filled with a diverse collection of books spans an entire wall in a room with wooden flooring." data-microblog-lightbox="https://cdn.uploads.micro.blog/2634/2023/img-8001.jpeg"><img src="https://cdn.uploads.micro.blog/2634/2023/img-8003.jpeg" alt="A wooden surface holds decorative items including a framed picture, a candle, small animal figurines, and natural objects like rocks and a stick against a textured green wall." data-microblog-lightbox="https://cdn.uploads.micro.blog/2634/2023/img-8003.jpeg"></div>

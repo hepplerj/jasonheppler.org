@@ -1,0 +1,20 @@
+{{ $email_address := $.Site.Params.reply_by_email_address }}
+{{ $email_address_present := in $email_address "@" }}
+{{- $enable_obfuscation := $.Site.Params.reply_by_email_enable_obfuscation -}}
+{{- if eq .RelPermalink "/reply-by-email/" -}}
+  <meta name="robots" content="noindex" />
+{{- end -}}
+{{- if and $enable_obfuscation $email_address_present -}}
+  <script type="module">
+  const base64Decode = (text) => decodeURIComponent(atob(text));
+
+  document.addEventListener('click', e => {
+    const link = e.target.closest('a.reply-by-email');
+
+    if (link) {
+      e.preventDefault();
+      window.location = base64Decode(link.dataset.meta.match(/.{2}/g).map(hex => String.fromCharCode(parseInt(hex, 16) ^ 0x24)).join(''));
+    }
+  });
+  </script>
+{{- end -}}

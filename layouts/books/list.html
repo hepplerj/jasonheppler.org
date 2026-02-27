@@ -1,42 +1,39 @@
 {{ partial "head.html" . }}
 
-<div class='pad2y limiter content'>
-  <div class="body"> 
+<div class='pt-10 site-container content'>
+  <div class="body">
   <header>
-    <h1 class="title"><strong>{{ .Title }}</strong></h1>
+    <h1>{{ .Title }}</h1>
   </header>
 
 {{ .Content }}
 
-<p>I've tracked previous readings on <a href="https://www.goodreads.com/jaheppler">Goodreads</a> and <a href="https://www.librarything.com/profile/hepplerj">LibraryThing</a>, but as of 2020 started logging that information myself here. Some day I'll export everything from Goodreads and have everything listed here instead.</p>
+<p>I track my reading here. You can find older pre-2018 reading lists on <a href="https://www.librarything.com/profile/hepplerj">LibraryThing</a>. Click a title to see ISBN lookup links. Books I've reviewed (either here or elsewhere) are noted by a review badge.</p>
 
-<p>This is a fairly selective list, and you can find another version of it <a href="https://writing.jasonheppler.org/bookshelf/">on micro.blog</a>. This list won't typically include ratings since I don't read books that way <a href="https://www.lifehack.org/articles/featured/advice-for-students-how-to-read-like-a-scholar.html">as an academic</a>. You can find all of these books <a href="https://bookshop.org/shop/jasonheppler">on my Bookshop page</a>.</p>
+<div class="books">
 
-<p>Click on a title to see more details about the book.</p>
+  {{/* Currently reading — pinned at top */}}
+  {{ $allBooks := where .Site.RegularPages "Section" "books" }}
+  {{ $allBooks  = where $allBooks "Date" "ge" (time "2018-01-01") }}
+  {{ $reading  := where $allBooks ".Params.categories" "intersect" (slice "reading") }}
+  {{ if $reading }}
+  {{ range $reading }}{{ partial "book-entry.html" . }}{{ end }}
+  {{ end }}
 
-<div class="books">  
-{{ range (where .Site.RegularPages "Section" "books").GroupByDate "2006" }}
-<h2>{{ .Key }}</h2>
-    {{ range .Pages }}
-    <div itemprop = "mainEntity" itemscope itemtype="http://schema.org/Book">
-      <div>
-      <details>
-        <summary>{{ if and (in .Params.categories "unread") }} <em>{{ .Params.Shorttitle }}</em> {{else}} <a href="{{ .Permalink }}" class="post-link"><em>{{ .Params.Shorttitle }}</em></a> {{ end}}</summary>
-        <span class="even-smaller mono">
-          ISBN: {{ .Params.Isbn }} (find on <a href="https://worldcat.org/isbn/{{ .Params.Isbn }}">WorldCat</a> or <a href="https://openlibrary.org/isbn/{{ .Params.Isbn }}">Open Library</a>) <br />
-          Buy from <a href="https://bookshop.org/books?keywords={{ .Params.Isbn }}">Bookshop</a> <br />
-          Published: {{ .Params.Year }} <br />
-          Publisher: {{ .Params.Publisher }} <br />
-        </span>
-      </details>
-      </div>
-      <div itemprop="author">{{ .Params.Author }}</div>
-    </div>
-    {{ end }}
-{{ end }}
-</div>
+  {{/* Everything else, grouped by year */}}
+  {{ range $allBooks.GroupByDate "2006" }}
+  <h2 class="book-year-heading">{{ .Key }}</h2>
+  {{ range .Pages }}
+  {{ if not (in .Params.categories "reading") }}{{ partial "book-entry.html" . }}{{ end }}
+  {{ end }}
+  {{ end }}
 
 </div>
 
-{{ partial "foot.html" . }}
+<p class="text-center font-bold text-3xl">Readings before 2018 are logged on <a href="https://www.librarything.com/profile/hepplerj">LibraryThing</a>.</p>
+</div>
+</div>
+
+<div class="site-container">
+  {{ partial "foot.html" . }}
 </div>

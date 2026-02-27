@@ -1,0 +1,21 @@
+{{  if .IsNamedParams }}
+  {{ if .Get "type" }}
+    <script src="https://bookshop.org/widgets.js"
+            data-type="{{ .Get "type" }}"
+            data-affiliate-id="{{ .Site.Params.bookshop_affiliate_id }}"
+            data-sku="{{ .Get "isbn" }}">
+    </script>
+  {{ else }}
+    <a href="https://bookshop.org/a/{{ .Site.Params.bookshop_affiliate_id }}/{{ .Get "isbn" }}">{{ .Inner }}</a>
+  {{ end }}
+{{ else }}
+  {{ if .Get 1 }}
+    <script src="https://bookshop.org/widgets.js"
+            data-type="{{ .Get 1 }}"
+            data-affiliate-id="{{ .Site.Params.bookshop_affiliate_id }}"
+            data-sku="{{ .Get 0 }}">
+    </script>
+  {{ else }}
+    <a href="https://bookshop.org/a/{{ .Site.Params.bookshop_affiliate_id }}/{{ .Get 0 }}">{{ .Inner }}</a>
+  {{ end }}
+{{ end }}

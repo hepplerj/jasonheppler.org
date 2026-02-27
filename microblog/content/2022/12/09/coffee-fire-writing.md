@@ -1,0 +1,26 @@
+---
+layout: post
+microblog: true
+guid: http://jaheppler.micro.blog/2022/12/09/coffee-fire-writing/
+post_id: 1751350
+custom_summary: false
+summary: ""
+date: 2022-12-09T08:51:08-0600
+lastmod: 2025-01-03T19:08:04-0600
+type: post
+categories:
+- "photo"
+- "writing"
+- "coffee"
+- "Microposts"
+images:
+- https://cdn.uploads.micro.blog/2634/2022/5e36b31ae8.jpg
+photos:
+- https://cdn.uploads.micro.blog/2634/2022/5e36b31ae8.jpg
+photos_with_metadata:
+- url: https://cdn.uploads.micro.blog/2634/2022/5e36b31ae8.jpg
+url: "/2022/12/09/coffee-fire-writing/"
+---
+Coffee, fire, writing. 
+
+<img src="uploads/2022/5e36b31ae8.jpg" width="600" height="600" alt="">

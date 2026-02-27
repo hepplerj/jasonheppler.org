@@ -2,7 +2,8 @@
 title: "Advocacy, Training, and Awareness Through Endangered Data Week"
 date: 2018-03-02
 tags: [advocacy, Endangered Data Week, data, open data, web, libraries]
-lede: "An essay I co-authored with Brandon Locke, Sarah Melton, and Rachel Mattson."
+source: "Parameters"
+lede: "An essay co-authored with Brandon Locke, Sarah Melton, and Rachel Mattson on data advocacy and the annual Endangered Data Week initiative."
 ShowToc: true
 ---
 

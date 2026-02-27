@@ -1,6 +1,5 @@
 ---
 title: "The Overstory"
-shorttitle: 'The Overstory'
 author: 'Richard Powers'
 date: 2022-12-12
 isbn: "9780393356687"

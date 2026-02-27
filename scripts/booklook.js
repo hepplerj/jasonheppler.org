@@ -48,11 +48,13 @@ const getBookData = async (isbn) => {
 const writeBookData = (data) => {
     // get the current date as yyyy-mm-dd
     const today = new Date();
-    const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    
+    const yyyy = today.getFullYear();
+    const mm   = String(today.getMonth() + 1).padStart(2, '0');
+    const dd   = String(today.getDate()).padStart(2, '0');
+    const date = `${yyyy}-${mm}-${dd}`;
+
     const book = `---
 title: "${data.title}"
-shorttitle: "${data.title}"
 author: '${data.author}'
 date: ${date}
 isbn: "${data.isbn}"
