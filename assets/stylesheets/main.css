@@ -1932,6 +1932,7 @@ p>code {
     font-family: var(--font-sans);
     font-size: var(--type-small);
     text-align: center;
+    margin: 2em 0;
   }
 
   .metrics-left {
@@ -1939,6 +1940,7 @@ p>code {
     grid-row: 1;
     background-color: var(--color-green);
     color: var(--theme-text);
+    padding: 1.5em;
   }
 
   .metrics-left p {
@@ -1951,6 +1953,8 @@ p>code {
   }
 
   img.metrics__img {
+    display: block;
+    margin: 0 auto;
     width: 12%;
   }
 
