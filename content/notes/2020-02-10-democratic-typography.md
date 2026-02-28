@@ -7,7 +7,7 @@ tags:
 - politics
 ---
 
-<a data-fancybox="gallery" href="/assets/images/2025/45f6d9651e.jpg"><img src="/assets/images/2025/45f6d9651e.jpg"></a>
+<a data-fancybox="gallery" href="/assets/images/2025/45f6d9651e.webp"><img src="/assets/images/2025/45f6d9651e.webp"></a>
 
 Between March 2019 and today (2/10/2020), we've had [twenty-eight candidates](https://www.nytimes.com/interactive/2019/us/politics/2020-presidential-candidates.html) for the Democratic nomination in the United States. I went through candidate websites and grabbed their primary logo, which I mostly find fascinating to see the moods that are conveyed by color and typography.[^1]
 

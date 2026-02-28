@@ -119,7 +119,7 @@ Imported on {{importDate | format("YYYY-MM-DD h:mm a")}}
 
 I [have an Obsidian theme I'm working on](https://github.com/hepplerj/obsidian-nano) based off [an emacs theme](https://github.com/rougier/nano-emacs) I really like, but honestly I spend most of my time using the Minimal theme. The default Obsidian theme is fine, but Minimal offers some nice adjustments as well as its own plugin for modifying or adjusting styles.
 
-{{< figure src="/assets/images/obsidian_preview.png" caption="My Obsidian setup." alt="My Obsidian setup." width="800px" >}}
+{{< figure src="/assets/images/obsidian_preview.webp" caption="My Obsidian setup." alt="My Obsidian setup." width="800px" >}}
 
 I've been jumping between iA Writer's [Quattro](https://ia.net/topics/a-typographic-christmas), [Berkeley Mono](https://berkeleygraphics.com/typefaces/), and default system fonts. I really love iA's fonts (and the IBM Plex family, of which their fonts are derived from) but have settled on Berkeley Mono at the moment (the same font I use in my development environments).
 
@@ -133,7 +133,7 @@ But I can also use DataView to drive complex queries across my notes. I've taken
 
 For my research notes, I have an overall folder of `30. Research` that contains subfolders on my various research or book projects. Each of those have a `Meta` folder that contain a set of documents designed to search only within those specific research folders.
 
-{{< figure src="/assets/images/obsidian_research_structure.png" caption="My Obsidian research folder structure." alt="My Obsidian research folder structure." width="400px" >}}
+{{< figure src="/assets/images/obsidian_research_structure.webp" caption="My Obsidian research folder structure." alt="My Obsidian research folder structure." width="400px" >}}
 
 Key to this is a note called `Search Research Notes` that looks like the following:
 
@@ -170,7 +170,7 @@ This allows me to do some fairly complex searches by keyword (which looks throug
 
 I transcribe my sources in a `Sources` folder, all of which contain the same set of Obsidian properties that allow me to add metadata to the document. Those properties look something like this:
 
-{{< figure src="/assets/images/obsidian_properties.png" caption="My Obsidian properties." alt="My Obsidian properties." width="800px" >}}
+{{< figure src="/assets/images/obsidian_properties.webp" caption="My Obsidian properties." alt="My Obsidian properties." width="800px" >}}
 
 The properties do a few things for me. First, they serve as metadata about the document: basic things like where in the archives I found it, the date, the title. But I also note lots of details that link to index notes, which allows me to find all related notes with that share that document (so, indexes like individual people, organizations, locations, or topics for analysis) tags, and links which link over to my [Tropy](https://tropy.org) record of an item (which is where I keep photographs and PDFs, but I also replicate the archive structure of Collection > Box > Folder in my file system). I also have a holdover from my DEVONthink days where I use the tag `bridge` to indicate a note whose primary intent is a synthesis and analysis of other notes, and most of these notes reside in a subfolder of my research project folder called `Analysis`. These notes, documents, and indexes become the basis of actually drafting text.[^1]
 
@@ -194,11 +194,11 @@ SORT file.name asc
 
 This view finds anyone with the tag `#biography` in my research project's folder and generates a table of people, their occupation, their date of death, and how many times a file is linked to a person (hence the field "mentions"). A note page for an individual tends to look like this:
 
-{{< figure src="/assets/images/obsidian_person.png" caption="My Obsidian person notes." alt="My Obsidian person notes." width="800px" >}}
+{{< figure src="/assets/images/obsidian_person.webp" caption="My Obsidian person notes." alt="My Obsidian person notes." width="800px" >}}
 
 As you saw above in my screenshot setup, I do keep a local graph of my current note visible at all times; I haven't yet found this particularly useful but I'm keeping it there as a bit of an experiment. As I continue to add notes and sources for my current book project, I'll be curious to see if visualizing those connections lead to any new ideas or threads to follow. I don't otherwise find the graph view to be that useful for navigating notes, especially the full graph view. Some people like to see it, though, so here's the full network.
 
-{{< figure src="/assets/images/obsidian_graph.png" caption="My Obsidian network graph." alt="My Obsidian network graph." width="800px" >}}
+{{< figure src="/assets/images/obsidian_graph.webp" caption="My Obsidian network graph." alt="My Obsidian network graph." width="800px" >}}
 
 ## Some additional plugins
 

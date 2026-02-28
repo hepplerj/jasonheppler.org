@@ -9,13 +9,13 @@ Before 2013, I hadn't spent much time in California, aside from a few trips to L
 
 [^1]: Luckily the Bay Area has done a slightly better job on public transportation. People complain about Caltrain, BART, VTA, and MUNI, but they're pretty amazing services for this area. Sure, the system could be more unified and better built (a topic that may end up in my book), but overall the system is the best I've ever lived near.
 
-{{% figure src="/assets/images/emerald-hills.png" caption="The view from Emerald Hills." %}}
+{{% figure src="/assets/images/emerald-hills.webp" caption="The view from Emerald Hills." %}}
 
 I came out to California by myself while my wife moved our stuff and sold our house back in Nebraska. In what seems like a quintessential Silicon Valley move now, I found an Airbnb in the hills above Redwood City, where I lived for two months just an eight minute train ride from campus. That Airbnb turned out to be more than just a place to stay. It became a core network for us to meet others who were relocating to the Bay Area. The proprietor often held "Airbnb reunions" for us to meet one another. One set of our closest friends---and new parents, like us---stayed at this Airbnb as well.
 
 The first few weeks at Stanford were a blur of activity. This was my first full-time academic job, and adjusting to that new reality took some effort. Stanford is very decentralized and entrepreneurial, and, like NASA, loves its acronyms---I had a litany to pick up (ACS, SUL, CESTA, VPOL, CTL, ATL, and so on). As I grokked the culture of the university, I had to familiarize myself not only with the sort of things Stanford offered me and the faculty I worked with, but what exactly *did I do here*? I was the first Academic Technology Specialist in the History Department, and defining that role has been an evolving process over the past four years.
 
-{{% figure src="/assets/images/whatdo.jpg" caption="Office Space. Go watch it if you haven't seen it." %}}
+{{% figure src="/assets/images/whatdo.webp" caption="Office Space. Go watch it if you haven't seen it." %}}
 
 I've [commented on how UNL was an amazing intellectual environment](https://twitter.com/jaheppler/status/764525961341657089) for me. And while I started writing my dissertation in that community, I finished it around the Stanford community. I like to think both UNL and Stanford colleagues deeply shaped not only the resulting dissertation, but my own thinking about history, digital humanities, libraries, knowledge creation, data visualization, and a whole host of other things. My dissertation, which [happened to be about the place I was moving to](http://digitalcommons.unl.edu/historydiss/86/), was likewise shaped by living in Silicon Valley. There's something about studying place and actually living in that same space. I hope that my time here will impart some extra wisdom to my book manuscript.
 

@@ -1,0 +1,20 @@
+{{ partial "head.html" . }}
+
+<div class='pt-10 site-container content'>
+  <div class="body">
+    <header>
+    {{ if .Params.page_type }}
+    {{ else }}
+    <h1>{{ .Title }}</h1>
+    {{ end }}
+    {{ partial "article-meta.html" . }}
+  </header>
+  <div class="blogroll-columns">
+    {{ .Content }}
+  </div>
+</div>
+</div>
+
+<div class="site-container">
+  {{ partial "foot.html" . }}
+</div>
