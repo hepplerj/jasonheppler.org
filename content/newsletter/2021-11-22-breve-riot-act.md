@@ -14,7 +14,7 @@ This is <em>Breve</em> &mdash; the newsletter from Jason A. Heppler. If you want
 
 Recently, I learned of [Riot Acts](https://www.riotacts.org/index.html) by Patrick Hoehne, a PhD candidate at the University of Nebraska-Lincoln.
 
-![](/assets/images/https---bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com-public-images-debb333b-9cfb-4696-a1c9-63700fea87a1_2027x1036.jpeg)
+![](/assets/images/https---bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com-public-images-debb333b-9cfb-4696-a1c9-63700fea87a1_2027x1036.webp)
 
 I’m always eager to highlight digital history by graduate students, and Patrick's work here is impressive: compiling a database of over 2,200 instances of extralegal violence between US independence and the end of the Civil War. There’s a lot here: two interactive maps that allows you to either spatially and temporally visualize instances of violence, or query the data spatially. Not only that, but the project incudes a network analysis of types of violence and who instances of violence was directed against. 
 
@@ -38,7 +38,7 @@ A fantastic project that I’ll be keeping an eye on as updates come.
 
 The [companion site](https://dsl.richmond.edu/southernjourney/) to Ed Ayer’s new book *[Southern Journey](https://lsupress.org/books/detail/southern-journey/)* has a rich collection of maps that are stunning and well-designed.
 
-![](/assets/images/https---bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com-public-images-556da260-f2ed-415f-b989-e8be6b8d00b5_1880x1282.jpeg)
+![](/assets/images/https---bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com-public-images-556da260-f2ed-415f-b989-e8be6b8d00b5_1880x1282.webp)
 
 The site is built upon ESRI StoryMaps and uses [scrollytelling](https://medium.com/nightingale/from-storytelling-to-scrollytelling-a-short-introduction-and-beyond-fbda32066964) well in exploring change over time. But what I think is particularly effective is the design of the maps themselves. As I [once wrote elsewhere](https://jasonheppler.org/2015/01/18/humanistic-approaches-to-data-visualization/), one of the challenges in visualizing geographic data over time are changing boundaries — new states, counties, parishes, census designations, and so forth make it hard to compare places against each other over time. Especially, for example, in [choropleth maps](https://en.wikipedia.org/wiki/Choropleth_map) — shading datapoints by county, even with a tight chronology, is difficult in the United States for the simple reason that counties get larger as you move westward. This isn’t to say that choropleths can’t be useful or done well, but it is an important design consideration. 
 

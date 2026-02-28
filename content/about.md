@@ -7,7 +7,7 @@ slug: "/about/"
   A summary, more or less, of this blog's themes can be found <a href="/2025/01/04/the-blogs-themes-summarized/">here</a>.
 </aside>
 
-{{< figure src="/assets/images/0C7A1453.jpg" alt="Jason A. Heppler" caption="Photo by John Legg" class="about-photo" >}}
+{{< figure src="/assets/images/0C7A1453.webp" alt="Jason A. Heppler" caption="Photo by John Legg" class="about-photo" >}}
 
 Hi! I'm Jason, a web developer by trade and a historian by vocation at the [Roy Rosenzweig Center for History and New Media](https://rrchnm.org) (RRCHNM) at [George Mason University](https://historyarthistory.gmu.edu). I collaborate with faculty and graduate students on the innovative application of technology in teaching and research across interactive data visualization, design, and public and digital history. I hold a Ph.D. from the University of Nebraska-Lincoln and currently split my time between Lincoln and Fairfax.
 

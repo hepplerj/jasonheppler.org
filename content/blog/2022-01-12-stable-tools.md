@@ -34,7 +34,7 @@ Where I landed was on Ulysses. It's not always perfect -- I think Ulysses is a b
 
 Now, all of my writing happens here: the book manuscript; blog posts are indexed from a folder on Dropbox; academic articles; book and project reviews. Everything now lives in one place. And this is key: it's in *one* place. To make this experience a bit more enjoyable (and prevent neck strain from the Magic Keyboard), I mount the iPad to a stand and use a bluetooth mechanical keyboard with it.
 
-![iPadOS setup with the Keychron K3 mechanical keyboard.](/assets/images/ipados.png)
+![iPadOS setup with the Keychron K3 mechanical keyboard.](/assets/images/ipados.webp)
 
 Just fantastic.
 

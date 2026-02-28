@@ -9,7 +9,7 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
     <p>Hi, I'm Jason A. Heppler, environmental historian of the twentieth century North American West, Great Plains, and Canadian Prairies. I am the senior developer-scholar at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a>, adjunct faculty in the <a href="https://historyarthistory.gmu.edu">Department of History and Art History</a> at George Mason University, and an Affiliate Fellow at the <a href="https://www.unl.edu/plains/">Center for Great Plains Studies</a> at the <a href="https://www.unl.edu">University of Nebraska-Lincoln</a>.</p>
   </div>
   <div class="intro-photo">
-    <img src="/assets/images/0C7A1451.jpg" alt="Jason Heppler" class="author-photo">
+    <img src="/assets/images/0C7A1451.webp" alt="Jason Heppler" class="author-photo">
   </div>
 </div>
 
@@ -30,7 +30,7 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
 <div class="book-grid">
   <div class="book-grid-item">
     <a class="book-grid-thumb" href="/publications/silicon-valley/">
-      <img src="/assets/images/book_sv.jpg" alt="Silicon Valley and the Environmental Inequalities of High Tech Urbanism book cover" loading="lazy">
+      <img src="/assets/images/book_sv.webp" alt="Silicon Valley and the Environmental Inequalities of High Tech Urbanism book cover" loading="lazy">
     </a>
     <div class="book-grid-info">
       <p class="book-grid-title">Silicon Valley and the Environmental Inequalities of High-Tech Urbanism</p>
@@ -41,7 +41,7 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
 
   <div class="book-grid-item">
     <a class="book-grid-thumb" href="/publications/digital-community-engagement/">
-      <img src="/assets/images/dice.jpeg" alt="Digital Community Engagement book cover" loading="lazy">
+      <img src="/assets/images/dice.webp" alt="Digital Community Engagement book cover" loading="lazy">
     </a>
     <div class="book-grid-info">
       <p class="book-grid-title">Digital Community Engagement</p>

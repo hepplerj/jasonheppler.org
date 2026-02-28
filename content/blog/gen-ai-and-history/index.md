@@ -60,7 +60,7 @@ There's a key problem in how LLMs operate that make them pretty ill-suited for h
 
 Let's consider an example. Here's a letter I was recently reading over from my archival research in Wyoming this summer. 
 
-<img src="/assets/images/2025/letter-example.png" width="600" height="636" alt="Auto-generated description: A letter from the Coalition for Fiscal Restraint, dated November 30, 1988, congratulates Vice President George Bush on his election victory and urges him to focus on decreasing taxes and government spending.">
+<img src="/assets/images/2025/letter-example.webp" width="600" height="636" alt="Auto-generated description: A letter from the Coalition for Fiscal Restraint, dated November 30, 1988, congratulates Vice President George Bush on his election victory and urges him to focus on decreasing taxes and government spending.">
 
 <details close> 
 <summary>Transcript of the letter</summary> 

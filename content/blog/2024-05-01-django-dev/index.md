@@ -70,7 +70,7 @@ One thing I added to this was HTMX, which will give us Vue-like or React-like in
 
 I had the great pleasure of working with [an excellent designer](https://susienguyen.com) for this project. Incorporating her layout into the Django templates was a breeze: just plain 'ol HTML with [Django template tags](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/) as necessary. In this way it felt pretty similar to what we do with our Hugo sites: that form and content are held in separate places, and we can extend standard layouts for various pages on the site.
 
-{{< figure src="/assets/images/arnhem-postal-preview.png" alt="A preview of the Arnhem Postal History Project." caption="The Arnhem Postal History Project" width="800px" >}}
+{{< figure src="/assets/images/arnhem-postal-preview.webp" alt="A preview of the Arnhem Postal History Project." caption="The Arnhem Postal History Project" width="800px" >}}
 
 ## So, what's the take-away?
 

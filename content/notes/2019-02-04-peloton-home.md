@@ -16,7 +16,7 @@ Nebraska winters can be brutal (have I mentioned lately I miss California?)
 and, with a young kid in the house, it can be hard to find time to get out and
 ride. So a stationary bike was a perfect solution for me. 
 
-![My bike setup.](/assets/images/sunny.jpg)
+![My bike setup.](/assets/images/sunny.webp)
 
 **The bike**. Sunny Health makes great indoor spinning bikes, and I went with [this $264 one](https://www.amazon.com/gp/product/B00JDC0BAA/ref=oh_aui_search_asin_title?ie=UTF8&psc=1). It's heavy and takes a bit of work if you're, say, carrying it to your basement. But it's not difficult put together (so, skip the Amazon professional installation) and it does the job wonderfully.  It's sturdy (a good thing, because you'll really be cranking the pedals) as well as quiet. You won't have to worry about waking your kids while they're asleep and you're pedaling your ass off.
 
