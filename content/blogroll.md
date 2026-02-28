@@ -2,6 +2,7 @@
 title: Blogroll
 date: 2026-02-26
 description: Blogs and websites I read and recommend.
+layout: blogroll
 ---
 
 

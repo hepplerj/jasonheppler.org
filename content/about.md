@@ -1,6 +1,7 @@
 ---
 title: "About me"
 slug: "/about/"
+layout: about
 ---
 
 <aside>
