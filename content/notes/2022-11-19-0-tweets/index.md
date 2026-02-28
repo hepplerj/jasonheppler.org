@@ -12,7 +12,7 @@ But the truth is what I write here on my website is the historical record.
 
 <!--more-->
 
-Twitter served a great purpose for me at one point in my career -- as a place to share my work, learn about others, and connect with a community. But I feel like that has become less of a sure thing anymore. As I wrote [yesterday](https://social.jasonheppler.org/2022/11/18/embracing-the-limits.html), Twitter -- and most social media -- doesn't feed what I want to focus on: thinking, writing, making.
+Twitter served a great purpose for me at one point in my career -- as a place to share my work, learn about others, and connect with a community. But I feel like that has become less of a sure thing anymore. As I wrote [yesterday](/notes/embracing-the-limits/), Twitter -- and most social media -- doesn't feed what I want to focus on: thinking, writing, making.
 
 So, the tweets are at 0. Here's how I did it: 
 

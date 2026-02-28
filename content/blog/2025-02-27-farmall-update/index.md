@@ -6,7 +6,7 @@ lede: "A February update on the 1946 Farmall H restoration."
 tags: [restoration]
 ---
 
-With the weather starting to warm up in Nebraska, I've had a chance to start coming to terms with the Farmall H restoration project. I'm starting up a new series on this, and you can follow along in the [restoration category](https://writing.jasonheppler.org/categories/restoration/).
+With the weather starting to warm up in Nebraska, I've had a chance to start coming to terms with the Farmall H restoration project. I'm starting up a new series on this, and you can follow along in the [restoration category](/tags/restoration/).
 
 In my test drives I've done since getting it home and some closer inspections across the tractor, I've come to find a few things to look into. Here's a brief rundown:
 

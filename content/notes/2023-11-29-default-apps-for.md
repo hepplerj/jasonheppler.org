@@ -2,6 +2,7 @@
 title: Default Apps for 2023
 date: 2023-11-29T18:54:07-0600
 lastmod: 2025-01-03T19:08:12-0600
+lede: A list of my preferred apps and tools for 2023.
 ---
 
 There have been a bunch of "what apps am I using?" blog posts recently, inspired by [an episode of Hemispheric Views](https://listen.hemisphericviews.com/097). Robb Knight [has a page with links](https://defaults.rknight.me/) to other people’s posts.

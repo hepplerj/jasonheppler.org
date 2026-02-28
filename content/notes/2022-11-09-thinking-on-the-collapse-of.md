@@ -13,4 +13,4 @@ tags:
 >
 > But we, as users of the global internet, cannot just ride the same rollercoaster again. It's too embarrassing to be trapped inside these hungry corporate gambits, these dumb proper nouns. The nouns and verbs of our online relationships should be lowercase, the way "magazine" is lowercase, the way "movie" is lowercase. Anybody can make a movie. Anybody can try.
 
-I'm more or less off Twitter these days---and even moreso under the new management---in favor of places like [micro.blog](https://social.jasonheppler.org) and [Mastodon](http://hcommons.social/@jaheppler). But here we stand, at the edge of a better web, a new platform, a new protocol. And that's exciting.
+I'm more or less off Twitter these days---and even moreso under the new management---in favor of places like [micro.blog](https://writing.jasonheppler.org) and [Mastodon](http://hcommons.social/@jaheppler). But here we stand, at the edge of a better web, a new platform, a new protocol. And that's exciting.

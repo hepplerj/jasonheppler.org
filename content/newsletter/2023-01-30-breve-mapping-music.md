@@ -34,7 +34,7 @@ Lately, one thing occupying my time is a map for [Hearing the Americas](https://
  
  I know I keep saying this, but the book really is nearly done. I'm working though some edits and sending it back to the press within the next week. 
  
- One of my goals for the year is to get more words out in the world. As part of that, I've made a few changes to the web spaces where I write. One of these, of course, is the newsletter you're reading---I'm hoping to write here a bit more frequently, aiming for once a month. But I've also started [a subscription](https://social.jasonheppler.org/subscribe/) for my micro.blog posts (which is mostly book logging and photos), as well as [updating my RSS feeds](https://jasonheppler.org/2022/12/15/updating-rss/) on my website. I hope you'll follow along. 
+ One of my goals for the year is to get more words out in the world. As part of that, I've made a few changes to the web spaces where I write. One of these, of course, is the newsletter you're reading---I'm hoping to write here a bit more frequently, aiming for once a month. But I've also started [a subscription](https://writing.jasonheppler.org/subscribe/) for my micro.blog posts (which is mostly book logging and photos), as well as [updating my RSS feeds](https://jasonheppler.org/2022/12/15/updating-rss/) on my website. I hope you'll follow along. 
  
  I've also set up a way for you to [buy me a coffee](https://www.buymeacoffee.com/jasonheppler), if it so moves you.
  

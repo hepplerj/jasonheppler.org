@@ -4,7 +4,7 @@ date: 2024-11-08T09:08:44-0600
 lastmod: 2025-01-03T19:09:07-0600
 ---
 
-While there remains a lot of uncertainty and questions in the wake of the 2024 elections, one thing that seems clear to me is about myself: I'm more terminally online than I realized, and I don't love that. [As I've written before](https://social.jasonheppler.org/2022/11/18/embracing-the-limits.html), the urge for up-to-the-moment news doesn't actually make me a more informed person but only works to drive emotions that aren't particularly healthy. Plus, I feel as though I really misjudged this election. I'm a historian, not someone who predicts the future; but I really feel as though social media skewed the way I was thinking about things.
+While there remains a lot of uncertainty and questions in the wake of the 2024 elections, one thing that seems clear to me is about myself: I'm more terminally online than I realized, and I don't love that. [As I've written before](https://writing.jasonheppler.org/2022/11/18/embracing-the-limits.html), the urge for up-to-the-moment news doesn't actually make me a more informed person but only works to drive emotions that aren't particularly healthy. Plus, I feel as though I really misjudged this election. I'm a historian, not someone who predicts the future; but I really feel as though social media skewed the way I was thinking about things.
 
 Oliver Burkeman (that I learned of by way of [Alan Jacobs](https://blog.ayjay.org/news-resilient/)) a couple of years ago referred to the idea of [being news-resilient](https://ckarchive.com/b/r8u8hoh8eeov): how to be properly informed without the doomerism and time-sinks that comes along with social media.
 

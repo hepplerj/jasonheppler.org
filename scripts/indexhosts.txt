@@ -242,7 +242,7 @@ www.nbcnews.com: 1
 nymag.com: 1
 grist.org: 1
 hms.harvard.edu: 1
-social.jasonheppler.org: 1
+writing.jasonheppler.org: 1
 greenomaha.org: 1
 missingmiddleomaha.com: 1
 world.hey.com: 1
