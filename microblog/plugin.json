@@ -1,8 +1,0 @@
-{
-	"version": "1.0.1",
-	"title": "Open Graph basics",
-	"description": "Includes either a photo or preview card.",
-	"includes": [
-		"opengraph_basics.html"
-	]
-}
