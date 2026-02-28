@@ -15,7 +15,6 @@
 {{ .Content }}
 
 <hr class="my-10">
-<h2>By the numbers</h2>
 
 {{ $posts := where site.RegularPages "Type" "blog" }}
 
@@ -40,39 +39,6 @@
 {{ $avgPostLength := div $wordCount $postCount }}
 {{ $firstYear := (index (last 1 $posts) 0).Date.Year }}
 {{ $yearsActive := sub now.Year $firstYear | add 1 }}
-
-<table class="w-full text-sm mb-8 border-collapse">
-  <tr class="border-b border-[var(--theme-border)]">
-    <td class="py-2 pr-4 w-2/5 font-medium">Total Posts Published</td>
-    <td class="py-2">{{ $postCount | lang.FormatNumberCustom 0 }}</td>
-  </tr>
-  <tr class="border-b border-[var(--theme-border)]">
-    <td class="py-2 pr-4">Total Words Written</td>
-    <td class="py-2">{{ $wordCount | lang.FormatNumberCustom 0 }}{{ if gt $wordCount 40000 }} (almost {{ (div $wordCount 40000) | lang.FormatNumberCustom 0 }} novellas){{ end }}</td>
-  </tr>
-  <tr class="border-b border-[var(--theme-border)]">
-    <td class="py-2 pr-4">Average Words per Post</td>
-    <td class="py-2">{{ $avgPostLength | lang.FormatNumberCustom 0 }}</td>
-  </tr>
-  <tr class="border-b border-[var(--theme-border)]">
-    <td class="py-2 pr-4">First Post Published</td>
-    <td class="py-2">
-      {{ range last 1 $posts }}
-        {{ if .Title }}<a href="{{ .Permalink }}">{{ .Title }}</a> published on {{ .Date.Format "2006-01-02" }}
-        {{ else }}<a href="{{ .Permalink }}">Micro Post</a> published on {{ .Date.Format "2006-01-02" }}{{ end }}
-      {{ end }}
-    </td>
-  </tr>
-  <tr>
-    <td class="py-2 pr-4">Longest Post Published</td>
-    <td class="py-2">
-      {{ with $scratch.Get "longestPost" }}
-        {{ if .Title }}<a href="{{ .Permalink }}">{{ .Title }}</a> with {{ .WordCount }} words
-        {{ else }}<a href="{{ .Permalink }}">Micro Post</a> with {{ .WordCount }} words{{ end }}
-      {{ end }}
-    </td>
-  </tr>
-</table>
 
 {{ $grouped := $posts.GroupByDate "2006" }}
 

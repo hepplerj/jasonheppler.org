@@ -45,10 +45,3 @@ This website is built with the static site generator [Hugo](https://gohugo.io). 
 ## Support
 
 If you'd like to support my writing here and elsewhere, I'd love it if you could [buy me a coffee](https://www.buymeacoffee.com/jasonheppler).
-
-## Other pages
-
-- [Uses](/uses)
-- [Now](/now)
-- [Norwegian learning resources](/norwegian)
-- [Office hours resources for students](/office-hours)
