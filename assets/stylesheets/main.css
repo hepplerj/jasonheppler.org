@@ -1172,12 +1172,12 @@ figure.about-photo {
     color: var(--theme-links);
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     .book-row {
       display: flex;
       flex-direction: column;
-      gap: 0.1rem;
-      padding: 0.5rem 0;
+      gap: 0.2rem;
+      padding: 0.55rem 0;
     }
 
     .book-title-col {
@@ -1489,7 +1489,7 @@ figure.about-photo {
     white-space: nowrap;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     .home-reading-table {
       display: flex;
       flex-direction: column;
