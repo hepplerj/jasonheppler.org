@@ -46,7 +46,7 @@ initPanel();
 // ─── Font size ────────────────────────────────────────────────────────────────
 
 const FONT_SIZES = [22, 25, 28];
-const DEFAULT_FONT_SIZE_INDEX = 1; // 25px medium
+const DEFAULT_FONT_SIZE_INDEX = 0; // 22px small
 
 function applyFontSize(idx) {
     const clamped = Math.max(0, Math.min(FONT_SIZES.length - 1, idx));
