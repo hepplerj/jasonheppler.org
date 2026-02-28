@@ -9,7 +9,8 @@ footnoteReturnLinkContents: " "
 
 permalinks:
   blog: "/:year/:month/:day/:slug/"
-  notes: "/notes/:slug/"
+  notes: "/:year/:month/:day/:slug/"
+  links: "/:year/:month/:day/:slug/"
   archive: "/:slug/"
   page: "/:section/:slug/"
 

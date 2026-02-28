@@ -17,7 +17,7 @@
 
       {{ .Content }}
 
-      Filed: <span class="commonplace__tag">{{ partial "tags.html" .}}</span>
+      {{ if .Params.tags }}<div class="mt-2">{{ partial "tags-badges.html" . }}</div>{{ end }}
     </article>
 </div>
 {{ end }}

@@ -22,7 +22,7 @@ The French poet Nicolas Boileau in his _[L'Art poétique](https://www.google.com
 > Polish and re-polish endlessly,  
 > And sometimes add, but often take away.
 
-Slowly make haste (*Hâtez-vous lentement*) seems like a good aim for my year---a year of urgency and diligence. It's a year filled with projects that are coming to an end (projects around RRCHNM, my book) and new ones arising (new tech stack and languages, new digital projects, a new book project perhaps). Wrapped up in this are efforts to [remove those things that don't help me achieve](/notes/embracing-the-limits/) what I'd like to be doing---more thinking, building, creating, writing.
+Slowly make haste (*Hâtez-vous lentement*) seems like a good aim for my year---a year of urgency and diligence. It's a year filled with projects that are coming to an end (projects around RRCHNM, my book) and new ones arising (new tech stack and languages, new digital projects, a new book project perhaps). Wrapped up in this are efforts to [remove those things that don't help me achieve](/2022/11/18/embracing-the-limits/) what I'd like to be doing---more thinking, building, creating, writing.
 
 So, *work* breaks down into a few areas, since more focus on my time means cutting things that could otherwise occupy it. I'll be...
 

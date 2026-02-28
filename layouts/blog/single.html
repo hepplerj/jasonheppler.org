@@ -31,12 +31,8 @@
       <p>
         Published <a href="{{ .Permalink }}" class="u-url u-uid permalink"><time datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "January 2, 2006" }}</time></a>, contains {{ .WordCount }} words and should take you about {{ .ReadingTime }} minute(s) to read it.
         &middot; <a href="/feed.xml">Subscribe to these essays</a>
+        {{ if .Params.tags }}&middot; <span class="article-tags">{{ partial "tags.html" .}}</span>{{ end }}
       </p>
-      {{ if .Params.tags }}
-      <p class="text-[75%] m-0">
-        Filed under: <span class="article-tags">{{ partial "tags.html" .}}</span>
-      </p>
-      {{ end }}
 
       <p id="page-stats" hidden>
         This page loaded in <strong><span id="page_load"></span></strong> seconds
@@ -51,13 +47,13 @@
       <p>
         You can sometimes find him on <a href="https://bsky.app/profile/jasonheppler.org">Bluesky</a>, <a href="https://www.instagram.com/hepplerj/">Instagram</a>, and <a href="https://micro.blog/jheppler">micro.blog</a>.
       </p>
+
+      {{/* Bridgy publish — syndicates this post to Bluesky when Bridgy crawls */}}
+      <a href="https://brid.gy/publish/bluesky" class="u-syndication" hidden></a>
     </aside>
 
     <aside id="webmentions-container">
-      <details>
-        <summary>Mentions around the web</summary>
-        <div id="webmentions"></div>
-      </details>
+      <div id="webmentions"></div>
     </aside>
 
     <script>
