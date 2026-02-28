@@ -1,0 +1,14 @@
+<footer class="mt-8 pt-5 text-[85%]" style="border-top: 1px solid var(--color-aside-faded); color: var(--theme-dark-tint)">
+  {{ if eq .Section "notes" }}
+  <p>This is a <a href="/notes/">note</a> — a shorter observation or thing worth recording, sometimes provisional or incomplete.</p>
+  {{ else if eq .Section "links" }}
+  <p>This is a <a href="/links/">commonplace post</a> — a link to something I've read and found worth keeping, named after the commonplace book tradition of collecting passages and references.</p>
+  {{ end }}
+  {{ if .Params.tags }}
+  {{ if eq .Section "links" }}
+  <div class="mt-2">{{ partial "tags-badges.html" . }}</div>
+  {{ else }}
+  <p class="mt-2">Filed under: <span class="article-tags">{{ partial "tags.html" . }}</span></p>
+  {{ end }}
+  {{ end }}
+</footer>
