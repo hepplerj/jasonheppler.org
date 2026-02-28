@@ -1174,7 +1174,20 @@ figure.about-photo {
 
   @media (max-width: 640px) {
     .book-row {
-      grid-template-columns: minmax(0, 1fr) auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+      padding: 0.5rem 0;
+    }
+
+    .book-title-col {
+      white-space: normal;
+      overflow: visible;
+      text-overflow: clip;
+    }
+
+    .book-author-col {
+      white-space: normal;
     }
 
     .book-pub-year {
@@ -1474,6 +1487,31 @@ figure.about-photo {
     font-size: var(--type-x-small);
     color: rgb(from var(--theme-text) r g b / 0.4);
     white-space: nowrap;
+  }
+
+  @media (max-width: 640px) {
+    .home-reading-table {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .home-reading-row {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 0.6rem;
+      row-gap: 0.1rem;
+      align-items: baseline;
+    }
+
+    .home-reading-title {
+      flex: 1 1 100%;
+    }
+
+    .home-reading-author,
+    .home-reading-year {
+      white-space: normal;
+    }
   }
 
   .home-section-more {
