@@ -12,11 +12,11 @@ Before we get to the charts: hats off to everyone at the WHA offices and the Pro
 
 -----
 
-![Tweet frequency.](/assets/images/wha20-freq.webp)
+![Tweet frequency.](wha20-freq.webp)
 
 As usual, when we look at Twitter activity leading up to and during the conference we have relatively low volumes then our peaks and valleys during the conference itself. For this year, we actually outpaced the number of tweets over last year.
 
-![Top tweets.](/assets/images/wha20-users.webp)
+![Top tweets.](wha20-users.webp)
 
 We can also aggregate the top Twitter users using the `#WHA2020` hashtag. This year, Lindsey was far and away the leader in tweets thanks to her tireless live-tweeting of sessions. Chris came in second, followed closely by Rebecca, Brian, Megan, and Jennifer.
 
@@ -56,6 +56,6 @@ And as usual, can also see what words most frequently appeared over the course o
 
 Finally, a (barely legible) semantic network to visualize user connections via retweets, quotes, mentions, or replies. Each line indicates a connection between users, and the larger nodes indicate a higher number of connections. It’s a much denser network this year.
 
-![Semantic network.](/assets/images/wha20-semantic.webp)
+![Semantic network.](wha20-semantic.webp)
 
 For the interactive and more readable version of this network, [you’ll need to head here](http://jasonheppler.org/projects/wha20-network/).

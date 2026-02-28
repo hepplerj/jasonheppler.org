@@ -8,11 +8,11 @@ lede: "The Stop Online Piracy Act is bad legislation, and bad for the web."
 
 If you visited [in the last twenty-four hours](http://jasonheppler.org/sopa.html), you would've seen that the site was, like many others, silenced to protest SOPA.
 
-![Protesting SOPA](http://jasonheppler.org/assets/images/jh_sopa.webp "Jason Heppler protest of SOPA")
+![Protesting SOPA](http://jasonheppler.orgjh_sopa.webp "Jason Heppler protest of SOPA")
 
 Not everyone agreed with the blackout strategy. Merlin Mann, someone I respect a lot for a variety of reasons and whose opinions I value, tweeted that he didn't see the point.
 
-![Merlin Mann.](https://jasonheppler.org/assets/images/merlin_sopa.webp)
+![Merlin Mann.](https://jasonheppler.orgmerlin_sopa.webp)
 
 I think I understand Merlin's position -- that, as a content creator on the web, it is silly to censor yourself to protest censorship. It's a fair criticism, but my own motivation was to make a point and raise awareness. Did I accomplish that? Maybe. I get nowhere near the sort of traffic that Merlin probably sees, but I know that in some of my circles -- online and off -- people noticed it. I reached a few people by my action, and for me, that's all I hoped to achieve. The stance taken by Reddit, Wikipedia, and others [made an impact](http://arstechnica.com/tech-policy/news/2012/01/pipa-support-collapses-with-13-new-opponents-in-senate.ars) and [stirred discussions](https://twitter.com/#!/search/%23stopsopa). 
 

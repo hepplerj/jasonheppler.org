@@ -11,19 +11,19 @@ As I do after every Western History Association meeting, I like to analyze the t
 
 -----
 
-![Tweet frequency.](/assets/images/wha21-freq.webp)
+![Tweet frequency.](wha21-freq.webp)
 
 We can, as usual, see Twitter activity leading up to and during the conference itself with a predictable cyclical pattern. 
 
-![Top tweets.](/assets/images/wha21-users.webp)
+![Top tweets.](wha21-users.webp)
 
 Aggregating the top Twitter users using the `#WHA2021` hashtag also lets us see the high volume tweeters. This year, the WHA Offices took the top spot.
 
 And as I always do, here are the top words used most frequently over the course of the conference. Here's what we ended up with this year (color and size simply indicate frequency of words) alongside the past conferences I've tracked. You can click on these to get a larger image.
 
 <div class="project-box">
-  <a class="project" href="/assets/images/wha21-wc.webp">
-    <img src="/assets/images/wha21-wc.webp" alt="WHA2020" />
+  <a class="project" href="wha21-wc.webp">
+    <img src="wha21-wc.webp" alt="WHA2020" />
      <span class="small">2021</span>
   </a>
 
@@ -60,6 +60,6 @@ And as I always do, here are the top words used most frequently over the course 
 
 Finally, a semantic network to visualize user connections through retweets, quotes, mentions, and replies. Each line indicates a connection between users, and the larger nodes indicate a higher number of connections.
 
-![Semantic network.](/assets/images/wha21-semantic.webp)
+![Semantic network.](wha21-semantic.webp)
 
 For the interactive version of this network, [you can head here](https://jasonheppler.org/projects/wha21-network/).

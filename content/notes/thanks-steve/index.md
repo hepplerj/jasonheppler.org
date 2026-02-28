@@ -6,7 +6,7 @@ url: /2011/10/06/thanks-steve/
 lede: "Remembering Steve Jobs."
 ---
 
-![Steve Jobs.](/assets/images/steve-jobs-macintosh.webp)
+![Steve Jobs.](steve-jobs-macintosh.webp)
 
 > “Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma, which is living with the results of other people’s thinking. Don’t let the noise of others’ opinions drown out your own inner voice, heart and intuition. They somehow already know what you truly want to become. Everything else is secondary.”
 

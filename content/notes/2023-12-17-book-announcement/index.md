@@ -8,7 +8,7 @@ tags: [personal, writing]
 
 I am excited to announce that my second book has a publication date of April 23, 2024. The University of Okalhoma Press did a beautiful job with it and everyone was such a pleasure to work with. You can [pre-order it now](https://www.oupress.com/9780806193748/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism/).
 
-{{< figure src="/assets/images/book_sv.webp" alt="Silicon Valley and the Environmental Inequalities of High-Tech Urbanism" caption="The book cover for Silicon Valley and the Environmental Inequalities of High-Tech Urbanism." >}}
+{{< figure src="book_sv.webp" alt="Silicon Valley and the Environmental Inequalities of High-Tech Urbanism" caption="The book cover for Silicon Valley and the Environmental Inequalities of High-Tech Urbanism." >}}
 
 Since World War II, the emergence of high-tech industrialization in the Santa Clara Valley---what we commonly refer to as Silicon Valley, a nickname it picks up in 1971---radically transformed the landscape. This transformation represented a vision for the future of the valley and the American West, one tied to industrialization different from the steel age industries of the Midwest and East and seemingly distinct from the extractive industries of the West. Wrapped up in this transformation was the role of nature in the social,cultural, and economic conception of place, an impulse that shaped the origins of American environmentalism and urban sustainability.
 

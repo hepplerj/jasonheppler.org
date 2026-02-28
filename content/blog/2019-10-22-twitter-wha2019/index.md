@@ -9,11 +9,11 @@ Every year following the [Western History Association's annual meeting](http://w
 
 First up, we can chart the frequency of tweets over the past nine days. These are aggregated using three-hour intervals of tweets using the `#WHA2019` hashtag. Unsurprisingly, there's a build-up before the conference before it's cyclical use thereafter. 
 
-![Tweets about WHA2019 over time.](/assets/images/wha19-freq.webp)
+![Tweets about WHA2019 over time.](wha19-freq.webp)
 
 We can also see how the top people tweeting at the conference were in the past nine days. [@EvOutWest](https://twitter.com/evoutwest) really ran away with the hashtag usage (fun fact: it was so far above everyone else that I thought it was a bot at first. Sorry, @EvOutWest.) [Lindsey](https://twitter.com/LWieck), the [official WHA account](https://twitter.com/WhaHistory), [Brian](https://twitter.com/brianleechphd), [Brenden](https://twitter.com/BrendenWRensink), and [Megan](https://twitter.com/megankatenelson) led the way in tweeting at the conference.
 
-![Highest Twitter users at WHA2019.](/assets/images/wha19-users.webp)
+![Highest Twitter users at WHA2019.](wha19-users.webp)
 
 We can also see what words most frequently appeared over the course of the conference. Here's what we have for this year (color and size simply indicate frequency of words) alongside the past conferences I've tracked. Click on any of these to get a larger image.
 
@@ -47,6 +47,6 @@ We can also see what words most frequently appeared over the course of the confe
 
 Finally, a semantic network to visualize user connections via retweets, quotes, mentions, or replies. Each line indicates a connection between users, and the larger nodes indicate a higher number of connections.
 
-![Semantic relationships among Twitter users at WHA2019.](/assets/images/wha19-semantic.webp)
+![Semantic relationships among Twitter users at WHA2019.](wha19-semantic.webp)
 
 And for the first time ever, I've created an interactive version of the network for easier exploration. [You'll have to jump over here](https://jasonheppler.org/projects/wha19-network/) to use the interactive version.

@@ -7,7 +7,7 @@ title: What the Internet Looks Like
 url: /2012/07/16/what-the-internet-looks-like/
 ---
 
-![Internet](/assets/images/netmap2.webp "Internet")
+![Internet](netmap2.webp "Internet")
 
 [The Atlantic](http://www.theatlantic.com/technology/archive/2012/07/what-the-internet-actually-looks-like/259815/):
 

@@ -19,4 +19,4 @@ Sometimes it can be useful to do a quick comparison of text---whether that's cod
 3. Make sure your cursor is in the document you want to compare.
 4. CMD + Shift + P and select "Compare active file with..." and select document 2.
 
-![VSCode diff.](/assets/images/vscode.gif)
+![VSCode diff.](vscode.gif)
