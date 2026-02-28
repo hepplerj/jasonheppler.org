@@ -16,7 +16,7 @@
 
 <hr class="my-10">
 
-{{ $posts := where site.RegularPages "Type" "blog" }}
+{{ $posts := where site.RegularPages "Section" "in" (slice "blog" "notes" "links") }}
 
 {{ $scratch := newScratch }}
 {{ $scratch.Set "longCount" 0 }}
@@ -87,7 +87,7 @@
 <div class="stats-grid">
   <div class="stat-block">
     <div class="stat-value">{{ $yearsActive }}</div>
-    <div class="stat-label">Years Blogging</div>
+    <div class="stat-label">Years Writing</div>
   </div>
   <div class="stat-block">
     <div class="stat-value">{{ $postCount | lang.FormatNumberCustom 0 }}</div>
