@@ -1,0 +1,23 @@
+{{- $src := .Destination -}}
+{{- $alt := .PlainText -}}
+{{- $title := .Title -}}
+
+{{- /* Look for image as a page bundle resource (most post images) */ -}}
+{{- $img := .Page.Resources.GetMatch $src -}}
+
+{{- if $img -}}
+  <img src="{{ $img.RelPermalink }}"
+       alt="{{ $alt }}"
+       width="{{ $img.Width }}"
+       height="{{ $img.Height }}"
+       loading="lazy"
+       decoding="async"
+       {{- with $title }} title="{{ . }}"{{ end }}>
+{{- else -}}
+  {{- /* Fallback for images still in /assets/images/ (shared across posts) */ -}}
+  <img src="{{ $src | safeURL }}"
+       alt="{{ $alt }}"
+       loading="lazy"
+       decoding="async"
+       {{- with $title }} title="{{ . }}"{{ end }}>
+{{- end -}}
