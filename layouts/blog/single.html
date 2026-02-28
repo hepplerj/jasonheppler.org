@@ -58,18 +58,32 @@
 
     <script>
       document.getElementById("page-stats").removeAttribute("hidden");
-      var page_data = (document.documentElement.outerHTML.length / 1024).toFixed(2);
-      document.getElementById("carbon").innerHTML = page_data;
 
-      page_carbon = (page_data / 12).toFixed(2);
-      document.getElementById("page_carbon").innerHTML = page_carbon;
+      window.addEventListener("load", function () {
+        // Measure actual total bytes transferred (HTML + CSS + JS + fonts + images)
+        var totalBytes = 0;
+        if (window.performance && window.performance.getEntriesByType) {
+          var nav = window.performance.getEntriesByType("navigation")[0];
+          if (nav) totalBytes += nav.transferSize || nav.encodedBodySize || 0;
+          window.performance.getEntriesByType("resource").forEach(function (r) {
+            totalBytes += r.transferSize || 0;
+          });
+        }
+        // Fall back to HTML size if Performance API unavailable or returned nothing
+        if (!totalBytes) totalBytes = document.documentElement.outerHTML.length;
 
-      window.onload = function () {
+        var page_data = (totalBytes / 1024).toFixed(2);
+        document.getElementById("carbon").innerHTML = page_data;
+
+        // Sustainable Web Design model: ~1.805 kWh/GB × 442 gCO2/kWh ÷ 1,048,576 KB/GB ≈ 0.00076 g/KB
+        var page_carbon = (totalBytes / 1024 * 0.00076).toFixed(3);
+        document.getElementById("page_carbon").innerHTML = page_carbon;
+
         var loadTime =
           window.performance.timing.domContentLoadedEventEnd -
           window.performance.timing.navigationStart;
         document.getElementById("page_load").innerHTML = (loadTime / 1000).toFixed(2);
-      };
+      });
     </script>
 
     {{ partial "foot" . }}
