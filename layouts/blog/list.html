@@ -12,9 +12,10 @@
   <h2 id="section-{{.Key| urlize }}" class="sticky top-0 bg-[var(--theme-background)] z-[1] max-sm:static max-sm:top-auto max-sm:z-auto">{{ .Key }}</h2>
   <div>
     {{ range .Pages }}
-      <article class="mb-4">
+      <article class="mb-4{{ if .Params.source }} essay-external{{ end }}">
         {{ $url := .Permalink }}{{ if .Params.external }}{{ $url = .Params.external }}{{ end }}
-        <a href="{{ $url }}" class="font-bold text-[115%] block">{{ .Title }}{{ if .Params.source }} <span class="essay-source-tag">{{ .Params.source }}</span>{{ end }}</a>
+        {{ if .Params.source }}<div><span class="essay-source-tag">Published at: {{ .Params.source }}</span></div>{{ end }}
+        <a href="{{ $url }}" class="font-bold text-[115%] block">{{ .Title }}</a>
         {{ if .Params.lede }}
         <p class="pl-8 mt-1 italic text-[90%]">{{ index .Params "lede" }}</p>
         {{ end }}

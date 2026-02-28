@@ -12,15 +12,15 @@
 
 <div class="books">
 
-  {{/* Currently reading — pinned at top */}}
+  {{/* Currently reading — pinned at top, searched across all books regardless of date */}}
   {{ $allBooks := where .Site.RegularPages "Section" "books" }}
-  {{ $allBooks  = where $allBooks "Date" "ge" (time "2018-01-01") }}
   {{ $reading  := where $allBooks ".Params.categories" "intersect" (slice "reading") }}
   {{ if $reading }}
   {{ range $reading }}{{ partial "book-entry.html" . }}{{ end }}
   {{ end }}
 
-  {{/* Everything else, grouped by year */}}
+  {{/* Everything else, grouped by year (2018+), excluding currently-reading */}}
+  {{ $allBooks = where $allBooks "Date" "ge" (time "2018-01-01") }}
   {{ range $allBooks.GroupByDate "2006" }}
   <h2 class="book-year-heading">{{ .Key }}</h2>
   {{ range .Pages }}

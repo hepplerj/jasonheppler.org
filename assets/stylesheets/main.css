@@ -13,6 +13,7 @@
   font-display: swap;
   src: url('/assets/fonts/Inter-roman.var.woff2') format('woff2');
 }
+
 @font-face {
   font-family: 'Inter';
   font-style: italic;
@@ -30,6 +31,7 @@
   src: url('/assets/fonts/SourceSerif4-normal-latin-ext.woff2') format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 @font-face {
   font-family: 'Source Serif 4';
   font-style: normal;
@@ -38,6 +40,7 @@
   src: url('/assets/fonts/SourceSerif4-normal-latin.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 @font-face {
   font-family: 'Source Serif 4';
   font-style: italic;
@@ -46,6 +49,7 @@
   src: url('/assets/fonts/SourceSerif4-italic-latin-ext.woff2') format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 @font-face {
   font-family: 'Source Serif 4';
   font-style: italic;
@@ -63,6 +67,7 @@
   font-display: swap;
   src: url('/assets/fonts/iAWriterDuospace-Regular.woff2') format('woff2');
 }
+
 @font-face {
   font-family: 'iA Writer Duospace';
   font-style: italic;
@@ -70,6 +75,7 @@
   font-display: swap;
   src: url('/assets/fonts/iAWriterDuospace-Italic.woff2') format('woff2');
 }
+
 @font-face {
   font-family: 'iA Writer Duospace';
   font-style: normal;
@@ -77,6 +83,7 @@
   font-display: swap;
   src: url('/assets/fonts/iAWriterDuospace-Bold.woff2') format('woff2');
 }
+
 @font-face {
   font-family: 'iA Writer Duospace';
   font-style: italic;
@@ -334,6 +341,7 @@
   .pagination {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.25rem;
     list-style: none;
     padding: 0;
@@ -353,13 +361,14 @@
   }
 
   .page-link:hover {
-    background: var(--color-aside-faded);
+    background: var(--color-aside);
     color: var(--theme-text);
   }
 
   .page-item.active .page-link {
     background: var(--color-yellow);
     border-color: var(--color-yellow-darker);
+    color: var(--color-black);
     font-weight: bold;
   }
 
@@ -545,10 +554,10 @@ figcaption {
 
 figure.about-photo {
   width: auto;
-  max-width: 280px;
-  float: right;
-  margin: 0 0 1.5rem 2rem;
+  max-width: 680px;
+  margin: 0 auto;
   text-align: center;
+
 }
 
 @layer components {
@@ -843,8 +852,10 @@ figure.about-photo {
 
   .theme-switch {
     position: relative;
-    width: 3.25rem;   /* 52px */
-    height: 1.625rem; /* 26px */
+    width: 3.25rem;
+    /* 52px */
+    height: 1.625rem;
+    /* 26px */
     border-radius: 9999px;
     background: rgb(from var(--theme-text) r g b / 0.18);
     border: none;
@@ -863,21 +874,29 @@ figure.about-photo {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 0.75rem; /* 12px */
+    width: 0.75rem;
+    /* 12px */
     height: 0.75rem;
     color: var(--theme-background);
     z-index: 1;
     pointer-events: none;
   }
 
-  .theme-switch-icon--sun  { left: 5px; color: #fef08a; }
-  .theme-switch-icon--moon { right: 5px; }
+  .theme-switch-icon--sun {
+    left: 5px;
+    color: #fef08a;
+  }
+
+  .theme-switch-icon--moon {
+    right: 5px;
+  }
 
   .theme-switch-thumb {
     position: absolute;
     top: 2px;
     left: 2px;
-    width: 1.375rem; /* 22px */
+    width: 1.375rem;
+    /* 22px */
     height: 1.375rem;
     border-radius: 9999px;
     background: #fff;
@@ -963,6 +982,7 @@ figure.about-photo {
     border-bottom: 1px solid rgb(from var(--theme-text) r g b / 0.1);
     font-size: var(--type-small);
   }
+
   .noscript-nav a {
     color: var(--theme-links);
     text-decoration: none;
@@ -1081,7 +1101,9 @@ figure.about-photo {
     padding: 0;
   }
 
-  .book-summary::-webkit-details-marker { display: none; }
+  .book-summary::-webkit-details-marker {
+    display: none;
+  }
 
   .book-row {
     display: grid;
@@ -1154,6 +1176,7 @@ figure.about-photo {
     .book-row {
       grid-template-columns: minmax(0, 1fr) auto;
     }
+
     .book-pub-year {
       display: none;
     }
@@ -1231,6 +1254,9 @@ figure.about-photo {
   .intro-content {
     min-width: 0;
     /* Allows text to wrap properly */
+    text-align: justify;
+    overflow-wrap: break-word;
+    font-size: var(--type-medium);
   }
 
   .intro-photo {
@@ -1339,7 +1365,7 @@ figure.about-photo {
     border-top: 1px solid rgb(from var(--theme-text) r g b / 0.1);
   }
 
-  .home-section > h1 {
+  .home-section>h1 {
     margin-top: 0;
     margin-bottom: 1rem;
   }
@@ -1424,13 +1450,30 @@ figure.about-photo {
     color: var(--theme-links-hover);
   }
 
+  /* External essay list item */
+  .essay-external {
+    background: var(--color-aside);
+    border-left: 3px solid var(--color-aside-faded);
+    padding: 0.6em 0.85em;
+  }
+
   /* External essay source label */
   .essay-source-tag {
+    display: inline-block;
     font-family: var(--font-sans);
-    font-size: var(--type-x-small);
-    font-weight: 400;
-    color: rgb(from var(--theme-text) r g b / 0.5);
-    margin-left: 0.4em;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 0.1em 0.45em;
+    border-radius: 2px;
+    border: 1px solid rgb(from var(--theme-text) r g b / 0.3);
+    color: rgb(from var(--theme-text) r g b / 0.6);
+    text-decoration: none;
+    vertical-align: middle;
+    margin-right: 0.5em;
+    line-height: 1.5;
+    white-space: nowrap;
   }
 
   /* Book reviewed badge */
@@ -1574,6 +1617,12 @@ figure.about-photo {
   font-weight: 800;
 }
 
+/* Pagination lives inside .body but must not inherit list styles */
+.body .pagination {
+  list-style: none;
+  padding: 0;
+}
+
 .body ul,
 .body ol,
 .post-body ul,
@@ -1597,10 +1646,10 @@ figure.about-photo {
   margin-bottom: 0.35em;
 }
 
-.body li > ul,
-.body li > ol,
-.post-body li > ul,
-.post-body li > ol {
+.body li>ul,
+.body li>ol,
+.post-body li>ul,
+.post-body li>ol {
   margin: 0.35em 0 0;
 }
 
@@ -2391,12 +2440,13 @@ article.post {
     --site-theme: "dark";
     --theme-background: var(--color-grey);
     --theme-text: var(--color-salt);
-    --color-aside: var(--theme-background);
+    --color-aside: #1e2228;
+    --color-aside-faded: #334251;
     --theme-links: var(--color-yellow-darker);
     --theme-links-hover: var(--color-orange);
     --theme-dark-tint: var(--color-yellow-darker);
     --theme-light-tint: var(--color-orange);
-    --theme-mark: #ad8301;
+    --theme-mark: rgba(208, 162, 21, 0.15);
     --theme-section-bg: var(--color-grey);
     --theme-section-text: var(--color-salt);
   }
@@ -2406,12 +2456,13 @@ article.post {
 [data-site-theme="dark"] {
   --theme-background: var(--color-grey);
   --theme-text: #cdc8be;
-  --color-aside: var(--theme-background);
+  --color-aside: #1e2228;
+  --color-aside-faded: #334251;
   --theme-links: var(--color-yellow-darker);
   --theme-links-hover: var(--color-yellow-darker);
   --theme-dark-tint: var(--color-yellow-darker);
   --theme-light-tint: var(--color-orange);
-  --theme-mark: #ad8301;
+  --theme-mark: rgba(208, 162, 21, 0.15);
   /*var(--color-blue);*/
   --theme-section-bg: #171e26;
   --theme-section-text: var(--color-salt);
@@ -2434,6 +2485,7 @@ article.post {
   --theme-background: var(--color-background);
   --theme-text: var(--color-text);
   --color-aside: #fffefa;
+  --color-aside-faded: #eeeade;
   --theme-links: var(--color-blue-bright);
   --theme-links-hover: var(--color-blue-bright);
   --theme-dark-tint: var(--color-grey);

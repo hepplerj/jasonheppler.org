@@ -12,19 +12,19 @@ I'm going through the process of migrating my blog over to micro.blog, which has
 
 The hope here is to try and draw out what I see as themes across my writing. Here's an attempt to do so across my most frequently used tags. (Thanks to [Alan](https://blog.ayjay.org/summary-with-tags/) for the inspiration to do this).
 
-- I have posts about [conferences I attend](/categories/conference), specifically about the [Western History Association](/categories/western-history-association), the [American Society for Environmental History](/categories/american-society-for-environmental-history), and the [American Historical Association](/categories/american-historical-association). 
-- Posts about [programming](/categories/programming), or specifically about [Ruby](/categories/ruby), [Python](/categories/python), [Javascript](/categories/javascript), or [Golang](/categories/golang). 
-- I care a lot about [coffee](/categories/coffee). 
-- I have what I consider my [commonplace notebook](/categories/commonplace) for quotes, poems, and ideas. 
-- I collect writing about [writing](/categories/writing). 
-- Lots of posts about [digital history](/categories/digital-history) and [digital humanities](/categories/digital-humanities) (yes, [these are different things](https://drstephenrobertson.com/article/the-differences-between-digital-humanities-and-digital-history-ddh2016/)). Some of these are newer lines of thinking, like [artificial intelligence](/categories/artificial-intelligence). 
-- I have various aspects of [research](/categories/research) documented here, including things on the [American West](/categories/american-west), [text analysis](/categories/text-analysis), [spatial history](/categories/spatial-history), and [data visualization](/categories/data-visualization). This includes some new things I'm beginning notes on what I call [repair & maintain](/categories/repair-and-maintain), material about [Wendell Berry](/categories/wendell-berry), and pieces on [environment and/or climate change](/categories/environment). 
-- I think and write about [place](/categories/place), including [regionalism](/categories/regionalism), the [American West](/categories/american-west), and the American [Midwest](/categories/midwest).
-- I've started noting when I watch a [movie](/categories/movies), and what I think of it. 
-- I also have other [reviews](/categories/review), primarily around technology or books. 
-- I care about the [web](/categories/web) and the [indie web](/categories/indie-web) and blogging a lot. 
-- [Here](/categories/academia) I write about the university and academic life generally.
-- I write on our [homestead life](/categories/farm-life/) and my Farmall H [restoration](/categories/restoration/) project.
+- I have posts about [conferences I attend](/tags/conference), specifically about the [Western History Association](/tags/western-history-association), the [American Society for Environmental History](/tags/american-society-for-environmental-history), and the [American Historical Association](/tags/american-historical-association). 
+- Posts about [programming](/tags/programming), or specifically about [Ruby](/tags/ruby), [Python](/tags/python), [Javascript](/tags/javascript), or [Golang](/tags/golang). 
+- I care a lot about [coffee](/tags/coffee). 
+- I have what I consider my [commonplace notebook](/links/) for quotes, poems, and ideas. 
+- I collect writing about [writing](/tags/writing). 
+- Lots of posts about [digital history](/tags/digital-history) and [digital humanities](/tags/digital-humanities) (yes, [these are different things](https://drstephenrobertson.com/article/the-differences-between-digital-humanities-and-digital-history-ddh2016/)). Some of these are newer lines of thinking, like [artificial intelligence](/tags/artificial-intelligence). 
+- I have various aspects of [research](/tags/research) documented here, including things on the [American West](/tags/american-west), [text analysis](/tags/text-analysis), [spatial history](/tags/spatial-history), and [data visualization](/tags/data-visualization). This includes some new things I'm beginning notes on what I call [repair & maintain](/tags/repair-and-maintain), material about [Wendell Berry](/tags/wendell-berry), and pieces on [environment and/or climate change](/tags/environment). 
+- I think and write about [place](/tags/place), including [regionalism](/tags/regionalism), the [American West](/tags/american-west), and the American [Midwest](/tags/midwest).
+- I've started noting when I watch a [movie](/tags/movies), and what I think of it. 
+- I also have other [reviews](/tags/review), primarily around technology or books. 
+- I care about the [web](/tags/web) and the [indie web](/tags/indie-web) and blogging a lot. 
+- [Here](/tags/academia) I write about the university and academic life generally.
+- I write on our [homestead life](/tags/farm-life/) and my Farmall H [restoration](/tags/restoration/) project.
 
 I'll also use this post to collect some essays I've written elsewhere (some of which are reproduced here): 
 
