@@ -30,7 +30,7 @@
 
 <div class="site-container">
   <section class="home-section">
-    <p class="home-tags-line">{{ with .Site.GetPage "/tags" }}{{ range $i, $tag := .Pages.ByTitle }}{{- if $i }}, {{ end -}}<a href="{{ $tag.RelPermalink }}" class="home-tag">{{ lower $tag.Title }}</a>{{ end }}{{ end }}</p>
+    <p class="home-tags-line">{{ with .Site.GetPage "/tags" }}{{ range $i, $tag := .Pages.ByTitle }}{{- if $i }}, {{ end -}}<a href="{{ $tag.RelPermalink }}" class="home-tag">{{ $tag.Name | humanize | lower }}</a>{{ end }}{{ end }}</p>
   </section>
 </div>
 
