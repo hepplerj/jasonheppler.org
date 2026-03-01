@@ -2,7 +2,7 @@
 title: 'New Role: Developer at RRCHNM'
 date: 2021-05-17T19:27:58-05:00
 slug: 'new-role-chmn'
-tags: [academia, career, RRCHNM]
+tags: [academia, career, rrchnm]
 lede: "I am thrilled to announce I'm joining RRCHNM!"
 ---
 

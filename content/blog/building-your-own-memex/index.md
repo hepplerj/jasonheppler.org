@@ -1,12 +1,12 @@
 ---
 date: 2012-10-10T23:43:21Z
-tags: [tech life]
+tags: [tech-life]
 title: Building Your Own Memex
 url: /2012/10/10/building-your-own-memex/
 lede: "How I manage information."
 ---
 
-*[This post originally appeared at [Gradhacker](http://www.gradhacker.org/2012/10/10/building-your-own-memex/) on 2012-10-10]*
+<aside><p>This post originally appeared at <a href="http://www.gradhacker.org/2012/10/10/building-your-own-memex/">Gradhacker</a> on 2012-10-10</p></aside>
 
 Albert Einstein is said to have explained that he didn't memorize things that could be easily looked up. "[I do not] carry such information in my mind since it is readily available in books," he said. "The value of a college education is not the learning of many facts but the training of the mind to think." I cannot remember something unless I've written it down. Therefore, having <a href="http://zenhabits.net/tips-for-gtds-ubiquitous-capture/">ubiquitous capture</a> is key to my everyday life. A key part of my ubiquitous capture system includes a reference bank where I can draw on previously found, researched, or created items and integrate them into my workflow. I refer to this as my "memex."
 

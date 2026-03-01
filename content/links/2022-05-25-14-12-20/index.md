@@ -2,7 +2,7 @@
 date: '2022-05-25T14:12:20-06:00'
 external: 'https://www.nybooks.com/online/2012/12/15/our-moloch/'
 title: 'Our Moloch'
-tags: [american life]
+tags: [american-life]
 ---
 
 [Gary Wills](https://www.nybooks.com/online/2012/12/15/our-moloch/): 

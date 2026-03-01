@@ -7,7 +7,7 @@ url: /2012/08/13/towards-better-pdf-management-with-the-filesystem/
 lede: "Using the filesystem to manage your journal PDFs."
 ---
 
-*[This post originally appeared at [Gradhacker](http://www.gradhacker.org/2012/08/13/towards-better-pdf-management-with-the-filesystem/) on 2012-08-13]*
+<aside><p>This post originally appeared at <a href="http://www.gradhacker.org/2012/08/13/towards-better-pdf-management-with-the-filesystem/">Gradhacker</a> on 2012-08-13</p></aside>
 
 It starts innocently enough. We save a PDF file to our desktop or in a folder. After some more work we suddenly have a folder stuffed with files and we lose the sense of structure that ties the work together. Folders and subfolders appear to try and capture structure, filenames no longer carry any meaning, and the mass of files and folders loses meaning. Then the process repeats itself.
 

@@ -1,6 +1,6 @@
 ---
 date: 2012-11-26T20:50:52Z
-tags: [tech life]
+tags: [tech-life]
 title: OmniFocus Workflow and Notes
 url: /2012/11/26/omnifocus-workflow-and-notes/
 lede: "An overview on how I use Omnifocus."

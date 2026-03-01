@@ -1,12 +1,12 @@
 ---
 date: 2011-05-10T11:25:19Z
-tags: [design, digital history]
+tags: [design, digital-history]
 title: Designing Digital History
 url: /2011/05/10/designing-digital-history/
 lede: "How should we consider the role of design in digital history?"
 ---
 
-*[This is a thought piece on design and project planning I wrote in 2008 for a course on digital history. I'm placing it here for curation, thought, and discussion.]*
+<aside><p>This is a thought piece on design and project planning I wrote in 2008 for a course on digital history. I'm placing it here for curation, thought, and discussion.</p></aside>
 
 As historians continue their venture into digital scholarship, they are confronted with considerations previously handled (for the most part) by others. The design and ease of navigation of digital projects is as important as the content. Traditional modes of historical presentation through text follow a framework within monographs and journal articles. Largely, publishers control the look and feel of history texts. Books are linear in their process, each chapter carefully laying out the details of a story that is meant to be followed from cover to cover. Web sites do not allow us the same control over how people enter and interact with the site. In addition, the hypertextual presentation of history, Vannevar Bush's [skip trails](http://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/3881/), allows readers to follow concepts and interrelated material embedded in the digital project. 
 

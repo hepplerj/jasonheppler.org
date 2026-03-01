@@ -1,6 +1,6 @@
 ---
 date: 2014-09-21T21:11:38Z
-tags: [teaching, digital history]
+tags: [teaching, digital-history]
 title: Syllabus for Digital History
 url: /2014/09/21/syllabus-for-digital-history/
 lede: "My syllabus for my digital history class I'm teaching at Stanford."

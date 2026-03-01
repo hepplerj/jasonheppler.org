@@ -1,6 +1,6 @@
 ---
 date: 2008-12-18T19:31:02Z
-tags: [research, thesis, American Indian Movement]
+tags: [research, thesis, american-indian-movement]
 title: 'Framing Red Power: Newspapers and the Trail of Broken Treaties'
 url: /2008/12/18/framing-red-power/
 wordpress_id: 10

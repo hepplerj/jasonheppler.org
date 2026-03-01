@@ -1,12 +1,12 @@
 ---
-tags: [research, digital humanities, digital history]
+tags: [research, digital-humanities, digital-history]
 date: 2011-10-06T10:53:20Z
 title: SpecLab and Digital Aesthetics
 url: /2011/10/06/speclab-and-digital-aesthetics/
 lede: "A few examples of what I think are great design in digital humanities."
 ---
 
-*[In lieu of a reading reflection this week for HIST946: Digital Humanities, we were tasked to find three examples of great design after reading Johanna Drucker's *[SpecLab: Digital Aesthetics and Projects in Speculative Computing](http://www.amazon.com/SpecLab-Aesthetics-Projects-Speculative-Computing/dp/0226165086/ref=sr_1_1?ie=UTF8&qid=1317916507&sr=8-1)*. You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html).]*
+<aside><p>In lieu of a reading reflection this week for HIST946: Digital Humanities, we were tasked to find three examples of great design after reading Johanna Drucker's <em><a href="http://www.amazon.com/SpecLab-Aesthetics-Projects-Speculative-Computing/dp/0226165086/ref=sr_1_1?ie=UTF8&qid=1317916507&sr=8-1">SpecLab: Digital Aesthetics and Projects in Speculative Computing</a></em>. You can find related posts <a href="http://jasonheppler.org/the-digital-humanities-seminar.html">here</a>.</p></aside>
 
 [Journalism's Voyage West](http://www.stanford.edu/group/ruralwest/cgi-bin/drupal/visualizations/us_newspapers): As someone who has done some prior work on mass media I was intrigued by the project when it was first released not too long ago. The design of the interface is especially well done. The timeline, for example, is not just a linear sequencing of dates but contains a sort of meta timeline that highlights specific turning points (1775, 1930, 1960, etc) that are accompanied with a textual description of that era's significance to journalism. Also useful is the layers of information that are applied to the map in the form of the language of publication, the number of publications for any given city, and the ability to retrieve Library of Congress metadata on all of the newspapers. One thing that I think would make this even better would be an ability to add additional layers of information overtop the map, such as population density or transportation routes, which would help contextualize the growth of newspapers westward.
 

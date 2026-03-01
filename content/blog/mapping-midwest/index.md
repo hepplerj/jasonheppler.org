@@ -1,7 +1,7 @@
 ---
 title: "Mapping Midwest"
 date: 2017-06-06
-tags:  [digital history, spatial history, maps, midwest] 
+tags:  [digital-history, spatial-history, maps, midwest] 
 lede: "An overview of the keynote address I gave at the 2017 Midwestern History Conference."
 ---
 

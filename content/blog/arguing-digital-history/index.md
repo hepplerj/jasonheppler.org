@@ -1,7 +1,7 @@
 ---
 title: "Arguing with Digital History"
 date: 2017-08-18
-tags: [digital history, RRCHNM]
+tags: [digital-history, rrchnm]
 featured: true
 lede: "My contribution to the working paper on arguing with digital history."
 ---

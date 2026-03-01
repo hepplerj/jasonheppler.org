@@ -1,12 +1,12 @@
 ---
 date: 2012-12-07T08:00:00Z
-tags: [tech life]
+tags: [tech-life]
 title: Using Text Expansion in My Research Workflow
 url: /2012/12/07/using-text-expansion/
 lede: "Using TextExpander to work with markdown efficiently."
 ---
 
-*[This post originally appeared at [GradHacker](http://www.gradhacker.org/2012/12/07/using-text-expansion-software-in-your-workflow/) on 2012-12-06]*
+<aside><p>This post originally appeared at <a href="http://www.gradhacker.org/2012/12/07/using-text-expansion-software-in-your-workflow/">GradHacker</a> on 2012-12-06</p></aside>
 
 Readers of [ProfHacker](http://chronicle.com/blogs/profhacker/new-and-simple-twists-on-text-expansion/42754) and [Lifehacker](http://lifehacker.com/5611210/how-to-use-text-expansion-to-save-yourself-hours-of-typing-every-day) will likely be aware of text expansion software. Brian Croxall, Ethan Watrall, Ryan Cordell, and Jason Jones have shared their tips for using software like TextExpander for Mac and PhraseExpress in Windows that have aided their workflow. 
 

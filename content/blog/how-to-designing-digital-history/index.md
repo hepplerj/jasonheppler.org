@@ -2,7 +2,7 @@
 date: 2008-11-29T12:12:29Z
 title: 'How To: Designing Digital History'
 url: /2008/11/29/how-to-designing-digital-history/
-tags: [design, digital history]
+tags: [design, digital-history]
 lede: "Thoughts on the role of design and digital history."
 ---
 

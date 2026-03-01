@@ -1,6 +1,6 @@
 ---
 date: 2011-08-04T14:35:58Z
-tags: [tech life, digital humanities, career]
+tags: [tech-life, digital-humanities, career]
 title: Constructing a Digital Humanists' C.V.
 url: /2011/08/04/constructing-a-digital-humanists-cv/
 lede: "Building a CV for the digital humanities."

@@ -1,6 +1,6 @@
 ---
 date: 2008-04-23T16:28:29Z
-tags: [web, digital history]
+tags: [web, digital-history]
 title: The Challenge of Digital History
 url: /2008/04/23/the-challenge-of-digital-history/
 wordpress_id: 38

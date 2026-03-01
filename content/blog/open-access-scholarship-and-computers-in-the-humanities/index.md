@@ -1,6 +1,6 @@
 ---
 date: 2010-10-08T22:05:22Z
-tags: [digital history]
+tags: [digital-history]
 title: Open Access Scholarship and Computers in the Humanities
 url: /2010/10/08/open-access-scholarship-and-computers-in-the-humanities/
 wordpress_id: 330

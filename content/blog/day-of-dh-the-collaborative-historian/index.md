@@ -4,13 +4,13 @@ description: null
 image:
   feature: null
   thumb: null
-tags: [digital humanities]
+tags: [digital-humanities]
 title: 'Day of DH: The Collaborative Historian'
 url: /2014/04/08/day-of-dh-the-collaborative-historian/
 lede: "My Day of DH 2014."
 ---
 
-*[This post originally appeared at [Day of DH](http://dayofdh2014.matrix.msu.edu/jasonheppler/2014/04/08/the-collaborative-historian/) on 2014-04-08]*
+<aside><p>This post originally appeared at <a href="http://dayofdh2014.matrix.msu.edu/jasonheppler/2014/04/08/the-collaborative-historian/">Day of DH</a> on 2014-04-08</p></aside>
 
 I'm a collaborator and consultant on a wide variety of projects at Stanford---the geography of post offices, visualizations of the Grand Canyon, digitizing colonial Senegalese archival records, Chinese grave relocations, [Palladio](http://palladio.designhumanities.org/) plugins, Chinese railroad workers, the list goes on---and each of these have given me a chance to think creatively about approaches to solving problems. The variety is one of the best parts of my work, and, I suspect, a reflection of a growing area of the university: technology experts who are involved in collaborative research.
 

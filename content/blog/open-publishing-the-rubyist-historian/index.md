@@ -1,6 +1,6 @@
 ---
 date: 2012-05-21T21:21:30Z
-tags: [ruby, digital history, programming]
+tags: [ruby, digital-history, programming]
 title: Forking the Rubyist Historian
 url: /2012/05/21/open-publishing-the-rubyist-historian/
 lede: "My open access book on Ruby programming for historians."

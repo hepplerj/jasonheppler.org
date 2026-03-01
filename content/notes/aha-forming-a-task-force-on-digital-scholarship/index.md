@@ -1,6 +1,6 @@
 ---
 date: 2012-06-06T12:46:55Z
-tags: [digital history, American Historical Association]
+tags: [digital-history, american-historical-association]
 title: AHA Forming a Task Force on Digital Scholarship
 url: /2012/06/06/aha-forming-a-task-force-on-digital-scholarship/
 lede: "A positive development: The AHA has formed a task force on digital scholarship."

@@ -1,7 +1,7 @@
 ---
 author: Jason Heppler
 date: 2011-12-17T15:43:45Z
-tags: [academia, plain text]
+tags: [academia, plain-text]
 title: Legacy Research
 url: /2011/12/17/legacy-research/
 lede: "Plain text ensures longevity."

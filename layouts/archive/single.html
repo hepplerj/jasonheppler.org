@@ -17,7 +17,7 @@
         {{ end }}
       {{ end }}
       {{ range $tags | uniq | sort }}
-      <a href="#" class="category-pill" data-category="{{ . | urlize }}">{{ . }}</a>
+      <a href="#" class="category-pill" data-category="{{ . | urlize }}">{{ . | humanize | title }}</a>
       {{ end }}
     </div>
 

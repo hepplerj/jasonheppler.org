@@ -6,7 +6,7 @@ url: /2012/09/01/podcasts/
 lede: "Here's some of my favorite podcasts."
 ---
 
-*[This post originally appeared at [Gradhacker](http://www.gradhacker.org/2012/09/02/digital-distractions-podcasts/) on 2012-09-03]*
+<aside><p>This post originally appeared at <a href="http://www.gradhacker.org/2012/09/02/digital-distractions-podcasts/">Gradhacker</a> on 2012-09-03</p></aside>
 
 I'm stealing a page from Profhacker and talking about [digital distractions](http://chronicle.com/blogs/profhacker/tag/digital-distractions). One of my favorite distractions is podcasts. I love them. They're part of my commute, they're part of my leisure time, and they're part of my work time. It's rare to see me without headphones, catching up on my favorite shows. Using [Downcast for iPhone](http://www.downcastapp.com) has made it even easier for me to download the latest episodes of the podcasts I love.
 

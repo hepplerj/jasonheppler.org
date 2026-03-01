@@ -2,7 +2,7 @@
 title: Generative AI and the Work of History 
 date: 2025-12-22
 lede: Generative AI lacks the ability to understand context, historical ambiguity, and cannot generate new knowledge, rendering it inadequate for certain kinds of historical research and meaningless for education.
-tags: [academia, digital history, artificial intelligence]
+tags: [academia, digital-history, artificial-intelligence]
 ---
 
 

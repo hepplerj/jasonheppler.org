@@ -2,9 +2,9 @@
 
 <div class="pt-10 site-container content">
   <div class="body">
-    <h1>{{ .Title }}</h1>
+    <h1>{{ .Name | humanize | title }}</h1>
 
-    <p>{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }} tagged with "{{ .Title }}"</p>
+    <p>{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }} tagged with "{{ .Name | humanize | title }}"</p>
 
     <!-- Posts List -->
     <div class="writing">

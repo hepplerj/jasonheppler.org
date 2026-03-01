@@ -2,7 +2,7 @@
 title: 'Creativity and AI'
 date: 2022-10-16T20:40:41-05:00
 slug: 'ai-art'
-tags: [artificial intelligence]
+tags: [artificial-intelligence]
 lede: "What happens if seemingly historical objects online are entirely unreal?"
 ---
 

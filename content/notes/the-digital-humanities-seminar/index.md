@@ -1,6 +1,6 @@
 ---
 date: 2011-08-29T12:55:34Z
-tags: [digital humanities]
+tags: [digital-humanities]
 title: The Digital Humanities Seminar
 url: /2011/08/29/the-digital-humanities-seminar/
 lede: "An overview of my coursework for HIST946."

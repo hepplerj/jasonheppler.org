@@ -1,15 +1,13 @@
 ---
 author: Jason Heppler
 date: 2011-10-12T17:03:39Z
-tags: [narrative, digital history]
+tags: [narrative, digital-history]
 title: Models for Narrative in Digital Humanities
 url: /2011/10/12/narrative-in-digital-scholarship/
 lede: "A reading reflection on Franco Moretti for HIST946."
 ---
 
-*[This is a reading reflection for HIST946: Digital Humanities with Professor William
-G. Thomas during the Fall 2011 semester. This week's reading was Franco Moretti,
-*[Graphs, Maps, Trees: Abstract Models for Literary History](http://www.amazon.com/gp/product/1844671852/ref=as_li_tf_tl?ie=UTF8&tag=thekinofelfs2-20&linkCode=as2&camp=217145&creative=399373&creativeASIN=1844671852)*. You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html).]*
+<aside><p>This is a reading reflection for HIST946: Digital Humanities with Professor William G. Thomas during the Fall 2011 semester. This week's reading was Franco Moretti, <em><a href="http://www.amazon.com/gp/product/1844671852/ref=as_li_tf_tl?ie=UTF8&tag=thekinofelfs2-20&linkCode=as2&camp=217145&creative=399373&creativeASIN=1844671852">Graphs, Maps, Trees: Abstract Models for Literary History</a></em>. You can find related posts <a href="http://jasonheppler.org/the-digital-humanities-seminar.html">here</a>.</p></aside>
 
 The main argument put forth by Franco Moretti is compelling: instead of *reading*
 texts we should *mine* them for data. Moretti suggests a new way of analyzing

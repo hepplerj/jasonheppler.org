@@ -1,6 +1,6 @@
 ---
 date: 2011-04-19T11:53:16Z
-tags: [tech life]
+tags: [tech-life]
 title: Migrating to Jekyll
 url: /2011/04/19/migrating-to-jekyll/
 lede: "I've moved from Wordpress to Jekyll. Here's how I did it."

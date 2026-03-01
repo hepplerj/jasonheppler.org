@@ -1,7 +1,7 @@
 ---
 date: 2013-06-27T15:28:43Z
 description: null
-tags: [tech life]
+tags: [tech-life]
 title: Don't Forget Google Reader Goes Dark Monday
 url: /2013/06/27/dont-forget/
 lede: "Google Reader goes dark on Monday."

@@ -1,16 +1,13 @@
 ---
 author: Jason Heppler
 date: 2011-10-20T10:52:40Z
-tags: [digital humanities]
+tags: [digital-humanities]
 title: Latour and the Social
 url: /2011/10/20/latour-and-the-social/
 lede: "A reading reflection on Bruno Latour for HIST946."
 ---
 
-*[This is a reading reflection for HIST946: Digital Humanities with Professor William
-G. Thomas during the Fall 2011 semester. This week's reading was Bruno Latour,
-*[Reassembling the Social: An Introduction to
-Actor-Network-Theory](http://www.amazon.com/Reassembling-Social-Introduction-Actor-Network-Theory-Management/dp/0199256055)*. You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html).]*
+<aside><p>This is a reading reflection for HIST946: Digital Humanities with Professor William G. Thomas during the Fall 2011 semester. This week's reading was Bruno Latour, <em><a href="http://www.amazon.com/Reassembling-Social-Introduction-Actor-Network-Theory-Management/dp/0199256055">Reassembling the Social: An Introduction to Actor-Network-Theory</a></em>. You can find related posts <a href="http://jasonheppler.org/the-digital-humanities-seminar.html">here</a>.</p></aside>
 
 Bruno Latour asks scholars to consider more fully the entanglement between human and non-human actors. Rather than the "social" being an experience consistent over time or explained by rigid theory, "social" is an experience of actors having to deal with specific issues without a clear logic or demarcation. Scholars should, he argues, reassemble social connections as they existed among the actors themselves, rather than insist upon a framework that seeks to explain the totality of experience. In other words, Latour is concerned about the very definition of "social" and the tendency among social scientists to use the word as if it were a sort of material. The framework that social scientists speak of are not necessary at all. The only goal of the scholar is to describe the state of affairs under study.
 

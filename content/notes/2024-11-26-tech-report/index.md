@@ -3,7 +3,7 @@ title: "Year-End Tech Report"
 date: "2024-11-26T21:33:11-06:00"
 slug: "tech-report"
 lede: ""
-tags: [tech life]
+tags: [tech-life]
 ---
 
 Over the past few years I've been making changes to my technological life. It began a couple of years ago as I started to de-Google myself. Here's where things stand at the moment:

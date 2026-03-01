@@ -1,7 +1,7 @@
 ---
 title: "Recent Updates on Data Visualization"
 date: 2017-06-19  
-tags: [data visualization]
+tags: [data-visualization]
 lede: "A few things I've made and read on data visualization."
 ---
 

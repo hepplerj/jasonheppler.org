@@ -11,7 +11,7 @@ url: /2014/06/30/editorial-for-ios-text-editing/
 lede: "Editorial is a great tool for iOS-based text editing."
 ---
 
-*[This post originally appeared at [ProfHacker](http://chronicle.com/blogs/profhacker/editorial-ios-text-editing/57431) on 2014-06-30.]*
+<aside><p>This post originally appeared at <a href="http://chronicle.com/blogs/profhacker/editorial-ios-text-editing/57431">ProfHacker</a> on 2014-06-30.</p></aside>
 
 ![The overall view of Editorial for iPad](overall.webp)
 

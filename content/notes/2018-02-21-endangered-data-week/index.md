@@ -1,7 +1,7 @@
 ---
 title: "Endangered Data Week"
 date: 2018-02-21
-tags: [advocacy, Endangered Data Week, libraries]
+tags: [advocacy, endangered-data-week, libraries]
 lede: "Announcing the founding of Endangered Data Week."
 ---
 

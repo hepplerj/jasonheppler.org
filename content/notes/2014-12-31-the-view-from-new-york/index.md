@@ -1,7 +1,7 @@
 ---
 title: "The View from New York"
 date: 2014-12-31
-tags: [conferences, American Historical Association]
+tags: [conferences, american-historical-association]
 lede: "I'll be presenting at a couple of conference at the AHA."
 ---
 

@@ -1,6 +1,6 @@
 ---
 date: 2009-04-20T20:58:02Z
-tags: [digital history]
+tags: [digital-history]
 title: Foundational Material in Digital History
 url: /2009/04/20/foundational-material-in-digital-history/
 wordpress_id: 57

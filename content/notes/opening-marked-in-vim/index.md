@@ -1,6 +1,6 @@
 ---
 date: 2012-10-16T17:01:51Z
-tags: [tech life]
+tags: [tech-life]
 title: Opening Marked in Vim
 url: /2012/10/16/opening-marked-in-vim/
 lede: "A simple way to open Marked via vim."

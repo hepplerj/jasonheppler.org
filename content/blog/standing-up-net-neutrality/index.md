@@ -1,7 +1,7 @@
 ---
 title: "Standing up for Net Neutrality"
 date: 2017-07-05 
-tags:  [web, net neutrality]
+tags:  [web, net-neutrality]
 lede: "The dismantling of net neutrality is bad for the web." 
 ---
 

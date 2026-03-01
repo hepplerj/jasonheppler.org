@@ -1,6 +1,6 @@
 ---
 date: 2011-07-22T22:53:44Z
-tags: [tech life]
+tags: [tech-life]
 title: Using Notational Velocity
 url: /2011/07/22/using-notational-velocity/
 lede: "The perfect piece of software."

@@ -1,6 +1,6 @@
 ---
 date: 2011-03-17T22:42:08Z
-tags: [digital humanities]
+tags: [digital-humanities]
 title: Day of DH
 url: /2011/03/17/day-of-dh/
 lede: "My Day of DH 2011."

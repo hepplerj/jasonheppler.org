@@ -1,7 +1,7 @@
 ---
 date: 2014-07-17T15:22:41Z
 post_type: Shorts
-tags: [conference, Western History Association]
+tags: [conference, western-history-association]
 title: Environmental History at the 2014 Western History Association Conference
 url: /2014/07/17/environmental-history-at-the-2014-western-history-association-conference/
 lede: "Here's the panels about environmental history at the WHA this year."

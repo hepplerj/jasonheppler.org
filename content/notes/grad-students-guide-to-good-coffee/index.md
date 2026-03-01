@@ -6,7 +6,7 @@ url: /2012/09/24/grad-students-guide-to-good-coffee/
 lede: "How to make a great cup of coffee."
 ---
 
-*[This post originally appeared at [Gradhacker](http://www.gradhacker.org/2012/09/24/grad-students-guide-to-good-coffee/) on 2012-09-24]*
+<aside><p>This post originally appeared at <a href="http://www.gradhacker.org/2012/09/24/grad-students-guide-to-good-coffee/">Gradhacker</a> on 2012-09-24</p></aside>
 
 Friends, it’s time for a serious conversation. We need to talk about your coffee.
 
