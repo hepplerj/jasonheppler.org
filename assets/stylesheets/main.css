@@ -562,14 +562,21 @@ figure.about-photo {
 
 @layer components {
 
-  /* Fixed hamburger trigger — bare icon, no circle, top-right of viewport */
-  /* Home monogram — fixed top-left */
-  .home-mark {
+  /* Fixed nav group — J.A.H. + hamburger stacked, top-right of viewport */
+  .nav-trigger-group {
     position: fixed;
     top: 1.25rem;
-    left: 1.5rem;
+    right: 1.5rem;
     z-index: 100;
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+  }
+
+  /* Home monogram */
+  .home-mark {
+    display: flex;
     align-items: center;
     justify-content: center;
     padding: 0.25rem 0.45rem;
@@ -589,28 +596,25 @@ figure.about-photo {
   }
 
   .panel-trigger {
-    position: fixed;
-    top: 1.25rem;
-    right: 1.5rem;
-    z-index: 100;
     background: transparent;
-    border: none;
+    border: 1.5px solid var(--theme-text);
     color: var(--theme-text);
     cursor: pointer;
-    padding: 0.25rem;
+    padding: 0.25rem 0.45rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: color 0.2s;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    transition: background-color 0.2s, color 0.2s;
   }
 
   .panel-trigger:hover {
+    background-color: var(--panel-background);
     color: var(--theme-links-hover);
-  }
-
-  .panel-trigger svg {
-    width: 22px;
-    height: 22px;
   }
 
 
