@@ -117,6 +117,7 @@
   --color-red: #e10001;
   --color-green: #285246;
   --color-green-tint: #2f7851;
+  --color-green-light: #4caf7d;
   --color-green-darker: #113d18;
   --color-orange: #eb5e28;
   --color-french-grey: #edeae6;
@@ -155,6 +156,7 @@
   --color-red: #e10001;
   --color-green: #285246;
   --color-green-tint: #2f7851;
+  --color-green-light: #4caf7d;
   --color-green-darker: #113d18;
   --color-orange: #eb5e28;
   --color-french-grey: #edeae6;
@@ -434,6 +436,19 @@ a {
 
 a:hover {
   color: var(--theme-links-hover);
+}
+
+.post-footer .carbon-link {
+  text-decoration: none;
+}
+
+.post-footer .carbon-link:hover {
+  color: var(--color-green-light);
+}
+
+.post-footer p {
+  margin: 0;
+  padding: 0;
 }
 
 mark {
@@ -1232,30 +1247,40 @@ figure.about-photo {
   }
 
   .toc {
-    margin: 0 2px 40px;
-    border: 1px solid var(--color-french-grey);
-    background: var(--color-aside);
-    border-radius: 0.5rem;
-    padding: 0.4em;
+    margin: 0 0 2em;
   }
 
-  .toc .details {
-    display: inline;
-    font-weight: 500;
+  .toc details {
+    border: 1px solid rgb(from var(--theme-text) r g b / 0.15);
+    border-radius: 4px;
+    padding: 0 0.75em;
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
   }
 
   .toc details summary {
-    cursor: zoom-in;
-    margin-inline-start: 20px;
+    font-weight: 600;
+    padding: 0.5em 0;
+    cursor: pointer;
+    color: rgb(from var(--theme-text) r g b / 0.65);
+    list-style: none;
+  }
+
+  .toc details summary::-webkit-details-marker {
+    display: none;
   }
 
   .toc details[open] summary {
-    cursor: zoom-out;
+    border-bottom: 1px solid rgb(from var(--theme-text) r g b / 0.12);
+    margin-bottom: 0.5em;
+  }
+
+  .toc details[open] {
+    padding-bottom: 0.5em;
   }
 
   .toc .inner {
-    margin: 0 20px;
-    padding: 10px 20px;
+    padding: 0 0.5em;
   }
 
 
@@ -1646,6 +1671,42 @@ figure.about-photo {
   }
 
 
+  .post-footer {
+    margin-top: 3em;
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: rgb(from var(--theme-text) r g b / 0.7);
+  }
+
+  .post-footer::before {
+    content: '';
+    display: block;
+    width: 2.5rem;
+    height: 1.5px;
+    background: var(--theme-text);
+    margin-bottom: 0.75em;
+  }
+
+  .post-footer time {
+    font-family: var(--font-serif);
+    font-style: italic;
+  }
+
+  .post-footer p {
+    margin: 0;
+  }
+
+  .post-footer a {
+    color: inherit;
+    text-decoration-color: rgb(from var(--theme-text) r g b / 0.3);
+  }
+
+  .post-footer a:hover {
+    color: var(--theme-links-hover);
+    text-decoration-color: var(--theme-links-hover);
+  }
+
+
   .post-body details {
     border: 1px solid rgb(from var(--theme-text) r g b / 0.15);
     border-radius: 4px;
@@ -1905,6 +1966,7 @@ p>code {
 
   .notice {
     background-color: var(--color-aside);
+    font-family: var(--font-sans);
     padding: 1em;
     font-size: 14px;
     border-radius: 5px;
@@ -2319,62 +2381,34 @@ article.post {
   }
 
   table {
-    color: #333;
-    background: white;
-    border: 1px solid grey;
-    font-size: 12pt;
+    width: 100%;
     border-collapse: collapse;
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    color: var(--theme-text);
+    margin: 1.5em 0;
+    border-top: 1px solid rgb(from var(--theme-text) r g b / 0.2);
+    border-bottom: 1px solid rgb(from var(--theme-text) r g b / 0.2);
   }
 
-  table thead th,
-  table tfoot th {
-    color: #777;
-    background: rgba(0, 0, 0, 0.1);
+  table thead th {
+    text-align: left;
+    font-weight: 600;
+    padding: 0.55em 0.75em;
+    color: rgb(from var(--theme-text) r g b / 0.65);
+    border-bottom: 1px solid rgb(from var(--theme-text) r g b / 0.2);
   }
 
-  table caption {
-    padding: 0.5em;
-  }
-
-  table th,
   table td {
-    padding: 0.5em;
-    border: 1px solid lightgrey;
+    padding: 0.55em 0.75em;
+    border-bottom: 1px solid rgb(from var(--theme-text) r g b / 0.08);
+    vertical-align: top;
   }
 
-}
+  table tbody tr:last-child td {
+    border-bottom: none;
+  }
 
-/* Zebra Table Style */
-[data-table-theme*="zebra"] tbody tr:nth-of-type(odd) {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-[data-table-theme*="zebra"][data-table-theme*="dark"] tbody tr:nth-of-type(odd) {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-/* Dark Style */
-[data-table-theme*="dark"] {
-  color: #ddd;
-  background: #333;
-  font-size: 12pt;
-  border-collapse: collapse;
-}
-
-[data-table-theme*="dark"] thead th,
-[data-table-theme*="dark"] tfoot th {
-  color: #aaa;
-  background: rgba(0255, 255, 255, 0.15);
-}
-
-[data-table-theme*="dark"] caption {
-  padding: 0.5em;
-}
-
-[data-table-theme*="dark"] th,
-[data-table-theme*="dark"] td {
-  padding: 0.5em;
-  border: 1px solid grey;
 }
 
 @layer components {
