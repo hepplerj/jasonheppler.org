@@ -133,13 +133,6 @@
     "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
 }
 
-/* System font override — set by font toggle in nav, stored in localStorage */
-[data-fonts="system"] {
-  --font-serif: ui-serif, Georgia, "Times New Roman", serif;
-  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Code", "Courier New", monospace;
-}
-
 /* Dark mode variant — tied to the data-site-theme attribute set by hepp.js.
    JS always sets the attribute (using system preference as default), so
    dark: utilities fire correctly without also needing a media query here. */
@@ -211,6 +204,14 @@
   --postex-photoset-margin-responsive: 2rem;
   --nested-photoset-margin: 3.25rem;
   --nested-photoset-margin-responsive: 2rem;
+}
+
+/* System font override — set by font toggle in nav, stored in localStorage.
+   Must come AFTER both :root blocks to win the specificity tie on source order. */
+[data-fonts="system"] {
+  --font-serif: ui-serif, Georgia, "Times New Roman", serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Code", "Courier New", monospace;
 }
 
 /* Base element defaults — placed in @layer base so Tailwind utilities can override them */
