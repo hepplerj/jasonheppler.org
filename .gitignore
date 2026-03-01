@@ -58,3 +58,12 @@ source/_drafts
 .Rproj.user
 content/blog/.Ulysses-Group.plist
 .hugo_build.lock
+
+
+
+
+# Ignore Smart Environment folder
+.smart-env
+
+# Obsidian Templater templates
+_templates/

@@ -1,3 +1,6 @@
+ignoreFiles:
+  - _templates/
+
 title: Jason A. Heppler
 description: >-
   Jason Heppler is the senior web developer at the Roy Rosenzweig Center for
