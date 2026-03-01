@@ -2,7 +2,7 @@
 title: "Twitter Use at WHA2018"
 date: 2018-10-23
 lede: "Analyzing Twitter during #WHA2018."
-tags: [conference, Western History Association]
+tags: [conference, western-history-association]
 ---
 
 For the past few years following the [Western History Association's annual

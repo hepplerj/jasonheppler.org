@@ -1,6 +1,6 @@
 ---
 date: 2013-10-02T09:52:27Z
-tags: [academia, digital history]
+tags: [academia, digital-history]
 title: My Alt-Ac Life
 url: /2013/10/02/my-alt-ac-life/
 lede: "My work as a digital historian at Stanford."

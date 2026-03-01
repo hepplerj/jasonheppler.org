@@ -1,6 +1,6 @@
 ---
 date: 2012-11-20T09:06:45Z
-tags: [tech life, academia, writing, plain text]
+tags: [tech-life, academia, writing, plain-text]
 title: Using Markdown Like an Academic
 url: /2012/11/20/using-markdown-like-an-academic/
 lede: "Plain text should rule your writing life."

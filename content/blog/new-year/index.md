@@ -1,7 +1,7 @@
 ---
 author: Jason Heppler
 date: 2011-12-31
-tags: [tech life]
+tags: [tech-life]
 title: New Year
 url: /2011/12/31/new-year/
 lede: "It's time to re-center my attention."

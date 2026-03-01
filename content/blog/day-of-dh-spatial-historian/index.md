@@ -4,7 +4,7 @@ description: null
 image:
   feature: null
   thumb: null
-tags: [digital humanities, maps, spatial history]
+tags: [digital-humanities, maps, spatial-history]
 title: 'Day of DH: The Spatial Historian'
 url: /2014/04/08/day-of-dh-spatial-historian/
 lede: "My Day of DH 2014."

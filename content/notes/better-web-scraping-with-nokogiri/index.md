@@ -1,6 +1,6 @@
 ---
 date: 2012-10-12T14:17:15Z
-tags: [programming, web scraping, ruby]
+tags: [programming, web-scraping, ruby]
 title: Better Web Scraping with Nokogiri
 url: /2012/10/12/better-web-scraping-with-nokogiri/
 lede: "An improved Ruby-based web scraper."

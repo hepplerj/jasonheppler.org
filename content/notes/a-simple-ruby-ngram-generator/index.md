@@ -1,6 +1,6 @@
 ---
 date: 2012-04-24T15:45:43Z
-tags: [programming, ruby, text analysis]
+tags: [programming, ruby, text-analysis]
 title: A Simple Ruby NGram Generator
 url: /2012/04/24/a-simple-ruby-ngram-generator/
 lede: "A simple Ruby-based text tokenizer."

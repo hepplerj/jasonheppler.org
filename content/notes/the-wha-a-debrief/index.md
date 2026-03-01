@@ -1,6 +1,6 @@
 ---
 date: 2008-10-26T16:53:47Z
-tags: [conference, Western History Association]
+tags: [conference, western-history-association]
 title: 'The WHA: A Debrief'
 url: /2008/10/26/the-wha-a-debrief/
 wordpress_id: 46

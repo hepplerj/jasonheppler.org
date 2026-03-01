@@ -1,6 +1,6 @@
 ---
 date: 2010-11-28T10:05:47Z
-tags: [programming, ruby, text analysis]
+tags: [programming, ruby, text-analysis]
 title: FREQr, a Command Line Word Frequency Generator
 url: /2010/11/28/freqr-a-command-line-word-frequency-generator/
 wordpress_id: 498

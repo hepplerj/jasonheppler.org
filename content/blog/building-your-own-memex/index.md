@@ -1,6 +1,6 @@
 ---
 date: 2012-10-10T23:43:21Z
-tags: [tech life]
+tags: [tech-life]
 title: Building Your Own Memex
 url: /2012/10/10/building-your-own-memex/
 lede: "How I manage information."

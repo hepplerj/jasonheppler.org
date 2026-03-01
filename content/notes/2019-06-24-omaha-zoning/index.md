@@ -2,7 +2,7 @@
 title: 'Omaha Zoning'
 date: 2019-06-23T19:35:46-05:00
 slug: 'omaha-zoning'
-tags: [data visualization, omaha, maps]
+tags: [data-visualization, omaha, maps]
 lede: "Mapping Omaha's single-family zoning versus multifamily zoning."
 ---
 

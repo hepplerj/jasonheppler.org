@@ -1,7 +1,7 @@
 ---
 title: "Introducing Endangered Data Week"
 date: 2017-04-24
-tags: [advocacy, Endangered Data Week]
+tags: [advocacy, endangered-data-week]
 lede: "How you can get involved with Endangered Data Week."
 ---
 

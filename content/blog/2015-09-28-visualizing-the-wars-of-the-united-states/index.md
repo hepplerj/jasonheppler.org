@@ -1,7 +1,7 @@
 ---
 title: "Visualizing the Wars of the United States"
 date: 2015-09-28
-tags: [data visualization]
+tags: [data-visualization]
 lede: "A timeline of American wars."
 ---
 

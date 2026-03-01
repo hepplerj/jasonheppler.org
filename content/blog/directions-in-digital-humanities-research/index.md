@@ -1,7 +1,7 @@
 ---
 author: Jason Heppler
 date: 2011-12-07T20:56:37Z
-tags: [digital humanities]
+tags: [digital-humanities]
 title: Directions in Digital Humanities Research
 url: /2011/12/07/directions-in-digital-humanities-research/
 lede: "How I plan to incorporate digital history into my research on William F. Cody."

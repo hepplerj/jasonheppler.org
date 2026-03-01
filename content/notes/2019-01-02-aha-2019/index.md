@@ -1,7 +1,7 @@
 ---
 title: "AHA 2019"
 date: 2019-01-02
-tags: [conference, American Historical Association]
+tags: [conference, american-historical-association]
 lede: "I'll be at AHA talking digital history."
 ---
 

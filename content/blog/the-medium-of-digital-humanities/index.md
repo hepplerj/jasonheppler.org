@@ -1,6 +1,6 @@
 ---
 date: 2011-09-04T09:14:54Z
-tags: [digital humanities, digital history]
+tags: [digital-humanities, digital-history]
 title: The Medium of Digital Humanities
 url: /2011/09/04/the-medium-of-digital-humanities/
 lede: "A thought piece on Marshall McLuhan for HIST946."

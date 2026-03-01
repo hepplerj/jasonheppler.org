@@ -1,6 +1,6 @@
 ---
 date: 2011-07-14T11:00:40Z
-tags: [web, indie web, personal]
+tags: [web, indie-web, personal]
 title: Own Your Identity
 url: /2011/07/14/own-your-identity/
 lede: "You need to control your identity on the web."

@@ -1,7 +1,7 @@
 ---
 date: 2016-08-26T21:19:15-07:00
 title: 'Syllabus for Teaching Digital Public History'
-tags: [digital historuy, public history]
+tags: [digital-history, public-history]
 lede: "My syllabus for Stanford's Digital Public History."
 ---
 

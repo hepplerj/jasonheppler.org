@@ -4,7 +4,7 @@ description: null
 image:
   feature: null
   thumb: null
-tags: [digital humanities]
+tags: [digital-humanities]
 title: 'Day of DH: The Collaborative Historian'
 url: /2014/04/08/day-of-dh-the-collaborative-historian/
 lede: "My Day of DH 2014."

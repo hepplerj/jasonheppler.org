@@ -1,6 +1,6 @@
 ---
 date: 2009-06-03T18:41:15Z
-tags: [digital history, research]
+tags: [digital-history, research]
 title: Digital History as a Research Methodology
 url: /2009/06/03/digital-history-methodology/
 wordpress_id: 343

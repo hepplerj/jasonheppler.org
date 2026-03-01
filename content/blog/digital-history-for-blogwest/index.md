@@ -1,6 +1,6 @@
 ---
 date: 2013-12-17T19:45:10Z
-tags: [digital history, interview]
+tags: [digital-history, interview]
 title: Digital History Interview with BlogWest
 url: /2013/12/17/digital-history-for-blogwest/
 lede: "My interview with Michael Childers at BlogWest."

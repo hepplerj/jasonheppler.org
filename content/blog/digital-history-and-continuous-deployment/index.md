@@ -1,6 +1,6 @@
 ---
 date: 2011-03-02T07:45:53Z
-tags: [digital history]
+tags: [digital-history]
 title: Digital History and Continuous Deployment
 url: /2011/03/02/digital-history-and-continuous-deployment/
 lede: "Digital history is an ongoing process of refinement, narrative, and archiving."

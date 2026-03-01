@@ -1,7 +1,7 @@
 ---
 author: Jason Heppler
 date: 2011-10-27T09:51:58Z
-tags: [review, digital history, peer review]
+tags: [review, digital-history, peer-review]
 title: Peer Reviewing Writing History in the Digital Age
 url: /2011/10/27/peer-reviewing-writing-history-in-the-digital-age/
 lede: "My peer review of 'The Hermeneutics of Data and Historical Writing' by Fred Gibbs and Trevor Owens."

@@ -1,6 +1,6 @@
 ---
 date: 2013-10-18T12:26:32Z
-tags: [digital history]
+tags: [digital-history]
 title: Digital History at Stanford
 url: /2013/10/18/digital-history-at-stanford/
 lede: "Launching Stanford's initiatives in digital history."

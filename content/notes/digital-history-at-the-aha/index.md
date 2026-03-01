@@ -1,7 +1,7 @@
 ---
 author: Jason Heppler
 date: 2012-01-05T10:12:16Z
-tags: [conference, American Historical Association]
+tags: [conference, american-historical-association]
 title: Digital History at the AHA
 url: /2012/01/05/digital-history-at-the-aha/
 lede: "My inaugural attendance at the American Historical Association conference."

@@ -1,5 +1,5 @@
 ---
-tags: [research, spatial history, data visualization]
+tags: [research, spatial-history, data-visualization]
 date: 2011-09-28T10:10:25Z
 title: Spatial Humanities and Visual Narratives
 url: /2011/09/28/spatial-humanities/

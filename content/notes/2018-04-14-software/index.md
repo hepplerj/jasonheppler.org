@@ -1,7 +1,7 @@
 ---
 title: "Software I Use"
 date: 2018-04-14
-tags: [tech life]
+tags: [tech-life]
 lede: "Here's some software I really like right now."
 ---
 

@@ -1,7 +1,7 @@
 ---
 author: Jason Heppler
 date: 2011-10-20T10:52:40Z
-tags: [digital humanities]
+tags: [digital-humanities]
 title: Latour and the Social
 url: /2011/10/20/latour-and-the-social/
 lede: "A reading reflection on Bruno Latour for HIST946."

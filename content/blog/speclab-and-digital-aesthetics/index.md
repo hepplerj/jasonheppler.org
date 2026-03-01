@@ -1,5 +1,5 @@
 ---
-tags: [research, digital humanities, digital history]
+tags: [research, digital-humanities, digital-history]
 date: 2011-10-06T10:53:20Z
 title: SpecLab and Digital Aesthetics
 url: /2011/10/06/speclab-and-digital-aesthetics/

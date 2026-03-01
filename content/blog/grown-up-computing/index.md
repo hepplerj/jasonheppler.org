@@ -1,6 +1,6 @@
 ---
 date: 2011-06-29T21:53:14Z
-tags: [tech life]
+tags: [tech-life]
 title: Grown Up Computing
 url: /2011/06/29/grown-up-computing/
 lede: "Marco Arment on the difference between 'young' and 'grown-up' computing."

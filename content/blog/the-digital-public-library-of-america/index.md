@@ -1,6 +1,6 @@
 ---
 date: 2013-04-28T12:50:35Z
-tags: [digital humanities, dpla]
+tags: [digital-humanities, dpla]
 title: The Digital Public Library of America
 url: /2013/04/28/the-digital-public-library-of-america/
 lede: "Using the DPLA for research, teaching, and creating."

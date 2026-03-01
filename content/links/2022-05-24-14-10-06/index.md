@@ -2,7 +2,7 @@
 date: '2022-05-24T14:10:06-06:00'
 external: 'https://vickiboykis.com/essays/2016-11-20-fix-the-internet/'
 title: 'Owning Your Domain'
-tags: [indie web]
+tags: [indie-web]
 ---
 [Vicki Boykis](https://vickiboykis.com/essays/2016-11-20-fix-the-internet/):
 

@@ -1,6 +1,6 @@
 ---
 date: 2011-03-15T08:00:11Z
-tags: [review, maps, spatial history]
+tags: [review, maps, spatial-history]
 title: Initial Thoughts on TileMill
 url: /2011/03/15/initial-thoughts-on-tilemill/
 lede: "A quick review of TileMill by Mapbox."

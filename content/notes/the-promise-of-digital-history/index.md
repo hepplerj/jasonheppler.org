@@ -1,6 +1,6 @@
 ---
 date: 2008-09-18T10:20:04Z
-tags: [digital history]
+tags: [digital-history]
 title: The Promise of Digital History
 url: /2008/09/18/the-promise-of-digital-history/
 wordpress_id: 44

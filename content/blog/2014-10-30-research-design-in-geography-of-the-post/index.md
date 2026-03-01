@@ -1,7 +1,7 @@
 ---
 title: Research Design and Geography of the Post
 date: 2014-10-30
-tags: [research, digital history]
+tags: [research, digital-history]
 lede: "How and why we designed Geography of the Post."
 ---
 *[Read this along with [Cameron Blevins's companion post](http://www.cameronblevins.org/posts/postal-geography-and-the-golden-west/).]*

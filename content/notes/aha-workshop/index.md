@@ -1,7 +1,7 @@
 ---
 date: 2016-12-31T16:02:22-06:00
 title: "Digital History at the AHA: Workshops, Roundtables, Sessions" 
-tags: [conferences, American Historical Association]
+tags: [conferences, american-historical-association]
 lede: "Things I'm presenting on at the AHA next week."
 ---
 

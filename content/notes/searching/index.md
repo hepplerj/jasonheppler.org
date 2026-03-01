@@ -1,6 +1,6 @@
 ---
 date: 2012-11-14T22:09:43Z
-tags: [tech life]
+tags: [tech-life]
 title: Searching My Brain
 url: /2012/11/14/searching/
 lede: "Using TextExpander to search my writing."

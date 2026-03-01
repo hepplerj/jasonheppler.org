@@ -2,7 +2,7 @@
 title: Two Quotes on Owning Your Turf 
 date: 2025-01-21
 lede: The urgent need for decentralized social media platforms that resist censorship and allow user control has become increasingly clear.
-tags: [twoquotes, indie web]
+tags: [twoquotes, indie-web]
 ---
 
 [Jason Koebler](https://www.404media.co/decentralized-social-media-is-the-only-alternative-to-the-tech-oligarchy/):

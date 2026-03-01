@@ -1,7 +1,7 @@
 ---
 title: "Interview with Matt Burton"
 date: 2015-01-10
-tags: [digital humanities, interview, career]
+tags: [digital-humanities, interview, career]
 lede: "My interview with Matt Burton."
 ---
 

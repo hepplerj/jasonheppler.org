@@ -1,6 +1,6 @@
 ---
 date: 2011-05-10T11:25:19Z
-tags: [design, digital history]
+tags: [design, digital-history]
 title: Designing Digital History
 url: /2011/05/10/designing-digital-history/
 lede: "How should we consider the role of design in digital history?"

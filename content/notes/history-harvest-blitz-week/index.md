@@ -1,6 +1,6 @@
 ---
 date: 2013-04-05T22:43:46Z
-tags: [digital humanities, history harvest]
+tags: [digital-humanities, history-harvest]
 title: History Harvest Blitz Week
 url: /2013/04/05/history-harvest-blitz-week/
 lede: "Learn more about hosting a History Harvest."

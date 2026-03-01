@@ -2,7 +2,7 @@
 title: "0 Tweets"
 date: "2022-11-19T21:26:33-06:00"
 slug: "0-tweets"
-tags: [web, indie web]
+tags: [web, indie-web]
 lede: "It's time to leave Twitter."
 ---
 

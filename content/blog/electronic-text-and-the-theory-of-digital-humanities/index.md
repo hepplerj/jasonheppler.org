@@ -1,6 +1,6 @@
 ---
 date: 2011-09-14T14:01:49Z
-tags: [digital humanities, text analysis]
+tags: [digital-humanities, text-analysis]
 title: Electronic Text and the Digital Humanities
 url: /2011/09/14/electronic-text-and-the-theory-of-digital-humanities/
 lede: "Reflecting on a collection of readings for HIST946."

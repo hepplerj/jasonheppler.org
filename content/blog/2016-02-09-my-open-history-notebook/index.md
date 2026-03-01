@@ -1,7 +1,7 @@
 ---
 title: "My Open History Notebook"
 date: 2016-02-09
-tags: [tech life, digital history]
+tags: [tech-life, digital-history]
 lede: "I made an open notebook with Jekyll."
 ---
 
