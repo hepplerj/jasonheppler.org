@@ -109,6 +109,30 @@ if (themeToggle) {
     });
 }
 
+// ─── Font style (custom vs system) ────────────────────────────────────────────
+
+function applyFontStyle(style) {
+    const useSystem = style === 'system';
+    document.documentElement.setAttribute('data-fonts', useSystem ? 'system' : 'custom');
+    localStorage.setItem('font-style', style);
+    const btn = document.getElementById('fontStyleToggle');
+    if (btn) btn.setAttribute('aria-checked', useSystem ? 'true' : 'false');
+}
+
+function initFontStyle() {
+    const stored = localStorage.getItem('font-style') || 'custom';
+    applyFontStyle(stored);
+    const btn = document.getElementById('fontStyleToggle');
+    if (btn) {
+        btn.addEventListener('click', () => {
+            const current = localStorage.getItem('font-style') || 'custom';
+            applyFontStyle(current === 'system' ? 'custom' : 'system');
+        });
+    }
+}
+
+initFontStyle();
+
 // ─── Keyboard shortcuts ───────────────────────────────────────────────────────
 
 function initKeyboardShortcuts() {
