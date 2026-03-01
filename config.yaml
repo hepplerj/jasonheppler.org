@@ -21,22 +21,26 @@ taxonomies:
   category: categories
   tag: tags
 
-author:
-  name: Jason Heppler
-  email: jason@jasonheppler.org
+params:
+  Author:
+    name: Jason Heppler
+    email: jason@jasonheppler.org
 
 outputs:
   home:
     - HTML
     - RSS
+    - JSONFeed
   page:
     - HTML
   section:
     - HTML
     - RSS
+    - JSONFeed
   term:
     - HTML
     - RSS
+    - JSONFeed
 
 markup:
   goldmark:
@@ -49,10 +53,20 @@ markup:
     tabWidth: 4
     codeFences: false
 
+mediaTypes:
+  "application/feed+json":
+    suffixes:
+      - json
+
 outputFormats:
   RSS:
     mediatype: application/rss
     baseName: feed
+  JSONFeed:
+    mediaType: "application/feed+json"
+    baseName: feed
+    isPlainText: true
+    notAlternative: false
 
 sitemap:
   changefreq: weekly
