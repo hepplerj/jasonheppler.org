@@ -27,6 +27,8 @@
       </section>
     </article>
 
+    {{ if .Params.tags }}<p class="post-footer-tags">{{ partial "tags.html" . }}</p>{{ end }}
+
     <footer class="post-footer">
       <p><time class="dt-published" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "January 2, 2006" }}</time> &mdash; <a href="/" class="p-author h-card">Jason Heppler</a></p>
       <p>
@@ -34,7 +36,6 @@
         <a href="https://historians.social/@jaheppler">Mastodon</a> &middot;
         <a href="https://micro.blog/jaheppler">Micro.blog</a>
       </p>
-      {{ if .Params.tags }}<p class="article-tags">{{ partial "tags.html" . }}</p>{{ end }}
       <p id="page-stats" hidden><a href="/low-impact/" class="carbon-link">~<span id="carbon"></span>kb &middot; <span id="page_carbon"></span>g CO₂</a></p>
       {{/* Bridgy publish — syndicates this post to Bluesky when Bridgy crawls */}}
       <a href="https://brid.gy/publish/bluesky" class="u-syndication" hidden></a>

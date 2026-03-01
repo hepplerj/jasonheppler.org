@@ -1671,6 +1671,13 @@ figure.about-photo {
   }
 
 
+  .post-footer-tags {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    margin-bottom: 1em;
+    color: rgb(from var(--theme-text) r g b / 0.7);
+  }
+
   .post-footer {
     margin-top: 3em;
     font-family: var(--font-sans);
