@@ -6,7 +6,7 @@ url: /2011/09/22/information-in-the-digital-age/
 lede: "A reflection on data for HIST946."
 ---
 
-*[This is a reading reflection written for HIST946: Digital Humanities with Professor William Thomas during the Fall 2011 semester. This week's readings were John Brown and Paul Duguid, *[The Social Life of Information](http://www.amazon.com/Social-Life-Information-Seely-Brown/dp/0875847625)*, Michel et al., "[Quantitative Analysis of Culture Using Millions of Digitized Books](http://www.sciencemag.org/content/331/6014/176)," and Roy Rosenzweig, "[Scarcity or Abudance? Preserving the Past in a Digital Era](http://chnm.gmu.edu/essays-on-history-new-media/essays/?essayid=6)". You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html).]*
+<aside><p>This is a reading reflection written for HIST946: Digital Humanities with Professor William Thomas during the Fall 2011 semester. This week's readings were John Brown and Paul Duguid, <em><a href="http://www.amazon.com/Social-Life-Information-Seely-Brown/dp/0875847625">The Social Life of Information</a></em>, Michel et al., "<a href="http://www.sciencemag.org/content/331/6014/176">Quantitative Analysis of Culture Using Millions of Digitized Books</a>," and Roy Rosenzweig, "<a href="http://chnm.gmu.edu/essays-on-history-new-media/essays/?essayid=6">Scarcity or Abudance? Preserving the Past in a Digital Era</a>". You can find related posts <a href="http://jasonheppler.org/the-digital-humanities-seminar.html">here</a>.</p></aside>
 
 We are experiencing an age of unprecedented access to information. The vast
 amount of material scanned and hosted by institutional respositories like JSTOR,

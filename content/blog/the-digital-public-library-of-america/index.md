@@ -6,7 +6,7 @@ url: /2013/04/28/the-digital-public-library-of-america/
 lede: "Using the DPLA for research, teaching, and creating."
 ---
 
-*[This post originally appeared at [Hive Talkin'](https://www.stanford.edu/group/ats/cgi-bin/hivetalkin/?p=3331) on 2013-04-18.]*
+<aside><p>This post originally appeared at <a href="https://www.stanford.edu/group/ats/cgi-bin/hivetalkin/?p=3331">Hive Talkin'</a> on 2013-04-18.</p></aside>
 
 In 1814, Thomas Jefferson offered his personal library -- some fifty years in the making -- to the newly established Library of Congress. His library of works on philosophy, history, science, and literature were meant for "everything which related to America, and indeed whatever was rare and valuable in every science." Jefferson loved knowledge, and the donation of his private library to the Library of Congress <a href="http://www.loc.gov/exhibits/jefferson/images/vc221.jpg">allowed the new library</a> to "become the depository of unquestionably the choicest collection of books in the US, and I hope it will not be without some general effect on the literature of our country."
 

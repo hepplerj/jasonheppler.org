@@ -6,7 +6,7 @@ url: /2011/09/01/organizing-knowledge-and-the-future-of-the-humanities/
 lede: "A reflection on knowledge for HIST946."
 ---
 
-*[This is a thought piece written for HIST946: Digital Humanities with Professor William Thomas during the Fall 2011 semester. You can find related posts [here](http://jasonheppler.org/the-digital-humanities-seminar.html).]*
+<aside><p>This is a thought piece written for HIST946: Digital Humanities with Professor William Thomas during the Fall 2011 semester. You can find related posts <a href="http://jasonheppler.org/the-digital-humanities-seminar.html">here</a>.</p></aside>
 
 Writing in the *Atlantic Monthly* in 1945, Vannevar Bush envisioned a future where the world's knowledge was all linked together. Machines, what he called the "Memex", would aid researchers in their task. Bush used history as an example to explain his vision, pointing a researcher examining the Crusades and following links in information to understand the adoption of long bows in combat. The Internet, in many ways, has become our Memex, but the implications this holds for historical scholarship remains a key debate in digital humanities.
 

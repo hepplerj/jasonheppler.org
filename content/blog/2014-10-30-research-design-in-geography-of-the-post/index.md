@@ -4,7 +4,7 @@ date: 2014-10-30
 tags: [research, digital-history]
 lede: "How and why we designed Geography of the Post."
 ---
-*[Read this along with [Cameron Blevins's companion post](http://www.cameronblevins.org/posts/postal-geography-and-the-golden-west/).]*
+<aside><p>Read this along with <a href="http://www.cameronblevins.org/posts/postal-geography-and-the-golden-west/">Cameron Blevins's companion post</a>.</p></aside>
 
 After more than a year of work, [Geography of the Post is live](http://cameronblevins.org/gotp/). I wanted to take a moment at the project's launch to reflect back on the design decisions we made with the project and to document these changes.[^2]
 

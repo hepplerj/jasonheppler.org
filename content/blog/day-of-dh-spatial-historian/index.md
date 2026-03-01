@@ -10,7 +10,7 @@ url: /2014/04/08/day-of-dh-spatial-historian/
 lede: "My Day of DH 2014."
 ---
 
-*[This post originally appeared at [Day of DH](http://dayofdh2014.matrix.msu.edu/jasonheppler/2014/04/08/the-spatial-historian/) on 2014-04-08]*
+<aside><p>This post originally appeared at <a href="http://dayofdh2014.matrix.msu.edu/jasonheppler/2014/04/08/the-spatial-historian/">Day of DH</a> on 2014-04-08</p></aside>
 
 It's a sunny California day (after a week of much needed rain). I'm variously
 spending time outside and in, drinking coffee, and, today, writing code. Welcome

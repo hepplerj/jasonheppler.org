@@ -6,7 +6,7 @@ url: /2012/11/20/using-markdown-like-an-academic/
 lede: "Plain text should rule your writing life."
 ---
 
-*[This post originally appeared at [Gradhacker](http://www.gradhacker.org/2012/11/20/using-markdown-like-an-academic/) on 2012-11-20]*
+<aside><p>This post originally appeared at <a href="http://www.gradhacker.org/2012/11/20/using-markdown-like-an-academic/">Gradhacker</a> on 2012-11-20</p></aside>
 
 Markdown, a text formatting syntax designed for easy readability but also transformability, gets a lot of love from geeks. Lincoln Mullen has [written a great introduction to Markdown](http://chronicle.com/blogs/profhacker/markdown-the-syntax-you-probably-already-know/35295) for Profhacker if you are unfamiliar with the syntax. My big question when I made the shift away from traditional word processors and began using plaintext and markdown was if it would be flexible enough to support the conventions of scholarly work. After all, if the format wouldn't support footnotes, tables, figures, and so on, it wouldn't be much use since such conventions are expected across the genres we use in scholarly writing and publishing.
 

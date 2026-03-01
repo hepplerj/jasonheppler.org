@@ -6,7 +6,7 @@ url: /2013/03/17/rice-masterclass-questions/
 lede: "My interview with Caleb McDaniel."
 ---
 
-*[This post originally appeared at [Digital History@Rice](http://digitalhistory.blogs.rice.edu/2013/03/27/interview-with-jason-heppler/). Thanks to Caleb McDaniel for his invitation to participate in the course!]*
+<aside><p>This post originally appeared at <a href="http://digitalhistory.blogs.rice.edu/2013/03/27/interview-with-jason-heppler/">Digital History@Rice</a>. Thanks to Caleb McDaniel for his invitation to participate in the course!</p></aside>
 
 Regretfully, I could not attend Caleb McDaniel's [video chat in his Rice masterclass](http://digitalhistory.blogs.rice.edu/2013/03/08/grad-student-roundtable-on-digital-humanities/) on digital history. However, I'm happy I have the opportunity to answer the questions posed to everyone during the chat.
 

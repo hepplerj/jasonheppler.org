@@ -6,7 +6,7 @@ url: /2013/10/18/digital-history-at-stanford/
 lede: "Launching Stanford's initiatives in digital history."
 ---
 
-*[This post originally appeared at [Digital Humanities at Stanford](http://digitalhumanities.stanford.edu) on 2013-10-21]*
+<aside><p>This post originally appeared at <a href="http://digitalhumanities.stanford.edu">Digital Humanities at Stanford</a> on 2013-10-21</p></aside>
 
 Last week we went live with [Digital History at Stanford](http://digitalhistory.stanford.edu), a space where I am trying to centralize information about the various digital research and pedagogy going on in the [History Department](http://history.stanford.edu) at Stanford.
 
