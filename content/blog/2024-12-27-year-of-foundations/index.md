@@ -8,14 +8,14 @@ tags:
 
 I'm not a regular year-end blogger other than yearly theme posts but I wanted to take a moment at the end of 2024 to reflect amidst my own 2025 theme. One thing I've done pretty consistently since 2021 is to consider a yearly theme. Those have been:
 
-- [2022](https://writing.jasonheppler.org/2022/12/19/yearly-theme.html): Year of Lagom
-- [2023](https://writing.jasonheppler.org/2022/12/19/yearly-theme.html): Year of Festina Lente
+- [2022](https://social.jasonheppler.org/2022/12/19/yearly-theme.html): Year of Lagom
+- [2023](https://social.jasonheppler.org/2022/12/19/yearly-theme.html): Year of Festina Lente
 - [2024](https://jasonheppler.org/2023/01/26/yearly-theme-2023/): Year of Work
 - 2025: **Year of Foundation**
 
 **Foundation** for me means a few things: new structures in place around health and fitness, some long-term work we’ll be doing around our acreage (barn restoration, garden expansion, orchard expansion, prairie re-wilding), career goals, and some long-term household tasks. So this year will be spent, in part, with an eye towards the future. We've also had, in some ways, a tough 2024. This year will serve as something of a reset as well. 
 
-If you are interested in what I've been reading, you can check out [my micro.blog reading log](https://writing.jasonheppler.org/library/).
+If you are interested in what I've been reading, you can check out [my micro.blog reading log](https://social.jasonheppler.org/library/).
 
 ![Auto-generated description: A weathered red wooden door features a green wreath with a red bow at its center.](christmas-2024.webp)
 

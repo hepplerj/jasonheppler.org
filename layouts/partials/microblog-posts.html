@@ -1,4 +1,4 @@
-{{ $rssUrl := "https://writing.jasonheppler.org/categories/longform/feed.xml" }}
+{{ $rssUrl := "https://social.jasonheppler.org/categories/longform/feed.xml" }}
 {{ $apiUrl := printf "https://api.rss2json.com/v1/api.json?rss_url=%s" $rssUrl }}
 {{ $resource := resources.GetRemote $apiUrl }}
 {{ $rssData := $resource | transform.Unmarshal }}
@@ -25,6 +25,6 @@
   {{ end }}
   
   <p class="more-posts">
-    <a href="https://writing.jasonheppler.org" target="_blank" rel="noopener">View all posts →</a>
+    <a href="https://social.jasonheppler.org" target="_blank" rel="noopener">View all posts →</a>
   </p>
 </section>

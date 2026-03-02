@@ -7,7 +7,7 @@ tags:
 lede: Our varied selection of Christmas movies we watch each year.
 ---
 
-Every year we have a rotation of Christmas movies that we watch this time of year. We’re kicked off [with Klaus tonight](https://writing.jasonheppler.org/2025/12/12/watched-klaus/), and still have more to go. These are, of course, a mix of things that we watch with the kids or just the adults. 
+Every year we have a rotation of Christmas movies that we watch this time of year. We’re kicked off [with Klaus tonight](https://social.jasonheppler.org/2025/12/12/watched-klaus/), and still have more to go. These are, of course, a mix of things that we watch with the kids or just the adults. 
 
 - [Klaus](https://www.imdb.com/title/tt4729430/)
 - [Grinch](https://m.imdb.com/title/tt2709692/) (2018)

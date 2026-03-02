@@ -6,15 +6,15 @@ tags:
 - tech life
 ---
 
-For the [past few weeks](https://writing.jasonheppler.org/2025/01/16/ive-been-trying-out-the/) I've been using the Zen browser, a fork of Firefox that comes with some preference changes and nice interface updates: the vertical tabs are really nice, as is the workspace management. And, since it's a fork of Firefox, all of my usual Firefox add-ons and my Mozilla account can sync with Zen.  
+For the [past few weeks](https://social.jasonheppler.org/2025/01/16/ive-been-trying-out-the/) I've been using the Zen browser, a fork of Firefox that comes with some preference changes and nice interface updates: the vertical tabs are really nice, as is the workspace management. And, since it's a fork of Firefox, all of my usual Firefox add-ons and my Mozilla account can sync with Zen.  
   
 But, there were a few mild annoyances I kept running into, one being that Zen didn't (yet) support Passkeys which I now use for a number of places since I'm all-in on Apple Passwords. But I also had some general concerns about Zen not keeping up with the update pace of Firefox itself, especially if security updates were needed. So, I decided to give Firefox a full try again.  
   
-I've been a Safari user for a long while now (I stopped actively using Chrome years ago but Firefox was always around, especially the [development version](https://www.mozilla.org/en-US/firefox/developer/) for my day to day work). But Safari worked great, and its seamless syncing between my laptop and iOS devices was an added bonus. Plus I try to keep my apps [as close to default as I can](https://writing.jasonheppler.org/2023/11/29/default-apps-for/), so Safari made sense. But as someone who cares a lot about the open web and the organizations that support it, I've always had a soft spot for Mozilla (including [working with the Foundation](https://foundation.mozilla.org/en/initiatives/mozilla-open-leaders/round-6/mentors/)) and Zen made me realize how much I missed supporting their cause.  
+I've been a Safari user for a long while now (I stopped actively using Chrome years ago but Firefox was always around, especially the [development version](https://www.mozilla.org/en-US/firefox/developer/) for my day to day work). But Safari worked great, and its seamless syncing between my laptop and iOS devices was an added bonus. Plus I try to keep my apps [as close to default as I can](https://social.jasonheppler.org/2023/11/29/default-apps-for/), so Safari made sense. But as someone who cares a lot about the open web and the organizations that support it, I've always had a soft spot for Mozilla (including [working with the Foundation](https://foundation.mozilla.org/en/initiatives/mozilla-open-leaders/round-6/mentors/)) and Zen made me realize how much I missed supporting their cause.  
   
 So I had some misgivings about Zen, and I'd rather support Firefox itself. So I decided to do some poking around and see how much of Zen's features I liked I could replicate in Firefox. It turns out, I've basically achieved everything I like about Zen.  
   
-<img src="uploads/2025/screenshot-2025-01-18-at-9.17.53am.png" width="600" height="381" alt="Auto-generated description: A webpage featuring Mozilla's mission statement about internet privacy, AI trust, and accountability for tech companies, along with grant and fellowship details.">  
+<img src="screenshot-2025-01-18-at-9.17.53am.png" width="600" height="381" alt="Auto-generated description: A webpage featuring Mozilla's mission statement about internet privacy, AI trust, and accountability for tech companies, along with grant and fellowship details.">  
   
 ## Vertical Tabs  
   
@@ -38,7 +38,7 @@ Firefox doesn't have a native way to do this ([yet](https://news.ycombinator.com
   
 One feature I've not seen any other browser implement is what Mozilla calls Firefox View, and it's really nice. View collects all of your tabs (currently open, recently closed, and tabs from other devices) all in one place in a simple interface. It's a nice way to to fetch something from another device or find something in my browsing history.  
   
-<img src="uploads/2025/screenshot-2025-01-18-at-9.22.47am.png" width="600" height="381" alt="Auto-generated description: A screenshot of the Firefox browser displays the Recent browsing section, showing a list of open and recently closed tabs alongside a sidebar menu with several navigation options.">  
+<img src="screenshot-2025-01-18-at-9.22.47am.png" width="600" height="381" alt="Auto-generated description: A screenshot of the Firefox browser displays the Recent browsing section, showing a list of open and recently closed tabs alongside a sidebar menu with several navigation options.">  
   
 ## iOS / iPadOS  
   

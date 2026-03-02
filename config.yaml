@@ -89,7 +89,7 @@ menu:
       url: /courses/
       weight: 3
     - name: Blog
-      url: https://writing.jasonheppler.org
+      url: https://social.jasonheppler.org
       weight: 4
     - name: Newsletter
       weight: 5

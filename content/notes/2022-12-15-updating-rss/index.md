@@ -12,6 +12,6 @@ I've made a few changes to the RSS feeds around the site that I thought worth do
 - The [books feed](https://jasonheppler.org/books/feed.xml): This is only updates to my reading log. I suspect few-to-none will subscribe to just the book log, but it's there if you want it.
 - The [blog feed](https://jasonheppler.org/blog/feed.xml): This has blog posts and link posts. If you don't care about the book log, this is the feed for you. 
 
-And as always, there's the [micro.blog feed](https://writing.jasonheppler.org/feed.json).
+And as always, there's the [micro.blog feed](https://social.jasonheppler.org/feed.json).
 
 Adjust accordingly.
