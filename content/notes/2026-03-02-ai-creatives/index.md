@@ -2,7 +2,7 @@
 title: Computer's Can't Surprise
 date: 2026-03-02
 draft: false
-lede: ""
+lede: Creativity belongs to the humans
 tags:
   - artificial-intelligence
 ---
