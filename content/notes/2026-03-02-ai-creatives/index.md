@@ -1,12 +1,12 @@
 ---
-title: Computer's Can't Surprise
+title: Computers Can't Surprise
 date: 2026-03-02
 draft: false
-lede: Creativity belongs to the humans
+lede: Creativity belongs to the humans.
 tags:
   - artificial-intelligence
 ---
-Richard Beard, "[Computer's Can't Surprise](https://aeon.co/essays/sure-ai-can-do-writing-but-memoir-not-so-much)": 
+Richard Beard, "[Computers Can't Surprise](https://aeon.co/essays/sure-ai-can-do-writing-but-memoir-not-so-much)": 
 
 > To escape the dead man’s handle of cliché, readers live in hope for organic associations, speculative leaps and surprise inferences. Whereas, to an AI, which is fed the answer before the question, ‘surprise’ remains an elusive concept.
 > 
