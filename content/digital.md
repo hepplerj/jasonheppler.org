@@ -114,11 +114,6 @@ I've been designing, developing, and teaching digital and public history for ten
     <p class="small"><span class="project-title">Mapping Omaha Bikes</span> The most dangerous areas in Omaha for bicyclists and pedestrians.</p>
   </a>
 
-  <a class="project" href="https://blogwest.org/2016/01/07/federal-policy-western-lands-and-malheur/">
-    <img src="/assets/images/portfolio_federallands.webp" alt="Western Federal Lands" loading="lazy" />
-    <p class="small"><span class="project-title">Western Federal Lands</span> Visualizing the federal government's holdings of Western land.</p>
-  </a>
-
   <a class="project" href="https://koenigsbergfood.weebly.com">
     <img src="/assets/images/portfolio_prussia.webp" alt="Prussian Foodstuffs" loading="lazy" />
     <p class="small"><span class="project-title">Prussian Foodstuffs</span> Exploring changes in taste among food items at the palace in Königsberg, Prussia during the reign of Friedrich Wilhelm. Collaboration with Molly Taylor-Poleskey.</p>
