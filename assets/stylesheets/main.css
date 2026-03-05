@@ -409,6 +409,8 @@
   /* Breathing room between the header border and the first paragraph */
   .post-body {
     padding-top: 1.75em;
+    text-align: justify;
+    hyphens: auto;
   }
 
   /* Post body content — styles dynamic markdown output */
@@ -431,6 +433,14 @@ body {
   font-family: var(--font-serif);
   background: var(--theme-background);
   color: var(--theme-text);
+}
+
+/* On phone-sized screens, scale down the reader font sizes so more words
+   fit per line.  Desktop 22/25/28 → mobile 18/21/24. */
+@media (max-width: 640px) {
+  body {
+    font-size: calc(var(--reader-font-size, 22px) - 4px);
+  }
 }
 
 a {
@@ -2127,8 +2137,8 @@ article.post {
   top: 0;
   left: calc(100% + 1.5rem);
   font-size: var(--type-x-small);
-  /* Fills available right-margin space up to 260px */
-  width: min(260px, calc((100vw - 800px) / 2 - 1.5rem));
+  /* Fills available right-margin space up to 260px (900px = .site-container max-width) */
+  width: min(260px, calc((100vw - 900px) / 2 - 1.5rem));
   margin-top: 0;
 }
 
