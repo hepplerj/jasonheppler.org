@@ -4,7 +4,6 @@ serve :
 build :
 	rm -rf public/*
 	hugo --cleanDestinationDir --minify
-	npx pagefind --site public
 
 deploy : build
 

@@ -1,0 +1,11 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- range where .Site.RegularPages ".Section" "in" (slice "blog" "notes" "links" "page" "") -}}
+    {{- $.Scratch.Add "index" (dict
+        "title"     (.Title | htmlUnescape)
+        "permalink" .Permalink
+        "section"   (.Section | title)
+        "desc"      (or .Description (.Summary | plainify | htmlUnescape | truncate 150 "…"))
+        "date"      (.Date.Format "Jan 2006")
+    ) -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}

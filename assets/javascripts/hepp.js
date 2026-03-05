@@ -143,7 +143,7 @@ function initKeyboardShortcuts() {
         y: '/research/',     // Digital History
         b: '/books/',        // Bookshelf
         '/': '/about/',      // About  (⌘/ — bare / opens panel, different code path)
-        k: '/search/',       // Search
+        // ⌘K is handled by fastsearch.js (opens overlay)
     };
 
     document.addEventListener('keydown', (e) => {
