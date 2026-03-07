@@ -1,6 +1,6 @@
 ---
 date: 2013-05-20T23:58:29Z
-image: spencer.jpg
+image: spencer.webp
 tags: [personal]
 title: On Tornadoes
 url: /2013/05/20/tornado/

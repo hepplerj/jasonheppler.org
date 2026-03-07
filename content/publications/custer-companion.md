@@ -3,7 +3,7 @@ title: "A Companion to Custer and the Little Bighorn Campaign"
 author: "Brad D. Lookingbill (editor)"
 year: "2015"
 publisher: "Wiley"
-image: "companion_custer.jpg"
+image: "companion_custer.webp"
 purchase_links:
   - name: "Wiley"
     url: "https://www.wiley.com/en-it/A+Companion+to+Custer+and+the+Little+Bighorn+Campaign-p-9781444351095"

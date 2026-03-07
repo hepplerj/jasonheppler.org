@@ -1794,23 +1794,6 @@ figure.about-photo {
   }
 
 
-  .book-grid details {
-    border: 1px solid var(--color-aside-faded);
-    border-radius: 4px;
-    padding: 0.5em 0.5em 0;
-  }
-
-  .book-grid details[open] summary {
-    border-bottom: 1px solid var(--color-aside-faded);
-    margin-bottom: 0.5em;
-  }
-
-  .book-grid summary {
-    font-weight: bold;
-    margin: -0.5em -0.5em 0;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
 
 
 }

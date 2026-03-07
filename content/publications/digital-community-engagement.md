@@ -3,7 +3,7 @@ title: "Digital Community Engagement: Partnering Communities with the Academy"
 author: "Rebecca Wingo, Paul Schadewald, and Jason A. Heppler (editors)"
 year: "2020"
 publisher: "University of Cincinnati Press"
-image: "dice.jpeg"
+image: "dice.webp"
 purchase_links:
   - name: "University of Cincinnati Press (open access)"
     url: "https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement"

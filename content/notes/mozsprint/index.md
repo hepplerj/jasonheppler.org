@@ -1,7 +1,7 @@
 ---
 title: "mozsprint"
 date: 2017-05-23
-image: mozsprint.jpeg
+image: mozsprint.webp
 tags: [mozilla, advocacy]
 lede: "Participating in Mozilla's MozSprint!"
 ---
