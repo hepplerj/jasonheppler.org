@@ -26,3 +26,4 @@ Stuff I carry around every day:
 - A [Leatherman Wingman](https://www.leatherman.com/collections/multi-tools/products/wingman) and a [Ranchland's leather sheath](https://ranchlands.com/collections/leather-goods-new/products/leatherman-multitool-sheaths?variant=45977784484059) for it.
 - [Bellroy Hide and Seek wallet](https://bellroy.com/products/hide-and-seek-wallet?color=black&material=leather_rfid&size=lo#slide-0). Maybe my favorite wallet I've owned, although the old Tom Bihn minimalist wallet was great.
 - An [Apple Watch Ultra 3](https://www.apple.com/apple-watch-ultra-3/). It's a ridiculous purchase, and sometimes I consider switching over to Garmin.
+- A custom-made leather cover for my [Fieldnote notebook](https://fieldnotesbrand.com/).
