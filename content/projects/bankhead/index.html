@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bankhead-Jones Act Lands</title>
+
+    <!--
+        Bankhead-Jones Farm Tenant Act (1937) — Interactive Map
+        ========================================================
+
+        This map visualizes two categories of federal lands acquired under
+        Title III of the Bankhead-Jones Farm Tenant Act, which authorized
+        the purchase of submarginal farmland during the Dust Bowl era:
+
+        1. National Grasslands (20 units, ~3.8M acres) — shown in green
+        2. Land Utilization Projects (46 parcels) — shown in gold
+
+        Both datasets are managed by the USDA Forest Service and were
+        fetched as GeoJSON from the Forest Service Enterprise Data
+        Warehouse (EDW) ArcGIS REST API:
+          - National Grasslands: EDW_ProclaimedForestsAndGrasslands_01/MapServer/1
+          - Land Utilization Projects: EDW_LandUtilizationProject_01/MapServer/0
+
+        Built with Leaflet.js and CARTO Light basemap tiles.
+    -->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        /* === Base reset and typography === */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', serif; }
+
+        /* === Page header === */
+        #header {
+            background: #2c3e2d;
+            color: #f5f0e8;
+            padding: 1.2rem 2rem;
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.5rem;
+        }
+        #header h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+        #header p {
+            font-size: 0.85rem;
+            color: #c4bfb3;
+            margin-top: 0;
+            font-family: sans-serif;
+            flex: 1;
+        }
+
+        /* === "About This Map" button in the header === */
+        #about-btn {
+            background: rgba(255,255,255,0.12);
+            color: #f5f0e8;
+            border: 1px solid rgba(255,255,255,0.25);
+            padding: 0.35rem 0.9rem;
+            border-radius: 4px;
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: background 0.15s;
+        }
+        #about-btn:hover {
+            background: rgba(255,255,255,0.22);
+        }
+
+        /* === About panel — slides over the map from the left === */
+        #about-panel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 420px;
+            max-width: 90vw;
+            height: calc(100vh - 80px);
+            margin-top: 80px;
+            background: #faf8f4;
+            z-index: 1000;
+            padding: 2rem 2rem 2.5rem;
+            overflow-y: auto;
+            box-shadow: 4px 0 20px rgba(0,0,0,0.15);
+            font-family: Georgia, serif;
+            font-size: 0.92rem;
+            line-height: 1.65;
+            color: #333;
+            transform: translateX(-105%);
+            transition: transform 0.3s ease;
+        }
+        #about-panel.open {
+            transform: translateX(0);
+        }
+        #about-panel h2 {
+            font-size: 1.2rem;
+            color: #2c3e2d;
+            margin: 0 0 1rem 0;
+        }
+        #about-panel h3 {
+            font-size: 0.95rem;
+            color: #2c3e2d;
+            margin: 1.5rem 0 0.6rem 0;
+        }
+        #about-panel p {
+            margin: 0 0 0.9rem 0;
+        }
+        #about-panel ul {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+        #about-panel li {
+            margin-bottom: 0.6rem;
+            font-family: sans-serif;
+            font-size: 0.82rem;
+            line-height: 1.5;
+        }
+        #about-panel a {
+            color: #2c6e3f;
+        }
+        .about-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #999;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0.2rem 0.5rem;
+        }
+        .about-close:hover {
+            color: #333;
+        }
+
+        /* === Map container — fills remaining viewport below header === */
+        #map {
+            height: calc(100vh - 80px);
+            width: 100%;
+        }
+
+        /* === Legend control (bottom-right) === */
+        .legend {
+            background: white;
+            padding: 12px 16px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            font-family: sans-serif;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        .legend h4 {
+            margin: 0 0 8px 0;
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .legend-swatch {
+            width: 18px;
+            height: 14px;
+            border-radius: 2px;
+            border: 1px solid rgba(0,0,0,0.2);
+            flex-shrink: 0;
+        }
+
+        /* === Hover info panel (top-right) — shows name/acres on mouseover === */
+        .info-panel {
+            background: white;
+            padding: 12px 16px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            font-family: sans-serif;
+            font-size: 13px;
+            max-width: 280px;
+        }
+        .info-panel h4 {
+            margin: 0 0 4px 0;
+            font-size: 14px;
+            color: #2c3e2d;
+        }
+        .info-panel .detail {
+            color: #666;
+            font-size: 12px;
+        }
+
+        /* === Click popup styling === */
+        .grassland-popup h3 {
+            font-family: Georgia, serif;
+            font-size: 15px;
+            color: #2c3e2d;
+            margin: 0 0 6px 0;
+        }
+        .grassland-popup .acres {
+            font-family: sans-serif;
+            font-size: 13px;
+            color: #555;
+        }
+        .grassland-popup .meta {
+            font-family: sans-serif;
+            font-size: 11px;
+            color: #888;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Lands Subject to the Bankhead-Jones Farm Tenant Act (1937)</h1>
+        <p>National Grasslands and Land Utilization Projects &mdash; USDA Forest Service</p>
+        <button id="about-btn" onclick="document.getElementById('about-panel').classList.toggle('open')" aria-label="About this map">About This Map</button>
+    </div>
+
+    <!-- ================================================================
+         About panel — slides in from the left over the map.
+         Contains historical context about the Bankhead-Jones Act,
+         a description of the two data layers, and source citations.
+    ================================================================= -->
+    <div id="about-panel">
+        <button class="about-close" onclick="document.getElementById('about-panel').classList.remove('open')" aria-label="Close panel">&times;</button>
+        <h2>About This Map</h2>
+
+        <p>
+            The <strong>Bankhead-Jones Farm Tenant Act</strong>, signed into law on July 22, 1937,
+            was one of the New Deal's major responses to the Dust Bowl crisis. Title III of the
+            act authorized the federal government to acquire "submarginal" farmland&mdash;land
+            that could not sustain productive agriculture&mdash;and repurpose it for conservation,
+            recreation, and managed grazing.
+        </p>
+
+        <p>
+            Through the Land Utilization Program, the government ultimately acquired approximately
+            <strong>11.3 million acres</strong> across the Great Plains and elsewhere. These lands
+            were initially managed by the Soil Conservation Service, then transferred between
+            several agencies before roughly 5.5 million acres came under the USDA Forest Service
+            in 1954. In 1960, Secretary of Agriculture Ezra Taft Benson designated 3.8 million of
+            those acres as <strong>National Grasslands</strong>&mdash;the 20 units shown in green
+            on this map.
+        </p>
+
+        <p>
+            The remaining Forest Service lands that were not designated as National Grasslands
+            persist as <strong>Land Utilization Projects</strong>, shown in gold. Other
+            Bankhead-Jones lands were transferred to the Bureau of Land Management, Fish and
+            Wildlife Service, Bureau of Indian Affairs, and National Park Service and are not
+            depicted here.
+        </p>
+
+        <p><em>This map was created with the assistance of Claude Code.</em></p>
+
+        <h3>Sources &amp; Citations</h3>
+        <ul>
+            <li>
+                National Grassland boundaries: USDA Forest Service,
+                <a href="https://data.fs.usda.gov/geodata/edw/datasets.php?dsetCategory=boundaries" target="_blank" rel="noopener">Enterprise Data Warehouse (EDW) Geodata Clearinghouse</a>.
+            </li>
+            <li>
+                Land Utilization Project boundaries: USDA Forest Service,
+                <a href="https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_LandUtilizationProject_01/MapServer/0" target="_blank" rel="noopener">EDW ArcGIS REST Services</a>.
+            </li>
+            <li>
+                For the broader history of Bankhead-Jones land transfers, see the Stanford University
+                Spatial History Project,
+                <a href="http://followthemoney.stanford.edu/pages/Bankhead_Jones_Other.html" target="_blank" rel="noopener">"Follow the Money: Bankhead-Jones Lands"</a>.
+            </li>
+            <li>
+                USDA Forest Service,
+                <a href="https://www.fs.usda.gov/managing-land/national-forests-grasslands/national-grasslands" target="_blank" rel="noopener">"National Grasslands"</a>.
+            </li>
+            <li>
+                36 CFR Part 213,
+                <a href="https://www.ecfr.gov/current/title-36/chapter-II/part-213" target="_blank" rel="noopener">"Administration of Lands Under Title III of the Bankhead-Jones Farm Tenant Act"</a>.
+            </li>
+        </ul>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // =====================================================================
+        // Initialize the Leaflet map
+        // Centered on the central Great Plains where most grasslands are located
+        // =====================================================================
+        const map = L.map('map', {
+            center: [44.876131434287494, -104.1121187229421],
+            zoom: 7,
+            zoomControl: true
+        });
+
+        // CARTO Light basemap — neutral gray tones so the colored layers stand out
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 19
+        }).addTo(map);
+
+        // =====================================================================
+        // Utility: format acreage numbers with commas (e.g., 1,025,335)
+        // =====================================================================
+        function fmtAcres(n) {
+            if (!n) return 'N/A';
+            return Math.round(n).toLocaleString();
+        }
+
+        // =====================================================================
+        // Layer styles
+        // Each layer has a default style and a highlight style for hover state.
+        // Borders use a thin stroke (0.75px) for subtlety at the national scale,
+        // thickening slightly (1.5px) on hover to indicate interactivity.
+        // =====================================================================
+
+        // National Grasslands — green tones
+        const grasslandStyle = {
+            color: '#2c6e3f',       // dark green border
+            weight: 0.75,
+            opacity: 0.9,
+            fillColor: '#4a9e5c',   // medium green fill
+            fillOpacity: 0.45
+        };
+
+        const grasslandHighlight = {
+            color: '#1a4d2e',       // darker green on hover
+            weight: 1.5,
+            fillOpacity: 0.65
+        };
+
+        // Land Utilization Projects — gold/amber tones
+        const lupStyle = {
+            color: '#8b6914',       // dark gold border
+            weight: 0.75,
+            opacity: 0.8,
+            fillColor: '#c9a94e',   // warm gold fill
+            fillOpacity: 0.4
+        };
+
+        const lupHighlight = {
+            color: '#6b4f0a',       // darker gold on hover
+            weight: 1.5,
+            fillOpacity: 0.6
+        };
+
+        // =====================================================================
+        // Info panel — a custom Leaflet control in the top-right corner
+        // Updates dynamically on hover to show the name and acreage of the
+        // currently highlighted feature. Resets to a prompt when not hovering.
+        // =====================================================================
+        const info = L.control({ position: 'topright' });
+
+        info.onAdd = function () {
+            this._div = L.DomUtil.create('div', 'info-panel');
+            this.update();
+            return this._div;
+        };
+
+        info.update = function (props, type) {
+            if (!props) {
+                // Default state — no feature hovered
+                this._div.innerHTML = '<h4>Bankhead-Jones Lands</h4><div class="detail">Hover over a unit for details</div>';
+            } else if (type === 'grassland') {
+                this._div.innerHTML = `
+                    <h4>${props.GRASSLANDNAME}</h4>
+                    <div class="detail">${fmtAcres(props.GIS_ACRES)} acres</div>
+                `;
+            } else {
+                // LUP features lack names in the API response, so we show a generic label
+                this._div.innerHTML = `
+                    <h4>Land Utilization Project</h4>
+                    <div class="detail">${fmtAcres(props.GIS_ACRES)} acres</div>
+                `;
+            }
+        };
+
+        info.addTo(map);
+
+        // =====================================================================
+        // Feature interaction callbacks
+        // Each GeoJSON layer gets: popup on click, highlight on hover,
+        // and zoom-to-fit on click.
+        // =====================================================================
+
+        /**
+         * Binds popup and hover/click behavior to each National Grassland feature.
+         * Popup shows grassland name, acreage, and managing agency.
+         */
+        function onEachGrassland(feature, layer) {
+            const p = feature.properties;
+            layer.bindPopup(`
+                <div class="grassland-popup">
+                    <h3>${p.GRASSLANDNAME}</h3>
+                    <div class="acres">${fmtAcres(p.GIS_ACRES)} acres</div>
+                    <div class="meta">National Grassland &middot; USDA Forest Service</div>
+                </div>
+            `);
+            layer.on({
+                mouseover: function (e) {
+                    e.target.setStyle(grasslandHighlight);
+                    e.target.bringToFront();
+                    info.update(p, 'grassland');
+                },
+                mouseout: function (e) {
+                    grasslandsLayer.resetStyle(e.target);
+                    info.update();
+                },
+                click: function (e) {
+                    map.fitBounds(e.target.getBounds(), { padding: [40, 40] });
+                }
+            });
+        }
+
+        /**
+         * Binds popup and hover/click behavior to each Land Utilization Project feature.
+         * LUP names are not available from the Forest Service REST API, so the popup
+         * shows a generic "Land Utilization Project" label with acreage.
+         */
+        function onEachLUP(feature, layer) {
+            const p = feature.properties;
+            layer.bindPopup(`
+                <div class="grassland-popup">
+                    <h3>Land Utilization Project</h3>
+                    <div class="acres">${fmtAcres(p.GIS_ACRES)} acres</div>
+                    <div class="meta">Bankhead-Jones Title III &middot; USDA Forest Service</div>
+                </div>
+            `);
+            layer.on({
+                mouseover: function (e) {
+                    e.target.setStyle(lupHighlight);
+                    e.target.bringToFront();
+                    info.update(p, 'lup');
+                },
+                mouseout: function (e) {
+                    lupLayer.resetStyle(e.target);
+                    info.update();
+                },
+                click: function (e) {
+                    map.fitBounds(e.target.getBounds(), { padding: [40, 40] });
+                }
+            });
+        }
+
+        // =====================================================================
+        // Load and render GeoJSON data
+        // Both files are fetched in parallel. LUPs are added first so that
+        // National Grasslands render on top (higher visual priority).
+        // After loading, a layer control is added so users can toggle each
+        // layer independently, and the map zooms to fit all features.
+        // =====================================================================
+        let grasslandsLayer, lupLayer;
+
+        Promise.all([
+            fetch('data/national_grasslands.geojson').then(r => r.json()),
+            fetch('data/land_utilization_projects.geojson').then(r => r.json())
+        ]).then(([grasslands, lups]) => {
+            // LUPs rendered first (underneath grasslands in z-order)
+            lupLayer = L.geoJSON(lups, {
+                style: lupStyle,
+                onEachFeature: onEachLUP
+            }).addTo(map);
+
+            // National Grasslands rendered on top
+            grasslandsLayer = L.geoJSON(grasslands, {
+                style: grasslandStyle,
+                onEachFeature: onEachGrassland
+            }).addTo(map);
+
+            // Layer toggle control — lets users show/hide each layer
+            const overlays = {
+                'National Grasslands': grasslandsLayer,
+                'Land Utilization Projects': lupLayer
+            };
+            L.control.layers(null, overlays, { position: 'topright', collapsed: false }).addTo(map);
+
+            // Note: initial view is set in the map constructor above
+            // (centered on the northern Great Plains). Users can zoom out to see all features.
+        });
+
+        // =====================================================================
+        // Legend control (bottom-right)
+        // Static legend showing the two land categories and their colors.
+        // =====================================================================
+        const legend = L.control({ position: 'bottomright' });
+
+        legend.onAdd = function () {
+            const div = L.DomUtil.create('div', 'legend');
+            div.innerHTML = `
+                <h4>Bankhead-Jones Lands</h4>
+                <div class="legend-item">
+                    <div class="legend-swatch" style="background: #4a9e5c; border-color: #2c6e3f;"></div>
+                    <span>National Grasslands (20 units)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-swatch" style="background: #c9a94e; border-color: #8b6914;"></div>
+                    <span>Land Utilization Projects</span>
+                </div>
+            `;
+            return div;
+        };
+
+        legend.addTo(map);
+    </script>
+</body>
+</html>
