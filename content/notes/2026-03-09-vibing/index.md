@@ -1,7 +1,7 @@
 ---
 title: Vibing Digital History
 date: 2026-03-09
-draft: true
+draft: false
 lede: What if it Just Works?
 tags:
   - artificial-intelligence
