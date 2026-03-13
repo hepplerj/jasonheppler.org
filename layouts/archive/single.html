@@ -6,20 +6,25 @@
 
     {{ .Content }}
 
+    <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Looking for my old tweets? See the <a href="/tweets/">tweet archive</a>.</p>
+
     <!-- Category/Tag Filter Pills -->
-    <div class="category-filters">
-      <a href="/archive/" class="category-pill active" data-category="all">All Posts</a>
-      {{ $blogPosts := where .Site.RegularPages "Section" "blog" }}
-      {{ $tags := slice }}
-      {{ range $blogPosts }}
-        {{ range .Params.tags }}
-          {{ $tags = $tags | append . }}
+    <details class="mb-6">
+      <summary class="cursor-pointer text-sm text-gray-500 dark:text-gray-400">Filter by tag</summary>
+      <div class="category-filters mt-3">
+        <a href="/archive/" class="category-pill active" data-category="all">All Posts</a>
+        {{ $blogPosts := where .Site.RegularPages "Section" "blog" }}
+        {{ $tags := slice }}
+        {{ range $blogPosts }}
+          {{ range .Params.tags }}
+            {{ $tags = $tags | append . }}
+          {{ end }}
         {{ end }}
-      {{ end }}
-      {{ range $tags | uniq | sort }}
-      <a href="#" class="category-pill" data-category="{{ . | urlize }}">{{ . | humanize | title }}</a>
-      {{ end }}
-    </div>
+        {{ range $tags | uniq | sort }}
+        <a href="#" class="category-pill" data-category="{{ . | urlize }}">{{ . | humanize | title }}</a>
+        {{ end }}
+      </div>
+    </details>
 
     <!-- Posts List -->
     <div class="writing">
