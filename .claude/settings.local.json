@@ -6,7 +6,10 @@
       "Bash(grep:*)",
       "Bash(xargs:*)",
       "Bash(find:*)",
-      "Bash(head:*)"
+      "Bash(head:*)",
+      "Bash(in2csv:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:social.jasonheppler.org)"
     ],
     "deny": [],
     "ask": []
