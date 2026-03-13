@@ -68,5 +68,8 @@ content/blog/.Ulysses-Group.plist
 # Obsidian Templater templates
 _templates/
 
+# Claude Code local settings
+.claude/
+
 # Raw tweet archive source files
 tweets/
