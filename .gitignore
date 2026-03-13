@@ -67,3 +67,6 @@ content/blog/.Ulysses-Group.plist
 
 # Obsidian Templater templates
 _templates/
+
+# Raw tweet archive source files
+tweets/

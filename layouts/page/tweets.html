@@ -1,0 +1,310 @@
+{{ partial "head.html" . }}
+
+<div class="pt-10 site-container content">
+  <div class="body">
+    <header>
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Content }}</p>
+    </header>
+
+    {{/* ── Compute per-month counts for the histogram ── */}}
+    {{ $tweets := site.Data.tweets }}
+
+    {{/* Tweet counts by year-month */}}
+    {{ $tweetMonthCounts := dict }}
+    {{ range $tweets }}
+      {{ $ym := substr .date 0 7 }}
+      {{ $prev := index $tweetMonthCounts $ym | default 0 }}
+      {{ $tweetMonthCounts = merge $tweetMonthCounts (dict $ym (add $prev 1)) }}
+    {{ end }}
+
+    {{/* Blog post counts by year-month (blog + notes + links sections) */}}
+    {{ $postMonthCounts := dict }}
+    {{ $sections := slice "blog" "notes" "links" }}
+    {{ range $sections }}
+      {{ range (where site.RegularPages "Section" .) }}
+        {{ $ym := .Date.Format "2006-01" }}
+        {{ if not (hasPrefix $ym "0001") }}
+          {{ $prev := index $postMonthCounts $ym | default 0 }}
+          {{ $postMonthCounts = merge $postMonthCounts (dict $ym (add $prev 1)) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{/* Micro.blog counts by year-month */}}
+    {{ $microMonthCounts := dict }}
+    {{ range site.Data.microblog }}
+      {{ $microMonthCounts = merge $microMonthCounts (dict .month .count) }}
+    {{ end }}
+
+    {{/* Build combined month list spanning all three datasets */}}
+    {{ $allMonths := slice }}
+    {{ range $ym, $_ := $tweetMonthCounts }}
+      {{ if not (in $allMonths $ym) }}{{ $allMonths = $allMonths | append $ym }}{{ end }}
+    {{ end }}
+    {{ range $ym, $_ := $postMonthCounts }}
+      {{ if not (in $allMonths $ym) }}{{ $allMonths = $allMonths | append $ym }}{{ end }}
+    {{ end }}
+    {{ range $ym, $_ := $microMonthCounts }}
+      {{ if not (in $allMonths $ym) }}{{ $allMonths = $allMonths | append $ym }}{{ end }}
+    {{ end }}
+    {{ $allMonths = sort $allMonths }}
+
+    {{/* Emit chart data as JSON */}}
+    {{ $chartData := slice }}
+    {{ range $allMonths }}
+      {{ $ym := . }}
+      {{ $tc := index $tweetMonthCounts $ym | default 0 }}
+      {{ $pc := index $postMonthCounts $ym | default 0 }}
+      {{ $mc := index $microMonthCounts $ym | default 0 }}
+      {{ if or (gt $tc 0) (or (gt $pc 0) (gt $mc 0)) }}
+        {{ $chartData = $chartData | append (dict "month" $ym "tweets" $tc "posts" $pc "microblog" $mc) }}
+      {{ end }}
+    {{ end }}
+
+    <div id="histogram" class="mb-8 overflow-x-auto"></div>
+    <script>
+      var _postMonthData = {{ $chartData | jsonify | safeJS }};
+    </script>
+
+    {{/* ── Year nav ── */}}
+    {{ $years := slice }}
+    {{ range $tweets }}
+      {{ $y := substr .date 0 4 }}
+      {{ if not (in $years $y) }}
+        {{ $years = $years | append $y }}
+      {{ end }}
+    {{ end }}
+    {{ $years = sort $years "value" "desc" }}
+
+    <div class="tweet-controls">
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-6 sm:items-center mb-4">
+        <input type="search" id="tweetSearch" placeholder="Search tweets…"
+          class="w-full sm:flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-transparent text-sm focus:outline-none focus:ring-1 focus:ring-gray-400" />
+        <label class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap cursor-pointer">
+          <input type="checkbox" id="hideReplies" class="rounded" checked /> Hide replies
+        </label>
+      </div>
+      <nav class="flex flex-wrap gap-2 mb-8 text-sm" aria-label="Jump to year">
+        {{ range $years }}
+        <a href="#year-{{ . }}" class="tweet-year-link px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 no-underline">{{ . }}</a>
+        {{ end }}
+      </nav>
+    </div>
+
+    <div id="tweetCount" class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+      {{ len $tweets | lang.FormatNumber 0 }} tweets
+    </div>
+
+    {{/* Month names lookup — keys are the zero-padded month strings */}}
+    {{ $monthNames := dict "01" "January" "02" "February" "03" "March" "04" "April" "05" "May" "06" "June" "07" "July" "08" "August" "09" "September" "10" "October" "11" "November" "12" "December" }}
+
+    {{/* Group tweets by year, then month */}}
+    {{ range $years }}
+      {{ $year := . }}
+      {{ $yearPrefix := printf "%s-" $year }}
+      <section id="year-{{ $year }}" class="tweet-year-section mb-10">
+        <h2 class="text-2xl font-bold mb-4 border-b border-gray-200 dark:border-gray-800 pb-2">{{ $year }}</h2>
+
+        {{/* Filter tweets for this year by string prefix */}}
+        {{ $yearTweets := slice }}
+        {{ range $tweets }}
+          {{ if hasPrefix .date $yearPrefix }}
+            {{ $yearTweets = $yearTweets | append . }}
+          {{ end }}
+        {{ end }}
+
+        {{/* Collect unique months */}}
+        {{ $months := slice }}
+        {{ range $yearTweets }}
+          {{ $m := substr .date 5 2 }}
+          {{ if not (in $months $m) }}
+            {{ $months = $months | append $m }}
+          {{ end }}
+        {{ end }}
+        {{ $months = sort $months }}
+
+        {{ range $months }}
+          {{ $month := . }}
+          {{ $ymPrefix := printf "%s-%s-" $year $month }}
+
+          {{/* Filter tweets for this month by string prefix */}}
+          {{ $monthTweets := slice }}
+          {{ range $yearTweets }}
+            {{ if hasPrefix .date $ymPrefix }}
+              {{ $monthTweets = $monthTweets | append . }}
+            {{ end }}
+          {{ end }}
+
+          <div class="tweet-month-section mb-6">
+            <h3 class="text-lg font-semibold text-gray-600 dark:text-gray-400 mb-3">{{ index $monthNames $month }}</h3>
+            <div class="space-y-3">
+              {{ range $monthTweets }}
+              {{ $d := time .date }}
+              {{ $tweetId := $d.Format "2006-01-02T150405" }}
+              <article id="t-{{ $tweetId }}" class="tweet-item py-3 border-b border-gray-100 dark:border-gray-800">
+                <p class="tweet-text mb-1 break-words">{{ .text }}</p>
+                <div class="flex items-center gap-3 text-xs text-gray-400 dark:text-gray-500">
+                  <a href="#t-{{ $tweetId }}" class="hover:text-gray-600 dark:hover:text-gray-300 no-underline"><time datetime="{{ .date }}">{{ $d.Format "Jan 2, 2006 3:04 PM" }}</time></a>
+                  {{ if .url }}
+                  <a href="{{ .url }}" class="hover:text-gray-600 dark:hover:text-gray-300 no-underline" target="_blank" rel="noopener">original</a>
+                  {{ end }}
+                </div>
+              </article>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </section>
+    {{ end }}
+  </div>
+</div>
+
+<a href="#" id="backToTop" class="fixed bottom-6 right-6 text-sm text-gray-400 dark:text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 no-underline opacity-0 transition-opacity duration-200 pointer-events-none z-20" aria-label="Back to top">&uarr; Top</a>
+
+<div class="site-container">
+  {{ partial "foot.html" . }}
+</div>
+
+<script type="module">
+import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
+
+const search = document.getElementById('tweetSearch');
+const hideRepliesBox = document.getElementById('hideReplies');
+const countEl = document.getElementById('tweetCount');
+const histEl = document.getElementById('histogram');
+const items = document.querySelectorAll('.tweet-item');
+const yearSections = document.querySelectorAll('.tweet-year-section');
+const monthSections = document.querySelectorAll('.tweet-month-section');
+
+// Static blog post + micro.blog data from Hugo
+const raw = typeof _postMonthData === "string" ? JSON.parse(_postMonthData) : _postMonthData;
+const postsByMonth = {};
+const microByMonth = {};
+raw.forEach(d => {
+  if (d.posts > 0) postsByMonth[d.month] = d.posts;
+  if (d.microblog > 0) microByMonth[d.month] = d.microblog;
+});
+
+const shortMonth = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function fmtYM(ym) {
+  const [y, m] = ym.split("-");
+  return shortMonth[parseInt(m, 10) - 1] + " " + y;
+}
+
+function buildChart() {
+  const isDark = document.documentElement.getAttribute("data-site-theme") === "dark"
+    || (!document.documentElement.getAttribute("data-site-theme")
+      && window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+  // Count visible tweets by year-month from the DOM
+  const tweetsByMonth = {};
+  items.forEach(item => {
+    if (item.style.display === 'none') return;
+    const dt = item.querySelector('time').getAttribute('datetime');
+    const ym = dt.slice(0, 7);
+    tweetsByMonth[ym] = (tweetsByMonth[ym] || 0) + 1;
+  });
+
+  // Merge all months
+  const allYM = new Set([
+    ...Object.keys(tweetsByMonth),
+    ...Object.keys(postsByMonth),
+    ...Object.keys(microByMonth)
+  ]);
+  const sorted = [...allYM].sort();
+
+  const data = [];
+  sorted.forEach(ym => {
+    const label = fmtYM(ym);
+    if (tweetsByMonth[ym]) data.push({ label, count: tweetsByMonth[ym], type: "Tweets" });
+    if (postsByMonth[ym]) data.push({ label, count: postsByMonth[ym], type: "Blog posts" });
+    if (microByMonth[ym]) data.push({ label, count: microByMonth[ym], type: "Micro.blog" });
+  });
+
+  const allLabels = sorted.map(fmtYM);
+  // Pick the first month present in each year as the tick position
+  const seenYears = new Set();
+  const tickValues = [];
+  const tickLabels = {};
+  allLabels.forEach(label => {
+    const year = label.split(" ")[1];
+    if (!seenYears.has(year)) {
+      seenYears.add(year);
+      tickValues.push(label);
+      tickLabels[label] = year;
+    }
+  });
+
+  const chart = Plot.plot({
+    width: Math.min(720, histEl.clientWidth),
+    height: 220,
+    marginBottom: 40,
+    x: { label: null, domain: allLabels, ticks: tickValues, tickFormat: d => tickLabels[d] || "", tickRotate: -45 },
+    y: { label: "Posts", grid: true },
+    color: {
+      domain: ["Tweets", "Blog posts", "Micro.blog"],
+      range: ["#1d9bf0", "#e5723f", "#f5c638"],
+      legend: true
+    },
+    style: {
+      background: "transparent",
+      color: isDark ? "#a1a1aa" : "#3f3f46",
+      fontSize: "12px"
+    },
+    marks: [
+      Plot.barY(data, Plot.groupX({y: "sum"}, {
+        x: "label",
+        y: "count",
+        fill: "type",
+        tip: true
+      })),
+      Plot.ruleY([0])
+    ]
+  });
+
+  histEl.replaceChildren(chart);
+}
+
+function applyFilters() {
+  const q = search.value.toLowerCase().trim();
+  const hideReplies = hideRepliesBox.checked;
+  let visible = 0;
+
+  items.forEach(item => {
+    const text = item.querySelector('.tweet-text').textContent;
+    const isReply = /^@\w/.test(text);
+    const matchesSearch = !q || text.toLowerCase().includes(q);
+    const show = matchesSearch && !(hideReplies && isReply);
+    item.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+
+  // Hide empty months and years
+  monthSections.forEach(ms => {
+    ms.style.display = ms.querySelector('.tweet-item:not([style*="display: none"])') ? '' : 'none';
+  });
+  yearSections.forEach(ys => {
+    ys.style.display = ys.querySelector('.tweet-item:not([style*="display: none"])') ? '' : 'none';
+  });
+
+  const suffix = (q || hideReplies) ? ' matching tweets' : ' tweets';
+  countEl.textContent = visible.toLocaleString() + suffix;
+
+  buildChart();
+}
+
+search.addEventListener('input', applyFilters);
+hideRepliesBox.addEventListener('change', applyFilters);
+
+// Initial render with default filters applied
+applyFilters();
+
+// Back to top button
+const btn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  const show = window.scrollY > 400;
+  btn.style.opacity = show ? '1' : '0';
+  btn.style.pointerEvents = show ? 'auto' : 'none';
+}, { passive: true });
+</script>
