@@ -333,6 +333,15 @@
             fillOpacity: 0.65
         };
 
+        // All Federal Lands — soft lavender background for context on light basemap
+        const fedlandStyle = {
+            color: '#8a7cb8',       // muted purple border
+            weight: 0.4,
+            opacity: 0.4,
+            fillColor: '#c4b8e0',   // light lavender fill
+            fillOpacity: 0.3
+        };
+
         // Land Utilization Projects — gold/amber tones
         const lupStyle = {
             color: '#8b6914',       // dark gold border
@@ -453,33 +462,38 @@
         // After loading, a layer control is added so users can toggle each
         // layer independently, and the map zooms to fit all features.
         // =====================================================================
-        let grasslandsLayer, lupLayer;
+        let grasslandsLayer, lupLayer, fedlandLayer;
 
         Promise.all([
             fetch('data/national_grasslands.geojson').then(r => r.json()),
-            fetch('data/land_utilization_projects.geojson').then(r => r.json())
-        ]).then(([grasslands, lups]) => {
-            // LUPs rendered first (underneath grasslands in z-order)
+            fetch('data/land_utilization_projects.geojson').then(r => r.json()),
+            fetch('data/federal_lands.geojson').then(r => r.json())
+        ]).then(([grasslands, lups, fedlands]) => {
+            // Federal lands rendered first (underneath everything) as light grey context
+            fedlandLayer = L.geoJSON(fedlands, {
+                style: fedlandStyle,
+                interactive: false   // no hover/click — purely contextual
+            }).addTo(map);
+
+            // LUPs rendered next
             lupLayer = L.geoJSON(lups, {
                 style: lupStyle,
                 onEachFeature: onEachLUP
             }).addTo(map);
 
-            // National Grasslands rendered on top
+            // National Grasslands rendered on top (highest visual priority)
             grasslandsLayer = L.geoJSON(grasslands, {
                 style: grasslandStyle,
                 onEachFeature: onEachGrassland
             }).addTo(map);
 
-            // Layer toggle control — lets users show/hide each layer
+            // Layer toggle control
             const overlays = {
                 'National Grasslands': grasslandsLayer,
-                'Land Utilization Projects': lupLayer
+                'Land Utilization Projects': lupLayer,
+                'All Federal Lands': fedlandLayer
             };
             L.control.layers(null, overlays, { position: 'topright', collapsed: false }).addTo(map);
-
-            // Note: initial view is set in the map constructor above
-            // (centered on the northern Great Plains). Users can zoom out to see all features.
         });
 
         // =====================================================================
@@ -499,6 +513,10 @@
                 <div class="legend-item">
                     <div class="legend-swatch" style="background: #c9a94e; border-color: #8b6914;"></div>
                     <span>Land Utilization Projects</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-swatch" style="background: #c4b8e0; border-color: #8a7cb8;"></div>
+                    <span>All Federal Lands</span>
                 </div>
             `;
             return div;
