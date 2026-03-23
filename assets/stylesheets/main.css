@@ -120,6 +120,7 @@
   --color-green-light: #4caf7d;
   --color-green-darker: #113d18;
   --color-orange: #eb5e28;
+  --color-rust: #9c3e14;
   --color-french-grey: #edeae6;
   --color-code-block: #f5f2f0;
   --color-sheet: #fffcf2;
@@ -159,6 +160,7 @@
   --color-green-light: #4caf7d;
   --color-green-darker: #113d18;
   --color-orange: #eb5e28;
+  --color-rust: #9c3e14;
   --color-french-grey: #edeae6;
   --color-code-block: #f5f2f0;
   --color-text: var(--color-black);
@@ -168,8 +170,8 @@
   --color-aside-faded: #eeeade;
   --theme-background: var(--color-background);
   --theme-text: var(--color-text);
-  --theme-links: var(--color-blue-bright);
-  --theme-links-hover: var(--color-blue-bright);
+  --theme-links: var(--color-rust);
+  --theme-links-hover: var(--color-rust);
   --theme-dark-tint: var(--color-grey);
   --theme-light-tint: var(--color-salt);
   --theme-mark: rgba(208, 162, 21, 0.2);
@@ -2106,7 +2108,7 @@ article.post {
 /* Default (mobile): footnotes appear below the article content */
 .footnotes {
   margin-top: 4em;
-  font-size: var(--type-small);
+  font-size: var(--type-xx-small);
   font-family: var(--font-sans);
   color: rgb(from var(--theme-text) r g b / 0.65);
 }
@@ -2119,7 +2121,7 @@ article.post {
   position: absolute;
   top: 0;
   left: calc(100% + 1.5rem);
-  font-size: var(--type-x-small);
+  font-size: var(--type-xx-small);
   /* Fills available right-margin space up to 260px (900px = .site-container max-width) */
   width: min(260px, calc((100vw - 900px) / 2 - 1.5rem));
   margin-top: 0;
@@ -2638,8 +2640,8 @@ article.post {
   --theme-text: var(--color-text);
   --color-aside: #fffefa;
   --color-aside-faded: #eeeade;
-  --theme-links: var(--color-blue-bright);
-  --theme-links-hover: var(--color-blue-bright);
+  --theme-links: var(--color-rust);
+  --theme-links-hover: var(--color-rust);
   --theme-dark-tint: var(--color-grey);
   --theme-light-tint: var(--color-salt);
   --theme-mark: rgba(208, 162, 21, 0.2);
@@ -2649,11 +2651,11 @@ article.post {
 }
 
 [data-site-theme="light"] a {
-  text-decoration-color: var(--color-blue-bright);
+  text-decoration-color: var(--color-rust);
 }
 
 [data-site-theme="light"] a:hover {
-  color: var(--color-blue-bright);
+  color: var(--color-rust);
 }
 
 
