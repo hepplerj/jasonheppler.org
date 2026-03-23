@@ -11,7 +11,7 @@ For a complete list of my scholarship, please see my [CV](https://jasonheppler.o
 
 # Books
 
-{{% book title="Silicon Valley and the Environmental Inequalities of High-Tech Urbanism" image="book_sv.jpg" year="2024" publisher="University of Oklahoma Press" %}}
+{{% book title="Silicon Valley and the Environmental Inequalities of High-Tech Urbanism" image="book_sv.webp" year="2024" publisher="University of Oklahoma Press" %}}
 
 Few places symbolize the twentieth century American West like Silicon Valley. Stretching between the communities of Palo Alto to San Jose, this dense California region is home to the nation's most consequential high-tech industrial corridor. In the four decades following World War II, the region rapidly transformed from an agricultural economy to an industrial one fueled by government funding into defense-related research and development. Boosters of the new industrialization promised a modern, clean, and future-facing economy in the wake of declining steel-age industries and an emerging space-age arms race. New industries drove new populations who flocked to the valley as much for work as they did for its pleasant environment.
 
@@ -21,7 +21,7 @@ Few places symbolize the twentieth century American West like Silicon Valley. St
 
 ---
 
-{{% book title="Digital Community Engagement: Partnering Communities with the Academy" image="dice.jpeg" year="2020" publisher="University of Cincinnati Press" url="https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement" %}}
+{{% book title="Digital Community Engagement: Partnering Communities with the Academy" image="dice.webp" year="2020" publisher="University of Cincinnati Press" url="https://ucincinnatipress.manifoldapp.org/projects/digital-community-engagement" %}}
 
 Edited with Rebecca Wingo and Paul Schadewald, our volume brings together cutting-edge campus-community partnerships with a focus on digital projects. Through a series of case studies authored by academics and their community partners, we explore models for digital community engagement that leverages new media through reciprocal partnerships. The contributions to the volume stand at the crossroads of digital humanities, public history, and community engagement, drawing ideas, methods, and practices from various disciplines to inform our public partnerships. By highlighting these projects we hope to provide other institutions, cultural heritage organizations, universities, and communities models for successful engagement.
 
@@ -31,7 +31,7 @@ Edited with Rebecca Wingo and Paul Schadewald, our volume brings together cuttin
 
 ---
 
-{{% book title="A Companion to Custer and the Little Bighorn Campaign" image="companion_custer.jpg" year="2015" publisher="Wiley" url="https://www.wiley.com/en-us/A+Companion+to+Custer+and+the+Little+Bighorn+Campaign-p-9781444351095" %}}
+{{% book title="A Companion to Custer and the Little Bighorn Campaign" image="companion_custer.webp" year="2015" publisher="Wiley" url="https://www.wiley.com/en-us/A+Companion+to+Custer+and+the+Little+Bighorn+Campaign-p-9781444351095" %}}
 
 Chapter, "The National Monument." This volume provides an accessible and authoritative overview of the scholarship that has shaped our understanding of one of the most iconic battles in the history of the American West. A chapter I contributed, co-authored with [Douglas Seefeldt](https://dougseefeldt.net/about-2/), examines the history of the National Monument. We examine the competing interpretations of Custer and the Battle of Little Bighorn among Native peoples, Custer enthusiasts, and the National Park Service. Over time, individuals and groups remember the past in different ways and compete with one another to shape the dominant public memory of an event or a place. Often these disparate interpretations become entangled with conversations about identity and society. The Little Bighorn Battlefield National Monument has long been the focus of passionate debates and roundly criticized for its one‐sided storytelling, encapsulated in its former name the _Custer Battlefield National Monument_. The constructed past at Little Bighorn has changed frequently since Little Bighorn. This essay examines the tangled process of making memory, landscape, and identity at the site of the Little Bighorn battlefield.
 
