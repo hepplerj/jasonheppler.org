@@ -24,7 +24,7 @@ I consider Framing Red Power a completed research project.
 
 ## ["Self-sustaining and a good citizen":  William F. Cody and the Progressive Wild West](https://progressivewildwest.org/)
 
-I was once the project manager for the [William F. Cody Archive](https://codyarchive.org) and a research affiliate with the [Buffalo Bill Center of the West](https://centerofthewest.org/) as Doug Seefeldt, Frank Christensen, Jeremy Johnson, and a few of my graduate school colleagues aimed to launch [Cody Studies](https://www.codystudies.org/) to examine the life and legacy of William F. Cody. In this role I pursued research on Indigenous peoples employed by his Wild West exhibition, resulting in the project above. I argued that while other scholars have suggested that employment with Cody allowed Indigenous peoples to continue practicing in cultural and religious traditions otherwise outlawed on reservations, Cody saw his exhibition nevertheless as a potential vehicle for the Progressive project of "civilizing" Native Americans. 
+I was once the project manager for the [William F. Cody Archive](https://codyarchive.org) and a research affiliate with the [Buffalo Bill Center of the West](https://centerofthewest.org/) as Doug Seefeldt, Frank Christianson, Jeremy Johnston, and a few of my graduate school colleagues aimed to launch [Cody Studies](https://www.codystudies.org/) to examine the life and legacy of William F. Cody. In this role I pursued research on Indigenous peoples employed by his Wild West exhibition, resulting in the project above. I argued that while other scholars have suggested that employment with Cody allowed Indigenous peoples to continue practicing in cultural and religious traditions otherwise outlawed on reservations, Cody saw his exhibition nevertheless as a potential vehicle for the Progressive project of "civilizing" Native Americans. 
 
 The first step here was getting the site converted to Hugo from Jekyll, which was pretty straightforward. The bigger task was to update a section of the site I called a [concept map of narrative themes](https://progressivewildwest.org/concept-map/): a way of visualizing [annotations](https://progressivewildwest.org/1913/07/28/letter-from-john-r.-brennan-to-cato-sells/) across primary sources that served to collect together pieces of evidence that drove my argument. Here's the kicker, though: this piece of scholarly work was two parts, where annotations existed in the transcribed sources and then the visualization was a hand-coded HTML page of those annotations. Nothing was automated, although that was always the idea; it was a tremendous amount of work. 
 
@@ -40,7 +40,7 @@ When I converted this to Hugo in 2024 right as my book was published, I'd moved 
 
 I consider this project done. 
 
-## [WhatIsDigitalHumanities.com](https://whatisdigitalhumanities.com/)
+## [What Is Digital Humanities?](https://whatisdigitalhumanities.com/)
 
 The most popular thing I've ever made, which takes definitions from past Day of DH events and presents a random definition each time you visit the page or ask for a new definition. Perpetual answers to the perpetual question, as I say. 
 
