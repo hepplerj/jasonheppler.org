@@ -6,8 +6,8 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
 
 <div class="intro-section">
   <div class="intro-content">
-      <h1>Writer &amp; Historian.</h1>
-    <p>Hi, I'm <a href="/about/">Jason A. Heppler</a>, environmental historian of the twentieth century North American West, Great Plains, and Canadian Prairies. I'm the senior developer-scholar at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> and an Affiliate Fellow at the <a href="https://www.unl.edu/plains/">Center for Great Plains Studies</a> at the <a href="https://www.unl.edu">University of Nebraska-Lincoln</a>.</p>
+      <h1>Historian of the American West, Great Plains, &amp; Canadian Prairies</h1>
+    <p>Hi, I'm <a href="/about/">Jason A. Heppler</a>, a digital and environmental historian writing about the twentieth century North American West, Great Plains, and Canadian Prairies. I'm the senior developer-scholar at the <a href="https://rrchnm.org/">Roy Rosenzweig Center for History and New Media</a> and an Affiliate Fellow at the <a href="https://www.unl.edu/plains/">Center for Great Plains Studies</a> at the <a href="https://www.unl.edu">University of Nebraska-Lincoln</a>.</p>
   </div>
   <div class="intro-photo">
     <img src="/assets/images/0C7A1451.webp" alt="Jason Heppler" class="author-photo">
