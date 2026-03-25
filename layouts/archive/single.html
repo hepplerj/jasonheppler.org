@@ -13,7 +13,7 @@
       <summary class="cursor-pointer text-sm text-gray-500 dark:text-gray-400">Filter by tag</summary>
       <div class="category-filters mt-3">
         <a href="/archive/" class="category-pill active" data-category="all">All Posts</a>
-        {{ $blogPosts := where .Site.RegularPages "Section" "blog" }}
+        {{ $blogPosts := where .Site.RegularPages "Section" "in" (slice "blog" "notes") }}
         {{ $tags := slice }}
         {{ range $blogPosts }}
           {{ range .Params.tags }}
@@ -29,7 +29,7 @@
     <!-- Posts List -->
     <div class="writing">
       <div class="posts-list">
-        {{ range (where .Site.RegularPages "Section" "blog") }}
+        {{ range (where .Site.RegularPages "Section" "in" (slice "blog" "notes")) }}
         {{ $urlizedTags := slice }}
         {{ range .Params.tags }}
           {{ $urlizedTags = $urlizedTags | append (. | urlize) }}
