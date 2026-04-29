@@ -23,36 +23,4 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
   </aside>
   </div>
 
-<hr/>
-
-<section class="latest-books">
-<h1>My latest books &mdash;</h1>
-
-<div class="book-grid">
-  <div class="book-grid-item">
-    <a class="book-grid-thumb" href="/publications/silicon-valley/">
-      <img src="/assets/images/book_sv.webp" alt="Silicon Valley and the Environmental Inequalities of High Tech Urbanism book cover" loading="lazy">
-    </a>
-    <div class="book-grid-info">
-      <p class="book-grid-title">Silicon Valley and the Environmental Inequalities of High-Tech Urbanism</p>
-      <div class="book-grid-desc">The environmental inequalities of Silicon Valley's post-World War II development.</div>
-      <p class="book-grid-more"><a href="/publications/silicon-valley/">More about this book</a></p>
-    </div>
-  </div>
-
-  <div class="book-grid-item">
-    <a class="book-grid-thumb" href="/publications/digital-community-engagement/">
-      <img src="/assets/images/dice.webp" alt="Digital Community Engagement book cover" loading="lazy">
-    </a>
-    <div class="book-grid-info">
-      <p class="book-grid-title">Digital Community Engagement</p>
-      <div class="book-grid-desc">Case studies on campus-community partnerships and the creation of digital humanities projects.</div>
-      <p class="book-grid-more"><a href="/publications/digital-community-engagement/">More about this book</a></p>
-    </div>
-  </div>
- </div>
-</section>
-
-Find more of my work on my [scholarship](/publications/) page or my <a href="https://jasonheppler.org/files/jah-cv.pdf">CV</a>.
-
 </div>

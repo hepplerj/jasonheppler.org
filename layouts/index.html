@@ -8,6 +8,40 @@
   </div>
 </div>
 
+<!-- My Latest Books -->
+<div class="site-container">
+  <section class="home-section">
+    <h1>My Latest Books &mdash;</h1>
+    <div class="home-pub-list">
+      {{ $featured := slice "silicon-valley" "digital-community-engagement" }}
+      {{ range $slug := $featured }}
+      {{ with site.GetPage (printf "/publications/%s" $slug) }}
+      <article class="home-pub-card">
+        <div class="home-pub-cover">
+          <a href="{{ .RelPermalink }}">
+            <img src="/assets/images/{{ .Params.image }}"
+                 alt="Cover of {{ .Title }}"
+                 loading="lazy" decoding="async">
+          </a>
+        </div>
+        <div class="home-pub-info">
+          <h2 class="home-pub-title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h2>
+          <p class="home-pub-meta">
+            {{ .Params.author }} &middot; {{ .Params.publisher }}, {{ .Params.year }}
+          </p>
+          <p class="home-pub-lede">{{ .Plain | truncate 220 }}</p>
+          <a href="{{ .RelPermalink }}" class="home-pub-link">More about this book &rarr;</a>
+        </div>
+      </article>
+      {{ end }}
+      {{ end }}
+    </div>
+    <p class="home-section-more"><a href="/publications/">All publications &rarr;</a></p>
+  </section>
+</div>
+
 <!-- Recent Essays -->
 <div class="site-container">
   <section class="home-section">
@@ -25,12 +59,6 @@
     </article>
     {{ end }}
     <p class="home-section-more"><a href="/blog/">All essays &rarr;</a></p>
-  </section>
-</div>
-
-<div class="site-container">
-  <section class="home-section">
-    <p class="home-tags-line">{{ with .Site.GetPage "/tags" }}{{ range $i, $tag := .Pages.ByTitle }}{{- if $i }} {{ end -}}{{ $count := len $tag.Pages }}{{ $tier := "t1" }}{{ if gt $count 3 }}{{ $tier = "t2" }}{{ end }}{{ if gt $count 8 }}{{ $tier = "t3" }}{{ end }}{{ if gt $count 20 }}{{ $tier = "t4" }}{{ end }}<a href="{{ $tag.RelPermalink }}" class="home-tag home-tag-{{ $tier }}">{{ $tag.Name | humanize | lower }}</a>{{ end }}{{ end }}</p>
   </section>
 </div>
 

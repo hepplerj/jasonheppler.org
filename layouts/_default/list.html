@@ -8,6 +8,7 @@
 
 {{ .Content }}
 
+{{ if not .Content }}
 <ul>
   {{ range where .Pages ".Params.hidden" "!=" "true" }}
   <li>
@@ -15,6 +16,7 @@
   </li>
   {{ end }}
 </ul>
+{{ end }}
   </div>
 </div>
 

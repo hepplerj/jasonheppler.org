@@ -459,8 +459,8 @@ a:hover {
 }
 
 /* External link popout indicator — scoped to body/content prose areas */
-.body a[href^="http"]:not([href*="jasonheppler.org"]):not([href*="localhost"])::after,
-.content a[href^="http"]:not([href*="jasonheppler.org"]):not([href*="localhost"])::after {
+.body a[href^="http"]:not([href*="jasonheppler.org"]):not([href*="localhost"]):not(:has(img))::after,
+.content a[href^="http"]:not([href*="jasonheppler.org"]):not([href*="localhost"]):not(:has(img))::after {
   content: '';
   display: inline-block;
   width: 0.7em;
@@ -1605,6 +1605,87 @@ figure.about-photo {
     .home-reading-author,
     .home-reading-year {
       white-space: normal;
+    }
+  }
+
+  /* Home page publication cards */
+  .home-pub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .home-pub-card {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .home-pub-cover {
+    flex-shrink: 0;
+    width: 160px;
+  }
+
+  .home-pub-cover img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 0 2px 12px rgb(0 0 0 / 0.15);
+  }
+
+  .home-pub-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .home-pub-title {
+    font-size: var(--type-base);
+    font-family: var(--font-serif);
+    font-weight: 600;
+    margin: 0 0 0.3rem;
+    line-height: 1.3;
+  }
+
+  .home-pub-title a {
+    text-decoration: none;
+    color: var(--theme-text);
+  }
+
+  .home-pub-title a:hover {
+    color: var(--theme-links-hover);
+  }
+
+  .home-pub-meta {
+    font-size: var(--type-x-small);
+    color: rgb(from var(--theme-text) r g b / 0.55);
+    margin: 0 0 0.75rem;
+  }
+
+  .home-pub-lede {
+    font-size: var(--type-small);
+    color: rgb(from var(--theme-text) r g b / 0.75);
+    margin: 0 0 0.75rem;
+    line-height: 1.55;
+  }
+
+  .home-pub-link {
+    font-size: var(--type-x-small);
+    text-decoration: none;
+    color: rgb(from var(--theme-text) r g b / 0.45);
+  }
+
+  .home-pub-link:hover {
+    color: var(--theme-links-hover);
+  }
+
+  @media (max-width: 768px) {
+    .home-pub-card {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .home-pub-cover {
+      width: 120px;
     }
   }
 
