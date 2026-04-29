@@ -125,7 +125,7 @@
             <div class="settings-nav-section">
                 <span class="settings-nav-heading">Indie Web</span>
                 <div class="settings-nav-links">
-                    <a href="https://social.jasonheppler.org">
+                    <a href="{{ .Site.Params.social.microblog }}">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                         Microblog
                     </a>
@@ -148,11 +148,11 @@
 
         <!-- Social / connect pills -->
         <div class="settings-social">
-            <a href="https://bsky.app/profile/jasonheppler.org" class="settings-social-link">
+            <a href="{{ .Site.Params.social.bluesky }}" class="settings-social-link">
                 <svg viewBox="0 0 568 501" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.209C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 328.678 536.444 409.386 459.89 489.343c-144.381 148.075-207.497-37.222-223.725-84.842-3.636-10.655-5.348-15.769-5.165-11.52-.183-4.249-1.895.865-5.531 11.52-16.228 47.62-79.344 232.917-223.725 84.842C-24.444 409.386 4.778 328.678 119.653 304.25c-65.72 11.185-139.6-7.295-159.875-79.748C-45.945 203.66-55.89 75.293-55.89 57.947-55.89-28.906 20.244-1.611 123.121 33.664Z"/></svg>
                 Bluesky
             </a>
-            <a href="https://buymeacoffee.com/jasonheppler" class="settings-social-link">
+            <a href="{{ .Site.Params.social.buymeacoffee }}" class="settings-social-link">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
                 Support My Work
             </a>

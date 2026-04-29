@@ -25,6 +25,10 @@ params:
   Author:
     name: Jason Heppler
     email: jason@jasonheppler.org
+  social:
+    bluesky: https://bsky.app/profile/jasonheppler.org
+    microblog: https://updates.jasonheppler.org
+    buymeacoffee: https://buymeacoffee.com/jasonheppler
 
 outputs:
   home:
@@ -90,7 +94,7 @@ menu:
       url: /courses/
       weight: 3
     - name: Blog
-      url: https://social.jasonheppler.org
+      url: https://updates.jasonheppler.org
       weight: 4
     - name: Newsletter
       weight: 5

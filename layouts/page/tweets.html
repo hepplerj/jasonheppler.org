@@ -8,7 +8,7 @@
     </header>
 
     {{/* ── Compute per-month counts for the histogram ── */}}
-    {{ $tweets := site.Data.tweets }}
+    {{ $tweets := hugo.Data.tweets }}
 
     {{/* Tweet counts by year-month */}}
     {{ $tweetMonthCounts := dict }}
@@ -33,7 +33,7 @@
 
     {{/* Micro.blog counts by year-month */}}
     {{ $microMonthCounts := dict }}
-    {{ range site.Data.microblog }}
+    {{ range hugo.Data.microblog }}
       {{ $microMonthCounts = merge $microMonthCounts (dict .month .count) }}
     {{ end }}
 
