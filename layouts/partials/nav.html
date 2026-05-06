@@ -105,10 +105,6 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                         Newsletter
                     </a>
-                    <a href="/now/">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        Now
-                    </a>
                     <a href="/uses/">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" /></svg>
                         Uses
@@ -125,10 +121,6 @@
             <div class="settings-nav-section">
                 <span class="settings-nav-heading">Indie Web</span>
                 <div class="settings-nav-links">
-                    <a href="{{ .Site.Params.social.microblog }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                        Microblog
-                    </a>
                     <a href="/blogroll/">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg>
                         Blogroll
@@ -152,6 +144,16 @@
                 <svg viewBox="0 0 568 501" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.209C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 328.678 536.444 409.386 459.89 489.343c-144.381 148.075-207.497-37.222-223.725-84.842-3.636-10.655-5.348-15.769-5.165-11.52-.183-4.249-1.895.865-5.531 11.52-16.228 47.62-79.344 232.917-223.725 84.842C-24.444 409.386 4.778 328.678 119.653 304.25c-65.72 11.185-139.6-7.295-159.875-79.748C-45.945 203.66-55.89 75.293-55.89 57.947-55.89-28.906 20.244-1.611 123.121 33.664Z"/></svg>
                 Bluesky
             </a>
+            <a href="{{ .Site.Params.social.mastodon }}" class="settings-social-link" rel="me">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M21.327 8.566c0-4.339-2.843-5.61-2.843-5.61-1.433-.658-3.894-.935-6.451-.956h-.063c-2.557.021-5.016.298-6.45.956 0 0-2.843 1.271-2.843 5.61 0 .993-.019 2.181.012 3.441.103 4.243.778 8.425 4.701 9.463 1.809.479 3.362.579 4.612.51 2.268-.126 3.541-.809 3.541-.809l-.075-1.646s-1.621.511-3.441.449c-1.804-.062-3.707-.194-3.999-2.409a4.523 4.523 0 0 1-.04-.621s1.77.432 4.014.535c1.372.063 2.658-.08 3.965-.236 2.506-.299 4.688-1.843 4.962-3.254.431-2.223.396-5.424.396-5.424ZM17.7 14h-2.185v-4.55c0-.96-.404-1.446-1.21-1.446-.892 0-1.339.578-1.339 1.72V12.1H10.79V9.724c0-1.142-.447-1.72-1.339-1.72-.806 0-1.21.486-1.21 1.446V14H6.056V9.293c0-.96.245-1.722.737-2.285.507-.563 1.172-.852 1.997-.852.954 0 1.676.367 2.149 1.099l.463.776.463-.776c.473-.732 1.196-1.099 2.149-1.099.825 0 1.49.289 1.998.852.49.563.736 1.325.736 2.285V14h-.048Z"/></svg>
+                Mastodon
+            </a>
+            <a href="{{ .Site.Params.social.microblog }}" class="settings-social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                Micro.blog
+            </a>
+        </div>
+        <div class="settings-social">
             <a href="{{ .Site.Params.social.buymeacoffee }}" class="settings-social-link">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
                 Support My Work
@@ -168,7 +170,7 @@
      */}}
 
         <!-- Version -->
-        <div class="settings-version">v.9.0.2</div>
+        <div class="settings-version">v.9.1.0</div>
 
     </div>
 </aside>
