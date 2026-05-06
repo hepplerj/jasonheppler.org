@@ -31,7 +31,7 @@
           <p class="home-pub-meta">
             {{ .Params.author }} &middot; {{ .Params.publisher }}, {{ .Params.year }}
           </p>
-          <p class="home-pub-lede">{{ .Plain | truncate 220 }}</p>
+          <p class="home-pub-lede">{{ .Plain | htmlUnescape | truncate 220 }}</p>
           <a href="{{ .RelPermalink }}" class="home-pub-link">More about this book &rarr;</a>
         </div>
       </article>
