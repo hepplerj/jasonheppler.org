@@ -15,7 +15,7 @@ A reference for the typographic scale, colors, and design patterns used througho
 
 ## Body text
 
-This is a paragraph of body text set in Source Serif 4 at the base reading size. Good typography makes long-form reading comfortable and unhurried. The measure is constrained to keep line lengths readable.
+This is a paragraph of body text set in Fraunces at the base reading size. Good typography makes long-form reading comfortable and unhurried. The measure is constrained to keep line lengths readable.
 
 **Bold text.** *Italic text.* ~~Strikethrough.~~ `Inline code.`
 
