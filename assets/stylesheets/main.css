@@ -383,8 +383,6 @@
   /* Breathing room between the header border and the first paragraph */
   .post-body {
     padding-top: 1.75em;
-    text-align: justify;
-    hyphens: auto;
   }
 
   /* Post body content — styles dynamic markdown output */
@@ -503,6 +501,10 @@ h1 {
   margin-bottom: .25em
 }
 
+.intro-content h1 {
+  font-size: calc(1.15em + .4vw);
+}
+
 h2 {
   font-size: calc(1em + .2vw);
   letter-spacing: -0.015em;
@@ -585,16 +587,16 @@ figure.about-photo {
 
 @layer components {
 
-  /* Fixed nav group — J.A.H. + hamburger stacked, top-right of viewport */
+  /* Fixed nav group — J.A.H. + MENU inline, top-left of viewport */
   .nav-trigger-group {
     position: fixed;
     top: 1.25rem;
-    right: 1.5rem;
+    left: 1.5rem;
     z-index: 100;
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.35rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   /* Home monogram */
@@ -670,18 +672,19 @@ figure.about-photo {
     color: var(--theme-background);
   }
 
-  /* Settings slide-out panel */
+  /* Settings slide-down panel */
   .settings-panel {
     position: fixed;
     top: 0;
+    left: 0;
     right: 0;
-    width: min(460px, 100dvw);
-    height: 100dvh;
+    width: 100%;
+    max-height: 100dvh;
     background: var(--panel-background);
     border: none;
     margin: 0;
     padding-top: 0;
-    transform: translateX(100%);
+    transform: translateY(-100%);
     transition: transform 0.25s ease;
     z-index: 200;
     overflow-y: auto;
@@ -690,8 +693,8 @@ figure.about-photo {
   }
 
   .settings-panel.open {
-    transform: translateX(0);
-    box-shadow: -6px 0 28px rgba(0, 0, 0, 0.15);
+    transform: translateY(0);
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.15);
   }
 
   .settings-panel-inner {
@@ -700,40 +703,48 @@ figure.about-photo {
     gap: 2rem;
   }
 
-  .settings-panel-close {
-    align-self: flex-end;
+  .settings-top-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
   }
 
-  .settings-panel-header {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+  .settings-panel-close {
+    flex-shrink: 0;
   }
 
   .settings-panel-name {
     font-weight: bold;
     font-size: 1.25rem;
     text-decoration: none;
+    white-space: nowrap;
+    margin-right: auto;
   }
 
-  .settings-panel-tagline {
-    font-size: var(--type-x-small);
-    color: rgb(from var(--theme-text) r g b / 0.6);
-    margin: 0;
+  .settings-top-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
   }
 
   .settings-panel-nav {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
   }
 
-  /* Two-column section: heading label | links */
+  @media (max-width: 640px) {
+    .settings-panel-nav {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Each nav section is a single column with heading above links */
   .settings-nav-section {
-    display: grid;
-    grid-template-columns: 5rem 1fr;
-    gap: 0.35rem 1rem;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
   }
 
   .settings-nav-heading {
@@ -742,7 +753,10 @@ figure.about-photo {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: rgb(from var(--theme-text) r g b / 0.38);
-    padding-top: 0.15rem;
+    padding-top: 0;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid rgb(from var(--theme-text) r g b / 0.1);
+    margin-bottom: 0.25rem;
     line-height: 1.5;
   }
 
@@ -829,14 +843,7 @@ figure.about-photo {
     flex-shrink: 0;
   }
 
-  .settings-panel-controls {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    border: 1px solid rgb(from var(--theme-text) r g b / 0.12);
-    border-radius: 8px;
-    padding: 0.75rem 1rem;
-  }
+  /* Legacy wrapper — controls now live in .settings-top-controls */
 
   .settings-footer-links {
     display: flex;
@@ -1129,6 +1136,29 @@ figure.about-photo {
     font-style: italic;
   }
 
+  /* Teaching / courses list */
+  .teaching > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid rgb(from var(--theme-text) r g b / 0.08);
+  }
+
+  .teaching > div > div:first-child {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .teaching > div > div:last-child {
+    flex-shrink: 0;
+    font-family: var(--font-mono);
+    font-size: var(--type-x-small);
+    color: rgb(from var(--theme-text) r g b / 0.5);
+    white-space: nowrap;
+  }
+
   /* Books list */
   .book-year-heading {
     font-family: var(--font-sans);
@@ -1389,7 +1419,6 @@ figure.about-photo {
   .intro-content {
     min-width: 0;
     /* Allows text to wrap properly */
-    text-align: justify;
     overflow-wrap: break-word;
     font-size: var(--type-medium);
   }
