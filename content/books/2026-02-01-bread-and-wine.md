@@ -6,5 +6,5 @@ date: 2017-01-01
 isbn: 9780874869262
 categories:
 - books
-- reading
+- read
 ---
