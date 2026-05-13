@@ -11,23 +11,16 @@
 <aside id="settings-panel" class="settings-panel" aria-label="Settings and navigation" aria-hidden="true">
     <div class="settings-panel-inner">
 
-        <!-- Close button -->
-        <button class="icon-btn settings-panel-close" id="panelClose" aria-label="Close panel">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-
-        <!-- Identity header -->
-        <div class="settings-panel-header">
-            <a href="/" class="settings-panel-name text-center">Jason A. Heppler</a>
-        </div>
-
-        <!-- Controls — theme/font-size row + system font toggle row -->
-        <div class="settings-panel-controls">
-            <div class="settings-row">
+        <!-- Top bar: close, name, controls -->
+        <div class="settings-top-bar">
+            <button class="icon-btn settings-panel-close" id="panelClose" aria-label="Close panel">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <a href="/" class="settings-panel-name">Jason A. Heppler</a>
+            <div class="settings-top-controls">
                 <button class="theme-switch" id="themeToggle" role="switch" aria-checked="false" aria-label="Toggle dark mode">
-                    <!-- Sun icon — left side, covered when light mode (unchecked) -->
                     <svg class="theme-switch-icon theme-switch-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <circle cx="12" cy="12" r="4"/>
                         <line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/>
@@ -35,7 +28,6 @@
                         <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/>
                         <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/>
                     </svg>
-                    <!-- Moon icon — right side, covered when dark mode (checked) -->
                     <svg class="theme-switch-icon theme-switch-icon--moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
                     </svg>
@@ -136,29 +128,29 @@
                 </div>
             </div>
 
-        </nav>
+            <div class="settings-nav-section">
+                <span class="settings-nav-heading">Connect</span>
+                <div class="settings-nav-links">
+                    <a href="{{ .Site.Params.social.bluesky }}">
+                        <svg viewBox="0 0 568 501" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.209C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 328.678 536.444 409.386 459.89 489.343c-144.381 148.075-207.497-37.222-223.725-84.842-3.636-10.655-5.348-15.769-5.165-11.52-.183-4.249-1.895.865-5.531 11.52-16.228 47.62-79.344 232.917-223.725 84.842C-24.444 409.386 4.778 328.678 119.653 304.25c-65.72 11.185-139.6-7.295-159.875-79.748C-45.945 203.66-55.89 75.293-55.89 57.947-55.89-28.906 20.244-1.611 123.121 33.664Z"/></svg>
+                        Bluesky
+                    </a>
+                    <a href="{{ .Site.Params.social.mastodon }}" rel="me">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M21.327 8.566c0-4.339-2.843-5.61-2.843-5.61-1.433-.658-3.894-.935-6.451-.956h-.063c-2.557.021-5.016.298-6.45.956 0 0-2.843 1.271-2.843 5.61 0 .993-.019 2.181.012 3.441.103 4.243.778 8.425 4.701 9.463 1.809.479 3.362.579 4.612.51 2.268-.126 3.541-.809 3.541-.809l-.075-1.646s-1.621.511-3.441.449c-1.804-.062-3.707-.194-3.999-2.409a4.523 4.523 0 0 1-.04-.621s1.77.432 4.014.535c1.372.063 2.658-.08 3.965-.236 2.506-.299 4.688-1.843 4.962-3.254.431-2.223.396-5.424.396-5.424ZM17.7 14h-2.185v-4.55c0-.96-.404-1.446-1.21-1.446-.892 0-1.339.578-1.339 1.72V12.1H10.79V9.724c0-1.142-.447-1.72-1.339-1.72-.806 0-1.21.486-1.21 1.446V14H6.056V9.293c0-.96.245-1.722.737-2.285.507-.563 1.172-.852 1.997-.852.954 0 1.676.367 2.149 1.099l.463.776.463-.776c.473-.732 1.196-1.099 2.149-1.099.825 0 1.49.289 1.998.852.49.563.736 1.325.736 2.285V14h-.048Z"/></svg>
+                        Mastodon
+                    </a>
+                    <a href="{{ .Site.Params.social.microblog }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                        Micro.blog
+                    </a>
+                    <a href="{{ .Site.Params.social.buymeacoffee }}">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
+                        Support My Work
+                    </a>
+                </div>
+            </div>
 
-        <!-- Social / connect pills -->
-        <div class="settings-social">
-            <a href="{{ .Site.Params.social.bluesky }}" class="settings-social-link">
-                <svg viewBox="0 0 568 501" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.209C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 328.678 536.444 409.386 459.89 489.343c-144.381 148.075-207.497-37.222-223.725-84.842-3.636-10.655-5.348-15.769-5.165-11.52-.183-4.249-1.895.865-5.531 11.52-16.228 47.62-79.344 232.917-223.725 84.842C-24.444 409.386 4.778 328.678 119.653 304.25c-65.72 11.185-139.6-7.295-159.875-79.748C-45.945 203.66-55.89 75.293-55.89 57.947-55.89-28.906 20.244-1.611 123.121 33.664Z"/></svg>
-                Bluesky
-            </a>
-            <a href="{{ .Site.Params.social.mastodon }}" class="settings-social-link" rel="me">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M21.327 8.566c0-4.339-2.843-5.61-2.843-5.61-1.433-.658-3.894-.935-6.451-.956h-.063c-2.557.021-5.016.298-6.45.956 0 0-2.843 1.271-2.843 5.61 0 .993-.019 2.181.012 3.441.103 4.243.778 8.425 4.701 9.463 1.809.479 3.362.579 4.612.51 2.268-.126 3.541-.809 3.541-.809l-.075-1.646s-1.621.511-3.441.449c-1.804-.062-3.707-.194-3.999-2.409a4.523 4.523 0 0 1-.04-.621s1.77.432 4.014.535c1.372.063 2.658-.08 3.965-.236 2.506-.299 4.688-1.843 4.962-3.254.431-2.223.396-5.424.396-5.424ZM17.7 14h-2.185v-4.55c0-.96-.404-1.446-1.21-1.446-.892 0-1.339.578-1.339 1.72V12.1H10.79V9.724c0-1.142-.447-1.72-1.339-1.72-.806 0-1.21.486-1.21 1.446V14H6.056V9.293c0-.96.245-1.722.737-2.285.507-.563 1.172-.852 1.997-.852.954 0 1.676.367 2.149 1.099l.463.776.463-.776c.473-.732 1.196-1.099 2.149-1.099.825 0 1.49.289 1.998.852.49.563.736 1.325.736 2.285V14h-.048Z"/></svg>
-                Mastodon
-            </a>
-            <a href="{{ .Site.Params.social.microblog }}" class="settings-social-link">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Micro.blog
-            </a>
-        </div>
-        <div class="settings-social">
-            <a href="{{ .Site.Params.social.buymeacoffee }}" class="settings-social-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
-                Support My Work
-            </a>
-        </div>
+        </nav>
 
         <!-- Footer text links -->
     {{/*
