@@ -18,7 +18,7 @@
       ISBN {{ .Params.isbn }} &mdash;
       <a href="https://worldcat.org/isbn/{{ .Params.isbn }}">WorldCat</a> &middot;
       <a href="https://openlibrary.org/isbn/{{ .Params.isbn }}">Open Library</a> &middot;
-      <a href="https://bookshop.org/books?keywords={{ .Params.isbn }}">Bookshop</a>
+      <a href="https://bookshop.org/beta-search?keywords={{ .Params.isbn }}">Bookshop</a>
       {{ with .Params.publisher }}&mdash; {{ . }}{{ end }}
     </div>
   </details>

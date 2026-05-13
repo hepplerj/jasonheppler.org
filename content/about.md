@@ -46,3 +46,5 @@ This website is built with the static site generator [Hugo](https://gohugo.io). 
 ## Support
 
 If you'd like to support my writing here and elsewhere, I'd love it if you could [buy me a coffee](https://www.buymeacoffee.com/jasonheppler).
+
+[Full archives →](/archive/)
