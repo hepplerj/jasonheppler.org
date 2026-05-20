@@ -1,10 +1,11 @@
 ---
 author: Jason Heppler
 date: 2011-10-25T09:27:33Z
-tags: [open-access]
+tags:
+  - academia
 title: The Obligation of Open Access
 url: /2011/10/25/the-obligation-of-open-access/
-lede: "I've signed the Open Access pledge."
+lede: I've signed the Open Access pledge.
 ---
 
 It's [open access week](http://www.openaccessweek.org/) and I've decided to make a new commitment to OA: I've signed the 

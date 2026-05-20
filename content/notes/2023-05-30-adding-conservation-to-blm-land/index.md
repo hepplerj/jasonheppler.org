@@ -1,12 +1,9 @@
 ---
-title: 'Adding Conservation to BLM Land '
+title: "Adding Conservation to BLM Land "
 date: 2023-05-30T15:05:13-0600
 lastmod: 2025-01-03T19:08:09-0600
 tags:
-- research
-- public lands
-- ranching
-- environment
+  - environmental-history
 ---
 
 > One thing opponents and proponents of a recently proposed U.S. Bureau of Land Management rule agree on: It would be a major shift in how the agency manages nearly 250 million acres of federal lands.

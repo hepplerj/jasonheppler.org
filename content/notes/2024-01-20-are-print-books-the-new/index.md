@@ -3,10 +3,8 @@ title: Are Print Books the New (Old) Authority?
 date: 2024-01-20T17:20:44-0600
 lastmod: 2026-01-10T21:46:10-0600
 tags:
-- artificial intelligence
-- academia
-lede: Thinking about the future of printed books and the need for authority in light
-  of inaccurate AI-generated content.
+  - artificial-intelligence
+lede: Thinking about the future of printed books and the need for authority in light of inaccurate AI-generated content.
 ---
 
 I’ve started pondering to what degree we’ll return to printed books, bookstores, and libraries in the face of inane and inaccurate AI-generated material flooding Amazon and the Internet. 

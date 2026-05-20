@@ -2,6 +2,8 @@
 title: Embracing the Limits
 date: 2022-11-18T16:49:22-0600
 lastmod: 2025-01-03T19:07:52-0600
+tags:
+  - personal
 ---
 
 With Twitter's impending demise I'm having some serious ideas about going [full Knuth](https://www-cs-faculty.stanford.edu/~knuth/email.html) with social media, with the exception of here at micro.blog. Famously, the renowned computer scientist Donald Knuth does not use email:

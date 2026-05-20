@@ -3,8 +3,7 @@ title: BootcampR
 date: 2020-02-19T10:27:12-0600
 lastmod: 2025-01-03T19:09:09-0600
 tags:
-- programming
-- teaching
+  - programming
 ---
 
 This semester I am piloting a new six-week workshop series on the R programming language called [BootcampR](https://jasonheppler.org/courses/bootcampr.2020/). 

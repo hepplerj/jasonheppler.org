@@ -5,7 +5,6 @@ draft: false
 lede: Using LLMs to clean up my early research projects
 tags:
   - digital-history
-  - development
 ---
 If there's one thing I've come to appreciate about generative AI, it's the ability to automate routine things. One of my digital history sites---[the first one I ever made](http://framingredpower.org/)---broke at some point. It's an old site that really should've always been a static site, but static site generators were not quite a thing when I first made this project. Instead, I had a mix of HTML and PHP that assembled the site.
 

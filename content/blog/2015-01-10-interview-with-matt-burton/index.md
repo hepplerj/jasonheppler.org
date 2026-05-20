@@ -1,8 +1,9 @@
 ---
-title: "Interview with Matt Burton"
+title: Interview with Matt Burton
 date: 2015-01-10
-tags: [digital-humanities, interview, career]
-lede: "My interview with Matt Burton."
+tags:
+  - digital-history
+lede: My interview with Matt Burton.
 ---
 
 **When did you start your blog (career wise: as a grad student, 

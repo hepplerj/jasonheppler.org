@@ -1,8 +1,9 @@
 ---
 date: 2011-01-07T14:16:47Z
-tags: [programming, ruby]
-series: "Rubyist Historian"
-title: 'The Rubyist Historian: Working With Advanced Data'
+tags:
+  - programming
+series: Rubyist Historian
+title: "The Rubyist Historian: Working With Advanced Data"
 url: /2011/01/07/the-rubyist-historian-working-with-advanced-data/
 wordpress_id: 1090
 wordpress_url: http://www.jasonheppler.org/?p=1090

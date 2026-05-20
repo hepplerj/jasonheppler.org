@@ -2,7 +2,7 @@
 date: '2022-12-07T21:57:19-06:00'
 external: "https://www.robinsloan.com/lab/new-avenues/" 
 title: 'New Avenues'
-tags: [web]
+tags: [indie-web]
 ---
 
 [Robin Sloan](https://www.robinsloan.com/lab/new-avenues/):

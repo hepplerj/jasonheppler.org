@@ -1,9 +1,10 @@
 ---
-title: "Reflections on Becoming a Django Developer"
-date: "2024-05-21T09:00:54-05:00"
-slug: "django-dev"
-lede: "Thoughts and experiences on becoming a Django developer."
-tags: [programming, django, python, golang, rrchnm]
+title: Reflections on Becoming a Django Developer
+date: 2024-05-21T09:00:54-05:00
+slug: django-dev
+lede: Thoughts and experiences on becoming a Django developer.
+tags:
+  - programming
 ---
 
 We are in the process of wrapping up our first Django-based web application at RRCHNM and I thought it'd be interesting to make a few notes about my experience using Django. Just over a year ago we made a shift in our technical stack at RRCHNM that is now centralized around Javascript, Go, and Python. We use this stack for powering various things we work on:

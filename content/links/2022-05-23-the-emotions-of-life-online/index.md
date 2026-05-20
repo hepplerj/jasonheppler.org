@@ -4,7 +4,7 @@ date: 2022-05-23T13:26:06-0600
 lastmod: 2022-05-23T13:26:06-0600
 tags:
 - web
-- indie web
+- indie-web
 - commonplace
 ---
 

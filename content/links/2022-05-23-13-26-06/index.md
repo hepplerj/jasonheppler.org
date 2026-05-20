@@ -2,7 +2,7 @@
 date: '2022-05-23T13:26:06-06:00'
 external: 'https://newpublic.substack.com/p/-robin-sloan-describing-the-emotions?s=r'
 title: 'The emotions of life online'
-tags: [web]
+tags: [indie-web]
 ---
 [Robin Sloan](https://newpublic.substack.com/p/-robin-sloan-describing-the-emotions?s=r):
 

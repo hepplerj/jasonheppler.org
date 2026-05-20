@@ -1,9 +1,10 @@
 ---
 date: 2011-10-05T19:11:35Z
-tags: [apple]
+tags:
+  - tech-life
 title: Remembering Steve Jobs
 url: /2011/10/05/remembering-steve-jobs/
-lede: "Apple, and Steve, played a huge role in my life."
+lede: Apple, and Steve, played a huge role in my life.
 ---
 
 Tim Cook's <a

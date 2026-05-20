@@ -3,7 +3,7 @@ title: Owning Your Domain
 date: 2022-05-24T14:10:06-0600
 lastmod: 2022-05-24T14:10:06-0600
 tags:
-- indie web
+- indie-web
 - commonplace
 ---
 

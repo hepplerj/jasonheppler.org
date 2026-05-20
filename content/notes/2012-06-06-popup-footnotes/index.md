@@ -1,9 +1,10 @@
 ---
 date: 2012-06-06T09:26:20Z
-tags: [programming, jquery, javascript]
+tags:
+  - programming
 title: Popup Footnotes
 url: /2012/06/06/popup-footnotes/
-lede: "A jQuery script for creating pop-up footnotes."
+lede: A jQuery script for creating pop-up footnotes.
 ---
 
 After discovering [this post](http://www.leancrew.com/all-this/2010/05/a-small-popup-footnote-change/) by Dr. Drang about popup footnotes, I've added the feature to my blog. Now, thanks to some jQuery, when you hover your mouse over a footnote link you'll see a popup box.[^1]

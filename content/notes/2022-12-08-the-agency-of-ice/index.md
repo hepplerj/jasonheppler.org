@@ -3,8 +3,8 @@ title: The Agency of Ice
 date: 2022-12-08T21:53:04-0600
 lastmod: 2022-12-08T21:53:04-0600
 tags:
-- environment
-- commonplace
+  - personal
+  - environmental-history
 ---
 
 [Jen Rose Smith](https://thefunambulist.net/magazine/the-land/racialization-and-resistance-in-the-ice-geographies-of-the-arctic-and-colonized-alaska), on her new book-in-progress:

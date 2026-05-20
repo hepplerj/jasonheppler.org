@@ -1,8 +1,9 @@
 ---
 date: 2011-01-08T14:50:41Z
-tags: [programming, ruby]
-series: "Rubyist Historian"
-title: 'The Rubyist Historian: Randomness'
+tags:
+  - programming
+series: Rubyist Historian
+title: "The Rubyist Historian: Randomness"
 url: /2011/01/08/the-rubyist-historian-iteration-recursion-and-other-randomness/
 wordpress_id: 859
 wordpress_url: http://www.jasonheppler.org/?p=859

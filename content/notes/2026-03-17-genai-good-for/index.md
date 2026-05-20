@@ -3,7 +3,8 @@ title: The Tension of Generative AI
 date: 2026-03-17
 draft: true
 lede: There are tasks it's genuinely good at, and many tasks it's very bad at.
-tags: []
+tags:
+  - artificial-intelligence
 ---
 I think there's an inherent tension currently in the discourses around generative AI---on a "is this useful" level, but lets also acknowledge the deep ethical and environmental issues here too. On the one hand, it's very, very good at some things if you are providing the experience and expertise necessary to know what you're asking it to do (and, thus, can see what it's getting wrong). I think this has been true since generative systems started taking off. But I cannot deny that, on the digital history side of things, these tools are remarkable.
 

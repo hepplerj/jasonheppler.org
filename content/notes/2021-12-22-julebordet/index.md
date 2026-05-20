@@ -1,7 +1,9 @@
 ---
-title: 'Julebordet '
+title: "Julebordet "
 date: 2021-12-22T14:52:11-0600
 lastmod: 2025-01-03T19:07:49-0600
+tags:
+  - personal
 ---
 
 We're just a few days away from Christmas, and while there's a lot I love about this time of year -- the people, the cold weather, snow (although, not this year...), extra time at home with the kids -- food often takes center stage. We spend much of December baking and cooking things that are only made during this time of year, both for our household and for others. For at least ten years now, my beloved and I bake sweets and candies as Christmas gifts to our family and close friends. It's a tradition both us and our families look forward to. 

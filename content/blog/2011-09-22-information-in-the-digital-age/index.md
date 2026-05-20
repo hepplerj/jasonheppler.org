@@ -1,9 +1,10 @@
 ---
 date: 2011-09-22T09:23:33Z
-tags: [academia, data]
+tags:
+  - digital-history
 title: Information and Data in the Digital Age
 url: /2011/09/22/information-in-the-digital-age/
-lede: "A reflection on data for HIST946."
+lede: A reflection on data for HIST946.
 ---
 
 <aside><p>This is a reading reflection written for HIST946: Digital Humanities with Professor William Thomas during the Fall 2011 semester. This week's readings were John Brown and Paul Duguid, <em><a href="http://www.amazon.com/Social-Life-Information-Seely-Brown/dp/0875847625">The Social Life of Information</a></em>, Michel et al., "<a href="http://www.sciencemag.org/content/331/6014/176">Quantitative Analysis of Culture Using Millions of Digitized Books</a>," and Roy Rosenzweig, "<a href="http://chnm.gmu.edu/essays-on-history-new-media/essays/?essayid=6">Scarcity or Abudance? Preserving the Past in a Digital Era</a>". You can find related posts <a href="http://jasonheppler.org/the-digital-humanities-seminar.html">here</a>.</p></aside>

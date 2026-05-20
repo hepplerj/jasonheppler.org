@@ -1,10 +1,11 @@
 ---
 date: 2009-09-07T07:43:59Z
-tags: [review, maps]
-title: 'Tool Review: Google Earth for Digital Historians'
+tags:
+  - digital-history
+title: "Tool Review: Google Earth for Digital Historians"
 url: /2009/09/07/tool-review-google-earth-for-digital-historians/
 wordpress_id: 59
-lede: "How Google Earth might be used by historians."
+lede: How Google Earth might be used by historians.
 ---
 
 <em>[Review cross-posted at <a href="http://digitalhistory.unl.edu/t-reviews/geheppler.html">Digital History</a> and originally written in HIST 970: Digital History.]</em>

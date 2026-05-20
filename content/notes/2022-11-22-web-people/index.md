@@ -3,8 +3,7 @@ title: Web People
 date: 2022-11-22T11:07:46-0600
 lastmod: 2025-01-03T22:06:43-0600
 tags:
-- web
-- commonplace
+  - indie-web
 ---
 
 Meg Hourihan, [writing in 2000](https://megnut.com/2000/04/14/ive-been-thinking-a-lot/):

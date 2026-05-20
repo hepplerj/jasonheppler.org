@@ -55,7 +55,7 @@
 <div class="site-container hp-section">
   <h2 class="hp-section-heading">Books</h2>
   <div class="hp-books-row">
-    {{ $pubs := where site.RegularPages "Section" "publications" }}
+    {{ $pubs := (where site.RegularPages "Section" "publications").ByDate.Reverse }}
     {{ range where $pubs ".Params.image" "ne" nil }}
     <a href="{{ .RelPermalink }}" class="hp-book-card">
       <img src="/assets/images/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" decoding="async">
@@ -68,18 +68,16 @@
 
 <!-- D: Current Reading -->
 <div class="site-container hp-section">
-  <h2 class="hp-section-heading">Currently Reading</h2>
-  <div class="hp-reading-row">
-    {{ range first 5 (where site.RegularPages "Section" "books") }}
-    <div class="hp-reading-card">
-      {{ with .Params.isbn }}
-      <img src="https://covers.openlibrary.org/b/isbn/{{ . }}-M.jpg" alt="{{ $.Title }}" loading="lazy" decoding="async">
-      {{ end }}
-      <span class="hp-reading-card-title">{{ .Title }}</span>
-      <span class="hp-reading-card-author">{{ .Params.author }}</span>
-    </div>
+  <h2 class="hp-section-heading">Recent Reading</h2>
+  <ul class="hp-reading-list">
+    {{ range first 6 (where site.RegularPages "Section" "books") }}
+    <li class="hp-reading-item">
+      <span class="hp-reading-title">{{ .Title }}</span>
+      <span class="hp-reading-author">{{ .Params.author }}</span>
+      <span class="hp-reading-year">{{ .Params.pub_year }}</span>
+    </li>
     {{ end }}
-  </div>
+  </ul>
   <p class="hp-section-more"><a href="/books/">All books &rarr;</a></p>
 </div>
 
@@ -87,16 +85,18 @@
 {{ $topics := slice
   (dict "slug" "digital-history" "name" "Digital History")
   (dict "slug" "programming"     "name" "Programming")
-  (dict "slug" "web"             "name" "Web")
-  (dict "slug" "personal"        "name" "Personal")
+(dict "slug" "personal"        "name" "Personal")
   (dict "slug" "tech-life"       "name" "Tech Life")
   (dict "slug" "academia"        "name" "Academia")
-  (dict "slug" "writing"         "name" "Writing")
-  (dict "slug" "research"        "name" "Research")
+  (dict "slug" "artificial-intelligence" "name" "Artificial Intelligence")
+  (dict "slug" "environmental-history"  "name" "Environmental History")
+  (dict "slug" "plain-text"             "name" "Plain Text")
+  (dict "slug" "place"                  "name" "Place")
   (dict "slug" "indie-web"       "name" "Indie Web")
 }}
 
 <div class="site-container hp-topics">
+<h2 class="hp-section-heading">Writing</h2>
   {{ range $topics }}
     {{ $slug := .slug }}
     {{ $name := .name }}
@@ -120,6 +120,10 @@
     </section>
     {{ end }}
   {{ end }}
+</div>
+
+<div class="site-container">
+  <p class="hp-section-more"><a href="http://localhost:1313/archive/">Full chronological archive &rarr;</a></p>
 </div>
 
 <div class="site-container">

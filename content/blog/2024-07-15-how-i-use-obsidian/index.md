@@ -1,9 +1,10 @@
 ---
-title: "How I Use Obsidian"
-date: "2024-07-15T12:22:49-05:00"
-slug: "how-i-use-obsidian"
-lede: "Creating my research and note-taking environment"
-tags: [obsidian, research]
+title: How I Use Obsidian
+date: 2024-07-15T12:22:49-05:00
+slug: how-i-use-obsidian
+lede: Creating my research and note-taking environment
+tags:
+  - plain-text
 ---
 
 I mentioned on [my recent appearance on Drafting the Past](https://draftingthepast.com/podcast-episodes/episode-45-jason-heppler-wants-tools-that-fit-his-questions/) that I have migrated all of my historical research work into Obsidian, which prompted a few folks on Bluesky to ask about some details on how I use it. Here's a run-down of what that's like from the perspective of writing and historical research.

@@ -3,8 +3,7 @@ title: How I Use Obsidian Redux
 date: 2026-01-08T07:53:45-0600
 lastmod: 2026-01-09T09:07:32-0600
 tags:
-- tech life
-- academia
+  - plain-text
 lede: An update on how I use Obsidian for historical research.
 ---
 

@@ -1,11 +1,12 @@
 ---
 date: 2014-06-04T06:46:47Z
-description: null
+description:
 image: dhsi2014_game.webp
-tags: [conference, dhsi]
+tags:
+  - digital-history
 title: What Does Missile Command Have to do with Digital History?
 url: /2014/06/04/what-does-missile-command-have-to-do-with-digital-history/
-lede: "What can an old arcade game tell us about history in the digital age?"
+lede: What can an old arcade game tell us about history in the digital age?
 ---
 
 I am spending the week at the University of Victoria for this year's [Digital

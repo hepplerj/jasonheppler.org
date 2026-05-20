@@ -2,6 +2,8 @@
 title: A Day of Mourning
 date: 2021-11-25T07:58:15-0600
 lastmod: 2025-01-03T19:07:49-0600
+tags:
+  - academia
 ---
 
 Take a moment today to consider why today is a national day of mourning for Indigenous peoples.

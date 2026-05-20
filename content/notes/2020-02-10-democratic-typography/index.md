@@ -3,8 +3,7 @@ title: Democratic Typography
 date: 2020-02-10T15:22:38-0600
 lastmod: 2025-01-03T19:09:09-0600
 tags:
-- design
-- politics
+  - personal
 ---
 
 <a data-fancybox="gallery" href="45f6d9651e.webp"><img src="45f6d9651e.webp"></a>

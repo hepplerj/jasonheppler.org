@@ -1,9 +1,10 @@
 ---
 date: 2012-04-25T21:44:48Z
-tags: [coffee, linkblog]
+tags:
+  - personal
 title: Adam Lisagor's AeroPress Tribute
 url: /2012/04/25/adam-lisagors-aeropress-tribute/
-lede: "How Adam Lisagor makes his coffee."
+lede: How Adam Lisagor makes his coffee.
 ---
 
 <iframe src="http://player.vimeo.com/video/40980282" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>

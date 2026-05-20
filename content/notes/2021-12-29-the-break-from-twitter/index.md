@@ -2,6 +2,8 @@
 title: The Break from Twitter
 date: 2021-12-29T21:40:54-0600
 lastmod: 2025-01-03T19:07:49-0600
+tags:
+  - personal
 ---
 
 During Advent, I decided to take a break from Twitter. I've dipped a toe back in here and there over the past few days, but honestly I might keep away for the most part. Twitter might become, in some tortured computer lingo, more of a _write_ space rather than a _read_ space: a place to broadcast my writing, projects, the work of my colleagues, and so forth, rather than something I mindlessly scroll or jump to out of habit anytime I open a new Safari tab. If I continue to use Twitter much as a reading space, I might lean much more heavily in Twitter Lists (which were already a common way for me to use the platform). 

@@ -3,11 +3,9 @@ title: Own Your Turf
 date: 2025-01-21T22:24:34-0600
 lastmod: 2026-01-07T09:29:34-0600
 tags:
-- web
-- indie web
-- twoquotes
-lede: The urgent need for decentralized social media platforms that resist censorship
-  and allow user control has become increasingly clear.
+  - indie-web
+  - twoquotes
+lede: The urgent need for decentralized social media platforms that resist censorship and allow user control has become increasingly clear.
 ---
 
 [Jason Koebler](https://www.404media.co/decentralized-social-media-is-the-only-alternative-to-the-tech-oligarchy/):

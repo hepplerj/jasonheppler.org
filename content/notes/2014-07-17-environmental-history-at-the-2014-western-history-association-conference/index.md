@@ -1,10 +1,11 @@
 ---
 date: 2014-07-17T15:22:41Z
 post_type: Shorts
-tags: [conference, western-history-association]
+tags:
+  - academia
 title: Environmental History at the 2014 Western History Association Conference
 url: /2014/07/17/environmental-history-at-the-2014-western-history-association-conference/
-lede: "Here's the panels about environmental history at the WHA this year."
+lede: Here's the panels about environmental history at the WHA this year.
 ---
 
 I'm stealing an idea from my friend and fellow Husker Brenden Rensink. Brenden [just wrote a post](http://www.bwrensink.org/2014/07/15/borderlands-and-transnational-history-at-the-2014-western-history-association-conference/) summarizing borderlands and transnational history panels---his area of study---at the Western History Association Conference this year. I thought I'd do similar with environmental history.

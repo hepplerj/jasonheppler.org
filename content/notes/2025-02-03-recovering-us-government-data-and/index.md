@@ -3,11 +3,8 @@ title: Recovering U.S. Government Data and Websites
 date: 2025-02-03T12:31:40-0600
 lastmod: 2026-01-07T09:28:02-0600
 tags:
-- data
-- advocacy
-lede: Endangered Data Week was founded to address threats to publicly available data,
-  and while it has ended, efforts to archive vulnerable datasets continue, as highlighted
-  by a recent NY Times article on missing government websites.
+  - academia
+lede: Endangered Data Week was founded to address threats to publicly available data, and while it has ended, efforts to archive vulnerable datasets continue, as highlighted by a recent NY Times article on missing government websites.
 ---
 
 A number of years ago I founded, along with Brandon Locke and Sarah Melton, [Endangered Data Week](https://endangereddataweek.org), designed to highlight threats to publicly available data as well as train folks to work with data. And while EDW wound down in 2020, the work and skills remain essential. The [End of Term Web Archiving team](https://eotarchive.org/) has been working hard to archive datasets and government websites that were at risk of being taken offline or have gone offline since January 20, as have the good folks over at [r/DataHoarder](https://www.reddit.com/r/DataHoarder/). 

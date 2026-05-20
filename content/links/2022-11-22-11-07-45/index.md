@@ -2,7 +2,7 @@
 date: '2022-11-22T11:07:46-06:00'
 external: 'https://megnut.com/2000/04/14/ive-been-thinking-a-lot/'
 title: 'Web People'
-tags: [web]
+tags: [indie-web]
 ---
 Meg Hourihan, writing in 2000: 
 

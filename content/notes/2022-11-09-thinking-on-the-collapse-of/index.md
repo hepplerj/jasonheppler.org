@@ -3,8 +3,7 @@ title: Thinking on the Collapse of Twitter
 date: 2022-11-09T09:18:05-0600
 lastmod: 2025-01-03T22:07:57-0600
 tags:
-- web
-- commonplace
+  - indie-web
 ---
 
 [Robin Sloan](https://www.robinsloan.com/lab/specifying-spring-83/#summer) on his proposed protocol, Spring '83:

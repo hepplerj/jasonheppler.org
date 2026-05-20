@@ -1,9 +1,10 @@
 ---
 date: 2011-08-29T12:55:34Z
-tags: [digital-humanities]
+tags:
+  - digital-history
 title: The Digital Humanities Seminar
 url: /2011/08/29/the-digital-humanities-seminar/
-lede: "An overview of my coursework for HIST946."
+lede: An overview of my coursework for HIST946.
 ---
 
 This semester I am enrolled in a [reading seminar on digital humanities](https://railroads.unl.edu/blog/wp-content/uploads/2011/08/946seminar.syllabus.pdf) with [Professor William Thomas](https://railroads.unl.edu/blog/?p=548). The course is shaping up to be quite exciting: in addition to getting a better grasp on a wider range of digital humanities issues through our readings, we're also building an iOS application in our first month. We will also be having visits with leaders in the field, including Robert Nelson at the University of Richmond, Stefan Sinclair at McGill University, and Lisa Spiro at NITLE Labs.

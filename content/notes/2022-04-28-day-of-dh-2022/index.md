@@ -1,9 +1,10 @@
 ---
-title: 'Day of DH 2022'
+title: Day of DH 2022
 date: 2022-04-28T14:43:31-05:00
-slug: 'day-of-dh-2022'
-tags: [digital-humanities]
-lede: "My Day of Digital Humanities for 2022."
+slug: day-of-dh-2022
+tags:
+  - digital-history
+lede: My Day of Digital Humanities for 2022.
 ---
 
 <aside>

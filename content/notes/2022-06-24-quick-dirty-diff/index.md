@@ -1,11 +1,12 @@
 ---
-title: 'Developer Notes: A quick and dirty text diff'
+title: "Developer Notes: A quick and dirty text diff"
 date: 2022-06-24T10:14:58-05:00
-slug: 'quick-dirty-diff'
+slug: quick-dirty-diff
 series:
-- developer-notes
-tags: [development, programming]
-lede: "Ever need to compare two pieces of text? There's an easy way to do it in VSCode."
+  - developer-notes
+tags:
+  - programming
+lede: Ever need to compare two pieces of text? There's an easy way to do it in VSCode.
 ---
 
 <aside>

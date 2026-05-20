@@ -1,9 +1,10 @@
 ---
 date: 2013-12-17T19:45:10Z
-tags: [digital-history, interview]
+tags:
+  - digital-history
 title: Digital History Interview with BlogWest
 url: /2013/12/17/digital-history-for-blogwest/
-lede: "My interview with Michael Childers at BlogWest."
+lede: My interview with Michael Childers at BlogWest.
 ---
 
 <aside><p>This post originally appeared at <a href="http://blogwest.org/2013/12/16/a-conversation-with-jason-heppler/">BlogWest</a> on 2013-12-16. Thanks to my friend Michael Childers for his invitation to participate!</p></aside>

@@ -1,9 +1,10 @@
 ---
-tags: [digital-humanities]
+tags:
+  - digital-history
 date: 2013-01-08T09:35:31Z
 title: Defining Digital Humanities
 url: /2013/01/08/defining-digital-humanities/
-lede: "My new project providing perpetual answers to the perpetual question."
+lede: My new project providing perpetual answers to the perpetual question.
 ---
 
 A few years ago I included a definition of digital history here on my site, in which I said:

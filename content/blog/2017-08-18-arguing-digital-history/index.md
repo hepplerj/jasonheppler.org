@@ -1,9 +1,10 @@
 ---
-title: "Arguing with Digital History"
+title: Arguing with Digital History
 date: 2017-08-18
-tags: [digital-history, rrchnm]
+tags:
+  - digital-history
 featured: true
-lede: "My contribution to the working paper on arguing with digital history."
+lede: My contribution to the working paper on arguing with digital history.
 ---
 
 <aside class="posted">

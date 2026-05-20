@@ -1,11 +1,12 @@
 ---
 date: 2010-11-28T00:24:07Z
-tags: [writing]
+tags:
+  - personal
 title: Refocusing on Content
 url: /2010/11/28/refocusing-on-content/
 wordpress_id: 470
 wordpress_url: http://www.jasonheppler.org/?p=470
-lede: "Reaching for the ease of the printed page."
+lede: Reaching for the ease of the printed page.
 ---
 
 <a href="http://writetodone.com/2009/03/05/how-to-write-quality-posts-when-you-have-a-day-job/">Leo Babauta</a>:

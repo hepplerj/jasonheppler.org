@@ -3,8 +3,7 @@ title: Basecamp
 date: 2020-03-27T10:14:00-0600
 lastmod: 2025-01-03T19:09:09-0600
 tags:
-- academia
-- productivity
+  - tech-life
 ---
 
 <aside>

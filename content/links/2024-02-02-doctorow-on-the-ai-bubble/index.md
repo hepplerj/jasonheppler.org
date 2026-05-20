@@ -3,7 +3,7 @@ title: Doctorow on the AI Bubble
 date: 2024-02-02T12:21:37-0600
 lastmod: 2026-01-10T21:41:10-0600
 tags:
-- artificial intelligence
+- artificial-intelligence
 - commonplace
 lede: AI companies risk significant harm and liability as they automate processes
   that ultimately require more human oversight.

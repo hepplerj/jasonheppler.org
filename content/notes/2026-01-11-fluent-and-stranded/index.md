@@ -3,7 +3,7 @@ title: “Fluent and Stranded”
 date: 2026-01-11T07:13:31-0600
 lastmod: 2026-01-16T22:22:30-0600
 tags:
-- artificial intelligence
+- artificial-intelligence
 lede: Current large language models can produce convincing dialogue but struggle to
   create meaningful new ideas, often resulting in nonsensical exchanges akin to absurdist
   theater.

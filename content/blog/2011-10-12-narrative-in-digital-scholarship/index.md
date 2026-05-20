@@ -1,10 +1,11 @@
 ---
 author: Jason Heppler
 date: 2011-10-12T17:03:39Z
-tags: [narrative, digital-history]
+tags:
+  - digital-history
 title: Models for Narrative in Digital Humanities
 url: /2011/10/12/narrative-in-digital-scholarship/
-lede: "A reading reflection on Franco Moretti for HIST946."
+lede: A reading reflection on Franco Moretti for HIST946.
 ---
 
 <aside><p>This is a reading reflection for HIST946: Digital Humanities with Professor William G. Thomas during the Fall 2011 semester. This week's reading was Franco Moretti, <em><a href="http://www.amazon.com/gp/product/1844671852/ref=as_li_tf_tl?ie=UTF8&tag=thekinofelfs2-20&linkCode=as2&camp=217145&creative=399373&creativeASIN=1844671852">Graphs, Maps, Trees: Abstract Models for Literary History</a></em>. You can find related posts <a href="http://jasonheppler.org/the-digital-humanities-seminar.html">here</a>.</p></aside>
