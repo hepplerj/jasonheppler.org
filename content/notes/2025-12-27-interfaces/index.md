@@ -3,7 +3,7 @@ title: Two Quotations on Interfaces
 date: 2025-12-27T20:41:43-0600
 lastmod: 2026-01-02T09:10:27-0600
 tags:
-- tech life
+- tech-life
 - twoquotes
 lede: Excessive removal of friction from digital technology has diminished meaningful
   experiences.

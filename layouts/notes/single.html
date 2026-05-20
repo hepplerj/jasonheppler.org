@@ -16,6 +16,44 @@
     </article>
 
     {{ partial "post-footer" . }}
+
+    <footer class="post-footer">
+      <p><time class="dt-published" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "January 2, 2006" }}</time> &mdash; <a href="/" class="p-author h-card">Jason Heppler</a></p>
+      <p>
+        <a href="https://bsky.app/profile/jasonheppler.org">Bluesky</a> &middot;
+        <a href="https://historians.social/@jaheppler">Mastodon</a> &middot;
+        <a href="https://micro.blog/jaheppler">Micro.blog</a>
+      </p>
+      <p id="page-stats" hidden><a href="/low-impact/" class="carbon-link">~<span id="carbon"></span>kb &middot; <span id="page_carbon"></span>g CO₂</a></p>
+      <a href="https://brid.gy/publish/bluesky" class="u-syndication" hidden></a>
+    </footer>
+
+    <aside id="webmentions-container">
+      <div id="webmentions"></div>
+    </aside>
+
+    <script>
+      document.getElementById("page-stats").removeAttribute("hidden");
+
+      window.addEventListener("load", function () {
+        var totalBytes = 0;
+        if (window.performance && window.performance.getEntriesByType) {
+          var nav = window.performance.getEntriesByType("navigation")[0];
+          if (nav) totalBytes += nav.transferSize || nav.encodedBodySize || 0;
+          window.performance.getEntriesByType("resource").forEach(function (r) {
+            totalBytes += r.transferSize || 0;
+          });
+        }
+        if (!totalBytes) totalBytes = document.documentElement.outerHTML.length;
+
+        var page_data = (totalBytes / 1024).toFixed(2);
+        document.getElementById("carbon").innerHTML = page_data;
+
+        var page_carbon = (totalBytes / 1024 * 0.00076).toFixed(3);
+        document.getElementById("page_carbon").innerHTML = page_carbon;
+      });
+    </script>
+
     {{ partial "foot" . }}
   </div>
 </div>

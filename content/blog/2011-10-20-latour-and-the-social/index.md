@@ -1,10 +1,11 @@
 ---
 author: Jason Heppler
 date: 2011-10-20T10:52:40Z
-tags: [digital-humanities]
+tags:
+  - digital-history
 title: Latour and the Social
 url: /2011/10/20/latour-and-the-social/
-lede: "A reading reflection on Bruno Latour for HIST946."
+lede: A reading reflection on Bruno Latour for HIST946.
 ---
 
 <aside><p>This is a reading reflection for HIST946: Digital Humanities with Professor William G. Thomas during the Fall 2011 semester. This week's reading was Bruno Latour, <em><a href="http://www.amazon.com/Reassembling-Social-Introduction-Actor-Network-Theory-Management/dp/0199256055">Reassembling the Social: An Introduction to Actor-Network-Theory</a></em>. You can find related posts <a href="http://jasonheppler.org/the-digital-humanities-seminar.html">here</a>.</p></aside>

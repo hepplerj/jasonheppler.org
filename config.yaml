@@ -99,7 +99,7 @@ menu:
       weight: 4
     - name: Newsletter
       weight: 5
-      url: https://www.tackandink.org/
+      url: https://buttondown.com/plainsink
 
 enableGitInfo: true
 

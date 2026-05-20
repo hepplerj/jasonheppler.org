@@ -1,9 +1,10 @@
 ---
 date: 2011-07-14T11:00:40Z
-tags: [web, indie-web, personal]
+tags:
+  - indie-web
 title: Own Your Identity
 url: /2011/07/14/own-your-identity/
-lede: "You need to control your identity on the web."
+lede: You need to control your identity on the web.
 ---
 
 Recently on Boing Boing, Cory Doctorow pointed to [this quote](http://boingboing.net/2011/06/29/why-writers-should-h.html) from John Scalzi arguing that writers needed to register their own domain rather than use Facebook:

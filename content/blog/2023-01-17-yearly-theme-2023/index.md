@@ -1,8 +1,9 @@
 ---
-title: "The Year of Work"
-date: "2023-01-26T22:17:11-06:00"
-slug: "yearly-theme-2023"
-tags: [focus]
+title: The Year of Work
+date: 2023-01-26T22:17:11-06:00
+slug: yearly-theme-2023
+tags:
+  - personal
 lede: Defining my yearly theme for 2023.
 ---
 

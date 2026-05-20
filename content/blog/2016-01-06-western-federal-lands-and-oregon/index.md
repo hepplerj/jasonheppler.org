@@ -1,9 +1,10 @@
 ---
-title: "Federal Policy, Western Lands, and Malheur"
+title: Federal Policy, Western Lands, and Malheur
 date: 2016-01-06
-tags: [research, american-west, public-lands, federal-lands, ranching]
+tags:
+  - environmental-history
 series: Living West
-lede: "The federal government administer's a lot of public lands."
+lede: The federal government administer's a lot of public lands.
 ---
 
 <aside class="posted">

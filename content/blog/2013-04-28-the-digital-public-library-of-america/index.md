@@ -1,9 +1,10 @@
 ---
 date: 2013-04-28T12:50:35Z
-tags: [digital-humanities, dpla]
+tags:
+  - digital-history
 title: The Digital Public Library of America
 url: /2013/04/28/the-digital-public-library-of-america/
-lede: "Using the DPLA for research, teaching, and creating."
+lede: Using the DPLA for research, teaching, and creating.
 ---
 
 <aside><p>This post originally appeared at <a href="https://www.stanford.edu/group/ats/cgi-bin/hivetalkin/?p=3331">Hive Talkin'</a> on 2013-04-18.</p></aside>

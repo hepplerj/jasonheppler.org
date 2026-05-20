@@ -1,9 +1,10 @@
 ---
-tags: [research, spatial-history, data-visualization]
+tags:
+  - digital-history
 date: 2011-09-28T10:10:25Z
 title: Spatial Humanities and Visual Narratives
 url: /2011/09/28/spatial-humanities/
-lede: "A reading reflection on spatial history for HIST946."
+lede: A reading reflection on spatial history for HIST946.
 ---
 
 <aside><p>This is a reading reflection written for HIST946: Digital Humanities with Professor William Thomas during the Fall 2011 semester. This week's readings were Richard White, "<a href="http://www.stanford.edu/group/spatialhistory/cgi-bin/site/pub.php?id=29">What is Spatial History?</a>," Philip Ethington, "<a href="http://www.usc.edu/dept/LAS/history/historylab/LAPUHK/">Los Angeles and the Problem of Urban Historical Knowledge</a>," and David Staley, "<a href="http://quod.lib.umich.edu/j/jahc/3310410.0003.304?rgn=main;view=fulltext">Historical Visualizations</a>". You can find related posts <a href="http://jasonheppler.org/the-digital-humanities-seminar.html">here</a>.</p></aside>

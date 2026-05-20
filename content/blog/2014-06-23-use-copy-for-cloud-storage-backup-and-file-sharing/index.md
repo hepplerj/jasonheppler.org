@@ -1,9 +1,10 @@
 ---
 date: 2014-06-23T21:24:34Z
-tags: [review]
+tags:
+  - academia
 title: Use Copy for Cloud Storage Backup and File Sharing
 url: /2014/06/23/use-copy-for-cloud-storage-backup-and-file-sharing/
-lede: "Copy is a great cloud storge service."
+lede: Copy is a great cloud storge service.
 ---
 
 <aside><p>This post originally appeared at <a href="http://chronicle.com/blogs/profhacker/use-copy-for-cloud-storage-backup-and-file-sharing/57377">ProfHacker</a> on 2014-06-23.</p></aside>

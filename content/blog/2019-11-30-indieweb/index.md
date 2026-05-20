@@ -1,9 +1,10 @@
 ---
-title: 'The IndieWeb'
+title: The IndieWeb
 date: 2019-11-30T10:04:12-06:00
-slug: 'indieweb'
-tags: [tech-life, indie-web]
-lede: "Doubling down on the Indie Web."
+slug: indieweb
+tags:
+  - indie-web
+lede: Doubling down on the Indie Web.
 ---
 
 Lincoln has published his first newsletter called "Working on It," and the

@@ -3,10 +3,8 @@ title: Made by Me
 date: 2024-05-23T07:15:00-0600
 lastmod: 2026-01-07T13:50:18-0600
 tags:
-- artificial intelligence
-- digital history
-lede: Generative AI shows potential as a tool for synthesis and analysis in history,
-  but we should remain skeptical about its utility and ethical implications.
+  - artificial-intelligence
+lede: Generative AI shows potential as a tool for synthesis and analysis in history, but we should remain skeptical about its utility and ethical implications.
 ---
 
 <aside>

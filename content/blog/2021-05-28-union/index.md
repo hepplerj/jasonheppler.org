@@ -3,9 +3,7 @@ title: Union
 date: 2021-05-28T20:46:59-0600
 lastmod: 2025-01-03T19:09:10-0600
 tags:
-- politics
-- labor
-- unions
+  - personal
 ---
 
 A few weeks ago, unless you follow tech news closely, you probably missed [a rather big story](https://www.theverge.com/2021/5/4/22419512/basecamp-political-speech-policy-fallout) surrounding the small Chicago company [Basecamp](https://basecamp.com). In short, the company's CEO and CTO made [a unilateral decision](https://www.theverge.com/2021/4/27/22406673/basecamp-political-speech-policy-controversy) to ban political talk at work and disbanded a diversity, equity, and inclusion initiative that a great number of employees volunteered for. In response, a [third of the company quit en masse](https://www.theverge.com/2021/5/3/22418208/basecamp-all-hands-meeting-employee-resignations-buyouts-implosion). 

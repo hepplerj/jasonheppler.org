@@ -1,9 +1,10 @@
 ---
-title: "Weekend Update"
-date: "2023-03-19T13:00:30-05:00"
-slug: "weekend-update"
-lede: "Some design updates and a new dark mode switcher!"
-tags: [design, personal]
+title: Weekend Update
+date: 2023-03-19T13:00:30-05:00
+slug: weekend-update
+lede: Some design updates and a new dark mode switcher!
+tags:
+  - personal
 ---
 
 This afternoon I pushed up a few updates I've been working on for the site. First, the homepage has gotten a slight facelift: more prominent placement of recent written work, recent digital scholarship, and recent collaborations. I should probably just collapse the homepage and the [about page](/about/), but I sort of like the about page's layout and can't bring myself---yet---to let it go.

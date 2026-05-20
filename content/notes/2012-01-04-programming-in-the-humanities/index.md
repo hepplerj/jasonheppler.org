@@ -1,10 +1,11 @@
 ---
 date: 2012-01-04T12:50:14Z
 description: My proposal for THATCamp AHA in Chicago.
-tags: [conference, american-historical-association, thatcamp]
-title: 'THATCamp Proposal: Programming in the Humanities'
+tags:
+  - digital-history
+title: "THATCamp Proposal: Programming in the Humanities"
 url: /2012/01/04/programming-in-the-humanities/
-lede: "My proposal for THATCamp AHA in Chicago."
+lede: My proposal for THATCamp AHA in Chicago.
 ---
 
 Over the course of my training as a digital historian, I have had two 

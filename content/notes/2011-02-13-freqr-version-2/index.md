@@ -1,11 +1,12 @@
 ---
 date: 2011-02-13T09:36:26Z
-tags: [programming, ruby, text-analysis]
+tags:
+  - digital-history
 title: FREQr Version 2
 url: /2011/02/13/freqr-version-2/
 wordpress_id: 1185
 wordpress_url: http://www.jasonheppler.org/?p=1185
-lede: "Some improvements to my word tokenizer."
+lede: Some improvements to my word tokenizer.
 ---
 
 Late last year I released a word frequency generator into the wild on Github. I've since updated the program to a more advanced version.

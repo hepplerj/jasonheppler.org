@@ -1,10 +1,12 @@
---- 
+---
 title: Two Quotes on the Land
 date: 2025-10-25
-lede: Quotes on the land by Aldo Leopold and Edward Abbey 
-tags: [twoquotes]
+lede: Quotes on the land by Aldo Leopold and Edward Abbey
+tags:
+  - twoquotes
+  - place
+  - re-placing
 ---
-
 
 Aldo Leopold: 
 

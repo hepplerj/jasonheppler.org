@@ -1,9 +1,10 @@
 ---
 date: 2011-06-29T21:13:22Z
-tags: [research, silicon-valley]
+tags:
+  - place
 title: Silicon Valley and the Cold War
 url: /2011/06/29/silicon-valley-and-the-cold-war/
-lede: "Silicon Valley's military history in the Cold War."
+lede: Silicon Valley's military history in the Cold War.
 ---
 
 An interesting presentation on the military history of Silicon Valley. The topic is right up my alley since my research agenda has shifted recently to computers and the North American West.

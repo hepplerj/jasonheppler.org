@@ -1,13 +1,14 @@
 ---
 date: 2014-04-08T14:46:13Z
-description: null
+description:
 image:
-  feature: null
-  thumb: null
-tags: [digital-humanities]
-title: 'Day of DH: The Collaborative Historian'
+  feature:
+  thumb:
+tags:
+  - digital-history
+title: "Day of DH: The Collaborative Historian"
 url: /2014/04/08/day-of-dh-the-collaborative-historian/
-lede: "My Day of DH 2014."
+lede: My Day of DH 2014.
 ---
 
 <aside><p>This post originally appeared at <a href="http://dayofdh2014.matrix.msu.edu/jasonheppler/2014/04/08/the-collaborative-historian/">Day of DH</a> on 2014-04-08</p></aside>

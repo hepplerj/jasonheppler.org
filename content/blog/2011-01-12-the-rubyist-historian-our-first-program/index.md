@@ -1,8 +1,9 @@
 ---
 date: 2011-01-12T10:50:41Z
-tags: [programming, ruby]
-series: "Rubyist Historian"
-title: 'The Rubyist Historian: Our First Program'
+tags:
+  - programming
+series: Rubyist Historian
+title: "The Rubyist Historian: Our First Program"
 url: /2011/01/12/the-rubyist-historian-our-first-program/
 wordpress_id: 770
 lede: "The Rubyist Historian: Creating our first program!"

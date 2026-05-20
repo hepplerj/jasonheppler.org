@@ -3,8 +3,7 @@ title: The blog's themes, summarized
 date: 2025-01-04T07:28:55-0600
 lastmod: 2026-01-07T12:55:18-0600
 tags:
-- web
-- writing
+  - personal
 lede: Summarizing my blog tags around key themes in my writing.
 ---
 

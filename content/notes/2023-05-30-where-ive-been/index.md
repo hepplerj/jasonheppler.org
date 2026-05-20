@@ -2,6 +2,8 @@
 title: Where I've Been
 date: 2023-05-30T09:24:52-0600
 lastmod: 2025-01-03T19:08:09-0600
+tags:
+  - personal
 ---
 
 🇺🇸 United States  

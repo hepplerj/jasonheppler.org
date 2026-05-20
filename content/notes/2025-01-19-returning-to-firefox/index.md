@@ -3,7 +3,7 @@ title: Returning to Firefox
 date: 2025-01-19T19:16:46-0600
 lastmod: 2025-01-24T09:08:44-0600
 tags:
-- tech life
+  - tech-life
 ---
 
 For the [past few weeks](https://updates.jasonheppler.org/2025/01/16/ive-been-trying-out-the/) I've been using the Zen browser, a fork of Firefox that comes with some preference changes and nice interface updates: the vertical tabs are really nice, as is the workspace management. And, since it's a fork of Firefox, all of my usual Firefox add-ons and my Mozilla account can sync with Zen.  

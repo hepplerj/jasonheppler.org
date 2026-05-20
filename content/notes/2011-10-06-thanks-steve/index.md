@@ -1,9 +1,10 @@
 ---
 date: 2011-10-06T07:56:58Z
-tags: [apple]
+tags:
+  - tech-life
 title: Thanks, Steve
 url: /2011/10/06/thanks-steve/
-lede: "Remembering Steve Jobs."
+lede: Remembering Steve Jobs.
 ---
 
 ![Steve Jobs.](steve-jobs-macintosh.webp)

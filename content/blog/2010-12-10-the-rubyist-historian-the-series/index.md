@@ -1,8 +1,9 @@
 ---
 date: 2010-12-10T07:40:53Z
-tags: [programming, ruby]
-series: "Rubyist Historian"
-title: 'The Rubyist Historian: The Series'
+tags:
+  - programming
+series: Rubyist Historian
+title: "The Rubyist Historian: The Series"
 url: /2010/12/10/the-rubyist-historian-the-series/
 wordpress_id: 514
 wordpress_url: http://www.jasonheppler.org/?p=514

@@ -1,9 +1,10 @@
 ---
 date: 2011-09-01T12:17:36Z
-tags: [research, data, digital-history]
+tags:
+  - digital-history
 title: Organizing Knowledge and the Future of the Humanities
 url: /2011/09/01/organizing-knowledge-and-the-future-of-the-humanities/
-lede: "A reflection on knowledge for HIST946."
+lede: A reflection on knowledge for HIST946.
 ---
 
 <aside><p>This is a thought piece written for HIST946: Digital Humanities with Professor William Thomas during the Fall 2011 semester. You can find related posts <a href="http://jasonheppler.org/the-digital-humanities-seminar.html">here</a>.</p></aside>

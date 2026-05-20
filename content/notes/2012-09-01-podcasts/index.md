@@ -1,9 +1,10 @@
 ---
 date: 2012-09-01T06:15:05Z
-tags: [podcasts]
+tags:
+  - tech-life
 title: On Podcasts
 url: /2012/09/01/podcasts/
-lede: "Here's some of my favorite podcasts."
+lede: Here's some of my favorite podcasts.
 ---
 
 <aside><p>This post originally appeared at <a href="http://www.gradhacker.org/2012/09/02/digital-distractions-podcasts/">Gradhacker</a> on 2012-09-03</p></aside>

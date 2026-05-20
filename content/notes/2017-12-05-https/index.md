@@ -1,8 +1,9 @@
 ---
-title: "HTTPS"
+title: HTTPS
 date: 2017-12-05
-tags: [technology]
-lede: "Enforcing HTTPS around here."
+tags:
+  - tech-life
+lede: Enforcing HTTPS around here.
 ---
 
 I haven't changed much about this website since I [migrated to Jekyll](https://jasonheppler.org/2011/04/19/migrating-to-jekyll/) in 2011. I've flirted here and there with Hugo, but don't really have solid plans

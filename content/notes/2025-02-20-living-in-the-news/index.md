@@ -3,10 +3,8 @@ title: Living in the News
 date: 2025-02-20T15:38:05-0600
 lastmod: 2026-01-07T09:25:20-0600
 tags:
-- personal
-- productivity
-lede: The importance of prioritizing local and immediate experiences over consuming
-  excessive news and global events to maintain perspective and reclaim attention.
+  - personal
+lede: The importance of prioritizing local and immediate experiences over consuming excessive news and global events to maintain perspective and reclaim attention.
 ---
 
 [Oliver Burkeman](https://ckarchive.com/b/4zuvhehpp24m4t6ovveola6g9z777s5): 

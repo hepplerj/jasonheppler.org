@@ -16,7 +16,7 @@ description: "Jason Heppler is a historian and software developer at the Roy Ros
 
 <div class="intro-newsletters">
   <aside class="newsletter">
-    <p>Consider subscribing to "<a href="https://www.tackandink.org/">Tack &amp; Ink</a>," a newsletter focused on the American West, agricultural history, and political culture.</p>
+    <p>Consider subscribing to "<a href="https://buttondown.com/plainsink">Tack &amp; Ink</a>," a newsletter focused on the American West, agricultural history, and political culture.</p>
     <div class="subscribe-container">
       <div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-button-color="#1b7021" data-button-text-color="#FFFFFF" data-site="https://www.tackandink.org/" data-locale="en" async></script></div>
     </div>

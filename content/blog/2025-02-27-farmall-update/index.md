@@ -1,9 +1,10 @@
 ---
-title: "The Farmall H Restoration, February Update"
-date: "2025-02-27T20:56:28-06:00"
-slug: "the-farmall-h-restoration-february"
-lede: "A February update on the 1946 Farmall H restoration."
-tags: [restoration]
+title: The Farmall H Restoration, February Update
+date: 2025-02-27T20:56:28-06:00
+slug: the-farmall-h-restoration-february
+lede: A February update on the 1946 Farmall H restoration.
+tags:
+  - personal
 ---
 
 With the weather starting to warm up in Nebraska, I've had a chance to start coming to terms with the Farmall H restoration project. I'm starting up a new series on this, and you can follow along in the [restoration category](/tags/restoration/).

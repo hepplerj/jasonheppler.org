@@ -3,7 +3,7 @@ title: COVID
 date: 2022-05-14T20:44:54-0600
 lastmod: 2025-01-03T19:09:11-0600
 tags:
-- health
+  - personal
 ---
 
 I don't know that documenting this will be of any use, but here it goes. 

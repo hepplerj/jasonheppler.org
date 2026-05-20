@@ -3,9 +3,7 @@ title: Friction
 date: 2025-01-21T09:36:28-0600
 lastmod: 2026-01-07T16:28:41-0600
 tags:
-- tech life
-- writing
-- indie web
+  - indie-web
 lede: Migrating to Micro.blog made writing easier and more productive.
 ---
 

@@ -3,7 +3,7 @@ title: Turning 30
 date: 2021-10-19T08:45:00-0600
 lastmod: 2025-01-03T19:09:10-0600
 tags:
-- web
+  - indie-web
 ---
 
 <aside>I wrote this on the thirtieth anniversary of the world wide web's creation and somehow never got around to publishing it on that day. So here it is.</aside>

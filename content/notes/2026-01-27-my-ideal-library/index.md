@@ -3,10 +3,8 @@ title: My Ideal Library
 date: 2026-01-27T14:06:47-0600
 lastmod: 2026-01-31T22:53:28-0600
 tags:
-- personal
-- farm life
-lede: Reflecting on my personal library, the space serves as both a home office and
-  creative studio.
+  - personal
+lede: Reflecting on my personal library, the space serves as both a home office and creative studio.
 ---
 
 I'm in the process of slowly trying to inventory my library using [LibraryThing](https://www.librarything.com/profile/hepplerj) (where I've been for twenty years!). I'm mostly focused on physical books---I don't own many ebooks or audio books, the physical books are most near and dear to me. I estimate so far that my personal library runs around 800 books currently (on top of 50 or so ebooks and maybe 10 audiobooks). These books all reside in my home library, a space I renovated a couple of years ago to be my work-from-home space as well as my general writing studio that I refer to as the Bunkhouse.

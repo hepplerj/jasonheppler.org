@@ -1,9 +1,10 @@
 ---
 date: 2009-10-25T13:56:27Z
-tags: [review, text-analysis]
-title: 'Tool Review: TokenX and Language Analysis'
+tags:
+  - digital-history
+title: "Tool Review: TokenX and Language Analysis"
 url: /2009/10/25/tool-review-tokenx-and-language-analysis/
-lede: "Using TokenX in historical research."
+lede: Using TokenX in historical research.
 ---
 
 <em>[This review is cross-posted at <a href="http://digitalhistory.unl.edu/t-reviews/tokenxhepplerrogers.php">Digital History</a>.]</em>

@@ -2,6 +2,8 @@
 title: Yearly Theme
 date: 2022-12-19T21:21:23-0600
 lastmod: 2025-01-03T19:08:07-0600
+tags:
+  - personal
 ---
 
 I've been thinking over [things I want to focus on](https://www.themesystem.com) during 2023 and coming up with a few names for what I might call this. There are some high-level things I'm capturing: health, wrapping up my book to get on to the next project, planning and career stuff over the next five years, more focus on writing, pursuing some newer interests (or, reading widely and deeply as possible in certain areas), and building on learning I've been doing for a few years (for example, going beyond what Duolingo can do for me in learning Norwegian).

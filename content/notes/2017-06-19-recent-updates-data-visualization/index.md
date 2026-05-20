@@ -1,8 +1,9 @@
 ---
-title: "Recent Updates on Data Visualization"
-date: 2017-06-19  
-tags: [data-visualization]
-lede: "A few things I've made and read on data visualization."
+title: Recent Updates on Data Visualization
+date: 2017-06-19
+tags:
+  - digital-history
+lede: A few things I've made and read on data visualization.
 ---
 
 Just a few updates on some data visualization work I've either been taking in or working on:

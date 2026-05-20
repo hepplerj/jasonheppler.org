@@ -1,8 +1,9 @@
 ---
-title: "The Machines in the Valley Digital History Project"
+title: The Machines in the Valley Digital History Project
 date: 2015-01-02
-tags: [research, dissertation, digital-history]
-lede: "Announcing the release of my dissertation's digital history component."
+tags:
+  - digital-history
+lede: Announcing the release of my dissertation's digital history component.
 ---
 
 I am excited to finally release the digital component of my 

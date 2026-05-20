@@ -2,6 +2,8 @@
 title: Christmas Tunes
 date: 2021-12-16T10:28:13-0600
 lastmod: 2025-01-03T19:07:49-0600
+tags:
+  - personal
 ---
 
 If Christmas music is your thing, I’ve probably got you covered. 

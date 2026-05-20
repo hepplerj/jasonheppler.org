@@ -3,7 +3,6 @@ title: A New Design for Readability
 lede: Design updates for 2026
 date: 2026-03-02
 tags:
-  - personal
   - indie-web
 draft: false
 ---

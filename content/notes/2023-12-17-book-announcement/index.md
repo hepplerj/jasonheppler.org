@@ -1,9 +1,10 @@
 ---
-title: "My Next Book's Publication Date"
-date: "2023-12-17T07:54:27-06:00"
-slug: "book-announcement"
-lede: "My second book is coming in April 2024."
-tags: [personal, writing]
+title: My Next Book's Publication Date
+date: 2023-12-17T07:54:27-06:00
+slug: book-announcement
+lede: My second book is coming in April 2024.
+tags:
+  - personal
 ---
 
 I am excited to announce that my second book has a publication date of April 23, 2024. The University of Okalhoma Press did a beautiful job with it and everyone was such a pleasure to work with. You can [pre-order it now](https://www.oupress.com/9780806193748/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism/).

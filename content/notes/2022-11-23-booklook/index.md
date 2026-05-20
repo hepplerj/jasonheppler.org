@@ -1,9 +1,10 @@
 ---
-title: "Running my Reading Log"
-date: "2022-11-23T22:09:04-06:00"
-slug: "booklook-script"
-lede: "How I manage my reading log."
-tags: [reading, web]
+title: Running my Reading Log
+date: 2022-11-23T22:09:04-06:00
+slug: booklook-script
+lede: How I manage my reading log.
+tags:
+  - tech-life
 ---
 
 At various moments I've recorded my reading habits using LibraryThing and then Goodreads. I'm not particularly good at making sure everything gets recorded (especially since, as a scholar, I also dig into portions of books that I'm not sure _really_ rise to the level of "I've read this"). But I do like keeping this log of information, but I'm less keen to feed that information to Amazon or Google. 

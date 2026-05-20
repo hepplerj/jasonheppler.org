@@ -1,9 +1,10 @@
 ---
-title: "Updating My RSS"
-date: "2022-12-15T10:01:13-06:00"
-slug: "updating-rss"
-lede: "The demise of Twitter seems to lead to RSS's resurgence."
-tags: [meta]
+title: Updating My RSS
+date: 2022-12-15T10:01:13-06:00
+slug: updating-rss
+lede: The demise of Twitter seems to lead to RSS's resurgence.
+tags:
+  - tech-life
 ---
 
 I've made a few changes to the RSS feeds around the site that I thought worth documenting, especially if you primarily read anything here via an RSS reader. There are now three feeds you can subscribe to depending on the content you want: 

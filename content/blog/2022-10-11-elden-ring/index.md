@@ -3,7 +3,7 @@ title: Elden Ring
 date: 2022-10-11T09:01:25-0600
 lastmod: 2025-01-03T19:09:11-0600
 tags:
-- gaming
+  - personal
 ---
 
 I finally did it. I beat [Elden Ring](https://en.bandainamcoent.eu/elden-ring/elden-ring).
