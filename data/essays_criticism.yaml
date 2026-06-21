@@ -1,0 +1,146 @@
+# Publications data — single source for articles, essays, chapters, reviews
+# type: Article | Essay | Chapter | Review
+# Fields: type, title, publication, year, url, coauthor (optional), note (optional),
+#         published (optional, default true — set to false to hide in-progress items)
+
+# ── Articles & Book Chapters ──
+
+- type: Article
+  title: "Creating Capacity for Research Data Services at Regional Universities: A Case Study"
+  publication: "Teaching Research Data Management (ALA Editions)"
+  year: 2022
+  url: "https://www.alastore.ala.org/trdm"
+  coauthor: "Omer Farooq and Kate M. Ehrig-Page"
+
+- type: Article
+  title: "Who Is Writing About Women in STEM in Higher Education in the United States? A Citation Analysis of Gendered Authorship"
+  publication: "Frontiers in Psychology"
+  year: 2020
+  url: "https://doi.org/10.3389/fpsyg.2019.02979"
+  coauthor: "Heidi Blackburn"
+
+- type: Article
+  title: "Women in STEM in Higher Education: A Citation Analysis of the Current Literature"
+  publication: "Science & Technology Libraries"
+  year: 2019
+  url: "https://doi.org/10.1080/0194262X.2019.1645080"
+  coauthor: "Heidi Blackburn"
+
+- type: Article
+  title: "Teaching Data Literacy for Civic Engagement: Resources for Data Capture and Organization"
+  publication: "KULA: Knowledge Creation, Dissemination, and Preservation Studies"
+  year: 2018
+  url: "http://doi.org/10.5334/kula.23"
+  coauthor: "Brandon Locke"
+
+- type: Article
+  title: "Digital History and Argument"
+  publication: "Roy Rosenzweig Center for History and New Media, George Mason University"
+  year: 2017
+  url: "https://rrchnm.org/argument-white-paper/"
+  note: "white paper; primary authors Lincoln Mullen and Stephen Robertson"
+
+- type: Article
+  title: "Green Dreams, Toxic Legacies: Toward a Digital Political Ecology of Silicon Valley"
+  publication: "International Journal of Humanities and Arts Computing"
+  year: 2017
+  url: "https://doi.org/10.3366/ijhac.2017.0179"
+
+- type: Article
+  title: "Machines in the Valley: Community, Urban Change, and Environmental Politics in Silicon Valley, 1945-1990"
+  publication: "Ph.D. dissertation, University of Nebraska-Lincoln"
+  year: 2016
+  url: "http://digitalcommons.unl.edu/historydiss/86/"
+
+- type: Article
+  title: "Crowdsourcing Public Digital History"
+  publication: "The American Historian"
+  year: 2015
+  url: "http://tah.oah.org/content/crowdsourcing-digital-public-history/"
+  coauthor: "Gabriel K. Wolfenstein"
+
+- type: Article
+  title: "A Call to Redefine Historical Scholarship in the Digital Turn"
+  publication: "The Journal of Digital Humanities"
+  year: 2012
+  url: "http://journalofdigitalhumanities.org/1-4/a-call-to-redefine-historical-scholarship-in-the-digital-turn/"
+  coauthor: "Alex Galarza and Douglas Seefeldt"
+
+- type: Chapter
+  title: "The American Indian Movement and South Dakota Politics"
+  publication: "The Plains Political Tradition (South Dakota State Historical Society Press)"
+  year: 2011
+  url: "https://www.amazon.com/Plains-Political-Tradition-Essays-Dakota/dp/0982274920"
+
+- type: Article
+  title: "The Rubyist Historian: Ruby Fundamentals for Humanities Scholars"
+  publication: ""
+  year: 2010
+  url: "https://doi.org/10.5281/zendo.9987"
+
+# ── Essays & Criticism ──
+
+- type: Essay
+  title: "Spoiled Fruits: Environmental Inequality in Silicon Valley"
+  publication: "AHA Perspectives"
+  year: 2023
+  url: "https://www.historians.org/research-and-publications/perspectives-on-history/november-2023/spoiled-fruits-environmental-inequality-in-silicon-valley"
+
+- type: Essay
+  title: "Digital Community Engagement in a Pandemic"
+  publication: "History@Work, NCPH"
+  year: 2021
+  url: "https://ncph.org/history-at-work/digital-community-engagement-in-a-pandemic/"
+
+- type: Essay
+  title: "How Silicon Valley Provides the Blueprint for Cleaning Up Our Drinking Water"
+  publication: "The Washington Post"
+  year: 2019
+  url: "https://www.washingtonpost.com/outlook/2019/04/26/how-silicon-valley-provides-blueprint-cleaning-up-our-drinking-water/"
+
+- type: Essay
+  title: "How Silicon Valley Industry Polluted the Sylvan California Dream"
+  publication: "The Conversation"
+  year: 2017
+  url: "https://theconversation.com/how-silicon-valley-industry-polluted-the-sylvan-california-dream-85810"
+
+- type: Essay
+  title: "Advocacy, Training, and Awareness Through Endangered Data Week"
+  publication: "Parameters (SSRC)"
+  year: 2018
+  url: "http://parameters.ssrc.org/2018/03/advocacy-training-and-awareness-through-endangered-data-week/"
+
+- type: Chapter
+  title: "The National Monument"
+  publication: "A Companion to Custer and the Little Bighorn Campaign (Wiley)"
+  year: 2015
+  url: "https://www.wiley.com/en-it/A+Companion+to+Custer+and+the+Little+Bighorn+Campaign-p-9781444351095"
+  coauthor: "Douglas Seefeldt"
+
+# ── Reviews ──
+
+- type: Review
+  title: "Review of Rooted at the Edge: Ranching Where the Old West and New West Collide"
+  publication: "Agricultural History"
+  year: 2025
+  url: ""
+  published: false
+
+- type: Review
+  title: "Review of Wallace Stegner: Dean of Western Writers"
+  publication: "Utah Historical Quarterly"
+  year: 2025
+  url: ""
+  published: false
+
+- type: Review
+  title: "Digital History Review of ClioVis: Visualizing Connections"
+  publication: "The Journal of American History"
+  year: 2024
+  url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X2hGnS4AAAAJ&citation_for_view=X2hGnS4AAAAJ:ZeXyd9-uunAC"
+
+- type: Review
+  title: "Review of Timeline of Empire"
+  publication: "Reviews in Digital Humanities"
+  year: 2022
+  url: "https://reviewsindh.pubpub.org/pub/timeline-of-empire/release/3"
