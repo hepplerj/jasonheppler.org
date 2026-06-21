@@ -742,7 +742,8 @@
 
   .bs-footer-links {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 12px 20px;
     margin-bottom: 24px;
   }
 
@@ -1459,8 +1460,10 @@
   /* ── Essay: Author card ── */
   .bs-author-card {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
     padding: 24px 0;
     border-top: 1px solid var(--color-hairline);
     border-bottom: 1px solid var(--color-hairline);
