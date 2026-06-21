@@ -1,145 +1,182 @@
 {{ partial "head.html" . }}
 
-<!-- A: Hero / Lede — bio + newsletter from content/_index.md -->
-<div class="pt-10 content homepage">
-  <div class="body">
-    {{ .Content }}
-  </div>
-</div>
-
-<!-- B: Social / Contact Row -->
-<div class="site-container">
-  <div class="hp-social">
-    {{ with site.Params.Author.email }}
-    <a href="mailto:{{ . }}">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-      Email
-    </a>
-    {{ end }}
-    {{ with site.Params.social.bluesky }}
-    <a href="{{ . }}">
-      <svg viewBox="0 0 568 501" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.209C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 328.678 536.444 409.386 459.89 489.343c-144.381 148.075-207.497-37.222-223.725-84.842-3.636-10.655-5.348-15.769-5.165-11.52-.183-4.249-1.895.865-5.531 11.52-16.228 47.62-79.344 232.917-223.725 84.842C-24.444 409.386 4.778 328.678 119.653 304.25c-65.72 11.185-139.6-7.295-159.875-79.748C-45.945 203.66-55.89 75.293-55.89 57.947-55.89-28.906 20.244-1.611 123.121 33.664Z"/></svg>
-      Bluesky
-    </a>
-    {{ end }}
-    {{ with site.Params.social.mastodon }}
-    <a href="{{ . }}" rel="me">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M21.327 8.566c0-4.339-2.843-5.61-2.843-5.61-1.433-.658-3.894-.935-6.451-.956h-.063c-2.557.021-5.016.298-6.45.956 0 0-2.843 1.271-2.843 5.61 0 .993-.019 2.181.012 3.441.103 4.243.778 8.425 4.701 9.463 1.809.479 3.362.579 4.612.51 2.268-.126 3.541-.809 3.541-.809l-.075-1.646s-1.621.511-3.441.449c-1.804-.062-3.707-.194-3.999-2.409a4.523 4.523 0 0 1-.04-.621s1.77.432 4.014.535c1.372.063 2.658-.08 3.965-.236 2.506-.299 4.688-1.843 4.962-3.254.431-2.223.396-5.424.396-5.424ZM17.7 14h-2.185v-4.55c0-.96-.404-1.446-1.21-1.446-.892 0-1.339.578-1.339 1.72V12.1H10.79V9.724c0-1.142-.447-1.72-1.339-1.72-.806 0-1.21.486-1.21 1.446V14H6.056V9.293c0-.96.245-1.722.737-2.285.507-.563 1.172-.852 1.997-.852.954 0 1.676.367 2.149 1.099l.463.776.463-.776c.473-.732 1.196-1.099 2.149-1.099.825 0 1.49.289 1.998.852.49.563.736 1.325.736 2.285V14h-.048Z"/></svg>
-      Mastodon
-    </a>
-    {{ end }}
-    <a href="https://github.com/hepplerj">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-      GitHub
-    </a>
-    <a href="https://www.linkedin.com/in/jasonheppler/">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-      LinkedIn
-    </a>
-    {{ with site.Params.social.microblog }}
-    <a href="{{ . }}">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-      Micro.blog
-    </a>
-    {{ end }}
-    {{ with site.Params.social.buymeacoffee }}
-    <a href="{{ . }}">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
-      Buy Me a Coffee
-    </a>
-    {{ end }}
-  </div>
-</div>
-
-<!-- C: Latest Books (my publications) -->
-<div class="site-container hp-section">
-  <h2 class="hp-section-heading">Books</h2>
-  <div class="hp-books-row">
-    {{ $pubs := (where site.RegularPages "Section" "publications").ByDate.Reverse }}
-    {{ range where $pubs ".Params.image" "ne" nil }}
-    <a href="{{ .RelPermalink }}" class="hp-book-card">
-      <img src="/assets/images/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" decoding="async">
-      <span class="hp-book-card-title">{{ .Title }}</span>
-    </a>
-    {{ end }}
-  </div>
-  <p class="hp-section-more"><a href="/publications/">All publications &rarr;</a></p>
-</div>
-
-<!-- Featured Project: Governing Ground -->
-<div class="site-container hp-section">
-  <a href="https://governingground.org" class="hp-project-card">
-    <img src="/assets/images/govground-preview.jpg"
-         alt="Governing Ground — a digital history project"
-         loading="lazy" decoding="async">
-    <div class="hp-project-info">
-      <h3 class="hp-project-title">Governing Ground</h3>
-      <p class="hp-project-desc">A digital history project exploring the politics of land use and urban governance.</p>
-      <span class="hp-project-link">Visit the project &rarr;</span>
+<!-- Intro -->
+<section class="bs-intro">
+  <div class="bs-intro-inner bs-container">
+    <div class="bs-intro-portrait">
+      <img src="/assets/images/portrait.webp" alt="Jason A. Heppler" loading="eager">
+      <span class="bs-photo-credit">Photo by <a href="https://www.johnlegg.org/academic-photography">John Legg</a></span>
     </div>
-  </a>
-</div>
+    <div class="bs-intro-text">
+      <h1 class="bs-intro-h1">Historian of land and environmental politics in the North American West.</h1>
+      <p class="bs-intro-bio">Hi, I'm Jason A. Heppler, a historian writing about the twentieth century North American West, Great Plains, and Canadian Prairies. I'm the senior developer/scholar at the <a href="https://rrchnm.org">Roy Rosenzweig Center for History and New Media</a> and an Affiliate Fellow at the <a href="https://www.unl.edu/plains/">Center for Great Plains Studies</a> at the University of Nebraska-Lincoln. </p>
+      <div class="bs-intro-social">
+        <a class="bs-email-link" data-name="jason" data-domain="jasonheppler.org"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> Email</a>
+        {{ with site.Params.social.bluesky }}<a href="{{ . }}"><svg width="16" height="16" viewBox="0 0 600 530" fill="currentColor"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/></svg> Bluesky</a>{{ end }}
+        {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.327 8.566c0-4.339-2.843-5.61-2.843-5.61-1.433-.658-3.894-.935-6.451-.956h-.063c-2.557.021-5.016.298-6.45.956 0 0-2.843 1.272-2.843 5.61 0 .993-.019 2.181.012 3.441.103 4.243.778 8.425 4.701 9.463 1.809.479 3.362.579 4.612.51 2.268-.126 3.541-.809 3.541-.809l-.075-1.646s-1.621.511-3.441.449c-1.804-.062-3.707-.194-3.999-2.409a4.5 4.5 0 0 1-.04-.621s1.77.432 4.014.535c1.372.063 2.658-.08 3.965-.236 2.506-.299 4.688-1.843 4.962-3.254.434-2.223.398-5.424.398-5.424zm-3.353 5.59h-2.081V9.057c0-1.075-.452-1.62-1.357-1.62-1 0-1.501.647-1.501 1.927v2.791h-2.069V9.364c0-1.28-.501-1.927-1.502-1.927-.904 0-1.357.546-1.357 1.62v5.099H6.026V8.903c0-1.074.273-1.927.823-2.558.566-.631 1.307-.955 2.228-.955 1.065 0 1.872.41 2.405 1.228l.518.869.519-.869c.533-.818 1.34-1.228 2.405-1.228.92 0 1.662.324 2.228.955.549.631.822 1.484.822 2.558v5.253z"/></svg> Mastodon</a>{{ end }}
+        {{ with site.Params.social.github }}<a href="{{ . }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub</a>{{ end }}
+        {{ with site.Params.social.linkedin }}<a href="{{ . }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>{{ end }}
+        {{ with site.Params.social.microblog }}<a href="{{ . }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 4.9 0 10.95 0 17 5.4 21.9 12 21.9c1.4 0 2.85-.25 4.2-.7.15-.05.35 0 .45.1 1 1.35 2.55 2.3 4.25 2.7l.25-.1v-.3a4.65 4.65 0 01.2-5.9C22.9 15.85 24 13.5 24 10.95 24 4.9 18.55 0 12 0zm-.05 5.2c.15 0 .3.1.35.25L13.55 9l3.85.1c.15 0 .3.1.35.2.05.15 0 .3-.15.4L14.55 12l1.1 3.6c.05.15 0 .3-.15.4h-.4l-3.15-2.15L8.8 16h-.4c-.15-.1-.2-.25-.15-.4l1.1-3.6L6.3 9.7c-.15-.1-.2-.25-.15-.4.05-.1.2-.2.35-.2l3.85-.1 1.25-3.55c.05-.15.2-.25.35-.25z"/></svg> Micro.blog</a>{{ end }}
+        {{ with site.Params.social.buymeacoffee }}<a href="{{ . }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg> Buy Me a Coffee</a>{{ end }}
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- D: Current Reading -->
-<div class="site-container hp-section">
-  <h2 class="hp-section-heading">Recent Reading</h2>
-  <ul class="hp-reading-list">
-    {{ range first 6 (where site.RegularPages "Section" "books") }}
-    <li class="hp-reading-item">
-      <span class="hp-reading-title">{{ .Title }}</span>
-      <span class="hp-reading-author">{{ .Params.author }}</span>
-      <span class="hp-reading-year">{{ .Params.pub_year }}</span>
-    </li>
-    {{ end }}
-  </ul>
-  <p class="hp-section-more"><a href="/books/">All books &rarr;</a></p>
-</div>
+<!-- Featured Project -->
+<section class="bs-featured">
+  <div class="bs-featured-inner bs-container">
+    <div class="bs-featured-text">
+      <p class="bs-featured-desc">Nearly a third of the American West is federal land. Those lands have been a century-long provocation. <em>Governing Ground</em> is a digital history of the Sagebrush Rebellions, recurring movements between the 1930s to the present over the transfer, ownership, management, and control of federal lands.</p>
+      <a href="https://governingground.org" class="bs-btn bs-btn-gold">View Project</a>
+    </div>
+    <a href="https://governingground.org" class="bs-featured-img">
+      <img src="/assets/images/govground-preview.jpg" alt="Governing Ground project preview" loading="lazy" decoding="async">
+    </a>
+  </div>
+</section>
 
-<!-- E: Topic Sections -->
-{{ $topics := slice
-  (dict "slug" "digital-history" "name" "Digital History")
-  (dict "slug" "programming"     "name" "Programming")
-(dict "slug" "personal"        "name" "Personal")
-  (dict "slug" "tech-life"       "name" "Tech Life")
-  (dict "slug" "academia"        "name" "Academia")
-  (dict "slug" "artificial-intelligence" "name" "Artificial Intelligence")
-  (dict "slug" "environmental-history"  "name" "Environmental History")
-  (dict "slug" "plain-text"             "name" "Plain Text")
-  (dict "slug" "place"                  "name" "Place")
-  (dict "slug" "indie-web"       "name" "Indie Web")
-}}
-
-<div class="site-container hp-topics">
-<h2 class="hp-section-heading">Writing</h2>
-  {{ range $topics }}
-    {{ $slug := .slug }}
-    {{ $name := .name }}
-    {{ $matching := where site.RegularPages ".Params.tags" "intersect" (slice $slug) }}
-    {{ $sorted := $matching.ByDate.Reverse }}
-    {{ $count := len $sorted }}
-    {{ if gt $count 0 }}
-    <section class="hp-topic">
-      <h3 class="hp-topic-heading">{{ $name }}</h3>
-      <ul class="hp-topic-list">
-        {{ range first 3 $sorted }}
-        <li class="hp-topic-item">
-          <a href="{{ .RelPermalink }}" class="hp-topic-item-link">{{ .Title }}</a>
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
-        </li>
-        {{ end }}
-      </ul>
-      {{ if gt $count 3 }}
-      <a href="/tags/{{ $slug }}/" class="hp-topic-more">{{ sub $count 3 }} more &rarr;</a>
+<!-- Books -->
+<section class="bs-section">
+  <div class="bs-container">
+    <h2 class="bs-section-h2">Books</h2>
+    <div class="bs-books-grid">
+      {{ $pubs := (where site.RegularPages "Section" "publications").ByDate.Reverse }}
+      {{ range where $pubs ".Params.image" "ne" nil }}
+      <a href="{{ .RelPermalink }}" class="bs-book-card">
+        <img src="/assets/images/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" decoding="async">
+        <span class="bs-book-title">{{ .Title }}</span>
+        <span class="bs-book-meta">{{ with .Params.publisher }}{{ . }}{{ end }}{{ with .Params.year }} · {{ . }}{{ end }}</span>
+      </a>
       {{ end }}
-    </section>
-    {{ end }}
-  {{ end }}
-</div>
+    </div>
+    <p class="bs-section-more"><a href="/publications/">All publications &rarr;</a></p>
+  </div>
+</section>
 
-<div class="site-container">
-  <p class="hp-section-more"><a href="http://localhost:1313/archive/">Full chronological archive &rarr;</a></p>
-</div>
+<!-- Essays & Criticism -->
+{{ with site.Data.essays_criticism }}
+{{ $published := where . "published" "ne" false }}
+{{ $essays := where $published "type" "in" (slice "Essay" "Chapter" "Review") }}
+<section class="bs-section">
+  <div class="bs-container">
+    <div class="bs-section-header-row">
+      <h2 class="bs-section-h2">Essays, Reviews, &amp; Criticism</h2>
+      <a href="/publications/" class="bs-section-link">All publications &rarr;</a>
+    </div>
+    <p class="bs-section-subtitle">Selected pieces written for other publications and edited collections.</p>
+    <div class="bs-ec-list">
+      {{ range first 5 (sort $essays "year" "desc") }}
+      {{ if .url }}
+      <a href="{{ .url }}" class="bs-ec-row" target="_blank" rel="noopener">
+        <span class="bs-ec-type">{{ .type }}</span>
+        <span class="bs-ec-info">
+          <span class="bs-ec-title">{{ .title }}</span>
+          <span class="bs-ec-pub">{{ .publication }}</span>
+        </span>
+        <span class="bs-ec-year">{{ .year }} &#x2197;</span>
+      </a>
+      {{ else }}
+      <div class="bs-ec-row">
+        <span class="bs-ec-type">{{ .type }}</span>
+        <span class="bs-ec-info">
+          <span class="bs-ec-title">{{ .title }}</span>
+          <span class="bs-ec-pub">{{ .publication }}</span>
+        </span>
+        <span class="bs-ec-year">{{ .year }}</span>
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
 
-<div class="site-container">
-  {{ partial "foot.html" . }}
-</div>
+<!-- Writing Categories -->
+<section class="bs-writing-band">
+  <div class="bs-container">
+    <h2 class="bs-section-h2">Weblog</h2>
+    <p class="bs-section-subtitle">A selection of things written here. <a href="/archive/">See the full archive</a>.</p>
+    {{ $topics := slice
+      (dict "slug" "digital-history" "name" "Digital History")
+      (dict "slug" "environmental-history" "name" "Environmental History")
+      (dict "slug" "artificial-intelligence" "name" "AI")
+      (dict "slug" "programming" "name" "Programming")
+      (dict "slug" "place" "name" "Place")
+      (dict "slug" "personal" "name" "Personal")
+    }}
+    <div class="bs-writing-grid">
+      {{ range $topics }}
+        {{ $slug := .slug }}
+        {{ $name := .name }}
+        {{ $matching := where site.RegularPages ".Params.tags" "intersect" (slice $slug) }}
+        {{ $sorted := $matching.ByDate.Reverse }}
+        {{ $count := len $sorted }}
+        {{ if gt $count 0 }}
+        <div class="bs-writing-col">
+          <h3 class="bs-writing-kicker">{{ $name }}</h3>
+          {{ range first 3 $sorted }}
+          <a href="{{ .RelPermalink }}" class="bs-writing-post">
+            <span class="bs-writing-post-title">{{ .Title }}</span>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+          </a>
+          {{ end }}
+          {{ if gt $count 3 }}
+          <a href="/tags/{{ $slug }}/" class="bs-writing-more">{{ sub $count 3 }} more &rarr;</a>
+          {{ end }}
+        </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- On the Road -->
+{{ with site.Data.on_the_road }}
+<section class="bs-section">
+  <div class="bs-container">
+    <div class="bs-section-header-row">
+      <h2 class="bs-section-h2">On the Road</h2>
+    </div>
+    <p class="bs-section-subtitle">Talks, lectures, and conference panels. Contact me about booking speaking engagements.</p>
+    <div class="bs-otr-list">
+      {{ range sort . "date" "desc" }}
+      <div class="bs-otr-row">
+        <span class="bs-otr-date">{{ .label }}</span>
+        <span class="bs-otr-info">
+          <span class="bs-otr-title">{{ .title }}</span>
+          <span class="bs-otr-venue"> &mdash; {{ .venue }}</span>
+        </span>
+        {{ with .url }}<a href="{{ . }}" class="bs-otr-link">Details</a>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Recent Reading -->
+<section class="bs-section">
+  <div class="bs-container">
+    <h2 class="bs-section-h2">Recent Reading</h2>
+    <p class="bs-section-subtitle">The latest books on my bookshelf.</p>
+    <div class="bs-reading-grid">
+      {{ range first 8 (where site.RegularPages "Section" "books") }}
+      <div class="bs-reading-row">
+        <div class="bs-reading-info">
+          <span class="bs-reading-title">{{ .Title }}</span>
+          <span class="bs-reading-author">{{ .Params.author }}</span>
+        </div>
+        <span class="bs-reading-year">{{ .Params.pub_year }}</span>
+      </div>
+      {{ end }}
+    </div>
+    <p class="bs-section-more"><a href="/books/">Bookshelf &rarr;</a></p>
+  </div>
+</section>
+
+<!-- Newsletter -->
+{{ partial "newsletter-band.html" . }}
+
+<!-- Footer -->
+{{ partial "foot.html" . }}

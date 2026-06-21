@@ -1,76 +1,90 @@
 {{ partial "head.html" . }}
 
-<div class='pt-10 site-container content'>
-  <div class="body">
-    <article id='{{ urlize .Title }}' class="h-entry post post-body">
-      <section>
-        <header>
-          <h1 class="text-[230%] m-0">{{ .Title }}</h1>
-          {{ if isset .Params "lede" }}
-          <p class="italic mt-0">{{ index .Params "lede" }}</p>
-          {{ end }}
-        </header>
+<div class="bs-essay">
+  <!-- Article Header -->
+  <header class="bs-reading-col bs-essay-header">
+    <h1 class="bs-essay-title">{{ .Title }}</h1>
+    {{ with .Params.lede }}
+    <p class="bs-essay-standfirst">{{ . }}</p>
+    {{ end }}
+    <div class="bs-essay-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      <span class="bs-meta-dot"></span>
+      <span>Jason Heppler</span>
+      <span class="bs-meta-dot"></span>
+      <span>{{ .ReadingTime }} min read</span>
+    </div>
+  </header>
 
-        {{ with .Params.image }}
-        <img src="/assets/images/{{ . }}" alt="{{ $.Title }}" loading="lazy" decoding="async" />
-        {{ end }}
-        {{- if (.Param "ShowToc") }}
-        {{- partial "toc.html" . }}
-        {{- end }}
-        <div class='post-body e-content'>
-          {{ .Content }}
-        </div>
+  <!-- Optional lead image -->
+  {{ with .Params.image }}
+  <figure class="bs-essay-lead-image">
+    <img src="/assets/images/{{ . }}" alt="{{ $.Title }}" loading="lazy" decoding="async">
+  </figure>
+  <div class="bs-reading-col"><div class="bs-hairline" style="margin:44px 0"></div></div>
+  {{ end }}
 
-        {{ if isset .Params "external" }}
-        <p>Linked: <a href="{{ index .Params "external" }}">{{ index .Params "title" }}</a></p>
-        {{ end }}
-      </section>
-    </article>
+  <!-- Prose body -->
+  <article class="bs-reading-col prose e-content h-entry">
+    {{ .Content }}
+  </article>
 
-    {{ partial "post-footer" . }}
+  <!-- Carbon badge & tags -->
+  <div class="bs-reading-col bs-post-footer-meta">
+    <p>This is an <a href="/archive/">essay</a> — a longer piece of writing on a topic I've been thinking about.</p>
 
-    <footer class="post-footer">
-      <p><time class="dt-published" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "January 2, 2006" }}</time> &mdash; <a href="/" class="p-author h-card">Jason Heppler</a></p>
-      <p>
-        <a href="https://bsky.app/profile/jasonheppler.org">Bluesky</a> &middot;
-        <a href="https://historians.social/@jaheppler">Mastodon</a> &middot;
-        <a href="https://micro.blog/jaheppler">Micro.blog</a>
-      </p>
-      <p id="page-stats" hidden><a href="/low-impact/" class="carbon-link">~<span id="carbon"></span>kb &middot; <span id="page_carbon"></span>g CO₂</a></p>
-      {{/* Bridgy publish — syndicates this post to Bluesky when Bridgy crawls */}}
-      <a href="https://brid.gy/publish/bluesky" class="u-syndication" hidden></a>
-    </footer>
-
-    <aside id="webmentions-container">
-      <div id="webmentions"></div>
-    </aside>
-
-    <script>
-      document.getElementById("page-stats").removeAttribute("hidden");
-
-      window.addEventListener("load", function () {
-        // Measure actual total bytes transferred (HTML + CSS + JS + fonts + images)
-        var totalBytes = 0;
-        if (window.performance && window.performance.getEntriesByType) {
-          var nav = window.performance.getEntriesByType("navigation")[0];
-          if (nav) totalBytes += nav.transferSize || nav.encodedBodySize || 0;
-          window.performance.getEntriesByType("resource").forEach(function (r) {
-            totalBytes += r.transferSize || 0;
-          });
-        }
-        // Fall back to HTML size if Performance API unavailable or returned nothing
-        if (!totalBytes) totalBytes = document.documentElement.outerHTML.length;
-
-        var page_data = (totalBytes / 1024).toFixed(2);
-        document.getElementById("carbon").innerHTML = page_data;
-
-        // Sustainable Web Design model: ~1.805 kWh/GB × 442 gCO2/kWh ÷ 1,048,576 KB/GB ≈ 0.00076 g/KB
-        var page_carbon = (totalBytes / 1024 * 0.00076).toFixed(3);
-        document.getElementById("page_carbon").innerHTML = page_carbon;
-
-      });
-    </script>
-
-    {{ partial "foot" . }}
+    {{ partial "carbon-badge.html" . }}
+    {{ with .Params.tags }}
+      <span class="bs-meta-dot"></span>
+      {{ range $i, $t := . }}{{ if $i }}<span class="bs-meta-dot"></span>{{ end }}<a href="/tags/{{ $t | urlize }}/" class="bs-tag-link">{{ $t | humanize }}</a>{{ end }}
+    {{ end }}
   </div>
+
+  <!-- Author card -->
+  <div class="bs-reading-col bs-author-card">
+    <div class="bs-author-info">
+      <img src="/assets/images/portrait.webp" alt="Jason Heppler" class="bs-author-avatar">
+      <div>
+        <div class="bs-author-name">Jason A. Heppler</div>
+        <div class="bs-author-role">Environmental &amp; Digital Historian</div>
+      </div>
+    </div>
+    <div class="bs-author-links">
+      {{ with site.Params.social.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
+      {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me">Mastodon</a>{{ end }}
+      <a href="https://github.com/hepplerj">GitHub</a>
+    </div>
+  </div>
+
+  <!-- Prev / Next -->
+  {{ $pages := where site.RegularPages "Section" "blog" }}
+  {{ $prev := $pages.Prev . }}
+  {{ $next := $pages.Next . }}
+  {{ if or $prev $next }}
+  <nav class="bs-reading-col bs-prevnext">
+    {{ with $prev }}
+    <a href="{{ .RelPermalink }}" class="bs-prevnext-link">
+      <span class="bs-prevnext-label">&larr; Previous</span>
+      <span class="bs-prevnext-title">{{ .Title }}</span>
+    </a>
+    {{ else }}<div></div>{{ end }}
+    {{ with $next }}
+    <a href="{{ .RelPermalink }}" class="bs-prevnext-link bs-prevnext-right">
+      <span class="bs-prevnext-label">Next &rarr;</span>
+      <span class="bs-prevnext-title">{{ .Title }}</span>
+    </a>
+    {{ else }}<div></div>{{ end }}
+  </nav>
+  {{ end }}
+
+  <!-- Webmentions -->
+  <aside class="bs-reading-col">
+    <div id="webmentions"></div>
+  </aside>
+
+  <!-- Bridgy publish -->
+  <a href="https://brid.gy/publish/bluesky" class="u-syndication" hidden></a>
 </div>
+
+{{ partial "newsletter-band.html" . }}
+{{ partial "foot.html" . }}

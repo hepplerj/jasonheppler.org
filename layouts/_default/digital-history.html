@@ -1,0 +1,26 @@
+{{ partial "head.html" . }}
+
+<div class="bs-section-list">
+  <header class="bs-container bs-archive-header">
+    <span class="bs-eyebrow">Digital &amp; Public History</span>
+    <h1 class="bs-archive-title">Over a decade of building history on the web.</h1>
+    <p class="bs-archive-lead">{{ .Content }}</p>
+  </header>
+
+  <div class="bs-container">
+    <div class="bs-dh-grid">
+      {{ range site.Data.dh_projects }}
+      <a href="{{ .url }}" class="bs-project-card" target="_blank" rel="noopener">
+        <div class="bs-project-card-header">
+          <span class="bs-project-card-title">{{ .title }}</span>
+          <span class="bs-project-card-arrow">&nearr;</span>
+        </div>
+        <p class="bs-project-card-desc">{{ .desc }}</p>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+{{ partial "newsletter-band.html" . }}
+{{ partial "foot.html" . }}

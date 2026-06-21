@@ -1,12 +1,16 @@
 {{ partial "head.html" . }}
 
-<div class='pt-10 site-container content'>
-  <div class="body"> 
-  <header>
-    <h1>{{ .Title }}</h1>
+<div class="bs-section">
+  <header class="bs-container-narrow bs-archive-header">
+    <span class="bs-eyebrow">Teaching</span>
+    <h1 class="bs-archive-title">{{ .Title }}</h1>
   </header>
-{{ .Content }}
+
+  <div class="bs-container-narrow">
+    <div class="prose">
+      {{ .Content }}
+    </div>
+  </div>
 </div>
 
 {{ partial "foot.html" . }}
-</div>

@@ -4,12 +4,7 @@ slug: "/about/"
 layout: about
 ---
 
-<aside>
-  A summary, more or less, of this blog's themes can be found <a href="/2025/01/04/the-blogs-themes-summarized/">here</a>.
-</aside>
-
-{{< figure src="/assets/images/0C7A1453.webp" alt="Jason A. Heppler" caption="Photo by John Legg" class="about-photo" >}}
-
+{{< figure src="/assets/images/0C7A1453.webp" alt="Jason A. Heppler" attr="Photo by [John Legg](https://www.johnlegg.org/academic-photography)" >}}
 
 Hi! I'm Jason, a web developer by trade and a historian by vocation at the [Roy Rosenzweig Center for History and New Media](https://rrchnm.org) (RRCHNM) at [George Mason University](https://historyarthistory.gmu.edu). I collaborate with faculty and graduate students on the innovative application of technology in teaching and research across interactive data visualization, design, and public and digital history. I hold a Ph.D. from the University of Nebraska-Lincoln and currently split my time between Lincoln and Fairfax.
 
@@ -18,6 +13,10 @@ Currently, I am the **Senior Developer/Scholar** at the [Roy Rosenzweig Center f
 [You can find my full CV here](https://jasonheppler.org/files/jah-cv.pdf).
 
 (<a href="/bio/">Need a full bio?</a>)</p>
+
+A summary, more or less, of this blog's themes can be found <a href="/2025/01/04/the-blogs-themes-summarized/">here</a>.
+
+---
 
 Because we live in an era of climate emergency, most of my work is concerned with land, water, and energy, and the history tied up within these: who controlled access to these things; how were these things owned and used; what stories do we tell about places and how does that shape what happened; how the landscape is a record of history and power; how state institutions shape thinking about landscape, nature, and health. In addition to my work in environmental history, I'm also a scholar with expertise in digital mapping, spatial history, statistics, and big-data / machine reading methods for historical research.
 

@@ -1,0 +1,69 @@
+{{ partial "head.html" . }}
+
+<div class="bs-section-list">
+  <header class="bs-container-narrow bs-archive-header">
+    <span class="bs-eyebrow">Publications</span>
+    <h1 class="bs-archive-title">Books, articles &amp; essays</h1>
+    <nav class="bs-pub-tabs">
+      <a href="#books" class="bs-pub-tab">Books</a>
+      <a href="#articles" class="bs-pub-tab">Articles &amp; Chapters</a>
+      <a href="#essays" class="bs-pub-tab">Essays</a>
+      <span class="bs-pub-tab-dot">&middot;</span>
+      <a href="/files/jah-cv.pdf" class="bs-pub-tab bs-pub-tab-cv">Full CV</a>
+    </nav>
+  </header>
+
+  <div class="bs-container-narrow">
+    <!-- Books -->
+    <h2 class="bs-section-h2" id="books">Books</h2>
+
+    {{ $pubs := .Pages.ByDate.Reverse }}
+    {{ range where $pubs ".Params.image" "ne" nil }}
+    <div class="bs-pub-card">
+      <div class="bs-pub-card-cover">
+        <img src="/assets/images/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" decoding="async">
+      </div>
+      <div class="bs-pub-card-info">
+        <h3 class="bs-pub-card-title">{{ .Title }}</h3>
+        <p class="bs-pub-card-meta">{{ with .Params.publisher }}{{ . }}{{ end }}{{ with .Params.year }}, {{ . }}{{ end }}</p>
+        <div class="bs-pub-card-desc">
+          {{ .Summary }}
+        </div>
+        <a href="{{ .RelPermalink }}" class="bs-pub-card-link">More about this book &rarr;</a>
+      </div>
+    </div>
+    {{ end }}
+
+    <!-- Articles & Book Chapters from data file -->
+    {{ with site.Data.essays_criticism }}
+    {{ $all := where . "published" "ne" false }}
+    {{ $articles := where $all "type" "in" (slice "Article" "Chapter") }}
+    {{ if $articles }}
+    <h2 class="bs-section-h2" id="articles">Articles &amp; Book Chapters</h2>
+    <ol class="bs-pub-essay-list">
+      {{ range sort $articles "year" "desc" }}
+      <li>
+        {{ with .coauthor }}{{ . }} and Jason A. Heppler, {{ end }}{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}"{{ .title }}"{{ end }}{{ with .publication }}, <em>{{ . }}</em>{{ end }} ({{ .year }}).{{ with .note }} {{ . }}{{ end }}
+      </li>
+      {{ end }}
+    </ol>
+    {{ end }}
+
+    <!-- Essays & Criticism from data file -->
+    {{ $essays := where $all "type" "in" (slice "Essay" "Review") }}
+    {{ if $essays }}
+    <h2 class="bs-section-h2" id="essays">Essays &amp; Criticism</h2>
+    <ol class="bs-pub-essay-list">
+      {{ range sort $essays "year" "desc" }}
+      <li>
+        {{ with .coauthor }}{{ . }} and {{ end }}{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}"{{ .title }}"{{ end }}{{ with .publication }}, <em>{{ . }}</em>{{ end }} ({{ .year }}).
+      </li>
+      {{ end }}
+    </ol>
+    {{ end }}
+    {{ end }}
+  </div>
+</div>
+
+{{ partial "newsletter-band.html" . }}
+{{ partial "foot.html" . }}

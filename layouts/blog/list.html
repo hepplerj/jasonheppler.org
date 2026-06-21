@@ -1,35 +1,26 @@
 {{ partial "head.html" . }}
 
-<div class='pt-10 site-container content'>
-  <div class="body">
-<h1>{{ .Title }}</h1>
+<div class="bs-section-list">
+  <header class="bs-container-narrow bs-archive-header">
+    <span class="bs-eyebrow">Writing</span>
+    <h1 class="bs-archive-title">Essays</h1>
+    <p class="bs-archive-lead">Long-form writing on history, technology, and the places where they meet.</p>
+  </header>
 
-{{ .Content }}
-
-<div class="writing">
-{{ $paginator := .Paginate (.Data.Pages) }}
-{{ range $paginator.Pages.GroupByDate "2006" "01" }}
-  <h2 id="section-{{.Key| urlize }}" class="sticky top-0 bg-[var(--theme-background)] z-[1] max-sm:static max-sm:top-auto max-sm:z-auto">{{ .Key }}</h2>
-  <div>
-    {{ range .Pages }}
-      <article class="mb-4{{ if .Params.source }} essay-external{{ end }}">
-        {{ $url := .Permalink }}{{ if .Params.external }}{{ $url = .Params.external }}{{ end }}
-        {{ if .Params.source }}<div><span class="essay-source-tag">Published at: {{ .Params.source }}</span></div>{{ end }}
-        <a href="{{ $url }}" class="font-bold text-[115%] block">{{ .Title }}</a>
-        {{ if .Params.lede }}
-        <p class="pl-8 mt-1 italic text-[90%]">{{ index .Params "lede" }}</p>
-        {{ end }}
-      </article>
-    {{ end }}
+  <div class="bs-container-narrow">
+    {{ $pages := .Pages.ByDate.Reverse }}
+    {{ range $pages.GroupByDate "2006" }}
+    <div class="bs-year-group">
+      <h2 class="bs-year-heading">{{ .Key }}</h2>
+      {{ range .Pages }}
+      <a href="{{ .RelPermalink }}" class="bs-list-row">
+        <span class="bs-list-row-title">{{ .Title }}</span>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time>
+      </a>
+      {{ end }}
     </div>
-{{ end }}
-</div>
-
-      {{ template "_internal/pagination.html" . }}
-
+    {{ end }}
   </div>
 </div>
 
-<div class="site-container">
-  {{ partial "foot.html" . }}
-</div>
+{{ partial "foot.html" . }}

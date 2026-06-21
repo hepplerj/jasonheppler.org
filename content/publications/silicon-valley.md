@@ -20,13 +20,24 @@ ebook_links:
 library_link:
   name: "OpenLibrary"
   url: "https://openlibrary.org/works/OL37616306W/Silicon_Valley_and_the_Environmental_Inequalities_of_High-Tech_Urbanism?edition=key%3A/books/OL50730977M"
+endorsements:
+  - quote: "With deep empathy and keen insight, Jason Heppler shows what lies beneath the sparkling high-tech campuses of today's Silicon Valley: a long and tangled history of environmental transformation and trade-offs, mythmaking and moneymaking, conservation and exclusion, and a western landscape remade many times over. This book is an invaluable addition to the literature."
+    author: "Margaret O'Mara"
+  - quote: "Heppler skillfully dissects people's shifting perceptions of the places where they lived, worked, played, polluted, and argued about the future. As subdivisions and science parks supplanted orchards and the Valley acquired more Superfund sites than any other American county, inhabitants produced a remarkably diverse range of commitments to 'nature.'"
+    author: "John M. Findlay"
 reviews:
   - author: "W. Patrick McCray"
     publication: "LA Review of Books"
     url: "https://lareviewofbooks.org/article/dirty-digits-and-pleasant-landscapes-on-jason-a-hepplers-silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism/"
+    quote: "How this land would be used, who would have access, and who would decide which areas to preserve or let fall to the bulldozer's blade is at the heart of Heppler's book. This is a subversive view of Silicon Valley's history that keeps the usual suspects in the background. Environmental inequalities are in the foreground."
   - author: "Adam Quinn"
     publication: "H-Net"
     url: "https://www.h-net.org/reviews/showrev.php?id=60677"
+    quote: "Heppler's work provides a thought-provoking foundation for understanding the relationship between high-tech industries, urban development, and environmental inequalities. These topics will only become more relevant as computer chip manufacturing returns to the US."
+  - author: "Rachel Ameen"
+    publication: "H-Net"
+    url: "https://networks.h-net.org/group/reviews/20142443/ameen-heppler-silicon-valley-and-environmental-inequalities-high-tech"
+    quote: "A valuable contribution to urban environmental history. Heppler makes a convincing case that the valley's landscape — designed, contested, and unequally experienced — deserves as much attention as its tech economy and circuit boards."
 ---
 
 Few places symbolize the twentieth century American West like Silicon Valley. Stretching between the communities of Palo Alto to San Jose, this dense California region is home to the nation's most consequential high-tech industrial corridor. In the four decades following World War II, the region rapidly transformed from an agricultural economy to an industrial one fueled by government funding into defense-related research and development. Boosters of the new industrialization promised a modern, clean, and future-facing economy in the wake of declining steel-age industries and an emerging space-age arms race. New industries drove new populations who flocked to the valley as much for work as they did for its pleasant environment.
@@ -35,24 +46,3 @@ Between 1950 and 1990, boosters, city councils, and business leaders outlined a 
 
 A core argument throughout this book is the role of place: how they are defined, who defines them, and what happens in them. Just as important, the role of "nature" and who defines this illustrates who and what is included while also revealing who gets excluded in the conversation about the environment. Silicon Valley helps unravel this tension within land use regimes, social consequences, and environmental degradation, and American's growing environmental awareness following World War II.
 
----
-
-## Endorsements---
-
-> With deep empathy and keen insight, Jason Heppler shows what lies beneath the sparkling high-tech campuses of today's Silicon Valley: a long and tangled history of environmental transformation and trade-offs, mythmaking and moneymaking, conservation and exclusion, and a western landscape remade many times over. This book is an invaluable addition to the literature. --Margaret O'Mara
-
-> _Silicon Valley and the Environmental Inequalities of High-Tech Urbanism_ explains how "land, real estate, segregation, and pollution" became central themes in the history of Silicon Valley and other booming metropolises of the postwar American West. Drawing on discussions sparked by several local controversies from the 1940s through the 1990s, Jason Heppler skillfully dissects people's shifting perceptions of the places where they lived, worked, played, polluted, and argued about the future. As populations multiplied, as subdivisions and science parks supplanted orchards, as activists challenged the elite's plans and power, and as the Valley acquired more Superfund sites than any other American county, inhabitants produced a remarkably wide and diverse range of attitudes toward and commitments to "nature." --John M. Findlay
-
----
-
-### Reviews---
-
-W. Patrick McCray, *[LA Review of Books](https://lareviewofbooks.org/article/dirty-digits-and-pleasant-landscapes-on-jason-a-hepplers-silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism/)*:
-
-> The high-tech companies of Santa Clara Valley, along with the “real estate developers, bankers, brokers, planners, and builders” who combined forces to promote the region as an exemplar of “clean industry” needed gobs of land. How this land would be used, who would have access, and who would decide which areas to preserve or let fall to the bulldozer’s blade is at the heart of Heppler’s book. This is, in other words, a subversive view of Silicon Valley’s history that keeps the usual suspects—the Hewletts, Packards, Noyces, Moores, and Jobses—in the background. Environmental inequalities, as the title suggests, are in the foreground.
-
-Adam Quinn, [H-Net](https://www.h-net.org/reviews/showrev.php?id=60677):
-> Heppler’s work . . . provides a thought-provoking foundation for understanding the relationship between high-tech industries, urban development, and environmental inequalities. These topics will only become more relevant as computer chip manufacturing returns to the US and both local pollution and global climate change exacerbate earlier environmental inequalities. Anyone interested in the relationship between modern urban development and environmental inequalities, whether as scholars, activists, or citizens of an unequal, high-tech world, would be wise to learn about their historical context from *Silicon Valley and the Environmental Inequalities of High-Tech Urbanism*.
-
-Rachel Ameen, [H-Net](https://networks.h-net.org/group/reviews/20142443/ameen-heppler-silicon-valley-and-environmental-inequalities-high-tech):
-> *Silicon Valley and the Environmental Inequalities of High-Tech Urbanism* is a valuable contribution to urban environmental history. Heppler makes a convincing case that the valley’s landscape—designed, contested, and unequally experienced—deserves as much attention as its tech economy and circuit boards. At a moment when mass layoffs, new AI technology, and shifting corporate priorities have unsettled the industry’s triumphalist narrative, Heppler’s history of boosterism and its limits feels particularly timely.

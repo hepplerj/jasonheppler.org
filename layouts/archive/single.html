@@ -1,86 +1,52 @@
 {{ partial "head.html" . }}
 
-<div class="pt-10 site-container content">
-  <div class="body">
-    <h1>{{ .Title }}</h1>
+<div class="bs-archive">
+  <header class="bs-container-narrow bs-archive-header">
+    <span class="bs-eyebrow">Writing</span>
+    <h1 class="bs-archive-title">Essays, notes &amp; commonplace</h1>
+    <p class="bs-archive-lead">Longer essays, short notes, and quotations worth keeping unified into a single stream you can filter and search.</p>
+  </header>
 
-    {{ .Content }}
-
-    <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Looking for my old tweets? See the <a href="/tweets/">tweet archive</a>.</p>
-
-    <!-- Category/Tag Filter Pills -->
-    <details class="mb-6">
-      <summary class="cursor-pointer text-sm text-gray-500 dark:text-gray-400">Filter by tag</summary>
-      <div class="category-filters mt-3">
-        <a href="/archive/" class="category-pill active" data-category="all">All Posts</a>
-        {{ $blogPosts := where .Site.RegularPages "Section" "in" (slice "blog" "notes" "links") }}
-        {{ $tags := slice }}
-        {{ range $blogPosts }}
-          {{ range .Params.tags }}
-            {{ $tags = $tags | append . }}
-          {{ end }}
-        {{ end }}
-        {{ range $tags | uniq | sort }}
-        <a href="#" class="category-pill" data-category="{{ . | urlize }}">{{ . | humanize | title }}</a>
-        {{ end }}
+  <div class="bs-container-narrow">
+    <!-- Controls -->
+    <div class="bs-archive-controls">
+      <div class="bs-archive-chips" id="archiveChips">
+        <button class="bs-chip on" data-filter="all">All <span class="count" id="countAll"></span></button>
+        <button class="bs-chip" data-filter="essay">Essays <span class="count" id="countEssay"></span></button>
+        <button class="bs-chip" data-filter="note">Notes <span class="count" id="countNote"></span></button>
+        <button class="bs-chip" data-filter="link">Commonplace <span class="count" id="countLink"></span></button>
       </div>
-    </details>
+      <input type="search" class="bs-archive-search" id="archiveSearch" placeholder="Search titles…" aria-label="Search writing">
+    </div>
+    <div class="bs-archive-results" id="archiveResultCount"></div>
 
-    <!-- Posts List -->
-    <div class="writing">
-      <div class="posts-list">
-        {{ range (where .Site.RegularPages "Section" "in" (slice "blog" "notes" "links")) }}
-        {{ $urlizedTags := slice }}
-        {{ range .Params.tags }}
-          {{ $urlizedTags = $urlizedTags | append (. | urlize) }}
-        {{ end }}
-        <div class="post-item" data-tags="{{ delimit $urlizedTags "," }}">
-          <time class="post-date">{{ .Date.Format "2 January 2006" }}</time>
-          <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a>
-          {{ with .Params.lede }}
-          <p class="post-lede">{{ . }}</p>
+    <!-- Post list -->
+    <div class="bs-archive-list" id="archiveList">
+      {{/* Combine all three sections, sorted by date descending */}}
+      {{ $blog := where site.RegularPages "Section" "blog" }}
+      {{ $notes := where site.RegularPages "Section" "notes" }}
+      {{ $links := where site.RegularPages "Section" "links" }}
+      {{ $all := union $blog (union $notes $links) }}
+      {{ range $all.ByDate.Reverse }}
+      <a href="{{ .RelPermalink }}" class="bs-archive-row" data-type="{{ cond (eq .Section "blog") "essay" (cond (eq .Section "notes") "note" "link") }}" data-title="{{ .Title | lower }}">
+        <div class="bs-archive-row-text">
+          <span class="bs-archive-row-title">{{ .Title }}</span>
+          {{ if and (eq .Section "links") .Params.external }}
+          <span class="bs-archive-row-source">{{ .Params.external | replaceRE "^https?://(www\\.)?" "" | replaceRE "/.*$" "" }}</span>
           {{ end }}
         </div>
-        {{ end }}
-      </div>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        <span class="bs-tag bs-tag-{{ cond (eq .Section "blog") "essay" (cond (eq .Section "notes") "note" "link") }}">{{ cond (eq .Section "blog") "Essay" (cond (eq .Section "notes") "Note" "Commonplace") }}</span>
+      </a>
+      {{ end }}
     </div>
+
+    <!-- Empty state -->
+    <div class="bs-archive-empty" id="archiveEmpty" style="display:none">No posts match your search.</div>
   </div>
 </div>
 
-<div class="site-container">
-  {{ partial "foot.html" . }}
-</div>
+{{ partial "newsletter-band.html" . }}
+{{ partial "foot.html" . }}
 
-<script>
-// Filter posts by category
-document.addEventListener('DOMContentLoaded', function() {
-  const pills = document.querySelectorAll('.category-pill');
-  const posts = document.querySelectorAll('.post-item');
-
-  pills.forEach(pill => {
-    pill.addEventListener('click', function(e) {
-      e.preventDefault();
-
-      // Update active pill
-      pills.forEach(p => p.classList.remove('active'));
-      this.classList.add('active');
-
-      const category = this.dataset.category;
-
-      // Filter posts
-      posts.forEach(post => {
-        if (category === 'all') {
-          post.style.display = 'grid';
-        } else {
-          const postTags = post.dataset.tags.toLowerCase().split(',');
-          if (postTags.includes(category)) {
-            post.style.display = 'grid';
-          } else {
-            post.style.display = 'none';
-          }
-        }
-      });
-    });
-  });
-});
-</script>
+<script src="/js/archive-filter.js" defer></script>

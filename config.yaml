@@ -28,6 +28,8 @@ params:
   social:
     bluesky: https://bsky.app/profile/jasonheppler.org
     mastodon: https://hcommons.social/@jaheppler
+    github: https://github.com/hepplerj
+    linkedin: https://www.linkedin.com/in/jasonheppler
     microblog: https://updates.jasonheppler.org
     buymeacoffee: https://buymeacoffee.com/jasonheppler
 
@@ -85,21 +87,30 @@ services:
 
 menu:
   nav:
-    - name: Publications
-      url: /publications/
+    - identifier: essays
+      name: Essays
+      url: /blog/
       weight: 1
-    - name: Digital History
-      url: /research/
+    - identifier: notes
+      name: Notes
+      url: /notes/
       weight: 2
-    - name: Teaching
-      url: /courses/
+    - identifier: publications
+      name: Publications
+      url: /publications/
       weight: 3
-    - name: Blog
-      url: https://updates.jasonheppler.org
+    - identifier: digital-history
+      name: Digital History
+      url: /research/
       weight: 4
-    - name: Newsletter
+    - identifier: bookshelf
+      name: Bookshelf
+      url: /books/
       weight: 5
-      url: https://buttondown.com/plainsink
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 6
 
 enableGitInfo: true
 

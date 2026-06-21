@@ -1,20 +1,16 @@
 {{ partial "head.html" . }}
 
-<div class='pt-10 site-container content'>
-  <div class="body">
-    <header>
-    {{ if .Params.page_type }}
-    {{ else }}
-    <h1>{{ .Title }}</h1>
-    {{ end }}
-    {{ partial "article-meta.html" . }}
+<div class="bs-section">
+  <header class="bs-container-narrow bs-archive-header">
+    <span class="bs-eyebrow">Blogroll</span>
+    <h1 class="bs-archive-title">{{ .Title }}</h1>
   </header>
-  <div class="blogroll-columns">
-    {{ .Content }}
+
+  <div class="bs-container-narrow">
+    <div class="prose bs-blogroll-intro">
+      {{ .Content }}
+    </div>
   </div>
 </div>
-</div>
 
-<div class="site-container">
-  {{ partial "foot.html" . }}
-</div>
+{{ partial "foot.html" . }}

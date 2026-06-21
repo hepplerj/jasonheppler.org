@@ -1,39 +1,92 @@
 {{ partial "head.html" . }}
 
-<div class='pt-10 site-container content'>
-  <div class="body">
-  <header>
-    <h1>{{ .Title }}</h1>
+<div class="bs-bookshelf">
+  <header class="bs-container-narrow bs-archive-header">
+    <span class="bs-eyebrow">Reading</span>
+    <h1 class="bs-archive-title">Bookshelf</h1>
+    <p class="bs-archive-lead">What I'm reading and have read. For older reading logs, see <a href="https://www.librarything.com/profile/hepplerj" class="prose-link">LibraryThing</a>.</p>
   </header>
 
-{{ .Content }}
-
-<p>I track my reading here. You can find older pre-2018 reading lists on <a href="https://www.librarything.com/profile/hepplerj">LibraryThing</a>. Click a title to see ISBN lookup links. Books I've reviewed (either here or elsewhere) are noted by a review badge.</p>
-
-<div class="books">
-
-  {{/* Currently reading — pinned at top, searched across all books regardless of date */}}
-  {{ $allBooks := where .Site.RegularPages "Section" "books" }}
-  {{ $reading  := where $allBooks ".Params.categories" "intersect" (slice "reading") }}
+  <!-- Currently Reading -->
+  {{ $reading := where (where site.RegularPages "Section" "books") ".Params.categories" "intersect" (slice "reading") }}
   {{ if $reading }}
-  {{ range $reading }}{{ partial "book-entry.html" . }}{{ end }}
+  <section class="bs-currently-reading">
+    <div class="bs-container-narrow">
+      <h2 class="bs-section-h2">Currently Reading</h2>
+      <div class="bs-currently-grid">
+        {{ range $reading }}
+        <div class="bs-currently-card">
+          <div class="bs-currently-title">{{ .Title }}</div>
+          <div class="bs-currently-meta">{{ .Params.author }}{{ with .Params.pub_year }} · {{ . }}{{ end }}</div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
   {{ end }}
 
-  {{/* Everything else, grouped by year (2018+), excluding currently-reading */}}
-  {{ $allBooks = where $allBooks "Date" "ge" (time "2018-01-01") }}
-  {{ range $allBooks.GroupByDate "2006" }}
-  <h2 class="book-year-heading">{{ .Key }}</h2>
-  {{ range .Pages }}
-  {{ if not (in .Params.categories "reading") }}{{ partial "book-entry.html" . }}{{ end }}
-  {{ end }}
-  {{ end }}
+  <!-- Reading Log -->
+  <section class="bs-container-narrow bs-section">
+    <div class="bs-archive-controls">
+      <div class="bs-archive-chips" id="shelfChips">
+        {{ $allBooks := where (where site.RegularPages "Section" "books") ".Date" "ge" (time "2018-01-01") }}
+        {{ $years := slice }}
+        {{ range $allBooks }}
+          {{ $y := .Date.Format "2006" }}
+          {{ if not (in $years $y) }}{{ $years = $years | append $y }}{{ end }}
+        {{ end }}
+        {{ range sort $years "value" "desc" }}
+        <button class="bs-chip{{ if eq . (now.Format "2006") }} on{{ end }}" data-shelf="{{ . }}">{{ . }}</button>
+        {{ end }}
+        <button class="bs-chip" data-shelf="all">All</button>
+      </div>
+    </div>
+    <div class="bs-shelf-count" id="shelfCount"></div>
 
+    <div class="bs-shelf-list" id="shelfList">
+      {{ range $allBooks.ByDate.Reverse }}
+      {{ if not (in .Params.categories "reading") }}
+      <div class="bs-shelf-entry" data-year="{{ .Date.Format "2006" }}">
+        {{ if .Params.isbn }}
+        <details class="bs-shelf-details">
+          <summary class="bs-shelf-row">
+            <div class="bs-shelf-info">
+              <span class="bs-shelf-title">
+                {{ if .Params.reviewed }}{{ $rev := .Permalink }}{{ with .Params.review_url }}{{ $rev = . }}{{ end }}<a href="{{ $rev }}" class="bs-reviewed-link">Reviewed</a> {{ end }}{{ .Title }}
+              </span>
+              <span class="bs-shelf-meta">{{ .Params.author }}{{ with .Params.pub_year }} · {{ . }}{{ end }}</span>
+            </div>
+            <span class="bs-shelf-year">{{ .Date.Format "2006" }}</span>
+          </summary>
+          <div class="bs-shelf-expanded">
+            <span class="bs-shelf-isbn">ISBN {{ .Params.isbn }}</span>
+            <span class="bs-shelf-links">
+              <a href="https://worldcat.org/isbn/{{ .Params.isbn }}">WorldCat</a>
+              <a href="https://openlibrary.org/isbn/{{ .Params.isbn }}">Open Library</a>
+              <a href="https://bookshop.org/beta-search?keywords={{ .Params.isbn }}">Bookshop</a>
+            </span>
+            {{ with .Params.publisher }}<span class="bs-shelf-publisher">{{ . }}</span>{{ end }}
+          </div>
+        </details>
+        {{ else }}
+        <div class="bs-shelf-row">
+          <div class="bs-shelf-info">
+            <span class="bs-shelf-title">
+              {{ if .Params.reviewed }}{{ $rev := .Permalink }}{{ with .Params.review_url }}{{ $rev = . }}{{ end }}<a href="{{ $rev }}" class="bs-reviewed-link">Reviewed</a> {{ end }}{{ .Title }}
+            </span>
+            <span class="bs-shelf-meta">{{ .Params.author }}{{ with .Params.pub_year }} · {{ . }}{{ end }}</span>
+          </div>
+          <span class="bs-shelf-year">{{ .Date.Format "2006" }}</span>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </section>
 </div>
 
-<p class="text-center font-bold text-3xl">Readings before 2018 are logged on <a href="https://www.librarything.com/profile/hepplerj">LibraryThing</a>.</p>
-</div>
-</div>
+{{ partial "newsletter-band.html" . }}
+{{ partial "foot.html" . }}
 
-<div class="site-container">
-  {{ partial "foot.html" . }}
-</div>
+<script src="/js/bookshelf-filter.js?v=2" defer></script>

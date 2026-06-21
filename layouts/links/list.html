@@ -1,31 +1,31 @@
 {{ partial "head.html" . }}
 
-<div class='pt-10 site-container content'>
-  <div class="body">
-<h1>{{ .Title }}</h1>
+<div class="bs-section-list">
+  <header class="bs-container-narrow bs-archive-header">
+    <span class="bs-eyebrow">Writing</span>
+    <h1 class="bs-archive-title">Commonplace</h1>
+    <p class="bs-archive-lead">Links, quotes, and ideas worth sharing.</p>
+  </header>
 
-{{ .Content }}
-
-<div class="link-posts">
-{{ range (.Paginate ( first 25 .Pages )).Pages }}
-   <div class="link-post-body">
-    <header class="link-post-header">
-      <span><a href="{{ index .Params "external" }}">{{ index .Params "title" }} →</a></span>
-      <time class='link-post-date post-date' datetime='{{ .Date.Format "2006-01-02" }}'><a href="{{ .Permalink }}" class="permalink" title="Local permalink">{{ .Date.Format "January 2, 2006" }}</a></time> 
-    </header>
-    <article>
-
-      {{ .Content }}
-
-      {{ if .Params.tags }}<div class="mt-2">{{ partial "tags-badges.html" . }}</div>{{ end }}
-    </article>
-</div>
-{{ end }}
-
-{{ template "_internal/pagination.html" . }}
-
-</div>
+  <div class="bs-container-narrow">
+    {{ $pages := .Pages.ByDate.Reverse }}
+    {{ range $pages.GroupByDate "2006" }}
+    <div class="bs-year-group">
+      <h2 class="bs-year-heading">{{ .Key }}</h2>
+      {{ range .Pages }}
+      <a href="{{ .RelPermalink }}" class="bs-list-row">
+        <div>
+          <span class="bs-list-row-title">{{ .Title }}</span>
+          {{ with .Params.external }}
+          <span class="bs-list-row-source">{{ . | replaceRE "^https?://(www\\.)?" "" | replaceRE "/.*$" "" }}</span>
+          {{ end }}
+        </div>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time>
+      </a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
 </div>
 
 {{ partial "foot.html" . }}
-</div>
