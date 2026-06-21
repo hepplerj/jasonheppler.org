@@ -5,7 +5,7 @@ layout: blogroll
 ---
 
 
-Back in the earlier days of the Internet, we had [blogrolls](https://indieweb.org/blogroll). Let's bring those back. If you like what you read here, then this is a collection of blogs and websites are worth your time.
+Back in the earlier days of the Internet, we had [blogrolls](https://indieweb.org/blogroll). Let's bring those back. If you like what you read here, then this is a collection of blogs and websites worth your time.
 
 - [512 Pixels](https://512pixels.net/?ref=jasonheppler.org)
 - [Gwern Branwen](https://gwern.net/?ref=jasonheppler.org)

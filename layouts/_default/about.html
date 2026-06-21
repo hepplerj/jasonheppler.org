@@ -1,119 +1,108 @@
 {{ partial "head.html" . }}
 
-<div class='pt-10 site-container content'>
-  <div class="body">
-    <header>
-    {{ if .Params.page_type }}
-    {{ else }}
-    <h1>{{ .Title }}</h1>
-    {{ end }}
-    {{ partial "article-meta.html" . }}
-  </header>
-  {{- if (.Param "ShowToc") }}
-  {{- partial "toc.html" . }}
-  {{- end }}
-{{ .Content }}
+<div class="bs-about">
+<header class="bs-container-narrow bs-archive-header">
+  <span class="bs-eyebrow">Dr. Jason Heppler</span>
+  <h1 class="bs-archive-title">About me</h1>
+</header>
 
-<hr class="my-10">
 
-{{ $posts := where site.RegularPages "Section" "in" (slice "blog" "notes" "links") }}
+  <!-- Roles -->
+  <section class="bs-roles-band">
+    <div class="bs-container">
+      <div class="bs-roles-grid">
+        <div class="bs-role">
+          <h3 class="bs-role-title">Senior Developer / Scholar</h3>
+          <p class="bs-role-org">Roy Rosenzweig Center for History &amp; New Media</p>
+        </div>
+        <div class="bs-role">
+          <h3 class="bs-role-title">Adjunct Professor of History</h3>
+          <p class="bs-role-org">George Mason University</p>
+        </div>
+        <div class="bs-role">
+          <h3 class="bs-role-title">Affiliate Fellow</h3>
+          <p class="bs-role-org">Center for Great Plains Studies, University of Nebraska&ndash;Lincoln</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-{{ $scratch := newScratch }}
-{{ $scratch.Set "longCount" 0 }}
-{{ $scratch.Set "extLinks" 0 }}
-{{ $scratch.Set "intLinks" 0 }}
-{{ range $posts }}
-  {{ $scratch.Add "wordcount" .WordCount }}
-  {{ if ge .WordCount ($scratch.Get "longCount") }}
-    {{ $scratch.Set "longestPost" . }}
-    {{ $scratch.Set "longCount" .WordCount }}
-  {{ end }}
-  {{ $ext := len (findRE `\]\(https?://` .RawContent) }}
-  {{ $int := len (findRE `\]\(/` .RawContent) }}
-  {{ $scratch.Add "extLinks" $ext }}
-  {{ $scratch.Add "intLinks" $int }}
-{{ end }}
+  <!-- Bio body -->
+  <section class="bs-container-narrow bs-about-body">
+    <div class="prose">
+      {{ .Content }}
+    </div>
+  </section>
 
-{{ $postCount := len $posts }}
-{{ $wordCount := $scratch.Get "wordcount" }}
-{{ $avgPostLength := div $wordCount $postCount }}
-{{ $firstYear := (index (last 1 $posts) 0).Date.Year }}
-{{ $yearsActive := sub now.Year $firstYear | add 1 }}
+  <!-- By the Numbers -->
+  {{ $posts := where site.RegularPages "Section" "in" (slice "blog" "notes" "links") }}
+  {{ $scratch := newScratch }}
+  {{ range $posts }}{{ $scratch.Add "wordcount" .WordCount }}{{ end }}
+  {{ $postCount := len $posts }}
+  {{ $wordCount := $scratch.Get "wordcount" }}
+  {{ $firstYear := (index (last 1 $posts) 0).Date.Year }}
+  {{ $yearsActive := sub now.Year $firstYear | add 1 }}
 
-{{ $grouped := $posts.GroupByDate "2006" }}
+  <section class="bs-numband">
+    <div class="bs-container">
+      <div class="bs-stats-grid">
+        <div class="bs-stat">
+          <div class="bs-stat-num">{{ $yearsActive }}</div>
+          <div class="bs-stat-label">Years Writing</div>
+        </div>
+        <div class="bs-stat">
+          <div class="bs-stat-num">{{ $postCount | lang.FormatNumberCustom 0 }}</div>
+          <div class="bs-stat-label">Posts</div>
+        </div>
+        <div class="bs-stat">
+          <div class="bs-stat-num">{{ div $wordCount 1000 | lang.FormatNumberCustom 0 }}k</div>
+          <div class="bs-stat-label">Words Written</div>
+        </div>
+        <div class="bs-stat">
+          <div class="bs-stat-num">{{ len (where site.RegularPages "Section" "links") | lang.FormatNumberCustom 0 }}</div>
+          <div class="bs-stat-label">Links Shared</div>
+        </div>
+        <div class="bs-stat">
+          <div class="bs-stat-num">{{ len $.Site.Taxonomies.tags }}</div>
+          <div class="bs-stat-label">Topics</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<h2>Posts Per Year</h2>
-
-<div style="width: 100%; height: 300px; margin: 30px auto">
-  <canvas id="yearchart"></canvas>
-  <noscript>Sorry, viewing this chart requires JavaScript to be enabled.</noscript>
+  <!-- Contact / Links -->
+  <section class="bs-container bs-section">
+    <div class="bs-about-links-grid">
+      <div>
+        <h3 class="bs-about-link-heading">Connect</h3>
+        <ul class="bs-about-link-list">
+          {{ with site.Params.Author.email }}<li><a href="mailto:{{ . }}">Email</a></li>{{ end }}
+          {{ with site.Params.social.bluesky }}<li><a href="{{ . }}">Bluesky</a></li>{{ end }}
+          {{ with site.Params.social.mastodon }}<li><a href="{{ . }}" rel="me">Mastodon</a></li>{{ end }}
+          <li><a href="https://github.com/hepplerj">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/jasonheppler/">LinkedIn</a></li>
+          {{ with site.Params.social.microblog }}<li><a href="{{ . }}">Micro.blog</a></li>{{ end }}
+        </ul>
+      </div>
+      <div>
+        <h3 class="bs-about-link-heading">Elsewhere</h3>
+        <ul class="bs-about-link-list">
+          <li><a href="/blogroll/">Blogroll</a></li>
+          <li><a href="/courses/">Teaching</a></li>
+          <li><a href="/uses/">Uses</a></li>
+          <li><a href="https://www.tackandink.org/">Newsletter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="bs-about-link-heading">Feeds</h3>
+        <ul class="bs-about-link-list">
+          <li><a href="/feed.xml">RSS</a></li>
+          <li><a href="/feed.json">JSON Feed</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </div>
 
-<table class="w-full text-sm mb-8" style="display: none;">
-  <tr>
-    <th class="text-left py-1 w-1/3">Year</th>
-    <th class="text-left py-1">Number of Posts</th>
-  </tr>
-  {{ range $grouped.Reverse }}
-  {{ $yearPostCount := len (where .Pages "Type" "blog") }}
-  <tr>
-    <td class="py-1">{{ .Key }}</td>
-    <td class="py-1">{{ $yearPostCount | lang.FormatNumberCustom 0 }}</td>
-  </tr>
-  {{ $scratch.Add "yearKeys" "'"  }}
-  {{ $scratch.Add "yearKeys" .Key  }}
-  {{ $scratch.Add "yearKeys" "',"  }}
-  {{ $scratch.Add "yearCount" (string $yearPostCount) }}
-  {{ $scratch.Add "yearCount" ","  }}
-  {{ end }}
-</table>
-
-{{ $chartPre := "{type: 'bar',data: {labels: [" }}
-{{ $chartYearKeys := trim ($scratch.Get "yearKeys") ","}}
-{{ $chartYearCount := trim ($scratch.Get "yearCount") ","}}
-{{ $chartMid := "],datasets: [{label: 'Posts Published',data: [" }}
-{{ $chartPost := "],backgroundColor: '#f5d652',borderColor: '#ffc700',borderWidth: 3}]},options: {maintainAspectRatio: false, animation: false, scales: {y: {ticks: {beginAtZero: true}}}}}"
-}}
-
-{{ $chartData := printf "%s" $chartPost | printf "%s%s" $chartYearCount | printf "%s%s" $chartMid | printf "%s%s" $chartYearKeys | printf "%s%s" $chartPre | printf "%s" }}
-
-<script src="/assets/javascripts/chart.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-  const ctx = document.getElementById('yearchart').getContext('2d');
-  const data = {{ $chartData | safeJS }};
-  new Chart(ctx, data);
-</script>
-
-<div class="stats-grid">
-  <div class="stat-block">
-    <div class="stat-value">{{ $yearsActive }}</div>
-    <div class="stat-label">Years Writing</div>
-  </div>
-  <div class="stat-block">
-    <div class="stat-value">{{ $postCount | lang.FormatNumberCustom 0 }}</div>
-    <div class="stat-label">Posts</div>
-  </div>
-  <div class="stat-block">
-    <div class="stat-value">{{ $wordCount | lang.FormatNumberCustom 0 }}</div>
-    <div class="stat-label">Words Written</div>
-  </div>
-  <div class="stat-block">
-    <div class="stat-value">{{ len $.Site.Taxonomies.tags }}</div>
-    <div class="stat-label">Tags</div>
-  </div>
-  <div class="stat-block">
-    <div class="stat-value">{{ $scratch.Get "extLinks" | lang.FormatNumberCustom 0 }}</div>
-    <div class="stat-label">External Links</div>
-  </div>
-  <div class="stat-block">
-    <div class="stat-value">{{ $scratch.Get "intLinks" | lang.FormatNumberCustom 0 }}</div>
-    <div class="stat-label">Internal Links</div>
-  </div>
-</div>
-
-</div>
-</div>
-
-<div class="site-container">
-  {{ partial "foot.html" . }}
-</div>
+{{ partial "newsletter-band.html" . }}
+{{ partial "foot.html" . }}
