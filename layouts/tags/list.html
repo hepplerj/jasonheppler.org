@@ -1,28 +1,20 @@
 {{ partial "head.html" . }}
 
-<div class="pt-10 site-container content">
-  <div class="body">
-    <h1>{{ .Name | humanize | title }}</h1>
+<div class="bs-section-list">
+  <header class="bs-container-narrow bs-archive-header">
+    <span class="bs-eyebrow">Tag</span>
+    <h1 class="bs-archive-title">{{ .Name | humanize | title }}</h1>
+    <p class="bs-archive-lead">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }} tagged with "{{ .Name | humanize | title }}"</p>
+  </header>
 
-    <p>{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }} tagged with "{{ .Name | humanize | title }}"</p>
-
-    <!-- Posts List -->
-    <div class="writing">
-      <div class="posts-list">
-        {{ range .Pages }}
-        <div class="post-item">
-          <time class="post-date">{{ .Date.Format "2 January 2006" }}</time>
-          <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a>
-          {{ with .Params.lede }}
-          <p class="post-lede">{{ . }}</p>
-          {{ end }}
-        </div>
-        {{ end }}
-      </div>
-    </div>
+  <div class="bs-container-narrow">
+    {{ range .Pages.ByDate.Reverse }}
+    <a href="{{ .RelPermalink }}" class="bs-list-row">
+      <span class="bs-list-row-title">{{ .Title }}</span>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+    </a>
+    {{ end }}
   </div>
 </div>
 
-<div class="site-container">
-  {{ partial "foot.html" . }}
-</div>
+{{ partial "foot.html" . }}

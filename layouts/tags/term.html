@@ -1,29 +1,25 @@
 {{ partial "head.html" . }}
 
-<div class="pt-10 site-container content">
-  <div class="body">
-    <h1>{{ .Name | humanize | title }}</h1>
+<div class="bs-section-list">
+  <header class="bs-container-narrow bs-archive-header">
+    <span class="bs-eyebrow">Tag</span>
+    <h1 class="bs-archive-title">{{ .Name | humanize | title }}</h1>
+    <p class="bs-archive-lead">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }} tagged with "{{ .Name | humanize | title }}"</p>
+  </header>
 
-    <p class="text-[85%]" style="color: var(--theme-dark-tint)">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }} tagged with "{{ .Name | humanize | title }}"</p>
-
-    <div class="writing">
-      {{ range .Pages.GroupByDate "2006" }}
-      <h2 id="section-{{ .Key | urlize }}" class="sticky top-0 bg-[var(--theme-background)] z-[1] max-sm:static max-sm:top-auto max-sm:z-auto">{{ .Key }}</h2>
-      <div>
-        {{ range .Pages }}
-        <article class="mb-4">
-          <a href="{{ .Permalink }}" class="font-bold text-[115%] block">{{ .Title }}</a>
-          {{ if .Params.lede }}
-          <p class="pl-8 mt-1 italic text-[90%]">{{ index .Params "lede" }}</p>
-          {{ end }}
-        </article>
-        {{ end }}
-      </div>
+  <div class="bs-container-narrow">
+    {{ range .Pages.GroupByDate "2006" }}
+    <div class="bs-year-group">
+      <h2 class="bs-year-heading">{{ .Key }}</h2>
+      {{ range .Pages }}
+      <a href="{{ .RelPermalink }}" class="bs-list-row">
+        <span class="bs-list-row-title">{{ .Title }}</span>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time>
+      </a>
       {{ end }}
     </div>
+    {{ end }}
   </div>
 </div>
 
-<div class="site-container">
-  {{ partial "foot.html" . }}
-</div>
+{{ partial "foot.html" . }}
