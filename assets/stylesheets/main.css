@@ -863,6 +863,36 @@
     text-align: right;
   }
 
+  .bs-photo-credit a {
+    color: var(--color-terracotta);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    border-bottom: none !important;
+  }
+
+  .bs-photo-credit a:hover {
+    color: var(--color-ink);
+  }
+
+  .prose figure figcaption {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    color: var(--color-prose);
+    text-align: right;
+    margin-top: 8px;
+  }
+
+  .prose figure figcaption a {
+    color: var(--color-terracotta);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    border-bottom: none !important;
+  }
+
+  .prose figure figcaption a:hover {
+    color: var(--color-ink);
+  }
+
   @media (max-width: 860px) {
     .bs-intro-inner {
       grid-template-columns: 1fr;
@@ -1381,16 +1411,22 @@
     padding-top: 16px;
   }
 
-  .bs-carbon-badge {
-    margin-top: 12px;
+  .bs-post-footer-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-hairline);
+    font-family: var(--font-ui);
+    font-size: 13px;
   }
 
   .bs-carbon-link {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-family: var(--font-ui);
-    font-size: 12px;
+    gap: 5px;
     color: #5a7a52;
     border-bottom: none !important;
     text-decoration: none;
@@ -1404,31 +1440,20 @@
     flex-shrink: 0;
   }
 
-  .bs-essay-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 32px 0;
-    border-top: 1px solid var(--color-hairline);
-    margin-top: 48px;
+  .bs-post-footer-meta .bs-meta-dot {
+    color: var(--color-muted);
   }
 
-  .bs-post-tag {
-    font-family: var(--font-ui);
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+  .bs-post-footer-meta .bs-tag-link {
+    background: none;
+    padding: 0;
     color: var(--color-terracotta);
-    border: 1px solid var(--color-link-underline);
-    padding: 7px 14px;
     text-decoration: none;
-    border-radius: 2px;
-    transition: all 0.15s;
+    border-bottom: none !important;
   }
 
-  .bs-post-tag:hover {
-    background: var(--color-terracotta);
-    color: var(--color-on-dark);
+  .bs-post-footer-meta .bs-tag-link:hover {
+    color: var(--color-ink);
   }
 
   /* ── Essay: Author card ── */

@@ -29,20 +29,14 @@
     {{ .Content }}
   </article>
 
-  <!-- Post type disclaimer -->
-  <aside class="bs-reading-col bs-post-disclaimer">
-    This is an essay — a longer piece of writing on a topic I've been thinking about.
-  </aside>
+  <!-- Carbon badge & tags -->
+  <div class="bs-reading-col bs-post-footer-meta">
+    <p>This is an <a href="/archive/">essay</a> — a longer piece of writing on a topic I've been thinking about.</p>
 
-  <!-- Carbon badge -->
-  <div class="bs-reading-col">
     {{ partial "carbon-badge.html" . }}
-  </div>
-
-  <!-- Tags -->
-  <div class="bs-reading-col bs-essay-tags">
-    {{ range .Params.tags }}
-    <a href="/tags/{{ . | urlize }}/" class="bs-post-tag">{{ . | humanize }}</a>
+    {{ with .Params.tags }}
+      <span class="bs-meta-dot"></span>
+      {{ range $i, $t := . }}{{ if $i }}<span class="bs-meta-dot"></span>{{ end }}<a href="/tags/{{ $t | urlize }}/" class="bs-tag-link">{{ $t | humanize }}</a>{{ end }}
     {{ end }}
   </div>
 

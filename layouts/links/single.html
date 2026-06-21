@@ -22,24 +22,32 @@
     {{ end }}
   </article>
 
-  <!-- Post type disclaimer -->
-  <aside class="bs-reading-col bs-post-disclaimer">
-    This is a commonplace post — a link to something I've read and found worth keeping, named after the commonplace book tradition of collecting passages and references.
-  </aside>
+  <!-- Carbon badge & tags -->
+  <div class="bs-reading-col bs-post-footer-meta">
+    <p>This is a <a href="/archive/">commonplace post</a> — a link to something I've read and found worth keeping, named after the commonplace book tradition of collecting passages and references.</p>
 
-  <!-- Carbon badge -->
-  <div class="bs-reading-col">
     {{ partial "carbon-badge.html" . }}
-  </div>
-
-  <!-- Tags -->
-  {{ with .Params.tags }}
-  <div class="bs-reading-col bs-essay-tags">
-    {{ range . }}
-    <a href="/tags/{{ . | urlize }}/" class="bs-post-tag">{{ . | humanize }}</a>
+    {{ with .Params.tags }}
+      <span class="bs-meta-dot"></span>
+      {{ range $i, $t := . }}{{ if $i }}<span class="bs-meta-dot"></span>{{ end }}<a href="/tags/{{ $t | urlize }}/" class="bs-tag-link">{{ $t | humanize }}</a>{{ end }}
     {{ end }}
   </div>
-  {{ end }}
+
+  <!-- Author card -->
+  <div class="bs-reading-col bs-author-card">
+    <div class="bs-author-info">
+      <img src="/assets/images/portrait.webp" alt="Jason Heppler" class="bs-author-avatar">
+      <div>
+        <div class="bs-author-name">Jason A. Heppler</div>
+        <div class="bs-author-role">Environmental &amp; Digital Historian</div>
+      </div>
+    </div>
+    <div class="bs-author-links">
+      {{ with site.Params.social.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
+      {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me">Mastodon</a>{{ end }}
+      <a href="https://github.com/hepplerj">GitHub</a>
+    </div>
+  </div>
 
   <!-- Webmentions -->
   <aside class="bs-reading-col">

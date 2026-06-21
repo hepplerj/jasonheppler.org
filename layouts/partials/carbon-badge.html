@@ -2,9 +2,7 @@
      Page weight ≈ WordCount × 7 bytes (text) + 30KB base (HTML/CSS overhead, fonts cached).
      Result is in grams. */}}
 {{ $grams := div (add (mul .Page.WordCount 7.0) 30000.0) 2000000.0 }}
-<div class="bs-carbon-badge">
-  <a href="/low-impact/" class="bs-carbon-link">
-    <svg class="bs-carbon-leaf" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
-    <span>This page emits ~{{ printf "%.3f" $grams }}g of CO2</span>
-  </a>
-</div>
+<a href="/low-impact/" class="bs-carbon-link">
+  <svg class="bs-carbon-leaf" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+  ~{{ printf "%.3f" $grams }}g CO2
+</a>
