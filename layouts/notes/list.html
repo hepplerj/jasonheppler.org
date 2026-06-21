@@ -1,26 +1,26 @@
 {{ partial "head.html" . }}
 
-<div class='pt-10 site-container content'>
-  <div class="body">
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
+<div class="bs-section-list">
+  <header class="bs-container-narrow bs-archive-header">
+    <span class="bs-eyebrow">Writing</span>
+    <h1 class="bs-archive-title">Notes</h1>
+    <p class="bs-archive-lead">Shorter thoughts, observations, and reflections.</p>
+  </header>
 
-    <div class="writing">
-    {{ range .Data.Pages.GroupByDate "2006" "01" }}
-      <h2 id="section-{{ .Key | urlize }}" class="sticky top-0 bg-[var(--theme-background)] z-[1] max-sm:static max-sm:top-auto max-sm:z-auto">{{ .Key }}</h2>
-      <div>
-        {{ range .Pages }}
-        <article class="mb-4">
-          <a href="{{ .Permalink }}" class="font-bold text-[115%] block">{{ .Title }}</a>
-          <p class="pl-8 text-[75%] font-mono opacity-50 mt-0">{{ .Date.Format "2 Jan 2006" }}</p>
-        </article>
-        {{ end }}
-      </div>
-    {{ end }}
+  <div class="bs-container-narrow">
+    {{ $pages := .Pages.ByDate.Reverse }}
+    {{ range $pages.GroupByDate "2006" }}
+    <div class="bs-year-group">
+      <h2 class="bs-year-heading">{{ .Key }}</h2>
+      {{ range .Pages }}
+      <a href="{{ .RelPermalink }}" class="bs-list-row">
+        <span class="bs-list-row-title">{{ .Title }}</span>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time>
+      </a>
+      {{ end }}
     </div>
+    {{ end }}
   </div>
 </div>
 
-<div class="site-container">
-  {{ partial "foot.html" . }}
-</div>
+{{ partial "foot.html" . }}

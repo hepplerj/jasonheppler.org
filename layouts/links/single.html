@@ -1,66 +1,53 @@
 {{ partial "head.html" . }}
 
-<div class='pt-10 site-container content'>
-  <div class="body">
-    <article id='{{ urlize .Title }}' class="h-entry post">
-      <section>
-        <header>
-          <h1 class="post-title"><a href='{{ .Permalink }}' class='p-name'><strong>{{ .Title }}</strong></a></h1>
-        </header>
+<div class="bs-essay">
+  <!-- Article Header -->
+  <header class="bs-reading-col bs-essay-header">
+    <h1 class="bs-essay-title">{{ .Title }}</h1>
+    <div class="bs-essay-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{ with .Params.external }}
+      <span class="bs-meta-dot"></span>
+      <span>{{ . | replaceRE "^https?://(www\\.)?" "" | replaceRE "/.*$" "" }}</span>
+      {{ end }}
+    </div>
+  </header>
 
-        {{ with .Params.image }}
-        <img src="/assets/images/{{ . }}" alt="{{ $.Title }}" loading="lazy" decoding="async" />
-        {{ end }}
-        {{- if (.Param "ShowToc") }}
-        {{- partial "toc.html" . }}
-        {{- end }}
-        <div class='post-body e-content'>
-          {{ .Content }}
-        </div>
+  <!-- Prose body -->
+  <article class="bs-reading-col prose e-content h-entry">
+    {{ .Content }}
 
-        <p>Linked: <a href="{{ index .Params "external" }}">{{ index .Params "title" }}</a></p>
-      </section>
-    </article>
+    {{ with .Params.external }}
+    <p><a href="{{ . }}">Visit link &rarr;</a></p>
+    {{ end }}
+  </article>
 
-    {{ partial "post-footer" . }}
+  <!-- Post type disclaimer -->
+  <aside class="bs-reading-col bs-post-disclaimer">
+    This is a commonplace post — a link to something I've read and found worth keeping, named after the commonplace book tradition of collecting passages and references.
+  </aside>
 
-    <footer class="post-footer">
-      <p><time class="dt-published" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "January 2, 2006" }}</time> &mdash; <a href="/" class="p-author h-card">Jason Heppler</a></p>
-      <p>
-        <a href="https://bsky.app/profile/jasonheppler.org">Bluesky</a> &middot;
-        <a href="https://historians.social/@jaheppler">Mastodon</a> &middot;
-        <a href="https://micro.blog/jaheppler">Micro.blog</a>
-      </p>
-      <p id="page-stats" hidden><a href="/low-impact/" class="carbon-link">~<span id="carbon"></span>kb &middot; <span id="page_carbon"></span>g CO₂</a></p>
-      <a href="https://brid.gy/publish/bluesky" class="u-syndication" hidden></a>
-    </footer>
-
-    <aside id="webmentions-container">
-      <div id="webmentions"></div>
-    </aside>
-
-    <script>
-      document.getElementById("page-stats").removeAttribute("hidden");
-
-      window.addEventListener("load", function () {
-        var totalBytes = 0;
-        if (window.performance && window.performance.getEntriesByType) {
-          var nav = window.performance.getEntriesByType("navigation")[0];
-          if (nav) totalBytes += nav.transferSize || nav.encodedBodySize || 0;
-          window.performance.getEntriesByType("resource").forEach(function (r) {
-            totalBytes += r.transferSize || 0;
-          });
-        }
-        if (!totalBytes) totalBytes = document.documentElement.outerHTML.length;
-
-        var page_data = (totalBytes / 1024).toFixed(2);
-        document.getElementById("carbon").innerHTML = page_data;
-
-        var page_carbon = (totalBytes / 1024 * 0.00076).toFixed(3);
-        document.getElementById("page_carbon").innerHTML = page_carbon;
-      });
-    </script>
-
-    {{ partial "foot" . }}
+  <!-- Carbon badge -->
+  <div class="bs-reading-col">
+    {{ partial "carbon-badge.html" . }}
   </div>
+
+  <!-- Tags -->
+  {{ with .Params.tags }}
+  <div class="bs-reading-col bs-essay-tags">
+    {{ range . }}
+    <a href="/tags/{{ . | urlize }}/" class="bs-post-tag">{{ . | humanize }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <!-- Webmentions -->
+  <aside class="bs-reading-col">
+    <div id="webmentions"></div>
+  </aside>
+
+  <a href="https://brid.gy/publish/bluesky" class="u-syndication" hidden></a>
 </div>
+
+{{ partial "newsletter-band.html" . }}
+{{ partial "foot.html" . }}
