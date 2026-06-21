@@ -99,7 +99,7 @@
       data-id="webmentions"
       data-wordcount="30"
       data-prevent-spoofing="true"
-></script>
+    ></script>
 
     <!-- Stylesheets -->
     {{ if eq hugo.Environment "development" }} {{ $devCSS := resources.Get
@@ -108,9 +108,7 @@
     {{ else }} {{ $mainCSS := resources.Get "stylesheets/main.css" |
     css.PostCSS | resources.Minify | resources.Fingerprint "sha512" }}
     <link rel="stylesheet" href="{{ $mainCSS.Permalink }}" />
-    {{ end }} {{ $littlefoot := resources.Get "stylesheets/littlefoot.css" |
-    resources.Minify | resources.Fingerprint "sha512" }}
-    <link rel="stylesheet" href="{{ $littlefoot.Permalink }}" />
+    {{ end }}
 
     <link rel="shortcut icon" href="/assets/favicon.png" />
 
@@ -135,12 +133,7 @@
       href="/feed.json"
       title="Jason Heppler's blog (JSON Feed)."
     />
-    <script>
-      (function(){var f=localStorage.getItem('font-style');if(f==='system')document.documentElement.setAttribute('data-fonts','system');})();
-    </script>
   </head>
 
   <body>
-    {{ partial "nav.html" . }}
-  </body>
-</html>
+    {{ partial "navbar.html" . }}

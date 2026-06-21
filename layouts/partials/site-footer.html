@@ -1,0 +1,18 @@
+<footer class="bs-footer">
+  <div class="bs-footer-inner">
+    <div class="bs-footer-brand">
+      <div class="bs-footer-name">Jason A. Heppler</div>
+    </div>
+    <div class="bs-footer-links">
+      {{ with site.Params.social.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
+      {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me">Mastodon</a>{{ end }}
+      <a href="https://github.com/hepplerj">GitHub</a>
+      {{ with site.Params.social.microblog }}<a href="{{ . }}">Micro.blog</a>{{ end }}
+      <a href="/feed.xml">RSS</a>
+      <a href="/feed.json">JSON</a>
+    </div>
+    <div class="bs-footer-copy">
+      <p>&copy; 2008&ndash;{{ now.Year }} Jason A. Heppler. My writing, photography, and the design of this website are <a href="https://www.copyright.gov/help/faq/faq-general.html#mywork">copyrighted</a>. Feel free to ask if you want to reuse any content beyond the bounds of fair use. Powered by <a href="https://gohugo.io">Hugo</a> and coffee. Made in <a href="https://en.wikipedia.org/wiki/Lincoln,_Nebraska">Lincoln, Nebraska</a>.</p>
+    </div>
+  </div>
+</footer>

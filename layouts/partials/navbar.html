@@ -1,0 +1,13 @@
+<!-- Top bar nav — Big Sky design -->
+<nav class="bs-navbar" aria-label="Site navigation">
+  <div class="bs-navbar-inner">
+    <a href="/" class="bs-wordmark">Jason A. Heppler</a>
+    <div class="bs-nav-links">
+      <a href="/archive/"{{ if or (eq .Section "blog") (eq .Section "notes") (eq .Section "links") (eq .RelPermalink "/archive/") }} class="active"{{ end }}>Writing</a>
+      <a href="/publications/"{{ if eq .Section "publications" }} class="active"{{ end }}>Publications</a>
+      <a href="/research/"{{ if or (eq .Section "projects") (eq .RelPermalink "/research/") }} class="active"{{ end }}>Digital History</a>
+      <a href="/books/"{{ if eq .Section "books" }} class="active"{{ end }}>Bookshelf</a>
+      <a href="/about/"{{ if eq .RelPermalink "/about/" }} class="active"{{ end }}>About</a>
+    </div>
+  </div>
+</nav>
