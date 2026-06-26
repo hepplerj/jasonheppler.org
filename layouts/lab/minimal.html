@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Jason A. Heppler — minimal prototype</title>
+  <link rel="stylesheet" href="/css/lab-minimal.css">
+</head>
+<body>
+  <div class="lm-wrap">
+
+    <header class="lm-topbar">
+      <a href="/" class="lm-dot" aria-label="Home"></a>
+      <nav class="lm-nav">
+        <a href="/blog/">Journal</a>
+        <a href="/publications/">Books</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+
+    <section class="lm-intro">
+      <h1>Historian of land and environmental politics in the North American West.</h1>
+      <p class="lm-bio">Hi, I'm Jason A. Heppler, a historian writing about the twentieth century North American West, Great Plains, and Canadian Prairies. I'm the senior developer/scholar at the <a href="https://rrchnm.org">Roy Rosenzweig Center for History and New Media</a> and an Affiliate Fellow at the <a href="https://www.unl.edu/plains/">Center for Great Plains Studies</a> at the University of Nebraska-Lincoln.</p>
+      <div class="lm-social">
+        <a class="lm-email-link" data-name="jason" data-domain="jasonheppler.org">Email</a>
+        {{ with site.Params.social.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
+        {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me">Mastodon</a>{{ end }}
+        {{ with site.Params.social.github }}<a href="{{ . }}">GitHub</a>{{ end }}
+      </div>
+    </section>
+
+    {{ $writing := first 7 (where site.RegularPages "Section" "in" (slice "blog" "notes")).ByDate.Reverse }}
+    {{ with $writing }}
+    <section class="lm-section">
+      <p class="lm-label">Recent writing</p>
+      <div class="lm-stream">
+        {{ range . }}
+        <a href="{{ .RelPermalink }}" class="lm-row">
+          <span class="lm-row-title">{{ .Title }}</span>
+          <time class="lm-row-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        </a>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+
+    {{ $books := (where (where site.RegularPages "Section" "publications") ".Params.image" "ne" nil).ByDate.Reverse }}
+    {{ with $books }}
+    <section class="lm-section lm-books">
+      <p class="lm-label">Books</p>
+      <div class="lm-stream">
+        {{ range . }}
+        <a href="{{ .RelPermalink }}" class="lm-row">
+          <span class="lm-row-title">{{ .Title }}</span>
+          <span class="lm-book-meta">{{ with .Params.publisher }}{{ . }}{{ end }}{{ with .Params.year }} · {{ . }}{{ end }}</span>
+        </a>
+        {{ end }}
+      </div>
+      <a href="/publications/" class="lm-more">All publications &rarr;</a>
+    </section>
+    {{ end }}
+
+    <section class="lm-news">
+      <p class="lm-label">Newsletter</p>
+      <p>Occasional writing on the American West, agricultural history, and political culture.</p>
+      <form class="lm-form" action="https://buttondown.com/api/emails/embed-subscribe/plainsink" method="post" target="_blank">
+        <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <footer class="lm-footer">
+      <div>
+        © 2017&ndash;{{ now.Format "2006" }} Jason A. Heppler. Last updated {{ now.Format "Jan 2, 2006" }}.
+        <a href="/colophon/">Colophon</a>. This site is <a href="/low-impact/">climate&#8209;friendly</a>.
+      </div>
+      <div class="lm-foot-rss">
+        <a href="/feed.xml">RSS</a>
+        <a href="/feed.json">JSON</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.lm-email-link').forEach(function (el) {
+      el.addEventListener('click', function () {
+        var addr = el.dataset.name + '@' + el.dataset.domain;
+        window.location.href = 'mailto:' + addr;
+      });
+    });
+  </script>
+</body>
+</html>
