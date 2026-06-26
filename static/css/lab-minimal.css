@@ -42,22 +42,25 @@ a { color: inherit; }
 /* ---- Top bar ---- */
 .lm-topbar {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  gap: 16px 24px;
   padding: 32px 0 0;
 }
-.lm-dot {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--pine);
-  display: inline-block;
+.lm-mark { margin-top: 2px; }
+.lm-mark {
+  display: inline-flex;
+  color: var(--pine);
   transition: transform 0.15s ease;
+  flex-shrink: 0;
 }
-.lm-dot:hover { transform: scale(1.15); }
+.lm-mark svg { width: 26px; height: 20px; display: block; }
+.lm-mark:hover { transform: translateY(-1px); }
 .lm-nav {
   display: flex;
-  gap: 22px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px 20px;
   font-size: 16px;
 }
 .lm-nav a {

@@ -5,16 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <title>Jason A. Heppler — minimal prototype</title>
-  <link rel="stylesheet" href="/css/lab-minimal.css">
+  <link rel="stylesheet" href="/css/lab-minimal.css?v={{ now.Unix }}">
 </head>
 <body>
   <div class="lm-wrap">
 
     <header class="lm-topbar">
-      <a href="/" class="lm-dot" aria-label="Home"></a>
+      <a href="/" class="lm-mark" aria-label="Home">
+        <svg viewBox="0 0 32 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M16 22 C 15 17 12 14 9 10"/>
+          <path d="M16 22 C 16 16 16 12 16 7"/>
+          <path d="M16 22 C 17 17 20 14 23 10"/>
+        </svg>
+      </a>
       <nav class="lm-nav">
-        <a href="/blog/">Journal</a>
-        <a href="/publications/">Books</a>
+        <a href="/archive/">Writing</a>
+        <a href="/publications/">Publications</a>
+        <a href="/research/">Digital History</a>
+        <a href="/books/">Bookshelf</a>
         <a href="/about/">About</a>
       </nav>
     </header>
