@@ -1,0 +1,36 @@
+<script>
+  document.querySelectorAll('.lm-email-link').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var addr = el.dataset.name + '@' + el.dataset.domain;
+      window.location.href = 'mailto:' + addr;
+    });
+  });
+
+  (function () {
+    var root = document.documentElement;
+    var btn = document.querySelector('.lm-theme');
+    if (!btn) return;
+    var order = ['auto', 'light', 'dark'];
+    btn.addEventListener('click', function () {
+      var cur = root.getAttribute('data-mode') || 'auto';
+      var next = order[(order.indexOf(cur) + 1) % order.length];
+      root.setAttribute('data-mode', next);
+      if (next === 'auto') root.removeAttribute('data-theme');
+      else root.setAttribute('data-theme', next);
+      try { localStorage.setItem('lm-theme-mode', next); } catch (e) {}
+    });
+  })();
+</script>
+
+<!-- Keyboard shortcuts, footnotes, lightbox (hepp.js) -->
+{{ $js := resources.Get "javascripts/hepp.js" | js.Build | resources.Minify }}
+<script type="module" src="{{ $js.RelPermalink }}" async></script>
+
+<!-- ⌘K fast search -->
+<div id="fastSearch" role="dialog" aria-modal="true" aria-label="Site search" style="display:none">
+  <div class="fast-search-box">
+    <input id="searchInput" tabindex="0" placeholder="Search…" aria-label="Search" autocomplete="off" spellcheck="false">
+    <ul id="searchResults" role="listbox"></ul>
+  </div>
+</div>
+<script src="/js/fastsearch.js"></script>
