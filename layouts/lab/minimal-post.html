@@ -75,6 +75,31 @@
         {{ else }}<span></span>{{ end }}
       </nav>
       {{ end }}
+
+      {{ $pool := where (where site.RegularPages "Section" "in" (slice "blog" "notes")) "RelPermalink" "ne" $p.RelPermalink }}
+      {{ $related := slice }}
+      {{ with $p.Params.tags }}
+        {{ $related = (where $pool ".Params.tags" "intersect" .).ByDate.Reverse }}
+      {{ end }}
+      {{ $related = first 3 $related }}
+      {{ if lt (len $related) 3 }}
+        {{ range first 8 $pool.ByDate.Reverse }}
+          {{ if and (lt (len $related) 3) (not (in $related .)) }}{{ $related = $related | append . }}{{ end }}
+        {{ end }}
+      {{ end }}
+      {{ with $related }}
+      <section class="lm-related">
+        <p class="lm-label">Related reading</p>
+        <div class="lm-related-grid">
+          {{ range . }}
+          <a href="{{ .RelPermalink }}" class="lm-related-item">
+            <span class="lm-related-title">{{ .Title }}</span>
+            <time class="lm-related-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+          </a>
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
     </article>
     {{ end }}
 
