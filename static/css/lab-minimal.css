@@ -93,7 +93,7 @@ a { color: inherit; }
   transition: transform 0.15s ease;
   flex-shrink: 0;
 }
-.lm-mark svg { width: 26px; height: 20px; display: block; }
+.lm-mark svg { width: 27px; height: 27px; display: block; }
 .lm-mark:hover { transform: translateY(-1px); }
 .lm-nav {
   display: flex;
