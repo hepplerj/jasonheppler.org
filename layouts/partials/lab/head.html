@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>{{ .title }}</title>
+<link rel="stylesheet" href="/css/lab-minimal.css?v={{ now.Unix }}">
+<script>
+  (function () {
+    var mode = localStorage.getItem('lm-theme-mode') || 'auto';
+    var root = document.documentElement;
+    root.setAttribute('data-mode', mode);
+    if (mode === 'light' || mode === 'dark') root.setAttribute('data-theme', mode);
+  })();
+</script>
