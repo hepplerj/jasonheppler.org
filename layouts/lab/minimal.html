@@ -28,6 +28,10 @@
     </header>
 
     <section class="lm-intro">
+      <figure class="lm-portrait">
+        <img src="/assets/images/portrait.webp" alt="Jason A. Heppler" width="92" height="92" loading="eager">
+        <figcaption>Photo by <a href="https://www.johnlegg.org/academic-photography">John Legg</a></figcaption>
+      </figure>
       <h1>Historian of land and environmental politics in the North American West.</h1>
       <p class="lm-bio">Hi, I'm Jason A. Heppler, a historian writing about the twentieth century North American West, Great Plains, and Canadian Prairies. I'm the senior developer/scholar at the <a href="https://rrchnm.org">Roy Rosenzweig Center for History and New Media</a> and an Affiliate Fellow at the <a href="https://www.unl.edu/plains/">Center for Great Plains Studies</a> at the University of Nebraska-Lincoln.</p>
       <div class="lm-social">
@@ -57,10 +61,11 @@
     {{ with $books }}
     <section class="lm-section lm-books">
       <p class="lm-label">Books</p>
-      <div class="lm-stream">
+      <div class="lm-book-grid">
         {{ range . }}
-        <a href="{{ .RelPermalink }}" class="lm-row">
-          <span class="lm-row-title">{{ .Title }}</span>
+        <a href="{{ .RelPermalink }}" class="lm-book">
+          <img class="lm-book-cover" src="/assets/images/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" decoding="async">
+          <span class="lm-book-title">{{ .Title }}</span>
           <span class="lm-book-meta">{{ with .Params.publisher }}{{ . }}{{ end }}{{ with .Params.year }} · {{ . }}{{ end }}</span>
         </a>
         {{ end }}
