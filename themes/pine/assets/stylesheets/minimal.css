@@ -1035,6 +1035,38 @@ a { color: inherit; }
 .lm-prose figcaption p { margin: 6px 0 0; }
 .lm-prose figcaption p:first-child { margin-top: 0; }
 .lm-prose figcaption a { color: var(--pine); text-decoration: none; border-bottom: 1px solid var(--accent-line); }
+
+/* Tables */
+.lm-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.9em 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.lm-prose thead th {
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 0 14px 10px;
+  border-bottom: 1px solid var(--accent-line);
+}
+.lm-prose tbody td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--hair);
+  vertical-align: top;
+  color: var(--ink);
+}
+.lm-prose tbody tr:last-child td { border-bottom: none; }
+.lm-prose th:first-child,
+.lm-prose td:first-child { padding-left: 0; }
+.lm-prose th:last-child,
+.lm-prose td:last-child { padding-right: 0; }
+.lm-prose table code { white-space: nowrap; }
 .lm-prose hr { border: none; border-top: 1px solid var(--hair); margin: 2.4em 0; }
 .lm-prose aside,
 .lm-archive-lead aside {
