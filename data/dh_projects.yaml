@@ -90,3 +90,78 @@
   desc: "The spread of 14,000 post offices across the nineteenth-century American West."
   url: "http://cameronblevins.org/gotp/"
   image: "portfolio_gotp.webp"
+
+- title: "Omaha Zoning"
+  desc: "Visualizing single-family and multifamily zoning."
+  url: "https://jasonheppler.org/2019/06/23/omaha-zoning/"
+  image: "portfolio_omazoning.webp"
+
+- title: "Every Lot Omaha"
+  desc: "Every property parcel in Omaha, one tweet at a time."
+  url: "https://twitter.com/everylotoma"
+  image: "portfolio_omalotbot.webp"
+
+- title: "#deletefacebook"
+  desc: "Scraping Twitter to explore trends in #deletefacebook."
+  url: "https://jheppler.shinyapps.io/deletefacebook/"
+  image: "portfolio_deletefacebook.webp"
+
+- title: "Endangered Data Week"
+  desc: "Raising awareness about threats to public data."
+  url: "http://endangereddataweek.org"
+  image: "portfolio_edw.webp"
+
+- title: "Mobile Community Archives"
+  desc: "Partnering with community archives throughout the Great Plains."
+  url: "http://library.unomaha.edu"
+  image: "portfolio_moca.webp"
+
+- title: "American Indian Digital History Project"
+  desc: "Digitizing Indigenous newspapers, photographs, and archival materials across Native North America."
+  url: "http://aidhp.com"
+  image: "portfolio_aidhp.webp"
+
+- title: "Mapping Omaha Bikes"
+  desc: "The most dangerous areas in Omaha for bicyclists and pedestrians."
+  url: "https://jheppler.shinyapps.io/omaha-bikes/"
+  image: "portfolio_omahabikes.webp"
+
+- title: "Western Federal Lands"
+  desc: "Visualizing the federal government's holdings of Western land."
+  url: "https://blogwest.org/2016/01/07/federal-policy-western-lands-and-malheur/"
+  image: "portfolio_federallands.webp"
+
+- title: "Prussian Foodstuffs"
+  desc: "Exploring changes in taste among food items at the palace in Königsberg, Prussia during the reign of Friedrich Wilhelm. Collaboration with Molly Taylor-Poleskey."
+  url: "https://koenigsbergfood.weebly.com"
+  image: "portfolio_prussia.webp"
+
+- title: "Marriage of Thames and Rhine"
+  desc: "An interactive narrative of the journey of the court of Prince-Elector Friedrich Wilhelm. Collaboration with Molly Taylor-Poleskey."
+  url: "http://cesta.su.domains/projects/rhine/neatline/show/jdtr"
+  image: "portfolio_marriage.webp"
+
+- title: "Chinese Computing"
+  desc: "Visualizing 21st century Chinese writing. Collaboration with Tom Mullaney."
+  url: "http://bl.ocks.org/hepplerj/e5d3d5787f348cc3b032"
+  image: "portfolio_chinesecomputing.webp"
+
+- title: "The First Draft"
+  desc: "Discussions about higher education, digital humanities, technology, games, and learning. Hosted by Elijah Meeks, Jason Heppler & Paul Zenke."
+  url: "http://fiddly.fm"
+  image: "portfolio_firstdraft.webp"
+
+- title: "Wars of the United States"
+  desc: "Visualizing the wars of the United States."
+  url: "https://jasonheppler.org/projects/war/"
+  image: "portfolio_war.webp"
+
+- title: "What is Digital Humanities?"
+  desc: "Perpetual answers to the perpetual question."
+  url: "http://whatisdigitalhumanities.com"
+  image: "portfolio_widh.webp"
+
+- title: "Framing Red Power"
+  desc: "Exploring how the media covered the Trail of Broken Treaties."
+  url: "http://framingredpower.org"
+  image: "portfolio_frp.webp"
