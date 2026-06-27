@@ -9,7 +9,7 @@ enableFloatingFootnotes();
 function initKeyboardShortcuts() {
     const navShortcuts = {
         e: '/blog/',
-        j: '/notes/',
+        j: '/microblog/',
         i: '/publications/',
         y: '/research/',
         b: '/books/',
