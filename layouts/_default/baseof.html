@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+  {{ partial "min/head.html" . }}
+</head>
+<body>
+  <div class="lm-wrap">
+    {{ partial "min/topbar.html" . }}
+    {{ block "main" . }}{{ end }}
+    {{ partial "min/footer.html" . }}
+  </div>
+  {{ partial "min/scripts.html" . }}
+</body>
+</html>
