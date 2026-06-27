@@ -4,7 +4,15 @@
 
 **Goal:** Promote the isolated "Fog & Pine" minimal prototype (currently under `/lab/`) to be the real site theme, replacing "Big Sky" across all page types while preserving SEO, feeds, analytics, IndieWeb, ⌘K search, keyboard shortcuts, and the carbon badge.
 
-**Architecture:** Introduce a shared `_default/baseof.html` plus `min/` partials (head, topbar, footer, scripts) that carry the full `<head>` machinery from Big Sky's `head.html` but render the minimal chrome and link the system-font minimal stylesheet. Convert each real template to `{{ define "main" }}` block form, one page type per task, verifying with `hugo` build + browser preview after each. Big Sky CSS/partials/JS/fonts are retired only in the final cleanup phase, so the site stays buildable throughout.
+**Architecture (revised 2026-06-26):** The migration is structured around **Hugo's ordered theme fallback** rather than in-repo template coexistence. Both designs are now Hugo themes:
+
+- **`themes/pine/`** — the new Fog & Pine theme we build into. Holds `_default/baseof.html`, the `min/` partials (head, topbar, footer, scripts) that carry the full `<head>` machinery but render minimal chrome, the `lab/` prototypes, and `minimal.css`.
+- **`themes/big-sky/`** — the existing design, demoted to a fallback theme (its `layouts/`, partials, `main.css`, plus Big Sky stylesheets).
+- **Root `layouts/`** — only shared, theme-agnostic infra: feeds (`_default/rss.xml`, `_default/list.jsonfeed`, `_feed.xml`), the search index (`_default/index.json`), markdown render hooks (`_default/_markup/`), and `shortcodes/`.
+
+`config.yaml` sets `theme: ["pine", "big-sky"]`, so Hugo resolves **root → pine → big-sky**. Each page type is migrated by **creating** its template under `themes/pine/layouts/` in `{{ define "main" }}` block form; Pine wins immediately while any unmigrated route keeps rendering from Big Sky untouched. The site stays buildable throughout, and final cleanup is just dropping `big-sky` from the theme list and deleting `themes/big-sky/`.
+
+**Path translation for the tasks below:** task bodies written before the restructure say "Modify `layouts/X`". Read these as **"Create `themes/pine/layouts/X`"** — the Big Sky original stays in `themes/big-sky/layouts/X` as the fallback and is removed only in Phase 4. Source prototypes referenced as `layouts/lab/*` and `layouts/partials/lab/*` now live under `themes/pine/layouts/`.
 
 **Tech Stack:** Hugo v0.160+, plain hand-written CSS (no Tailwind for the new theme), system font stack, vanilla JS (theme toggle, ⌘K fast search, hepp.js shortcuts).
 
@@ -16,14 +24,16 @@
 - All new component classes use the `lm-` prefix (matches the prototype).
 - Keep: SEO/OG/Twitter/Scholar/RDFa meta, all `rel=me` links, RSS (`/feed.xml`) + JSON (`/feed.json`) autodiscovery, Plausible analytics, canonical/home links, favicon, webmention.io *endpoint* (receiving), ⌘K fast search, keyboard shortcuts, carbon badge.
 - Drop: self-hosted fonts, webmention *display* (`webmention.min.js` + `#webmentions`), Big Sky `bs-` chrome.
-- Verification per task: `hugo --quiet --destination /tmp/mig --buildFuture` exits 0, then preview the affected route(s) and confirm visually. Commit after each task.
+- Verification per task: `hugo --renderToMemory --quiet --buildFuture` exits 0 (renders in memory — does not write to disk, which avoids filling `/tmp` on repeated builds), then preview the affected route(s) and confirm visually. Commit after each task.
 - No dark mode regressions: every new color must reference a theme variable, never a hardcoded hex (except inside the `:root`/dark blocks).
 
 ---
 
-## Phase 1 — Foundation
+## Phase 1 — Foundation ✅ COMPLETE
 
-### Task 1: Promote the stylesheet into the assets pipeline
+> Tasks 1–3 are done (commits `cc13ddb`, `f59dd95`, `30d2b54`, plus `e2bf877` for the active-nav style). A follow-up restructure (`983f034`) then split everything into the `themes/pine` + `themes/big-sky` ordered-fallback layout described in the Architecture section above, so the file paths in Tasks 1–3 below now live under `themes/pine/`. Full build verified: 3564 pages, no errors.
+
+### Task 1: Promote the stylesheet into the assets pipeline ✅
 
 **Files:**
 - Create: `assets/stylesheets/minimal.css` (move of `static/css/lab-minimal.css`)
@@ -41,7 +51,7 @@
 - [ ] Preview `/lab/minimal/` → confirm styling intact (mark, palette, theme toggle).
 - [ ] Commit: `migrate: move minimal stylesheet into assets pipeline`.
 
-### Task 2: Create the shared `min/` partials
+### Task 2: Create the shared `min/` partials ✅
 
 **Files:**
 - Create: `layouts/partials/min/head.html`
@@ -76,7 +86,7 @@
 - [ ] Build → exit 0 (partials unused yet, just must parse).
 - [ ] Commit: `migrate: add shared min/ partials (head, topbar, footer, scripts)`.
 
-### Task 3: Create `_default/baseof.html`
+### Task 3: Create `_default/baseof.html` ✅
 
 **Files:**
 - Create: `layouts/_default/baseof.html`
@@ -225,21 +235,24 @@
 - [ ] Build → exit 0. Preview any page: press ⌘K → overlay opens, search returns results; test a keyboard shortcut (e.g. ⌘E → /blog/).
 - [ ] Commit: `migrate: minimal ⌘K search overlay + verify shortcuts`.
 
-### Task 13: Retire Big Sky + lab scaffolding
+### Task 13: Retire the Big Sky theme + lab scaffolding
+
+With the two-theme structure, teardown collapses to dropping the fallback theme — but it's gated on Pine actually covering every route first.
 
 **Files:**
-- Delete: `layouts/lab/` (minimal, minimal-post, minimal-archive), `content/lab/`
-- Delete: Big Sky partials no longer referenced (`navbar.html`, `newsletter-band.html`, `site-footer.html`, `foot.html`, `carbon-badge.html` if replaced, old `head.html`)
-- Delete: `assets/stylesheets/main.css` (Big Sky/Tailwind) once nothing references it; remove `@tailwindcss/postcss` from `package.json` if Tailwind is fully unused
-- Delete: self-hosted font files in `static/assets/fonts/` and their `@font-face` rules (none remain in minimal.css; just remove files)
-- Modify: `.claude/launch.json` may stay
+- Modify: `config.yaml` — change `theme: ["pine", "big-sky"]` → `theme: ["pine"]`
+- Delete: `themes/big-sky/` (entire theme: layouts, partials, `main.css` + Big Sky stylesheets, `theme.toml`)
+- Delete: `themes/pine/layouts/lab/` + `themes/pine/layouts/partials/lab/` (prototypes), `content/lab/`
+- Delete: self-hosted font files in `static/assets/fonts/` (none referenced by `minimal.css`)
+- Review: `@tailwindcss/postcss` in `package.json` — remove if Tailwind is now fully unused (it lived in Big Sky's `main.css`)
 
 **Steps:**
-- [ ] Grep for references to each Big Sky partial/asset before deleting (`grep -rn "head.html\|navbar.html\|main.css\|carbon-badge" layouts/`). Delete only when unreferenced.
-- [ ] Remove font files and confirm no `@font-face` or `/assets/fonts/` references remain.
-- [ ] Build → exit 0. Crawl key routes in preview (`/`, `/blog/<post>/`, `/notes/<post>/`, `/archive/`, `/publications/`, `/books/`, `/research/`, `/about/`, `/tags/<t>/`) → all render in Fog & Pine, light + dark.
-- [ ] Update `MEMORY.md` / project memory to reflect the new theme as the site default.
-- [ ] Commit: `migrate: retire Big Sky chrome, fonts, and lab scaffolding`.
+- [ ] Coverage gate: confirm every content type Big Sky served now has a Pine template (incl. the `_default/list.html` + `_default/single.html` safety nets and `/tags/` taxonomy from Task 11). Temporarily build with `theme: ["pine"]` and scan the log for missing-layout warnings / blank routes.
+- [ ] Drop `big-sky` from the `theme` list; `rm -rf themes/big-sky`.
+- [ ] Remove the `lab/` prototypes and `content/lab/`; remove font files and confirm no `@font-face` or `/assets/fonts/` references remain.
+- [ ] Build (`hugo --renderToMemory --buildFuture`) → exit 0, no missing-layout warnings. Crawl key routes in preview (`/`, `/blog/<post>/`, `/notes/<post>/`, `/archive/`, `/publications/`, `/books/`, `/research/`, `/about/`, `/tags/<t>/`) → all render in Fog & Pine, light + dark.
+- [ ] Update `MEMORY.md` / project memory to reflect Pine as the site default and Big Sky as removed.
+- [ ] Commit: `migrate: retire Big Sky theme, fonts, and lab scaffolding`.
 
 ---
 
