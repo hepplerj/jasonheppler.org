@@ -1,5 +1,20 @@
 /* Fog & Pine — the minimal site theme (themes/pine).
-   System fonts, light + dark, lm- prefixed components. */
+   System sans + JetBrains Mono (self-hosted), light + dark, lm- prefixed. */
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/JetBrainsMono-Medium.woff2") format("woff2");
+}
 
 :root {
   --paper:  #f2f3f1;
@@ -17,7 +32,7 @@
   --panel-green: #244a40;   /* constant in both themes — always pairs with white text */
 
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 
   --col: 760px;
 }
@@ -113,6 +128,40 @@ a { color: inherit; }
 }
 .lm-nav a:hover { color: var(--pine); }
 .lm-nav a.lm-nav-active { color: var(--pine); }
+
+/* Hamburger toggle (mobile only) */
+.lm-nav-toggle {
+  display: none;
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 4px;
+  margin: 0;
+  cursor: pointer;
+  color: var(--ink);
+  line-height: 0;
+  transition: color 0.15s ease;
+}
+.lm-nav-toggle:hover { color: var(--pine); }
+.lm-nav-toggle svg { display: block; }
+@media (max-width: 680px) {
+  .lm-topbar { flex-wrap: wrap; }
+  .lm-nav-toggle { display: inline-flex; }
+  .lm-nav {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--hair);
+  }
+  .lm-nav.lm-nav-open { display: flex; }
+  .lm-nav a { padding: 9px 0; font-size: 17px; }
+  .lm-theme { margin-top: 8px; padding: 6px 0; }
+}
 
 /* Theme switcher */
 .lm-theme {
@@ -963,6 +1012,29 @@ a { color: inherit; }
 }
 .lm-prose pre code { background: none; border: none; padding: 0; font-size: inherit; }
 .lm-prose img { max-width: 100%; height: auto; border-radius: 4px; margin: 1.5em 0; }
+
+/* Figures */
+.lm-prose figure { margin: 2.2em 0; text-align: center; }
+.lm-prose figure img,
+.lm-prose figure img.full-width {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+.lm-prose figcaption {
+  margin-top: 12px;
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  text-align: center;
+}
+.lm-prose figcaption p { margin: 6px 0 0; }
+.lm-prose figcaption p:first-child { margin-top: 0; }
+.lm-prose figcaption a { color: var(--pine); text-decoration: none; border-bottom: 1px solid var(--accent-line); }
 .lm-prose hr { border: none; border-top: 1px solid var(--hair); margin: 2.4em 0; }
 .lm-prose aside,
 .lm-archive-lead aside {
@@ -984,13 +1056,14 @@ a { color: inherit; }
 .lm-prose aside strong,
 .lm-archive-lead aside strong { color: var(--ink); }
 .lm-prose strong { font-weight: 600; }
-.lm-prose sup a { color: var(--pine); border: none; text-decoration: none; }
+.lm-prose sup a { font-family: var(--mono); font-size: 0.8em; color: var(--pine); border: none; text-decoration: none; }
 .lm-prose .footnotes {
   margin-top: 2.6em;
   padding-top: 1.2em;
   border-top: 1px solid var(--hair);
-  font-size: 15px;
-  line-height: 1.6;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.7;
   color: var(--muted);
 }
 .lm-prose .footnotes ol { padding-left: 1.2em; }

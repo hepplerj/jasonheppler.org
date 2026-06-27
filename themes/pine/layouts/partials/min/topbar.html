@@ -1,6 +1,13 @@
 <header class="lm-topbar">
   <a href="/" class="lm-mark">Jason Heppler</a>
-  <nav class="lm-nav">
+  <button class="lm-nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="lmNav">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <line x1="3" y1="12" x2="21" y2="12"/>
+      <line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+  <nav class="lm-nav" id="lmNav">
     <a href="/archive/"{{ if or (in (slice "blog" "microblog") .Section) (eq .RelPermalink "/archive/") }} class="lm-nav-active"{{ end }}>Writing</a>
     <a href="/publications/"{{ if eq .Section "publications" }} class="lm-nav-active"{{ end }}>Publications</a>
     <a href="/research/"{{ if or (eq .Section "projects") (eq .RelPermalink "/research/") }} class="lm-nav-active"{{ end }}>Digital History</a>

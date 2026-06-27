@@ -7,6 +7,22 @@
   });
 
   (function () {
+    var toggle = document.querySelector('.lm-nav-toggle');
+    var nav = document.getElementById('lmNav');
+    if (!toggle || !nav) return;
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('lm-nav-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        nav.classList.remove('lm-nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+
+  (function () {
     var root = document.documentElement;
     var btn = document.querySelector('.lm-theme');
     if (!btn) return;
