@@ -109,6 +109,7 @@ a { color: inherit; }
   transition: color 0.15s ease;
 }
 .lm-nav a:hover { color: var(--pine); }
+.lm-nav a.lm-nav-active { color: var(--pine); }
 
 /* Theme switcher */
 .lm-theme {
