@@ -950,6 +950,25 @@ a { color: inherit; }
 .lm-prose pre code { background: none; border: none; padding: 0; font-size: inherit; }
 .lm-prose img { max-width: 100%; height: auto; border-radius: 4px; margin: 1.5em 0; }
 .lm-prose hr { border: none; border-top: 1px solid var(--hair); margin: 2.4em 0; }
+.lm-prose aside,
+.lm-archive-lead aside {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--muted);
+  background: var(--accent-glow);
+  border-left: 3px solid var(--pine);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 1.6em 0;
+}
+.lm-prose aside p,
+.lm-archive-lead aside p { margin: 0 0 0.6em; font-size: inherit; }
+.lm-prose aside p:last-child,
+.lm-archive-lead aside p:last-child { margin-bottom: 0; }
+.lm-prose aside a,
+.lm-archive-lead aside a { color: var(--pine); text-decoration: none; border-bottom: 1px solid var(--accent-line); }
+.lm-prose aside strong,
+.lm-archive-lead aside strong { color: var(--ink); }
 .lm-prose strong { font-weight: 600; }
 .lm-prose sup a { color: var(--pine); border: none; text-decoration: none; }
 .lm-prose .footnotes {
