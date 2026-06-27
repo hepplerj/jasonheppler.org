@@ -1,12 +1,5 @@
 <header class="lm-topbar">
-  <a href="/" class="lm-mark" aria-label="Home">
-    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true">
-      <circle cx="16" cy="16" r="14.6" stroke-width="1.5"/>
-      <path d="M16 25 C 15 20 12.5 17 10 14" stroke-width="2"/>
-      <path d="M16 25 C 16 19 16 15 16 10.5" stroke-width="2"/>
-      <path d="M16 25 C 17 20 19.5 17 22 14" stroke-width="2"/>
-    </svg>
-  </a>
+  <a href="/" class="lm-mark">Jason Heppler</a>
   <nav class="lm-nav">
     <a href="/archive/"{{ if or (in (slice "blog" "notes" "links") .Section) (eq .RelPermalink "/archive/") }} class="lm-nav-active"{{ end }}>Writing</a>
     <a href="/publications/"{{ if eq .Section "publications" }} class="lm-nav-active"{{ end }}>Publications</a>
