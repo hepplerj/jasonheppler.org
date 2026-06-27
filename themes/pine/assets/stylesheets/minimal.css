@@ -494,9 +494,23 @@ a { color: inherit; }
   border: 1px solid var(--hair);
   border-radius: 10px;
   text-decoration: none;
+  overflow: hidden;
   transition: border-color 0.18s ease, transform 0.18s ease;
 }
 .lm-project-card:hover { border-color: var(--accent-line); transform: translateY(-2px); }
+.lm-project-card-img { padding: 0; gap: 0; }
+.lm-project-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid var(--hair);
+  background: var(--field-bg);
+  transition: transform 0.25s ease;
+}
+.lm-project-card-img:hover .lm-project-thumb { transform: scale(1.03); }
+.lm-project-card-img .lm-project-body { padding: 15px 18px 18px; }
+.lm-project-body { display: flex; flex-direction: column; gap: 7px; }
 .lm-project-head {
   display: flex;
   align-items: baseline;

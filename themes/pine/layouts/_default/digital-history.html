@@ -7,12 +7,16 @@
 
 <div class="lm-dh-grid">
   {{ range hugo.Data.dh_projects }}
-  <a href="{{ .url }}" class="lm-project-card" target="_blank" rel="noopener">
-    <span class="lm-project-head">
-      <span class="lm-project-title">{{ .title }}</span>
-      <span class="lm-project-arrow">&nearr;</span>
+  {{ $title := .title }}
+  <a href="{{ .url }}" class="lm-project-card{{ if .image }} lm-project-card-img{{ end }}" target="_blank" rel="noopener">
+    {{ with .image }}<img class="lm-project-thumb" src="/assets/images/{{ . }}" alt="{{ $title }}" loading="lazy" decoding="async">{{ end }}
+    <span class="lm-project-body">
+      <span class="lm-project-head">
+        <span class="lm-project-title">{{ .title }}</span>
+        <span class="lm-project-arrow">&nearr;</span>
+      </span>
+      <span class="lm-project-desc">{{ .desc }}</span>
     </span>
-    <span class="lm-project-desc">{{ .desc }}</span>
   </a>
   {{ end }}
 </div>
