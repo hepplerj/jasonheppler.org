@@ -1,3 +1,5 @@
-- [ ] masonry grid layout for galleries in posts
+- [ ] masonry grid layout for galleries in posts (e.g., "My Ideal Library")
 - [ ] name instead of "prairie grass" in nav; adjust width of site to fit everything in one row
 - [ ] "notes" and "commonplace" become "microblog"
+- [ ] homepage avatar: rounded corner rectangle instead of a circle. Shrink credit line to fit in one line.
+- [ ] bookshelf: "currently reading" can be a list like the rest of the books, don't need to be cards
