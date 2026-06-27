@@ -1,7 +1,7 @@
-- [ ] masonry grid layout for galleries in posts (e.g., "My Ideal Library")
-- [ ] name instead of "prairie grass" in nav; adjust width of site to fit everything in one row
-- [ ] "notes" and "commonplace" become "microblog"
-- [ ] homepage avatar: rounded corner rectangle instead of a circle. Shrink credit line to fit in one line.
-- [ ] bookshelf: "currently reading" can be a list like the rest of the books, don't need to be cards
-- [ ] Governing Ground callout: move "View Project" button under image preview
-- [ ] "essays, reviews, criticism" on homepage: change up-angled arrow to straight right arrow
+- [x] masonry grid layout for galleries in posts (e.g., "My Ideal Library")
+- [x] name instead of "prairie grass" in nav; adjust width of site to fit everything in one row
+- [x] "notes" and "commonplace" become "microblog"
+- [x] homepage avatar: rounded corner rectangle instead of a circle. Shrink credit line to fit in one line.
+- [x] bookshelf: "currently reading" can be a list like the rest of the books, don't need to be cards
+- [x] Governing Ground callout: move "View Project" button under image preview
+- [x] "essays, reviews, criticism" on homepage: change up-angled arrow to straight right arrow
