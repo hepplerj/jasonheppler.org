@@ -29,7 +29,7 @@
 {{ end }}
 
 <!-- Articles & Essays from data file -->
-{{ with site.Data.essays_criticism }}
+{{ with hugo.Data.essays_criticism }}
 {{ $all := where . "published" "ne" false }}
 {{ $articles := where $all "type" "in" (slice "Article" "Chapter") }}
 {{ if $articles }}

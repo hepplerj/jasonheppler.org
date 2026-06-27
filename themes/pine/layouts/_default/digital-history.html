@@ -6,7 +6,7 @@
 </header>
 
 <div class="lm-dh-grid">
-  {{ range site.Data.dh_projects }}
+  {{ range hugo.Data.dh_projects }}
   <a href="{{ .url }}" class="lm-project-card" target="_blank" rel="noopener">
     <span class="lm-project-head">
       <span class="lm-project-title">{{ .title }}</span>

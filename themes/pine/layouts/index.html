@@ -49,7 +49,7 @@
 </section>
 
 {{/* 4 — Essays, reviews & criticism (from data, trimmed) */}}
-{{ with site.Data.essays_criticism }}
+{{ with hugo.Data.essays_criticism }}
 {{ $published := where . "published" "ne" false }}
 {{ $essays := where $published "type" "in" (slice "Essay" "Chapter" "Review") }}
 <section class="lm-section">
@@ -104,7 +104,7 @@
 {{ end }}
 
 {{/* 6 — On the road */}}
-{{ with site.Data.on_the_road }}
+{{ with hugo.Data.on_the_road }}
 <section class="lm-section">
   <p class="lm-label">On the road</p>
   <p class="lm-section-sub">Talks, lectures, and conference panels. Contact me about booking speaking engagements.</p>

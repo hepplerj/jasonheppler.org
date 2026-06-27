@@ -1,0 +1,32 @@
+{{ define "main" }}
+<a href="/courses/" class="lm-breadcrumb">&larr; Teaching</a>
+
+<header class="lm-archive-head">
+  {{ with .Params.semester }}<p class="lm-label">{{ . }} {{ $.Params.year }}</p>{{ end }}
+  <h1 class="lm-archive-title">{{ .Title }}</h1>
+</header>
+
+{{ with .Params.number }}
+<aside class="lm-course-meta">
+  <p>
+    <strong>Course:</strong>
+    {{ with $.Params.site }}<a href="{{ . }}">{{ $.Params.number }}</a>{{ else }}{{ $.Params.number }}{{ end }}.
+    {{ $.Params.semester }} {{ $.Params.year }}.
+    {{ $.Params.department }}, {{ $.Params.university }}.
+  </p>
+  {{ with $.Params.instructor }}
+  <p>
+    <strong>Instructor:</strong>
+    {{ with $.Params.instructorurl }}<a href="{{ . }}">{{ $.Params.instructor }}</a>{{ else }}{{ $.Params.instructor }}{{ end }}
+    {{ with $.Params.email }}&lt;<a href="mailto:{{ . }}">{{ . }}</a>&gt;{{ end }}.
+    {{ with $.Params.office }}Office: {{ . }}.{{ end }}
+    {{ with $.Params.officehours }}Office hours: {{ . }}.{{ end }}
+  </p>
+  {{ end }}
+</aside>
+{{ end }}
+
+<div class="lm-prose lm-page-body">
+  {{ .Content }}
+</div>
+{{ end }}

@@ -671,6 +671,37 @@ a { color: inherit; }
 .lm-shelf-links a:hover { text-decoration: underline; }
 .lm-shelf-publisher { font-style: italic; }
 
+/* ---- Generic pages, taxonomy, courses ---- */
+.lm-page-body { margin-top: 32px; }
+.lm-tag-cloud { display: flex; flex-wrap: wrap; gap: 10px; margin: 36px 0 0; }
+.lm-tag-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 15px;
+  padding: 7px 14px;
+  border: 1px solid var(--hair);
+  border-radius: 999px;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.lm-tag-chip:hover { color: var(--pine); border-color: var(--accent-line); }
+.lm-course-meta {
+  margin: 28px 0 0;
+  padding: 16px 18px;
+  border: 1px solid var(--hair);
+  border-radius: 8px;
+  background: var(--accent-glow);
+  font-size: 15px;
+  color: var(--muted);
+}
+.lm-course-meta p { margin: 0 0 8px; line-height: 1.5; }
+.lm-course-meta p:last-child { margin-bottom: 0; }
+.lm-course-meta strong { color: var(--ink); }
+.lm-course-meta a { color: var(--pine); text-decoration: none; }
+.lm-404 { padding: 80px 0 64px; }
+
 /* ---- Newsletter ---- */
 .lm-news { padding: 64px 0 0; }
 .lm-news p { color: var(--muted); font-size: 16px; margin: 0 0 16px; }
