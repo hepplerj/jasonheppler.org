@@ -1,0 +1,79 @@
+{{ define "main" }}
+<header class="lm-archive-head">
+  <p class="lm-label">Writing</p>
+  <h1 class="lm-archive-title">{{ .Title }}</h1>
+  <p class="lm-archive-lead">Longer essays, short notes, and quotations worth keeping — one stream you can filter and search.</p>
+</header>
+
+<div class="lm-archive-controls">
+  <div class="lm-chips" id="lmChips">
+    <button class="lm-chip on" data-filter="all">All <span class="lm-chip-n" id="lmCountAll"></span></button>
+    <button class="lm-chip" data-filter="essay">Essays <span class="lm-chip-n" id="lmCountEssay"></span></button>
+    <button class="lm-chip" data-filter="note">Notes <span class="lm-chip-n" id="lmCountNote"></span></button>
+    <button class="lm-chip" data-filter="link">Commonplace <span class="lm-chip-n" id="lmCountLink"></span></button>
+  </div>
+  <input type="search" class="lm-search" id="lmSearch" placeholder="Search titles…" aria-label="Search writing">
+</div>
+
+<p class="lm-archive-count" id="lmResultCount"></p>
+
+<div class="lm-archive-list" id="lmArchiveList">
+  {{ $blog := where site.RegularPages "Section" "blog" }}
+  {{ $notes := where site.RegularPages "Section" "notes" }}
+  {{ $links := where site.RegularPages "Section" "links" }}
+  {{ $all := union $blog (union $notes $links) }}
+  {{ range $all.ByDate.Reverse }}
+  {{ $type := cond (eq .Section "blog") "essay" (cond (eq .Section "notes") "note" "link") }}
+  {{ $label := cond (eq .Section "blog") "Essay" (cond (eq .Section "notes") "Note" "Commonplace") }}
+  <a href="{{ .RelPermalink }}" class="lm-archive-row" data-type="{{ $type }}" data-title="{{ .Title | lower }}">
+    <span class="lm-archive-row-title">{{ .Title }}{{ if and (eq .Section "links") .Params.external }} <span class="lm-archive-row-source">{{ .Params.external | replaceRE "^https?://(www\\.)?" "" | replaceRE "/.*$" "" }}</span>{{ end }}</span>
+    <span class="lm-archive-row-meta">
+      <span class="lm-type lm-type-{{ $type }}">{{ $label }}</span>
+      <time class="lm-archive-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+    </span>
+  </a>
+  {{ end }}
+</div>
+
+<p class="lm-archive-empty" id="lmArchiveEmpty" style="display:none">No posts match your search.</p>
+
+<script>
+  (function () {
+    var chips = document.querySelectorAll('#lmChips .lm-chip');
+    var search = document.getElementById('lmSearch');
+    var rows = document.querySelectorAll('.lm-archive-row');
+    var resultCount = document.getElementById('lmResultCount');
+    var empty = document.getElementById('lmArchiveEmpty');
+    var filter = 'all', query = '';
+
+    var counts = { all: rows.length, essay: 0, note: 0, link: 0 };
+    rows.forEach(function (r) { counts[r.dataset.type]++; });
+    document.getElementById('lmCountAll').textContent = counts.all;
+    document.getElementById('lmCountEssay').textContent = counts.essay;
+    document.getElementById('lmCountNote').textContent = counts.note;
+    document.getElementById('lmCountLink').textContent = counts.link;
+
+    function update() {
+      var visible = 0, q = query.toLowerCase();
+      rows.forEach(function (row) {
+        var show = (filter === 'all' || row.dataset.type === filter) && (!q || row.dataset.title.includes(q));
+        row.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      resultCount.textContent = visible + ' post' + (visible !== 1 ? 's' : '');
+      empty.style.display = visible === 0 ? '' : 'none';
+    }
+
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        chips.forEach(function (c) { c.classList.remove('on'); });
+        chip.classList.add('on');
+        filter = chip.dataset.filter;
+        update();
+      });
+    });
+    search.addEventListener('input', function () { query = search.value; update(); });
+    update();
+  })();
+</script>
+{{ end }}

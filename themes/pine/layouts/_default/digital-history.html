@@ -1,0 +1,19 @@
+{{ define "main" }}
+<header class="lm-archive-head">
+  <p class="lm-label">Digital &amp; public history</p>
+  <h1 class="lm-archive-title">Over a decade of building history on the web.</h1>
+  <div class="lm-archive-lead">{{ .Content }}</div>
+</header>
+
+<div class="lm-dh-grid">
+  {{ range site.Data.dh_projects }}
+  <a href="{{ .url }}" class="lm-project-card" target="_blank" rel="noopener">
+    <span class="lm-project-head">
+      <span class="lm-project-title">{{ .title }}</span>
+      <span class="lm-project-arrow">&nearr;</span>
+    </span>
+    <span class="lm-project-desc">{{ .desc }}</span>
+  </a>
+  {{ end }}
+</div>
+{{ end }}

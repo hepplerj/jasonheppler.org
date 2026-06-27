@@ -6,7 +6,7 @@ layout: about
 
 {{< figure src="/assets/images/0C7A1453.webp" alt="Jason A. Heppler" attr="Photo by [John Legg](https://www.johnlegg.org/academic-photography)" >}}
 
-Hi! I'm Jason, a web developer by trade and a historian by vocation at the [Roy Rosenzweig Center for History and New Media](https://rrchnm.org) (RRCHNM) at [George Mason University](https://historyarthistory.gmu.edu). I collaborate with faculty and graduate students on the innovative application of technology in teaching and research across interactive data visualization, design, and public and digital history. I hold a Ph.D. from the University of Nebraska-Lincoln and currently split my time between Lincoln and Fairfax.
+Hi! I'm Jason Heppler, Ph.D., a web developer by trade and a historian by vocation at the [Roy Rosenzweig Center for History and New Media](https://rrchnm.org) (RRCHNM) at [George Mason University](https://historyarthistory.gmu.edu). I collaborate with faculty and graduate students on the innovative application of technology in teaching and research across interactive data visualization, design, and public and digital history. I hold a Ph.D. from the University of Nebraska-Lincoln and currently split my time between Lincoln and Fairfax.
 
 Currently, I am the **Senior Developer/Scholar** at the [Roy Rosenzweig Center for History and New Media](https://rrchnm.org), **Adjunct Professor of History** in the [Department of History and Art History](https://historyarthistory.gmu.edu/) at George Mason University, and an **Affiliate Fellow** at the [Center for Great Plains Studies](https://www.unl.edu/plains/) at the University of Nebraska-Lincoln.
 

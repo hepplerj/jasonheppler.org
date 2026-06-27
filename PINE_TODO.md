@@ -1,1 +1,3 @@
 - [ ] masonry grid layout for galleries in posts
+- [ ] name instead of "prairie grass" in nav; adjust width of site to fit everything in one row
+- [ ] "notes" and "commonplace" become "microblog"
