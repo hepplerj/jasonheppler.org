@@ -1,0 +1,126 @@
+{{ define "main" }}
+
+{{/* 1 — Hero / intro */}}
+<section class="lm-intro">
+  <div class="lm-intro-head">
+    <figure class="lm-portrait">
+      <img src="/assets/images/portrait.webp" alt="Jason A. Heppler" width="88" height="88" loading="eager">
+      <figcaption>Photo by <a href="https://www.johnlegg.org/academic-photography">John Legg</a></figcaption>
+    </figure>
+    <h1>Historian of land and environmental politics in the North American West.</h1>
+  </div>
+  <p class="lm-bio">Hi, I'm Jason A. Heppler, a historian writing about the twentieth century North American West, Great Plains, and Canadian Prairies. I'm the senior developer/scholar at the <a href="https://rrchnm.org">Roy Rosenzweig Center for History and New Media</a> and an Affiliate Fellow at the <a href="https://www.unl.edu/plains/">Center for Great Plains Studies</a> at the University of Nebraska-Lincoln.</p>
+  <div class="lm-social">
+    <a class="lm-email-link" data-name="jason" data-domain="jasonheppler.org">Email</a>
+    {{ with site.Params.social.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
+    {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me">Mastodon</a>{{ end }}
+    {{ with site.Params.social.github }}<a href="{{ . }}">GitHub</a>{{ end }}
+  </div>
+</section>
+
+{{/* 2 — Books */}}
+{{ $books := (where (where site.RegularPages "Section" "publications") ".Params.image" "ne" nil).ByDate.Reverse }}
+{{ with $books }}
+<section class="lm-section lm-books">
+  <p class="lm-label">Books</p>
+  <div class="lm-book-grid">
+    {{ range . }}
+    <a href="{{ .RelPermalink }}" class="lm-book">
+      <img class="lm-book-cover" src="/assets/images/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" decoding="async">
+      <span class="lm-book-title">{{ .Title }}</span>
+      <span class="lm-book-meta">{{ with .Params.publisher }}{{ . }}{{ end }}{{ with .Params.year }} · {{ . }}{{ end }}</span>
+    </a>
+    {{ end }}
+  </div>
+  <a href="/publications/" class="lm-more">All publications &rarr;</a>
+</section>
+{{ end }}
+
+{{/* 3 — Governing Ground callout */}}
+<section class="lm-section">
+  <a href="https://governingground.org" class="lm-callout">
+    <img class="lm-callout-img" src="/assets/images/govground-preview.jpg" alt="Governing Ground project preview" loading="lazy" decoding="async">
+    <div class="lm-callout-body">
+      <p class="lm-callout-eyebrow">Featured project</p>
+      <p class="lm-callout-desc">Nearly a third of the American West is federal land. Those lands have been a century-long provocation. <em>Governing Ground</em> is a digital history of the Sagebrush Rebellions, recurring movements between the 1930s to the present over the transfer, ownership, management, and control of federal lands.</p>
+      <span class="lm-btn">View project &rarr;</span>
+    </div>
+  </a>
+</section>
+
+{{/* 4 — Essays, reviews & criticism (from data, trimmed) */}}
+{{ with site.Data.essays_criticism }}
+{{ $published := where . "published" "ne" false }}
+{{ $essays := where $published "type" "in" (slice "Essay" "Chapter" "Review") }}
+<section class="lm-section">
+  <div class="lm-section-head">
+    <p class="lm-label">Essays, reviews &amp; criticism</p>
+    <a href="/publications/" class="lm-section-link">All publications &rarr;</a>
+  </div>
+  <p class="lm-section-sub">Selected pieces written for other publications and edited collections.</p>
+  <div class="lm-ec">
+    {{ range first 5 (sort $essays "year" "desc") }}
+    {{ if .url }}
+    <a href="{{ .url }}" class="lm-ec-row" target="_blank" rel="noopener">
+      <span class="lm-type lm-type-essay">{{ .type }}</span>
+      <span class="lm-ec-info">
+        <span class="lm-ec-title">{{ .title }}</span>
+        <span class="lm-ec-pub">{{ .publication }}</span>
+      </span>
+      <span class="lm-ec-year">{{ .year }} &#x2197;</span>
+    </a>
+    {{ else }}
+    <div class="lm-ec-row lm-ec-row-static">
+      <span class="lm-type lm-type-essay">{{ .type }}</span>
+      <span class="lm-ec-info">
+        <span class="lm-ec-title">{{ .title }}</span>
+        <span class="lm-ec-pub">{{ .publication }}</span>
+      </span>
+      <span class="lm-ec-year">{{ .year }}</span>
+    </div>
+    {{ end }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{/* 5 — Recent writing (blog + notes) */}}
+{{ $writing := first 7 (where site.RegularPages "Section" "in" (slice "blog" "notes")).ByDate.Reverse }}
+{{ with $writing }}
+<section class="lm-section">
+  <div class="lm-section-head">
+    <p class="lm-label">Recent writing</p>
+    <a href="/archive/" class="lm-section-link">Full archive &rarr;</a>
+  </div>
+  <div class="lm-stream">
+    {{ range . }}
+    <a href="{{ .RelPermalink }}" class="lm-row">
+      <span class="lm-row-title">{{ .Title }}</span>
+      <time class="lm-row-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{/* 6 — On the road */}}
+{{ with site.Data.on_the_road }}
+<section class="lm-section">
+  <p class="lm-label">On the road</p>
+  <p class="lm-section-sub">Talks, lectures, and conference panels. Contact me about booking speaking engagements.</p>
+  <div class="lm-otr">
+    {{ range sort . "date" "desc" }}
+    <div class="lm-otr-row">
+      <span class="lm-otr-date">{{ .label }}</span>
+      <span class="lm-otr-info">
+        <span class="lm-otr-title">{{ .title }}</span>
+        <span class="lm-otr-venue">{{ .venue }}</span>
+      </span>
+      {{ with .url }}<a href="{{ . }}" class="lm-otr-link">Details &rarr;</a>{{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ end }}

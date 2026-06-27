@@ -1,5 +1,5 @@
-/* Fog & Pine — minimal homepage prototype
-   Disposable. Scoped to /lab/minimal/ only. */
+/* Fog & Pine — the minimal site theme (themes/pine).
+   System fonts, light + dark, lm- prefixed components. */
 
 :root {
   --paper:  #f2f3f1;
@@ -281,6 +281,139 @@ a { color: inherit; }
   text-decoration: none;
 }
 .lm-more:hover { text-decoration: underline; }
+
+/* ---- Section head (label + trailing link) ---- */
+.lm-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+.lm-section-head .lm-label { margin-bottom: 0; }
+.lm-section-link {
+  font-size: 14px;
+  color: var(--pine);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.lm-section-link:hover { text-decoration: underline; }
+.lm-section-sub {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 14px 0 22px;
+  max-width: 56ch;
+}
+
+/* ---- Featured callout ---- */
+.lm-callout {
+  display: flex;
+  gap: 22px;
+  align-items: stretch;
+  text-decoration: none;
+  border: 1px solid var(--hair);
+  border-radius: 10px;
+  padding: 18px;
+  background: var(--accent-glow);
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+.lm-callout:hover { border-color: var(--accent-line); transform: translateY(-2px); }
+.lm-callout-img {
+  width: 220px;
+  flex-shrink: 0;
+  align-self: flex-start;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  border: 1px solid var(--hair);
+}
+.lm-callout-body { display: flex; flex-direction: column; }
+.lm-callout-eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pine);
+  margin: 0 0 10px;
+}
+.lm-callout-desc {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0 0 16px;
+}
+.lm-btn {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: auto;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 7px;
+  background: var(--pine);
+  color: var(--btn-ink);
+  transition: background 0.15s ease;
+}
+.lm-callout:hover .lm-btn { background: var(--pine-deep); }
+
+/* ---- Essays / criticism list ---- */
+.lm-ec { display: flex; flex-direction: column; }
+.lm-ec-row {
+  display: grid;
+  grid-template-columns: 78px 1fr auto;
+  align-items: baseline;
+  gap: 6px 18px;
+  padding: 14px 0;
+  border-top: 1px solid var(--hair);
+  text-decoration: none;
+}
+.lm-ec-row:last-child { border-bottom: 1px solid var(--hair); }
+.lm-ec-info { display: flex; flex-direction: column; gap: 3px; }
+.lm-ec-title {
+  font-size: 17px;
+  line-height: 1.35;
+  color: var(--ink);
+  transition: color 0.15s ease;
+}
+.lm-ec-row:hover .lm-ec-title { color: var(--pine); }
+.lm-ec-row-static:hover .lm-ec-title { color: var(--ink); }
+.lm-ec-pub { font-size: 14px; color: var(--muted); }
+.lm-ec-year {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* ---- On the road ---- */
+.lm-otr { display: flex; flex-direction: column; }
+.lm-otr-row {
+  display: grid;
+  grid-template-columns: 92px 1fr auto;
+  align-items: baseline;
+  gap: 6px 18px;
+  padding: 14px 0;
+  border-top: 1px solid var(--hair);
+}
+.lm-otr-row:last-child { border-bottom: 1px solid var(--hair); }
+.lm-otr-date {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--pine);
+  white-space: nowrap;
+}
+.lm-otr-info { display: flex; flex-direction: column; gap: 3px; }
+.lm-otr-title { font-size: 17px; line-height: 1.35; color: var(--ink); }
+.lm-otr-venue { font-size: 14px; color: var(--muted); }
+.lm-otr-link {
+  font-size: 14px;
+  color: var(--pine);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.lm-otr-link:hover { text-decoration: underline; }
 
 /* ---- Newsletter ---- */
 .lm-news { padding: 64px 0 0; }
@@ -646,6 +779,13 @@ a { color: inherit; }
   .lm-book-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 18px; }
   .lm-form { flex-direction: column; }
   .lm-footer { flex-direction: column; }
+
+  .lm-callout { flex-direction: column; gap: 16px; }
+  .lm-callout-img { width: 100%; }
+  .lm-ec-row { grid-template-columns: 1fr auto; }
+  .lm-ec-row .lm-type { grid-column: 1 / -1; }
+  .lm-otr-row { grid-template-columns: 1fr auto; }
+  .lm-otr-row .lm-otr-date { grid-column: 1 / -1; }
 
   .lm-article-head { padding: 48px 0 0; }
   .lm-article-title { font-size: 30px; }
