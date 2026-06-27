@@ -2,6 +2,11 @@ ignoreFiles:
   - _templates/
 
 title: Jason A. Heppler
+# Ordered theme fallback for the Fog & Pine migration:
+# Hugo resolves project root -> pine -> big-sky. Pine wins as templates land;
+# anything Pine doesn't define yet falls back to big-sky. Teardown = drop
+# "big-sky" from this list and `rm -rf themes/big-sky`.
+theme: ["pine", "big-sky"]
 description: >-
   Jason Heppler is the senior web developer at the Roy Rosenzweig Center for
   History and New Media at George Mason University.
