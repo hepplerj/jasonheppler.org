@@ -53,7 +53,7 @@
   </nav>
   {{ end }}
 
-  {{ $pool := where (where site.RegularPages "Section" "in" (slice "blog" "notes")) "RelPermalink" "ne" .RelPermalink }}
+  {{ $pool := where (where site.RegularPages "Section" "in" (slice "blog" "microblog")) "RelPermalink" "ne" .RelPermalink }}
   {{ $related := slice }}
   {{ with .Params.tags }}
     {{ $related = (where $pool ".Params.tags" "intersect" .).ByDate.Reverse }}

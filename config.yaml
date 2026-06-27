@@ -17,8 +17,7 @@ footnoteReturnLinkContents: " "
 
 permalinks:
   blog: "/:year/:month/:day/:slug/"
-  notes: "/:year/:month/:day/:slug/"
-  links: "/:year/:month/:day/:slug/"
+  microblog: "/:year/:month/:day/:slug/"
   archive: "/:slug/"
   page: "/:section/:slug/"
 
@@ -96,9 +95,9 @@ menu:
       name: Essays
       url: /blog/
       weight: 1
-    - identifier: notes
-      name: Notes
-      url: /notes/
+    - identifier: microblog
+      name: Microblog
+      url: /microblog/
       weight: 2
     - identifier: publications
       name: Publications

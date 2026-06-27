@@ -1,5 +1,5 @@
 {{- $.Scratch.Add "index" slice -}}
-{{- range where .Site.RegularPages ".Section" "in" (slice "blog" "notes" "links" "page" "") -}}
+{{- range where .Site.RegularPages ".Section" "in" (slice "blog" "microblog" "page" "") -}}
     {{- $.Scratch.Add "index" (dict
         "title"     (.Title | htmlUnescape)
         "permalink" .Permalink

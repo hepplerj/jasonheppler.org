@@ -9,8 +9,7 @@
   <div class="lm-chips" id="lmChips">
     <button class="lm-chip on" data-filter="all">All <span class="lm-chip-n" id="lmCountAll"></span></button>
     <button class="lm-chip" data-filter="essay">Essays <span class="lm-chip-n" id="lmCountEssay"></span></button>
-    <button class="lm-chip" data-filter="note">Notes <span class="lm-chip-n" id="lmCountNote"></span></button>
-    <button class="lm-chip" data-filter="link">Commonplace <span class="lm-chip-n" id="lmCountLink"></span></button>
+    <button class="lm-chip" data-filter="micro">Microblog <span class="lm-chip-n" id="lmCountMicro"></span></button>
   </div>
   <input type="search" class="lm-search" id="lmSearch" placeholder="Search titles…" aria-label="Search writing">
 </div>
@@ -19,14 +18,13 @@
 
 <div class="lm-archive-list" id="lmArchiveList">
   {{ $blog := where site.RegularPages "Section" "blog" }}
-  {{ $notes := where site.RegularPages "Section" "notes" }}
-  {{ $links := where site.RegularPages "Section" "links" }}
-  {{ $all := union $blog (union $notes $links) }}
+  {{ $micro := where site.RegularPages "Section" "microblog" }}
+  {{ $all := union $blog $micro }}
   {{ range $all.ByDate.Reverse }}
-  {{ $type := cond (eq .Section "blog") "essay" (cond (eq .Section "notes") "note" "link") }}
-  {{ $label := cond (eq .Section "blog") "Essay" (cond (eq .Section "notes") "Note" "Commonplace") }}
+  {{ $type := cond (eq .Section "blog") "essay" "micro" }}
+  {{ $label := cond (eq .Section "blog") "Essay" "Microblog" }}
   <a href="{{ .RelPermalink }}" class="lm-archive-row" data-type="{{ $type }}" data-title="{{ .Title | lower }}">
-    <span class="lm-archive-row-title">{{ .Title }}{{ if and (eq .Section "links") .Params.external }} <span class="lm-archive-row-source">{{ .Params.external | replaceRE "^https?://(www\\.)?" "" | replaceRE "/.*$" "" }}</span>{{ end }}</span>
+    <span class="lm-archive-row-title">{{ .Title }}{{ with .Params.external }} <span class="lm-archive-row-source">{{ . | replaceRE "^https?://(www\\.)?" "" | replaceRE "/.*$" "" }}</span>{{ end }}</span>
     <span class="lm-archive-row-meta">
       <span class="lm-type lm-type-{{ $type }}">{{ $label }}</span>
       <time class="lm-archive-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
@@ -46,12 +44,11 @@
     var empty = document.getElementById('lmArchiveEmpty');
     var filter = 'all', query = '';
 
-    var counts = { all: rows.length, essay: 0, note: 0, link: 0 };
+    var counts = { all: rows.length, essay: 0, micro: 0 };
     rows.forEach(function (r) { counts[r.dataset.type]++; });
     document.getElementById('lmCountAll').textContent = counts.all;
     document.getElementById('lmCountEssay').textContent = counts.essay;
-    document.getElementById('lmCountNote').textContent = counts.note;
-    document.getElementById('lmCountLink').textContent = counts.link;
+    document.getElementById('lmCountMicro').textContent = counts.micro;
 
     function update() {
       var visible = 0, q = query.toLowerCase();

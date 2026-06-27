@@ -1,7 +1,7 @@
 <header class="lm-topbar">
   <a href="/" class="lm-mark">Jason Heppler</a>
   <nav class="lm-nav">
-    <a href="/archive/"{{ if or (in (slice "blog" "notes" "links") .Section) (eq .RelPermalink "/archive/") }} class="lm-nav-active"{{ end }}>Writing</a>
+    <a href="/archive/"{{ if or (in (slice "blog" "microblog") .Section) (eq .RelPermalink "/archive/") }} class="lm-nav-active"{{ end }}>Writing</a>
     <a href="/publications/"{{ if eq .Section "publications" }} class="lm-nav-active"{{ end }}>Publications</a>
     <a href="/research/"{{ if or (eq .Section "projects") (eq .RelPermalink "/research/") }} class="lm-nav-active"{{ end }}>Digital History</a>
     <a href="/books/"{{ if eq .Section "books" }} class="lm-nav-active"{{ end }}>Bookshelf</a>

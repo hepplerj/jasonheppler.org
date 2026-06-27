@@ -87,7 +87,7 @@
 {{ end }}
 
 {{/* 5 — Recent writing (blog + notes) */}}
-{{ $writing := first 7 (where site.RegularPages "Section" "in" (slice "blog" "notes")).ByDate.Reverse }}
+{{ $writing := first 7 (where site.RegularPages "Section" "in" (slice "blog" "microblog")).ByDate.Reverse }}
 {{ with $writing }}
 <section class="lm-section">
   <div class="lm-section-head">

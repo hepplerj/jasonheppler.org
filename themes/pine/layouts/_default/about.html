@@ -23,7 +23,7 @@
   {{ .Content }}
 </div>
 
-{{ $posts := where site.RegularPages "Section" "in" (slice "blog" "notes" "links") }}
+{{ $posts := where site.RegularPages "Section" "in" (slice "blog" "microblog") }}
 {{ $wordCount := 0 }}
 {{ range $posts }}{{ $wordCount = add $wordCount .WordCount }}{{ end }}
 {{ $postCount := len $posts }}
@@ -44,7 +44,7 @@
     <span class="lm-stat-label">Words written</span>
   </div>
   <div class="lm-stat">
-    <span class="lm-stat-num">{{ len (where site.RegularPages "Section" "links") | lang.FormatNumberCustom 0 }}</span>
+    <span class="lm-stat-num">{{ len (where (where site.RegularPages "Section" "microblog") ".Params.external" "ne" nil) | lang.FormatNumberCustom 0 }}</span>
     <span class="lm-stat-label">Links shared</span>
   </div>
   <div class="lm-stat">

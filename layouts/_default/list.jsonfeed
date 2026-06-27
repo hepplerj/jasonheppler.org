@@ -1,4 +1,4 @@
-{{- $pages := (where .Site.RegularPages "Type" "in" (slice "blog" "notes" "links")).ByDate.Reverse | first 20 -}}
+{{- $pages := (where .Site.RegularPages "Type" "in" (slice "blog" "microblog")).ByDate.Reverse | first 20 -}}
 {
   "version": "https://jsonfeed.org/version/1.1",
   "title": {{ .Site.Title | jsonify }},
