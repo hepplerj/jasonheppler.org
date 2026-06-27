@@ -1,0 +1,29 @@
+{{ define "main" }}
+<article class="lm-article h-entry">
+  <header class="lm-article-head">
+    <p class="lm-label">Note</p>
+    <h1 class="lm-article-title p-name">{{ .Title }}</h1>
+    <div class="lm-article-meta">
+      <time class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      <span class="lm-dot-sep">·</span>
+      <span class="p-author">Jason A. Heppler</span>
+    </div>
+  </header>
+
+  <div class="lm-prose e-content">
+    {{ .Content }}
+  </div>
+
+  <div class="lm-article-footer">
+    <p class="lm-post-note">This is a <a href="/archive/">note</a> — a shorter observation, sometimes provisional or incomplete.</p>
+    <p class="lm-post-meta">
+      {{ partial "min/carbon-badge.html" . }}
+      {{ with .Params.tags }}<span class="lm-dot-sep">·</span>{{ range $i, $t := . }}{{ if $i }}<span class="lm-dot-sep">·</span>{{ end }}<a href="/tags/{{ $t | urlize }}/">{{ $t | humanize }}</a>{{ end }}{{ end }}
+    </p>
+  </div>
+
+  {{ partial "min/author-card.html" . }}
+
+  <a href="https://brid.gy/publish/bluesky" class="u-syndication" hidden></a>
+</article>
+{{ end }}

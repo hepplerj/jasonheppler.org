@@ -1,0 +1,34 @@
+{{ define "main" }}
+<article class="lm-article h-entry">
+  <header class="lm-article-head">
+    <p class="lm-label">Commonplace</p>
+    <h1 class="lm-article-title p-name">{{ .Title }}</h1>
+    <div class="lm-article-meta">
+      <time class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{ with .Params.external }}
+      <span class="lm-dot-sep">·</span>
+      <span>{{ . | replaceRE "^https?://(www\\.)?" "" | replaceRE "/.*$" "" }}</span>
+      {{ end }}
+    </div>
+  </header>
+
+  <div class="lm-prose e-content">
+    {{ .Content }}
+    {{ with .Params.external }}
+    <p class="lm-link-out"><a class="u-bookmark-of" href="{{ . }}">Visit link &rarr;</a></p>
+    {{ end }}
+  </div>
+
+  <div class="lm-article-footer">
+    <p class="lm-post-note">This is a <a href="/archive/">commonplace post</a> — a link to something I've read and found worth keeping, named after the commonplace book tradition of collecting passages and references.</p>
+    <p class="lm-post-meta">
+      {{ partial "min/carbon-badge.html" . }}
+      {{ with .Params.tags }}<span class="lm-dot-sep">·</span>{{ range $i, $t := . }}{{ if $i }}<span class="lm-dot-sep">·</span>{{ end }}<a href="/tags/{{ $t | urlize }}/">{{ $t | humanize }}</a>{{ end }}{{ end }}
+    </p>
+  </div>
+
+  {{ partial "min/author-card.html" . }}
+
+  <a href="https://brid.gy/publish/bluesky" class="u-syndication" hidden></a>
+</article>
+{{ end }}

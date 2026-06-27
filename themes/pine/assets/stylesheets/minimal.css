@@ -583,6 +583,28 @@ a { color: inherit; }
 .lm-tags a { color: var(--pine); text-decoration: none; }
 .lm-tags a:hover { text-decoration: underline; }
 
+/* Post footer meta row (carbon badge · tags) */
+.lm-post-meta {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 12px 0 0;
+}
+.lm-post-meta a { color: var(--pine); text-decoration: none; }
+.lm-post-meta a:hover { text-decoration: underline; }
+.lm-carbon {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  vertical-align: baseline;
+}
+.lm-carbon-leaf { flex-shrink: 0; }
+.lm-carbon sub { font-size: 0.7em; vertical-align: -0.15em; }
+
+/* Commonplace outbound link */
+.lm-link-out { margin-top: 1.6em; }
+.lm-link-out a { font-weight: 500; border-bottom: 1px solid var(--accent-line); }
+
 /* Author card */
 .lm-author {
   margin: 36px 0 0;
