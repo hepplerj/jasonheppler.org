@@ -237,22 +237,21 @@
 
 ### Task 13: Retire the Big Sky theme + lab scaffolding
 
-With the two-theme structure, teardown collapses to dropping the fallback theme — but it's gated on Pine actually covering every route first.
+With the two-theme structure, teardown collapses to dropping the fallback theme from the active list. **Done as of commit `aff86da`** (`theme: ["pine"]`, 3565 pages, no missing-layout warnings). **Big Sky is NOT deleted** — per the user's preference it stays parked in `themes/big-sky/` as a complete, inactive, reusable theme. The only remaining teardown is the lab prototypes and unused fonts.
 
 **Files:**
-- Modify: `config.yaml` — change `theme: ["pine", "big-sky"]` → `theme: ["pine"]`
-- Delete: `themes/big-sky/` (entire theme: layouts, partials, `main.css` + Big Sky stylesheets, `theme.toml`)
+- ~~Modify `config.yaml`: `theme: ["pine"]`~~ — done (`aff86da`).
+- **Keep** `themes/big-sky/` in place (inactive theme folder; do not remove).
 - Delete: `themes/pine/layouts/lab/` + `themes/pine/layouts/partials/lab/` (prototypes), `content/lab/`
-- Delete: self-hosted font files in `static/assets/fonts/` (none referenced by `minimal.css`)
-- Review: `@tailwindcss/postcss` in `package.json` — remove if Tailwind is now fully unused (it lived in Big Sky's `main.css`)
+- Delete: self-hosted font files in `static/assets/fonts/` (none referenced by `minimal.css`) — only if they're not used by the parked Big Sky theme either.
+- Review: `@tailwindcss/postcss` in `package.json` — leave as-is while Big Sky is parked (Big Sky's `main.css` still uses Tailwind).
 
 **Steps:**
-- [ ] Coverage gate: confirm every content type Big Sky served now has a Pine template (incl. the `_default/list.html` + `_default/single.html` safety nets and `/tags/` taxonomy from Task 11). Temporarily build with `theme: ["pine"]` and scan the log for missing-layout warnings / blank routes.
-- [ ] Drop `big-sky` from the `theme` list; `rm -rf themes/big-sky`.
-- [ ] Remove the `lab/` prototypes and `content/lab/`; remove font files and confirm no `@font-face` or `/assets/fonts/` references remain.
-- [ ] Build (`hugo --renderToMemory --buildFuture`) → exit 0, no missing-layout warnings. Crawl key routes in preview (`/`, `/blog/<post>/`, `/notes/<post>/`, `/archive/`, `/publications/`, `/books/`, `/research/`, `/about/`, `/tags/<t>/`) → all render in Fog & Pine, light + dark.
-- [ ] Update `MEMORY.md` / project memory to reflect Pine as the site default and Big Sky as removed.
-- [ ] Commit: `migrate: retire Big Sky theme, fonts, and lab scaffolding`.
+- [x] Coverage gate + drop `big-sky` from the `theme` list (commit `aff86da`).
+- [ ] Remove the `lab/` prototypes and `content/lab/`.
+- [ ] Fonts: only remove if neither Pine nor the parked Big Sky theme references them (Big Sky still self-hosts fonts, so likely keep until Big Sky is truly retired).
+- [ ] Build (`hugo --renderToMemory --buildFuture`) → exit 0, no missing-layout warnings.
+- [ ] Commit: `migrate: remove lab scaffolding`.
 
 ---
 
