@@ -35,7 +35,7 @@ initKeyboardShortcuts();
 // ─── Photo gallery lightbox ────────────────────────────────────────────────────
 
 function initLightbox() {
-    document.querySelectorAll('.post-body img, .prose img').forEach(img => {
+    document.querySelectorAll('.post-body img, .prose img, .lm-prose img').forEach(img => {
         img.style.cursor = 'zoom-in';
         img.addEventListener('click', () => {
             const box = document.createElement('div');

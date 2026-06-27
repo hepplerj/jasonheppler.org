@@ -39,11 +39,13 @@
 {{/* 3 — Governing Ground callout */}}
 <section class="lm-section">
   <a href="https://governingground.org" class="lm-callout">
-    <img class="lm-callout-img" src="/assets/images/govground-preview.jpg" alt="Governing Ground project preview" loading="lazy" decoding="async">
+    <div class="lm-callout-media">
+      <img class="lm-callout-img" src="/assets/images/govground-preview.jpg" alt="Governing Ground project preview" loading="lazy" decoding="async">
+      <span class="lm-btn">View project &rarr;</span>
+    </div>
     <div class="lm-callout-body">
       <p class="lm-callout-eyebrow">Featured project</p>
       <p class="lm-callout-desc">Nearly a third of the American West is federal land. Those lands have been a century-long provocation. <em>Governing Ground</em> is a digital history of the Sagebrush Rebellions, recurring movements between the 1930s to the present over the transfer, ownership, management, and control of federal lands.</p>
-      <span class="lm-btn">View project &rarr;</span>
     </div>
   </a>
 </section>
@@ -67,7 +69,7 @@
         <span class="lm-ec-title">{{ .title }}</span>
         <span class="lm-ec-pub">{{ .publication }}</span>
       </span>
-      <span class="lm-ec-year">{{ .year }} &#x2197;</span>
+      <span class="lm-ec-year">{{ .year }} &rarr;</span>
     </a>
     {{ else }}
     <div class="lm-ec-row lm-ec-row-static">

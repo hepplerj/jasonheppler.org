@@ -9,11 +9,15 @@
 {{ with $reading }}
 <section class="lm-section">
   <p class="lm-label">Currently reading</p>
-  <div class="lm-currently-grid">
+  <div class="lm-shelf">
     {{ range . }}
-    <div class="lm-currently-card">
-      <span class="lm-currently-title">{{ .Title }}</span>
-      <span class="lm-currently-meta">{{ .Params.author }}{{ with .Params.pub_year }} · {{ . }}{{ end }}</span>
+    <div class="lm-shelf-entry">
+      <div class="lm-shelf-row">
+        <span class="lm-shelf-info">
+          <span class="lm-shelf-title">{{ .Title }}</span>
+          <span class="lm-shelf-meta">{{ .Params.author }}{{ with .Params.pub_year }} · {{ . }}{{ end }}</span>
+        </span>
+      </div>
     </div>
     {{ end }}
   </div>
@@ -76,7 +80,7 @@
 <script>
   (function () {
     var chips = document.querySelectorAll('#shelfChips .lm-chip');
-    var entries = document.querySelectorAll('.lm-shelf-entry');
+    var entries = document.querySelectorAll('#shelfList .lm-shelf-entry');
     var count = document.getElementById('shelfCount');
     function apply(shelf) {
       var visible = 0;
