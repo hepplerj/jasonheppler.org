@@ -254,7 +254,6 @@ a { color: inherit; }
 .lm-section { padding: 56px 0 0; }
 .lm-label {
   font-family: var(--mono);
-  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
@@ -869,6 +868,71 @@ a { color: inherit; }
   color: var(--ink);
   margin: 0;
   text-align: right;
+}
+
+/* ---- Microblog list (full posts + pagination) ---- */
+.lm-mb-list { display: flex; flex-direction: column; gap: 26px; margin: 36px 0 0; }
+.lm-mb-post {
+  border: 1px solid var(--hair);
+  border-radius: 12px;
+  padding: 20px 24px 22px;
+  transition: border-color 0.18s ease;
+}
+.lm-mb-post:hover { border-color: var(--accent-line); }
+.lm-mb-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--hair);
+}
+.lm-mb-title { font-size: 20px; font-weight: 600; line-height: 1.25; margin: 0; }
+.lm-mb-title a { color: var(--ink); text-decoration: none; transition: color 0.15s ease; }
+.lm-mb-title a:hover { color: var(--pine); }
+.lm-mb-date {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.lm-mb-date:hover { color: var(--pine); }
+.lm-mb-post .lm-mb-body { margin: 0; font-size: 17px; }
+.lm-mb-body > :first-child { margin-top: 0; }
+.lm-mb-body > :last-child { margin-bottom: 0; }
+.lm-mb-tags {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 16px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--hair);
+}
+.lm-mb-tags a { color: var(--pine); text-decoration: none; }
+.lm-mb-tags a:hover { text-decoration: underline; }
+
+/* Pagination */
+.lm-pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 36px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--hair);
+  font-size: 15px;
+}
+.lm-pager-link { color: var(--pine); text-decoration: none; }
+.lm-pager-link:hover { text-decoration: underline; }
+.lm-pager-off { color: var(--muted); opacity: 0.45; }
+.lm-pager-count {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
 }
 
 /* ---- Newsletter ---- */
