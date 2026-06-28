@@ -1199,7 +1199,7 @@ a { color: inherit; }
   margin: 12px 0 0;
 }
 .lm-post-meta a { color: var(--pine); text-decoration: none; }
-.lm-post-meta a:hover { text-decoration: underline; }
+.lm-post-meta a:hover { text-decoration: none; color: var(--pine-deep) }
 .lm-carbon {
   display: inline-flex;
   align-items: center;
