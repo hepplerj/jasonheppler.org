@@ -1,0 +1,83 @@
+{{ define "main" }}
+<article class="lm-article h-entry">
+  <header class="lm-article-head">
+    <p class="lm-label">Essay</p>
+    <h1 class="lm-article-title p-name">{{ .Title }}</h1>
+    {{ with .Params.lede }}<p class="lm-article-lede">{{ . }}</p>{{ end }}
+    <div class="lm-article-meta">
+      <time class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      <span class="lm-dot-sep">·</span>
+      <span class="p-author">Jason A. Heppler</span>
+      <span class="lm-dot-sep">·</span>
+      <span>{{ .ReadingTime }} min read</span>
+    </div>
+  </header>
+
+  {{ with .Params.image }}
+  <figure class="lm-article-lead">
+    <img src="/assets/images/{{ . }}" alt="{{ $.Title }}" loading="lazy" decoding="async">
+  </figure>
+  {{ end }}
+
+  <div class="lm-prose e-content">
+    {{ .Content }}
+  </div>
+
+  <div class="lm-article-footer">
+    <p class="lm-post-note">This is an <a href="/archive/">essay</a> — a longer piece of writing on a topic I've been thinking about.</p>
+    <p class="lm-post-meta">
+      {{ partial "min/carbon-badge.html" . }}
+      {{ with .Params.tags }}<span class="lm-dot-sep">·</span>{{ range $i, $t := . }}{{ if $i }}<span class="lm-dot-sep">·</span>{{ end }}<a href="/tags/{{ $t | urlize }}/">{{ $t | humanize }}</a>{{ end }}{{ end }}
+    </p>
+  </div>
+
+  {{ partial "min/author-card.html" . }}
+
+  {{ $pages := where site.RegularPages "Section" "blog" }}
+  {{ $prev := $pages.Prev . }}
+  {{ $next := $pages.Next . }}
+  {{ if or $prev $next }}
+  <nav class="lm-prevnext">
+    {{ with $prev }}
+    <a href="{{ .RelPermalink }}" class="lm-prevnext-item">
+      <span class="lm-prevnext-label">&larr; Previous</span>
+      <span class="lm-prevnext-title">{{ .Title }}</span>
+    </a>
+    {{ else }}<span></span>{{ end }}
+    {{ with $next }}
+    <a href="{{ .RelPermalink }}" class="lm-prevnext-item lm-prevnext-next">
+      <span class="lm-prevnext-label">Next &rarr;</span>
+      <span class="lm-prevnext-title">{{ .Title }}</span>
+    </a>
+    {{ else }}<span></span>{{ end }}
+  </nav>
+  {{ end }}
+
+  {{ $pool := where (where site.RegularPages "Section" "in" (slice "blog" "microblog")) "RelPermalink" "ne" .RelPermalink }}
+  {{ $related := slice }}
+  {{ with .Params.tags }}
+    {{ $related = (where $pool ".Params.tags" "intersect" .).ByDate.Reverse }}
+  {{ end }}
+  {{ $related = first 3 $related }}
+  {{ if lt (len $related) 3 }}
+    {{ range first 8 $pool.ByDate.Reverse }}
+      {{ if and (lt (len $related) 3) (not (in $related .)) }}{{ $related = $related | append . }}{{ end }}
+    {{ end }}
+  {{ end }}
+  {{ with $related }}
+  <section class="lm-related">
+    <p class="lm-label">Related reading</p>
+    <div class="lm-related-grid">
+      {{ range . }}
+      <a href="{{ .RelPermalink }}" class="lm-related-item">
+        <span class="lm-related-title">{{ .Title }}</span>
+        <time class="lm-related-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <a href="https://brid.gy/publish/bluesky" class="u-syndication" hidden></a>
+</article>
+{{ end }}

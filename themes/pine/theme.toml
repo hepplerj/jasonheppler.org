@@ -1,0 +1,4 @@
+name = "Pine"
+license = "MIT"
+description = "Fog & Pine — minimal redesign theme for jasonheppler.org"
+min_version = "0.116.0"

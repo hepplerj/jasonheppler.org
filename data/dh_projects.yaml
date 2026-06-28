@@ -1,73 +1,167 @@
 # Digital & Public History projects — displayed on the /research/ page
+# image: thumbnail in static/assets/images/ (portfolio_*.webp)
 
 - title: "Connecting Threads"
   desc: "Amplifying the contributions of Indian weavers and African Caribbean consumers to global histories of dress."
   url: "https://connectingthreads.co.uk/"
+  image: "portfolio_ct.webp"
 
 - title: "The Denig Manuscript"
   desc: "An eighteenth-century Pennsylvania merchant's manuscript and watercolor."
   url: "https://denigmanuscript.org"
+  image: "portfolio_denig.webp"
 
 - title: "DataScribe"
   desc: "A structured data transcription module for Omeka S."
   url: "https://datascribe.tech"
+  image: "portfolio_datascribe.webp"
 
 - title: "Apiary"
   desc: "A data API for data-driven research at RRCHNM."
   url: "https://github.com/chnm/dataapi"
+  image: "portfolio_api.webp"
 
 - title: "Religious Ecologies"
   desc: "New datasets and visualizations to better understand the history of American religion."
   url: "https://religiousecologies.org"
+  image: "portfolio_ecologies.webp"
 
 - title: "Mapping the University"
   desc: "Campus histories of slavery, exclusion, segregation, and bias on Virginia's physical structures."
   url: "https://mappingtheuniversity.rrchnm.org/"
+  image: "portfolio_mtu.webp"
 
 - title: "Death by Numbers"
   desc: "Transcribing and publishing the London Bills of Mortality in a dataset suitable for computational analysis."
   url: "https://deathbynumbers.org"
+  image: "portfolio_bom.webp"
 
 - title: "Pandemic Religion"
   desc: "Documenting American religion in a time of pandemic."
   url: "https://pandemicreligion.org/"
+  image: "portfolio_pr.webp"
 
 - title: "Collecting These Times"
   desc: "Documenting how American Jews responded to the coronavirus pandemic."
   url: "https://collectingthesetimes.org"
+  image: "portfolio_ctt.webp"
 
 - title: "Connecting the Interstates"
   desc: "Visualizing and critically examining the development of the U.S. interstate highway system."
   url: "https://www.neh.gov/blog/announcing-new-odh-awards-july-2020"
+  image: "portfolio_interstate.webp"
 
 - title: "Mapping Identity in Magna Graecia"
   desc: "Mapping instances of Hephaistion across areas with linguistic Attic-Ionic foundation."
   url: "https://unolibraries.shinyapps.io/mappingidentity/"
+  image: "portfolio_greece.webp"
 
 - title: "a thousand little fires"
   desc: "Share what we create while reconciling with self-isolation."
   url: "https://littlefires.github.io"
+  image: "portfolio_fires.webp"
 
 - title: "Nebraska Historical"
   desc: "Curating histories of Nebraska and the Northern Plains."
   url: "https://omahahistorical.org"
+  image: "portfolio_omahistorical.webp"
 
 - title: "U.S. Federal Lands"
   desc: "Mapping the federal lands of the United States."
   url: "https://jasonheppler.org/projects/western-lands/"
+  image: "portfolio_westernlands.webp"
 
 - title: "Machines in the Valley"
   desc: "A spatial history and digital narrative of Silicon Valley."
   url: "http://machinesinthevalley.org"
+  image: "portfolio_machinesvalley.webp"
 
 - title: "Cody & the Progressive Wild West"
   desc: "Debates over Reformist and Enabling Progressives in the Wild West."
   url: "https://progressivewildwest.org"
+  image: "portfolio_showindian.webp"
 
 - title: "William F. Cody Archive"
   desc: "Digitizing the papers of William F. Cody."
   url: "http://codyarchive.org"
+  image: "portfolio_wfc.webp"
 
 - title: "Geography of the Post"
   desc: "The spread of 14,000 post offices across the nineteenth-century American West."
   url: "http://cameronblevins.org/gotp/"
+  image: "portfolio_gotp.webp"
+
+- title: "Omaha Zoning"
+  desc: "Visualizing single-family and multifamily zoning."
+  url: "https://jasonheppler.org/2019/06/23/omaha-zoning/"
+  image: "portfolio_omazoning.webp"
+
+- title: "Every Lot Omaha"
+  desc: "Every property parcel in Omaha, one tweet at a time."
+  url: "https://twitter.com/everylotoma"
+  image: "portfolio_omalotbot.webp"
+
+- title: "#deletefacebook"
+  desc: "Scraping Twitter to explore trends in #deletefacebook."
+  url: "https://jheppler.shinyapps.io/deletefacebook/"
+  image: "portfolio_deletefacebook.webp"
+
+- title: "Endangered Data Week"
+  desc: "Raising awareness about threats to public data."
+  url: "http://endangereddataweek.org"
+  image: "portfolio_edw.webp"
+
+- title: "Mobile Community Archives"
+  desc: "Partnering with community archives throughout the Great Plains."
+  url: "http://library.unomaha.edu"
+  image: "portfolio_moca.webp"
+
+- title: "American Indian Digital History Project"
+  desc: "Digitizing Indigenous newspapers, photographs, and archival materials across Native North America."
+  url: "http://aidhp.com"
+  image: "portfolio_aidhp.webp"
+
+- title: "Mapping Omaha Bikes"
+  desc: "The most dangerous areas in Omaha for bicyclists and pedestrians."
+  url: "https://jheppler.shinyapps.io/omaha-bikes/"
+  image: "portfolio_omahabikes.webp"
+
+- title: "Western Federal Lands"
+  desc: "Visualizing the federal government's holdings of Western land."
+  url: "https://blogwest.org/2016/01/07/federal-policy-western-lands-and-malheur/"
+  image: "portfolio_federallands.webp"
+
+- title: "Prussian Foodstuffs"
+  desc: "Exploring changes in taste among food items at the palace in Königsberg, Prussia during the reign of Friedrich Wilhelm. Collaboration with Molly Taylor-Poleskey."
+  url: "https://koenigsbergfood.weebly.com"
+  image: "portfolio_prussia.webp"
+
+- title: "Marriage of Thames and Rhine"
+  desc: "An interactive narrative of the journey of the court of Prince-Elector Friedrich Wilhelm. Collaboration with Molly Taylor-Poleskey."
+  url: "http://cesta.su.domains/projects/rhine/neatline/show/jdtr"
+  image: "portfolio_marriage.webp"
+
+- title: "Chinese Computing"
+  desc: "Visualizing 21st century Chinese writing. Collaboration with Tom Mullaney."
+  url: "http://bl.ocks.org/hepplerj/e5d3d5787f348cc3b032"
+  image: "portfolio_chinesecomputing.webp"
+
+- title: "The First Draft"
+  desc: "Discussions about higher education, digital humanities, technology, games, and learning. Hosted by Elijah Meeks, Jason Heppler & Paul Zenke."
+  url: "http://fiddly.fm"
+  image: "portfolio_firstdraft.webp"
+
+- title: "Wars of the United States"
+  desc: "Visualizing the wars of the United States."
+  url: "https://jasonheppler.org/projects/war/"
+  image: "portfolio_war.webp"
+
+- title: "What is Digital Humanities?"
+  desc: "Perpetual answers to the perpetual question."
+  url: "http://whatisdigitalhumanities.com"
+  image: "portfolio_widh.webp"
+
+- title: "Framing Red Power"
+  desc: "Exploring how the media covered the Trail of Broken Treaties."
+  url: "http://framingredpower.org"
+  image: "portfolio_frp.webp"

@@ -1,0 +1,4 @@
+name = "Big Sky"
+license = "MIT"
+description = "Big Sky — warm sandstone redesign (fallback during Fog & Pine migration)"
+min_version = "0.116.0"
