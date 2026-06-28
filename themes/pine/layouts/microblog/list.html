@@ -14,8 +14,10 @@
       <h2 class="lm-mb-title p-name"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
       <a href="{{ .RelPermalink }}" class="lm-mb-date"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></a>
     </header>
+    {{/* Rewrite bundle-relative image paths to absolute so they resolve off /microblog/ too. */}}
+    {{ $body := .Content | replaceRE `(src|data-microblog-lightbox)="([^/h][^"]*\.(?:webp|png|jpe?g|gif|svg))"` (printf `${1}="%s${2}"` .RelPermalink) }}
     <div class="lm-mb-body lm-prose e-content">
-      {{ .Content }}
+      {{ $body | safeHTML }}
       {{ with .Params.external }}
       <p class="lm-link-out"><a class="u-bookmark-of" href="{{ . }}">Visit link &rarr;</a></p>
       {{ end }}
