@@ -1,16 +1,9 @@
 {{ define "main" }}
 <article class="lm-article h-entry">
   <header class="lm-article-head">
-    <p class="lm-label">Microblog</p>
-    <h1 class="lm-article-title p-name">{{ .Title }}</h1>
-    <div class="lm-article-meta">
-      <time class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-      <span class="lm-dot-sep">·</span>
-      <span class="p-author">Jason A. Heppler</span>
-      {{ with .Params.external }}
-      <span class="lm-dot-sep">·</span>
-      <span>{{ . | replaceRE "^https?://(www\\.)?" "" | replaceRE "/.*$" "" }}</span>
-      {{ end }}
+    <div class="lm-mb-single-head">
+      <h1 class="lm-article-title p-name">{{ .Title }}</h1>
+      <span class="lm-mb-date"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></span>
     </div>
   </header>
 

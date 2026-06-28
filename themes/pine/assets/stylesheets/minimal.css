@@ -914,6 +914,19 @@ a { color: inherit; }
 .lm-mb-tags a { color: var(--pine); text-decoration: none; }
 .lm-mb-tags a:hover { text-decoration: underline; }
 
+/* Microblog single — card header idiom, no box */
+.lm-mb-single-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--hair);
+}
+.lm-mb-single-head .lm-article-title { margin: 0; }
+.lm-mb-single-head .lm-mb-date { font-size: 14px; }
+
 /* Pagination */
 .lm-pager {
   display: flex;
