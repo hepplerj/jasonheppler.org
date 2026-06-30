@@ -1,132 +1,162 @@
-{{ define "main" }}
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+  {{ partial "min/head.html" . }}
+  {{ $home := resources.Get "stylesheets/home.css" | resources.Minify | resources.Fingerprint "sha512" }}
+  <link rel="stylesheet" href="{{ $home.RelPermalink }}">
+</head>
+<body class="bf">
+<div class="bf-page">
 
-{{/* 1 — Hero / intro */}}
-<section class="lm-intro">
-  <!-- <h1 class="lm-intro-statement">Historian of land and environmental politics in the North American West</h1> -->
-  <div class="lm-intro-meta">
-    <figure class="lm-portrait">
-      <img src="/assets/images/portrait.webp" alt="Jason A. Heppler" width="96" height="96" loading="eager">
-      <figcaption>Photo by <a href="https://www.johnlegg.org/academic-photography">John Legg</a></figcaption>
-    </figure>
-    <div class="lm-intro-support">
-      <p class="lm-bio">I'm Jason A. Heppler, a historian of the North American West and Great Plains. I'm the senior developer/scholar at the <a href="https://rrchnm.org">Roy Rosenzweig Center for History and New Media</a> and an Affiliate Fellow at the <a href="https://www.unl.edu/plains/">Center for Great Plains Studies</a> at the University of Nebraska-Lincoln.</p>
-      <div class="lm-social">
-        <a class="lm-email-link" data-name="jason" data-domain="jasonheppler.org">Email</a>
-        {{ with site.Params.social.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
-        {{ with site.Params.social.microblog }}<a href="{{ . }}">micro.blog</a>{{ end }}
-        {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me">Mastodon</a>{{ end }}
-        {{ with site.Params.social.github }}<a href="{{ . }}">GitHub</a>{{ end }}
-        {{ with site.Params.social.buymeacoffee }}<a href="{{ . }}">Buy Me a Coffee</a>{{ end }}
+  {{/* Header */}}
+  <header class="bf-header">
+    <a href="/" class="bf-wordmark">Jason A. Heppler</a>
+    <nav class="bf-nav">
+      <a href="/archive/">Writing</a>
+      <a href="/publications/">Publications</a>
+      <a href="/research/">Digital History</a>
+      <a href="/books/">Bookshelf</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+
+  {{/* Hero — featured book */}}
+  <section class="bf-hero">
+    <div class="bf-hero-text">
+      <p class="bf-eyebrow">The latest book — 2024</p>
+      <h1 class="bf-hero-title">Silicon Valley and the Environmental Inequalities of High-Tech Urbanism</h1>
+      <p class="bf-hero-lead">How did the world's most celebrated landscape of innovation become one of its most polluted?</p>
+      <p class="bf-hero-sub">A century of growth, water, and waste beneath the Valley's orchards-turned-office-parks — and the communities who bore the environmental costs of high tech.</p>
+      <div class="bf-hero-actions">
+        <a href="/publications/silicon-valley/" class="bf-btn">Read more &rarr;</a>
+        <span class="bf-hero-press">University of Oklahoma Press</span>
       </div>
     </div>
-  </div>
-</section>
-
-{{/* 2 — Books */}}
-{{ $books := (where (where site.RegularPages "Section" "publications") ".Params.image" "ne" nil).ByDate.Reverse }}
-{{ with $books }}
-<section class="lm-section lm-books">
-  <p class="lm-label">Books</p>
-  <div class="lm-book-grid">
-    {{ range . }}
-    <a href="{{ .RelPermalink }}" class="lm-book">
-      <img class="lm-book-cover" src="/assets/images/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" decoding="async">
-      <span class="lm-book-title">{{ .Title }}</span>
-      <span class="lm-book-meta">{{ with .Params.publisher }}{{ . }}{{ end }}{{ with .Params.year }} · {{ . }}{{ end }}</span>
-    </a>
-    {{ end }}
-  </div>
-  <a href="/publications/" class="lm-more">All publications &rarr;</a>
-</section>
-{{ end }}
-
-{{/* 3 — Governing Ground callout */}}
-<section class="lm-section">
-  <a href="https://governingground.org" class="lm-callout">
-    <div class="lm-callout-media">
-      <img class="lm-callout-img" src="/assets/images/govground-preview.jpg" alt="Governing Ground project preview" loading="lazy" decoding="async">
-      <span class="lm-btn">View project &rarr;</span>
+    <div class="bf-book-wrap">
+      <div class="bf-book">
+        <img src="/assets/images/book_sv.webp" alt="Silicon Valley and the Environmental Inequalities of High-Tech Urbanism" class="bf-book-cover" loading="eager" decoding="async">
+        <span class="bf-book-edge"></span>
+        <span class="bf-book-spine"></span>
+      </div>
     </div>
-    <div class="lm-callout-body">
-      <p class="lm-callout-eyebrow">In Progress Digital History</p>
-      <p class="lm-callout-desc">Nearly a third of the American West is federal land. Those lands have been a century-long provocation. <em>Governing Ground</em> is a digital history of the Sagebrush Rebellions, recurring movements between the 1930s to the present over the transfer, ownership, management, and control of federal lands.</p>
+  </section>
+
+  {{/* Praise band */}}
+  <section class="bf-praise">
+    <span class="bf-praise-glow" aria-hidden="true"></span>
+    <div class="bf-praise-inner">
+      <p class="bf-quote">&ldquo;A clear-eyed environmental history that follows the water, the waste, and the people the Valley's prosperity left behind.&rdquo;</p>
+      <p class="bf-attr">Praise for Silicon Valley · add a real blurb</p>
     </div>
-  </a>
-</section>
+  </section>
 
-{{/* 4 — Essays, reviews & criticism (from data, trimmed) */}}
-{{ with hugo.Data.essays_criticism }}
-{{ $published := where . "published" "ne" false }}
-{{ $essays := where $published "type" "in" (slice "Essay" "Chapter" "Review") }}
-<section class="lm-section">
-  <div class="lm-section-head">
-    <p class="lm-label">Essays, reviews &amp; criticism</p>
-    <a href="/publications/" class="lm-section-link">All publications &rarr;</a>
-  </div>
-  <p class="lm-section-sub">Selected pieces written for other publications and edited collections.</p>
-  <div class="lm-ec">
-    {{ range first 5 (sort $essays "year" "desc") }}
-    {{ if .url }}
-    <a href="{{ .url }}" class="lm-ec-row" target="_blank" rel="noopener">
-      <span class="lm-type lm-type-essay">{{ .type }}</span>
-      <span class="lm-ec-info">
-        <span class="lm-ec-title">{{ .title }}</span>
-        <span class="lm-ec-pub">{{ .publication }}</span>
-      </span>
-      <span class="lm-ec-year">{{ .year }} &rarr;</span>
-    </a>
-    {{ else }}
-    <div class="lm-ec-row lm-ec-row-static">
-      <span class="lm-type lm-type-essay">{{ .type }}</span>
-      <span class="lm-ec-info">
-        <span class="lm-ec-title">{{ .title }}</span>
-        <span class="lm-ec-pub">{{ .publication }}</span>
-      </span>
-      <span class="lm-ec-year">{{ .year }}</span>
+  {{/* Governing Ground */}}
+  <section class="bf-gg">
+    <p class="bf-section-eyebrow">Digital History</p>
+    <div class="bf-gg-card">
+      <a href="https://governingground.org" class="bf-gg-img">
+        <img src="/assets/images/govground-preview.jpg" alt="Governing Ground project preview" loading="lazy" decoding="async">
+        <span class="bf-gg-scrim" aria-hidden="true"></span>
+        <span class="bf-gg-overlay">
+          <span class="bf-gg-kicker">In progress</span>
+          <span class="bf-gg-name">Governing Ground</span>
+        </span>
+      </a>
+      <div class="bf-gg-body">
+        <p>Nearly a third of the American West is federal land — a century-long provocation. <em>Governing Ground</em> is a digital history of the Sagebrush Rebellions, the recurring movements from the 1930s to the present over the transfer, ownership, and control of federal lands.</p>
+        <a href="https://governingground.org" class="bf-btn">View project &rarr;</a>
+      </div>
     </div>
-    {{ end }}
-    {{ end }}
-  </div>
-</section>
-{{ end }}
+  </section>
 
-{{/* 5 — Recent writing (blog + notes) */}}
-{{ $writing := first 7 (where site.RegularPages "Section" "in" (slice "blog" "microblog")).ByDate.Reverse }}
-{{ with $writing }}
-<section class="lm-section">
-  <div class="lm-section-head">
-    <p class="lm-label">Recent writing</p>
-    <a href="/archive/" class="lm-section-link">Full archive &rarr;</a>
-  </div>
-  <div class="lm-stream">
-    {{ range . }}
-    <a href="{{ .RelPermalink }}" class="lm-row">
-      <span class="lm-row-title">{{ .Title }}</span>
-      <time class="lm-row-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-    </a>
-    {{ end }}
-  </div>
-</section>
-{{ end }}
-
-{{/* 6 — On the road */}}
-{{ with hugo.Data.on_the_road }}
-<section class="lm-section">
-  <p class="lm-label">On the road</p>
-  <p class="lm-section-sub">Talks, lectures, and conference panels. Contact me about booking speaking engagements.</p>
-  <div class="lm-otr">
-    {{ range sort . "date" "desc" }}
-    <div class="lm-otr-row">
-      <span class="lm-otr-date">{{ .label }}</span>
-      <span class="lm-otr-info">
-        <span class="lm-otr-title">{{ .title }}</span>
-        <span class="lm-otr-venue">{{ .venue }}</span>
-      </span>
-      {{ with .url }}<a href="{{ . }}" class="lm-otr-link">Details &rarr;</a>{{ end }}
+  {{/* Books & Chapters */}}
+  <section class="bf-pubs">
+    <div class="bf-section-head">
+      <p class="bf-section-eyebrow">Books &amp; Chapters</p>
+      <a href="/publications/" class="bf-section-link">All publications &rarr;</a>
     </div>
-    {{ end }}
-  </div>
-</section>
-{{ end }}
+    <div class="bf-pub-grid">
+      <a href="/publications/digital-community-engagement/" class="bf-pub">
+        <img src="/assets/images/dice.webp" alt="Digital Community Engagement" loading="lazy" decoding="async">
+        <span class="bf-tag">Edited volume · 2020</span>
+        <span class="bf-pub-title">Digital Community Engagement</span>
+        <span class="bf-press">University of Cincinnati Press</span>
+      </a>
+      <div class="bf-pub">
+        <img src="/assets/images/custer_companion.webp" alt="A Companion to Custer and the Little Bighorn Campaign" loading="lazy" decoding="async">
+        <span class="bf-tag">Chapter</span>
+        <span class="bf-pub-title">A Companion to Custer and the Little Bighorn Campaign</span>
+        <span class="bf-press">Wiley Blackwell</span>
+      </div>
+      <div class="bf-pub">
+        <img src="/assets/images/teaching_research_data.jpg" alt="Teaching Research Data Management" loading="lazy" decoding="async">
+        <span class="bf-tag">Chapter</span>
+        <span class="bf-pub-title">Teaching Research Data Management</span>
+        <span class="bf-press">ACRL</span>
+      </div>
+    </div>
+  </section>
 
-{{ end }}
+  {{/* Meet Jason */}}
+  <section class="bf-meet">
+    <div class="bf-meet-inner">
+      <figure class="bf-portrait">
+        <img src="/assets/images/portrait.webp" alt="Jason A. Heppler" loading="lazy" decoding="async">
+      </figure>
+      <div class="bf-meet-text">
+        <p class="bf-meet-eyebrow">Meet Jason</p>
+        <p class="bf-meet-lead"><span class="bf-name">Jason A. Heppler</span> is a historian of the North American West and Great Plains, and a builder of digital history.</p>
+        <p class="bf-meet-body">Senior developer/scholar at the Roy Rosenzweig Center for History and New Media and an Affiliate Fellow at the Center for Great Plains Studies, University of Nebraska–Lincoln.</p>
+        <a href="/about/" class="bf-textlink">Read more &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  {{/* Essays & Recent Writing */}}
+  <section class="bf-writing">
+    <div class="bf-col">
+      <div class="bf-col-head">
+        <span class="bf-col-label">Essays &amp; Reviews</span>
+        <a href="/publications/" class="bf-section-link">All &rarr;</a>
+      </div>
+      {{ with hugo.Data.essays_criticism }}
+      {{ $ep := where . "published" "ne" false }}
+      {{ range first 3 (sort (where $ep "type" "in" (slice "Essay" "Review")) "year" "desc") }}
+      {{ if .url }}<a href="{{ .url }}" class="bf-row" target="_blank" rel="noopener">{{ else }}<div class="bf-row">{{ end }}
+        <span class="bf-row-main">
+          <span class="bf-row-title">{{ .title }}</span>
+          {{ with .publication }}<span class="bf-row-source">{{ . }}</span>{{ end }}
+        </span>
+        <span class="bf-row-meta">{{ .year }}</span>
+      {{ if .url }}</a>{{ else }}</div>{{ end }}
+      {{ end }}
+      {{ end }}
+    </div>
+    <div class="bf-col">
+      <div class="bf-col-head">
+        <span class="bf-col-label">Recent Writing</span>
+        <a href="/archive/" class="bf-section-link">Full archive &rarr;</a>
+      </div>
+      {{ range first 3 (where site.RegularPages "Section" "in" (slice "blog" "microblog")).ByDate.Reverse }}
+      <a href="{{ .RelPermalink }}" class="bf-row">
+        <span class="bf-row-main"><span class="bf-row-title">{{ .Title }}</span></span>
+        <span class="bf-row-meta">{{ .Date.Format "Jan 2" }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+
+  {{/* Footer */}}
+  <footer class="bf-footer">
+    <div class="bf-footer-name">
+      <span class="bf-rule" aria-hidden="true"></span>
+      <span>Jason A. Heppler</span>
+      <span class="bf-rule" aria-hidden="true"></span>
+    </div>
+    <p class="bf-colophon">© 2008–{{ now.Format "2006" }} Jason A. Heppler · Powered by Hugo and coffee · Made in Nebraska · <a href="/feed.xml">RSS</a> · <a href="/feed.json">JSON</a></p>
+  </footer>
+
+</div>
+{{ partial "min/scripts.html" . }}
+</body>
+</html>
