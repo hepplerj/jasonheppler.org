@@ -73,3 +73,5 @@ _templates/
 
 # Raw tweet archive source files
 tweets/
+# Design handoff reference (kept locally, not in the repo)
+design_handoff_heppler_homepage/

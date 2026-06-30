@@ -1,0 +1,4 @@
+name = "Sagebrush"
+license = "MIT"
+description = "Western book-hero redesign (v11) — warm paper, dark bands, Spectral + IBM Plex Mono. Overrides Pine; falls back to it for unbuilt pages."
+min_version = "0.116.0"

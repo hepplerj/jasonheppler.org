@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+  {{ partial "min/head.html" . }}
+  {{ $sb := resources.Get "stylesheets/sagebrush.css" | resources.Minify | resources.Fingerprint "sha512" }}
+  <link rel="stylesheet" href="{{ $sb.RelPermalink }}">
+</head>
+<body class="bf bf-inner">
+  {{ partial "sb-header.html" . }}
+  <main class="sb-main{{ if eq .Section "publications" }} sb-wide{{ end }}">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "sb-footer.html" . }}
+  {{ partial "min/scripts.html" . }}
+</body>
+</html>

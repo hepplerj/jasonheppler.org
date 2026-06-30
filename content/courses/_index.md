@@ -32,12 +32,15 @@ Studying history gives you [a lifetime of critical skills](http://www.nytimes.co
     <div>Spring 2018</div>
   </div>
 <div>
+    <div><a href="https://jasonheppler.org/courses/dph.2016/">Digital History: Sources, Methods, Problems,</a></div>
+    <div>Fall 2016</div>
+  </div>
+<div>
     <div><a href="https://jasonheppler.org/files/Heppler_Mullen-DHSI.pdf">R, Interactive Graphics, and Data Visualization</a> (with Lincoln Mullen) </div>
     <div>Summer 2016</div>
   </div>
-
   <div>
-    <div><a href="https://jasonheppler.org/teaching/hist205f.2014/">Digital History: Sources, Methods, Problems</a></div>
+    <div><a href="https://jasonheppler.org/courses/hist205f.2014/">Digital History: Sources, Methods, Problems</a></div>
     <div>Fall 2014</div>
   </div>
 
@@ -94,11 +97,7 @@ Studying history gives you [a lifetime of critical skills](http://www.nytimes.co
     <div><a href="https://jasonheppler.org/courses/aha-workshop/">Workshop: Introduction to Network Analysis</a></div>
     <div>Spring 2017</div>
   </div>
-  <div>
-    <div><a href="https://jasonheppler.org/courses/dph.2016/">Digital History: Sources, Methods, Problems,</a></div>
-    <div>Fall 2016</div>
-  </div>
-  <div>
+    <div>
     <div><a href="https://jasonheppler.org/courses/csu-workshop/">Workshop: Maps and Networks in the Classroom</a></div>
     <div>Summer 2016</div>
   </div>
