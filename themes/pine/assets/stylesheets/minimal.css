@@ -185,19 +185,18 @@ a { color: inherit; }
 :root:not([data-mode]) .lm-ic-auto { display: block; }
 
 /* ---- Intro ---- */
-.lm-intro { padding: 80px 0 16px; }
-.lm-intro-head {
+.lm-intro {
   display: flex;
   align-items: flex-start;
-  gap: 26px;
-  margin: 0 0 24px;
+  gap: 34px;
+  padding: 80px 0 16px;
 }
-.lm-intro-head h1 { margin: 0; }
+.lm-intro-content { flex: 1; min-width: 0; }
 .lm-portrait { margin: 0; flex-shrink: 0; }
 .lm-portrait img {
-  width: 88px;
-  height: 88px;
-  border-radius: 10px;
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
   object-fit: cover;
   display: block;
 }
@@ -220,7 +219,7 @@ a { color: inherit; }
   font-weight: 600;
   letter-spacing: -0.01em;
   margin: 0 0 24px;
-  max-width: 18ch;
+  max-width: 20ch;
 }
 .lm-bio {
   font-size: 19px;
@@ -1400,10 +1399,9 @@ a { color: inherit; }
 /* ---- Responsive ---- */
 @media (max-width: 600px) {
   body { font-size: 17px; }
-  .lm-intro { padding: 56px 0 12px; }
-  .lm-intro h1 { font-size: 28px; }
-  .lm-intro-head { gap: 18px; }
-  .lm-portrait img { width: 66px; height: 66px; }
+  .lm-intro { flex-direction: column; gap: 18px; padding: 56px 0 12px; }
+  .lm-intro h1 { font-size: 28px; max-width: none; }
+  .lm-portrait img { width: 104px; height: 104px; }
   .lm-portrait figcaption { font-size: 10px; }
   .lm-bio { font-size: 17px; }
   .lm-book-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 18px; }
