@@ -268,3 +268,11 @@ a.bf-pub:hover img { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(4
   .bf-nav.lm-nav-open { display: flex; }
   .bf-nav a { padding: 9px 0; font-size: 14px; }
 }
+
+/* Wider container for publications (two-column cards + book detail need room) */
+.sb-main.sb-wide { max-width: 1000px; }
+/* ...but keep the reference lists at a comfortable reading measure */
+.sb-wide .lm-pub-list,
+.sb-wide .lm-pub-card-desc { max-width: 70ch; }
+.sb-wide .lm-bookhead-prose { max-width: 64ch; }
+.sb-wide .lm-review-quote, .sb-wide .lm-buy-links { max-width: 74ch; }

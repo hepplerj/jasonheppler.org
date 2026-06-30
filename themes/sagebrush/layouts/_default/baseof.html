@@ -7,7 +7,7 @@
 </head>
 <body class="bf bf-inner">
   {{ partial "sb-header.html" . }}
-  <main class="sb-main">
+  <main class="sb-main{{ if eq .Section "publications" }} sb-wide{{ end }}">
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "sb-footer.html" . }}
