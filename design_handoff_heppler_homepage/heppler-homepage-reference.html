@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jason Heppler — Homepage (design reference)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ----------------------------------------------------------------
+     DESIGN TOKEN: the only non-monospace family runs through one var.
+     Default = "Designed" (Spectral serif).
+     Add class "system-fonts" to <html> for the approved System variant.
+     Monospace labels (IBM Plex Mono) are intentionally NOT toggled.
+  ------------------------------------------------------------------- */
+  :root { --bf-serif: 'Spectral', Georgia, serif; }
+  html.system-fonts { --bf-serif: Georgia, 'Times New Roman', serif; }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #ddd8cd;
+    font-family: var(--bf-serif);
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  .page {
+    width: 1180px;
+    max-width: 100%;
+    background: #efe8da;
+    color: #292318;
+    box-shadow: 0 12px 60px rgba(0,0,0,.18);
+  }
+  .fonts-toggle {
+    position: fixed; top: 14px; right: 14px; z-index: 99;
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .08em;
+    background: #16201a; color: #ece4d2; border: 0; border-radius: 5px;
+    padding: 9px 14px; cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<button class="fonts-toggle" onclick="document.documentElement.classList.toggle('system-fonts')">Toggle Designed / System fonts</button>
+
+<div class="page">
+
+  <!-- header -->
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:28px 56px;border-bottom:1px solid rgba(41,35,24,.14)">
+    <div style="font-family:var(--bf-serif);font-weight:500;font-size:21px;letter-spacing:.01em">Jason A. Heppler</div>
+    <div style="display:flex;gap:30px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.02em;color:#5a5244">
+      <span>Writing</span><span>Publications</span><span>Digital History</span><span>Bookshelf</span><span>About</span>
+    </div>
+  </div>
+
+  <!-- HERO: featured book -->
+  <div style="padding:62px 56px 64px">
+    <div style="position:relative;z-index:1;display:grid;grid-template-columns:1fr 360px;gap:64px;align-items:center">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.2em;color:#8a6a2e;margin-bottom:22px">THE LATEST BOOK — 2024</div>
+        <h1 style="font-weight:500;font-size:52px;line-height:1.07;letter-spacing:-.01em;margin:0 0 26px;max-width:15ch">Silicon Valley and the Environmental Inequalities of High-Tech Urbanism</h1>
+        <p style="font-size:20px;line-height:1.55;margin:0 0 14px;max-width:46ch">How did the world's most celebrated landscape of innovation become one of its most polluted?</p>
+        <p style="font-size:18px;line-height:1.6;margin:0 0 30px;max-width:48ch;color:#3d3526">A century of growth, water, and waste beneath the Valley's orchards-turned-office-parks — and the communities who bore the environmental costs of high tech.</p>
+        <div style="display:flex;gap:28px;align-items:center">
+          <span style="display:inline-block;background:#2f5a43;color:#fdf8ee;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.04em;padding:14px 26px;border-radius:5px">Read more →</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#8a6a2e;letter-spacing:.04em">University of Oklahoma Press</span>
+        </div>
+      </div>
+      <!-- 3D book (CSS perspective) -->
+      <div style="perspective:1700px;display:flex;justify-content:center">
+        <div style="position:relative;width:312px;height:471px;transform:rotateY(-15deg);box-shadow:36px 32px 64px rgba(41,35,24,.32)">
+          <img src="assets/book_sv.webp" alt="Silicon Valley cover" style="width:100%;height:100%;object-fit:cover;display:block">
+          <div style="position:absolute;top:0;right:-9px;width:10px;height:100%;background:linear-gradient(90deg,#cfc4ac,#f3ecd9)"></div>
+          <div style="position:absolute;top:0;left:0;width:10px;height:100%;background:linear-gradient(90deg,rgba(0,0,0,.3),rgba(0,0,0,0))"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRAISE (dark, slim) -- placeholder blurb, swap for a real review -->
+  <div style="position:relative;background:#1d2a24;color:#ece4d2;overflow:hidden;padding:72px 56px">
+    <div style="position:absolute;left:50%;top:-120px;transform:translateX(-50%);width:560px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(176,138,58,.4),transparent 62%);pointer-events:none"></div>
+    <div style="position:relative;z-index:1;text-align:center;max-width:840px;margin:0 auto">
+      <p style="font-family:var(--bf-serif);font-style:italic;font-size:29px;line-height:1.45;margin:0 0 22px;color:#f1e9d6">"A clear-eyed environmental history that follows the water, the waste, and the people the Valley's prosperity left behind."</p>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.18em;color:#c8a85a">— PRAISE FOR SILICON VALLEY · ADD A REAL BLURB</div>
+    </div>
+  </div>
+
+  <!-- GOVERNING GROUND (own section) -- left tile is a CSS placeholder, needs a real project image -->
+  <div style="padding:60px 56px;border-bottom:1px solid rgba(41,35,24,.14)">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#5a5244;margin-bottom:24px">Digital History</div>
+    <div style="border:1px solid rgba(41,35,24,.14);border-radius:8px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;background:#e7ddc9">
+      <div style="position:relative;min-height:300px;background:linear-gradient(180deg,#cdd0c4 0%,#bcae8c 36%,#a8884f 62%,#8a6a36 100%)">
+        <div style="position:absolute;inset:0;background:repeating-linear-gradient(102deg,rgba(60,46,22,.05) 0 16px,rgba(60,46,22,.1) 16px 32px)"></div>
+        <div style="position:absolute;left:0;right:0;bottom:0;height:130px;background:linear-gradient(180deg,transparent,rgba(40,30,15,.55))"></div>
+        <div style="position:absolute;left:30px;bottom:26px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;color:rgba(253,248,238,.82);margin-bottom:8px">IN PROGRESS</div>
+          <div style="font-family:var(--bf-serif);font-weight:500;font-size:40px;color:#fdf8ee">Governing Ground</div>
+        </div>
+      </div>
+      <div style="padding:42px 46px;display:flex;flex-direction:column;justify-content:center">
+        <p style="font-size:21px;line-height:1.5;margin:0 0 24px">Nearly a third of the American West is federal land — a century-long provocation. <span style="font-style:italic">Governing Ground</span> is a digital history of the Sagebrush Rebellions, the recurring movements from the 1930s to the present over the transfer, ownership, and control of federal lands.</p>
+        <span style="display:inline-block;align-self:flex-start;background:#2f5a43;color:#fdf8ee;font-family:'IBM Plex Mono',monospace;font-size:13px;padding:13px 24px;border-radius:5px">View project →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUBLICATIONS: books & chapters -->
+  <div style="padding:56px 56px;border-bottom:1px solid rgba(41,35,24,.14)">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:34px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#5a5244">Books &amp; Chapters</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#2f5a43">All publications →</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <img src="assets/dice.webp" alt="Digital Community Engagement" style="width:150px;height:227px;object-fit:cover;box-shadow:0 12px 28px rgba(41,35,24,.24)">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8a6a2e;margin-bottom:8px">EDITED VOLUME · 2020</div>
+          <div style="font-size:18px;font-weight:500;line-height:1.25">Digital Community Engagement</div>
+          <div style="font-size:13px;color:#8a8273;font-style:italic;margin-top:5px">University of Cincinnati Press</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <img src="assets/custer_companion.webp" alt="A Companion to Custer and the Little Bighorn Campaign" style="width:150px;height:227px;object-fit:cover;box-shadow:0 12px 28px rgba(41,35,24,.24)">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8a6a2e;margin-bottom:8px">CHAPTER</div>
+          <div style="font-size:18px;font-weight:500;line-height:1.25">A Companion to Custer and the Little Bighorn Campaign</div>
+          <div style="font-size:13px;color:#8a8273;font-style:italic;margin-top:5px">Wiley Blackwell</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <img src="assets/teaching_research_data.jpg" alt="Teaching Research Data Management" style="width:150px;height:227px;object-fit:cover;box-shadow:0 12px 28px rgba(41,35,24,.24)">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8a6a2e;margin-bottom:8px">CHAPTER</div>
+          <div style="font-size:18px;font-weight:500;line-height:1.25">Teaching Research Data Management</div>
+          <div style="font-size:13px;color:#8a8273;font-style:italic;margin-top:5px">ACRL</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEET JASON (dark) -->
+  <div style="position:relative;background:#16201a;color:#ece4d2;overflow:hidden;padding:70px 56px">
+    <div style="position:relative;z-index:1;display:grid;grid-template-columns:330px 1fr;gap:56px;align-items:center;max-width:980px;margin:0 auto">
+      <div style="width:330px;height:400px;overflow:hidden;border-radius:3px;box-shadow:0 18px 44px rgba(0,0,0,.45)">
+        <img src="assets/portrait.webp" alt="Jason Heppler" style="width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block">
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.22em;color:#9fc06a;margin-bottom:24px">MEET JASON</div>
+        <p style="font-size:21px;line-height:1.6;margin:0 0 20px"><span style="color:#c8a85a">Jason A. Heppler</span> is a historian of the North American West and Great Plains, and a builder of digital history.</p>
+        <p style="font-size:18px;line-height:1.65;margin:0 0 24px;color:#cfc6b1">Senior developer/scholar at the Roy Rosenzweig Center for History and New Media and an Affiliate Fellow at the Center for Great Plains Studies, University of Nebraska–Lincoln.</p>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.06em;color:#c8a85a">READ MORE →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ESSAYS + RECENT WRITING (light, side by side) -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:54px 56px 56px">
+    <div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(41,35,24,.5);padding-bottom:12px;margin-bottom:4px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase">Essays &amp; Reviews</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#2f5a43">All →</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;gap:14px;padding:15px 0;border-bottom:1px solid rgba(41,35,24,.12)"><div><div style="font-size:17.5px;font-weight:500;line-height:1.25">Spoiled Fruits: Environmental Inequality in Silicon Valley</div><div style="font-size:13px;color:#8a8273;font-style:italic;margin-top:3px">AHA Perspectives</div></div><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8a8273">2023</span></div>
+      <div style="display:flex;justify-content:space-between;gap:14px;padding:15px 0;border-bottom:1px solid rgba(41,35,24,.12)"><div><div style="font-size:17.5px;font-weight:500;line-height:1.25">Digital History Review of ClioVis</div><div style="font-size:13px;color:#8a8273;font-style:italic;margin-top:3px">The Journal of American History</div></div><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8a8273">2024</span></div>
+      <div style="display:flex;justify-content:space-between;gap:14px;padding:15px 0"><div><div style="font-size:17.5px;font-weight:500;line-height:1.25">Digital Community Engagement in a Pandemic</div><div style="font-size:13px;color:#8a8273;font-style:italic;margin-top:3px">History@Work, NCPH</div></div><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8a8273">2021</span></div>
+    </div>
+    <div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(41,35,24,.5);padding-bottom:12px;margin-bottom:4px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase">Recent Writing</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#2f5a43">Full archive →</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;padding:15px 0;border-bottom:1px solid rgba(41,35,24,.12)"><span style="font-size:18px;font-weight:500">Restoring Old Digital History</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8a8273">Mar 24</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;padding:15px 0;border-bottom:1px solid rgba(41,35,24,.12)"><span style="font-size:18px;font-weight:500">Vibing Digital History</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8a8273">Mar 9</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;padding:15px 0"><span style="font-size:18px;font-weight:500">The Obsidian–Hugo Workflow</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8a8273">Mar 5</span></div>
+    </div>
+  </div>
+
+  <!-- footer (dark) -->
+  <div style="background:#16201a;color:#8fa593;padding:34px 56px;text-align:center">
+    <div style="display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:14px">
+      <span style="flex:1;max-width:200px;height:1px;background:rgba(143,165,147,.3)"></span>
+      <span style="font-family:var(--bf-serif);font-size:18px;letter-spacing:.24em;color:#9fb59a">JASON A. HEPPLER</span>
+      <span style="flex:1;max-width:200px;height:1px;background:rgba(143,165,147,.3)"></span>
+    </div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#6f8475">© 2008–2026 Jason A. Heppler · Powered by Hugo and coffee · Made in Nebraska · RSS · JSON</div>
+  </div>
+
+</div>
+</body>
+</html>
