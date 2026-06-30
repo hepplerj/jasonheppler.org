@@ -236,3 +236,35 @@ a.bf-pub:hover img { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(4
 .bf-inner h1, .bf-inner h2, .bf-inner h3,
 .bf-inner .lm-article-title, .bf-inner .lm-archive-title,
 .bf-inner .lm-mb-title, .bf-inner .lm-bookhead-title { font-weight: 600; }
+
+/* Mobile hamburger nav (shared header; JS = min-ui.js .lm-nav-toggle/#lmNav) */
+.bf-nav-toggle {
+  display: none;
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 4px;
+  margin: 0;
+  cursor: pointer;
+  color: var(--bf-ink);
+  line-height: 0;
+  transition: color .15s ease;
+}
+.bf-nav-toggle:hover { color: var(--bf-green); }
+.bf-nav-toggle svg { display: block; }
+@media (max-width: 720px) {
+  .bf-header { flex-wrap: wrap; }
+  .bf-nav-toggle { display: inline-flex; }
+  .bf-nav {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--bf-hair);
+  }
+  .bf-nav.lm-nav-open { display: flex; }
+  .bf-nav a { padding: 9px 0; font-size: 14px; }
+}
