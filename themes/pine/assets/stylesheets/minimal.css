@@ -193,14 +193,14 @@ a { color: inherit; }
   letter-spacing: -0.02em;
   color: var(--ink);
   margin: 0 0 28px;
-  max-width: 20ch;
+  /* max-width: 20ch; */
 }
 .lm-intro-meta {
   display: flex;
   gap: 26px;
   align-items: flex-start;
-  padding-top: 26px;
-  border-top: 1px solid var(--hair);
+  /* padding-top: 26px;
+  border-top: 1px solid var(--hair); */
 }
 .lm-intro-support { flex: 1; min-width: 0; }
 .lm-intro-support .lm-bio { margin: 0 0 18px; }
