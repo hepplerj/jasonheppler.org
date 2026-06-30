@@ -97,18 +97,16 @@ body.bf {
 .bf-hero-actions { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
 .bf-hero-press { font-size: 12.5px; color: var(--bf-clay); letter-spacing: .04em; }
 
-/* 3D book */
-.bf-book-wrap { perspective: 1700px; display: flex; justify-content: center; }
-.bf-book {
-  position: relative;
+/* Book cover (flat) */
+.bf-book-wrap { display: flex; justify-content: center; }
+.bf-book-cover {
   width: 312px;
-  height: 471px;
-  transform: rotateY(-15deg);
-  box-shadow: 36px 32px 64px rgba(41, 35, 24, .32);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+  box-shadow: 0 16px 40px rgba(41, 35, 24, .26);
 }
-.bf-book-cover { width: 100%; height: 100%; object-fit: cover; display: block; }
-.bf-book-edge { position: absolute; top: 0; right: -9px; width: 10px; height: 100%; background: linear-gradient(90deg, #cfc4ac, #f3ecd9); }
-.bf-book-spine { position: absolute; top: 0; left: 0; width: 10px; height: 100%; background: linear-gradient(90deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0)); }
 
 /* Praise band */
 .bf-praise { position: relative; background: var(--bf-band); color: var(--bf-cream); overflow: hidden; padding: 72px 56px; width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); }
