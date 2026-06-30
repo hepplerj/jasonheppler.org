@@ -1454,3 +1454,21 @@ a { color: inherit; }
   .lm-search { min-width: 0; }
   .lm-archive-row { flex-wrap: wrap; gap: 4px 16px; }
 }
+
+/* Notice / callout blocks (raw HTML in content, like <aside>) */
+.lm-prose .notice {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--muted);
+  background: var(--accent-glow);
+  border-left: 3px solid var(--pine);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 1.6em 0;
+}
+.lm-prose .notice p:last-child { margin-bottom: 0; }
+.lm-prose .notice strong { color: var(--ink); }
+.lm-prose .notice--draft {
+  border-left-color: #b8860b;
+  background: rgba(184, 134, 11, 0.09);
+}
