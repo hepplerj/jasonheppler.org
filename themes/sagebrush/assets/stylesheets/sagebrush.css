@@ -1,9 +1,9 @@
-/* Heppler homepage — "Western" redesign (v11). Warm paper, dark bands,
-   Spectral serif + IBM Plex Mono (self-hosted). Establishes the design
-   tokens for the site-wide direction. */
+/* Sagebrush — "Western" redesign (v11). Warm paper, dark bands, Spectral
+   serif + IBM Plex Mono (self-hosted). Homepage uses bf- classes; inner
+   pages reuse Pine's lm- markup re-skinned via the token overrides below. */
 
 @font-face { font-family: "Spectral"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/Spectral-Regular.woff2") format("woff2"); }
-@font-face { font-family: "Spectral"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/Spectral-Medium.woff2") format("woff2"); }
+@font-face { font-family: "Spectral"; font-style: normal; font-weight: 500 600; font-display: swap; src: url("/assets/fonts/Spectral-Medium.woff2") format("woff2"); }
 @font-face { font-family: "Spectral"; font-style: normal; font-weight: 300; font-display: swap; src: url("/assets/fonts/Spectral-Light.woff2") format("woff2"); }
 @font-face { font-family: "Spectral"; font-style: italic; font-weight: 400; font-display: swap; src: url("/assets/fonts/Spectral-RegularItalic.woff2") format("woff2"); }
 @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/IBMPlexMono-Regular.woff2") format("woff2"); }
@@ -186,3 +186,53 @@ a.bf-pub:hover img { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(4
   .bf-pub-grid { grid-template-columns: 1fr; gap: 32px; justify-items: start; }
   .bf-gg-name { font-size: 32px; }
 }
+
+/* ============================================================
+   INNER PAGES — re-skin Pine's lm- component library.
+   Pine's minimal.css is tokenized with CSS variables; we load it
+   first (via min/head.html) then override the tokens here to the
+   Sagebrush palette + Spectral/IBM Plex, forced warm in all modes.
+   ============================================================ */
+:root,
+:root[data-theme="light"],
+:root[data-theme="dark"] {
+  --paper: #efe8da;
+  --ink: #292318;
+  --pine: #2f5a43;
+  --pine-deep: #274d39;
+  --muted: #8a8273;
+  --hair: rgba(41, 35, 24, .14);
+  --accent-line: rgba(47, 90, 67, .42);
+  --accent-glow: rgba(47, 90, 67, .10);
+  --field-bg: #ffffff;
+  --btn-ink: #fdf8ee;
+  --cover-shadow: rgba(41, 35, 24, .16);
+  --cover-shadow-h: rgba(41, 35, 24, .26);
+  --panel-green: #1d2a24;
+  --sans: "Spectral", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --col: 720px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #efe8da; --ink: #292318; --pine: #2f5a43; --pine-deep: #274d39;
+    --muted: #8a8273; --hair: rgba(41, 35, 24, .14); --accent-line: rgba(47, 90, 67, .42);
+    --accent-glow: rgba(47, 90, 67, .10); --field-bg: #ffffff; --btn-ink: #fdf8ee;
+    --cover-shadow: rgba(41, 35, 24, .16); --cover-shadow-h: rgba(41, 35, 24, .26);
+    --panel-green: #1d2a24;
+  }
+}
+
+/* Reading column for inner pages (baseof wraps content in .sb-main) */
+.bf-inner { background: var(--paper); color: var(--ink); font-family: var(--sans); }
+.sb-main { max-width: var(--col); margin: 0 auto; padding: 0 24px 88px; }
+
+/* Chrome: align the inner header with the page, keep footer full width */
+.bf-inner .bf-header { max-width: 1180px; margin: 0 auto; }
+.bf-nav a.bf-nav-active { color: var(--bf-green); }
+
+/* Titles: we only ship Spectral up to Medium, so keep prominent headings at
+   500–600 (mapped to Medium) and let body stay 400 — avoids faux-bold serif. */
+.bf-inner h1, .bf-inner h2, .bf-inner h3,
+.bf-inner .lm-article-title, .bf-inner .lm-archive-title,
+.bf-inner .lm-mb-title, .bf-inner .lm-bookhead-title { font-weight: 600; }

@@ -1,0 +1,10 @@
+<header class="bf-header">
+  <a href="/" class="bf-wordmark">Jason A. Heppler</a>
+  <nav class="bf-nav">
+    <a href="/archive/"{{ if or (in (slice "blog" "microblog") .Section) (eq .RelPermalink "/archive/") }} class="bf-nav-active"{{ end }}>Writing</a>
+    <a href="/publications/"{{ if eq .Section "publications" }} class="bf-nav-active"{{ end }}>Publications</a>
+    <a href="/research/"{{ if or (eq .Section "projects") (eq .RelPermalink "/research/") }} class="bf-nav-active"{{ end }}>Digital History</a>
+    <a href="/books/"{{ if eq .Section "books" }} class="bf-nav-active"{{ end }}>Bookshelf</a>
+    <a href="/about/"{{ if eq .RelPermalink "/about/" }} class="bf-nav-active"{{ end }}>About</a>
+  </nav>
+</header>

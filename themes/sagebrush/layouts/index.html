@@ -2,23 +2,13 @@
 <html lang="{{ .Site.LanguageCode | default "en" }}">
 <head>
   {{ partial "min/head.html" . }}
-  {{ $home := resources.Get "stylesheets/home.css" | resources.Minify | resources.Fingerprint "sha512" }}
+  {{ $home := resources.Get "stylesheets/sagebrush.css" | resources.Minify | resources.Fingerprint "sha512" }}
   <link rel="stylesheet" href="{{ $home.RelPermalink }}">
 </head>
 <body class="bf">
 <div class="bf-page">
 
-  {{/* Header */}}
-  <header class="bf-header">
-    <a href="/" class="bf-wordmark">Jason A. Heppler</a>
-    <nav class="bf-nav">
-      <a href="/archive/">Writing</a>
-      <a href="/publications/">Publications</a>
-      <a href="/research/">Digital History</a>
-      <a href="/books/">Bookshelf</a>
-      <a href="/about/">About</a>
-    </nav>
-  </header>
+  {{ partial "sb-header.html" . }}
 
   {{/* Hero — featured book */}}
   <section class="bf-hero">
@@ -137,15 +127,7 @@
     </div>
   </section>
 
-  {{/* Footer */}}
-  <footer class="bf-footer">
-    <div class="bf-footer-name">
-      <span class="bf-rule" aria-hidden="true"></span>
-      <span>Jason A. Heppler</span>
-      <span class="bf-rule" aria-hidden="true"></span>
-    </div>
-    <p class="bf-colophon">© 2008–{{ now.Format "2006" }} Jason A. Heppler · Powered by Hugo and coffee · Made in Nebraska · <a href="/feed.xml">RSS</a> · <a href="/feed.json">JSON</a></p>
-  </footer>
+  {{ partial "sb-footer.html" . }}
 
 </div>
 {{ partial "min/scripts.html" . }}
