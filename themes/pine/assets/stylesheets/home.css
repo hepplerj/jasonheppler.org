@@ -40,9 +40,13 @@ body.bf {
   font-family: var(--bf-serif);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
-.bf a { color: inherit; }
+.bf a:not([class]) { color: inherit; }
 .bf-page { max-width: 1180px; margin: 0 auto; }
+
+/* Full-bleed bands break out of the centered page */
+.bf-bleed { width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); }
 
 .bf-eyebrow, .bf-section-eyebrow, .bf-col-label, .bf-tag, .bf-hero-press,
 .bf-attr, .bf-gg-kicker, .bf-meet-eyebrow, .bf-textlink, .bf-section-link,
@@ -87,7 +91,7 @@ body.bf {
   padding: 62px 56px 64px;
 }
 .bf-eyebrow { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--bf-clay); margin: 0 0 22px; }
-.bf-hero-title { font-weight: 500; font-size: 52px; line-height: 1.07; letter-spacing: -.01em; margin: 0 0 26px; max-width: 15ch; }
+.bf-hero-title { font-weight: 500; font-size: 46px; line-height: 1.1; letter-spacing: -.01em; margin: 0 0 26px; }
 .bf-hero-lead { font-size: 20px; line-height: 1.55; margin: 0 0 14px; max-width: 46ch; }
 .bf-hero-sub { font-size: 18px; line-height: 1.6; margin: 0 0 30px; max-width: 48ch; color: var(--bf-ink-2); }
 .bf-hero-actions { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
@@ -107,7 +111,7 @@ body.bf {
 .bf-book-spine { position: absolute; top: 0; left: 0; width: 10px; height: 100%; background: linear-gradient(90deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0)); }
 
 /* Praise band */
-.bf-praise { position: relative; background: var(--bf-band); color: var(--bf-cream); overflow: hidden; padding: 72px 56px; }
+.bf-praise { position: relative; background: var(--bf-band); color: var(--bf-cream); overflow: hidden; padding: 72px 56px; width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); }
 .bf-praise-glow { position: absolute; left: 50%; top: -120px; transform: translateX(-50%); width: 560px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(176, 138, 58, .4), transparent 62%); pointer-events: none; }
 .bf-praise-inner { position: relative; z-index: 1; text-align: center; max-width: 840px; margin: 0 auto; }
 .bf-quote { font-style: italic; font-size: 29px; line-height: 1.45; margin: 0 0 22px; color: var(--bf-quote); }
@@ -118,11 +122,7 @@ body.bf {
 .bf-section-eyebrow { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: #5a5244; margin: 0 0 24px; }
 .bf-gg-card { border: 1px solid var(--bf-hair); border-radius: 8px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; background: var(--bf-card); }
 .bf-gg-img { position: relative; min-height: 300px; display: block; text-decoration: none; }
-.bf-gg-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.bf-gg-scrim { position: absolute; left: 0; right: 0; bottom: 0; height: 150px; background: linear-gradient(180deg, transparent, rgba(20, 26, 18, .72)); }
-.bf-gg-overlay { position: absolute; left: 30px; bottom: 26px; display: flex; flex-direction: column; gap: 8px; }
-.bf-gg-kicker { font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: rgba(253, 248, 238, .85); }
-.bf-gg-name { font-family: var(--bf-serif); font-weight: 500; font-size: 40px; color: var(--bf-btn-text); line-height: 1; }
+.bf-gg-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: left bottom; }
 .bf-gg-body { padding: 42px 46px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
 .bf-gg-body p { font-size: 21px; line-height: 1.5; margin: 0 0 24px; }
 
@@ -138,7 +138,7 @@ a.bf-pub:hover img { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(4
 .bf-press { font-size: 13px; color: var(--bf-muted); font-style: italic; }
 
 /* Meet Jason */
-.bf-meet { background: var(--bf-band-2); color: var(--bf-cream); padding: 70px 56px; }
+.bf-meet { background: var(--bf-band-2); color: var(--bf-cream); padding: 70px 56px; width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); }
 .bf-meet-inner { display: grid; grid-template-columns: 330px 1fr; gap: 56px; align-items: center; max-width: 980px; margin: 0 auto; }
 .bf-portrait { margin: 0; width: 330px; height: 400px; overflow: hidden; border-radius: 3px; box-shadow: 0 18px 44px rgba(0, 0, 0, .45); }
 .bf-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; display: block; }
@@ -162,7 +162,7 @@ a.bf-pub:hover img { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(4
 .bf-row-meta { font-size: 12px; color: var(--bf-muted); white-space: nowrap; flex-shrink: 0; }
 
 /* Footer */
-.bf-footer { background: var(--bf-band-2); color: #8fa593; padding: 34px 56px; text-align: center; }
+.bf-footer { background: var(--bf-band-2); color: #8fa593; padding: 34px 56px; text-align: center; width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); }
 .bf-footer-name { display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 14px; font-family: var(--bf-serif); font-size: 18px; letter-spacing: .24em; color: #9fb59a; }
 .bf-rule { flex: 1; max-width: 200px; height: 1px; background: rgba(143, 165, 147, .3); }
 .bf-colophon { font-size: 11.5px; color: #6f8475; margin: 0; }
