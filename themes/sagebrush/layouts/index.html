@@ -86,6 +86,14 @@
         <p class="bf-meet-lead"><span class="bf-name">Jason A. Heppler</span> is a historian of the North American West and Great Plains, and a builder of digital history.</p>
         <p class="bf-meet-body">Senior developer/scholar at the Roy Rosenzweig Center for History and New Media and an Affiliate Fellow at the Center for Great Plains Studies, University of Nebraska–Lincoln.</p>
         <a href="/about/" class="bf-textlink">Read more &rarr;</a>
+        <div class="lm-social">
+        <a data-name="jason" data-domain="jasonheppler.org">Email</a>
+        {{ with site.Params.social.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
+        {{ with site.Params.social.microblog }}<a href="{{ . }}">micro.blog</a>{{ end }}
+        {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me">Mastodon</a>{{ end }}
+        {{ with site.Params.social.github }}<a href="{{ . }}">GitHub</a>{{ end }}
+        {{ with site.Params.social.buymeacoffee }}<a href="{{ . }}">Buy Me a Coffee</a>{{ end }}
+        </div>
       </div>
     </div>
   </section>
