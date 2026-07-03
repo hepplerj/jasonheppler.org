@@ -173,19 +173,20 @@ a { color: inherit; }
 .lm-bio a:hover { border-bottom-color: var(--pine); }
 
 .lm-social {
+  padding-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   gap: 8px 18px;
   font-size: 15px;
-  color: var(--muted);
+  color: var(--bf-gold);
 }
 .lm-social a {
   text-decoration: none;
-  color: var(--muted);
+  color: var(--bf-gold);
   cursor: pointer;
   transition: color 0.15s ease;
 }
-.lm-social a:hover { color: var(--pine); }
+.lm-social a:hover { color: var(--bf-clay); text-decoration: underline; }
 
 /* ---- Sections ---- */
 .lm-section { padding: 56px 0 0; }
@@ -193,7 +194,7 @@ a { color: inherit; }
   font-family: var(--mono);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--bf-gold);
   margin: 0 0 22px;
 }
 
@@ -290,7 +291,7 @@ a { color: inherit; }
   font-size: 16px;
   color: var(--muted);
   margin: 14px 0 22px;
-  max-width: 56ch;
+  /* max-width: 56ch; */
 }
 
 /* ---- Featured callout ---- */
@@ -1235,7 +1236,7 @@ a { color: inherit; }
   line-height: 1.55;
   color: var(--muted);
   margin: 16px 0 0;
-  max-width: 54ch;
+  /* max-width: 54ch; */
 }
 .lm-archive-controls {
   display: flex;

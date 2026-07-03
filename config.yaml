@@ -2,9 +2,6 @@ ignoreFiles:
   - _templates/
 
 title: Jason A. Heppler
-# Sagebrush (warm/serif, Western book-hero) is the standalone site theme — it
-# owns every template, style, and script. themes/pine (minimal Fog & Pine) and
-# themes/big-sky remain parked in the tree as inactive references only.
 theme: sagebrush
 description: >-
   Jason Heppler is the senior web developer at the Roy Rosenzweig Center for
