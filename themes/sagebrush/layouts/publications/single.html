@@ -1,0 +1,82 @@
+{{ define "main" }}
+{{ if .Params.image }}
+<a href="/publications/" class="lm-breadcrumb">&larr; Publications</a>
+
+<section class="lm-bookhead">
+  <div class="lm-bookhead-cover">
+    <img src="/assets/images/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" decoding="async">
+  </div>
+  <div class="lm-bookhead-info">
+    <p class="lm-label">Book{{ with .Params.year }} · {{ . }}{{ end }}</p>
+    <h1 class="lm-bookhead-title">{{ .Title }}</h1>
+    {{ with .Params.author }}<p class="lm-bookhead-author">by {{ . }}</p>{{ end }}
+    {{ with .Params.publisher }}<p class="lm-bookhead-publisher">{{ . }}</p>{{ end }}
+
+    {{ if .Params.purchase_links }}
+    <div class="lm-bookhead-buy">
+      {{ range .Params.purchase_links }}
+      <a href="{{ .url }}" class="lm-btn">{{ .name }}</a>
+      {{ end }}
+      {{ with .Params.library_link }}{{ if .url }}<a href="{{ .url }}" class="lm-btn lm-btn-outline">Find in a library</a>{{ end }}{{ end }}
+    </div>
+    {{ end }}
+
+    <div class="lm-prose lm-bookhead-prose">{{ .Content }}</div>
+  </div>
+</section>
+
+{{ with .Params.endorsements }}
+<section class="lm-praise">
+  <p class="lm-label">Praise</p>
+  <div class="lm-praise-grid">
+    {{ range . }}
+    <blockquote class="lm-praise-quote">
+      <p>&ldquo;{{ .quote }}&rdquo;</p>
+      <cite>{{ .author }}</cite>
+    </blockquote>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ with .Params.reviews }}
+<section class="lm-reviews">
+  <p class="lm-label">Reviews</p>
+  {{ range . }}
+  {{ $pub := .publication }}{{ $url := .url }}
+  <blockquote class="lm-review-quote">
+    {{ with .quote }}<p>&ldquo;{{ . }}&rdquo;</p>{{ end }}
+    <cite>{{ .author }}{{ with $pub }}, {{ if $url }}<a href="{{ $url }}">{{ . }}</a>{{ else }}{{ . }}{{ end }}{{ end }}</cite>
+  </blockquote>
+  {{ end }}
+</section>
+{{ end }}
+
+{{ if or .Params.purchase_links .Params.library_link }}
+<section class="lm-buy-footer">
+  <p class="lm-label">Get the book</p>
+  <p class="lm-buy-links">
+    {{ range $i, $l := .Params.purchase_links }}{{ if $i }} · {{ end }}<a href="{{ $l.url }}">{{ $l.name }}</a>{{ end }}
+    {{ with .Params.library_link }}{{ if .url }} · <a href="{{ .url }}">Find in a library</a>{{ end }}{{ end }}
+  </p>
+</section>
+{{ end }}
+
+{{ if or .Params.isbn_paperback .Params.isbn_hardcover .Params.isbn_ebook }}
+<section class="lm-isbn">
+  <div class="lm-isbn-grid">
+    {{ with .Params.isbn_paperback }}<div class="lm-isbn-item"><span class="lm-isbn-label">Paperback ISBN</span><span class="lm-isbn-number">{{ . }}</span></div>{{ end }}
+    {{ with .Params.isbn_hardcover }}<div class="lm-isbn-item"><span class="lm-isbn-label">Hardcover ISBN</span><span class="lm-isbn-number">{{ . }}</span></div>{{ end }}
+    {{ with .Params.isbn_ebook }}<div class="lm-isbn-item"><span class="lm-isbn-label">Ebook ISBN</span><span class="lm-isbn-number">{{ . }}</span></div>{{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ else }}
+<header class="lm-archive-head">
+  <p class="lm-label">Research</p>
+  <h1 class="lm-archive-title">{{ .Title }}</h1>
+</header>
+<div class="lm-prose lm-about-body">{{ .Content }}</div>
+{{ end }}
+{{ end }}
