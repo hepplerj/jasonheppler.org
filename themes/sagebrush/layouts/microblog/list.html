@@ -1,0 +1,39 @@
+{{ define "main" }}
+<header class="lm-archive-head">
+  <p class="lm-label">Microblog</p>
+  <h1 class="lm-archive-title">{{ .Title }}</h1>
+  {{ with .Content }}<div class="lm-archive-lead">{{ . }}</div>{{ end }}
+</header>
+
+{{ $paginator := .Paginate (.Pages.ByDate.Reverse) 10 }}
+
+<div class="lm-mb-list">
+  {{ range $paginator.Pages }}
+  <article class="lm-mb-post h-entry">
+    <header class="lm-mb-head">
+      <h2 class="lm-mb-title p-name"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <a href="{{ .RelPermalink }}" class="lm-mb-date"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></a>
+    </header>
+    {{/* Rewrite bundle-relative image paths to absolute so they resolve off /microblog/ too. */}}
+    {{ $body := .Content | replaceRE `(src|data-microblog-lightbox)="([^/h][^"]*\.(?:webp|png|jpe?g|gif|svg))"` (printf `${1}="%s${2}"` .RelPermalink) }}
+    <div class="lm-mb-body lm-prose e-content">
+      {{ $body | safeHTML }}
+      {{ with .Params.external }}
+      <p class="lm-link-out"><a class="u-bookmark-of" href="{{ . }}">Visit link &rarr;</a></p>
+      {{ end }}
+    </div>
+    {{ with .Params.tags }}
+    <p class="lm-mb-tags">{{ range $i, $t := . }}{{ if $i }}<span class="lm-dot-sep">·</span>{{ end }}<a href="/tags/{{ $t | urlize }}/">{{ $t | humanize }}</a>{{ end }}</p>
+    {{ end }}
+  </article>
+  {{ end }}
+</div>
+
+{{ if gt $paginator.TotalPages 1 }}
+<nav class="lm-pager" aria-label="Microblog pages">
+  {{ if $paginator.HasPrev }}<a href="{{ $paginator.Prev.URL }}" class="lm-pager-link">&larr; Newer</a>{{ else }}<span class="lm-pager-link lm-pager-off">&larr; Newer</span>{{ end }}
+  <span class="lm-pager-count">{{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}</span>
+  {{ if $paginator.HasNext }}<a href="{{ $paginator.Next.URL }}" class="lm-pager-link">Older &rarr;</a>{{ else }}<span class="lm-pager-link lm-pager-off">Older &rarr;</span>{{ end }}
+</nav>
+{{ end }}
+{{ end }}

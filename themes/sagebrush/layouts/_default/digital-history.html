@@ -1,0 +1,23 @@
+{{ define "main" }}
+<header class="lm-archive-head">
+  <p class="lm-label">Digital &amp; public history</p>
+  <h1 class="lm-archive-title">Over a decade of building history on the web.</h1>
+  <div class="lm-archive-lead">{{ .Content }}</div>
+</header>
+
+<div class="lm-dh-grid">
+  {{ range hugo.Data.dh_projects }}
+  {{ $title := .title }}
+  <a href="{{ .url }}" class="lm-project-card{{ if .image }} lm-project-card-img{{ end }}" target="_blank" rel="noopener">
+    {{ with .image }}<img class="lm-project-thumb" src="/assets/images/{{ . }}" alt="{{ $title }}" loading="lazy" decoding="async">{{ end }}
+    <span class="lm-project-body">
+      <span class="lm-project-head">
+        <span class="lm-project-title">{{ .title }}</span>
+        <span class="lm-project-arrow">&nearr;</span>
+      </span>
+      <span class="lm-project-desc">{{ .desc }}</span>
+    </span>
+  </a>
+  {{ end }}
+</div>
+{{ end }}

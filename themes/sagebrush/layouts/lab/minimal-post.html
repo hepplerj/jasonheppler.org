@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ $p := site.GetPage .Params.preview }}
+<head>
+  {{ partial "lab/head.html" (dict "title" (printf "%s — minimal prototype" $p.Title)) }}
+</head>
+<body>
+  <div class="lm-wrap">
+
+    {{ partial "lab/topbar.html" . }}
+
+    {{ with $p }}
+    <article class="lm-article">
+      <header class="lm-article-head">
+        <p class="lm-label">Essay</p>
+        <h1 class="lm-article-title">{{ .Title }}</h1>
+        {{ with .Params.lede }}<p class="lm-article-lede">{{ . }}</p>{{ end }}
+        <div class="lm-article-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+          <span class="lm-dot-sep">·</span>
+          <span>Jason A. Heppler</span>
+          <span class="lm-dot-sep">·</span>
+          <span>{{ .ReadingTime }} min read</span>
+        </div>
+      </header>
+
+      {{ with .Params.image }}
+      <figure class="lm-article-lead">
+        <img src="/assets/images/{{ . }}" alt="{{ $p.Title }}" loading="lazy" decoding="async">
+      </figure>
+      {{ end }}
+
+      <div class="lm-prose">
+        {{ .Content }}
+      </div>
+
+      <div class="lm-article-footer">
+        <p class="lm-post-note">This is an <a href="/archive/">essay</a> — a longer piece of writing on a topic I've been thinking about.</p>
+        {{ with .Params.tags }}
+        <p class="lm-tags">
+          {{ range $i, $t := . }}{{ if $i }}<span class="lm-dot-sep">·</span>{{ end }}<a href="/tags/{{ $t | urlize }}/">{{ $t | humanize }}</a>{{ end }}
+        </p>
+        {{ end }}
+      </div>
+
+      <aside class="lm-author">
+        <img src="/assets/images/portrait.webp" alt="Jason A. Heppler" width="56" height="56">
+        <div class="lm-author-text">
+          <span class="lm-author-name">Jason A. Heppler</span>
+          <span class="lm-author-role">Environmental &amp; digital historian</span>
+        </div>
+        <div class="lm-author-links">
+          {{ with site.Params.social.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
+          {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me">Mastodon</a>{{ end }}
+          {{ with site.Params.social.github }}<a href="{{ . }}">GitHub</a>{{ end }}
+        </div>
+      </aside>
+
+      {{ $siblings := where site.RegularPages "Section" "blog" }}
+      {{ $prev := $siblings.Prev $p }}
+      {{ $next := $siblings.Next $p }}
+      {{ if or $prev $next }}
+      <nav class="lm-prevnext">
+        {{ with $prev }}
+        <a href="{{ .RelPermalink }}" class="lm-prevnext-item">
+          <span class="lm-prevnext-label">&larr; Previous</span>
+          <span class="lm-prevnext-title">{{ .Title }}</span>
+        </a>
+        {{ else }}<span></span>{{ end }}
+        {{ with $next }}
+        <a href="{{ .RelPermalink }}" class="lm-prevnext-item lm-prevnext-next">
+          <span class="lm-prevnext-label">Next &rarr;</span>
+          <span class="lm-prevnext-title">{{ .Title }}</span>
+        </a>
+        {{ else }}<span></span>{{ end }}
+      </nav>
+      {{ end }}
+
+      {{ $pool := where (where site.RegularPages "Section" "in" (slice "blog" "notes")) "RelPermalink" "ne" $p.RelPermalink }}
+      {{ $related := slice }}
+      {{ with $p.Params.tags }}
+        {{ $related = (where $pool ".Params.tags" "intersect" .).ByDate.Reverse }}
+      {{ end }}
+      {{ $related = first 3 $related }}
+      {{ if lt (len $related) 3 }}
+        {{ range first 8 $pool.ByDate.Reverse }}
+          {{ if and (lt (len $related) 3) (not (in $related .)) }}{{ $related = $related | append . }}{{ end }}
+        {{ end }}
+      {{ end }}
+      {{ with $related }}
+      <section class="lm-related">
+        <p class="lm-label">Related reading</p>
+        <div class="lm-related-grid">
+          {{ range . }}
+          <a href="{{ .RelPermalink }}" class="lm-related-item">
+            <span class="lm-related-title">{{ .Title }}</span>
+            <time class="lm-related-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+          </a>
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
+    </article>
+    {{ end }}
+
+    {{ partial "lab/site-footer.html" . }}
+
+  </div>
+
+  {{ partial "lab/scripts.html" . }}
+</body>
+</html>

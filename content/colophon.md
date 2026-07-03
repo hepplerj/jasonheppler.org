@@ -15,7 +15,7 @@ Styles are plain, hand-written CSS---no framework, no utility classes---minified
 
 ## Typography
 
-The body text and interface are set in your device's native system font stack. The one typeface I do ship is **[JetBrains Mono](https://www.jetbrains.com/lp/mono/)**, self-hosted as a small WOFF2 file. It sets everything monospaced: code, the small uppercase labels, dates, footnotes, and figure captions.
+The body text and headings are set in **[Spectral](https://fonts.google.com/specimen/Spectral)**, a serif drawn for reading on screens. The interface---navigation, the small uppercase labels, dates, footnotes, code, and figure captions---is set in **[IBM Plex Mono](https://www.ibm.com/plex/)**. Both are self-hosted as small WOFF2 files, limited to the handful of weights the site actually uses; there are no third-party font services.
 
 ## Writing Environment
 
@@ -25,9 +25,9 @@ Content lives as flat Markdown files in the site's repository. I write in [Obsid
 
 Navigation sits in a simple top bar: my name in the top left links home, the section links sit to the right, and on narrow screens they collapse into a hamburger menu. The aim is to stay out of the way of the reading surface.
 
-The site supports **auto, light, and dark modes**, cycled with the toggle in the nav. The preference is stored in `localStorage` and applied before the page paints, so there's no flash of the wrong theme.
+The palette is a single warm, paper-inspired light theme---there's no dark mode or theme switcher. One carefully tuned set of colors, applied everywhere, so every page reads the way it was designed to.
 
-Performance and environmental footprint informed many choices: leaning on system fonts avoids web-font downloads almost entirely, images use lazy loading and `decoding="async"`, scripts are deferred, and the page weight on a typical post is kept small. The goal is a page that loads quickly on a slow connection and generates as little CO₂ as possible.
+Performance and environmental footprint informed many choices: the web fonts are self-hosted and subset rather than pulled from a third-party service, images use lazy loading and `decoding="async"`, scripts are deferred, and the page weight on a typical post is kept small. The goal is a page that loads quickly on a slow connection and generates as little CO₂ as possible.
 
 ## Content Types
 
