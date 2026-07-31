@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ .Site.LanguageCode | default "en" }}">
+<html lang="{{ .Site.Language.Locale | default "en" }}">
 <head>
   {{ partial "min/head.html" . }}
   {{ $home := resources.Get "stylesheets/sagebrush.css" | resources.Minify | resources.Fingerprint "sha512" }}
@@ -129,6 +129,19 @@
         <span class="bf-row-meta">{{ .Date.Format "Jan 2" }}</span>
       </a>
       {{ end }}
+    </div>
+  </section>
+
+  {{/* Newsletter */}}
+  <section class="bf-news">
+    <div class="bf-news-inner">
+      <p class="bf-news-eyebrow">Newsletter</p>
+      <h2 class="bf-news-title">Tack &amp; Ink</h2>
+      <p class="bf-news-desc">Occasional writing on the American West, agricultural history, and political culture.</p>
+      <form class="bf-news-form" action="https://buttondown.com/api/emails/embed-subscribe/plainsink" method="post" target="_blank">
+        <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+        <button type="submit">Subscribe</button>
+      </form>
     </div>
   </section>
 

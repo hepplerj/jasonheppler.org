@@ -3,18 +3,32 @@
 <div class="bs-archive">
   <header class="bs-container-narrow bs-archive-header">
     <span class="bs-eyebrow">Writing</span>
-    <h1 class="bs-archive-title">Essays, notes &amp; commonplace</h1>
-    <p class="bs-archive-lead">Longer essays, short notes, and quotations worth keeping unified into a single stream you can filter and search.</p>
+    <h1 class="bs-archive-title">{{ .Title }}</h1>
+    <p class="bs-archive-lead">Longer essays and short microblog posts unified into a single stream you can filter and search.</p>
   </header>
 
   <div class="bs-container-narrow">
+    {{/* Post types derive from the sections that actually have content */}}
+    {{ $types := dict
+      "blog" (dict "key" "essay" "label" "Essays" "tag" "Essay")
+      "microblog" (dict "key" "micro" "label" "Microblog" "tag" "Microblog") }}
+    {{ $available := slice }}
+    {{ $all := slice }}
+    {{ range $section, $meta := $types }}
+      {{ $pages := where site.RegularPages "Section" $section }}
+      {{ with $pages }}
+        {{ $available = $available | append (merge $meta (dict "count" (len .))) }}
+        {{ $all = $all | append . }}
+      {{ end }}
+    {{ end }}
+
     <!-- Controls -->
     <div class="bs-archive-controls">
       <div class="bs-archive-chips" id="archiveChips">
-        <button class="bs-chip on" data-filter="all">All <span class="count" id="countAll"></span></button>
-        <button class="bs-chip" data-filter="essay">Essays <span class="count" id="countEssay"></span></button>
-        <button class="bs-chip" data-filter="note">Notes <span class="count" id="countNote"></span></button>
-        <button class="bs-chip" data-filter="link">Commonplace <span class="count" id="countLink"></span></button>
+        <button class="bs-chip on" data-filter="all">All <span class="count">{{ len $all }}</span></button>
+        {{ range $available }}
+        <button class="bs-chip" data-filter="{{ .key }}">{{ .label }} <span class="count">{{ .count }}</span></button>
+        {{ end }}
       </div>
       <input type="search" class="bs-archive-search" id="archiveSearch" placeholder="Search titles…" aria-label="Search writing">
     </div>
@@ -22,21 +36,17 @@
 
     <!-- Post list -->
     <div class="bs-archive-list" id="archiveList">
-      {{/* Combine all three sections, sorted by date descending */}}
-      {{ $blog := where site.RegularPages "Section" "blog" }}
-      {{ $notes := where site.RegularPages "Section" "notes" }}
-      {{ $links := where site.RegularPages "Section" "links" }}
-      {{ $all := union $blog (union $notes $links) }}
-      {{ range $all.ByDate.Reverse }}
-      <a href="{{ .RelPermalink }}" class="bs-archive-row" data-type="{{ cond (eq .Section "blog") "essay" (cond (eq .Section "notes") "note" "link") }}" data-title="{{ .Title | lower }}">
+      {{ range sort $all "Date" "desc" }}
+      {{ $meta := index $types .Section }}
+      <a href="{{ .RelPermalink }}" class="bs-archive-row" data-type="{{ $meta.key }}" data-title="{{ .Title | lower }}">
         <div class="bs-archive-row-text">
           <span class="bs-archive-row-title">{{ .Title }}</span>
-          {{ if and (eq .Section "links") .Params.external }}
-          <span class="bs-archive-row-source">{{ .Params.external | replaceRE "^https?://(www\\.)?" "" | replaceRE "/.*$" "" }}</span>
+          {{ with .Params.external }}
+          <span class="bs-archive-row-source">{{ . | replaceRE "^https?://(www\\.)?" "" | replaceRE "/.*$" "" }}</span>
           {{ end }}
         </div>
         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-        <span class="bs-tag bs-tag-{{ cond (eq .Section "blog") "essay" (cond (eq .Section "notes") "note" "link") }}">{{ cond (eq .Section "blog") "Essay" (cond (eq .Section "notes") "Note" "Commonplace") }}</span>
+        <span class="bs-tag bs-tag-{{ $meta.key }}">{{ $meta.tag }}</span>
       </a>
       {{ end }}
     </div>

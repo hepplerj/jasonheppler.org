@@ -2,13 +2,13 @@ ignoreFiles:
   - _templates/
 
 title: Jason A. Heppler
-theme: sagebrush
+theme: pine
 description: >-
   Jason Heppler is the senior web developer at the Roy Rosenzweig Center for
   History and New Media at George Mason University.
 baseURL: "https://jasonheppler.org/"
 copyright: 2008-2024
-languageCode: en-us
+locale: en-us
 footnoteReturnLinkContents: " "
 
 permalinks:
@@ -115,7 +115,17 @@ menu:
 enableGitInfo: true
 
 security:
+  allowContent:
+    - .*
   funcs:
     getenv:
       - ^HUGO_
       - ^BLOG_
+  node:
+    permissions:
+      allowAddons:
+        - tailwindcss
+        - postcss
+      allowWorker:
+        - tailwindcss
+        - postcss

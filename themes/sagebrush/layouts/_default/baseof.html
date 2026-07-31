@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ .Site.LanguageCode | default "en" }}">
+<html lang="{{ .Site.Language.Locale | default "en" }}">
 <head>
   {{ partial "min/head.html" . }}
   {{ $sb := resources.Get "stylesheets/sagebrush.css" | resources.Minify | resources.Fingerprint "sha512" }}

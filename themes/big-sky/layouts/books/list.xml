@@ -5,7 +5,7 @@
     <link>{{ .Permalink | absURL }}</link>
     <description>Recent reading log by {{ .Site.Params.Author.name }}</description>
     <generator>Hugo -- gohugo.io</generator>
-    {{ with .Site.LanguageCode }}
+    {{ with .Site.Language.Locale }}
     <language>{{.}}</language>
     {{end}}
     {{ with .Site.Params.Author.email }}<managingEditor>{{.}}{{ with $.Site.Params.Author.name }} ({{.}}){{end}}</managingEditor>{{end}}

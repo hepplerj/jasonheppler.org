@@ -8,14 +8,6 @@
   let filter = 'all';
   let query = '';
 
-  // Set initial counts
-  const counts = { all: rows.length, essay: 0, note: 0, link: 0 };
-  rows.forEach(r => { counts[r.dataset.type]++; });
-  document.getElementById('countAll').textContent = counts.all;
-  document.getElementById('countEssay').textContent = counts.essay;
-  document.getElementById('countNote').textContent = counts.note;
-  document.getElementById('countLink').textContent = counts.link;
-
   function update() {
     let visible = 0;
     const q = query.toLowerCase();

@@ -1620,6 +1620,40 @@ a.bf-pub:hover img { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(4
 .bf-row-meta { font-size: 12px; color: var(--bf-muted); white-space: nowrap; flex-shrink: 0; }
 
 /* Footer */
+/* Newsletter band */
+.bf-news { background: var(--bf-band); color: var(--bf-cream); padding: 64px 56px; text-align: center; width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); }
+.bf-news-inner { max-width: 560px; margin: 0 auto; }
+.bf-news-eyebrow { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--bf-gold); margin: 0 0 14px; }
+.bf-news-title { font-family: var(--bf-serif); font-weight: 500; font-size: 30px; margin: 0 0 12px; color: var(--bf-quote); }
+.bf-news-desc { font-size: 16px; line-height: 1.6; color: #cfc6b1; margin: 0 0 26px; }
+.bf-news-form { display: flex; gap: 10px; max-width: 420px; margin: 0 auto; }
+.bf-news-form input {
+  flex: 1;
+  min-width: 0;
+  font-family: inherit;
+  font-size: 15px;
+  padding: 12px 14px;
+  border: 1px solid rgba(236, 228, 210, .3);
+  border-radius: 5px;
+  background: rgba(236, 228, 210, .08);
+  color: var(--bf-cream);
+}
+.bf-news-form input::placeholder { color: #9aa694; }
+.bf-news-form input:focus { outline: none; border-color: var(--bf-gold); }
+.bf-news-form button {
+  font-family: var(--bf-mono);
+  font-size: 13px;
+  letter-spacing: .04em;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 5px;
+  background: var(--bf-gold);
+  color: var(--bf-band-2);
+  cursor: pointer;
+  transition: background .15s ease;
+}
+.bf-news-form button:hover { background: #d8bc72; }
+
 .bf-footer { background: var(--bf-band-2); color: #8fa593; padding: 34px 56px; text-align: center; width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); }
 .bf-footer-name { display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 14px; font-family: var(--bf-serif); font-size: 18px; letter-spacing: .24em; color: #9fb59a; }
 .bf-rule { flex: 1; max-width: 200px; height: 1px; background: rgba(143, 165, 147, .3); }
@@ -1642,7 +1676,8 @@ a.bf-pub:hover img { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(4
   .bf-nav { gap: 16px; }
   .bf-hero { padding: 44px 24px 48px; }
   .bf-hero-title { font-size: 36px; }
-  .bf-praise, .bf-gg, .bf-pubs, .bf-meet, .bf-writing, .bf-footer { padding-left: 24px; padding-right: 24px; }
+  .bf-praise, .bf-gg, .bf-pubs, .bf-meet, .bf-writing, .bf-news, .bf-footer { padding-left: 24px; padding-right: 24px; }
+  .bf-news-form { flex-direction: column; }
   .bf-pub-grid { grid-template-columns: 1fr; gap: 32px; justify-items: start; }
   .bf-gg-name { font-size: 32px; }
 }
