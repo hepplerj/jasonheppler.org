@@ -38,10 +38,6 @@ I take your privacy seriously. I use a lightweight and privacy-centric tracker c
 
 If you email me something I keep that anonymous, especially when sent encrypted. If I decide I would like to quote something from your email, I will ask you first. If you've emailed me about something I got wrong, I may use your name to credit the correction but I won't if it's not public information.
 
-## Colophon
-
-This website is built with the static site generator [Hugo](https://gohugo.io). The blog runs on [micro.blog](https://micro.blog). This is a [low impact website](/low-impact/).
-
 ## Support
 
 If you'd like to support my writing here and elsewhere, I'd love it if you could [buy me a coffee](https://www.buymeacoffee.com/jasonheppler).
