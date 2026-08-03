@@ -1,0 +1,40 @@
+{{ define "main" }}
+{{/* Course/workshop reading page — ports data wiring from
+     themes/sagebrush/layouts/courses/single.html: semester/year eyebrow,
+     a course-meta aside (number, site link, instructor, office/hours),
+     built entirely from the course bundle's front matter (each bundle's
+     index.md under content/courses/ — number/site/department/university/
+     instructor/instructorurl/email/office/officehours), then the body.
+     Restyled as a reading page: .th-prose carries the long-form prose
+     (syllabus text, schedule, etc.) per THEME-NOTES. */}}
+<article class="th-page th-course-single">
+  <a href="/courses/" class="th-course-back">&larr; Teaching</a>
+
+  {{ with .Params.semester }}<p class="th-label">{{ . }} {{ $.Params.year }}</p>{{ end }}
+  <h1 class="th-page-title">{{ .Title }}</h1>
+
+  {{ with .Params.number }}
+  <aside class="th-course-meta">
+    <p class="th-course-meta-row">
+      <span class="th-course-meta-label">Course</span>
+      {{ with $.Params.site }}<a href="{{ . }}">{{ $.Params.number }}</a>{{ else }}{{ $.Params.number }}{{ end }}.
+      {{ $.Params.semester }} {{ $.Params.year }}.
+      {{ $.Params.department }}, {{ $.Params.university }}.
+    </p>
+    {{ with $.Params.instructor }}
+    <p class="th-course-meta-row">
+      <span class="th-course-meta-label">Instructor</span>
+      {{ with $.Params.instructorurl }}<a href="{{ . }}">{{ $.Params.instructor }}</a>{{ else }}{{ $.Params.instructor }}{{ end }}
+      {{ with $.Params.email }}&lt;<a href="mailto:{{ . }}">{{ . }}</a>&gt;{{ end }}.
+      {{ with $.Params.office }}Office: {{ . }}.{{ end }}
+      {{ with $.Params.officehours }}Office hours: {{ . }}.{{ end }}
+    </p>
+    {{ end }}
+  </aside>
+  {{ end }}
+
+  <div class="th-prose lm-prose th-course-single-body">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

@@ -1,0 +1,523 @@
+/* ==========================================================================
+   Trailhead — 50 Publications
+   Styles for /publications/ (list + book detail) and /books/ (bookshelf).
+   Reuses the ledger primitives from 30-components.css (.th-rows/.th-row/
+   .th-col-year/.th-col-type/.th-row-title/.th-row-meta, .th-label) wherever
+   the shape matches — only net-new shapes (book cards, buy links, praise
+   quotes, shelf rows, ISBN grid) get rules here. Everything new is
+   namespaced .th-pub-* or .th-shelf-* per THEME-NOTES.md.
+   ========================================================================== */
+
+/* ---------- shared inner-page header ----------
+   Now genuinely shared: `.th-page` / `.th-page-header` / `.th-page-title` /
+   `.th-page-lede` (30-components.css / 60-pages.css), promoted out of the
+   old per-section `.th-pub-page-title` / `.th-shelf-page-title` /
+   `.th-pub-lead` / `.th-shelf-lead` duplicates during the title/spacing
+   unification pass, per Jason's design review — see 30-components.css's
+   comment for the reference (layouts/courses/list.html). */
+
+/* Section tabs (Books / Articles & Chapters / Essays / CV) — plain-text
+   row echoing .th-toc-plain's hairline treatment. */
+.th-pub-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.4rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2.4rem;
+  border-bottom: 1px solid var(--th-rule-strong);
+  font-family: var(--th-font-header);
+  font-weight: 400;
+  font-size: .82rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--th-ink-soft);
+}
+.th-pub-tabs a:hover {
+  color: var(--th-accent-green);
+}
+.th-pub-tab-dot {
+  color: var(--th-rule-strong);
+}
+.th-pub-tab-cv {
+  margin-left: auto;
+  color: var(--th-accent-green);
+}
+
+/* Section heading used above each grouped block (Books, Articles, etc). */
+.th-pub-h2 {
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  font-size: .82rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--th-ink-faint);
+  padding: 2.4rem 0 .8rem;
+  border-bottom: 1px solid var(--th-rule-strong);
+  margin-bottom: .2rem;
+}
+.th-pub-h2:first-of-type {
+  padding-top: 0;
+}
+
+/* ---------- book cards (publications list) ---------- */
+
+.th-pub-books {
+  display: flex;
+  flex-direction: column;
+}
+
+.th-pub-book {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  align-items: start;
+  gap: 1.4rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--th-rule);
+}
+.th-pub-book:last-child {
+  border-bottom: none;
+}
+
+.th-pub-cover {
+  display: block;
+  border: 1px solid var(--th-rule-strong);
+  background: var(--th-paper-raised);
+  line-height: 0;
+  transition: border-color .15s ease;
+}
+.th-pub-cover:hover {
+  border-color: var(--th-accent-green);
+}
+.th-pub-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.th-pub-book-title {
+  font-family: var(--th-font-body);
+  font-weight: 700;
+  font-size: 1.14rem;
+  line-height: 1.3;
+  color: var(--th-ink);
+}
+.th-pub-book-title a:hover {
+  color: var(--th-accent-green);
+}
+
+.th-pub-book-meta {
+  font-family: var(--th-font-mono);
+  font-size: .78rem;
+  color: var(--th-ink-soft);
+  margin-top: .3rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.th-pub-book-desc {
+  font-family: var(--th-font-body);
+  font-size: .9rem;
+  line-height: 1.55;
+  color: var(--th-ink-soft);
+  margin-top: .55rem;
+  max-width: 60ch;
+}
+
+.th-pub-book-more {
+  display: inline-block;
+  margin-top: .6rem;
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--th-accent-green);
+  border-bottom: 1px solid transparent;
+}
+.th-pub-book-more:hover {
+  border-color: var(--th-accent-green);
+}
+
+@media (max-width: 560px) {
+  .th-pub-book {
+    grid-template-columns: 3.6rem 1fr;
+    gap: 1rem;
+  }
+}
+
+/* ---------- book detail (single) ---------- */
+
+.th-pub-breadcrumb {
+  display: inline-block;
+  font-family: var(--th-font-header);
+  font-weight: 400;
+  font-size: .78rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--th-ink-soft);
+  margin-top: clamp(1.6rem, 4vh, 3rem);
+  margin-bottom: 2rem;
+}
+.th-pub-breadcrumb:hover {
+  color: var(--th-accent-green);
+}
+
+/* Full-width header: kicker, title, byline/publisher. No column split —
+   the split-shell's content column is already only ~half the viewport,
+   so the title needs the full measure to breathe (redesigned away from
+   sagebrush's sticky two-column, which assumed a full-width page). */
+.th-pub-header {
+  padding-bottom: 1.8rem;
+}
+
+.th-pub-bookhead-title {
+  font-family: var(--th-font-body);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4.2vw, 2.9rem);
+  line-height: 1.15;
+  color: var(--th-ink);
+  margin: .5rem 0 .7rem;
+}
+
+.th-pub-bookhead-author,
+.th-pub-bookhead-publisher {
+  font-family: var(--th-font-mono);
+  font-size: .84rem;
+  color: var(--th-ink-soft);
+}
+.th-pub-bookhead-author {
+  margin-bottom: .15rem;
+}
+.th-pub-bookhead-publisher {
+  margin-bottom: 0;
+}
+
+/* Object block: modest cover paired with the buy/ebook/library links at
+   small scale — the one place cover + commerce sit side by side. */
+.th-pub-object {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(1.4rem, 3.4vw, 2.2rem);
+  padding: 1.8rem 0 2.2rem;
+  margin-bottom: 1.8rem;
+  border-top: 1px solid var(--th-rule-strong);
+  border-bottom: 1px solid var(--th-rule-strong);
+}
+
+.th-pub-object-cover {
+  flex: 0 0 auto;
+  width: clamp(160px, 24vw, 240px);
+  border: 1px solid var(--th-rule-strong);
+  background: var(--th-paper-raised);
+  line-height: 0;
+}
+.th-pub-object-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.th-pub-object-buy {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-top: .3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width: 560px) {
+  .th-pub-object {
+    flex-direction: column;
+  }
+  .th-pub-object-cover {
+    width: clamp(140px, 40vw, 200px);
+  }
+}
+
+.th-pub-bookhead-prose {
+  margin-top: 1.5rem;
+}
+
+/* One flat row of understated bordered buttons — purchase links + library
+   (+ any ebook link with a URL distinct from the purchase links, tagged
+   "(Ebook)"). Condensed from the old labeled Buy/Ebook/Library groups. */
+.th-pub-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+
+.th-pub-buy-link {
+  display: inline-block;
+  font-family: var(--th-font-header);
+  font-weight: 400;
+  font-size: .76rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--th-ink);
+  border: 1px solid var(--th-rule-strong);
+  padding: .42em .8em;
+  transition: color .15s ease, border-color .15s ease;
+}
+.th-pub-buy-link:hover {
+  color: var(--th-accent-green);
+  border-color: var(--th-accent-green);
+}
+
+/* ---------- praise / reviews (pull quotes) ---------- */
+
+.th-pub-praise,
+.th-pub-reviews {
+  padding-top: 2.2rem;
+  margin-top: 2.2rem;
+  border-top: 1px solid var(--th-rule-strong);
+}
+
+/* Single-column stack, not a 2-up grid — now that quotes run the full
+   content-column measure (not squeezed into half the pane) one per row
+   reads better than two narrow columns. */
+.th-pub-praise-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 1.2rem;
+}
+
+.th-pub-quote {
+  margin: 0;
+  padding-left: 1.1rem;
+  border-left: 2px solid var(--th-accent-green);
+}
+.th-pub-quote p {
+  font-family: var(--th-font-body);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--th-ink);
+}
+.th-pub-quote cite {
+  display: block;
+  margin-top: .55rem;
+  font-family: var(--th-font-mono);
+  font-style: normal;
+  font-size: .78rem;
+  color: var(--th-ink-soft);
+}
+.th-pub-quote cite a {
+  color: var(--th-ink-soft);
+  border-bottom: 1px solid var(--th-rule-strong);
+}
+.th-pub-quote cite a:hover {
+  color: var(--th-accent-green);
+  border-color: var(--th-accent-green);
+}
+
+.th-pub-reviews .th-pub-quote {
+  margin-bottom: 1.5rem;
+  border-left-color: var(--th-rule-strong);
+}
+.th-pub-reviews .th-pub-quote p {
+  font-size: .94rem;
+}
+
+/* ---------- ISBN lines (object block) ---------- */
+/* Moved up from a bottom-of-page grid into the object block: small mono
+   lines under the button row, at the cover's scale rather than a
+   full-width section. */
+
+.th-pub-object-isbn {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+.th-pub-object-isbn-line {
+  display: flex;
+  gap: .5em;
+  align-items: baseline;
+}
+.th-pub-isbn-label {
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  font-size: .64rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--th-ink-faint);
+}
+.th-pub-isbn-number {
+  font-family: var(--th-font-mono);
+  font-size: .78rem;
+  color: var(--th-ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   Bookshelf (/books/)
+   ========================================================================== */
+
+.th-shelf-section {
+  padding-top: 2rem;
+}
+.th-shelf-section:first-of-type {
+  padding-top: 0;
+}
+
+.th-shelf {
+  display: flex;
+  flex-direction: column;
+}
+
+.th-shelf-entry {
+  border-bottom: 1px solid var(--th-rule);
+}
+.th-shelf-entry:last-child {
+  border-bottom: none;
+}
+
+.th-shelf-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .85rem 0;
+  cursor: default;
+}
+details > .th-shelf-row {
+  cursor: pointer;
+  list-style: none;
+}
+details > .th-shelf-row::-webkit-details-marker {
+  display: none;
+}
+
+.th-shelf-info {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  min-width: 0;
+}
+
+.th-shelf-title {
+  font-family: var(--th-font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--th-ink);
+}
+.th-shelf-row:hover .th-shelf-title {
+  color: var(--th-accent-green);
+}
+
+.th-shelf-meta {
+  font-family: var(--th-font-mono);
+  font-size: .78rem;
+  color: var(--th-ink-soft);
+}
+
+.th-shelf-year {
+  flex: 0 0 auto;
+  font-family: var(--th-font-mono);
+  font-size: .82rem;
+  color: var(--th-ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.th-shelf-badge {
+  display: inline-block;
+  margin-right: .5em;
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  font-size: .66rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--th-accent-green);
+  border-bottom: 1px solid var(--th-accent-green);
+}
+
+.th-shelf-expanded {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem 1.4rem;
+  padding: 0 0 1rem 0;
+  margin-left: 0;
+  border-left: 2px solid var(--th-rule-strong);
+  padding-left: 1rem;
+}
+.th-shelf-isbn,
+.th-shelf-publisher {
+  font-family: var(--th-font-mono);
+  font-size: .74rem;
+  color: var(--th-ink-faint);
+}
+.th-shelf-links {
+  display: flex;
+  gap: 1rem;
+}
+.th-shelf-links a {
+  font-family: var(--th-font-header);
+  font-weight: 400;
+  font-size: .72rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--th-ink-soft);
+  border-bottom: 1px solid transparent;
+}
+.th-shelf-links a:hover {
+  color: var(--th-accent-green);
+  border-color: var(--th-accent-green);
+}
+
+/* year filter chips */
+.th-shelf-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: .4rem;
+  border-bottom: 1px solid var(--th-rule-strong);
+}
+
+.th-shelf-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.th-shelf-chip {
+  font-family: var(--th-font-mono);
+  font-size: .76rem;
+  color: var(--th-ink-soft);
+  background: transparent;
+  border: 1px solid var(--th-rule-strong);
+  padding: .3em .75em;
+  cursor: pointer;
+  transition: color .15s ease, border-color .15s ease, background-color .15s ease;
+}
+.th-shelf-chip:hover {
+  border-color: var(--th-accent-green);
+  color: var(--th-accent-green);
+}
+.th-shelf-chip.on {
+  background: var(--th-accent-green);
+  border-color: var(--th-accent-green);
+  color: var(--th-paper);
+}
+
+.th-shelf-count {
+  font-family: var(--th-font-mono);
+  font-size: .74rem;
+  color: var(--th-ink-faint);
+}
+
+@media (max-width: 560px) {
+  .th-shelf-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .2rem;
+  }
+  .th-shelf-controls {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

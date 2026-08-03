@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{/* Blogroll — ports themes/sagebrush/layouts/_default/blogroll.html
+     (just renders .Content: an intro paragraph + a flat markdown list of
+     external links from content/blogroll.md). Restyled as a two-column
+     index of links with hairline rules rather than a plain bulleted
+     list — the markup below is what Hugo emits from the markdown list,
+     so the styling in 60-pages.css targets .th-blogroll ul/li/a
+     directly rather than a bespoke component. */}}
+<div class="th-page th-blogroll">
+  <h1 class="th-page-title">{{ .Title }}</h1>
+  <div class="th-prose lm-prose th-blogroll-body">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}

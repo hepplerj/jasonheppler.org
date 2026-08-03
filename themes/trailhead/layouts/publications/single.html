@@ -1,0 +1,94 @@
+{{ define "main" }}
+{{/* Book detail page. Front matter wiring ported from
+     themes/sagebrush/layouts/publications/single.html (see
+     content/publications/silicon-valley.md for the full field set) — cover,
+     publisher/year, purchase + ebook + library links, endorsements as pull
+     quotes, reviews, ISBN grid. Non-book pages (no .Params.image) fall back
+     to a plain prose page, matching sagebrush's behavior for this section.
+
+     Layout: single-column reading flow, not sagebrush's sticky two-column
+     — the split-shell's .th-content is already only ~half the viewport,
+     so a second column has no room to work with. Full-width header (kicker
+     + title + byline/publisher) first, then one compact "object block"
+     pairing a modest cover with (a) a flat row of understated buttons —
+     purchase links + library, dedupe-guarded against ebook_links whose
+     URL just duplicates a purchase link (distinct-URL ebook links still
+     get appended, tagged "(Ebook)" so they're not silently dropped) —
+     and (b) ISBN lines, moved up from the old bottom-of-page grid. Then
+     full-width prose/praise/reviews. No sticky positioning, no buy-footer
+     recap (redundant with the condensed button row). */}}
+{{ if .Params.image }}
+<a href="/publications/" class="th-pub-breadcrumb">&larr; Publications</a>
+
+<header class="th-pub-header">
+  <p class="th-label">Book{{ with .Params.year }} &middot; {{ . }}{{ end }}</p>
+  <h1 class="th-pub-bookhead-title">{{ .Title }}</h1>
+  {{ with .Params.author }}<p class="th-pub-bookhead-author">by {{ . }}</p>{{ end }}
+  {{ with .Params.publisher }}<p class="th-pub-bookhead-publisher">{{ . }}</p>{{ end }}
+</header>
+
+{{ $purchaseLinks := .Params.purchase_links }}
+{{ $purchaseURLs := slice }}
+{{ range $purchaseLinks }}{{ $purchaseURLs = $purchaseURLs | append .url }}{{ end }}
+{{ $extraEbookLinks := slice }}
+{{ range .Params.ebook_links }}{{ if not (in $purchaseURLs .url) }}{{ $extraEbookLinks = $extraEbookLinks | append . }}{{ end }}{{ end }}
+
+<section class="th-pub-object">
+  <div class="th-pub-object-cover">
+    <img src="/assets/images/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" decoding="async">
+  </div>
+  <div class="th-pub-object-buy">
+    {{ if or $purchaseLinks $extraEbookLinks .Params.library_link }}
+    <div class="th-pub-buttons">
+      {{ range $purchaseLinks }}<a href="{{ .url }}" class="th-pub-buy-link">{{ .name }}</a>{{ end }}
+      {{ range $extraEbookLinks }}<a href="{{ .url }}" class="th-pub-buy-link">{{ .name }} (Ebook)</a>{{ end }}
+      {{ with .Params.library_link }}{{ if .url }}<a href="{{ .url }}" class="th-pub-buy-link">Find in a Library</a>{{ end }}{{ end }}
+    </div>
+    {{ end }}
+    {{ if or .Params.isbn_paperback .Params.isbn_hardcover .Params.isbn_ebook }}
+    <div class="th-pub-object-isbn">
+      {{ with .Params.isbn_paperback }}<p class="th-pub-object-isbn-line"><span class="th-pub-isbn-label">Paperback</span> <span class="th-pub-isbn-number">{{ . }}</span></p>{{ end }}
+      {{ with .Params.isbn_hardcover }}<p class="th-pub-object-isbn-line"><span class="th-pub-isbn-label">Hardcover</span> <span class="th-pub-isbn-number">{{ . }}</span></p>{{ end }}
+      {{ with .Params.isbn_ebook }}<p class="th-pub-object-isbn-line"><span class="th-pub-isbn-label">Ebook</span> <span class="th-pub-isbn-number">{{ . }}</span></p>{{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<div class="th-prose lm-prose th-pub-bookhead-prose">{{ .Content }}</div>
+
+{{ with .Params.endorsements }}
+<section class="th-pub-praise">
+  <p class="th-label">Praise</p>
+  <div class="th-pub-praise-grid">
+    {{ range . }}
+    <blockquote class="th-pub-quote">
+      <p>&ldquo;{{ .quote }}&rdquo;</p>
+      <cite>{{ .author }}</cite>
+    </blockquote>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ with .Params.reviews }}
+<section class="th-pub-reviews">
+  <p class="th-label">Reviews</p>
+  {{ range . }}
+  {{ $pub := .publication }}{{ $url := .url }}
+  <blockquote class="th-pub-quote">
+    {{ with .quote }}<p>&ldquo;{{ . }}&rdquo;</p>{{ end }}
+    <cite>{{ .author }}{{ with $pub }}, {{ if $url }}<a href="{{ $url }}" target="_blank" rel="noopener">{{ . }}</a>{{ else }}{{ . }}{{ end }}{{ end }}</cite>
+  </blockquote>
+  {{ end }}
+</section>
+{{ end }}
+
+{{ else }}
+<div class="th-page">
+  <p class="th-label">Research</p>
+  <h1 class="th-page-title">{{ .Title }}</h1>
+  <div class="th-prose lm-prose">{{ .Content }}</div>
+</div>
+{{ end }}
+{{ end }}

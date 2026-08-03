@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Trailhead — 05 Fonts
+   All self-hosted, no external font CDN. Files live in
+   themes/trailhead/static/assets/fonts/ and are served from /assets/fonts/.
+   ========================================================================== */
+
+/* National Park — routed-sign display face, self-hosted.
+   Source: nationalparktypeface.com (free release). */
+@font-face {
+  font-family: "National Park";
+  src: url("/assets/fonts/NationalPark-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "National Park";
+  src: url("/assets/fonts/NationalPark-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "National Park";
+  src: url("/assets/fonts/NationalPark-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "National Park";
+  src: url("/assets/fonts/NationalPark-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "National Park";
+  src: url("/assets/fonts/NationalPark-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "National Park";
+  src: url("/assets/fonts/NationalPark-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Public Sans — body copy, titles. Source: USWDS/public-sans (via
+   google-webfonts-helper), self-hosted woff2. */
+@font-face {
+  font-family: "Public Sans";
+  src: url("/assets/fonts/PublicSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("/assets/fonts/PublicSans-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("/assets/fonts/PublicSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("/assets/fonts/PublicSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Space Mono — numerals: years, entry counts, tallies. Self-hosted woff2. */
+@font-face {
+  font-family: "Space Mono";
+  src: url("/assets/fonts/SpaceMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("/assets/fonts/SpaceMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

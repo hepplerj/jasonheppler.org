@@ -1,0 +1,46 @@
+{{ define "main" }}
+{{/* Trailhead — notes stream. Ported functionally from
+     themes/sagebrush/layouts/microblog/list.html: paginated (10/page),
+     full body content per entry (not just titles — notes are read in
+     place), bundle-relative image path rewrite, tags. Styled as a dense
+     ledger-idiom stream rather than sagebrush's card list. */}}
+<div class="th-reading-col">
+  <header class="th-page-header">
+    <p class="th-label">Microblog</p>
+    <h1 class="th-page-title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="th-page-lede">{{ . }}</div>{{ end }}
+  </header>
+
+  {{ $paginator := .Paginate (.Pages.ByDate.Reverse) 10 }}
+
+  <div class="th-stream">
+    {{ range $paginator.Pages }}
+    <article class="th-stream-entry h-entry">
+      <div class="th-stream-head">
+        <h2 class="th-stream-title p-name"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <a href="{{ .RelPermalink }}" class="th-stream-date"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></a>
+      </div>
+      {{/* Rewrite bundle-relative image paths to absolute so they resolve off /microblog/ too. */}}
+      {{ $body := .Content | replaceRE `(src|data-microblog-lightbox)="([^/h][^"]*\.(?:webp|png|jpe?g|gif|svg))"` (printf `${1}="%s${2}"` .RelPermalink) }}
+      <div class="th-stream-body th-prose lm-prose e-content">
+        {{ $body | safeHTML }}
+        {{ with .Params.external }}
+        <p class="th-link-out"><a class="u-bookmark-of" href="{{ . }}">Visit link &rarr;</a></p>
+        {{ end }}
+      </div>
+      {{ with .Params.tags }}
+      <p class="th-stream-tags">{{ range $i, $t := . }}{{ if $i }}<span class="th-dot-sep" aria-hidden="true">&middot;</span>{{ end }}<a class="th-tag-link" href="/tags/{{ $t | urlize }}/">{{ $t | humanize }}</a>{{ end }}</p>
+      {{ end }}
+    </article>
+    {{ end }}
+  </div>
+
+  {{ if gt $paginator.TotalPages 1 }}
+  <nav class="th-pager" aria-label="Microblog pages">
+    {{ if $paginator.HasPrev }}<a href="{{ $paginator.Prev.URL }}" class="th-pager-link">&larr; Newer</a>{{ else }}<span class="th-pager-link th-pager-off">&larr; Newer</span>{{ end }}
+    <span class="th-pager-count">{{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}</span>
+    {{ if $paginator.HasNext }}<a href="{{ $paginator.Next.URL }}" class="th-pager-link">Older &rarr;</a>{{ else }}<span class="th-pager-link th-pager-off">Older &rarr;</span>{{ end }}
+  </nav>
+  {{ end }}
+</div>
+{{ end }}

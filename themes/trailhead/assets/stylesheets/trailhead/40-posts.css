@@ -1,0 +1,885 @@
+/* ==========================================================================
+   Trailhead — 40 Posts
+   Phase 2 (Reading & Archive). Everything for: essay/note reading pages,
+   generic long-form pages (colophon, style-guide, etc.), the full archive
+   ledger + filter/search UI, tag index + tag term pages, and the 404 page.
+
+   This file OWNS `.th-prose` (long-form article typography). It supplements
+   the placeholder rules already in 10-base.css (which stays as-is, off
+   limits for Phase 2) — cascade order means these rules load after and
+   layer on top / override where needed.
+   ========================================================================== */
+
+/* ---------- reading column override ----------
+   20-shell.css defines `.th-reading-col` (max-width:62ch, left-aligned) for
+   the Phase 1 placeholders. The approved mockup direction for actual prose
+   pages wants a slightly wider, centered measure (~70-75ch). Rather than
+   edit 20-shell.css (off limits), this widens/centers it here — later file
+   in the cascade wins. */
+.th-reading-col {
+  max-width: 74ch;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Article header (essay / note single pages)
+   ========================================================================== */
+
+.th-article-head {
+  margin-bottom: var(--th-space-5);
+}
+
+.th-kicker {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5em;
+  margin-bottom: var(--th-space-3);
+}
+
+.th-kicker-label {
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  font-size: .78rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--th-accent-green);
+}
+
+.th-kicker-dot {
+  color: var(--th-rule-strong);
+}
+
+.th-kicker-date,
+.th-kicker-read {
+  font-family: var(--th-font-mono);
+  font-size: .78rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--th-ink-soft);
+}
+
+.th-article-title {
+  font-family: var(--th-font-body);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4.2vw, 2.7rem);
+  line-height: 1.14;
+  color: var(--th-ink);
+  margin-bottom: var(--th-space-3);
+}
+
+.th-article-lede {
+  font-family: var(--th-font-body);
+  font-weight: 300;
+  font-size: 1.18rem;
+  line-height: 1.55;
+  color: var(--th-ink-soft);
+}
+
+.th-article-lead {
+  margin: var(--th-space-5) 0;
+}
+
+.th-article-lead img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--th-rule-strong);
+}
+
+/* Generic page title (colophon, style guide, tags, archive, 404…) now
+   lives in 30-components.css as `.th-page-title` / `.th-page-lede` /
+   `.th-page-header` — promoted there and reused by every list/section
+   page (see that file's comment for the rationale: unified title scale
+   + title-to-lede gap, per Jason's design review). The `.th-title` name
+   is retired; `.th-row-title` (ledger row title) remains the only
+   "-title" class local to this file. */
+
+/* ==========================================================================
+   Prose — `.th-prose` (owned here). Long-form article typography layered
+   on top of the base rules in 10-base.css.
+   ========================================================================== */
+
+.th-prose {
+  font-size: 1.08rem;
+}
+
+.th-prose>*+* {
+  margin-top: 1.15em;
+}
+
+.th-prose h1 {
+  font-family: var(--th-font-body);
+  font-weight: 700;
+  font-size: 1.6em;
+  line-height: 1.2;
+  color: var(--th-ink);
+  margin-top: 1.8em;
+  margin-bottom: .5em;
+}
+
+.th-prose h2 {
+  font-size: 1.28em;
+  margin-top: 1.9em;
+}
+
+.th-prose h3 {
+  font-size: 1.05em;
+  margin-top: 1.6em;
+}
+
+.th-prose h4 {
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-size: .82rem;
+  color: var(--th-ink-soft);
+  margin-top: 1.6em;
+  margin-bottom: .5em;
+}
+
+.th-prose strong {
+  font-weight: 700;
+  color: var(--th-ink);
+}
+
+.th-prose em {
+  font-style: italic;
+}
+
+.th-prose del {
+  color: var(--th-ink-faint);
+}
+
+.th-prose blockquote {
+  margin: 1.6em 0;
+  padding-left: 1.2em;
+  border-left: 2px solid var(--th-accent-green);
+  font-style: italic;
+  color: var(--th-ink-soft);
+}
+
+.th-prose blockquote>*+* {
+  margin-top: .8em;
+}
+
+.th-prose code {
+  font-family: var(--th-font-mono);
+  font-size: .88em;
+  background: var(--th-paper-raised);
+  padding: .1em .35em;
+  border-radius: var(--th-radius);
+}
+
+.th-prose pre {
+  font-family: var(--th-font-mono);
+  font-size: .86em;
+  line-height: 1.55;
+  background: var(--th-paper-raised);
+  border: 1px solid var(--th-rule);
+  padding: var(--th-space-3) var(--th-space-4);
+  overflow-x: auto;
+  margin: 1.6em 0;
+}
+
+.th-prose pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.th-prose hr {
+  border: none;
+  border-top: 1px solid var(--th-rule-strong);
+  margin: 2.4em 0;
+}
+
+/* Prose images — fixes the stretched/oversized bug (verified against the
+   actual rendered markup, not assumed): the root-level render hook
+   layouts/_default/_markup/render-image.html emits real intrinsic
+   `width`/`height` attributes on every markdown image resolved from a
+   page bundle (e.g. content/blog/2024-12-27-year-of-foundations's
+   christmas-2024.webp renders as `width="1280" height="1280"`). HTML
+   width/height attributes are presentational hints for CSS width/height
+   at the *lowest* cascade priority — 10-base.css's global `img { max-
+   width:100% }` clamps the hinted width down to the column, but with no
+   author `height` declared anywhere, the hinted `height="1280"` stayed
+   in force as a literal, unclamped pixel value, stretching the box
+   tall/short independent of the shrunk width. `height: auto` here is
+   the fix: it's an explicit author declaration that beats the
+   presentational hint, which lets the browser's `aspect-ratio` (auto-
+   computed from the width/height attributes since HTML5.1+) scale the
+   image proportionally instead. Deliberately does NOT set `width: 100%`
+   — that would upscale images narrower than the column past their
+   natural size and look blown out; `max-width` alone only ever shrinks.
+   Matches the intent of themes/sagebrush/assets/stylesheets/sagebrush.css's
+   `.lm-prose img` / `.lm-prose figure img` rules, in the trailhead
+   idiom (hairline border, no radius). */
+.th-prose img {
+  max-width: 100%;
+  height: auto;
+}
+
+.th-prose figure {
+  margin: 1.8em 0;
+}
+
+.th-prose figcaption {
+  font-family: var(--th-font-mono);
+  font-size: .78rem;
+  color: var(--th-ink-faint);
+  margin-top: .6em;
+}
+
+/* Galleries — the `.masonry-grid` markup is authored directly as raw
+   HTML inside post bodies (e.g. content/blog/2024-12-27-year-of-foundations,
+   content/blog/2025-02-27-farmall-update, and a couple of microblog
+   notes) with `data-microblog-lightbox` attributes for the lightbox's
+   full-res source. Raw HTML in markdown bypasses the render-image hook
+   entirely, so these images carry no width/height attributes — ported
+   1:1 in behavior from themes/sagebrush/assets/stylesheets/sagebrush.css's
+   `.lm-prose .masonry-grid` (CSS-columns, 3/2/1 responsive). Images sit
+   edge-to-edge here (no hairline border, unlike standalone prose images
+   above) for a denser grid read, matching sagebrush's gallery treatment. */
+.th-prose .masonry-grid {
+  columns: 3;
+  column-gap: .75rem;
+  margin: var(--th-space-5) 0;
+}
+
+.th-prose .masonry-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 .75rem;
+  border: none;
+  cursor: zoom-in;
+}
+
+@media (max-width: 860px) {
+  .th-prose .masonry-grid {
+    columns: 2;
+  }
+}
+
+@media (max-width: 520px) {
+  .th-prose .masonry-grid {
+    columns: 1;
+  }
+}
+
+/* Photo lightbox overlay — markup/behavior comes from the shared
+   root-level assets/javascripts/hepp.js (initLightbox(): binds click
+   handlers to `.post-body img, .prose img, .lm-prose img`, then on
+   click appends `<div class="photo-lightbox"><img></div>` to
+   document.body). Trailhead's prose wrapper already carries `.lm-prose`
+   alongside `.th-prose` everywhere (see THEME-NOTES gotcha), so the JS
+   fires correctly and no hepp.js change is needed — but trailhead had
+   no CSS at all for the `.photo-lightbox` class the script emits, so
+   the overlay rendered unstyled (inline, top-left, no dimming). Ported
+   from sagebrush's `.photo-lightbox` rules in the trailhead palette. */
+.photo-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(21, 19, 14, .88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+  cursor: zoom-out;
+}
+
+.photo-lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  border: none;
+  box-shadow: 0 8px 40px rgba(21, 19, 14, .5);
+}
+
+.th-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .92em;
+  margin: 1.6em 0;
+}
+
+.th-prose th,
+.th-prose td {
+  text-align: left;
+  padding: .55em .8em;
+  border-bottom: 1px solid var(--th-rule);
+}
+
+.th-prose th {
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-size: .78em;
+  color: var(--th-ink-soft);
+}
+
+/* Footnotes (Goldmark default markup: <div class="footnotes"> + <ol>). */
+.th-prose .footnotes {
+  margin-top: 3em;
+  padding-top: 1.2em;
+  border-top: 1px solid var(--th-rule-strong);
+  font-size: .86em;
+  color: var(--th-ink-soft);
+}
+
+.th-prose .footnotes ol {
+  list-style: decimal;
+  padding-left: 1.4em;
+}
+
+.th-prose .footnotes li+li {
+  margin-top: .5em;
+}
+
+.th-prose .footnote-ref,
+.th-prose .footnote-backref {
+  color: var(--th-accent-green);
+}
+
+.th-link-out {
+  margin-top: 1.4em;
+}
+
+.th-link-out a {
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  font-size: .82rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--th-accent-green);
+}
+
+.th-link-out a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ==========================================================================
+   Post footer meta — disclaimer + carbon badge + tags
+   ========================================================================== */
+
+.th-post-footer {
+  margin-top: var(--th-space-6);
+  padding-top: var(--th-space-4);
+  border-top: 1px solid var(--th-rule);
+}
+
+.th-post-note {
+  font-family: var(--th-font-body);
+  font-size: .88rem;
+  color: var(--th-ink-faint);
+  margin-bottom: .6rem;
+}
+
+.th-post-note a {
+  color: var(--th-ink-soft);
+  border-bottom: 1px solid var(--th-rule-strong);
+}
+
+.th-post-note a:hover {
+  color: var(--th-accent-green);
+  border-color: var(--th-accent-green);
+}
+
+.th-post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5em;
+  font-family: var(--th-font-mono);
+  font-size: .78rem;
+  color: var(--th-ink-soft);
+}
+
+.th-dot-sep {
+  color: var(--th-rule-strong);
+}
+
+.th-carbon {
+  display: inline-flex;
+  align-items: center;
+  gap: .35em;
+  color: var(--th-accent-green);
+}
+
+.th-carbon:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.th-carbon svg {
+  flex: none;
+}
+
+.th-tag-link {
+  font-family: var(--th-font-body);
+  color: var(--th-accent-green);
+}
+
+.th-tag-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ==========================================================================
+   Author card
+   ========================================================================== */
+
+.th-author-card {
+  display: flex;
+  align-items: center;
+  gap: var(--th-space-4);
+  margin-top: var(--th-space-5);
+  padding: var(--th-space-4);
+  border: 1px solid var(--th-rule);
+  background: var(--th-paper-raised);
+}
+
+.th-author-card img {
+  border-radius: 50%;
+  flex: none;
+  width: 52px;
+  height: 52px;
+}
+
+.th-author-text {
+  display: flex;
+  flex-direction: column;
+  gap: .1em;
+  margin-right: auto;
+}
+
+.th-author-name {
+  font-family: var(--th-font-body);
+  font-weight: 700;
+  font-size: .96rem;
+  color: var(--th-ink);
+}
+
+.th-author-role {
+  font-family: var(--th-font-body);
+  font-size: .84rem;
+  color: var(--th-ink-soft);
+}
+
+.th-author-links {
+  display: flex;
+  gap: .9em;
+  flex-wrap: wrap;
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  font-size: .72rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.th-author-links a {
+  color: var(--th-ink-soft);
+  border-bottom: 1px solid transparent;
+}
+
+.th-author-links a:hover {
+  color: var(--th-accent-green);
+  border-color: var(--th-accent-green);
+}
+
+/* ==========================================================================
+   Prev / next — styled as ledger rows
+   ========================================================================== */
+
+.th-prevnext {
+  margin-top: var(--th-space-5);
+  border-top: 1px solid var(--th-rule-strong);
+}
+
+.th-prevnext-row {
+  border-bottom: 1px solid var(--th-rule);
+}
+
+.th-prevnext-row a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--th-space-3);
+  padding: 1rem 0;
+  position: relative;
+  transition: background-color .15s ease;
+}
+
+.th-prevnext-row a:hover {
+  background: rgba(21, 19, 14, .035);
+}
+
+.th-prevnext-row a::before {
+  content: "";
+  position: absolute;
+  left: -1.2rem;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--th-accent-green);
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform .18s ease;
+}
+
+.th-prevnext-row a:hover::before {
+  transform: scaleY(1);
+}
+
+.th-prevnext-row[data-dir="next"] a {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.th-prevnext-label {
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--th-accent-green);
+  white-space: nowrap;
+}
+
+.th-prevnext-title {
+  font-family: var(--th-font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--th-ink);
+  transition: color .15s ease;
+}
+
+.th-prevnext-row a:hover .th-prevnext-title {
+  color: var(--th-accent-green);
+}
+
+/* ==========================================================================
+   Related reading — ledger rows (same hover-bar idiom as .th-row /
+   .th-prevnext-row), sits between prev/next and the syndication link on
+   blog/single.html, matching sagebrush's section order.
+   ========================================================================== */
+
+.th-related {
+  margin-top: var(--th-space-5);
+}
+
+.th-related .th-label {
+  margin-bottom: .8rem;
+}
+
+.th-related-row {
+  border-bottom: 1px solid var(--th-rule);
+}
+
+.th-related-row:last-child {
+  border-bottom: none;
+}
+
+.th-related-row a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--th-space-3);
+  padding: .85rem 0;
+  position: relative;
+  transition: background-color .15s ease;
+}
+
+.th-related-row a:hover {
+  background: rgba(21, 19, 14, .035);
+}
+
+.th-related-row a::before {
+  content: "";
+  position: absolute;
+  left: -1.2rem;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--th-accent-green);
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform .18s ease;
+}
+
+.th-related-row a:hover::before {
+  transform: scaleY(1);
+}
+
+.th-related-title {
+  font-family: var(--th-font-body);
+  font-weight: 500;
+  font-size: .98rem;
+  color: var(--th-ink);
+  transition: color .15s ease;
+}
+
+.th-related-row a:hover .th-related-title {
+  color: var(--th-accent-green);
+}
+
+.th-related-date {
+  font-family: var(--th-font-mono);
+  font-size: .76rem;
+  color: var(--th-ink-faint);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   Microblog stream (list) + single note
+   ========================================================================== */
+
+.th-stream {
+  margin-top: var(--th-space-4);
+}
+
+.th-stream-entry {
+  padding: var(--th-space-5) 0;
+  border-bottom: 1px solid var(--th-rule);
+}
+
+.th-stream-entry:first-child {
+  padding-top: 0;
+}
+
+.th-stream-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--th-space-3);
+  margin-bottom: .7rem;
+}
+
+.th-stream-title {
+  font-family: var(--th-font-body);
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: var(--th-ink);
+}
+
+.th-stream-title a:hover {
+  color: var(--th-accent-green);
+}
+
+.th-stream-date {
+  font-family: var(--th-font-mono);
+  font-size: .76rem;
+  color: var(--th-ink-faint);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.th-stream-body {
+  font-size: 1rem;
+}
+
+.th-stream-tags {
+  margin-top: .8rem;
+  font-family: var(--th-font-mono);
+  font-size: .76rem;
+  color: var(--th-ink-soft);
+}
+
+.th-pager {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--th-space-5);
+  padding-top: var(--th-space-3);
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  font-size: .76rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.th-pager-link {
+  color: var(--th-accent-green);
+}
+
+.th-pager-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.th-pager-off {
+  color: var(--th-ink-faint);
+}
+
+.th-pager-count {
+  font-family: var(--th-font-mono);
+  color: var(--th-ink-faint);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* ==========================================================================
+   Archive — full ledger with filter chips + search
+   ========================================================================== */
+
+.th-archive-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--th-space-3);
+  padding-bottom: var(--th-space-3);
+}
+
+.th-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.th-chip {
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  font-size: .74rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--th-ink-soft);
+  background: transparent;
+  border: 1px solid var(--th-rule-strong);
+  padding: .45em .9em;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color .15s ease, border-color .15s ease, background-color .15s ease;
+}
+
+.th-chip:hover {
+  color: var(--th-accent-green);
+  border-color: var(--th-accent-green);
+}
+
+.th-chip.is-active {
+  color: var(--th-paper);
+  background: var(--th-accent-green);
+  border-color: var(--th-accent-green);
+}
+
+.th-chip-count {
+  font-family: var(--th-font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.th-search {
+  font-family: var(--th-font-body);
+  font-size: .92rem;
+  color: var(--th-ink);
+  background: var(--th-paper-raised);
+  border: 1px solid var(--th-rule-strong);
+  padding: .55em .9em;
+  min-width: 14rem;
+}
+
+.th-search:focus {
+  outline: 2px solid var(--th-accent-green);
+  outline-offset: 1px;
+}
+
+.th-archive-count {
+  font-family: var(--th-font-mono);
+  font-size: .74rem;
+  color: var(--th-ink-faint);
+  margin-bottom: .6rem;
+}
+
+.th-archive-empty {
+  font-family: var(--th-font-body);
+  color: var(--th-ink-soft);
+  padding: var(--th-space-5) 0;
+  text-align: center;
+}
+
+/* Notes get the same ink-soft type-column treatment as other non-book
+   ledger types by default; nothing extra required here. */
+
+/* ==========================================================================
+   Tags — TOC-style index + per-tag ledger
+   ========================================================================== */
+
+.th-tag-index {
+  max-width: 46rem;
+}
+
+.th-tag-index li {
+  border-bottom: 1px solid var(--th-rule);
+}
+
+.th-tag-index li:last-child {
+  border-bottom: none;
+}
+
+.th-tag-index a {
+  display: flex;
+  align-items: baseline;
+  gap: .6em;
+  padding: .7rem 0;
+  transition: color .15s ease;
+}
+
+.th-tag-index a:hover .th-toc-label,
+.th-tag-index a:hover .th-toc-count {
+  color: var(--th-accent-green);
+}
+
+.th-tag-index a:hover .th-toc-leader {
+  border-bottom-color: var(--th-accent-green);
+}
+
+/* ==========================================================================
+   404
+   ========================================================================== */
+
+.th-404 {
+  padding-top: clamp(3rem, 12vh, 7rem);
+}
+
+.th-404-marker {
+  font-family: var(--th-font-mono);
+  font-size: .8rem;
+  color: var(--th-ink-faint);
+  letter-spacing: .04em;
+  margin-top: var(--th-space-4);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .th-author-card {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 560px) {
+  .th-archive-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .th-search {
+    width: 100%;
+  }
+
+  .th-prevnext-row[data-dir="next"] a {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .th-stream-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .2rem;
+  }
+}

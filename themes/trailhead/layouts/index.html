@@ -1,0 +1,182 @@
+{{ define "main" }}
+{{/* Trailhead homepage — the chronological ledger.
+     Interleaves five real sources, newest first, capped to ~40 rows:
+       - books      → content/publications/*.md
+       - essays     → content/blog/*.md   (this site's own writing)
+       - microblog  → content/microblog/*.md (short posts/notes/links)
+       - articles   → data/essays_criticism.yaml (published elsewhere)
+       - talks      → data/on_the_road.yaml
+     See THEME-NOTES.md for how each source is normalized into a common
+     {type, typeLabel, year, date, title, url, external, meta, image} shape
+     so they can be sorted together. Straight chronological merge, no
+     weighting — microblog is high-frequency (~260 posts) so recent notes
+     can dominate the top of the cap; that's expected. The full, unfiltered
+     archive lives at /archive/ (with chips + search) — this is a curated
+     recent slice, not a duplicate of that page. */}}
+
+{{ $items := slice }}
+
+{{/* ---- books ---- */}}
+{{ range where site.RegularPages "Section" "publications" }}
+  {{ $yr := 0 }}
+  {{ with .Params.year }}{{ $yr = int . }}{{ end }}
+  {{ $coEdited := and .Params.author (ne .Params.author "Jason A. Heppler") }}
+  {{ $meta := .Params.publisher }}
+  {{ if $coEdited }}{{ $meta = printf "Co-edited — %s" .Params.publisher }}{{ end }}
+  {{/* Cover thumbnail — same static-path resolution publications/list.html
+       uses (.Params.image is a bare filename against /assets/images/, not
+       a page resource). Empty when a book page has no cover; the row
+       template falls back to the plain square marker in that case. */}}
+  {{ $image := "" }}
+  {{ with .Params.image }}{{ $image = printf "/assets/images/%s" . }}{{ end }}
+  {{ $items = $items | append (dict
+    "type" "book"
+    "typeLabel" "Book"
+    "year" $yr
+    "date" (time (printf "%d-01-01" $yr))
+    "title" .Title
+    "url" .RelPermalink
+    "external" false
+    "meta" $meta
+    "image" $image
+  ) }}
+{{ end }}
+
+{{/* ---- essays (this site's own blog posts) ---- */}}
+{{ range where site.RegularPages "Section" "blog" }}
+  {{ $items = $items | append (dict
+    "type" "essay"
+    "typeLabel" "Essay"
+    "year" .Date.Year
+    "date" .Date
+    "title" .Title
+    "url" .RelPermalink
+    "external" false
+    "meta" (.Date.Format "Jan 2006")
+    "image" ""
+  ) }}
+{{ end }}
+
+{{/* ---- microblog (short posts, notes, links) ---- */}}
+{{ range where site.RegularPages "Section" "microblog" }}
+  {{/* Microblog posts often have no title — fall back to a truncated,
+       single-line, plain-text excerpt of the body (same idea sagebrush's
+       archive row would need if it displayed untitled posts; sagebrush
+       itself has no fallback, so this is new logic, not ported). */}}
+  {{ $title := .Title }}
+  {{ if eq $title "" }}
+    {{ $flat := .Plain | strings.TrimSpace | replaceRE `\s+` " " }}
+    {{ $title = $flat | truncate 70 "…" }}
+  {{ end }}
+  {{ $items = $items | append (dict
+    "type" "microblog"
+    "typeLabel" "Microblog"
+    "year" .Date.Year
+    "date" .Date
+    "title" $title
+    "url" .RelPermalink
+    "external" false
+    "meta" (.Date.Format "Jan 2006")
+    "image" ""
+  ) }}
+{{ end }}
+
+{{/* ---- articles, chapters, essays & reviews published elsewhere ---- */}}
+{{ range where hugo.Data.essays_criticism "published" "ne" false }}
+  {{ $yr := int .year }}
+  {{ $items = $items | append (dict
+    "type" (lower .type)
+    "typeLabel" .type
+    "year" $yr
+    "date" (time (printf "%d-01-01" $yr))
+    "title" .title
+    "url" .url
+    "external" true
+    "meta" .publication
+    "image" ""
+  ) }}
+{{ end }}
+
+{{/* ---- talks & conferences (on the road) ---- */}}
+{{ range hugo.Data.on_the_road }}
+  {{ $t := time .date }}
+  {{ $items = $items | append (dict
+    "type" "talk"
+    "typeLabel" "Talk"
+    "year" $t.Year
+    "date" $t
+    "title" .title
+    "url" .url
+    "external" true
+    "meta" (printf "%s — %s" .venue .label)
+    "image" ""
+  ) }}
+{{ end }}
+
+{{ $sorted := sort $items "date" "desc" }}
+{{ $rows := first 40 $sorted }}
+
+<div class="th-index">
+  <div class="th-index-head">
+    <span>Year</span>
+    <span>Type</span>
+    <span>Work</span>
+  </div>
+
+  <ol class="th-rows">
+    {{ $prevYear := 0 }}
+    {{ range $rows }}
+    {{ $repeat := eq .year $prevYear }}
+    <li class="th-row{{ if .image }} th-has-cover{{ end }}" data-type="{{ .type }}">
+      <div class="th-col-year{{ if $repeat }} th-repeat{{ end }}">{{ .year }}</div>
+      <div class="th-col-type">{{ .typeLabel }}</div>
+      {{ if .image }}
+      <div class="th-row-body-cover">
+        <img class="th-row-cover" src="{{ .image }}" alt="" loading="lazy" decoding="async">
+        <div>
+          <h3 class="th-row-title">
+            {{ if .url }}
+            <a href="{{ .url }}"{{ if .external }} target="_blank" rel="noopener"{{ end }}>{{ .title }}</a>
+            {{ else }}
+            {{ .title }}
+            {{ end }}
+          </h3>
+          {{ with .meta }}<p class="th-row-meta">{{ . }}</p>{{ end }}
+        </div>
+      </div>
+      {{ else }}
+      <div>
+        <h3 class="th-row-title">
+          {{ if .url }}
+          <a href="{{ .url }}"{{ if .external }} target="_blank" rel="noopener"{{ end }}>{{ .title }}</a>
+          {{ else }}
+          {{ .title }}
+          {{ end }}
+        </h3>
+        {{ with .meta }}<p class="th-row-meta">{{ . }}</p>{{ end }}
+      </div>
+      {{ end }}
+    </li>
+    {{ $prevYear = .year }}
+    {{ end }}
+  </ol>
+
+  <a class="th-row-more" href="/archive/">View the full archive &rarr;</a>
+
+  {{/* Newsletter — end-of-scroll colophon line, not a marketing band.
+       Mechanism ported exactly from themes/sagebrush (see e.g. its
+       layouts/partials/min/footer.html / lab/site-footer.html and the
+       inline form in its layouts/index.html): an embedded Buttondown
+       form, not a link-out. Same action URL, same `email` input name,
+       same required/placeholder, same "Subscribe" button label — only
+       the markup/classes and visual treatment are trailhead's own. */}}
+  <div class="th-newsletter">
+    <p class="th-newsletter-label">Newsletter</p>
+    <p class="th-newsletter-copy">Occasional writing on the American West, agricultural history, and political culture.</p>
+    <form class="th-newsletter-form" action="https://buttondown.com/api/emails/embed-subscribe/plainsink" method="post" target="_blank">
+      <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+{{ end }}

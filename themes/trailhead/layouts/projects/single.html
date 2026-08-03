@@ -1,0 +1,8 @@
+{{/* Standalone /projects/ apps ship their own <html>, styles, and scripts
+     (leaf bundles under content/projects/* — raw index.html files with no
+     front matter). No define "main" block, so this bypasses the theme
+     baseof/chrome entirely and renders the project's own document bare.
+     Ported verbatim from themes/sagebrush/layouts/projects/single.html —
+     there is nothing to restyle: these pages never touch trailhead's
+     shell, tokens, or fonts. */}}
+{{ .Content }}

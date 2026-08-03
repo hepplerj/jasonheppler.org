@@ -1,0 +1,19 @@
+{{ define "main" }}
+{{/* Teaching index — ports themes/sagebrush/layouts/courses/list.html,
+     which just renders content/courses/_index.md's body (an intro
+     paragraph, then hand-authored "### Courses" / "### Workshops"
+     sections containing a raw `<div class="teaching">` link+term grid).
+
+     That raw grid is kept — many entries here (workshops especially) are
+     external links with no corresponding page bundle under
+     content/courses/, so re-deriving the list purely from
+     `site.RegularPages "Section" "courses"` would silently drop them.
+     Instead 60-pages.css targets `.th-course-body .teaching` directly and
+     restyles it as ledger rows: link title in Public Sans, term/date in
+     Space Mono, right-aligned, hairline rule between rows — matching the
+     brief without needing a content-file rewrite. */}}
+<div class="th-page th-course-list">
+  <h1 class="th-page-title">{{ .Title }}</h1>
+  {{ with .Content }}<div class="th-prose lm-prose th-course-body">{{ . }}</div>{{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,53 @@
+{{ define "main" }}
+{{/* Trailhead — single note. Compact essay-page treatment: ported
+     functionally from themes/sagebrush/layouts/microblog/single.html
+     (external link-out, post-type disclaimer, carbon badge, tags, author
+     card). No lede/lead-image/prev-next — notes don't carry those fields. */}}
+<article class="th-article th-reading-col h-entry">
+  <header class="th-article-head">
+    <p class="th-kicker">
+      <span class="th-kicker-label">Microblog</span>
+      <span class="th-kicker-dot" aria-hidden="true">&middot;</span>
+      <time class="th-kicker-date dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    </p>
+    <h1 class="th-article-title p-name">{{ .Title }}</h1>
+  </header>
+
+  <div class="th-prose lm-prose e-content">
+    {{ .Content }}
+    {{ with .Params.external }}
+    <p class="th-link-out"><a class="u-bookmark-of" href="{{ . }}">Visit link &rarr;</a></p>
+    {{ end }}
+  </div>
+
+  <footer class="th-post-footer">
+    <p class="th-post-note">This is a <a href="/archive/">microblog</a> post &mdash; a short note, observation, or link worth keeping.</p>
+    <p class="th-post-meta">
+      {{ $grams := div (add (mul .WordCount 7.0) 30000.0) 2000000.0 }}
+      <a href="/low-impact/" class="th-carbon" title="Estimated carbon per visit">
+        <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+        ~{{ printf "%.3f" $grams }}g CO<sub>2</sub>
+      </a>
+      {{ with .Params.tags }}
+      <span class="th-dot-sep" aria-hidden="true">&middot;</span>
+      {{ range $i, $t := . }}{{ if $i }}<span class="th-dot-sep" aria-hidden="true">&middot;</span>{{ end }}<a class="th-tag-link" href="/tags/{{ $t | urlize }}/">{{ $t | humanize }}</a>{{ end }}
+      {{ end }}
+    </p>
+  </footer>
+
+  <aside class="th-author-card p-author h-card">
+    <img src="/assets/images/portrait.webp" alt="Jason A. Heppler" class="u-photo" width="52" height="52">
+    <div class="th-author-text">
+      <span class="th-author-name p-name">Jason A. Heppler</span>
+      <span class="th-author-role">Environmental &amp; digital historian</span>
+    </div>
+    <div class="th-author-links">
+      {{ with site.Params.social.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
+      {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me">Mastodon</a>{{ end }}
+      <a href="https://github.com/hepplerj">GitHub</a>
+    </div>
+  </aside>
+
+  <a href="https://brid.gy/publish/bluesky" class="u-syndication" hidden></a>
+</article>
+{{ end }}

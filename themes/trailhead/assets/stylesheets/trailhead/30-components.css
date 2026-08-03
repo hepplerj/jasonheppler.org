@@ -1,0 +1,649 @@
+/* ==========================================================================
+   Trailhead — 30 Components
+   Identity pane components (eyebrow, name, bio, TOC-with-leaders, social)
+   and ledger components (index head, rows, columns). Generic enough to be
+   reused by Phase 2 inner templates — see THEME-NOTES.md.
+   ========================================================================== */
+
+/* ---------- identity pane text ---------- */
+
+.th-eyebrow {
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  font-size: .78rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--th-accent-green);
+  margin-bottom: 1.5rem;
+}
+
+.th-name {
+  font-family: var(--th-font-header);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(2.3rem, 5.4vw, 3rem);
+  line-height: 1.04;
+  letter-spacing: .005em;
+  margin-bottom: 1.6rem;
+}
+
+.th-name span {
+  display: block;
+  color: var(--th-ink);
+}
+
+.th-bio {
+  font-family: var(--th-font-body);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--th-ink-soft);
+  max-width: 34ch;
+}
+
+/* Pane bio paragraph (th-pane.html — same quiet, readable measure as
+   .th-bio above), with the established .th-page-lede link treatment
+   (30-components.css) so the RRCHNM/GMU/Great Plains links inside it read
+   as clickable, not just differently colored prose. */
+.th-home-lede {
+  font-family: var(--th-font-body);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--th-ink-soft);
+}
+
+.th-home-lede a {
+  color: var(--th-accent-green);
+  border-bottom: 1px solid var(--th-rule-strong);
+}
+
+.th-home-lede a:hover {
+  border-color: var(--th-accent-green);
+}
+
+/* ---------- table-of-contents nav (dotted leaders) ---------- */
+
+.th-toc {
+  margin-top: clamp(2rem, 5vh, 3.5rem);
+}
+
+.th-toc-plain {
+  display: inline-block;
+  font-family: var(--th-font-header);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: .92rem;
+  letter-spacing: .04em;
+  padding-bottom: .9rem;
+  margin-bottom: .9rem;
+  border-bottom: 1px solid var(--th-rule);
+  width: 100%;
+  transition: color .15s ease;
+}
+
+.th-toc-plain:hover {
+  color: var(--th-accent-green);
+}
+
+.th-toc-list li:last-child {
+  border-bottom: none;
+}
+
+.th-toc-list a {
+  display: flex;
+  align-items: baseline;
+  gap: .6em;
+  padding: .62rem 0;
+  transition: color .15s ease;
+}
+
+.th-toc-label {
+  font-family: var(--th-font-header);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  font-size: .92rem;
+  white-space: nowrap;
+}
+
+.th-toc-leader {
+  flex: 1 1 auto;
+  border-bottom: 1px dotted var(--th-rule-strong);
+  height: 0;
+  transform: translateY(-.35em);
+}
+
+.th-toc-count {
+  font-family: var(--th-font-mono);
+  font-size: .82rem;
+  color: var(--th-ink-soft);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  transition: color .15s ease;
+}
+
+.th-toc-list a:hover .th-toc-label,
+.th-toc-list a:hover .th-toc-count {
+  color: var(--th-accent-green);
+}
+
+.th-toc-list a:hover .th-toc-leader {
+  border-bottom-color: var(--th-accent-green);
+}
+
+/* ---------- identity pane bottom: tally + social ---------- */
+
+.th-identity-bottom {
+  padding-top: 2rem;
+}
+
+.th-tally {
+  font-family: var(--th-font-mono);
+  font-size: .74rem;
+  color: var(--th-ink-faint);
+  letter-spacing: .02em;
+  margin-bottom: 1rem;
+}
+
+.th-social {
+  display: flex;
+  gap: 1.1rem;
+  flex-wrap: wrap;
+  font-size: .82rem;
+}
+
+.th-social a {
+  color: var(--th-ink-soft);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: color .15s ease, border-color .15s ease;
+}
+
+.th-social a:hover {
+  color: var(--th-accent-green);
+  border-color: var(--th-accent-green);
+}
+
+/* ---------- ledger / index ---------- */
+
+.th-index-head {
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: var(--th-index-cols);
+  gap: 1.2rem;
+  padding: 1.4rem 0 .8rem;
+  background: var(--th-paper);
+  border-bottom: 1px solid var(--th-rule-strong);
+  font-family: var(--th-font-header);
+  font-weight: 400;
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--th-ink-faint);
+  z-index: 3;
+}
+
+.th-row {
+  display: grid;
+  grid-template-columns: var(--th-index-cols);
+  gap: 1.2rem;
+  padding: 1.05rem 0;
+  border-bottom: 1px solid var(--th-rule);
+  position: relative;
+  transition: background-color .15s ease;
+}
+
+.th-row::before {
+  content: "";
+  position: absolute;
+  left: -1.2rem;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--th-accent-green);
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform .18s ease;
+}
+
+.th-row:hover::before {
+  transform: scaleY(1);
+}
+
+.th-col-year {
+  font-family: var(--th-font-mono);
+  font-size: .86rem;
+  font-variant-numeric: tabular-nums;
+  padding-top: .2rem;
+  color: var(--th-ink);
+}
+
+.th-col-year.th-repeat {
+  color: var(--th-ink-faint);
+  opacity: .55;
+}
+
+.th-col-type {
+  font-family: var(--th-font-header);
+  font-weight: 400;
+  font-size: .76rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--th-ink-soft);
+  padding-top: .34rem;
+}
+
+.th-row[data-type="book"] .th-col-type {
+  color: var(--th-accent-green);
+  font-weight: 700;
+}
+
+.th-row-title {
+  font-family: var(--th-font-body);
+  font-weight: 500;
+  font-size: 1.08rem;
+  line-height: 1.4;
+  color: var(--th-ink);
+  transition: color .15s ease;
+}
+
+.th-row[data-type="book"] .th-row-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.th-row[data-type="book"] .th-row-title::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: var(--th-accent-green);
+  margin-right: .55em;
+  vertical-align: middle;
+  transform: translateY(-1px);
+}
+
+/* Book cover thumbnail — replaces the square marker (above) when the book
+   page has a cover image. .th-has-cover is only added to the <li> when a
+   cover resolved, so rows without one keep the plain marker. */
+.th-row[data-type="book"].th-has-cover .th-row-title::before {
+  content: none;
+  margin-right: 0;
+}
+
+.th-row-body-cover {
+  display: flex;
+  align-items: flex-start;
+  gap: .8rem;
+}
+
+.th-row-cover {
+  flex: 0 0 auto;
+  width: auto;
+  height: 44px;
+  margin-top: .1rem;
+  border: 1px solid var(--th-rule-strong);
+  background: var(--th-paper-raised);
+  object-fit: cover;
+}
+
+.th-row:hover .th-row-title {
+  color: var(--th-accent-green);
+}
+
+.th-row-meta {
+  font-family: var(--th-font-body);
+  font-size: .82rem;
+  color: var(--th-ink-soft);
+  margin-top: .3rem;
+}
+
+.th-row-meta em {
+  font-style: italic;
+  color: var(--th-ink-faint);
+}
+
+/* End-of-ledger link to the full archive — styled like a row, but with a
+   centered call-to-action treatment instead of the three-column grid. */
+.th-row-more {
+  padding: 1.4rem 0;
+  text-align: center;
+  font-family: var(--th-font-header);
+  font-weight: 400;
+  font-size: .82rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--th-accent-green);
+  border-bottom: none;
+}
+
+.th-row-more:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* End-of-scroll newsletter — spare and typographic, meant to read as the
+   ledger's colophon line rather than a marketing band (contrast with
+   sagebrush's loud terracotta .bf-news-* section, which this deliberately
+   is not). Hairline rule above, National Park uppercase label, one line
+   of Public Sans copy, understated bordered input+button. */
+.th-newsletter {
+  margin-top: 2.4rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--th-rule-strong);
+}
+
+.th-newsletter-label {
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  font-size: .74rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--th-ink-soft);
+  margin-bottom: .5rem;
+}
+
+.th-newsletter-copy {
+  font-family: var(--th-font-body);
+  font-size: .92rem;
+  line-height: 1.5;
+  color: var(--th-ink-soft);
+  max-width: 46ch;
+  margin-bottom: 1rem;
+}
+
+.th-newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  max-width: 30rem;
+}
+
+.th-newsletter-form input {
+  flex: 1 1 14rem;
+  font-family: var(--th-font-body);
+  font-size: .88rem;
+  color: var(--th-ink);
+  background: var(--th-paper-raised);
+  border: 1px solid var(--th-rule-strong);
+  padding: .6em .8em;
+}
+
+.th-newsletter-form input:focus {
+  outline: 2px solid var(--th-accent-green);
+  outline-offset: 1px;
+}
+
+.th-newsletter-form button {
+  flex: 0 0 auto;
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  font-size: .74rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--th-accent-green);
+  background: transparent;
+  border: 1px solid var(--th-accent-green);
+  padding: .6em 1.1em;
+  cursor: pointer;
+  transition: color .15s ease, background-color .15s ease;
+}
+
+.th-newsletter-form button:hover {
+  color: var(--th-paper);
+  background: var(--th-accent-green);
+}
+
+/* ---------- generic label (section eyebrows on inner pages) ---------- */
+
+.th-label {
+  display: inline-block;
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  font-size: .78rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--th-accent-green);
+  margin-bottom: 1rem;
+}
+
+/* ---------- generic inner-page header (title + lede) ----------
+   Shared by list/section pages that aren't the homepage ledger or an
+   article single (see 40-posts.css's .th-article-*/
+.th-kicker-* for essay/note singles — different rhythm,
+eyebrow kicker up top). Reference: layouts/courses/list.html (Teaching),
+per Jason's design
+ review — this is his approved title scale and the slight,
+tight gap between title and lede. Wraps only the title(+lede);
+
+wide ledger/grid content below (chips, tabs, rows) stays outside as a full-width sibling — see layouts/_default/digital-history.html for the pattern. */ .th-page-header {
+  margin-bottom: var(--th-space-5);
+}
+
+.th-page-title {
+  font-family: var(--th-font-body);
+  font-weight: 700;
+  font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+  line-height: 1.18;
+  color: var(--th-ink);
+  margin-top: .3rem;
+}
+
+.th-page-lede {
+  margin-top: .4rem;
+  font-family: var(--th-font-body);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--th-ink-soft);
+  max-width: 60ch;
+}
+
+.th-page-lede a {
+  color: var(--th-accent-green);
+  border-bottom: 1px solid var(--th-rule-strong);
+}
+
+.th-page-lede a:hover {
+  border-color: var(--th-accent-green);
+}
+
+/* ---------- generic button ---------- */
+
+.th-btn {
+  display: inline-block;
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  font-size: .78rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--th-paper);
+  background: var(--th-accent-green);
+  padding: .7em 1.2em;
+  border-radius: var(--th-radius);
+  transition: opacity .15s ease;
+}
+
+.th-btn:hover {
+  opacity: .85;
+}
+
+/* ---------- compact end-of-scroll footer ---------- */
+
+/* Nested inside .th-content, which already applies the left offset and
+   horizontal padding — this only needs its own vertical rhythm. */
+.th-footer {
+  border-top: 1px solid var(--th-rule-strong);
+  margin-top: 2rem;
+  padding: 1.6rem 0 .5rem;
+  font-family: var(--th-font-mono);
+  font-size: .74rem;
+  color: var(--th-ink-faint);
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.th-footer a {
+  color: var(--th-ink-soft);
+  border-bottom: 1px solid transparent;
+}
+
+.th-footer a:hover {
+  color: var(--th-accent-green);
+  border-color: var(--th-accent-green);
+}
+
+.th-footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ---------- fast search overlay (⌘K) ----------
+   Markup + behavior come from the shared root static/js/fastsearch.js
+   (see th-scripts.html); ids (#fastSearch, #searchInput, #searchResults)
+   are fixed by that script and must not be renamed. */
+
+#fastSearch {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: clamp(4rem, 14vh, 9rem);
+  background: rgba(21, 19, 14, .55);
+}
+
+.fast-search-box {
+  width: min(560px, 92vw);
+  background: var(--th-paper);
+  border: 1px solid var(--th-rule-strong);
+  box-shadow: 0 20px 50px rgba(21, 19, 14, .25);
+}
+
+#searchInput {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--th-rule);
+  background: transparent;
+  padding: 1rem 1.2rem;
+  font-family: var(--th-font-body);
+  font-size: 1.02rem;
+  color: var(--th-ink);
+}
+
+#searchInput:focus {
+  outline: none;
+}
+
+#searchResults {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+#searchResults li {
+  border-bottom: 1px solid var(--th-rule);
+}
+
+#searchResults li:last-child {
+  border-bottom: none;
+}
+
+#searchResults a {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  padding: .8rem 1.2rem;
+}
+
+#searchResults a:hover,
+#searchResults a:focus {
+  background: var(--th-paper-raised);
+}
+
+#searchResults .title {
+  font-family: var(--th-font-body);
+  font-weight: 500;
+  color: var(--th-ink);
+}
+
+#searchResults .meta {
+  font-family: var(--th-font-mono);
+  font-size: .74rem;
+  color: var(--th-ink-soft);
+}
+
+#searchResults .sc {
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+#searchResults .desc {
+  font-family: var(--th-font-body);
+  font-size: .84rem;
+  color: var(--th-ink-soft);
+}
+
+#searchResults .search-message {
+  padding: 1rem 1.2rem;
+  font-family: var(--th-font-body);
+  font-size: .9rem;
+  color: var(--th-ink-faint);
+}
+
+@media (max-width: 900px) {
+  .th-name {
+    font-size: clamp(2.6rem, 12vw, 3.6rem);
+  }
+
+  .th-index-head,
+  .th-row {
+    grid-template-columns: var(--th-index-cols-tablet);
+    gap: .8rem;
+  }
+
+  .th-row::before {
+    left: -1.4rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .th-index-head {
+    display: none;
+  }
+
+  .th-row {
+    grid-template-columns: 1fr;
+    gap: .2rem;
+    padding: 1.1rem 0;
+  }
+
+  .th-col-year {
+    font-size: .75rem;
+    order: 1;
+  }
+
+  .th-col-year::after {
+    content: " —";
+  }
+
+  .th-col-type {
+    order: 2;
+    padding-top: 0;
+  }
+
+  .th-row-title {
+    order: 3;
+    margin-top: .25rem;
+  }
+
+  .th-row-meta {
+    order: 4;
+  }
+
+  .th-row::before {
+    left: -1.4rem;
+  }
+}

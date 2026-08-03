@@ -1,0 +1,36 @@
+{{ define "main" }}
+{{/* Trailhead — ledger of posts under one tag. Same Year/Type/Work grid +
+     year-suppression rhythm as the homepage/archive, scoped to .Pages
+     (this taxonomy term's matching content — spans blog + microblog). */}}
+<div class="th-page">
+  <header class="th-page-header">
+    <p class="th-label">Tag</p>
+    <h1 class="th-page-title">{{ .Title | humanize }}</h1>
+    <p class="th-page-lede">{{ len .Pages }} post{{ if ne (len .Pages) 1 }}s{{ end }} tagged &ldquo;{{ .Title | humanize }}.&rdquo;</p>
+  </header>
+</div>
+
+<div class="th-index-head">
+  <span>Year</span>
+  <span>Type</span>
+  <span>Work</span>
+</div>
+
+<ol class="th-rows">
+  {{ $prevYear := 0 }}
+  {{ range .Pages.ByDate.Reverse }}
+  {{ $type := cond (eq .Section "blog") "essay" "microblog" }}
+  {{ $label := cond (eq .Section "blog") "Essay" "Microblog" }}
+  {{ $repeat := eq .Date.Year $prevYear }}
+  <li class="th-row" data-type="{{ $type }}">
+    <div class="th-col-year{{ if $repeat }} th-repeat{{ end }}">{{ .Date.Year }}</div>
+    <div class="th-col-type">{{ $label }}</div>
+    <div>
+      <h3 class="th-row-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <p class="th-row-meta">{{ .Date.Format "Jan 2, 2006" }}</p>
+    </div>
+  </li>
+  {{ $prevYear = .Date.Year }}
+  {{ end }}
+</ol>
+{{ end }}

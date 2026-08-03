@@ -1,0 +1,75 @@
+{{/* Trailhead — identity pane (left side of the split shell).
+     Persists site-wide: baseof.html includes this on every page, not just
+     the homepage. Counts are computed live from real content/data so they
+     never drift out of sync — see THEME-NOTES.md for the source of each. */}}
+
+{{ $blogPages := where site.RegularPages "Section" "blog" }}
+{{ $microPages := where site.RegularPages "Section" "microblog" }}
+{{ $bookPages := where site.RegularPages "Section" "publications" }}
+{{ $shelfPages := where site.RegularPages "Section" "books" }}
+{{ $essaysData := where hugo.Data.essays_criticism "published" "ne" false }}
+{{ $talks := hugo.Data.on_the_road }}
+{{ $dhProjects := hugo.Data.dh_projects }}
+
+{{ $essaysCount := len $blogPages }}
+{{ $microblogCount := len $microPages }}
+{{ $pubCount := add (len $bookPages) (len $essaysData) }}
+{{ $researchCount := len $dhProjects }}
+{{ $bookshelfCount := len $shelfPages }}
+{{/* Archive is the single entry point for all writing (blog + microblog) —
+     it has its own filter chips, so the TOC doesn't need separate Essays
+     and Notes rows too. */}}
+{{ $archiveCount := add $essaysCount $microblogCount }}
+
+{{/* Tally: total ledger-eligible items (books, essays, data articles,
+     talks — the same four sources the homepage ledger draws from) and the
+     year span they cover. */}}
+{{ $years := slice }}
+{{ range $blogPages }}{{ $years = $years | append .Date.Year }}{{ end }}
+{{ range $bookPages }}{{ with .Params.year }}{{ $years = $years | append (int .) }}{{ end }}{{ end }}
+{{ range $essaysData }}{{ with .year }}{{ $years = $years | append (int .) }}{{ end }}{{ end }}
+{{ range $talks }}{{ with .date }}{{ $years = $years | append (time .).Year }}{{ end }}{{ end }}
+{{ $tallyTotal := add (add (len $blogPages) (len $bookPages)) (add (len $essaysData) (len $talks)) }}
+{{ $sortedYears := sort $years }}
+{{ $minYear := 0 }}
+{{ $maxYear := 0 }}
+{{ if gt (len $sortedYears) 0 }}
+  {{ $minYear = index $sortedYears 0 }}
+  {{ $maxYear = index $sortedYears (sub (len $sortedYears) 1) }}
+{{ end }}
+
+<aside class="th-pane">
+  <div class="th-pane-top">
+    <h1 class="th-name"><a href="/">Jason A. Heppler</a></h1>
+    <p class="th-home-lede">I am a historian of the North American West and Great Plains, and a builder of digital history. I serve as the senior developer/scholar of the <a href="https://rrchnm.org">Roy Rosenzweig Center for History and New Media</a> at George Mason University, where I am also an <a href="https://historyarthistory.gmu.edu/people/jheppler">adjunct professor</a> in the Department of History and Art History. I am also an Affiliate Fellow at the <a href="https://plains.unl.edu/">Center for Great Plains Studies</a> at the University of Nebraska–Lincoln.</p>
+    <nav class="th-toc" aria-label="Site index">
+      <a class="th-toc-plain" href="/about/">About</a>
+      <ol class="th-toc-list">
+        <li><a href="/publications/"><span class="th-toc-label">Publications</span><span class="th-toc-leader"></span><span class="th-toc-count">{{ $pubCount }}</span></a></li>
+        <li><a href="/research/"><span class="th-toc-label">Digital history</span><span class="th-toc-leader"></span><span class="th-toc-count">{{ $researchCount }}</span></a></li>
+        <li><a href="/books/"><span class="th-toc-label">Bookshelf</span><span class="th-toc-leader"></span><span class="th-toc-count">{{ $bookshelfCount }}</span></a></li>
+        <li><a href="/courses/"><span class="th-toc-label">Teaching</span><span class="th-toc-leader"></span><span class="th-toc-count">23</span></a></li>
+        <li><a href="/archive/"><span class="th-toc-label">Archive</span><span class="th-toc-leader"></span><span class="th-toc-count">{{ $archiveCount }}</span></a></li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="th-identity-bottom">
+    <div class="th-social">
+      {{ with site.Params.Author.email }}
+      {{ $parts := split . "@" }}
+      <a href="#" class="bs-email-link" data-name="{{ index $parts 0 }}" data-domain="{{ index $parts 1 }}">Email</a>
+      {{ end }}
+      {{ with site.Params.social.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
+        {{ with site.Params.social.microblog }}<a href="{{ . }}">micro.blog</a>{{ end }}
+        {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me">Mastodon</a>{{ end }}
+        {{ with site.Params.social.github }}<a href="{{ . }}">GitHub</a>{{ end }}
+        {{ with site.Params.social.buymeacoffee }}<a href="{{ . }}">Buy Me a Coffee</a>{{ end }}
+      <a href="/feed.xml">RSS</a>
+      <a href="/feed.json">JSON</a>
+      <p>© 2008&ndash;{{ now.Format "2006" }} Jason A. Heppler. Last updated {{ now.Format "Jan 2, 2006" }}. My writing, photography, and the design of this website are <a href="https://www.copyright.gov/help/faq/faq-general.html#mywork">copyrighted</a>. Feel free to ask if you want to reuse any content beyond the bounds of fair use. Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://www.ahillofbeans.com/">coffee</a>. Made in Nebraska. <a href="/colophon/">Colophon</a>. This site is <a href="/low-impact/">climate&#8209;friendly</a>.</p>
+    </div>
+
+
+  </div>
+</aside>

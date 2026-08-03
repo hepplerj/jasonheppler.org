@@ -1,0 +1,4 @@
+name = "Trailhead"
+license = "MIT"
+description = "Split-screen catalogue raisonné — fixed identity pane, scrolling chronological ledger of essays, publications, articles, and talks."
+min_version = "0.116.0"

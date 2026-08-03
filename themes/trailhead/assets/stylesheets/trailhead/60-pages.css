@@ -1,0 +1,649 @@
+/* ==========================================================================
+   Trailhead — 60 Pages
+   Standalone pages & teaching: About, Digital & Public History (research),
+   Blogroll, Teaching (courses list/single), Twitter archive.
+
+   Namespaced .th-about-*, .th-dh-*, .th-blogroll*, .th-course-*, .th-tw-*.
+   .th-page (the width-capped wrapper these templates use instead of
+   .th-reading-col, since several of them hold grids wider than a 62ch
+   prose measure) lives here; the inner-page header itself
+   (.th-page-header / .th-page-title / .th-page-lede — Public Sans,
+   sentence case, distinct from the pane's all-caps .th-name) is promoted
+   to 30-components.css so it's shared site-wide, not just by this file's
+   pages. Also carries the Low Impact metrics panel (content/page/
+   low-impact.md's raw HTML, rendered through _default/single.html).
+   ========================================================================== */
+
+/* ---------- generic page header ---------- */
+
+.th-page {
+  max-width: 46rem;
+  padding-top: clamp(2rem, 5vh, 4rem);
+}
+
+/* .th-page-title / .th-page-lede / .th-page-header now live in
+   30-components.css — promoted there so every list/section page (not
+   just this file's About/Blogroll/Teaching/Research/Tweets group) shares
+   one title scale and title-to-lede rhythm. This file keeps only what's
+   still local: the `.th-page` width/top-padding wrapper itself, and the
+   `.th-prose` measure override below. */
+
+/* Comfortable prose measure for any .th-prose block nested in a .th-page
+   (additive rule — 10-base.css's .th-prose stays measure-agnostic so the
+   homepage/Phase-1 placeholders aren't affected). */
+.th-page .th-prose {
+  max-width: 62ch;
+}
+
+.th-course-back {
+  display: inline-block;
+  font-family: var(--th-font-header);
+  font-weight: 400;
+  font-size: .82rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--th-ink-soft);
+  margin-bottom: 1.6rem;
+  transition: color .15s ease;
+}
+
+.th-course-back:hover {
+  color: var(--th-accent-green);
+}
+
+/* ==========================================================================
+   About
+   ========================================================================== */
+
+.th-about-roles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  margin-top: 2.2rem;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid var(--th-rule);
+}
+
+.th-about-role-title {
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  font-size: .76rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--th-accent-green);
+  line-height: 1.4;
+}
+
+.th-about-role-org {
+  font-family: var(--th-font-body);
+  font-size: .84rem;
+  color: var(--th-ink-soft);
+  line-height: 1.4;
+  margin-top: .4rem;
+}
+
+.th-about-body {
+  margin-top: 2.2rem;
+}
+
+.th-about-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-top: 2.6rem;
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--th-rule);
+  border-bottom: 1px solid var(--th-rule);
+}
+
+.th-about-stat {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.th-about-stat-num {
+  font-family: var(--th-font-mono);
+  font-weight: 700;
+  font-size: 1.3rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--th-ink);
+}
+
+.th-about-stat-label {
+  font-family: var(--th-font-header);
+  font-weight: 400;
+  font-size: .68rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--th-ink-faint);
+}
+
+.th-about-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+  margin-top: 2.6rem;
+}
+
+.th-about-col .th-label {
+  margin-bottom: .6rem;
+}
+
+/* The About link columns reuse .th-toc-list's dotted-leader row pattern
+   (30-components.css) but without a trailing count span — the leader
+   simply runs to the column edge. */
+.th-about-link-list a {
+  padding: .5rem 0;
+}
+
+.th-about-link-list .th-toc-label {
+  font-size: .84rem;
+}
+
+@media (max-width: 700px) {
+
+  .th-about-roles,
+  .th-about-links {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .th-about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem 1rem;
+  }
+}
+
+/* ==========================================================================
+   Digital & Public History (research)
+   ========================================================================== */
+
+.th-dh-rows {
+  /* No margin-top of its own — the gap above comes from the preceding
+     .th-page-header's margin-bottom (30-components.css), same as every
+     other header-then-full-width-content page (archive, publications,
+     bookshelf). */
+}
+
+.th-dh-row {
+  display: grid;
+  grid-template-columns: 3.4rem 1fr;
+  gap: 1.2rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--th-rule);
+  position: relative;
+  transition: background-color .15s ease;
+}
+
+.th-dh-row::before {
+  content: "";
+  position: absolute;
+  left: -1.2rem;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--th-accent-green);
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform .18s ease;
+}
+
+.th-dh-row:hover::before {
+  transform: scaleY(1);
+}
+
+.th-dh-num {
+  font-family: var(--th-font-mono);
+  font-size: .82rem;
+  color: var(--th-ink-faint);
+  font-variant-numeric: tabular-nums;
+  padding-top: .2rem;
+}
+
+.th-dh-title {
+  font-family: var(--th-font-body);
+  font-weight: 500;
+  font-size: 1.06rem;
+  line-height: 1.4;
+}
+
+.th-dh-title a {
+  color: var(--th-ink);
+  transition: color .15s ease;
+}
+
+.th-dh-row:hover .th-dh-title a {
+  color: var(--th-accent-green);
+}
+
+.th-dh-arrow {
+  display: inline-block;
+  margin-left: .35em;
+  font-size: .85em;
+  color: var(--th-accent-green);
+}
+
+.th-dh-desc {
+  font-family: var(--th-font-body);
+  font-size: .86rem;
+  line-height: 1.5;
+  color: var(--th-ink-soft);
+  margin-top: .35rem;
+  max-width: 56ch;
+}
+
+/* Optional per-row thumbnail (data/dh_projects.yaml `image` field, not
+   every project has one). Ledger-appropriate sizing — same idea as the
+   homepage's small book covers (.th-row-cover in 30-components.css),
+   not a card-grid image. Grayscale at rest, full color on row hover —
+   keeps the ledger's ink-on-paper calm until you engage with a row,
+   rather than 33 screenshots fighting for attention on page load. */
+.th-dh-body-thumb {
+  display: flex;
+  align-items: flex-start;
+  gap: .8rem;
+}
+
+.th-dh-thumb {
+  flex: 0 0 auto;
+  width: 84px;
+  height: 63px;
+  margin-top: .1rem;
+  border: 1px solid var(--th-rule-strong);
+  background: var(--th-paper-raised);
+  object-fit: cover;
+  filter: grayscale(1);
+  transition: filter .2s ease;
+}
+.th-dh-row:hover .th-dh-thumb {
+  filter: grayscale(0);
+}
+
+@media (max-width: 560px) {
+  .th-dh-row {
+    grid-template-columns: 2.2rem 1fr;
+    gap: .8rem;
+  }
+
+  .th-dh-thumb {
+    width: 60px;
+    height: 45px;
+  }
+}
+
+/* ==========================================================================
+   Blogroll
+   ========================================================================== */
+
+.th-blogroll-body p {
+  max-width: 62ch;
+}
+
+.th-blogroll-body ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.6rem;
+  columns: 2;
+  column-gap: 2.6rem;
+}
+
+.th-blogroll-body li {
+  break-inside: avoid;
+  border-bottom: 1px solid var(--th-rule);
+  padding: .6rem 0;
+}
+
+.th-blogroll-body li a {
+  font-family: var(--th-font-body);
+  font-size: .95rem;
+  color: var(--th-ink);
+  border-bottom: none;
+  transition: color .15s ease;
+}
+
+.th-blogroll-body li a:hover {
+  color: var(--th-accent-green);
+}
+
+@media (max-width: 560px) {
+  .th-blogroll-body ul {
+    columns: 1;
+  }
+}
+
+/* ==========================================================================
+   Teaching (courses)
+   ========================================================================== */
+
+/* List: the intro/heading prose from content/courses/_index.md renders
+   through .th-prose as usual; the hand-authored `<div class="teaching">`
+   link+term grid inside it is restyled here as ledger rows rather than
+   re-templated (see layouts/courses/list.html for why). */
+.th-course-body .teaching {
+  margin-top: 1.2rem;
+  border-top: 1px solid var(--th-rule);
+}
+
+.th-course-body .teaching>div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: baseline;
+  padding: .7rem 0;
+  border-bottom: 1px solid var(--th-rule);
+}
+
+.th-course-body .teaching>div>div:first-child a {
+  font-family: var(--th-font-body);
+  font-weight: 500;
+  font-size: .98rem;
+  color: var(--th-ink);
+  border-bottom: none;
+  transition: color .15s ease;
+}
+
+.th-course-body .teaching>div>div:first-child a:hover {
+  color: var(--th-accent-green);
+}
+
+.th-course-body .teaching>div>div:last-child {
+  font-family: var(--th-font-mono);
+  font-size: .78rem;
+  color: var(--th-ink-soft);
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Single: term/year eyebrow (.th-label) + title come from the template;
+   the meta aside below is the course/instructor block. */
+.th-course-meta {
+  margin-top: 1.6rem;
+  padding: 1.1rem 1.3rem;
+  background: var(--th-paper-raised);
+  border-left: 2px solid var(--th-accent-green);
+}
+
+.th-course-meta-row {
+  font-family: var(--th-font-body);
+  font-size: .88rem;
+  line-height: 1.6;
+  color: var(--th-ink-soft);
+}
+
+.th-course-meta-row+.th-course-meta-row {
+  margin-top: .5rem;
+}
+
+.th-course-meta-row a {
+  color: var(--th-ink);
+  border-bottom: 1px solid var(--th-rule-strong);
+}
+
+.th-course-meta-row a:hover {
+  color: var(--th-accent-green);
+  border-color: var(--th-accent-green);
+}
+
+.th-course-meta-label {
+  font-family: var(--th-font-header);
+  font-weight: 600;
+  font-size: .68rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--th-ink-faint);
+  margin-right: .5em;
+}
+
+.th-course-single-body {
+  margin-top: 2rem;
+}
+
+/* ==========================================================================
+   Twitter archive
+   ========================================================================== */
+
+.th-tw-body {
+  max-width: 45rem;
+  margin-top: 2rem;
+}
+
+.th-tw-histogram {
+  margin: 0 0 1.6rem;
+  overflow-x: auto;
+}
+
+.th-tw-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .8rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.th-tw-search {
+  flex: 1;
+  min-width: 220px;
+  font-family: var(--th-font-body);
+  font-size: .92rem;
+  padding: .6rem .8rem;
+  border: 1px solid var(--th-rule-strong);
+  border-radius: var(--th-radius);
+  background: var(--th-paper);
+  color: var(--th-ink);
+}
+
+.th-tw-search:focus {
+  outline: none;
+  border-color: var(--th-accent-green);
+}
+
+.th-tw-replies {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: var(--th-font-mono);
+  font-size: .78rem;
+  color: var(--th-ink-soft);
+  cursor: pointer;
+}
+
+.th-tw-years {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: 1.4rem;
+}
+
+.th-tw-year-link {
+  font-family: var(--th-font-mono);
+  font-size: .78rem;
+  color: var(--th-ink-soft);
+  border: 1px solid var(--th-rule-strong);
+  border-radius: var(--th-radius);
+  padding: .3rem .6rem;
+  transition: color .15s ease, border-color .15s ease;
+}
+
+.th-tw-year-link:hover {
+  color: var(--th-accent-green);
+  border-color: var(--th-accent-green);
+}
+
+.th-tw-count {
+  font-family: var(--th-font-mono);
+  font-size: .78rem;
+  color: var(--th-ink-faint);
+  margin-bottom: 1.6rem;
+}
+
+.th-tw-year-section {
+  margin-bottom: 2.6rem;
+}
+
+.th-tw-year {
+  font-family: var(--th-font-header);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: .01em;
+  margin-bottom: 1.1rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--th-rule-strong);
+  scroll-margin-top: 1.2rem;
+}
+
+.th-tw-month-section {
+  margin-bottom: 1.6rem;
+}
+
+.th-tw-month {
+  font-family: var(--th-font-header);
+  font-weight: 400;
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--th-ink-faint);
+  margin-bottom: .4rem;
+}
+
+.th-tw-item {
+  padding: .8rem 0;
+  border-top: 1px solid var(--th-rule);
+}
+
+.th-tw-text {
+  font-family: var(--th-font-body);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--th-ink);
+  margin-bottom: .35rem;
+}
+
+.th-tw-meta {
+  display: flex;
+  gap: .9rem;
+  font-family: var(--th-font-mono);
+  font-size: .72rem;
+  color: var(--th-ink-faint);
+}
+
+.th-tw-meta a {
+  color: var(--th-ink-faint);
+}
+
+.th-tw-meta a:hover {
+  color: var(--th-accent-green);
+}
+
+.th-tw-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 20;
+  font-family: var(--th-font-mono);
+  font-size: .74rem;
+  color: var(--th-ink-soft);
+  background: var(--th-paper);
+  border: 1px solid var(--th-rule-strong);
+  border-radius: var(--th-radius);
+  padding: .5rem .8rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease, color .15s ease;
+}
+
+.th-tw-top:hover {
+  color: var(--th-accent-green);
+}
+
+@media (max-width: 560px) {
+  .th-tw-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* ==========================================================================
+   Low Impact — carbon/data metrics panel
+   Raw HTML authored directly in content/page/low-impact.md
+   (`<div class="metrics_container"><div class="metrics-left">…
+   <div class="metrics-right">…`), rendered through _default/single.html's
+   `.th-prose` — there's no dedicated template for this page (`layout` isn't
+   set in its front matter), so the styling has to target the markdown's
+   raw class names directly rather than a template-authored `.th-*` class.
+   Ported from themes/sagebrush/assets/stylesheets/sagebrush.css's
+   `.metrics_container` panel (`--panel-green` left cell, `--accent-glow`
+   right cell, 10px radius, soft border) into the trailhead idiom: square
+   corners (no radius), a hairline divider instead of a soft one, left
+   cell in `--th-accent-green` (trailhead has no separate "near-black
+   green" token — the accent green reads as the same "deep green ink"
+   sagebrush's panel-green does), right cell in `--th-paper-raised`
+   (flat raised-paper tone, not sagebrush's translucent green glow — per
+   Jason's spec for this pass). The numbers in the text are static,
+   hand-maintained in the markdown; no JS is involved on this page (the
+   dynamic per-post estimate is a separate thing — .th-carbon in
+   40-posts.css, computed in blog/single.html's template). */
+
+.metrics_container {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  margin: var(--th-space-6) 0;
+  border: 1px solid var(--th-rule-strong);
+}
+
+.metrics-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--th-space-3);
+  text-align: center;
+  background: var(--th-accent-green);
+  padding: var(--th-space-6) var(--th-space-5);
+}
+
+.metrics-left p {
+  font-family: var(--th-font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(239, 232, 219, .85);
+  margin: 0;
+}
+
+.metrics-left strong {
+  color: var(--th-paper);
+}
+
+.metrics__img {
+  width: 36px;
+  height: 36px;
+  filter: brightness(0) invert(1);
+  opacity: .85;
+}
+
+.metrics-right {
+  display: flex;
+  align-items: center;
+  padding: var(--th-space-5);
+  background: var(--th-paper-raised);
+  border-left: 1px solid var(--th-rule-strong);
+}
+
+.metrics-right p {
+  font-family: var(--th-font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--th-ink-soft);
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .metrics_container {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-right {
+    border-left: none;
+    border-top: 1px solid var(--th-rule-strong);
+  }
+}

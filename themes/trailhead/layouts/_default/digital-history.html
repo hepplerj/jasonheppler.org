@@ -1,0 +1,38 @@
+{{ define "main" }}
+{{/* Digital & public history / research — ports data wiring from
+     themes/sagebrush/layouts/_default/digital-history.html
+     (hugo.Data.dh_projects, same source th-pane.html counts against for
+     the "Research" TOC row). Restyled as spare typographic ledger rows
+     (numbered, mono index) rather than sagebrush's image-card grid.
+
+     Exploratory revision: small thumbnails, ledger-appropriate (like the
+     homepage's book covers), added back in per-row where a project has
+     an `image` field in data/dh_projects.yaml — same root-level
+     `/assets/images/` resolution sagebrush used. Rows without an image
+     keep the plain text-only layout (no placeholder box). */}}
+<div class="th-dh">
+  <div class="th-page">
+    <header class="th-page-header">
+      <h1 class="th-page-title">Over a decade of building history on the web.</h1>
+      {{ with .Content }}<div class="th-page-lede lm-prose">{{ . }}</div>{{ end }}
+    </header>
+  </div>
+
+  <ol class="th-dh-rows">
+    {{ range $i, $p := hugo.Data.dh_projects }}
+    <li class="th-dh-row">
+      <div class="th-dh-num">{{ printf "%02d" (add $i 1) }}</div>
+      <div class="th-dh-body{{ if $p.image }} th-dh-body-thumb{{ end }}">
+        {{ with $p.image }}<img class="th-dh-thumb" src="/assets/images/{{ . }}" alt="" loading="lazy" decoding="async">{{ end }}
+        <div>
+          <h3 class="th-dh-title">
+            <a href="{{ $p.url }}" target="_blank" rel="noopener">{{ $p.title }}<span class="th-dh-arrow" aria-hidden="true">&nearr;</span></a>
+          </h3>
+          {{ with $p.desc }}<p class="th-dh-desc">{{ . }}</p>{{ end }}
+        </div>
+      </div>
+    </li>
+    {{ end }}
+  </ol>
+</div>
+{{ end }}

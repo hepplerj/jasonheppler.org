@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{/* Trailhead — all-tags index. Reuses the identity pane's dotted-leader
+     TOC components (.th-toc-list / .th-toc-label / .th-toc-leader /
+     .th-toc-count from 30-components.css) rather than inventing a new
+     leader treatment — functionally the same idea as
+     themes/sagebrush/layouts/tags/list.html's tag cloud, but rendered as
+     a proper leader-line index per the brief. */}}
+<div class="th-reading-col">
+  <header class="th-page-header">
+    <p class="th-label">Topics</p>
+    <h1 class="th-page-title">{{ .Title | default "Tags" }}</h1>
+    <p class="th-page-lede">Every topic written about here, by frequency.</p>
+  </header>
+
+  <nav aria-label="All tags">
+    <ol class="th-toc-list th-tag-index">
+      {{ range site.Taxonomies.tags.ByCount }}
+      <li>
+        <a href="{{ .Page.RelPermalink }}">
+          <span class="th-toc-label">{{ .Page.Title | humanize }}</span>
+          <span class="th-toc-leader"></span>
+          <span class="th-toc-count">{{ .Count }}</span>
+        </a>
+      </li>
+      {{ end }}
+    </ol>
+  </nav>
+</div>
+{{ end }}

@@ -1,0 +1,142 @@
+{{ define "main" }}
+{{/* Trailhead — full unified archive (blog + microblog union), matching
+     content/archive.md (`type: archive`, `layout: archive`). Same union
+     sagebrush's archive/single.html and static/js/archive-filter.js use,
+     but the ledger itself is the homepage's Year/Type/Work grid uncapped,
+     with the same year-suppression rhythm ($prevYear pattern from
+     layouts/index.html), plus filter chips + search.
+
+     JS note: static/js/archive-filter.js (root-level) is only wired up by
+     the parked themes/big-sky, not the live themes/sagebrush — sagebrush's
+     own archive/single.html uses a small inline script instead (matching
+     ids to its own markup). This template follows that same precedent: a
+     small inline script below, with th-prefixed ids/classes rather than
+     the big-sky bs-* selectors, since reusing the orphaned file verbatim
+     would mean adopting its non-th- naming for no real gain. */}}
+
+{{ $blog := where site.RegularPages "Section" "blog" }}
+{{ $micro := where site.RegularPages "Section" "microblog" }}
+{{ $all := (union $blog $micro).ByDate.Reverse }}
+{{ $essayCount := len $blog }}
+{{ $microblogCount := len $micro }}
+{{ $total := len $all }}
+
+<div class="th-archive">
+  <div class="th-page">
+    <header class="th-page-header">
+      <h1 class="th-page-title">{{ .Title }}</h1>
+      {{ with .Content }}<div class="th-page-lede">{{ . }}</div>{{ else }}<p class="th-page-lede">Longer essays and short notes, one stream you can filter and search.</p>{{ end }}
+    </header>
+  </div>
+
+  <div class="th-archive-controls">
+    <div class="th-chips" id="archiveChips" role="group" aria-label="Filter by type">
+      <button type="button" class="th-chip is-active" data-filter="all">All <span class="th-chip-count">{{ $total }}</span></button>
+      <button type="button" class="th-chip" data-filter="essay">Essays <span class="th-chip-count">{{ $essayCount }}</span></button>
+      <button type="button" class="th-chip" data-filter="microblog">Microblog <span class="th-chip-count">{{ $microblogCount }}</span></button>
+    </div>
+    <input type="search" id="archiveSearch" class="th-search" placeholder="Search titles&hellip;" aria-label="Search titles">
+  </div>
+
+  <p class="th-archive-count" id="archiveResultCount"></p>
+
+  <div class="th-index-head">
+    <span>Year</span>
+    <span>Type</span>
+    <span>Work</span>
+  </div>
+
+  <ol class="th-rows" id="archiveRows">
+    {{ $prevYear := 0 }}
+    {{ range $all }}
+    {{ $type := cond (eq .Section "blog") "essay" "microblog" }}
+    {{ $label := cond (eq .Section "blog") "Essay" "Microblog" }}
+    {{ $repeat := eq .Date.Year $prevYear }}
+    <li class="th-row" data-type="{{ $type }}" data-title="{{ .Title | lower }}">
+      <div class="th-col-year{{ if $repeat }} th-repeat{{ end }}">{{ .Date.Year }}</div>
+      <div class="th-col-type">{{ $label }}</div>
+      <div>
+        <h3 class="th-row-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="th-row-meta">{{ .Date.Format "Jan 2, 2006" }}</p>
+      </div>
+    </li>
+    {{ $prevYear = .Date.Year }}
+    {{ end }}
+  </ol>
+
+  <p class="th-archive-empty" id="archiveEmpty" style="display:none">No entries match your search.</p>
+</div>
+
+{{/* Year-suppression-under-filter fix, ported from layouts/index.html
+     (see the identical comment there for the full writeup): the server
+     renders `.th-repeat` once, against the FULL unfiltered row order, so
+     filtering/searching can hide the row that was carrying a year and
+     strand a later same-year row in its faded "repeat" state — the year
+     silently disappears from the visible list instead of surfacing on
+     the new first row. update() below recomputes `.th-repeat` on every
+     filter/search pass instead of trusting the server-rendered class:
+     walk rows in DOM order, skip hidden ones, and toggle `.th-repeat`
+     based on whether each visible row is the first occurrence of its
+     year.
+
+     Note for future edits: literal JS comments (both slash-slash and
+     slash-star block style) inside this inline script block get silently
+     stripped from Hugo's build output — Go's html/template elides them
+     as part of its script-context escaping, confirmed by isolated test,
+     not a bug in this file. That's why the explanation lives here, in a
+     Hugo template comment, rather than inline in the script below. */}}
+<script>
+(function () {
+  var chips = document.querySelectorAll('#archiveChips .th-chip');
+  var search = document.getElementById('archiveSearch');
+  var rows = document.querySelectorAll('#archiveRows .th-row');
+  var resultCount = document.getElementById('archiveResultCount');
+  var empty = document.getElementById('archiveEmpty');
+  var filter = 'all';
+  var query = '';
+
+  function update() {
+    var visible = 0;
+    var q = query.toLowerCase();
+    rows.forEach(function (row) {
+      var matchType = filter === 'all' || row.dataset.type === filter;
+      var matchQuery = !q || row.dataset.title.indexOf(q) !== -1;
+      var show = matchType && matchQuery;
+      row.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    resultCount.textContent = visible + ' entr' + (visible !== 1 ? 'ies' : 'y');
+    empty.style.display = visible === 0 ? '' : 'none';
+
+    var lastYear = null;
+    rows.forEach(function (row) {
+      if (row.style.display === 'none') return;
+      var yearEl = row.querySelector('.th-col-year');
+      var year = yearEl.textContent.trim();
+      if (year === lastYear) {
+        yearEl.classList.add('th-repeat');
+      } else {
+        yearEl.classList.remove('th-repeat');
+        lastYear = year;
+      }
+    });
+  }
+
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      chips.forEach(function (c) { c.classList.remove('is-active'); });
+      chip.classList.add('is-active');
+      filter = chip.dataset.filter;
+      update();
+    });
+  });
+
+  search.addEventListener('input', function () {
+    query = search.value;
+    update();
+  });
+
+  update();
+})();
+</script>
+{{ end }}

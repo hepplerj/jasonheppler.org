@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Locale | default "en" }}">
+<head>
+  {{ partial "th-head.html" . }}
+  {{ $css := resources.Match "stylesheets/trailhead/*.css" }}
+  {{ $style := $css | resources.Concat "css/trailhead.css" | resources.Minify | resources.Fingerprint "sha512" }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+</head>
+<body>
+  <div class="th-shell">
+    <div class="th-spine" aria-hidden="true"></div>
+
+    {{ partial "th-pane.html" . }}
+
+    <main class="th-content">
+      {{ block "main" . }}{{ end }}
+    </main>
+  </div>
+  {{ partial "th-scripts.html" . }}
+</body>
+</html>

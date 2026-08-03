@@ -1,0 +1,117 @@
+{{ define "main" }}
+{{/* Bookshelf. Data wiring ported from themes/sagebrush/layouts/books/list.html
+     (currently-reading via categories intersect "reading", reading log
+     filtered to 2018+, year chips, ISBN details/summary). The shared
+     static/js/bookshelf-filter.js targets .bs-shelf-entry / #shelfChips
+     .bs-chip selectors from the parked big-sky theme — sagebrush doesn't
+     use it either (it ships its own inline script), so this template
+     follows that precedent with a small inline script scoped to the
+     .th-shelf-* classes below rather than forking/renaming the shared file.
+     See THEME-NOTES.md for the .th-label primitive reused here. */}}
+<div>
+  <div class="th-page">
+    <header class="th-page-header">
+      <h1 class="th-page-title">Bookshelf</h1>
+      <p class="th-page-lede">What I'm reading and have read. For older reading logs, see <a href="https://www.librarything.com/profile/hepplerj" target="_blank" rel="noopener">LibraryThing</a>.</p>
+    </header>
+  </div>
+
+  {{ $reading := where (where site.RegularPages "Section" "books") ".Params.categories" "intersect" (slice "reading") }}
+  {{ with $reading }}
+  <section class="th-shelf-section">
+    <p class="th-pub-h2" style="padding-top:0;">Currently reading</p>
+    <div class="th-shelf">
+      {{ range . }}
+      <div class="th-shelf-entry">
+        <div class="th-shelf-row">
+          <span class="th-shelf-info">
+            <span class="th-shelf-title">{{ .Title }}</span>
+            <span class="th-shelf-meta">{{ .Params.author }}{{ with .Params.pub_year }} &middot; {{ . }}{{ end }}</span>
+          </span>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{ $allBooks := where (where site.RegularPages "Section" "books") ".Date" "ge" (time "2018-01-01") }}
+  <section class="th-shelf-section">
+    <div class="th-shelf-controls">
+      <div class="th-shelf-chips" id="shelfChips">
+        {{ $years := slice }}
+        {{ range $allBooks }}{{ $y := .Date.Format "2006" }}{{ if not (in $years $y) }}{{ $years = $years | append $y }}{{ end }}{{ end }}
+        {{ range sort $years "value" "desc" }}
+        <button class="th-shelf-chip{{ if eq . (now.Format "2006") }} on{{ end }}" data-shelf="{{ . }}">{{ . }}</button>
+        {{ end }}
+        <button class="th-shelf-chip" data-shelf="all">All</button>
+      </div>
+      <p class="th-shelf-count" id="shelfCount"></p>
+    </div>
+
+    <div class="th-shelf" id="shelfList">
+      {{ range $allBooks.ByDate.Reverse }}
+      {{ if not (in .Params.categories "reading") }}
+      <div class="th-shelf-entry" data-year="{{ .Date.Format "2006" }}">
+        {{ $reviewed := "" }}{{ if .Params.reviewed }}{{ $reviewed = .Permalink }}{{ with .Params.review_url }}{{ $reviewed = . }}{{ end }}{{ end }}
+        {{ if .Params.isbn }}
+        <details>
+          <summary class="th-shelf-row">
+            <span class="th-shelf-info">
+              <span class="th-shelf-title">{{ with $reviewed }}<a href="{{ . }}" class="th-shelf-badge" target="_blank" rel="noopener">Reviewed</a> {{ end }}{{ .Title }}</span>
+              <span class="th-shelf-meta">{{ .Params.author }}{{ with .Params.pub_year }} &middot; {{ . }}{{ end }}</span>
+            </span>
+            <span class="th-shelf-year">{{ .Date.Format "2006" }}</span>
+          </summary>
+          <div class="th-shelf-expanded">
+            <span class="th-shelf-isbn">ISBN {{ .Params.isbn }}</span>
+            <span class="th-shelf-links">
+              <a href="https://worldcat.org/isbn/{{ .Params.isbn }}" target="_blank" rel="noopener">WorldCat</a>
+              <a href="https://openlibrary.org/isbn/{{ .Params.isbn }}" target="_blank" rel="noopener">Open Library</a>
+              <a href="https://bookshop.org/beta-search?keywords={{ .Params.isbn }}" target="_blank" rel="noopener">Bookshop</a>
+            </span>
+            {{ with .Params.publisher }}<span class="th-shelf-publisher">{{ . }}</span>{{ end }}
+          </div>
+        </details>
+        {{ else }}
+        <div class="th-shelf-row">
+          <span class="th-shelf-info">
+            <span class="th-shelf-title">{{ with $reviewed }}<a href="{{ . }}" class="th-shelf-badge" target="_blank" rel="noopener">Reviewed</a> {{ end }}{{ .Title }}</span>
+            <span class="th-shelf-meta">{{ .Params.author }}{{ with .Params.pub_year }} &middot; {{ . }}{{ end }}</span>
+          </span>
+          <span class="th-shelf-year">{{ .Date.Format "2006" }}</span>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </section>
+</div>
+
+<script>
+  (function () {
+    var chips = document.querySelectorAll('#shelfChips .th-shelf-chip');
+    var entries = document.querySelectorAll('#shelfList .th-shelf-entry');
+    var count = document.getElementById('shelfCount');
+    function apply(shelf) {
+      var visible = 0;
+      entries.forEach(function (e) {
+        var show = shelf === 'all' || e.dataset.year === shelf;
+        e.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      count.textContent = visible + ' book' + (visible !== 1 ? 's' : '') + (shelf === 'all' ? '' : ' in ' + shelf);
+    }
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        chips.forEach(function (c) { c.classList.remove('on'); });
+        chip.classList.add('on');
+        apply(chip.dataset.shelf);
+      });
+    });
+    var active = document.querySelector('#shelfChips .th-shelf-chip.on');
+    apply(active ? active.dataset.shelf : 'all');
+  })();
+</script>
+{{ end }}

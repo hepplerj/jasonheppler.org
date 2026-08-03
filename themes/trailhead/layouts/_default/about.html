@@ -1,0 +1,88 @@
+{{ define "main" }}
+{{/* About page — ports content wiring from themes/sagebrush/layouts/_default/about.html:
+     hardcoded role band, prose body from content/about.md, computed stats
+     (years writing / posts / words / links shared / topics), and a
+     "Connect / Slash Pages / Pages & Feeds" link section.
+
+     Restyled in the trailhead idiom: roles are uppercase National Park
+     labels (not cards), and each link column reuses the pane's TOC
+     dotted-leader pattern (.th-toc-list / .th-toc-label / .th-toc-leader
+     from 30-components.css) instead of a plain <ul>. */}}
+<article class="th-page th-about">
+  <h1 class="th-page-title">{{ .Title }}</h1>
+
+  <div class="th-about-roles">
+    <div class="th-about-role">
+      <p class="th-about-role-title">Senior Developer / Scholar</p>
+      <p class="th-about-role-org">Roy Rosenzweig Center for History &amp; New Media</p>
+    </div>
+    <div class="th-about-role">
+      <p class="th-about-role-title">Adjunct Professor of History</p>
+      <p class="th-about-role-org">George Mason University</p>
+    </div>
+    <div class="th-about-role">
+      <p class="th-about-role-title">Affiliate Fellow</p>
+      <p class="th-about-role-org">Center for Great Plains Studies, University of Nebraska&ndash;Lincoln</p>
+    </div>
+  </div>
+
+  <div class="th-prose lm-prose th-about-body">
+    {{ .Content }}
+  </div>
+
+  {{ $posts := where site.RegularPages "Section" "in" (slice "blog" "microblog") }}
+  {{ $wordCount := 0 }}
+  {{ range $posts }}{{ $wordCount = add $wordCount .WordCount }}{{ end }}
+  {{ $postCount := len $posts }}
+  {{ $yearsActive := 0 }}
+  {{ if gt (len $posts) 0 }}
+    {{ $firstYear := (index (last 1 $posts) 0).Date.Year }}
+    {{ $yearsActive = sub now.Year $firstYear | add 1 }}
+  {{ end }}
+
+  <div class="th-about-stats">
+    <div class="th-about-stat"><span class="th-about-stat-num">{{ $yearsActive }}</span><span class="th-about-stat-label">Years writing</span></div>
+    <div class="th-about-stat"><span class="th-about-stat-num">{{ $postCount | lang.FormatNumberCustom 0 }}</span><span class="th-about-stat-label">Posts</span></div>
+    <div class="th-about-stat"><span class="th-about-stat-num">{{ div $wordCount 1000 | lang.FormatNumberCustom 0 }}k</span><span class="th-about-stat-label">Words written</span></div>
+    <div class="th-about-stat"><span class="th-about-stat-num">{{ len (where (where site.RegularPages "Section" "microblog") ".Params.external" "ne" nil) | lang.FormatNumberCustom 0 }}</span><span class="th-about-stat-label">Links shared</span></div>
+    <div class="th-about-stat"><span class="th-about-stat-num">{{ len site.Taxonomies.tags }}</span><span class="th-about-stat-label">Topics</span></div>
+  </div>
+
+  <div class="th-about-links">
+    <div class="th-about-col">
+      <p class="th-label">Connect</p>
+      <ul class="th-toc-list th-about-link-list">
+        {{ with site.Params.Author.email }}
+        {{ $parts := split . "@" }}
+        <li><a href="#" class="bs-email-link" data-name="{{ index $parts 0 }}" data-domain="{{ index $parts 1 }}"><span class="th-toc-label">Email</span><span class="th-toc-leader"></span></a></li>
+        {{ end }}
+        {{ with site.Params.social.bluesky }}<li><a href="{{ . }}"><span class="th-toc-label">Bluesky</span><span class="th-toc-leader"></span></a></li>{{ end }}
+        {{ with site.Params.social.mastodon }}<li><a href="{{ . }}" rel="me"><span class="th-toc-label">Mastodon</span><span class="th-toc-leader"></span></a></li>{{ end }}
+        {{ with site.Params.social.github }}<li><a href="{{ . }}"><span class="th-toc-label">GitHub</span><span class="th-toc-leader"></span></a></li>{{ end }}
+        {{ with site.Params.social.linkedin }}<li><a href="{{ . }}"><span class="th-toc-label">LinkedIn</span><span class="th-toc-leader"></span></a></li>{{ end }}
+        {{ with site.Params.social.microblog }}<li><a href="{{ . }}"><span class="th-toc-label">Micro.blog</span><span class="th-toc-leader"></span></a></li>{{ end }}
+        <li><a href="https://www.tackandink.org/"><span class="th-toc-label">Newsletter</span><span class="th-toc-leader"></span></a></li>
+      </ul>
+    </div>
+    <div class="th-about-col">
+      <p class="th-label">Slash Pages</p>
+      <ul class="th-toc-list th-about-link-list">
+        <li><a href="/now/"><span class="th-toc-label">/now</span><span class="th-toc-leader"></span></a></li>
+        <li><a href="/nope/"><span class="th-toc-label">/nope</span><span class="th-toc-leader"></span></a></li>
+        <li><a href="/uses/"><span class="th-toc-label">/uses</span><span class="th-toc-leader"></span></a></li>
+        <li><a href="/blogroll/"><span class="th-toc-label">/blogroll</span><span class="th-toc-leader"></span></a></li>
+      </ul>
+    </div>
+    <div class="th-about-col">
+      <p class="th-label">Pages &amp; Feeds</p>
+      <ul class="th-toc-list th-about-link-list">
+        <li><a href="/courses/"><span class="th-toc-label">Teaching</span><span class="th-toc-leader"></span></a></li>
+        <li><a href="/office-hours/"><span class="th-toc-label">Office Hours</span><span class="th-toc-leader"></span></a></li>
+        <li><a href="/norwegian/"><span class="th-toc-label">Norwegian resources</span><span class="th-toc-leader"></span></a></li>
+        <li><a href="/feed.xml"><span class="th-toc-label">RSS</span><span class="th-toc-leader"></span></a></li>
+        <li><a href="/feed.json"><span class="th-toc-label">JSON Feed</span><span class="th-toc-leader"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</article>
+{{ end }}

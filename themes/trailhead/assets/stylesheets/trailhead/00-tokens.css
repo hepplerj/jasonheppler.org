@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Trailhead — 00 Tokens
+   Design custom properties extracted from the approved "Index" mockup
+   (concept-1-index.html). Phase 2 agents: add new tokens here, never
+   hardcode hex/rem values in component files.
+   ========================================================================== */
+
+:root {
+  /* ---- color ---- */
+  --th-paper: #efe8db;
+  --th-paper-raised: #e7ddc9;
+  --th-ink: #15130e;
+  --th-ink-soft: #6e6b60;
+  --th-ink-faint: #a6a296;
+  --th-accent-green: #1e4d3b;
+  --th-rule: #d9d5c8;
+  --th-rule-strong: #c7c2b2;
+
+  /* ---- type families ---- */
+  /* National Park: structural/label face — eyebrows, TOC labels, column
+     headers, type tags. Always uppercase when used. */
+  --th-font-header: "National Park", ui-sans-serif, system-ui, sans-serif;
+  /* Public Sans: body copy, titles, prose. */
+  --th-font-body: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  /* Space Mono: numerals — years, counts, tallies. */
+  --th-font-mono: "Space Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  /* ---- layout ---- */
+  --th-split: 50%;
+  --th-index-cols: 4.4rem 6.4rem 1fr;
+  --th-index-cols-tablet: 3.6rem 5rem 1fr;
+
+  /* ---- spacing scale ---- */
+  --th-space-1: .3rem;
+  --th-space-2: .6rem;
+  --th-space-3: 1rem;
+  --th-space-4: 1.4rem;
+  --th-space-5: 2rem;
+  --th-space-6: 3rem;
+  --th-space-7: 4.5rem;
+
+  /* ---- misc ---- */
+  --th-radius: 2px;
+}

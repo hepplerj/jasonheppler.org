@@ -1,0 +1,17 @@
+{{ define "main" }}
+{{/* Trailhead — generic single page (colophon, style-guide, /page/* stubs,
+     anything without a section-specific template). Reading column + prose,
+     replacing the Phase 1 placeholder. */}}
+{{ $kicker := .Section }}
+{{ if not $kicker }}{{ $kicker = .Type }}{{ end }}
+<article class="th-reading-col">
+  <header class="th-page-header">
+    <h1 class="th-page-title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="th-page-lede">{{ . }}</p>{{ end }}
+    {{ if .Date }}<p class="th-row-meta">{{ .Date.Format "January 2, 2006" }}</p>{{ end }}
+  </header>
+  <div class="th-prose lm-prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

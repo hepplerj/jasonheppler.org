@@ -1,0 +1,32 @@
+{{ define "main" }}
+{{/* Trailhead — generic list page (section fallback: /page/, /newsletter/,
+     /lab/, anything without a dedicated list template). Reading column +
+     prose + a simple ledger of child pages, replacing the Phase 1
+     placeholder. */}}
+{{ $kicker := .Section }}
+{{ if not $kicker }}{{ $kicker = .Type }}{{ end }}
+<div class="th-reading-col">
+  <header class="th-page-header">
+    <h1 class="th-page-title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="th-prose lm-prose">{{ . }}</div>{{ end }}
+  </header>
+
+  {{ if .Pages }}
+  <ol class="th-rows">
+    {{ $prevYear := 0 }}
+    {{ range .Pages.ByDate.Reverse }}
+    {{ $yr := .Date.Year }}
+    {{ $repeat := eq $yr $prevYear }}
+    <li class="th-row" data-type="{{ .Section }}">
+      <div class="th-col-year{{ if $repeat }} th-repeat{{ end }}">{{ if not .Date.IsZero }}{{ $yr }}{{ end }}</div>
+      <div class="th-col-type">{{ .Section | humanize }}</div>
+      <div>
+        <h3 class="th-row-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      </div>
+    </li>
+    {{ $prevYear = $yr }}
+    {{ end }}
+  </ol>
+  {{ end }}
+</div>
+{{ end }}

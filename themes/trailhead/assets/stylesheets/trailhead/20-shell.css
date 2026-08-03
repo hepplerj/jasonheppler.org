@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Trailhead — 20 Shell
+   The split-screen layout: fixed left identity pane (.th-pane), scrolling
+   right pane (.th-content), collapsing to a stacked column below 900px.
+   This shell is used site-wide (baseof.html) — the left pane persists on
+   every page; only what's inside .th-content changes per template.
+   ========================================================================== */
+
+.th-shell {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Hairline dividing the two panes, with a small square "waypoint" marker
+   at the vertical center — decorative, hidden from assistive tech. */
+.th-spine {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: var(--th-split);
+  width: 1px;
+  background: var(--th-accent-green);
+  pointer-events: none;
+  z-index: 5;
+}
+
+
+/* ---------- identity (left, fixed) ---------- */
+.th-pane {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--th-split);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(2rem, 4vw, 4.5rem);
+  padding-right: clamp(2.5rem, 5vw, 5.5rem);
+  z-index: 2;
+  overflow-y: auto;
+}
+
+/* ---------- content (right, scrolling) ---------- */
+.th-content {
+  margin-left: var(--th-split);
+  min-height: 100vh;
+  padding: 0 clamp(1.6rem, 4vw, 4rem) 8rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Narrower reading column for prose pages (single/list placeholders and,
+   later, real inner templates) — sits inside .th-content. */
+.th-reading-col {
+  max-width: 62ch;
+  padding-top: clamp(2rem, 5vh, 4rem);
+}
+
+/* ---------- responsive: stacked ---------- */
+@media (max-width: 900px) {
+  .th-spine {
+    display: none;
+  }
+
+  .th-pane {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 2rem 1.4rem 2.4rem;
+    border-bottom: 2px solid var(--th-ink);
+    overflow-y: visible;
+  }
+
+  .th-content {
+    margin-left: 0;
+    padding: 0 1.4rem 5rem;
+  }
+}
