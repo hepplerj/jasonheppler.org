@@ -5,9 +5,6 @@
   <div class="lm-archive-lead">{{ .Content }}</div>
 </header>
 
-{{/* Numbered ledger rows ported from trailhead's digital-history page:
-     mono index, hairline rows, small grayscale thumbnails that colorize
-     on hover. Rows without an `image` stay text-only (no placeholder). */}}
 <ol class="lm-dh-rows">
   {{ range $i, $p := hugo.Data.dh_projects }}
   <li class="lm-dh-row">
@@ -16,7 +13,7 @@
       {{ with $p.image }}<img class="lm-dh-thumb" src="/assets/images/{{ . }}" alt="" loading="lazy" decoding="async">{{ end }}
       <div>
         <h3 class="lm-dh-title">
-          <a href="{{ $p.url }}" target="_blank" rel="noopener">{{ $p.title }}<span class="lm-dh-arrow" aria-hidden="true">&nearr;</span></a>
+          <a href="{{ $p.url }}" target="_blank" rel="noopener">{{ $p.title }}</a>
         </h3>
         {{ with $p.desc }}<p class="lm-dh-desc">{{ . }}</p>{{ end }}
       </div>

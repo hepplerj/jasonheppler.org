@@ -281,7 +281,6 @@ a {
   font-family: var(--mono);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--bf-gold);
   margin: 0 0 22px;
 }
 
@@ -2913,7 +2912,6 @@ body.bf {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  font-size: 12.5px;
   letter-spacing: .02em;
 }
 
