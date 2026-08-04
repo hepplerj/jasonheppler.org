@@ -129,14 +129,29 @@
       </a>
       {{ end }}
     </div>
+    <div class="bf-col">
+      <div class="bf-col-head">
+        <span class="bf-col-label">On the Road</span>
+      </div>
+      {{ with hugo.Data.on_the_road }}
+      {{ range first 3 (sort . "date" "desc") }}
+      {{ if .url }}<a href="{{ .url }}" class="bf-row" target="_blank" rel="noopener">{{ else }}<div class="bf-row">{{ end }}
+        <span class="bf-row-main">
+          <span class="bf-row-title">{{ .title }}</span>
+          {{ with .venue }}<span class="bf-row-source">{{ . }}</span>{{ end }}
+        </span>
+        <span class="bf-row-meta">{{ .label }}</span>
+      {{ if .url }}</a>{{ else }}</div>{{ end }}
+      {{ end }}
+      {{ end }}
+    </div>
   </section>
 
   {{/* Newsletter */}}
   <section class="bf-news">
     <div class="bf-news-inner">
-      <p class="bf-news-eyebrow">Newsletter</p>
       <h2 class="bf-news-title">Tack &amp; Ink</h2>
-      <p class="bf-news-desc">Occasional writing on the American West, agricultural history, and political culture.</p>
+      <p class="bf-news-desc">Subscribe to my newsletter <em>Tack &amp; Ink</em>, an occasional writing on the American West, agricultural history, and political culture.</p>
       <form class="bf-news-form" action="https://buttondown.com/api/emails/embed-subscribe/plainsink" method="post" target="_blank">
         <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
         <button type="submit">Subscribe</button>

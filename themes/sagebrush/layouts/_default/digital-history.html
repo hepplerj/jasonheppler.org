@@ -5,19 +5,23 @@
   <div class="lm-archive-lead">{{ .Content }}</div>
 </header>
 
-<div class="lm-dh-grid">
-  {{ range hugo.Data.dh_projects }}
-  {{ $title := .title }}
-  <a href="{{ .url }}" class="lm-project-card{{ if .image }} lm-project-card-img{{ end }}" target="_blank" rel="noopener">
-    {{ with .image }}<img class="lm-project-thumb" src="/assets/images/{{ . }}" alt="{{ $title }}" loading="lazy" decoding="async">{{ end }}
-    <span class="lm-project-body">
-      <span class="lm-project-head">
-        <span class="lm-project-title">{{ .title }}</span>
-        <span class="lm-project-arrow">&nearr;</span>
-      </span>
-      <span class="lm-project-desc">{{ .desc }}</span>
-    </span>
-  </a>
+{{/* Numbered ledger rows ported from trailhead's digital-history page:
+     mono index, hairline rows, small grayscale thumbnails that colorize
+     on hover. Rows without an `image` stay text-only (no placeholder). */}}
+<ol class="lm-dh-rows">
+  {{ range $i, $p := hugo.Data.dh_projects }}
+  <li class="lm-dh-row">
+    <div class="lm-dh-num">{{ printf "%02d" (add $i 1) }}</div>
+    <div class="lm-dh-body{{ if $p.image }} lm-dh-body-thumb{{ end }}">
+      {{ with $p.image }}<img class="lm-dh-thumb" src="/assets/images/{{ . }}" alt="" loading="lazy" decoding="async">{{ end }}
+      <div>
+        <h3 class="lm-dh-title">
+          <a href="{{ $p.url }}" target="_blank" rel="noopener">{{ $p.title }}<span class="lm-dh-arrow" aria-hidden="true">&nearr;</span></a>
+        </h3>
+        {{ with $p.desc }}<p class="lm-dh-desc">{{ . }}</p>{{ end }}
+      </div>
+    </div>
+  </li>
   {{ end }}
-</div>
+</ol>
 {{ end }}

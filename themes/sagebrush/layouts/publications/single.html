@@ -21,6 +21,14 @@
     </div>
     {{ end }}
 
+    {{ if or .Params.isbn_paperback .Params.isbn_hardcover .Params.isbn_ebook }}
+    <div class="lm-isbn-grid">
+      {{ with .Params.isbn_paperback }}<div class="lm-isbn-item"><span class="lm-isbn-label">Paperback ISBN</span><span class="lm-isbn-number">{{ . }}</span></div>{{ end }}
+      {{ with .Params.isbn_hardcover }}<div class="lm-isbn-item"><span class="lm-isbn-label">Hardcover ISBN</span><span class="lm-isbn-number">{{ . }}</span></div>{{ end }}
+      {{ with .Params.isbn_ebook }}<div class="lm-isbn-item"><span class="lm-isbn-label">Ebook ISBN</span><span class="lm-isbn-number">{{ . }}</span></div>{{ end }}
+    </div>
+    {{ end }}
+
     <div class="lm-prose lm-bookhead-prose">{{ .Content }}</div>
   </div>
 </section>
@@ -49,26 +57,6 @@
     <cite>{{ .author }}{{ with $pub }}, {{ if $url }}<a href="{{ $url }}">{{ . }}</a>{{ else }}{{ . }}{{ end }}{{ end }}</cite>
   </blockquote>
   {{ end }}
-</section>
-{{ end }}
-
-{{ if or .Params.purchase_links .Params.library_link }}
-<section class="lm-buy-footer">
-  <p class="lm-label">Get the book</p>
-  <p class="lm-buy-links">
-    {{ range $i, $l := .Params.purchase_links }}{{ if $i }} · {{ end }}<a href="{{ $l.url }}">{{ $l.name }}</a>{{ end }}
-    {{ with .Params.library_link }}{{ if .url }} · <a href="{{ .url }}">Find in a library</a>{{ end }}{{ end }}
-  </p>
-</section>
-{{ end }}
-
-{{ if or .Params.isbn_paperback .Params.isbn_hardcover .Params.isbn_ebook }}
-<section class="lm-isbn">
-  <div class="lm-isbn-grid">
-    {{ with .Params.isbn_paperback }}<div class="lm-isbn-item"><span class="lm-isbn-label">Paperback ISBN</span><span class="lm-isbn-number">{{ . }}</span></div>{{ end }}
-    {{ with .Params.isbn_hardcover }}<div class="lm-isbn-item"><span class="lm-isbn-label">Hardcover ISBN</span><span class="lm-isbn-number">{{ . }}</span></div>{{ end }}
-    {{ with .Params.isbn_ebook }}<div class="lm-isbn-item"><span class="lm-isbn-label">Ebook ISBN</span><span class="lm-isbn-number">{{ . }}</span></div>{{ end }}
-  </div>
 </section>
 {{ end }}
 
