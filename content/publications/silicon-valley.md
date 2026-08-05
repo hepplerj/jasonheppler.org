@@ -38,6 +38,10 @@ reviews:
     publication: "H-Net"
     url: "https://networks.h-net.org/group/reviews/20142443/ameen-heppler-silicon-valley-and-environmental-inequalities-high-tech"
     quote: "A valuable contribution to urban environmental history. Heppler makes a convincing case that the valley's landscape — designed, contested, and unequally experienced — deserves as much attention as its tech economy and circuit boards."
+  - author: "Jeremy Vetter"
+    publication: "Technology and Culture"
+    url: "https://dx.doi.org/10.1353/tech.2026.a981007"
+    quote: "Based on deep primary source research in government documents, newspapers, organizational and public agency archives, and even some personal papers, Heppler's narrative provides an original, revealing account of shifting coalitions and factions within Silicon Valley municipal and regional politics. . . . this book provides a readable and analytically sophisticated account of political conflicts over land use and development in the world's showpiece high-tech industrial region."
 ---
 
 Few places symbolize the twentieth century American West like Silicon Valley. Stretching between the communities of Palo Alto to San Jose, this dense California region is home to the nation's most consequential high-tech industrial corridor. In the four decades following World War II, the region rapidly transformed from an agricultural economy to an industrial one fueled by government funding into defense-related research and development. Boosters of the new industrialization promised a modern, clean, and future-facing economy in the wake of declining steel-age industries and an emerging space-age arms race. New industries drove new populations who flocked to the valley as much for work as they did for its pleasant environment.
