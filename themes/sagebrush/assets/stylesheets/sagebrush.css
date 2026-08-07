@@ -2900,12 +2900,21 @@ body.bf {
 }
 
 .bf-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   font-family: var(--bf-serif);
   font-weight: 500;
   font-size: 21px;
   letter-spacing: .01em;
   text-decoration: none;
   color: var(--bf-ink);
+}
+
+.bf-brand-mark {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
 }
 
 .bf-nav {
