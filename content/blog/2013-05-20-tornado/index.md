@@ -1,6 +1,7 @@
 ---
 date: 2013-05-20T23:58:29Z
-image: spencer.webp
+hero: spencer.webp
+hero_alt: "Damage from the 1998 Spencer, South Dakota tornado"
 tags: [personal]
 title: On Tornadoes
 url: /2013/05/20/tornado/
