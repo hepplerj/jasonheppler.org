@@ -4853,3 +4853,15 @@ a.ba-index-item .ba-index-date {
     gap: 40px;
   }
 }
+
+/* ---- Hero: capped full bleed — edge-to-edge up to 1100px, centered ---- */
+.ba-hero {
+  width: min(100vw, 1100px);
+  max-width: none;
+  margin-left: calc(50% - min(50vw, 550px));
+  margin-right: calc(50% - min(50vw, 550px));
+}
+
+.ba-hero img {
+  border-radius: 0;
+}
