@@ -24,6 +24,21 @@ document.querySelectorAll('.lm-email-link').forEach(function (el) {
   });
 })();
 
+// Accent switcher: cycle through the Flexoki accents and persist.
+(function () {
+  var root = document.documentElement;
+  var btn = document.querySelector('.lm-accent');
+  if (!btn) return;
+  var order = ['green', 'cyan', 'blue', 'purple', 'magenta', 'red', 'orange', 'yellow'];
+  btn.addEventListener('click', function () {
+    var cur = root.getAttribute('data-accent') || 'green';
+    var next = order[(order.indexOf(cur) + 1) % order.length];
+    if (next === 'green') root.removeAttribute('data-accent');
+    else root.setAttribute('data-accent', next);
+    try { localStorage.setItem('ba-accent', next); } catch (e) {}
+  });
+})();
+
 // Theme switcher: cycle auto -> light -> dark and persist.
 (function () {
   var root = document.documentElement;

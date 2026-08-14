@@ -30,6 +30,14 @@ a {
   color: inherit;
 }
 
+.emphasize {
+  font-family: var(--sans);
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
 .lm-wrap {
   max-width: var(--col);
   margin: 0 auto;
@@ -698,10 +706,7 @@ a {
   text-decoration: underline;
 }
 
-/* ---- Research: numbered ledger rows (ported from trailhead .th-dh-*) ----
-   Mono index, hairline rows, pine accent bar slides in on hover.
-   Thumbnails sit grayscale until the row is engaged — keeps 30+
-   screenshots calm on page load. */
+/* ---- Research */
 .lm-dh-rows {
   list-style: none;
   margin: 40px 0 0;
@@ -3489,8 +3494,8 @@ a.bf-pub:hover img {
   --ba-ink: #333333;
   --ba-muted: #666666;
   --ba-faint: #999999;
-  --ba-accent: #66800B;
-  --ba-accent-deep: #536708;
+  --ba-accent: var(--flex-600);
+  --ba-accent-deep: color-mix(in srgb, var(--flex-600) 78%, black);
   --ba-accent-2: #24837B;
   --ba-hair: rgba(0, 0, 0, .12);
   --ba-hair-strong: rgba(0, 0, 0, .38);
@@ -3506,8 +3511,8 @@ a.bf-pub:hover img {
     --ba-ink: #d7d7d7;
     --ba-muted: #999999;
     --ba-faint: #777777;
-    --ba-accent: #879A39;
-    --ba-accent-deep: #a3b45c;
+    --ba-accent: var(--flex-400);
+    --ba-accent-deep: color-mix(in srgb, var(--flex-400) 72%, white);
     --ba-accent-2: #3AA99F;
     --ba-hair: rgba(255, 255, 255, .14);
     --ba-hair-strong: rgba(255, 255, 255, .4);
@@ -3523,8 +3528,8 @@ a.bf-pub:hover img {
   --ba-ink: #d7d7d7;
   --ba-muted: #999999;
   --ba-faint: #777777;
-  --ba-accent: #879A39;
-  --ba-accent-deep: #a3b45c;
+  --ba-accent: var(--flex-400);
+  --ba-accent-deep: color-mix(in srgb, var(--flex-400) 72%, white);
   --ba-accent-2: #3AA99F;
   --ba-hair: rgba(255, 255, 255, .14);
   --ba-hair-strong: rgba(255, 255, 255, .4);
@@ -3532,6 +3537,21 @@ a.bf-pub:hover img {
   --ba-shadow-h: rgba(0, 0, 0, .6);
   --ba-field: #2c2c2c;
 }
+
+/* Flexoki accent palette — data-accent on <html> picks the pair;
+   light mode uses the 600 value, dark mode the 400 (per Flexoki). */
+:root {
+  --flex-600: #66800B;
+  --flex-400: #879A39;
+}
+
+:root[data-accent="red"] { --flex-600: #AF3029; --flex-400: #D14D41; }
+:root[data-accent="orange"] { --flex-600: #BC5215; --flex-400: #DA702C; }
+:root[data-accent="yellow"] { --flex-600: #AD8301; --flex-400: #D0A215; }
+:root[data-accent="cyan"] { --flex-600: #24837B; --flex-400: #3AA99F; }
+:root[data-accent="blue"] { --flex-600: #205EA6; --flex-400: #4385BE; }
+:root[data-accent="purple"] { --flex-600: #5E409D; --flex-400: #8B7EC8; }
+:root[data-accent="magenta"] { --flex-600: #A02F6F; --flex-400: #CE5D97; }
 
 /* Legacy lm- token names, mapped onto --ba-* */
 :root {
@@ -4929,3 +4949,28 @@ a.bf-pub:hover .bf-pub-title {
   color: var(--ba-muted);
 }
 
+
+/* ---- Accent switcher: dot shows the current accent, click cycles ---- */
+.lm-accent {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 4px;
+  margin: 0;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.lm-accent-dot {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--ba-accent);
+  border: 1px solid var(--ba-hair-strong);
+  transition: transform .15s ease;
+}
+
+.lm-accent:hover .lm-accent-dot {
+  transform: scale(1.2);
+}

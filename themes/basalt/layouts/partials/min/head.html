@@ -98,5 +98,7 @@
     var root = document.documentElement;
     root.setAttribute('data-mode', mode);
     if (mode === 'light' || mode === 'dark') root.setAttribute('data-theme', mode);
+    var accent = localStorage.getItem('ba-accent');
+    if (accent && accent !== 'green') root.setAttribute('data-accent', accent);
   })();
 </script>
