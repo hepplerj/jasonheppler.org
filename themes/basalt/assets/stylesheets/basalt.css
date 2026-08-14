@@ -4036,7 +4036,7 @@ mark {
 }
 
 /* Drop cap on the opening paragraph */
-.ba-essay .lm-prose > p:first-child::first-letter {
+.ba-essay .lm-prose>p:first-child::first-letter {
   float: left;
   font-family: var(--serif);
   font-weight: 500;
@@ -4057,9 +4057,10 @@ mark {
 
 /* Hero + wide-breaking images (only when there's room) */
 @media (min-width: 900px) {
+
   .ba-hero,
   .ba-essay .lm-prose figure,
-  .ba-essay .lm-prose > p > img {
+  .ba-essay .lm-prose>p>img {
     margin-left: -60px;
     margin-right: -60px;
     max-width: calc(100% + 120px);
@@ -4069,7 +4070,7 @@ mark {
     max-width: 100%;
   }
 
-  .ba-essay .lm-prose > p > img {
+  .ba-essay .lm-prose>p>img {
     width: calc(100% + 120px);
   }
 }
@@ -4297,7 +4298,7 @@ a.ba-run-item:hover .ba-run-title {
 }
 
 /* Basalt footer sits flush when a band precedes it */
-.ba-gg + .bf-footer {
+.ba-gg+.bf-footer {
   margin-top: 0;
   border-top: none;
 }
@@ -4488,8 +4489,8 @@ a.ba-index-item .ba-index-date {
 }
 
 .ba-bio-photo {
-  width: 96px;
-  height: 96px;
+  width: 126px;
+  height: 126px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -4497,7 +4498,7 @@ a.ba-index-item .ba-index-date {
 }
 
 .ba-bio-lead {
-  font-size: 17.5px;
+  font-size: 24px;
   line-height: 1.6;
   color: var(--ba-muted);
   margin: 0;
@@ -4584,7 +4585,7 @@ a.ba-index-item .ba-index-date {
 }
 
 /* Bio follows the praise callout, which brings its own rule */
-.ba-praise + .ba-bio {
+.ba-praise+.ba-bio {
   border-top: none;
   padding-top: 0;
 }
@@ -4793,5 +4794,64 @@ a.ba-index-item .ba-index-date {
 
   .ba-nav-cols.lm-nav-open {
     flex-direction: column;
+  }
+}
+
+/* ---- Digital History: two-column project cards, no numbers ---- */
+.ba-dh-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px 56px;
+  margin-top: 44px;
+}
+
+.ba-dh-thumb-link {
+  display: block;
+}
+
+.ba-dh-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--ba-hair);
+  border-radius: 4px;
+  background: var(--ba-field);
+  filter: grayscale(1);
+  transition: filter .2s ease;
+}
+
+.ba-dh-card:hover .ba-dh-thumb {
+  filter: grayscale(0);
+}
+
+.ba-dh-title {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 16px 0 0;
+}
+
+.ba-dh-title a {
+  color: var(--ba-ink);
+  text-decoration: none;
+  transition: color .15s ease;
+}
+
+.ba-dh-title a:hover {
+  color: var(--ba-accent);
+}
+
+.ba-dh-desc {
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--ba-muted);
+  margin: 7px 0 0;
+}
+
+@media (max-width: 640px) {
+  .ba-dh-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
