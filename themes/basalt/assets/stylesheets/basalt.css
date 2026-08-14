@@ -4759,3 +4759,39 @@ a.ba-index-item .ba-index-date {
     max-width: 480px;
   }
 }
+
+/* ---- Nav: Craig-style stacked columns + bigger wordmark ---- */
+.bf-wordmark {
+  font-size: 20px;
+  gap: 14px;
+}
+
+.bf-brand-mark {
+  width: 46px;
+  height: 46px;
+}
+
+.ba-nav-cols {
+  align-items: flex-start;
+  gap: 12px 40px;
+}
+
+.ba-nav-col {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.ba-nav-cols .lm-theme {
+  margin-top: 1px;
+}
+
+@media (max-width: 720px) {
+  .ba-nav-col {
+    display: contents;
+  }
+
+  .ba-nav-cols.lm-nav-open {
+    flex-direction: column;
+  }
+}
