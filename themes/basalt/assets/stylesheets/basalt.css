@@ -4515,6 +4515,11 @@ a.ba-index-item .ba-index-date {
   object-fit: cover;
   flex-shrink: 0;
   filter: grayscale(1);
+  transition: filter .25s ease;
+}
+
+.ba-bio-photo:hover {
+  filter: grayscale(0);
 }
 
 .ba-bio-lead {
