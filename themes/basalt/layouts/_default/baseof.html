@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Locale | default "en" }}">
+<head>
+  {{ partial "min/head.html" . }}
+  {{ $ba := resources.Get "stylesheets/basalt.css" | resources.Minify | resources.Fingerprint "sha512" }}
+  <link rel="stylesheet" href="{{ $ba.RelPermalink }}">
+</head>
+<body class="bf bf-inner">
+  {{ partial "sb-header.html" . }}
+  <main class="sb-main{{ if eq .Section "publications" }} sb-wide{{ end }}">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "sb-footer.html" . }}
+  {{ partial "min/scripts.html" . }}
+</body>
+</html>

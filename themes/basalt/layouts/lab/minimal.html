@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ partial "lab/head.html" (dict "title" "Jason A. Heppler — minimal prototype") }}
+</head>
+<body>
+  <div class="lm-wrap">
+
+    {{ partial "lab/topbar.html" . }}
+
+    <section class="lm-intro">
+      <div class="lm-intro-head">
+        <figure class="lm-portrait">
+          <img src="/assets/images/portrait.webp" alt="Jason A. Heppler" width="88" height="88" loading="eager">
+          <figcaption>Photo by <a href="https://www.johnlegg.org/academic-photography">John Legg</a></figcaption>
+        </figure>
+        <h1>Historian of land and environmental politics in the North American West.</h1>
+      </div>
+      <p class="lm-bio">Hi, I'm Jason A. Heppler, a historian writing about the twentieth century North American West, Great Plains, and Canadian Prairies. I'm the senior developer/scholar at the <a href="https://rrchnm.org">Roy Rosenzweig Center for History and New Media</a> and an Affiliate Fellow at the <a href="https://www.unl.edu/plains/">Center for Great Plains Studies</a> at the University of Nebraska-Lincoln.</p>
+      <div class="lm-social">
+        <a class="lm-email-link" data-name="jason" data-domain="jasonheppler.org">Email</a>
+        {{ with site.Params.social.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
+        {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me">Mastodon</a>{{ end }}
+        {{ with site.Params.social.github }}<a href="{{ . }}">GitHub</a>{{ end }}
+      </div>
+    </section>
+
+    {{ $writing := first 7 (where site.RegularPages "Section" "in" (slice "blog" "notes")).ByDate.Reverse }}
+    {{ with $writing }}
+    <section class="lm-section">
+      <p class="lm-label">Recent writing</p>
+      <div class="lm-stream">
+        {{ range . }}
+        <a href="{{ .RelPermalink }}" class="lm-row">
+          <span class="lm-row-title">{{ .Title }}</span>
+          <time class="lm-row-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        </a>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+
+    {{ $books := (where (where site.RegularPages "Section" "publications") ".Params.image" "ne" nil).ByDate.Reverse }}
+    {{ with $books }}
+    <section class="lm-section lm-books">
+      <p class="lm-label">Books</p>
+      <div class="lm-book-grid">
+        {{ range . }}
+        <a href="{{ .RelPermalink }}" class="lm-book">
+          <img class="lm-book-cover" src="/assets/images/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" decoding="async">
+          <span class="lm-book-title">{{ .Title }}</span>
+          <span class="lm-book-meta">{{ with .Params.publisher }}{{ . }}{{ end }}{{ with .Params.year }} · {{ . }}{{ end }}</span>
+        </a>
+        {{ end }}
+      </div>
+      <a href="/publications/" class="lm-more">All publications &rarr;</a>
+    </section>
+    {{ end }}
+
+    {{ partial "lab/site-footer.html" . }}
+
+  </div>
+
+  {{ partial "lab/scripts.html" . }}
+</body>
+</html>

@@ -1,0 +1,176 @@
+{{ define "main" }}
+<header class="lm-archive-head">
+  <p class="lm-label">Archive</p>
+  <h1 class="lm-archive-title">{{ .Title }}</h1>
+  <div class="lm-archive-lead">{{ .Content }}</div>
+</header>
+
+{{ $tweets := hugo.Data.tweets }}
+
+{{/* Tweet counts by year-month */}}
+{{ $tweetMonthCounts := dict }}
+{{ range $tweets }}
+  {{ $ym := substr .date 0 7 }}
+  {{ $prev := index $tweetMonthCounts $ym | default 0 }}
+  {{ $tweetMonthCounts = merge $tweetMonthCounts (dict $ym (add $prev 1)) }}
+{{ end }}
+
+{{/* Blog/microblog post counts by year-month */}}
+{{ $postMonthCounts := dict }}
+{{ range $s := slice "blog" "microblog" }}
+  {{ range (where site.RegularPages "Section" $s) }}
+    {{ $ym := .Date.Format "2006-01" }}
+    {{ if not (hasPrefix $ym "0001") }}
+      {{ $prev := index $postMonthCounts $ym | default 0 }}
+      {{ $postMonthCounts = merge $postMonthCounts (dict $ym (add $prev 1)) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Micro.blog counts by year-month */}}
+{{ $microMonthCounts := dict }}
+{{ range hugo.Data.microblog }}
+  {{ $microMonthCounts = merge $microMonthCounts (dict .month .count) }}
+{{ end }}
+
+{{/* Combined month list + chart data JSON */}}
+{{ $allMonths := slice }}
+{{ range $ym, $_ := $tweetMonthCounts }}{{ if not (in $allMonths $ym) }}{{ $allMonths = $allMonths | append $ym }}{{ end }}{{ end }}
+{{ range $ym, $_ := $postMonthCounts }}{{ if not (in $allMonths $ym) }}{{ $allMonths = $allMonths | append $ym }}{{ end }}{{ end }}
+{{ range $ym, $_ := $microMonthCounts }}{{ if not (in $allMonths $ym) }}{{ $allMonths = $allMonths | append $ym }}{{ end }}{{ end }}
+{{ $allMonths = sort $allMonths }}
+{{ $chartData := slice }}
+{{ range $allMonths }}
+  {{ $ym := . }}
+  {{ $tc := index $tweetMonthCounts $ym | default 0 }}
+  {{ $pc := index $postMonthCounts $ym | default 0 }}
+  {{ $mc := index $microMonthCounts $ym | default 0 }}
+  {{ if or (gt $tc 0) (or (gt $pc 0) (gt $mc 0)) }}
+    {{ $chartData = $chartData | append (dict "month" $ym "tweets" $tc "posts" $pc "microblog" $mc) }}
+  {{ end }}
+{{ end }}
+
+<div id="histogram" class="tw-histogram"></div>
+<script>var _postMonthData = {{ $chartData | jsonify | safeJS }};</script>
+
+{{/* Year nav */}}
+{{ $years := slice }}
+{{ range $tweets }}{{ $y := substr .date 0 4 }}{{ if not (in $years $y) }}{{ $years = $years | append $y }}{{ end }}{{ end }}
+{{ $years = sort $years "value" "desc" }}
+
+<div class="tw-controls">
+  <input type="search" id="tweetSearch" class="lm-search" placeholder="Search tweets…" aria-label="Search tweets">
+  <label class="tw-replies"><input type="checkbox" id="hideReplies" checked> Hide replies</label>
+</div>
+<nav class="tw-years" aria-label="Jump to year">
+  {{ range $years }}<a href="#year-{{ . }}" class="tw-year-link">{{ . }}</a>{{ end }}
+</nav>
+<p class="tw-count" id="tweetCount">{{ len $tweets | lang.FormatNumber 0 }} tweets</p>
+
+{{ $monthNames := dict "01" "January" "02" "February" "03" "March" "04" "April" "05" "May" "06" "June" "07" "July" "08" "August" "09" "September" "10" "October" "11" "November" "12" "December" }}
+
+{{ range $years }}
+  {{ $year := . }}
+  {{ $yearPrefix := printf "%s-" $year }}
+  <section id="year-{{ $year }}" class="tw-year-section">
+    <h2 class="tw-year">{{ $year }}</h2>
+    {{ $yearTweets := where $tweets "date" "ge" $yearPrefix }}
+    {{ $yearTweets = where $yearTweets "date" "lt" (printf "%d-" (add (int $year) 1)) }}
+    {{ $months := slice }}
+    {{ range $yearTweets }}{{ $m := substr .date 5 2 }}{{ if not (in $months $m) }}{{ $months = $months | append $m }}{{ end }}{{ end }}
+    {{ $months = sort $months }}
+    {{ range $months }}
+      {{ $month := . }}
+      {{ $ymPrefix := printf "%s-%s-" $year $month }}
+      <div class="tw-month-section">
+        <h3 class="tw-month">{{ index $monthNames $month }}</h3>
+        {{ range (where $yearTweets "date" "ge" $ymPrefix) }}
+          {{ if hasPrefix .date $ymPrefix }}
+          {{ $d := time .date }}
+          {{ $tweetId := $d.Format "2006-01-02T150405" }}
+          <article id="t-{{ $tweetId }}" class="tw-item">
+            <p class="tw-text">{{ .text }}</p>
+            <div class="tw-meta">
+              <a href="#t-{{ $tweetId }}"><time datetime="{{ .date }}">{{ $d.Format "Jan 2, 2006 3:04 PM" }}</time></a>
+              {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">original</a>{{ end }}
+            </div>
+          </article>
+          {{ end }}
+        {{ end }}
+      </div>
+    {{ end }}
+  </section>
+{{ end }}
+
+<a href="#" id="backToTop" class="tw-top" aria-label="Back to top">&uarr; Top</a>
+
+<script type="module">
+import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
+var styles = getComputedStyle(document.documentElement);
+var ink = styles.getPropertyValue('--muted').trim() || '#8a8273';
+var search = document.getElementById('tweetSearch');
+var hideRepliesBox = document.getElementById('hideReplies');
+var countEl = document.getElementById('tweetCount');
+var histEl = document.getElementById('histogram');
+var items = document.querySelectorAll('.tw-item');
+var yearSections = document.querySelectorAll('.tw-year-section');
+var monthSections = document.querySelectorAll('.tw-month-section');
+var raw = typeof _postMonthData === "string" ? JSON.parse(_postMonthData) : _postMonthData;
+var postsByMonth = {}, microByMonth = {};
+raw.forEach(function (d) { if (d.posts > 0) postsByMonth[d.month] = d.posts; if (d.microblog > 0) microByMonth[d.month] = d.microblog; });
+var shortMonth = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function fmtYM(ym) { var p = ym.split("-"); return shortMonth[parseInt(p[1], 10) - 1] + " " + p[0]; }
+function buildChart() {
+  var tweetsByMonth = {};
+  items.forEach(function (item) {
+    if (item.style.display === 'none') return;
+    var ym = item.querySelector('time').getAttribute('datetime').slice(0, 7);
+    tweetsByMonth[ym] = (tweetsByMonth[ym] || 0) + 1;
+  });
+  var allYM = new Set([].concat(Object.keys(tweetsByMonth), Object.keys(postsByMonth), Object.keys(microByMonth)));
+  var sorted = [...allYM].sort();
+  var data = [];
+  sorted.forEach(function (ym) {
+    var label = fmtYM(ym);
+    if (tweetsByMonth[ym]) data.push({ label: label, count: tweetsByMonth[ym], type: "Tweets" });
+    if (postsByMonth[ym]) data.push({ label: label, count: postsByMonth[ym], type: "Blog posts" });
+    if (microByMonth[ym]) data.push({ label: label, count: microByMonth[ym], type: "Micro.blog" });
+  });
+  var allLabels = sorted.map(fmtYM);
+  var seen = new Set(), tickValues = [], tickLabels = {};
+  allLabels.forEach(function (label) { var y = label.split(" ")[1]; if (!seen.has(y)) { seen.add(y); tickValues.push(label); tickLabels[label] = y; } });
+  var chart = Plot.plot({
+    width: Math.min(720, histEl.clientWidth), height: 220, marginBottom: 40,
+    x: { label: null, domain: allLabels, ticks: tickValues, tickFormat: function (d) { return tickLabels[d] || ""; }, tickRotate: -45 },
+    y: { label: "Posts", grid: true },
+    color: { domain: ["Tweets", "Blog posts", "Micro.blog"], range: ["#3a6ea5", "#2f5a43", "#c8a85a"], legend: true },
+    style: { background: "transparent", color: ink, fontSize: "12px", fontFamily: "var(--mono)" },
+    marks: [ Plot.barY(data, Plot.groupX({ y: "sum" }, { x: "label", y: "count", fill: "type", tip: true })), Plot.ruleY([0]) ]
+  });
+  histEl.replaceChildren(chart);
+}
+function applyFilters() {
+  var q = search.value.toLowerCase().trim(), hideReplies = hideRepliesBox.checked, visible = 0;
+  items.forEach(function (item) {
+    var text = item.querySelector('.tw-text').textContent;
+    var isReply = /^@\w/.test(text);
+    var show = (!q || text.toLowerCase().includes(q)) && !(hideReplies && isReply);
+    item.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  monthSections.forEach(function (ms) { ms.style.display = ms.querySelector('.tw-item:not([style*="display: none"])') ? '' : 'none'; });
+  yearSections.forEach(function (ys) { ys.style.display = ys.querySelector('.tw-item:not([style*="display: none"])') ? '' : 'none'; });
+  countEl.textContent = visible.toLocaleString() + ((q || hideReplies) ? ' matching tweets' : ' tweets');
+  buildChart();
+}
+search.addEventListener('input', applyFilters);
+hideRepliesBox.addEventListener('change', applyFilters);
+applyFilters();
+var btn = document.getElementById('backToTop');
+window.addEventListener('scroll', function () {
+  var show = window.scrollY > 400;
+  btn.style.opacity = show ? '1' : '0';
+  btn.style.pointerEvents = show ? 'auto' : 'none';
+}, { passive: true });
+</script>
+{{ end }}

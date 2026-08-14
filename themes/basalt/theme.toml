@@ -1,0 +1,4 @@
+name = "Basalt"
+license = "MIT"
+description = "Craig Mod-inspired quiet reading theme — grayscale light/dark with Flexoki green accents, Spectral prose, essays as artifacts. Forked from Sagebrush."
+min_version = "0.116.0"
