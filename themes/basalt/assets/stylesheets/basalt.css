@@ -875,7 +875,6 @@ a {
 }
 
 .lm-pub-card-desc {
-  font-size: 16px;
   line-height: 1.55;
   color: var(--ink);
   margin: 12px 0 0;
@@ -896,7 +895,6 @@ a {
 
 .lm-pub-list li {
   margin: 0 0 14px;
-  font-size: 16px;
   line-height: 1.55;
   color: var(--ink);
 }

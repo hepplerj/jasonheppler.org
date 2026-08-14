@@ -31,10 +31,9 @@
   <div class="lm-prose e-content">
     {{ .Content }}
   </div>
-  <div class="ba-endmark" aria-hidden="true">&#9632;</div>
 
   <div class="lm-article-footer">
-    <p class="lm-post-note">This is an <a href="/archive/">essay</a> — a longer piece of writing on a topic I've been thinking about.</p>
+    <p class="lm-post-note">This is an <a href="/archive/">essay</a> &mdash; a longer piece of writing on a topic I've been thinking about.</p>
     <p class="lm-post-meta">
       {{ partial "min/carbon-badge.html" . }}
       {{ with .Params.tags }}<span class="lm-dot-sep">·</span>{{ range $i, $t := . }}{{ if $i }}<span class="lm-dot-sep">·</span>{{ end }}<a href="/tags/{{ $t | urlize }}/">{{ $t | humanize }}</a>{{ end }}{{ end }}
