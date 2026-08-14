@@ -99,6 +99,9 @@
             <span class="lm-label">Essays</span>
             <a href="/blog/" class="ba-section-link">All &rarr;</a>
           </div>
+            <div class="blog-desc-small">
+              <p>Longer pieces of writing, driven by an argument.</p>
+            </div>
           {{ range first 5 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
           <a href="{{ .RelPermalink }}" class="ba-index-item">
             <span class="ba-index-title">{{ .Title }}</span>
@@ -110,6 +113,9 @@
           <div class="ba-section-head">
             <span class="lm-label">Microblog</span>
             <a href="/microblog/" class="ba-section-link">All &rarr;</a>
+          </div>
+          <div class="blog-desc-small">
+              <p>Shorter observations, notes, or thoughts.</p>
           </div>
           {{ range first 5 (where site.RegularPages "Section" "microblog").ByDate.Reverse }}
           <a href="{{ .RelPermalink }}" class="ba-index-item">

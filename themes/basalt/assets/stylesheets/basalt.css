@@ -4865,3 +4865,16 @@ a.ba-index-item .ba-index-date {
 .ba-hero img {
   border-radius: 0;
 }
+
+/* ---- Column descriptions under section heads (homepage) ---- */
+.blog-desc-small {
+  font-family: var(--ui);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ba-muted);
+  margin: 10px 0 2px;
+}
+
+.blog-desc-small p {
+  margin: 0;
+}
