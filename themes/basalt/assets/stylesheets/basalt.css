@@ -4878,3 +4878,52 @@ a.ba-index-item .ba-index-date {
 .blog-desc-small p {
   margin: 0;
 }
+
+/* ---- Books & Chapters: sagebrush cover grid, basalt-tuned ---- */
+.bf-pub-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
+  margin-top: 28px;
+}
+
+.bf-pub img {
+  box-shadow: 0 10px 24px var(--ba-shadow);
+  border-radius: 2px;
+}
+
+a.bf-pub:hover img {
+  box-shadow: 0 14px 30px var(--ba-shadow-h);
+}
+
+.bf-tag {
+  font-family: var(--ui);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--ba-faint);
+  margin-top: 6px;
+}
+
+.bf-pub-title {
+  font-size: 16.5px;
+  line-height: 1.3;
+}
+
+a.bf-pub:hover .bf-pub-title {
+  color: var(--ba-accent);
+}
+
+.bf-press {
+  color: var(--ba-muted);
+}
+
+@media (max-width: 900px) {
+  .bf-pub-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .bf-pub-grid {
+    grid-template-columns: 1fr;
+  }
+}
