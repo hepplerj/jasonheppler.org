@@ -49,13 +49,18 @@
 
   </main>
 
-  {{/* Governing Ground — the one band */}}
+  {{/* Governing Ground band — image left, text right */}}
   <section class="ba-gg">
-    <div class="ba-gg-inner">
-      <p class="lm-label">Current Project</p>
-      <h2 class="ba-gg-title"><a href="https://governingground.org">Governing Ground</a></h2>
-      <p class="ba-gg-desc">Nearly a third of the American West is federal land — a century-long provocation. A digital history of the Sagebrush Rebellions: the recurring movements, from the 1930s to the present, over the transfer, ownership, and control of federal lands.</p>
-      <a href="https://governingground.org" class="ba-gg-link">View the project &rarr;</a>
+    <div class="ba-gg-inner ba-gg-split">
+      <a href="https://governingground.org" class="ba-gg-preview">
+        <img src="/assets/images/govground-preview.jpg" alt="Governing Ground — project preview" loading="lazy" decoding="async">
+      </a>
+      <div class="ba-gg-body">
+        <p class="lm-label">Current Project</p>
+        <h2 class="ba-gg-title"><a href="https://governingground.org">Governing Ground</a></h2>
+        <p class="ba-gg-desc">Nearly a third of the American West is federal land — a century-long provocation. A digital history of the Sagebrush Rebellions: the recurring movements, from the 1930s to the present, over the transfer, ownership, and control of federal lands.</p>
+        <a href="https://governingground.org" class="ba-gg-link">View the project &rarr;</a>
+      </div>
     </div>
   </section>
 
@@ -136,15 +141,18 @@
       </div>
     </section>
 
-    {{/* Newsletter callout */}}
-    <section class="ba-section ba-news">
-      <p class="lm-label">Newsletter</p>
-      <h2 class="ba-news-title">Tack &amp; Ink</h2>
-      <p class="ba-news-desc">Occasional writing on the American West, agricultural history, and political culture. <a href="https://buttondown.com/plainsink">Browse the archive</a>.</p>
-      <form class="ba-news-form" action="https://buttondown.com/api/emails/embed-subscribe/plainsink" method="post" target="_blank">
-        <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
-        <button type="submit" class="lm-btn">Subscribe</button>
-      </form>
+    {{/* Newsletter band — same callout style as Governing Ground */}}
+    <section class="ba-gg bf-bleed ba-news-band">
+      <div class="ba-gg-inner">
+        <p class="lm-label">Newsletter</p>
+        <h2 class="ba-gg-title">Tack &amp; Ink</h2>
+        <p class="ba-gg-desc">Occasional writing on the American West, agricultural history, and political culture.</p>
+        <form class="ba-news-form" action="https://buttondown.com/api/emails/embed-subscribe/plainsink" method="post" target="_blank">
+          <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+          <button type="submit" class="lm-btn">Subscribe</button>
+        </form>
+        <a href="https://buttondown.com/plainsink" class="ba-gg-link">Browse the archive &rarr;</a>
+      </div>
     </section>
 
     {{/* On the road */}}
