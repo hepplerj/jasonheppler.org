@@ -4355,3 +4355,189 @@ a.ba-run-item:hover .ba-run-title {
 .lm-prose details {
   background: color-mix(in srgb, var(--ba-ink) 4%, transparent);
 }
+
+/* ---- Homepage v2: book hero, two-column writing, lowered bio ---- */
+.ba-bookhero {
+  display: flex;
+  gap: 44px;
+  align-items: flex-start;
+  padding: 64px 0 8px;
+}
+
+.ba-bookhero-cover {
+  flex-shrink: 0;
+  width: 190px;
+}
+
+.ba-bookhero-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 10px 28px var(--ba-shadow);
+}
+
+.ba-bookhero-text .lm-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ba-faint);
+  margin: 0 0 14px;
+}
+
+.ba-bookhero-title {
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.ba-bookhero-title a {
+  color: var(--ba-ink);
+  text-decoration: none;
+}
+
+.ba-bookhero-title a:hover {
+  color: var(--ba-accent);
+}
+
+.ba-bookhero-press {
+  font-family: var(--ui);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--ba-faint);
+  margin: 10px 0 0;
+}
+
+.ba-bookhero-lead {
+  font-size: 17.5px;
+  line-height: 1.55;
+  margin: 16px 0 0;
+}
+
+.ba-bookhero-quote {
+  font-size: 15.5px;
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--ba-muted);
+  border-left: 2px solid var(--ba-accent);
+  padding: 2px 0 2px 18px;
+  margin: 18px 0 0;
+}
+
+.ba-bookhero-attr {
+  font-style: normal;
+  font-size: 13.5px;
+  color: var(--ba-faint);
+}
+
+.ba-bookhero .lm-btn {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 13px;
+  padding: 10px 18px;
+  text-decoration: none;
+}
+
+/* Two-column writing lists */
+.ba-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 56px;
+  align-items: start;
+}
+
+a.ba-index-item {
+  display: block;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--ba-hair);
+  text-decoration: none;
+}
+
+a.ba-index-item:last-child {
+  border-bottom: none;
+}
+
+a.ba-index-item .ba-index-title {
+  display: block;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+  color: var(--ba-ink);
+  transition: color .15s ease;
+}
+
+a.ba-index-item:hover .ba-index-title {
+  color: var(--ba-accent);
+}
+
+a.ba-index-item .ba-index-date {
+  display: block;
+  margin-top: 5px;
+}
+
+/* Bio */
+.ba-bio {
+  display: flex;
+  gap: 26px;
+  align-items: flex-start;
+  border-top: 1px solid var(--ba-hair);
+  padding-top: 44px;
+}
+
+.ba-bio-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  filter: grayscale(1);
+}
+
+.ba-bio-lead {
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: var(--ba-muted);
+  margin: 0;
+}
+
+.ba-bio-lead .bf-name {
+  color: var(--ba-ink);
+  font-weight: 600;
+}
+
+.ba-bio-lead a {
+  color: var(--ba-accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-line);
+}
+
+.ba-bio-lead a:hover {
+  border-bottom-color: var(--ba-accent);
+}
+
+.ba-bio-social {
+  margin-top: 14px;
+}
+
+@media (max-width: 640px) {
+  .ba-bookhero {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .ba-bookhero-cover {
+    width: 150px;
+  }
+
+  .ba-cols {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .ba-bio {
+    flex-direction: column;
+  }
+}

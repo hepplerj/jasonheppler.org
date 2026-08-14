@@ -11,31 +11,49 @@
 
   <main class="ba-home">
 
-    {{/* Intro */}}
-    <section class="ba-intro">
-      <p class="ba-intro-lead"><span class="bf-name">Jason A. Heppler</span> is a historian of the North American West and Great Plains, and a builder of digital history. He is the author of <a href="/publications/silicon-valley/"><em>Silicon Valley and the Environmental Inequalities of High-Tech Urbanism</em></a>, and serves as senior developer/scholar at the <a href="https://rrchnm.org">Roy Rosenzweig Center for History and New Media</a> and Affiliate Fellow at the <a href="https://plains.unl.edu">Center for Great Plains Studies</a>.</p>
-      <div class="lm-social ba-intro-social">
-        <a data-name="jason" data-domain="jasonheppler.org">Email</a>
-        {{ with site.Params.social.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
-        {{ with site.Params.social.microblog }}<a href="{{ . }}">micro.blog</a>{{ end }}
-        {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me">Mastodon</a>{{ end }}
-        {{ with site.Params.social.github }}<a href="{{ . }}">GitHub</a>{{ end }}
+    {{/* Book hero — Silicon Valley */}}
+    <section class="ba-bookhero">
+      <a href="/publications/silicon-valley/" class="ba-bookhero-cover">
+        <img src="/assets/images/book_sv.webp" alt="Silicon Valley and the Environmental Inequalities of High-Tech Urbanism" loading="eager" decoding="async">
+      </a>
+      <div class="ba-bookhero-text">
+        <p class="lm-label">The Book</p>
+        <h1 class="ba-bookhero-title"><a href="/publications/silicon-valley/">Silicon Valley and the Environmental Inequalities of High-Tech Urbanism</a></h1>
+        <p class="ba-bookhero-press">University of Oklahoma Press · 2024</p>
+        <p class="ba-bookhero-lead">How did the world's most celebrated landscape of innovation become one of its most polluted?</p>
+        <blockquote class="ba-bookhero-quote">&ldquo;A subversive view of Silicon Valley's history that keeps the usual suspects in the background. Environmental inequalities are in the foreground.&rdquo;<br><span class="ba-bookhero-attr">— W. Patrick McCray, <em>LA Review of Books</em></span></blockquote>
+        <a href="/publications/silicon-valley/" class="lm-btn">About the book &rarr;</a>
       </div>
     </section>
 
-    {{/* Recent writing — Craig-style dated index */}}
+    {{/* Recent writing — two quiet columns, title + date only */}}
     <section class="ba-section">
-      <div class="ba-section-head">
-        <span class="lm-label">Recent Writing</span>
-        <a href="/archive/" class="ba-section-link">Full archive &rarr;</a>
+      <div class="ba-cols">
+        <div class="ba-col">
+          <div class="ba-section-head">
+            <span class="lm-label">Essays</span>
+            <a href="/blog/" class="ba-section-link">All &rarr;</a>
+          </div>
+          {{ range first 5 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+          <a href="{{ .RelPermalink }}" class="ba-index-item">
+            <span class="ba-index-title">{{ .Title }}</span>
+            <time class="ba-index-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+          </a>
+          {{ end }}
+        </div>
+        <div class="ba-col">
+          <div class="ba-section-head">
+            <span class="lm-label">Microblog</span>
+            <a href="/microblog/" class="ba-section-link">All &rarr;</a>
+          </div>
+          {{ range first 5 (where site.RegularPages "Section" "microblog").ByDate.Reverse }}
+          <a href="{{ .RelPermalink }}" class="ba-index-item">
+            <span class="ba-index-title">{{ .Title }}</span>
+            <time class="ba-index-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+          </a>
+          {{ end }}
+        </div>
       </div>
-      {{ range first 6 (where site.RegularPages "Section" "in" (slice "blog" "microblog")).ByDate.Reverse }}
-      <article class="ba-index-item">
-        <time class="ba-index-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2006" }}</time>
-        <h2 class="ba-index-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        {{ with .Params.lede }}<p class="ba-index-lede">{{ . }}</p>{{ end }}
-      </article>
-      {{ end }}
     </section>
 
     {{/* Books — quiet text run */}}
@@ -97,6 +115,21 @@
         {{ if .url }}</a>{{ else }}</div>{{ end }}
         {{ end }}
         {{ end }}
+      </div>
+    </section>
+
+    {{/* Bio — lower on the page, Craig-style */}}
+    <section class="ba-section ba-bio">
+      <img class="ba-bio-photo" src="/assets/images/portrait.webp" alt="Jason A. Heppler" loading="lazy" decoding="async">
+      <div class="ba-bio-text">
+        <p class="ba-bio-lead"><span class="bf-name">Jason A. Heppler</span> is a historian of the North American West and Great Plains, and a builder of digital history. He serves as senior developer/scholar at the <a href="https://rrchnm.org">Roy Rosenzweig Center for History and New Media</a> and Affiliate Fellow at the <a href="https://plains.unl.edu">Center for Great Plains Studies</a>. <a href="/about/">More about Jason &rarr;</a></p>
+        <div class="lm-social ba-bio-social">
+          <a data-name="jason" data-domain="jasonheppler.org">Email</a>
+          {{ with site.Params.social.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
+          {{ with site.Params.social.microblog }}<a href="{{ . }}">micro.blog</a>{{ end }}
+          {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me">Mastodon</a>{{ end }}
+          {{ with site.Params.social.github }}<a href="{{ . }}">GitHub</a>{{ end }}
+        </div>
       </div>
     </section>
 
