@@ -3540,9 +3540,11 @@ a.bf-pub:hover img {
 
 /* Flexoki accent palette — data-accent on <html> picks the pair;
    light mode uses the 600 value, dark mode the 400 (per Flexoki). */
+/* Brand default: red ink on light paper, gold on dark (Flexoki
+   red-600 / yellow-400). data-accent overrides with a symmetric hue. */
 :root {
-  --flex-600: #66800B;
-  --flex-400: #879A39;
+  --flex-600: #AF3029;
+  --flex-400: #D0A215;
 }
 
 :root[data-accent="red"] { --flex-600: #AF3029; --flex-400: #D14D41; }
@@ -4950,27 +4952,53 @@ a.bf-pub:hover .bf-pub-title {
 }
 
 
-/* ---- Accent switcher: dot shows the current accent, click cycles ---- */
-.lm-accent {
-  appearance: none;
-  background: none;
-  border: 0;
-  padding: 4px;
-  margin: 0;
-  cursor: pointer;
-  line-height: 0;
+/* ---- Accent swatches (colophon): each split 600/400, click to pick ---- */
+.ba-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0 8px;
 }
 
-.lm-accent-dot {
-  display: block;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--ba-accent);
+.ba-swatch {
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  padding: 0;
   border: 1px solid var(--ba-hair-strong);
+  border-radius: 50%;
+  cursor: pointer;
   transition: transform .15s ease;
 }
 
-.lm-accent:hover .lm-accent-dot {
-  transform: scale(1.2);
+.ba-swatch:hover {
+  transform: scale(1.15);
+}
+
+.ba-swatch[aria-pressed="true"] {
+  outline: 2px solid var(--ba-ink);
+  outline-offset: 2px;
+}
+
+/* ---- Dark mode dims images slightly; hover restores full color.
+   :where() keeps specificity at zero so images with their own filter
+   treatments (research thumbs, bio portrait) are unaffected. ---- */
+@media (prefers-color-scheme: dark) {
+  :where(:root:not([data-theme="light"])) img {
+    filter: brightness(0.8) contrast(1.1);
+    transition: filter 0.3s ease;
+  }
+
+  :where(:root:not([data-theme="light"])) img:hover {
+    filter: none;
+  }
+}
+
+:where(:root[data-theme="dark"]) img {
+  filter: brightness(0.8) contrast(1.1);
+  transition: filter 0.3s ease;
+}
+
+:where(:root[data-theme="dark"]) img:hover {
+  filter: none;
 }

@@ -24,19 +24,30 @@ document.querySelectorAll('.lm-email-link').forEach(function (el) {
   });
 })();
 
-// Accent switcher: cycle through the Flexoki accents and persist.
+// Accent picker (colophon): swatches set the Flexoki accent and persist.
 (function () {
   var root = document.documentElement;
-  var btn = document.querySelector('.lm-accent');
-  if (!btn) return;
-  var order = ['green', 'cyan', 'blue', 'purple', 'magenta', 'red', 'orange', 'yellow'];
-  btn.addEventListener('click', function () {
-    var cur = root.getAttribute('data-accent') || 'green';
-    var next = order[(order.indexOf(cur) + 1) % order.length];
-    if (next === 'green') root.removeAttribute('data-accent');
-    else root.setAttribute('data-accent', next);
-    try { localStorage.setItem('ba-accent', next); } catch (e) {}
+  var swatches = document.querySelectorAll('.ba-swatch');
+  if (!swatches.length) return;
+  function mark() {
+    var cur = root.getAttribute('data-accent') || 'default';
+    swatches.forEach(function (el) {
+      el.setAttribute('aria-pressed', el.dataset.accent === cur ? 'true' : 'false');
+    });
+  }
+  swatches.forEach(function (el) {
+    el.addEventListener('click', function () {
+      if (el.dataset.accent === 'default') {
+        root.removeAttribute('data-accent');
+        try { localStorage.removeItem('ba-accent'); } catch (e) {}
+      } else {
+        root.setAttribute('data-accent', el.dataset.accent);
+        try { localStorage.setItem('ba-accent', el.dataset.accent); } catch (e) {}
+      }
+      mark();
+    });
   });
+  mark();
 })();
 
 // Theme switcher: cycle auto -> light -> dark and persist.

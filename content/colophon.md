@@ -15,7 +15,7 @@ Styles are plain, hand-written CSS---no framework, no utility classes---minified
 
 ## Typography
 
-The body text and headings are set in **[Spectral](https://fonts.google.com/specimen/Spectral)**, a serif drawn for reading on screens. The interface---navigation, the small uppercase labels, dates, footnotes, code, and figure captions---is set in **[IBM Plex Mono](https://www.ibm.com/plex/)**. Both are self-hosted as small WOFF2 files, limited to the handful of weights the site actually uses; there are no third-party font services.
+The body text and headings are set in **[Spectral](https://fonts.google.com/specimen/Spectral)**, a serif drawn for reading on screens. The interface---navigation, the small uppercase labels, dates, and buttons---is set in **[Hanken Grotesk](https://hanken.co/products/hk-grotesk)**, and code is set in **[IBM Plex Mono](https://www.ibm.com/plex/)**. All are self-hosted as small WOFF2 files, limited to the handful of weights the site actually uses; there are no third-party font services.
 
 ## Writing Environment
 
@@ -25,9 +25,25 @@ Content lives as flat Markdown files in the site's repository. I write in [Obsid
 
 Navigation sits in a simple top bar: my name in the top left links home, the section links sit to the right, and on narrow screens they collapse into a hamburger menu. The aim is to stay out of the way of the reading surface.
 
-The palette is a single warm, paper-inspired light theme---there's no dark mode or theme switcher. One carefully tuned set of colors, applied everywhere, so every page reads the way it was designed to.
+The palette is grayscale---white paper and near-black ink by day, charcoal and soft gray by night---following your system preference, with a toggle in the navigation to pin either mode. Almost nothing on the site carries color: the covers of books, the images in essays, and a single accent ink do all of that work.
 
 Performance and environmental footprint informed many choices: the web fonts are self-hosted and subset rather than pulled from a third-party service, images use lazy loading and `decoding="async"`, scripts are deferred, and the page weight on a typical post is kept small. The goal is a page that loads quickly on a slow connection and generates as little CO₂ as possible.
+
+## Inks
+
+The accent colors borrow from [Flexoki](https://stephango.com/flexoki), Steph Ango's ink-inspired palette. By default the site writes in red ink on light paper and gold on dark. If you'd rather read in a different ink, pick one below---each swatch shows its light and dark variants, and your choice sticks for future visits.
+
+<div class="ba-swatches" role="group" aria-label="Accent color picker">
+  <button class="ba-swatch" data-accent="default" aria-label="Default: red and gold" title="Default — red / gold" style="background: linear-gradient(135deg, #AF3029 50%, #D0A215 50%)"></button>
+  <button class="ba-swatch" data-accent="red" aria-label="Red" title="Red" style="background: linear-gradient(135deg, #AF3029 50%, #D14D41 50%)"></button>
+  <button class="ba-swatch" data-accent="orange" aria-label="Orange" title="Orange" style="background: linear-gradient(135deg, #BC5215 50%, #DA702C 50%)"></button>
+  <button class="ba-swatch" data-accent="yellow" aria-label="Yellow" title="Yellow" style="background: linear-gradient(135deg, #AD8301 50%, #D0A215 50%)"></button>
+  <button class="ba-swatch" data-accent="green" aria-label="Green" title="Green" style="background: linear-gradient(135deg, #66800B 50%, #879A39 50%)"></button>
+  <button class="ba-swatch" data-accent="cyan" aria-label="Cyan" title="Cyan" style="background: linear-gradient(135deg, #24837B 50%, #3AA99F 50%)"></button>
+  <button class="ba-swatch" data-accent="blue" aria-label="Blue" title="Blue" style="background: linear-gradient(135deg, #205EA6 50%, #4385BE 50%)"></button>
+  <button class="ba-swatch" data-accent="purple" aria-label="Purple" title="Purple" style="background: linear-gradient(135deg, #5E409D 50%, #8B7EC8 50%)"></button>
+  <button class="ba-swatch" data-accent="magenta" aria-label="Magenta" title="Magenta" style="background: linear-gradient(135deg, #A02F6F 50%, #CE5D97 50%)"></button>
+</div>
 
 ## Content Types
 
