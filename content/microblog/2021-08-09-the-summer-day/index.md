@@ -2,6 +2,8 @@
 title: The Summer Day
 date: 2021-08-09T09:17:56-0600
 lastmod: 2025-12-31T22:06:26-0600
+tags:
+- poetry
 ---
 
 > I don't know exactly what a prayer is.  

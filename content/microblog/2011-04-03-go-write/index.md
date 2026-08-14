@@ -5,6 +5,8 @@ categories:
 - writing
 title: Go Write
 url: /2011/04/03/go-write/
+tags:
+- writing
 ---
 
 [Frank Chimero](http://blog.frankchimero.com/post/4212953701/tweeting-and-writing-and-deflating-like-a-balloon): 

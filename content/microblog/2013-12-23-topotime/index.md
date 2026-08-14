@@ -5,6 +5,8 @@ categories:
 - data visualization
 title: Topotime
 url: /2013/12/23/topotime/
+tags:
+- digital-history
 ---
 
 I am very excited to see the public release of 

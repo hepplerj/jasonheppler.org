@@ -5,6 +5,8 @@ categories:
 - personal
 title: Star Wars Episode VII May Have Found Its Writer
 url: /2012/11/09/star-wars-episode-vii-may-have-found-its-writer/
+tags:
+- personal
 ---
 
 [Claude Brodesser-Akner says that Star Wars Episode VII may be written by Michael Arndt](http://www.vulture.com/2012/11/star-wars-episode-vii-may-have-found-its-writer.html):

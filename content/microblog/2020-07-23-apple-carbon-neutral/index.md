@@ -3,6 +3,8 @@ title: 'Apple Pledges to Be Carbon Neutral by 2030'
 date: 2020-07-23T10:30:55-06:00
 slug: 'apple-carbon-neutral'
 external: 'https://www.wsj.com/articles/apple-pledges-to-be-carbon-neutral-by-2030-11595355023'
+tags:
+- tech-life
 ---
 
 [Sarah E. Needleman](https://www.wsj.com/articles/apple-pledges-to-be-carbon-neutral-by-2030-11595355023) in the *Wall Street Journal*:

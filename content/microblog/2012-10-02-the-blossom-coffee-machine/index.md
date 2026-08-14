@@ -5,6 +5,8 @@ categories:
 - coffee
 title: The Blossom Coffee Machine
 url: /2012/10/02/the-blossom-coffee-machine/
+tags:
+- coffee
 ---
 
 [The Verge writes about an $11,000 coffee machine](http://www.theverge.com/2012/10/1/3432980/blossom-one-limited-coffee-maker-11111) constructed with exotic materials and tooled to brew the perfect cup of coffee:

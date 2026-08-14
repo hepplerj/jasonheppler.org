@@ -9,6 +9,8 @@ categories:
 - coffee
 title: Blue Bottle Buys Tonx
 url: /2014/04/08/blue-bottle-buys-tonx/
+tags:
+- coffee
 ---
 
 [Mat Honan](http://www.wired.com/2014/04/blue-bottle-tonx-handsome/all/1)

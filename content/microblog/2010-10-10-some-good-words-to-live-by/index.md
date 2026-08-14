@@ -6,6 +6,8 @@ categories:
 title: Some Good Words to Live By
 url: /2010/10/10/some-good-words-to-live-by/
 wordpress_id: 355
+tags:
+- tech-life
 ---
 
 The Hacker Ethic:

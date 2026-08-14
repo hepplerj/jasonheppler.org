@@ -5,6 +5,8 @@ categories:
 - tech life
 title: Africa's Silicon Savannah
 url: /2012/11/01/africas-silicon-savannah/
+tags:
+- tech-life
 ---
 
 [David Smith writes about Africa's Silicon Savannah in Kenya](http://www.guardian.co.uk/world/2012/oct/30/kenya-silicon-savannah-digital-technology?CMP=twt_gu), where technology companies are beginning to establish themselves:

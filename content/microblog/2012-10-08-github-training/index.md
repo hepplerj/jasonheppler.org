@@ -5,6 +5,8 @@ categories:
 - programming
 title: Github Training
 url: /2012/10/08/github-training/
+tags:
+- programming
 ---
 
 Github has announced a new site called [GitHub:Training](http://training.github.com/): 

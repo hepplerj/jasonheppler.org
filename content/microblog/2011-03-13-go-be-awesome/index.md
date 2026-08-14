@@ -5,6 +5,8 @@ categories:
 - apple
 title: Go Be Awesome
 url: /2011/03/13/go-be-awesome/
+tags:
+- personal
 ---
 
 <iframe title="YouTube video player" width="560" height="349" src="http://www.youtube.com/embed/UF8uR6Z6KLc" frameborder="0" allowfullscreen></iframe>

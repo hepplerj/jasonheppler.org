@@ -5,6 +5,8 @@ categories:
 - academia
 title: Fewer Copyright Restrictions Benefit the Economy
 url: /2012/09/21/fewer-copyright-restrictions-benefit-the-economy/
+tags:
+- tech-life
 ---
 
 [The Electronic Frontier Foundation reports](https://www.eff.org/deeplinks/2012/09/copyright-and-campaign-misinformation-new-study-affirms-less-copyright) that Australia has found that loosening copyright restrictions has an overall affect of improving the economy:

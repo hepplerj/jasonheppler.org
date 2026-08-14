@@ -4,6 +4,9 @@ date: 2015-03-12
 external: http://www.amazon.com/gp/product/1617292117/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1617292117&linkCode=as2&tag=jasohepp-20&linkId=UPYJDONHLQPWO2DM
 categories:
 - programming
+tags:
+- programming
+- digital-history
 ---
 
 I've been remiss in pointing out that my buddy Elijah Meeks' *D3 in

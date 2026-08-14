@@ -5,6 +5,8 @@ categories:
 - writing
 title: Writing and the Problem of Quick Consumption
 url: /2011/05/18/writing-and-the-problem-of-quick-consumption/
+tags:
+- writing
 ---
 
 [Marco Arment](http://www.instapaper.com/faq):

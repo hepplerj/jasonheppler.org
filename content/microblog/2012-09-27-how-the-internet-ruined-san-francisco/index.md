@@ -5,6 +5,8 @@ categories:
 - internet
 title: How the Internet Ruined San Francisco
 url: /2012/09/27/how-the-internet-ruined-san-francisco/
+tags:
+- tech-life
 ---
 
 In 1999 [Paulina Borsook lamented the changes happening in her home town of San Francisco](http://www.salon.com/1999/10/28/internet_2/print/) in the wake of dot-com entrepreneurs :

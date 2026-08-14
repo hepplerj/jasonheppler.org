@@ -5,6 +5,8 @@ categories:
 - internet
 title: The Internet is Not Broken
 url: /2012/02/29/the_internet_is_not_broken/
+tags:
+- indie-web
 ---
 
 [Jeff Jarvis asks why there are so many attempts to regulate the internet](https://plus.google.com/u/1/105076678694475690385/posts/3zhRzzSAs8b), and speculates that the reason is because the internet disrupts power held by corporations and governments:

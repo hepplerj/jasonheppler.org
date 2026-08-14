@@ -4,6 +4,8 @@ date: 2015-02-21
 external: http://gizmodo.com/bulletproof-coffee-debunking-the-hot-buttered-hype-1681321467
 categories:
 - coffee
+tags:
+- coffee
 ---
 
 Nicely researched piece from Brent Rose. I've never really bought the 

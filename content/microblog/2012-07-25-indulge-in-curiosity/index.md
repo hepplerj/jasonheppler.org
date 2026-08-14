@@ -5,6 +5,8 @@ categories:
 - productivity
 title: Indulge in Curiosity
 url: /2012/07/25/indulge-in-curiosity/
+tags:
+- personal
 ---
 
 [Steve Jobs](http://www.wired.com/epicenter/2011/10/jobs/all/1):

@@ -5,6 +5,8 @@ categories:
 - coffee
 title: World Aeropress Championship
 url: /2012/05/15/world-aeropress-championship/
+tags:
+- coffee
 ---
 
 [AeroPress recipes from the World AeroPress Championship](https://worldaeropresschampionship.wordpress.com/recipes/). Yes, this exists.

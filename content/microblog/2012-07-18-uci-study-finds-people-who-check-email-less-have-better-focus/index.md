@@ -5,6 +5,8 @@ categories:
 - productivity
 title: UCI Study Finds People Who Check Email Less Frequently Have Better Focus
 url: /2012/07/18/uci-study-finds-people-who-check-email-less-have-better-focus/
+tags:
+- tech-life
 ---
 
 A new study by the University of California-Irvine finds that people who check email less frequently have better focus. Surprise!

@@ -5,6 +5,8 @@ categories:
 - podcast
 title: 'First Draft Podcast: The Pragmatic Tyranny of Building Digital Artifacts'
 url: /2014/07/14/first-draft:-the-pragmatic-tyranny-of-building-digital-artifacts/
+tags:
+- podcast
 ---
 
 This week: we discuss my experiences working on the Geography of the Post, D3.js, and the challenges of designing, and critically engaging with, interactive scholarly works.

@@ -5,6 +5,8 @@ categories:
 - internet
 title: The NSA Data Center in the West
 url: /2012/09/19/the-nsa-data-center-in-the-west/
+tags:
+- tech-life
 ---
 
 [Wired covers the construction of a top-secret National Security Agency building in Utah](http://www.wired.com/threatlevel/2012/03/ff_nsadatacenter/all/1) that will analyze digital communication:

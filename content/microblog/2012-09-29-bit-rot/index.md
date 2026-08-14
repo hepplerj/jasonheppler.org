@@ -5,6 +5,8 @@ categories:
 - tech life
 title: Bit Rot
 url: /2012/09/29/bit-rot/
+tags:
+- digital-history
 ---
 
 [The Economist wonders about the future of history](http://www.economist.com/node/21553445) in the age of bit rot:

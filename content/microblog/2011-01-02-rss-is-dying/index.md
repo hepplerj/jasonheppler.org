@@ -6,6 +6,8 @@ categories:
 title: RSS is Dying
 url: /2011/01/02/rss-is-dying/
 wordpress_id: 1290
+tags:
+- indie-web
 ---
 
 <a href="http://camendesign.com/blog/rss_is_dying">Camen Design</a> speculates on the future of RSS in the face of recent browser changes in Chrome and Firefox.

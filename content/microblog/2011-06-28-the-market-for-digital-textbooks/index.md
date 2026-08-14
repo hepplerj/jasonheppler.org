@@ -5,6 +5,8 @@ categories:
 - academia
 title: The Market for Digital Textbooks
 url: /2011/06/28/the-market-for-digital-textbooks/
+tags:
+- academia
 ---
 
 [Yun Xie at Ars Technica interviews Vikram Savkar](http://arstechnica.com/science/2011/06/textbooks-of-the-future-will-be-born-digital-and-accessible/), who is the Senior Vice President and Publishing Director at Nature Publishing Group. According to Savkar, there is large demand for digital textbooks (and rightfully so since it's a [multi-billion dollar market](http://www.washingtonpost.com/wp-dyn/content/article/2008/08/19/AR2008081903230.html) profiting on material that, on average, costs a single student $700 per semester while a digital book should costs far less):

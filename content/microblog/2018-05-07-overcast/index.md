@@ -4,6 +4,8 @@ date: 2018-05-07
 categories:
     - tech life
 external: 'https://marco.org/2018/04/27/overcast42'
+tags:
+- tech-life
 ---
 
 Marco Arment [introducing Overcast 4.2](https://marco.org/2018/04/27/overcast42):

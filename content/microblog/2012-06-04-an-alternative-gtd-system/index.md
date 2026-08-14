@@ -5,6 +5,8 @@ categories:
 - productivity
 title: An Alternative GTD System
 url: /2012/06/04/an-alternative-gtd-system/
+tags:
+- personal
 ---
 
 [Dave Lee explains an alternative GTD system](http://heydave.org/post/24286720323/gtd-sucks-for-creative-work-heres-an-alternative) for knowledge workers:

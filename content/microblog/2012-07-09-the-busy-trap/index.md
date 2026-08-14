@@ -5,6 +5,8 @@ categories:
 - tech life
 title: The Busy Trap
 url: /2012/07/09/the-busy-trap/
+tags:
+- personal
 ---
 
 [Tim Kreider writes about the importance of idleness](http://opinionator.blogs.nytimes.com/2012/06/30/the-busy-trap/) not only to our creativity and productivity, but to our health:

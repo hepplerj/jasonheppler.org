@@ -5,6 +5,8 @@ categories:
 - personal
 title: One Giant Leap
 url: /2012/08/28/one-giant-leap/
+tags:
+- personal
 ---
 
 Kyle Baxter [reflects on the passing of Neil Armstrong](http://tightwind.net/2012/08/one-giant-leap/):

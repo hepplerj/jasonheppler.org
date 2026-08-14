@@ -5,6 +5,8 @@ categories:
 - technology
 title: The Tech Specs of Curiosity
 url: /2012/08/08/the-tech-specs-of-curiosity/
+tags:
+- tech-life
 ---
 
 Sebastian Anthony writes about the [technical specifications that underly the Mars rover](http://www.extremetech.com/extreme/134041-inside-nasas-curiosity-its-an-apple-airport-extreme-with-wheels):

@@ -5,6 +5,8 @@ categories:
 - podcast
 title: 'First Draft Podcast: Humanities Savior Narrative'
 url: /2014/07/22/first-draft:-humanities-savior-narrative/
+tags:
+- podcast
 ---
 
 Friend of the show Glen Worthey joins us to talk about DH14, the popularity of digital humanities projects, the humanities savior narrative, and ‪#‎dhsheep‬.

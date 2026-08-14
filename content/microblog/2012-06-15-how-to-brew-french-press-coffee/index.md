@@ -5,6 +5,8 @@ categories:
 - coffee
 title: How to Brew French Press Coffee
 url: /2012/06/15/how-to-brew-french-press-coffee/
+tags:
+- coffee
 ---
 
 ![Coffee beans](http://jasonheppler.org/assets/images/coffeebeans.webp "Coffee beans")

@@ -7,6 +7,8 @@ date: 2011-12-27T15:52:45Z
 external: http://www.nytimes.com/2011/12/26/books/a-literary-history-of-word-processing.html
 title: A Literary History of Word Processing
 url: /2011/12/27/a-literary-history-of-word-processing/
+tags:
+- writing
 ---
 
 [Great piece in the New York Times](http://www.nytimes.com/2011/12/26/books/a-literary-history-of-word-processing.html) featuring the inimitable <a

@@ -5,6 +5,8 @@ date: 2012-03-01T20:52:52Z
 external: http://37signals.com/svn/posts/3124-give-it-five-minutes
 title: Give It Five Minutes
 url: /2012/03/01/give_it_five_minutes/
+tags:
+- personal
 ---
 
 [Jason Fried](http://37signals.com/svn/posts/3124-give-it-five-minutes):

@@ -5,6 +5,8 @@ categories:
 - writing
 title: Becoming a Stylish Writer
 url: /2012/07/05/becoming-a-stylish-writer/
+tags:
+- writing
 ---
 
 [Rachel Toor argues for academic writing](http://chronicle.com/article/Becoming-a-Stylish-Writer/132677/) that is engaging for a wider audience:

@@ -5,6 +5,8 @@ categories:
 - writing
 title: Writing for History Buffs
 url: /2012/07/10/writing-for-history-buffs/
+tags:
+- writing
 ---
 
 [Alexandra Lord makes the case](http://chronicle.com/article/Writing-for-History-Buffs/132755) that for professional history to thrive, historians need to be mindful of writing accessibly for a wide audience:

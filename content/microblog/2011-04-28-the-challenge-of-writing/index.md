@@ -5,6 +5,8 @@ categories:
 - writing
 title: The Challenge of Writing
 url: /2011/04/28/the-challenge-of-writing/
+tags:
+- writing
 ---
 
 [Don Murray](http://www.boston.com/news/local/articles/2006/12/31/columnist_donald_murray_dies_at_82/):

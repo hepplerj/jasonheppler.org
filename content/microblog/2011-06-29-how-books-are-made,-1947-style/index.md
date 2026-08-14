@@ -5,6 +5,8 @@ categories:
 - academia
 title: How Books Are Made, 1947 Style
 url: /2011/06/29/how-books-are-made,-1947-style/
+tags:
+- writing
 ---
 
 A video from 1947 demonstrating how a book is made:

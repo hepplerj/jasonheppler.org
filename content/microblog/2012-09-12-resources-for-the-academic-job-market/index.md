@@ -5,6 +5,8 @@ categories:
 - career
 title: Resources for the Academic Job Market
 url: /2012/09/12/resources-for-the-academic-job-market/
+tags:
+- academia
 ---
 
 [Ryan Cordell has put together a great collection of resources](http://ryan.cordells.us/blog/2012/09/12/useful-resources-for-the-academic-job-market/) for graduate students entering or contemplating the job market.

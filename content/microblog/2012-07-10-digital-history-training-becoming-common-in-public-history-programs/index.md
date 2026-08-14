@@ -5,6 +5,9 @@ categories:
 - digital humanities
 title: Digital History Training Becoming Common in Public History Programs
 url: /2012/07/10/digital-history-training-becoming-common-in-public-history-programs/
+tags:
+- digital-history
+- public-history
 ---
 
 [Steven Burg notes that digital history training is becoming more common](http://publichistorycommons.org/the-future-is-here-public-history-education-and-the-rise-of-digital-history/) among public history programs:

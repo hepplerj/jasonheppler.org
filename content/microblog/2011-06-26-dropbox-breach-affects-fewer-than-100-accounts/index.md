@@ -5,6 +5,8 @@ categories:
 - tech life
 title: Dropbox Breach Affects Fewer Than 100 Accounts
 url: /2011/06/26/dropbox-breach-affects-fewer-than-100-accounts/
+tags:
+- tech-life
 ---
 
 [Jason Kincaid](http://techcrunch.com/2011/06/24/dropbox-breach-fewer-than-100-accounts-affected-but-one-person-actively-exploited-it/) at AOL/TechCrunch:

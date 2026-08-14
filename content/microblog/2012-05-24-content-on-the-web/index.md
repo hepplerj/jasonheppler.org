@@ -5,6 +5,8 @@ categories:
 - internet
 title: Content on the Web
 url: /2012/05/24/content-on-the-web/
+tags:
+- indie-web
 ---
 
 [Dan Cohen on the lack of publicly-created material on the web](https://twitter.com/dancohen/status/205670836693250048):

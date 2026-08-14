@@ -5,6 +5,8 @@ categories:
 - academia
 title: Open Source Data Journalism Handbook Launched
 url: /2012/05/08/open-source-data-journalism-handbook-launched/
+tags:
+- programming
 ---
 
 [The free Data Journalism Handbook seeks to help journalists with the challenges of working with lots of data](http://datajournalismhandbook.org/1.0/en/index.html). The handbook contains case studies and serves as a guide to gathering, understanding, and delivering data. 

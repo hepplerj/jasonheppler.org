@@ -5,6 +5,8 @@ categories:
 - tech life
 title: Ethiopian Kids Hack OLPCs
 url: /2012/11/01/ethiopian-kids-hack-olpcs/
+tags:
+- tech-life
 ---
 
 [Evan Ackerman writes about the introduction of tablet computers](http://dvice.com/archives/2012/10/ethiopian-kids.php) to Ethiopian children with no formal education:

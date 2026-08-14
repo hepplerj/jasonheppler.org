@@ -6,6 +6,8 @@ categories:
 title: Douglas Rushkoff, Program or Be Programmed
 url: /2010/10/11/douglas-rushkoff-program-or-be-programmed/
 wordpress_id: 371
+tags:
+- tech-life
 ---
 
 I've just purchased Douglas Rushkoff's latest book, <em><a href="ttp://www.amazon.com/gp/product/1935928155?ie=UTF8&tag=jasohepp-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1935928155">Program or Be Programmed: Ten Commandments for a Digital Age</a></em>.  I'll be reviewing the book here once I finish it.  In the mean time, here's the video short:

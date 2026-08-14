@@ -6,6 +6,8 @@ categories:
 - tech life
 title: Amazon Pairs Print and Digital Books
 url: /2013/09/03/amazon-pairs-print-and-digital-books/
+tags:
+- tech-life
 ---
 
 Nick Wingfield on Amazon's MatchBook program:

@@ -5,6 +5,8 @@ categories:
 - tech life
 title: Backup Now
 url: /2012/08/06/backup-now/
+tags:
+- tech-life
 ---
 
 [Marco Arment](http://www.marco.org/2012/08/04/mat-hacked):

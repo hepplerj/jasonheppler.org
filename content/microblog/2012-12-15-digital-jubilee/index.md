@@ -5,6 +5,8 @@ categories:
 - tech life
 title: Digital Jubilee
 url: /2012/12/15/digital-jubilee/
+tags:
+- indie-web
 ---
 
 [Frank Chimero](http://frankchimero.com/blog/2012/12/digital-jubilee/):

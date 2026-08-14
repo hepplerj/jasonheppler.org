@@ -5,6 +5,8 @@ categories:
 - design
 title: What Your Web Design Says About You
 url: /2012/11/10/what-your-web-design-says-about-you/
+tags:
+- tech-life
 ---
 
 [Ella-raye Dickens](http://www.loopinsight.com/2012/11/10/what-your-web-design-says-about-you/):

@@ -5,6 +5,8 @@ categories:
 - coffee
 title: Dr Bunsen Coffee Experiments
 url: /2013/10/01/dr-bunsen-coffee-experiments/
+tags:
+- coffee
 ---
 
 Dr. Bunsen runs a relatively controlled experiment on ideas about coffee brewing. Great post, although I would quibble with a few points (he doesn't specify his AeroPress brewing method, there's no indication on the ratio of beans to water that would have an affect on flavor). But overall, a lovely experiment. 

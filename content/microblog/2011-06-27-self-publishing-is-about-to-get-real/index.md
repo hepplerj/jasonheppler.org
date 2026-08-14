@@ -5,6 +5,8 @@ categories:
 - writing
 title: Self-Publishing is About to Get Real
 url: /2011/06/27/self-publishing-is-about-to-get-real/
+tags:
+- writing
 ---
 
 [Aaron Mahnke](http://www.aaronmahnke.com/post/6829568465): 

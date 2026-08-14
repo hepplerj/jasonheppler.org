@@ -5,6 +5,8 @@ categories:
 - archives
 title: Gaming the Archives
 url: /2011/05/29/gaming-the-archives/
+tags:
+- digital-history
 ---
 
 [Jennifer Howard](http://chronicle.com/blogs/wiredcampus/gaming-the-archives/31435):

@@ -4,6 +4,8 @@ date: 2015-05-07
 external: https://github.com/cestastanford/historical-us-city-populations
 categories:
 - data
+tags:
+- digital-history
 ---
 
 Thanks to the hard work of Erik Steiner and Jan Lahmeyer, the [Spatial History

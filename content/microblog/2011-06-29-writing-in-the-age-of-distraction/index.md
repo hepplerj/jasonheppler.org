@@ -5,6 +5,8 @@ categories:
 - writing
 title: Writing in the Age of Distraction
 url: /2011/06/29/writing-in-the-age-of-distraction/
+tags:
+- writing
 ---
 
 Some good writing advice from [Cory Doctorow](http://www.locusmag.com/Features/2009/01/cory-doctorow-writing-in-age-of.html):

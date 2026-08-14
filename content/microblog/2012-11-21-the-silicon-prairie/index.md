@@ -5,6 +5,8 @@ categories:
 - technology
 title: The Silicon Prairie
 url: /2012/11/21/the-silicon-prairie/
+tags:
+- tech-life
 ---
 
 The [New York Times has a great overview](http://www.nytimes.com/2012/11/22/us/silicon-prairie-takes-root-in-the-great-plains.html?) on the rise of the silicon prairie:

@@ -5,6 +5,8 @@ categories:
 - miscellaneous
 title: About Beards
 url: /2012/12/13/about-beards/
+tags:
+- personal
 ---
 
 David Dennis has [a nice write-up on beards](http://the-northwind.com/bout-beards). 

@@ -5,6 +5,8 @@ categories:
 - writing
 title: Hemingway on Writing
 url: /2012/05/10/hemingway-on-writing/
+tags:
+- writing
 ---
 
 [Ernest Hemingway in a 1958 interview with George Plimpton](http://www.theparisreview.org/interviews/4825/the-art-of-fiction-no-21-ernest-hemingway):

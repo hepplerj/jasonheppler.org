@@ -5,6 +5,8 @@ categories:
 - coffee
 title: The Campaign Against Coffee
 url: /2013/12/30/the-campaign-against-coffee/
+tags:
+- coffee
 ---
 
 In the early twentieth century, C. W. Post, the cereal tycoon, launched an ad 

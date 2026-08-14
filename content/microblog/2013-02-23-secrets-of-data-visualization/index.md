@@ -5,6 +5,8 @@ categories:
 - data visualization
 title: Secrets of Data Visualization
 url: /2013/02/23/secrets-of-data-visualization/
+tags:
+- programming
 ---
 
 [Nate Agrin and Nick Rabinowitz offer warnings](http://www.netmagazine.com/features/seven-dirty-secrets-data-visualisation) when considering the visualization of data:

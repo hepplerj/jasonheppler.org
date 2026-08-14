@@ -5,6 +5,8 @@ categories:
 - digital humanities
 title: The Humanities Done Digitally
 url: /2011/05/09/the-humanities-done-digitally/
+tags:
+- digital-history
 ---
 
 [Kathleen Fitzpatrick](http://chronicle.com/article/The-Humanities-Done-Digitally/127382/):

@@ -4,6 +4,8 @@ date: 2015-03-19
 external: http://blogs.library.duke.edu/dcthree/2015/03/18/how-we-do-dh/
 categories:
 - digital humanities
+tags:
+- digital-history
 ---
 
 Interesting piece over at the Duke Library blog on defining digital

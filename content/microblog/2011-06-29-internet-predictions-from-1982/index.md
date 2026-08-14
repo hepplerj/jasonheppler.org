@@ -5,6 +5,8 @@ categories:
 - internet
 title: Internet Predictions from 1982
 url: /2011/06/29/internet-predictions-from-1982/
+tags:
+- tech-life
 ---
 
 [This New York Times article from 1982 writes about a National Science Foundation study speculating on the impact of internet technology](http://www.nytimes.com/1982/06/14/us/study-says-technology-could-transform-society.html). Some interesting -- and not too far off -- predictions:

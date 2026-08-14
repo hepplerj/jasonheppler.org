@@ -5,6 +5,8 @@ categories:
 - internet
 title: What the Internet Looks Like
 url: /2012/07/16/what-the-internet-looks-like/
+tags:
+- tech-life
 ---
 
 ![Internet](netmap2.webp "Internet")

@@ -6,6 +6,9 @@ categories:
 - tech life
 title: Evernote Reminders
 url: /2013/07/31/evernote-reminders/
+tags:
+- tech-life
+- plain-text
 ---
 
 I've been taking another look at Evernote for organizing my non-research notes. I've been using a plaintext system for the last couple of years, using a combination of nvALT, Nebulous Notes for iOS, and Dropbox to keep everything in sync. But I've been impressed with Evernote's latest redesigns, and their service seems to have gotten much better. Plus, if I ever get nervous about lock-in I can easily export Evernote notes as HTML and convert them to Markdown via Pandoc with ease. 

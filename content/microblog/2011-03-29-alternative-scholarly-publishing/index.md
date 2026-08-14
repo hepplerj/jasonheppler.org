@@ -5,6 +5,8 @@ categories:
 - academia
 title: Alternative Scholarly Publishing
 url: /2011/03/29/alternative-scholarly-publishing/
+tags:
+- academia
 ---
 
 [John Houghton](http://informationr.net/ir/16-1/paper469.html): 

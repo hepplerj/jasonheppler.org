@@ -5,6 +5,8 @@ categories:
 - libraries
 title: Of Goats and Headaches
 url: /2011/05/27/of-goats-and-headaches/
+tags:
+- academia
 ---
 
 [The Economist](http://www.economist.com/node/18744177):

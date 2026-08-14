@@ -5,6 +5,8 @@ categories:
 - academia
 title: Mendeley and Open Access
 url: /2013/04/12/mendeley-and-open-access/
+tags:
+- academia
 ---
 
 [danah boyd](http://www.zephoria.org/thoughts/archives/2013/04/11/mendeley-elsevier.html):
