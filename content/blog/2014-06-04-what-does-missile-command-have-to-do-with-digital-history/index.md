@@ -1,7 +1,8 @@
 ---
 date: 2014-06-04T06:46:47Z
 description:
-image: dhsi2014_game.webp
+hero: dhsi2014_game.webp
+hero_alt: "Missile Command arcade game screen"
 tags:
   - digital-history
 title: What Does Missile Command Have to do with Digital History?

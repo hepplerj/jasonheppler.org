@@ -2,7 +2,8 @@
 tags:
   - environmental-history
 date: 2014-02-22T21:16:26Z
-image: sj_ponds.webp
+hero: sj_ponds.webp
+hero_alt: "Percolation ponds along Guadalupe Creek, San Jose"
 series: Living West
 title: Western History and the California Drought
 url: /2014/02/22/the-california-drought/
