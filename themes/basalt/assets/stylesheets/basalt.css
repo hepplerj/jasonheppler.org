@@ -4879,11 +4879,24 @@ a.ba-index-item .ba-index-date {
   margin: 0;
 }
 
-/* ---- Books & Chapters: sagebrush cover grid, basalt-tuned ---- */
+/* ---- Books & Chapters: single-row shelf. When the row fits it reads
+   as a plain grid; when it doesn't, it scrolls horizontally with snap
+   points instead of wrapping into orphan rows. ---- */
 .bf-pub-grid {
-  grid-template-columns: repeat(4, 1fr);
-  gap: 36px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 28px;
   margin-top: 28px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding-bottom: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--ba-hair-strong) transparent;
+}
+
+.bf-pub-grid .bf-pub {
+  flex: 0 0 160px;
+  scroll-snap-align: start;
 }
 
 .bf-pub img {
@@ -4916,14 +4929,3 @@ a.bf-pub:hover .bf-pub-title {
   color: var(--ba-muted);
 }
 
-@media (max-width: 900px) {
-  .bf-pub-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .bf-pub-grid {
-    grid-template-columns: 1fr;
-  }
-}

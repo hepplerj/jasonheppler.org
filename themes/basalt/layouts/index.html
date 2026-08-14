@@ -72,30 +72,14 @@
         <a href="/publications/" class="ba-section-link">All publications &rarr;</a>
       </div>
       <div class="bf-pub-grid">
-        <a href="/publications/silicon-valley/" class="bf-pub">
-          <img src="/assets/images/book_sv.webp" alt="Silicon Valley and the Environmental Inequalities of High-Tech Urbanism" loading="lazy" decoding="async">
-          <span class="bf-tag">Book · 2024</span>
-          <span class="bf-pub-title">Silicon Valley and the Environmental Inequalities of High-Tech Urbanism</span>
-          <span class="bf-press">University of Oklahoma Press</span>
+        {{ range hugo.Data.books }}
+        <a href="{{ .page | default .url }}" class="bf-pub"{{ if not .page }} target="_blank" rel="noopener"{{ end }}>
+          <img src="/assets/images/{{ .cover }}" alt="{{ .title }}" loading="lazy" decoding="async">
+          <span class="bf-tag">{{ .tag }}</span>
+          <span class="bf-pub-title">{{ .title }}</span>
+          <span class="bf-press">{{ .press }}</span>
         </a>
-        <a href="/publications/digital-community-engagement/" class="bf-pub">
-          <img src="/assets/images/dice.webp" alt="Digital Community Engagement" loading="lazy" decoding="async">
-          <span class="bf-tag">Edited volume · 2020</span>
-          <span class="bf-pub-title">Digital Community Engagement</span>
-          <span class="bf-press">University of Cincinnati Press</span>
-        </a>
-        <div class="bf-pub">
-          <img src="/assets/images/custer_companion.webp" alt="A Companion to Custer and the Little Bighorn Campaign" loading="lazy" decoding="async">
-          <span class="bf-tag">Chapter</span>
-          <span class="bf-pub-title">A Companion to Custer and the Little Bighorn Campaign</span>
-          <span class="bf-press">Wiley Blackwell</span>
-        </div>
-        <div class="bf-pub">
-          <img src="/assets/images/teaching_research_data.jpg" alt="Teaching Research Data Management" loading="lazy" decoding="async">
-          <span class="bf-tag">Chapter</span>
-          <span class="bf-pub-title">Teaching Research Data Management</span>
-          <span class="bf-press">ACRL</span>
-        </div>
+        {{ end }}
       </div>
     </section>
 

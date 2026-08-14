@@ -1,0 +1,34 @@
+# Books & chapters — drives the homepage cover grid.
+# page: internal permalink (preferred when a book has its own page)
+# url:  external publisher page (used when there is no internal page)
+# cover: filename in static/assets/images/
+
+- title: "Silicon Valley and the Environmental Inequalities of High-Tech Urbanism"
+  tag: "Book · 2024"
+  press: "University of Oklahoma Press"
+  cover: "book_sv.webp"
+  page: "/publications/silicon-valley/"
+
+- title: "Digital Community Engagement"
+  tag: "Edited volume · 2020"
+  press: "University of Cincinnati Press"
+  cover: "dice.webp"
+  page: "/publications/digital-community-engagement/"
+
+- title: "Teaching Research Data Management"
+  tag: "Chapter"
+  press: "ACRL"
+  cover: "teaching_research_data.jpg"
+  url: "https://www.alastore.ala.org/trdm"
+
+- title: "A Companion to Custer and the Little Bighorn Campaign"
+  tag: "Chapter"
+  press: "Wiley Blackwell"
+  cover: "custer_companion.webp"
+  url: "https://www.wiley.com/en-us/shop/general-introductory-history/a-companion-to-custer-and-the-little-bighorn-campaign-p-9781119071884"
+
+- title: "The Plains Political Tradition"
+  tag: "Chapter"
+  press: "South Dakota Historical Society Press"
+  cover: "plains_political_tradition.jpg"
+  url: "https://www.sdhspress.com/books/plains-political-tradition-essays-on-south-dakota-political-culture"
