@@ -18,7 +18,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.6;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -1685,7 +1685,7 @@ a {
 /* Prose */
 .lm-prose {
   margin: 44px 0 0;
-  font-size: 20px;
+  font-size: 21px;
   line-height: 1.6;
   color: var(--ink);
 }
@@ -4212,7 +4212,7 @@ mark {
 }
 
 .ba-run-title {
-  font-size: 16.5px;
+  font-size: 17.5px;
   line-height: 1.45;
 }
 
@@ -4274,7 +4274,7 @@ a.ba-run-item:hover .ba-run-title {
 }
 
 .ba-gg-desc {
-  font-size: 16.5px;
+  font-size: 17.5px;
   line-height: 1.6;
   color: var(--ba-muted);
   margin: 16px 0 0;
@@ -4411,7 +4411,7 @@ a.ba-run-item:hover .ba-run-title {
 }
 
 .ba-bookhero-lead {
-  font-size: 17.5px;
+  font-size: 18.5px;
   line-height: 1.55;
   margin: 16px 0 0;
 }
@@ -4461,7 +4461,7 @@ a.ba-index-item:last-child {
 
 a.ba-index-item .ba-index-title {
   display: block;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.4;
   margin: 0;
@@ -4497,7 +4497,7 @@ a.ba-index-item .ba-index-date {
 }
 
 .ba-bio-lead {
-  font-size: 16.5px;
+  font-size: 17.5px;
   line-height: 1.6;
   color: var(--ba-muted);
   margin: 0;
@@ -4544,7 +4544,7 @@ a.ba-index-item .ba-index-date {
 
 /* ---- Homepage v3: praise callout, newsletter callout, reading run ---- */
 .ba-bookhero-desc {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
   color: var(--ba-muted);
   margin: 12px 0 0;
@@ -4559,7 +4559,7 @@ a.ba-index-item .ba-index-date {
 }
 
 .ba-praise-quote {
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1.65;
   font-style: italic;
   color: var(--ba-ink);
