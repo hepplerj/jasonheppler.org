@@ -2,7 +2,7 @@ ignoreFiles:
   - _templates/
 
 title: Jason A. Heppler
-theme: sagebrush # pine # big-sky # trailhead
+theme: basalt # sagebrush # pine # big-sky # trailhead
 description: >-
   Jason Heppler is the senior web developer at the Roy Rosenzweig Center for
   History and New Media at George Mason University.

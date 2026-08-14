@@ -7,7 +7,6 @@
     <img src="/assets/images/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" decoding="async">
   </div>
   <div class="lm-bookhead-info">
-    <p class="lm-label">Book{{ with .Params.year }} · {{ . }}{{ end }}</p>
     <h1 class="lm-bookhead-title">{{ .Title }}</h1>
     {{ with .Params.author }}<p class="lm-bookhead-author">by {{ . }}</p>{{ end }}
     {{ with .Params.publisher }}<p class="lm-bookhead-publisher">{{ . }}</p>{{ end }}
