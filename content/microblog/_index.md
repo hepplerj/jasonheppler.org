@@ -7,5 +7,5 @@ aliases:
 ---
 
 <aside>
-Short notes, observations, and links worth keeping — less formed than an essay, more intentional than a passing thought.
+Short notes, observations, and links worth keeping.
 </aside>
