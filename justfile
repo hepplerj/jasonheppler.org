@@ -2,6 +2,10 @@
 default:
     @just --list
 
+# Sync book log from micro.blog (dry run; pass --write to apply)
+sync-books *ARGS:
+    python3 scripts/sync-books.py {{ARGS}}
+
 # Run local dev server
 serve:
     hugo serve --port 1313 --buildDrafts --buildFuture --disableFastRender
