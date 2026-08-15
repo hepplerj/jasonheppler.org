@@ -664,6 +664,7 @@ a {
 .lm-stat-num {
   font-size: 30px;
   font-weight: 600;
+  font-family: var(--ui);
   color: var(--pine);
   line-height: 1;
   letter-spacing: -0.02em;
@@ -3547,13 +3548,40 @@ a.bf-pub:hover img {
   --flex-400: #D0A215;
 }
 
-:root[data-accent="red"] { --flex-600: #AF3029; --flex-400: #D14D41; }
-:root[data-accent="orange"] { --flex-600: #BC5215; --flex-400: #DA702C; }
-:root[data-accent="yellow"] { --flex-600: #AD8301; --flex-400: #D0A215; }
-:root[data-accent="cyan"] { --flex-600: #24837B; --flex-400: #3AA99F; }
-:root[data-accent="blue"] { --flex-600: #205EA6; --flex-400: #4385BE; }
-:root[data-accent="purple"] { --flex-600: #5E409D; --flex-400: #8B7EC8; }
-:root[data-accent="magenta"] { --flex-600: #A02F6F; --flex-400: #CE5D97; }
+:root[data-accent="red"] {
+  --flex-600: #AF3029;
+  --flex-400: #D14D41;
+}
+
+:root[data-accent="orange"] {
+  --flex-600: #BC5215;
+  --flex-400: #DA702C;
+}
+
+:root[data-accent="yellow"] {
+  --flex-600: #AD8301;
+  --flex-400: #D0A215;
+}
+
+:root[data-accent="cyan"] {
+  --flex-600: #24837B;
+  --flex-400: #3AA99F;
+}
+
+:root[data-accent="blue"] {
+  --flex-600: #205EA6;
+  --flex-400: #4385BE;
+}
+
+:root[data-accent="purple"] {
+  --flex-600: #5E409D;
+  --flex-400: #8B7EC8;
+}
+
+:root[data-accent="magenta"] {
+  --flex-600: #A02F6F;
+  --flex-400: #CE5D97;
+}
 
 /* Legacy lm- token names, mapped onto --ba-* */
 :root {
