@@ -107,7 +107,7 @@
             <a href="/microblog/" class="ba-section-link">All &rarr;</a>
           </div>
           <div class="blog-desc-small">
-              <p>Shorter observations, notes, or thoughts.</p>
+              <p>Shorter observations, notes, commonplace, or brief thoughts.</p>
           </div>
           {{ range first 5 (where site.RegularPages "Section" "microblog").ByDate.Reverse }}
           <a href="{{ .RelPermalink }}" class="ba-index-item">
