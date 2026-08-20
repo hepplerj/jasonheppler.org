@@ -1,6 +1,26 @@
 # Digital & Public History projects — displayed on the /research/ page
 # image: thumbnail in static/assets/images/ (portfolio_*.webp)
 
+- title: "Westward"
+  desc: "An endless scroll of public-domain photographs of the American West."
+  url: "https://westward.jasonheppler.org"
+  image: "portfolio_westward.webp"
+
+- title: "Mapping Private Investigations"
+  desc: "Mapping the operations, agents, and impact of the Pinkerton National Detective Agency across the United States."
+  url: "https://mappingpinkertons.rrchnm.org"
+  image: "portfolio_pinkertons.webp"
+
+- title: "Mapping Early Modern Violence"
+  desc: "How violence was enacted, understood, and remembered in the cities of early modern Italy, 1500–1700."
+  url: "https://earlymodernviolence.org"
+  image: "portfolio_emv.webp"
+
+- title: "Teaching History"
+  desc: "Teaching materials, history content, and best practices for K–12 American history education."
+  url: "https://teachinghistory.org"
+  image: "portfolio_teachinghistory.webp"
+
 - title: "Connecting Threads"
   desc: "Amplifying the contributions of Indian weavers and African Caribbean consumers to global histories of dress."
   url: "https://connectingthreads.co.uk/"

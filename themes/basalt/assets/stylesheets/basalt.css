@@ -4785,8 +4785,20 @@ a.ba-index-item .ba-index-date {
   margin-top: 14px;
 }
 
+/* Second project row: mirrored (image right), hairline between rows */
+.ba-gg-split--flip {
+  flex-direction: row-reverse;
+}
+
+.ba-gg-split+.ba-gg-split {
+  margin-top: 56px;
+  padding-top: 56px;
+  border-top: 1px solid var(--ba-hair);
+}
+
 @media (max-width: 720px) {
-  .ba-gg-split {
+  .ba-gg-split,
+  .ba-gg-split--flip {
     flex-direction: column;
     gap: 28px;
     text-align: center;
