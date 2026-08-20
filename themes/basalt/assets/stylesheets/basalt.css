@@ -1,6 +1,6 @@
 /* Basalt — Craig Mod-inspired quiet reading theme (forked from Sagebrush).
    Grayscale light/dark (system default + toggle) with Flexoki green accents.
-   Spectral prose, Hanken Grotesk letterspaced-caps chrome, IBM Plex Mono code.
+   Literata prose, Hanken Grotesk letterspaced-caps chrome, IBM Plex Mono code.
    Base reset + lm- components come first; fonts, the --ba-* design tokens,
    legacy token mappings (--paper/--bf-* → --ba-*), and bf-/tw- components
    follow. Essay-artifact styles (drop cap, end-mark, hero) are at the end. */
@@ -1689,7 +1689,7 @@ a {
 /* Prose */
 .lm-prose {
   margin: 44px 0 0;
-  font-size: 21px;
+  font-size: 19px;
   line-height: 1.6;
   color: var(--ink);
 }
@@ -1910,7 +1910,7 @@ a {
 }
 
 .lm-prose strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .lm-prose sup a {
@@ -2684,40 +2684,25 @@ a {
 }
 
 
-/* Sagebrush — "Western" redesign (v11). Warm paper, dark bands, Spectral
-   serif + IBM Plex Mono (self-hosted). Homepage uses bf- classes; inner
-   pages reuse Pine's lm- markup re-skinned via the token overrides below. */
+/* Forked from Sagebrush ("Western" v11). Literata serif + IBM Plex Mono
+   (self-hosted). Homepage uses bf- classes; inner pages reuse Pine's lm-
+   markup re-skinned via the token overrides below. */
 
+/* Literata (variable: wght 200–900, opsz 7–72) — body serif */
 @font-face {
-  font-family: "Spectral";
+  font-family: "Literata";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 200 900;
   font-display: swap;
-  src: url("/assets/fonts/Spectral-Regular.woff2") format("woff2");
+  src: url("/assets/fonts/Literata-Variable.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Spectral";
-  font-style: normal;
-  font-weight: 500 600;
-  font-display: swap;
-  src: url("/assets/fonts/Spectral-Medium.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Spectral";
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url("/assets/fonts/Spectral-Light.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Spectral";
+  font-family: "Literata";
   font-style: italic;
-  font-weight: 400;
+  font-weight: 200 900;
   font-display: swap;
-  src: url("/assets/fonts/Spectral-RegularItalic.woff2") format("woff2");
+  src: url("/assets/fonts/Literata-Italic-Variable.woff2") format("woff2");
 }
 
 @font-face {
@@ -3481,7 +3466,7 @@ a.bf-pub:hover img {
    ============================================================ */
 :root {
   /* fonts */
-  --serif: "Spectral", Georgia, "Times New Roman", serif;
+  --serif: "Literata", Georgia, "Times New Roman", serif;
   --ui: "Hanken Grotesk", -apple-system, "Helvetica Neue", Arial, sans-serif;
   --code: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
   /* layout: 640px measure + side padding */
@@ -3602,7 +3587,7 @@ a.bf-pub:hover img {
   --mono: var(--ui);
 }
 
-/* Titles are Spectral like the prose — one family, used hard */
+/* Titles are Literata like the prose — one family, used hard */
 h1,
 h2,
 h3,
@@ -3722,8 +3707,8 @@ mark {
   color: var(--bf-green);
 }
 
-/* Titles: we only ship Spectral up to Medium, so keep prominent headings at
-   500–600 (mapped to Medium) and let body stay 400 — avoids faux-bold serif. */
+/* Titles: semibold (600), a deliberate notch below strong's 700 — Literata's
+   variable file makes both real weights, so headings stay quiet, bold pops. */
 .bf-inner h1,
 .bf-inner h2,
 .bf-inner h3,
