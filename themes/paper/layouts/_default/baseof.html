@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Locale | default "en" }}">
+<head>
+  {{ partial "min/head.html" . }}
+</head>
+<body>
+  <a class="lm-skip-link" href="#main-content">Skip to content</a>
+  {{ partial "min/topbar.html" . }}
+  <main class="lm-wrap" id="main-content">
+    {{ block "main" . }}{{ end }}
+  </main>
+  <div class="lm-wrap">
+    {{ partial "min/footer.html" . }}
+  </div>
+  {{ partial "min/scripts.html" . }}
+</body>
+</html>

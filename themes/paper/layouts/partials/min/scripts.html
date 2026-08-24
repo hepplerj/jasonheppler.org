@@ -1,0 +1,16 @@
+<!-- Theme UI: email, mobile nav, theme switcher -->
+{{ $ui := resources.Get "javascripts/min-ui.js" | js.Build | resources.Minify | resources.Fingerprint "sha512" }}
+<script src="{{ $ui.RelPermalink }}" integrity="{{ $ui.Data.Integrity }}" defer></script>
+
+<!-- Keyboard shortcuts, footnotes, lightbox (hepp.js) -->
+{{ $js := resources.Get "javascripts/hepp.js" | js.Build | resources.Minify | resources.Fingerprint "sha512" }}
+<script type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" async></script>
+
+<!-- ⌘K fast search -->
+<div id="fastSearch" role="dialog" aria-modal="true" aria-label="Site search" style="display:none">
+  <div class="fast-search-box">
+    <input id="searchInput" tabindex="0" placeholder="Search…" aria-label="Search" autocomplete="off" spellcheck="false">
+    <ul id="searchResults" role="listbox"></ul>
+  </div>
+</div>
+<script src="/js/fastsearch.js"></script>

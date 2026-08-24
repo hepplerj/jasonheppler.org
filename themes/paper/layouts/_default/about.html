@@ -1,0 +1,84 @@
+{{ define "main" }}
+<header class="lm-archive-head">
+  <h1 class="lm-archive-title">{{ .Title }}</h1>
+</header>
+
+<section class="lm-roles">
+  <div class="lm-role">
+    <h3 class="lm-role-title">Senior Developer / Scholar</h3>
+    <p class="lm-role-org">Roy Rosenzweig Center for History &amp; New Media</p>
+  </div>
+  <div class="lm-role">
+    <h3 class="lm-role-title">Adjunct Professor of History</h3>
+    <p class="lm-role-org">George Mason University</p>
+  </div>
+  <div class="lm-role">
+    <h3 class="lm-role-title">Affiliate Fellow</h3>
+    <p class="lm-role-org">Center for Great Plains Studies, University of Nebraska&ndash;Lincoln</p>
+  </div>
+</section>
+
+<div class="lm-prose lm-about-body">
+  {{ .Content }}
+</div>
+
+{{ $posts := where site.RegularPages "Section" "in" (slice "blog" "microblog") }}
+{{ $wordCount := 0 }}
+{{ range $posts }}{{ $wordCount = add $wordCount .WordCount }}{{ end }}
+{{ $postCount := len $posts }}
+{{ $firstYear := (index (last 1 $posts) 0).Date.Year }}
+{{ $yearsActive := sub now.Year $firstYear | add 1 }}
+
+<section class="lm-stats">
+  <div class="lm-stat">
+    <span class="lm-stat-num">{{ $yearsActive }}</span>
+    <span class="lm-stat-label">Years writing</span>
+  </div>
+  <div class="lm-stat">
+    <span class="lm-stat-num">{{ $postCount | lang.FormatNumberCustom 0 }}</span>
+    <span class="lm-stat-label">Posts</span>
+  </div>
+  <div class="lm-stat">
+    <span class="lm-stat-num">{{ div $wordCount 1000 | lang.FormatNumberCustom 0 }}k</span>
+    <span class="lm-stat-label">Words written</span>
+  </div>
+  <div class="lm-stat">
+    <span class="lm-stat-num">{{ len (where (where site.RegularPages "Section" "microblog") ".Params.external" "ne" nil) | lang.FormatNumberCustom 0 }}</span>
+    <span class="lm-stat-label">Links shared</span>
+  </div>
+  <div class="lm-stat">
+    <span class="lm-stat-num">{{ len site.Taxonomies.tags }}</span>
+    <span class="lm-stat-label">Topics</span>
+  </div>
+</section>
+
+<section class="lm-about-links">
+  <div class="lm-about-col">
+    <p class="lm-label">Connect</p>
+    <ul class="lm-link-list">
+      {{ with site.Params.Author.email }}<li><a class="lm-email-link" data-name="{{ index (split . "@") 0 }}" data-domain="{{ index (split . "@") 1 }}">Email</a></li>{{ end }}
+      {{ with site.Params.social.bluesky }}<li><a href="{{ . }}">Bluesky</a></li>{{ end }}
+      {{ with site.Params.social.mastodon }}<li><a href="{{ . }}" rel="me">Mastodon</a></li>{{ end }}
+      <li><a href="https://github.com/hepplerj">GitHub</a></li>
+      {{ with site.Params.social.linkedin }}<li><a href="{{ . }}">LinkedIn</a></li>{{ end }}
+      {{ with site.Params.social.microblog }}<li><a href="{{ . }}">Micro.blog</a></li>{{ end }}
+    </ul>
+  </div>
+  <div class="lm-about-col">
+    <p class="lm-label">Elsewhere</p>
+    <ul class="lm-link-list">
+      <li><a href="/blogroll/">Blogroll</a></li>
+      <li><a href="/courses/">Teaching</a></li>
+      <li><a href="/uses/">Uses</a></li>
+      <li><a href="https://www.tackandink.org/">Newsletter</a></li>
+    </ul>
+  </div>
+  <div class="lm-about-col">
+    <p class="lm-label">Feeds</p>
+    <ul class="lm-link-list">
+      <li><a href="/feed.xml">RSS</a></li>
+      <li><a href="/feed.json">JSON Feed</a></li>
+    </ul>
+  </div>
+</section>
+{{ end }}

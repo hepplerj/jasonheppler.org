@@ -1,0 +1,107 @@
+{{ define "main" }}
+
+<section class="lm-intro">
+  <p class="lm-bio">I'm Jason A. Heppler&mdash;a historian of the North American West and Great Plains. I'm the senior developer/scholar at the <a href="https://rrchnm.org">Roy Rosenzweig Center for History and New Media</a> and an Affiliate Fellow at the <a href="https://www.unl.edu/plains/">Center for Great Plains Studies</a> at the University of Nebraska-Lincoln.</p>
+</section>
+
+<section class="lm-section lm-contact">
+  <div class="lm-social">
+    <a class="lm-email-link" data-name="jason" data-domain="jasonheppler.org">Email</a>
+    {{ with site.Params.social.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
+    {{ with site.Params.social.microblog }}<a href="{{ . }}">micro.blog</a>{{ end }}
+    {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me">Mastodon</a>{{ end }}
+    {{ with site.Params.social.github }}<a href="{{ . }}">GitHub</a>{{ end }}
+  </div>
+</section>
+
+{{ $writing := (where site.RegularPages "Section" "in" (slice "blog" "microblog")).ByDate.Reverse }}
+{{ with $writing }}
+<section class="lm-section">
+  <div class="lm-section-head">
+    <h2 class="lm-label">Writing</h2>
+    <a href="/archive/" class="lm-section-link">All writing →</a>
+  </div>
+  <div class="lm-stream">
+    {{ range first 7 . }}
+    <a href="{{ .RelPermalink }}" class="lm-row">
+      <span class="lm-row-title">{{ .Title }}</span>
+      <time class="lm-row-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006/01/02" }}</time>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ with hugo.Data.books }}
+<section class="lm-section">
+  <div class="lm-section-head">
+    <h2 class="lm-label">Books &amp; book chapters</h2>
+    <a href="/publications/" class="lm-section-link">All publications →</a>
+  </div>
+  <div class="lm-pub-shelf" aria-label="Books and book chapters">
+    {{ range . }}
+    <a href="{{ .page | default .url }}" class="lm-pub-item"{{ if not .page }} target="_blank" rel="noopener"{{ end }}>
+      <img src="/assets/images/{{ .cover }}" alt="{{ .title }}" loading="lazy" decoding="async">
+      <span class="lm-pub-tag">{{ .tag }}</span>
+      <span class="lm-pub-title">{{ .title }}</span>
+      <span class="lm-pub-press">{{ .press }}{{ if not .page }} ↗{{ end }}</span>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+<section class="lm-section" aria-labelledby="lmProjectsTitle">
+  <h2 class="lm-label" id="lmProjectsTitle">Digital projects</h2>
+  <div class="lm-project-list">
+    <a href="https://governingground.org" class="lm-project-row">
+      <img src="/assets/images/govground-preview.jpg" alt="" loading="lazy" decoding="async">
+      <span class="lm-project-copy">
+        <span class="lm-project-title">Governing Ground</span>
+        <span class="lm-project-description">A digital history of the recurring movements over the transfer, ownership, and control of federal lands.</span>
+      </span>
+    </a>
+    <a href="https://westward.jasonheppler.org" class="lm-project-row">
+      <img src="/assets/images/westward-preview.webp" alt="" loading="lazy" decoding="async">
+      <span class="lm-project-copy">
+        <span class="lm-project-title">Westward</span>
+        <span class="lm-project-description">An endless scroll of public-domain photographs of the American West drawn from public repositories.</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+{{ with hugo.Data.essays_criticism }}
+{{ $published := where . "published" "ne" false }}
+{{ $essays := where $published "type" "in" (slice "Essay" "Chapter" "Review") }}
+<section class="lm-section">
+  <div class="lm-section-head">
+    <h2 class="lm-label">Essays, reviews &amp; criticism</h2>
+    <a href="/publications/" class="lm-section-link">All publications →</a>
+  </div>
+  <div class="lm-work-list">
+    {{ range first 5 (sort $essays "year" "desc") }}
+      {{ if .url }}<a href="{{ .url }}" class="lm-work-row" target="_blank" rel="noopener">{{ else }}<div class="lm-work-row lm-work-row-static">{{ end }}
+        <span class="lm-work-title">{{ .title }}</span>
+        <span class="lm-work-meta">{{ .publication }} · {{ .year }}{{ if .url }}{{ end }}</span>
+      {{ if .url }}</a>{{ else }}</div>{{ end }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ with hugo.Data.on_the_road }}
+<section class="lm-section">
+  <h2 class="lm-label">On the road</h2>
+  <div class="lm-work-list">
+    {{ range first 5 (sort . "date" "desc") }}
+      {{ if .url }}<a href="{{ .url }}" class="lm-work-row">{{ else }}<div class="lm-work-row lm-work-row-static">{{ end }}
+        <span class="lm-work-title">{{ .title }}</span>
+        <span class="lm-work-meta">{{ .venue }} · {{ .label }}{{ if .url }}{{ end }}</span>
+      {{ if .url }}</a>{{ else }}</div>{{ end }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ end }}

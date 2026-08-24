@@ -1,0 +1,105 @@
+{{ define "main" }}
+<header class="lm-archive-head">
+  <p class="lm-label">Reading</p>
+  <h1 class="lm-archive-title">Bookshelf</h1>
+  <p class="lm-archive-lead">What I'm reading and have read. For older reading logs, see <a href="https://www.librarything.com/profile/hepplerj">LibraryThing</a>.</p>
+</header>
+
+{{ $reading := where (where site.RegularPages "Section" "books") ".Params.categories" "intersect" (slice "reading") }}
+{{ with $reading }}
+<section class="lm-section">
+  <p class="lm-label">Currently reading</p>
+  <div class="lm-shelf">
+    {{ range . }}
+    <div class="lm-shelf-entry">
+      <div class="lm-shelf-row">
+        <span class="lm-shelf-info">
+          <span class="lm-shelf-title">{{ .Title }}</span>
+          <span class="lm-shelf-meta">{{ .Params.author }}{{ with .Params.pub_year }} · {{ . }}{{ end }}</span>
+        </span>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ $allBooks := where (where site.RegularPages "Section" "books") ".Date" "ge" (time "2018-01-01") }}
+<section class="lm-section">
+  <div class="lm-archive-controls">
+    <div class="lm-chips" id="shelfChips">
+      {{ $years := slice }}
+      {{ range $allBooks }}{{ $y := .Date.Format "2006" }}{{ if not (in $years $y) }}{{ $years = $years | append $y }}{{ end }}{{ end }}
+      {{ range sort $years "value" "desc" }}
+      <button class="lm-chip{{ if eq . (now.Format "2006") }} on{{ end }}" data-shelf="{{ . }}">{{ . }}</button>
+      {{ end }}
+      <button class="lm-chip" data-shelf="all">All</button>
+    </div>
+  </div>
+  <p class="lm-archive-count" id="shelfCount"></p>
+
+  <div class="lm-shelf" id="shelfList">
+    {{ range $allBooks.ByDate.Reverse }}
+    {{ if not (in .Params.categories "reading") }}
+    <div class="lm-shelf-entry" data-year="{{ .Date.Format "2006" }}">
+      {{ $reviewed := "" }}{{ if .Params.reviewed }}{{ $reviewed = .Permalink }}{{ with .Params.review_url }}{{ $reviewed = . }}{{ end }}{{ end }}
+      {{ if .Params.isbn }}
+      <details class="lm-shelf-details">
+        <summary class="lm-shelf-row">
+          <span class="lm-shelf-info">
+            <span class="lm-shelf-title">{{ with $reviewed }}<a href="{{ . }}" class="lm-reviewed">Reviewed</a> {{ end }}{{ .Title }}</span>
+            <span class="lm-shelf-meta">{{ .Params.author }}{{ with .Params.pub_year }} · {{ . }}{{ end }}</span>
+          </span>
+          <span class="lm-shelf-year">{{ .Date.Format "2006" }}</span>
+        </summary>
+        <div class="lm-shelf-expanded">
+          <span class="lm-shelf-isbn">ISBN {{ .Params.isbn }}</span>
+          <span class="lm-shelf-links">
+            <a href="https://worldcat.org/isbn/{{ .Params.isbn }}">WorldCat</a>
+            <a href="https://openlibrary.org/isbn/{{ .Params.isbn }}">Open Library</a>
+            <a href="https://bookshop.org/beta-search?keywords={{ .Params.isbn }}">Bookshop</a>
+          </span>
+          {{ with .Params.publisher }}<span class="lm-shelf-publisher">{{ . }}</span>{{ end }}
+        </div>
+      </details>
+      {{ else }}
+      <div class="lm-shelf-row">
+        <span class="lm-shelf-info">
+          <span class="lm-shelf-title">{{ with $reviewed }}<a href="{{ . }}" class="lm-reviewed">Reviewed</a> {{ end }}{{ .Title }}</span>
+          <span class="lm-shelf-meta">{{ .Params.author }}{{ with .Params.pub_year }} · {{ . }}{{ end }}</span>
+        </span>
+        <span class="lm-shelf-year">{{ .Date.Format "2006" }}</span>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+    {{ end }}
+  </div>
+</section>
+
+<script>
+  (function () {
+    var chips = document.querySelectorAll('#shelfChips .lm-chip');
+    var entries = document.querySelectorAll('#shelfList .lm-shelf-entry');
+    var count = document.getElementById('shelfCount');
+    function apply(shelf) {
+      var visible = 0;
+      entries.forEach(function (e) {
+        var show = shelf === 'all' || e.dataset.year === shelf;
+        e.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      count.textContent = visible + ' book' + (visible !== 1 ? 's' : '') + (shelf === 'all' ? '' : ' in ' + shelf);
+    }
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        chips.forEach(function (c) { c.classList.remove('on'); });
+        chip.classList.add('on');
+        apply(chip.dataset.shelf);
+      });
+    });
+    var active = document.querySelector('#shelfChips .lm-chip.on');
+    apply(active ? active.dataset.shelf : 'all');
+  })();
+</script>
+{{ end }}

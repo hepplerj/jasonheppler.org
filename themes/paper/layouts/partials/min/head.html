@@ -1,0 +1,104 @@
+<link href="http://gmpg.org/xfn/11" rel="profile" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+{{ if eq hugo.Environment "development" }}
+<meta name="robots" content="noindex, nofollow" />
+{{ else }}
+<meta name="robots" content="index,follow" />
+{{ end }}
+
+{{ if .IsPage }}
+<title>{{ .Title }} · {{ .Site.Title }}</title>
+{{ else }}
+<title>{{ .Site.Title }} · Environmental and Digital Historian</title>
+{{ end }}
+
+{{ if .Description }}
+<meta name="description" content="{{ .Description }}" />
+{{ else if .IsPage }}
+<meta name="description" content="{{ .Summary | plainify }}" />
+{{ end }}
+
+<!-- DNS Prefetch -->
+<link rel="dns-prefetch" href="https://jasonheppler.org" />
+
+<!-- Me -->
+<meta name="author" content="Jason A. Heppler" />
+<meta name="copyright" content="&copy; Copyright 2008 to Present" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href="https://micro.blog/jaheppler" rel="me" />
+<link href="https://hcommons.social/@jaheppler" rel="me" />
+<link href="https://historians.social/@jaheppler" rel="me" />
+<link href="https://hcommons.org/members/hepplerj/" rel="me" />
+<link href="https://orcid.org/0000-0003-4158-6186" rel="me" />
+<link href="https://github.com/hepplerj" rel="me" />
+<link href="https://scholar.google.com/citations?user=X2hGnS4AAAAJ" rel="me" />
+<link href="https://www.zotero.org/hepplerj/" rel="me" />
+<link href="https://www.linkedin.com/in/jasonheppler/" rel="me" />
+<link href="https://indieweb.org/User:Jasonheppler.org" rel="me" />
+
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="{{ .Title }}" />
+<meta property="dc:creator" content="Jason A. Heppler" />
+<meta property="dc:date" content="{{ .Site.Lastmod }}" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="{{ .Permalink }}" />
+<meta property="dc:rights" content="CC BY-NC-SA 3.0" />
+<meta property="dc:source" content="Jason Heppler weblog" />
+<meta property="dc:subject" content="History" />
+<meta property="dc:type" content="website" />
+
+<!-- Google Scholar Metadata -->
+<meta name="citation_author" content="Jason A. Heppler" />
+<meta name="citation_date" content="{{ .Site.Lastmod }}" />
+<meta name="citation_title" content="{{ .Title }}" />
+<meta name="citation_journal_title" content="Jason Heppler weblog" />
+
+<!-- Open Graph Metadata -->
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta property="og:author" content="Jason A. Heppler" />
+<meta property="og:site_name" content="Jason Heppler - Historian" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+
+<!-- Twitter Metadata -->
+<meta property="twitter:account_id" content="16240799" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@jaheppler" />
+<meta name="twitter:creator" content="@jaheppler" />
+<meta name="twitter:url" content="{{ .Permalink }}" />
+<meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+
+<!-- Webmentions (receiving endpoint; display intentionally omitted) -->
+<link rel="webmention" href="https://webmention.io/jasonheppler.org/webmention" />
+<link rel="pingback" href="https://webmention.io/jasonheppler.org/xmlrpc" />
+
+<!-- Stylesheet -->
+{{ $css := resources.Get "stylesheets/minimal.css" | resources.Minify | resources.Fingerprint "sha512" }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" />
+
+<link rel="shortcut icon" href="/assets/favicon.png" />
+
+<!-- Plausible -->
+<script defer data-domain="jasonheppler.org" src="https://plausible.io/js/plausible.js"></script>
+
+<link rel="canonical" href="{{ .Permalink }}" />
+<link rel="home" href="https://jasonheppler.org" />
+<link rel="alternate" type="application/rss+xml" href="/feed.xml" title="Jason Heppler's blog." />
+<link rel="alternate" type="application/feed+json" href="/feed.json" title="Jason Heppler's blog (JSON Feed)." />
+
+<!-- Flash-free theme (light / dark / auto) -->
+<script>
+  (function () {
+    var mode = localStorage.getItem('lm-theme-mode') || 'auto';
+    var root = document.documentElement;
+    root.setAttribute('data-mode', mode);
+    if (mode === 'light' || mode === 'dark') root.setAttribute('data-theme', mode);
+  })();
+</script>
