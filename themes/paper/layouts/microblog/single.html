@@ -14,14 +14,6 @@
     {{ end }}
   </div>
 
-  <div class="lm-article-footer">
-    <p class="lm-post-note">This is a <a href="/archive/">microblog</a> post — a short note, observation, or link worth keeping.</p>
-    <p class="lm-post-meta">
-      {{ partial "min/carbon-badge.html" . }}
-      {{ with .Params.tags }}<span class="lm-dot-sep">·</span>{{ range $i, $t := . }}{{ if $i }}<span class="lm-dot-sep">·</span>{{ end }}<a href="/tags/{{ $t | urlize }}/">{{ $t | humanize }}</a>{{ end }}{{ end }}
-    </p>
-  </div>
-
   {{ partial "min/author-card.html" . }}
 
   <a href="https://brid.gy/publish/bluesky" class="u-syndication" hidden></a>

@@ -1,12 +1,18 @@
-<aside class="lm-author p-author h-card">
-  <img src="/assets/images/portrait.webp" alt="Jason A. Heppler" class="u-photo" width="56" height="56">
-  <div class="lm-author-text">
-    <span class="lm-author-name p-name">Jason A. Heppler</span>
-    <span class="lm-author-role">Environmental &amp; digital historian</span>
+<div class="lm-author p-author h-card">
+  <div class="lm-author-profile">
+    <img src="/assets/images/portrait.webp" alt="Jason A. Heppler" class="u-photo" width="56" height="56">
+    <div class="lm-author-text">
+      <span class="lm-author-name p-name">Jason A. Heppler</span>
+      <span class="lm-author-role">Environmental &amp; digital historian</span>
+    </div>
+    <div class="lm-author-links">
+      {{ with site.Params.social.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
+      {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me">Mastodon</a>{{ end }}
+      <a href="https://github.com/hepplerj">GitHub</a>
+    </div>
   </div>
-  <div class="lm-author-links">
-    {{ with site.Params.social.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
-    {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me">Mastodon</a>{{ end }}
-    <a href="https://github.com/hepplerj">GitHub</a>
-  </div>
-</aside>
+  <p class="lm-post-meta lm-author-meta">
+    {{ partial "min/carbon-badge.html" . }}
+    {{ with .Params.tags }}<span class="lm-dot-sep">·</span><span class="lm-author-tags">{{ range $i, $t := . }}{{ if $i }}<span class="lm-dot-sep">·</span>{{ end }}<a href="/tags/{{ $t | urlize }}/">{{ $t | humanize }}</a>{{ end }}</span>{{ end }}
+  </p>
+</div>

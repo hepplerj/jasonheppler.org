@@ -30,6 +30,32 @@ document.querySelectorAll('.lm-email-link').forEach(function (el) {
   });
 })();
 
+// Accent picker (colophon): swatches set the Flexoki accent and persist.
+(function () {
+  var root = document.documentElement;
+  var swatches = document.querySelectorAll('.ba-swatch');
+  if (!swatches.length) return;
+  function mark() {
+    var current = root.getAttribute('data-accent') || 'default';
+    swatches.forEach(function (el) {
+      el.setAttribute('aria-pressed', el.dataset.accent === current ? 'true' : 'false');
+    });
+  }
+  swatches.forEach(function (el) {
+    el.addEventListener('click', function () {
+      if (el.dataset.accent === 'default') {
+        root.removeAttribute('data-accent');
+        try { localStorage.removeItem('ba-accent'); } catch (e) {}
+      } else {
+        root.setAttribute('data-accent', el.dataset.accent);
+        try { localStorage.setItem('ba-accent', el.dataset.accent); } catch (e) {}
+      }
+      mark();
+    });
+  });
+  mark();
+})();
+
 // Theme switcher: cycle auto -> light -> dark and persist.
 (function () {
   var root = document.documentElement;

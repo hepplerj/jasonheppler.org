@@ -4,11 +4,11 @@ date: 2026-08-19
 description: A reference for the typography, patterns, and components that make up jasonheppler.org.
 ---
 
-This page collects the typography, patterns, and components that make up the site. The current theme is one I developed called [Basalt](/colophon/), a [Craig Mod](https://craigmod.com/) inspired grayscale design with Flexoki accents, Literata for prose and headings, Hanken Grotesk for chrome, and IBM Plex Mono for code.
+This page collects the typography, patterns, and components that make up the site. The current theme is one I developed called [Paper](/colophon/): a quiet, system-font design built around a narrow reading measure, Flexoki paper and ink tones, and red-on-light / gold-on-dark links.
 
 ## Typography
 
-Body copy is set in **Literata** at 19px with a 1.6 line height. Headings share the same family in semibold. The navigation, buttons, small labels are set in <span class="sg-ui"><strong>Hanken Grotesk</strong></span>. Code and monofonts are set in the fantastic <span class="sg-code"><strong>IBM Plex Mono</strong></span>.
+Body copy is set in the reader's **system sans-serif** at 16px with a 1.6 line height. Headings, navigation, buttons, and labels use that same system family at different weights and sizes. Code and monospaced metadata use the reader's **system monospace** face.
 
 ### Headings
 
@@ -184,23 +184,24 @@ The site's accent colors borrow from Steph Ango's [Flexoki theme](https://stepha
   <div class="sg-swatch"><span class="sg-chip" style="background:#AF3029"></span><span class="sg-chip" style="background:#D14D41"></span><span class="sg-label">red</span></div>
   <div class="sg-swatch"><span class="sg-chip" style="background:#BC5215"></span><span class="sg-chip" style="background:#DA702C"></span><span class="sg-label">orange</span></div>
   <div class="sg-swatch"><span class="sg-chip" style="background:#AD8301"></span><span class="sg-chip" style="background:#D0A215"></span><span class="sg-label">yellow</span></div>
+  <div class="sg-swatch"><span class="sg-chip" style="background:#66800B"></span><span class="sg-chip" style="background:#879A39"></span><span class="sg-label">green</span></div>
   <div class="sg-swatch"><span class="sg-chip" style="background:#24837B"></span><span class="sg-chip" style="background:#3AA99F"></span><span class="sg-label">cyan</span></div>
   <div class="sg-swatch"><span class="sg-chip" style="background:#205EA6"></span><span class="sg-chip" style="background:#4385BE"></span><span class="sg-label">blue</span></div>
   <div class="sg-swatch"><span class="sg-chip" style="background:#5E409D"></span><span class="sg-chip" style="background:#8B7EC8"></span><span class="sg-label">purple</span></div>
   <div class="sg-swatch"><span class="sg-chip" style="background:#A02F6F"></span><span class="sg-chip" style="background:#CE5D97"></span><span class="sg-label">magenta</span></div>
 </div>
 
-## Grayscale frame
+## Paper and ink
 
 The paper, ink, and rule tones that appear on every page. These flip with the theme, which you can see sampled below from the current mode.
 
 <div class="sg-swatches sg-swatches--tokens">
-  <div class="sg-swatch"><span class="sg-chip sg-chip--token" style="background:var(--ba-paper)"></span><span class="sg-label">paper</span></div>
-  <div class="sg-swatch"><span class="sg-chip sg-chip--token" style="background:var(--ba-paper-2)"></span><span class="sg-label">paper-2</span></div>
-  <div class="sg-swatch"><span class="sg-chip sg-chip--token" style="background:var(--ba-ink)"></span><span class="sg-label">ink</span></div>
-  <div class="sg-swatch"><span class="sg-chip sg-chip--token" style="background:var(--ba-muted)"></span><span class="sg-label">muted</span></div>
-  <div class="sg-swatch"><span class="sg-chip sg-chip--token" style="background:var(--ba-faint)"></span><span class="sg-label">faint</span></div>
-  <div class="sg-swatch"><span class="sg-chip sg-chip--token" style="background:var(--ba-accent)"></span><span class="sg-label">accent</span></div>
+  <div class="sg-swatch"><span class="sg-chip sg-chip--token" style="background:var(--paper)"></span><span class="sg-label">paper</span></div>
+  <div class="sg-swatch"><span class="sg-chip sg-chip--token" style="background:var(--field-bg)"></span><span class="sg-label">field</span></div>
+  <div class="sg-swatch"><span class="sg-chip sg-chip--token" style="background:var(--ink)"></span><span class="sg-label">ink</span></div>
+  <div class="sg-swatch"><span class="sg-chip sg-chip--token" style="background:var(--muted)"></span><span class="sg-label">muted</span></div>
+  <div class="sg-swatch"><span class="sg-chip sg-chip--token" style="background:var(--hair)"></span><span class="sg-label">rule</span></div>
+  <div class="sg-swatch"><span class="sg-chip sg-chip--token" style="background:var(--pine)"></span><span class="sg-label">accent</span></div>
 </div>
 
 <style>
@@ -230,10 +231,10 @@ The paper, ink, and rule tones that appear on every page. These flip with the th
   .sg-chip--token {
     aspect-ratio: 1 / 1;
     max-width: 64px;
-    border: 1px solid var(--ba-hair);
+    border: 1px solid var(--hair);
   }
   .sg-label {
-    font-family: var(--ui);
+    font-family: var(--sans);
     font-size: 12px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -275,13 +276,13 @@ The paper, ink, and rule tones that appear on every page. These flip with the th
     margin: 0.4em 0;
   }
 
-  /* Render a font's own name in its face (--ui = Hanken, --code = Plex Mono) */
+  /* Render the family names in their corresponding system stacks. */
   .sg-ui {
-    font-family: var(--ui);
+    font-family: var(--sans);
     font-size: 0.95em;
   }
   .sg-code {
-    font-family: var(--code);
+    font-family: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
     font-size: 0.88em;
   }
 </style>

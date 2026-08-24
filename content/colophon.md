@@ -15,7 +15,7 @@ Styles are plain, hand-written CSS---no framework, no utility classes---minified
 
 ## Typography
 
-The body text and headings are set in **[Spectral](https://fonts.google.com/specimen/Spectral)**, a serif drawn for reading on screens. The interface---navigation, the small uppercase labels, dates, and buttons---is set in **[Hanken Grotesk](https://hanken.co/products/hk-grotesk)**, and code is set in **[IBM Plex Mono](https://www.ibm.com/plex/)**. All are self-hosted as small WOFF2 files, limited to the handful of weights the site actually uses; there are no third-party font services.
+The site uses the operating system's native sans-serif stack for body text, headings, and interface elements: San Francisco on Apple platforms, Segoe UI on Windows, and the closest available system face elsewhere. Code uses the corresponding system monospace stack. There are no web-font downloads, which keeps the typography familiar and the page light.
 
 ## Writing Environment
 
@@ -23,11 +23,11 @@ Content lives as flat Markdown files in the site's repository. I write in [Obsid
 
 ## Design Decisions
 
-Navigation sits in a simple top bar: my name in the top left links home, the section links sit to the right, and on narrow screens they collapse into a hamburger menu. The aim is to stay out of the way of the reading surface.
+Navigation sits in a compact top bar constrained to the same measure as the text. My cattle-brand mark and name link home; search and a small menu sit opposite them. The aim is to stay out of the way of the reading surface.
 
-The palette is grayscale---white paper and near-black ink by day, charcoal and soft gray by night---following your system preference, with a toggle in the navigation to pin either mode. Almost nothing on the site carries color: the covers of books, the images in essays, and a single accent ink do all of that work.
+The palette uses Flexoki's warm paper and ink tones: `paper` and `black` by day, `black` and `base-200` by night. The site follows your system preference, with a toggle in the navigation to pin either mode. Links use red ink on light paper and gold on dark by default; book covers and essay images provide most of the remaining color.
 
-Performance and environmental footprint informed many choices: the web fonts are self-hosted and subset rather than pulled from a third-party service, images use lazy loading and `decoding="async"`, scripts are deferred, and the page weight on a typical post is kept small. The goal is a page that loads quickly on a slow connection and generates as little CO₂ as possible.
+Performance and environmental footprint informed many choices: system fonts eliminate a font payload, images use lazy loading and `decoding="async"`, scripts are deferred, and the page weight on a typical post is kept small. The goal is a page that loads quickly on a slow connection and generates as little CO₂ as possible.
 
 ## Inks
 
