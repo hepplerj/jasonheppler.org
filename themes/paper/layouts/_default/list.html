@@ -1,0 +1,18 @@
+{{ define "main" }}
+<header class="lm-archive-head">
+  <p class="lm-label">{{ .Section | humanize }}</p>
+  <h1 class="lm-archive-title">{{ .Title }}</h1>
+  {{ with .Content }}<div class="lm-archive-lead">{{ . }}</div>{{ end }}
+</header>
+
+{{ with .Pages }}
+<div class="lm-stream">
+  {{ range .ByDate.Reverse }}
+  <a href="{{ .RelPermalink }}" class="lm-row">
+    <span class="lm-row-title">{{ .Title }}</span>
+    <time class="lm-row-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+  </a>
+  {{ end }}
+</div>
+{{ end }}
+{{ end }}

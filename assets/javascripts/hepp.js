@@ -9,7 +9,7 @@ enableFloatingFootnotes();
 function initKeyboardShortcuts() {
     const navShortcuts = {
         e: '/blog/',
-        j: '/microblog/',
+        j: '/archive/',
         i: '/publications/',
         y: '/research/',
         b: '/books/',
@@ -26,6 +26,12 @@ function initKeyboardShortcuts() {
                 e.preventDefault();
                 window.location.href = path;
             }
+            return;
+        }
+
+        if (e.key === '/' && !e.altKey) {
+            e.preventDefault();
+            document.querySelector('.lm-nav-toggle')?.click();
         }
     });
 }

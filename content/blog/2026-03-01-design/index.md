@@ -27,18 +27,18 @@ I also migrated long-form posts back over from micro.blog after [a year-long exp
 
 [^1]: One of these days I'll try and compile a list of these design changes with the aid of the Internet Archive.
 
-Alongside readability became ease of moving around the site. I added a few keyboard shortcuts to the site that allows you to jump to different pages on the site. These shortcuts should avoid any existing browser shortcuts, but I may have to tweak these a little over time.
+Alongside readability became ease of moving around the site. I added a few keyboard shortcuts to the site that allows you to jump to different pages on the site. These shortcuts should avoid any existing browser shortcuts, but I may have to tweak these a little over time. A few destinations have changed since this was published; the original labels are retained below.
 
 | Keyboard Shortcut | Result                    |
 | ----------------- | ------------------------- |
 | `/`               | Open navigation menu      |
 | `⌘ + E`           | Open Essays page          |
-| `⌘ + J`           | Open Notes page           |
+| `⌘ + J`           | ~~Open Notes page~~ Open the full writing archive |
 | `⌘ + I`           | Open Publications page    |
 | `⌘ + Y`           | Open Digital History page |
 | `⌘ + B`           | Open Bookshelf page       |
 | `⌘ + /`           | Open About page           |
-| `⌘ + K`           | Open Search page          |
+| `⌘ + K`           | ~~Open Search page~~ Open the search overlay |
 
 The climate goal was a tough one, made all the harder because I wasn't using a 100% renewable web host. Despite how much I love Reclaim Hosting, I decided to move this website to Cloudflare and [their sustainability goals](https://www.cloudflare.com/impact/). The reduction of file sizes, DOM elements on the page, minimizing energy emitted by your device when visiting my site, and web-friendly images all have a positive impact. I'm not quite hitting my 0.185g goal, but I did significantly reduce what this site was measuring before the redesign: I cut this by 80% with these changes. My measurement according to Digital Beacon went from 2.4g to 0.479g. I'll still be working on ways to get that number lower.
 

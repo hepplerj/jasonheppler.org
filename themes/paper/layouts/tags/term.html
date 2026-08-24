@@ -1,0 +1,16 @@
+{{ define "main" }}
+<header class="lm-archive-head">
+  <p class="lm-label">Tag</p>
+  <h1 class="lm-archive-title">{{ .Title | humanize }}</h1>
+  <p class="lm-archive-lead">{{ len .Pages }} post{{ if ne (len .Pages) 1 }}s{{ end }} tagged &ldquo;{{ .Title | humanize }}&rdquo;.</p>
+</header>
+
+<div class="lm-stream">
+  {{ range .Pages.ByDate.Reverse }}
+  <a href="{{ .RelPermalink }}" class="lm-row">
+    <span class="lm-row-title">{{ .Title }}</span>
+    <time class="lm-row-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+  </a>
+  {{ end }}
+</div>
+{{ end }}

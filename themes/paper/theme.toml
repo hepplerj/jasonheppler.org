@@ -1,0 +1,4 @@
+name = "Paper"
+license = "MIT"
+description = "A system-font, Flexoki-inspired theme for jasonheppler.org"
+min_version = "0.116.0"
