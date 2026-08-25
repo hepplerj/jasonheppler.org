@@ -1,0 +1,34 @@
+# /links/ page — about.me-style links hub. Edit here, not in the layout.
+profiles:
+  - label: Bluesky
+    handle: "@jasonheppler.org"
+    url: https://bsky.app/profile/jasonheppler.org
+    rel: me
+  - label: Mastodon
+    handle: "@jaheppler@hcommons.social"
+    url: https://hcommons.social/@jaheppler
+    rel: me
+  - label: GitHub
+    handle: hepplerj
+    url: https://github.com/hepplerj
+    rel: me
+  - label: LinkedIn
+    handle: jasonheppler
+    url: https://www.linkedin.com/in/jasonheppler
+  - label: Micro.blog
+    handle: updates.jasonheppler.org
+    url: https://updates.jasonheppler.org
+    rel: me
+
+support:
+  - label: Buy Me a Coffee
+    handle: buymeacoffee.com/jasonheppler
+    url: https://buymeacoffee.com/jasonheppler
+
+books:
+  - label: Silicon Valley and the Environmental Inequalities of High-Tech Urbanism
+    handle: Univ. of Oklahoma Press, 2024
+    url: https://bookshop.org/p/books/silicon-valley-and-the-environmental-inequalities-of-high-tech-urbanism-volume-9-jason-a-heppler/20881494
+  - label: Digital Community Engagement
+    handle: Univ. of Cincinnati Press, 2020
+    url: https://bookshop.org/p/books/digital-community-engagement-partnering-communities-with-the-academy-rebecca-wingo/13200548?ean=9781947602519

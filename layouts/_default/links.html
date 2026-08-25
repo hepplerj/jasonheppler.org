@@ -1,0 +1,130 @@
+{{ define "main" }}
+{{/* Theme-independent links hub: lives in the root layouts dir so it plugs into
+     any theme's baseof. Styles are page-scoped and lean on theme variables with
+     neutral fallbacks so the page renders sensibly under non-lm themes too. */}}
+<style>
+  .lm-links-page {
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 2.5rem 0 3rem;
+    text-align: center;
+  }
+  .lm-links-portrait {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+  .lm-links-name {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin: 0 0 0.35rem;
+  }
+  .lm-links-role {
+    margin: 0 0 2rem;
+    color: var(--muted, inherit);
+  }
+  .lm-links-group {
+    display: block;
+    margin: 2rem 0 0.75rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted, inherit);
+  }
+  .lm-links-stack {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.65rem;
+  }
+  .lm-links-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--hair, rgba(128, 128, 128, 0.3));
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .lm-links-btn:hover,
+  .lm-links-btn:focus-visible {
+    border-color: var(--accent-line, currentColor);
+    box-shadow: 0 0 0 3px var(--accent-glow, transparent);
+  }
+  .lm-links-btn .label { font-weight: 600; }
+  .lm-links-btn.stacked {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+    text-align: left;
+  }
+  .lm-links-btn.stacked .handle { white-space: normal; }
+  .lm-links-btn .handle {
+    color: var(--muted, inherit);
+    font-size: 0.85rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+</style>
+
+<div class="lm-links-page h-card">
+  <img class="lm-links-portrait u-photo" src="/assets/images/portrait.webp" alt="Jason A. Heppler" width="96" height="96">
+  <h1 class="lm-links-name p-name">Jason A. Heppler</h1>
+  <p class="lm-links-role">Environmental &amp; digital historian</p>
+
+  <ul class="lm-links-stack">
+    {{ range site.Data.links.profiles }}
+    <li>
+      <a class="lm-links-btn u-url" href="{{ .url }}"{{ with .rel }} rel="{{ . }}"{{ end }}>
+        <span class="label">{{ .label }}</span>
+        <span class="handle">{{ .handle }}</span>
+      </a>
+    </li>
+    {{ end }}
+    {{ with site.Params.Author.email }}
+    <li>
+      <a class="lm-links-btn lm-email-link" data-name="{{ index (split . "@") 0 }}" data-domain="{{ index (split . "@") 1 }}">
+        <span class="label">Email</span>
+        <span class="handle">{{ index (split . "@") 0 }} at {{ index (split . "@") 1 }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+
+  {{ with site.Data.links.support }}
+  <span class="lm-links-group">Support</span>
+  <ul class="lm-links-stack">
+    {{ range . }}
+    <li>
+      <a class="lm-links-btn" href="{{ .url }}">
+        <span class="label">{{ .label }}</span>
+        <span class="handle">{{ .handle }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+
+  {{ with site.Data.links.books }}
+  <span class="lm-links-group">Buy My Books</span>
+  <ul class="lm-links-stack">
+    {{ range . }}
+    <li>
+      <a class="lm-links-btn stacked" href="{{ .url }}">
+        <span class="label">{{ .label }}</span>
+        <span class="handle">{{ .handle }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</div>
+{{ end }}
