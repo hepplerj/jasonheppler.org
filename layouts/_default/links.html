@@ -81,7 +81,7 @@
   <p class="lm-links-role">Environmental &amp; digital historian</p>
 
   <ul class="lm-links-stack">
-    {{ range site.Data.links.profiles }}
+    {{ range hugo.Data.links.profiles }}
     <li>
       <a class="lm-links-btn u-url" href="{{ .url }}"{{ with .rel }} rel="{{ . }}"{{ end }}>
         <span class="label">{{ .label }}</span>
@@ -99,7 +99,7 @@
     {{ end }}
   </ul>
 
-  {{ with site.Data.links.support }}
+  {{ with hugo.Data.links.support }}
   <span class="lm-links-group">Support</span>
   <ul class="lm-links-stack">
     {{ range . }}
@@ -113,7 +113,7 @@
   </ul>
   {{ end }}
 
-  {{ with site.Data.links.books }}
+  {{ with hugo.Data.links.books }}
   <span class="lm-links-group">Buy My Books</span>
   <ul class="lm-links-stack">
     {{ range . }}

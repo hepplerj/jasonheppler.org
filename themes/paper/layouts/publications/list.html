@@ -1,18 +1,15 @@
 {{ define "main" }}
 <header class="lm-archive-head">
   <p class="lm-label">Publications</p>
-  <h1 class="lm-archive-title">Books, articles &amp; essays</h1>
+  <h1 class="lm-archive-title">Books</h1>
   <nav class="lm-pub-tabs">
-    <a href="#books">Books</a>
-    <a href="#articles">Articles &amp; Chapters</a>
-    <a href="#essays">Essays</a>
+    <a href="/academic-writing/">Academic Writing</a>
+    <a href="/public-writing/">Public Writing</a>
     <span class="lm-dot-sep">·</span>
     <a href="/files/jah-cv.pdf" class="lm-pub-tab-cv">Full CV &nearr;</a>
   </nav>
 </header>
 
-<!-- Books -->
-<h2 class="lm-pub-h2" id="books">Books</h2>
 {{ $pubs := .Pages.ByDate.Reverse }}
 {{ range where $pubs ".Params.image" "ne" nil }}
 <div class="lm-pub-card">
@@ -26,29 +23,5 @@
     <a href="{{ .RelPermalink }}" class="lm-more">More about this book &rarr;</a>
   </div>
 </div>
-{{ end }}
-
-<!-- Articles & Essays from data file -->
-{{ with hugo.Data.essays_criticism }}
-{{ $all := where . "published" "ne" false }}
-{{ $articles := where $all "type" "in" (slice "Article" "Chapter") }}
-{{ if $articles }}
-<h2 class="lm-pub-h2" id="articles">Articles &amp; Book Chapters</h2>
-<ol class="lm-pub-list">
-  {{ range sort $articles "year" "desc" }}
-  <li>{{ with .coauthor }}{{ . }} and Jason A. Heppler, {{ end }}{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}&ldquo;{{ .title }}&rdquo;{{ end }}{{ with .publication }}, <em>{{ . }}</em>{{ end }} ({{ .year }}).{{ with .note }} {{ . }}{{ end }}</li>
-  {{ end }}
-</ol>
-{{ end }}
-
-{{ $essays := where $all "type" "in" (slice "Essay" "Review") }}
-{{ if $essays }}
-<h2 class="lm-pub-h2" id="essays">Essays &amp; Criticism</h2>
-<ol class="lm-pub-list">
-  {{ range sort $essays "year" "desc" }}
-  <li>{{ with .coauthor }}{{ . }} and {{ end }}{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}&ldquo;{{ .title }}&rdquo;{{ end }}{{ with .publication }}, <em>{{ . }}</em>{{ end }} ({{ .year }}).</li>
-  {{ end }}
-</ol>
-{{ end }}
 {{ end }}
 {{ end }}

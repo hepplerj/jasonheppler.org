@@ -22,11 +22,12 @@
     </button>
   </div>
   <nav class="lm-nav" id="lmNav">
-    <a href="/archive/"{{ if or (in (slice "blog" "microblog") .Section) (eq .RelPermalink "/archive/") }} class="lm-nav-active"{{ end }}>Writing</a>
-    <a href="/publications/"{{ if eq .Section "publications" }} class="lm-nav-active"{{ end }}>Publications</a>
+    <a href="/about/"{{ if eq .RelPermalink "/about/" }} class="lm-nav-active"{{ end }}>About</a>
+    <a href="/publications/"{{ if eq .Section "publications" }} class="lm-nav-active"{{ end }}>Books</a>
+    <a href="/academic-writing/"{{ if eq .RelPermalink "/academic-writing/" }} class="lm-nav-active"{{ end }}>Academic Writing</a>
+    <a href="/public-writing/"{{ if eq .RelPermalink "/public-writing/" }} class="lm-nav-active"{{ end }}>Public Writing</a>
     <a href="/research/"{{ if or (eq .Section "projects") (eq .RelPermalink "/research/") }} class="lm-nav-active"{{ end }}>Digital History</a>
     <a href="/books/"{{ if eq .Section "books" }} class="lm-nav-active"{{ end }}>Bookshelf</a>
-    <a href="/about/"{{ if eq .RelPermalink "/about/" }} class="lm-nav-active"{{ end }}>About</a>
     <button class="lm-theme" type="button" aria-label="Switch color theme (auto, light, dark)" title="Theme">
       <svg class="lm-ic-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
         <circle cx="12" cy="12" r="9"/>

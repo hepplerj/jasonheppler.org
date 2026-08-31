@@ -14,29 +14,11 @@
   </div>
 </section>
 
-{{ $writing := (where site.RegularPages "Section" "in" (slice "blog" "microblog")).ByDate.Reverse }}
-{{ with $writing }}
-<section class="lm-section">
-  <div class="lm-section-head">
-    <h2 class="lm-label">Writing</h2>
-    <a href="/archive/" class="lm-section-link">All writing →</a>
-  </div>
-  <div class="lm-stream">
-    {{ range first 7 . }}
-    <a href="{{ .RelPermalink }}" class="lm-row">
-      <span class="lm-row-title">{{ .Title }}</span>
-      <time class="lm-row-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006/01/02" }}</time>
-    </a>
-    {{ end }}
-  </div>
-</section>
-{{ end }}
-
 {{ with hugo.Data.books }}
 <section class="lm-section">
   <div class="lm-section-head">
     <h2 class="lm-label">Books, book chapters, &amp; digital history</h2>
-    <a href="/publications/" class="lm-section-link">All publications →</a>
+    <a href="/publications/" class="lm-section-link">All books →</a>
   </div>
   <div class="lm-pub-shelf" aria-label="Books and book chapters">
     {{ range . }}
@@ -70,13 +52,33 @@
   </div>
 </section>
 
+{{ $writing := (where site.RegularPages "Section" "in" (slice "blog" "microblog")).ByDate.Reverse }}
+{{ with $writing }}
+<section class="lm-section">
+  <div class="lm-section-head">
+    <h2 class="lm-label">Weblog</h2>
+    <a href="/archive/" class="lm-section-link">All posts →</a>
+  </div>
+  <div class="lm-stream">
+    {{ range first 7 . }}
+    <a href="{{ .RelPermalink }}" class="lm-row">
+      <span class="lm-row-title">{{ .Title }}</span>
+      <time class="lm-row-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006/01/02" }}</time>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+
+
 {{ with hugo.Data.essays_criticism }}
 {{ $published := where . "published" "ne" false }}
 {{ $essays := where $published "type" "in" (slice "Essay" "Chapter" "Review") }}
 <section class="lm-section">
   <div class="lm-section-head">
     <h2 class="lm-label">Essays, reviews &amp; criticism</h2>
-    <a href="/publications/" class="lm-section-link">All publications →</a>
+    <a href="/public-writing/" class="lm-section-link">All public writing →</a>
   </div>
   <div class="lm-work-list">
     {{ range first 5 (sort $essays "year" "desc") }}

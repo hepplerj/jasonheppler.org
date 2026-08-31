@@ -1,0 +1,27 @@
+{{ define "main" }}
+<header class="lm-archive-head">
+  <p class="lm-label">Publications</p>
+  <h1 class="lm-archive-title">{{ .Title }}</h1>
+  <nav class="lm-pub-tabs">
+    <a href="/publications/">Books</a>
+    <a href="/academic-writing/">Academic Writing</a>
+    <a href="/public-writing/">Public Writing</a>
+    <span class="lm-dot-sep">·</span>
+    <a href="/files/jah-cv.pdf" class="lm-pub-tab-cv">Full CV &nearr;</a>
+  </nav>
+</header>
+
+{{ with .Content }}<div class="lm-archive-intro">{{ . }}</div>{{ end }}
+
+{{ with hugo.Data.essays_criticism }}
+{{ $all := where . "published" "ne" false }}
+{{ $items := where $all "type" "in" $.Params.pubtypes }}
+{{ if $items }}
+<ol class="lm-pub-list">
+  {{ range sort $items "year" "desc" }}
+  <li>{{ with .coauthor }}{{ . }} and Jason A. Heppler, {{ end }}{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}&ldquo;{{ .title }}&rdquo;{{ end }}{{ with .publication }}, <em>{{ . }}</em>{{ end }} ({{ .year }}).{{ with .note }} {{ . }}{{ end }}</li>
+  {{ end }}
+</ol>
+{{ end }}
+{{ end }}
+{{ end }}
