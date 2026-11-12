@@ -1,0 +1,13 @@
+{{ define "main" }}
+<header class="lm-archive-head">
+  <p class="lm-label">Topics</p>
+  <h1 class="lm-archive-title">{{ .Title | default "Tags" }}</h1>
+  <p class="lm-archive-lead">Every topic written about here, by frequency.</p>
+</header>
+
+<div class="lm-tag-cloud">
+  {{ range site.Taxonomies.tags.ByCount }}
+  <a href="{{ .Page.RelPermalink }}" class="lm-tag-chip">{{ .Page.Title | humanize }} <span class="lm-chip-n">{{ .Count }}</span></a>
+  {{ end }}
+</div>
+{{ end }}

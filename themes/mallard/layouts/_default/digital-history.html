@@ -1,0 +1,23 @@
+{{ define "main" }}
+<header class="lm-archive-head">
+  <h1 class="lm-archive-title">Over a decade of building history on the web.</h1>
+  <div class="lm-archive-lead">{{ .Content }}</div>
+</header>
+
+<div class="ba-dh-grid">
+  {{ range hugo.Data.dh_projects }}
+  {{ $p := . }}
+  <article class="ba-dh-card">
+    {{ with $p.image }}
+    <a href="{{ $p.url }}" class="ba-dh-thumb-link" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img class="ba-dh-thumb" src="/assets/images/{{ . }}" alt="" loading="lazy" decoding="async">
+    </a>
+    {{ end }}
+    <h3 class="ba-dh-title">
+      <a href="{{ $p.url }}" target="_blank" rel="noopener">{{ $p.title }}</a>
+    </h3>
+    {{ with $p.desc }}<p class="ba-dh-desc">{{ . }}</p>{{ end }}
+  </article>
+  {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,4 @@
+name = "Mallard"
+license = "MIT"
+description = "Basalt's layouts with a Ducks Unlimited-inspired marsh palette — olive and deep teal on reed-white, spring green and slough blue on marsh-night dark. Forked from Basalt."
+min_version = "0.116.0"

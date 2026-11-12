@@ -1,0 +1,11 @@
+{{ define "main" }}
+<article class="lm-page">
+  <header class="lm-archive-head">
+    <h1 class="lm-archive-title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="lm-archive-lead">{{ . }}</p>{{ end }}
+  </header>
+  <div class="lm-prose lm-page-body">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}
