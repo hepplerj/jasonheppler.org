@@ -32,6 +32,10 @@ params:
     linkedin: https://www.linkedin.com/in/jasonheppler
     microblog: https://updates.jasonheppler.org
     buymeacoffee: https://buymeacoffee.com/jasonheppler
+    google_scholar: https://scholar.google.com/citations?user=X2hGnS4AAAAJ&hl=en
+    knowledge_commons: https://profile.hcommons.org/members/hepplerj/
+    orcid: https://orcid.org/0000-0003-4158-6186
+    zotero: https://www.zotero.org/hepplerj/
 
 outputs:
   home:
