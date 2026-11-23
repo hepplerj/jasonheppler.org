@@ -1,0 +1,4 @@
+name = "Bluestem"
+license = "MIT"
+description = "Experimental: Basalt chrome and fonts with a quinnslobodian.com-style intro-only homepage and a Sagebrush palette (gray-green paper, deep sage ink)."
+min_version = "0.116.0"

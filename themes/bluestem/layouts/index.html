@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Locale | default "en" }}">
+<head>
+  {{ partial "min/head.html" . }}
+  {{ $ba := resources.Get "stylesheets/bluestem.css" | resources.Minify | resources.Fingerprint "sha512" }}
+  <link rel="stylesheet" href="{{ $ba.RelPermalink }}">
+</head>
+<body class="bf bf-inner">
+
+  {{ partial "sb-header.html" . }}
+
+  <main class="ba-home">
+
+    {{/* Intro — bio left, portrait + latest book right (after quinnslobodian.com) */}}
+    <section class="qs-intro">
+      <div class="qs-intro-text">
+        <p>Jason A. Heppler writes about the environmental history of the North American West and Great Plains, political economy, technology, and the politics of land.</p>
+        <p>He is senior developer-scholar at the <a href="https://rrchnm.org">Roy Rosenzweig Center for History and New Media</a> and <a href="https://historyarthistory.gmu.edu/people/jheppler">Adjunct Professor of History</a> at George Mason University, and an Affiliate Fellow at the <a href="https://plains.unl.edu">Center for Great Plains Studies</a> at the University of Nebraska-Lincoln.</p>
+        <p>He is the author of <a href="/publications/silicon-valley/"><em>Silicon Valley and the Environmental Inequalities of High-Tech Urbanism</em></a>, which the <em>LA Review of Books</em> called &ldquo;a subversive view of Silicon Valley&rsquo;s history,&rdquo; and co-editor of <em><a href="/publications/digital-community-engagement/">Digital Community Engagement: Partnering Communities with the Academy</a></em>, winner of the National Council on Public History's 2021 book award.</p>
+        <p>He has written for the <em>Washington Post</em> and <em>The Conversation</em>, among <a href="/publications/">others</a>.</p>
+        <p>More <a href="/about/">about Jason</a>. Here is his <a href="https://jasonheppler.org/files/jah-cv.pdf">full CV</a>.</p>
+        <div class="lm-social ba-bio-social">
+          <a data-name="jason" data-domain="jasonheppler.org">Email</a>
+          {{ with site.Params.social.bluesky }}<a href="{{ . }}">Bluesky</a>{{ end }}
+          {{ with site.Params.social.microblog }}<a href="{{ . }}">micro.blog</a>{{ end }}
+          {{ with site.Params.social.mastodon }}<a href="{{ . }}" rel="me">Mastodon</a>{{ end }}
+          {{ with site.Params.social.github }}<a href="{{ . }}">GitHub</a>{{ end }}
+          {{ with site.Params.social.google_scholar }}<a href="{{ . }}">Google Scholar</a>{{ end }}
+          {{ with site.Params.social.knowledge_commons }}<a href="{{ . }}">Knowledge Commons</a>{{ end }}
+          {{ with site.Params.social.orcid }}<a href="{{ . }}">ORCID</a>{{ end }}
+          {{ with site.Params.social.zotero }}<a href="{{ . }}">Zotero</a>{{ end }}
+        </div>
+      </div>
+      <div class="qs-intro-side">
+        <img src="/assets/images/portrait.webp" alt="Jason A. Heppler" loading="eager" decoding="async">
+        <a href="/publications/silicon-valley/"><img src="/assets/images/book_sv.webp" alt="Silicon Valley and the Environmental Inequalities of High-Tech Urbanism" loading="eager" decoding="async"></a>
+      </div>
+    </section>
+
+  </main>
+
+  {{ partial "sb-footer.html" . }}
+
+  {{ partial "min/scripts.html" . }}
+</body>
+</html>
